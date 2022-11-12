@@ -82,7 +82,7 @@
 .destaque {
     flex-direction: column;
     width: 100%;
-    padding: 3vw 5vw;
+    padding: 2rem ;
     font-size: .8rem;
     color: white;
     background-color: #386C5F;
@@ -117,14 +117,14 @@
 
 .continue-vendo,
 .lançamento {
-    padding: 4vw 5vw;
+    padding: 2rem;
     position: relative;
     width: 100%;
 
 }
 
 .carrousel {
-    padding: 4vw 0 0 0;
+    padding-top: 2rem;
     overflow-x: auto;
     display: flex;
     justify-content: flex-start;
@@ -279,6 +279,9 @@
         margin: 0 auto;
     }
 
+    main {
+        width: 1200px;
+    }
     #banner,
     .big3,
     .grid {
@@ -287,7 +290,6 @@
     }
 
     .big3 {
-
         width: 100%;
         max-width: 1200px;
 
@@ -305,7 +307,7 @@
 
     .continue-vendo,
     .lançamento {
-        padding: 3vw 5vw;
+        padding: 2rem;
         position: relative;
         width: 100%;
     }

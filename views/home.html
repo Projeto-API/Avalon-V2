@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/button.css">
+    <title>Avalon</title>
+</head>
+
+<body>
+    <header>
+
+        <section class="container-header">
+            <img id="logo" src="../img/logopreto.png" alt="">
+
+            <div class="busca">
+                <form action="/search">
+                    <input type="text" name="search" id="search" scr="../img/lupa.png"
+                        placeholder="Títulos, Autores e Gêneros ">
+                </form>
+            </div>
+
+            <nav class="icons">
+                <div class="conta">
+                    <ul type="none">
+                        <li><a href="">Minha Conta </a></li>
+                        <li><a href="">Faça login</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <button id="lupa">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-search" viewBox="-2 -2 20 20">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div>
+                    <button id="login">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-person-fill" viewBox="-2 -2 20 20">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        </svg>
+                    </button>
+                </div>
+                <div>
+                    <button id="car-shopping">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-cart" viewBox="-2 -2 20 20">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                        </svg>
+                    </button>
+                </div>
+
+
+            </nav>
+        </section>
+
+        <section class="navegacao">
+            <nav class="lista">
+                <ul type="none">
+                    <li> <a href="#"> PÁGINA INICIAL</a> </li>
+                    <li> <a href="#"> HOME</a> </li>
+                    <li> <a href="#"> TODOS OS LIVROS</a> </li>
+                    <li> <a href="#"> GÊNEROS</a> </li>
+                    <li> <a href="#"> QUEM SOMOS</a> </li>
+                    <li> <a href="#"> FALE CONOSCO</a> </li>
+                </ul>
+            </nav>
+            <section>
+    </header>
+    <main>
+        <section class="banner">
+            <img id="banner" src="../img/banner.jpg" alt="">
+        </section>
+        <section class="big3">
+            <div class="big3-icons">
+                <a href="">MAIS VENDIDOS</a>
+                <div><img src="../img/mais vendidos.png" alt=""></div>
+            </div>
+            <div class="big3-icons">
+                <a href="">LIVROS</a>
+                <div><img src="../img/livros.png" alt=""></div>
+            </div>
+            <div class="big3-icons">
+                <a href="">HQ</a>
+                <div><img src="../img/quadrinhos.png" alt=""></div>
+            </div>
+        </section>
+
+        <section>
+            <div class="lançamento">
+                <h5>LANÇAMENTOS</h5>
+
+                <div class="carrousel">
+                    <button class="arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-caret-left-fill" viewBox="-2 -2 20 20">
+                            <path
+                                d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                        </svg></button>
+                    <ul class="gallery">
+                        <li>
+                            <img class="item current-item" src="../produtos/my broken mariko/mariko-capa.jpg"
+                                alt="mariko">
+                            <div>
+                                <h5>MY BROKEN MARIKO</h5>
+                                <span>R$ 39,90</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img class="item current-item" src="../produtos/DNA/DNA capa.jpg" alt="dna">
+                            <div>
+                                <h5>DNA MILIONÁRIO</h5>
+                                <span>R$ 49,90</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img class="item current-item" src="../produtos/Lady killers/capa.jpeg" alt="lady-killers">
+                            <div>
+                                <h5>LADY KILLERS</h5>
+                                <span>R$ 59,90</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img class="item current-item" src="../produtos/manifesto/capa.jpg" alt="hobbit">
+                            <div>
+                                <h5>MANIFESTO DO PARTIDO COMUNISTA</h5>
+                                <span>R$ 34,90</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img class="item current-item" src="../produtos/moby dick/mobydick-capa.jpg" alt="moby-dick">
+                            <div>
+                                <h5>MOBY DICK</h5>
+                                <span>R$ 129,90</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img class="item current-item" src="../produtos/calibã/caliba-capa.jpg" alt="caliba">
+                            <div>
+                                <h5>CALIBÃ E A BRUXA</h5>
+                                <span>R$ 59,90</span>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <button class="arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path
+                                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                        </svg></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="destaque">
+            <h4>DESTAQUES</h4><br>
+            <nav>
+                <div class="grid">
+                    <button class="comprar " id="destaque-comprar"><a href="">COMPRAR</a></button>
+                    <div>
+                        <a href=""><img id="grid-1" src="../produtos/destaque-capa.png" alt=""></a>
+                    </div>
+                    <div>
+                        <div>
+                            <a href=""><img id="grid-2" src="../produtos/destaque-1.png" alt=""></a>
+                        </div>
+                        <div>
+                            <a href=""><img id="grid-3" src="../produtos/destaque-2.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div>
+                        <a href=""><img id="grid-4" src="../produtos/destaque-3.png" alt=""></a>
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+        <section>
+            <div class="continue-vendo">
+                <h5>CONTINUE VENDO</h5>
+
+                <div class="carrousel">
+                    <button class="arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-caret-left-fill" viewBox="-2 -2 20 20">
+                            <path
+                                d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                        </svg></button>
+                    <ul class="gallery">
+                        <li>
+                            <img class="item current-item" src="../produtos/my broken mariko/mariko-capa.jpg"
+                                alt="mariko">
+                            <div>
+                                <h5>MY BROKEN MARIKO</h5>
+                                <span>R$ 39,90</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <a href=""><img class="item current-item" src="../produtos/DNA/DNA capa.jpg" alt="dna"></a>
+                            <div>
+                                <h5>DNA MILIONÁRIO</h5>
+                                <span>R$ 49,90</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img class="item current-item" src="../produtos/miseraveis/miseraveis-capa.jpeg"
+                                alt="miseraveis">
+                            <div>
+                                <h5>OS MISERÁVEIS</h5>
+                                <span>R$ 139,90</span>
+                            </div>
+
+                        </li>
+
+                        <li>
+
+                            <img class="item current-item" src="../produtos/HOBBIT/hobbit-capa.jpg" alt="hobbit">
+                            <div>
+                                <h5>O HOBBIT</h5>
+                                <span>R$ 59,90</span>
+                            </div>
+
+                        </li>
+
+                        <li>
+                            <img class="item current-item" src="../produtos/moby dick/mobydick-capa.jpg" alt="moby-dick">
+                            <div>
+                                <h5>MOBY DICK</h5>
+                                <span>R$ 129,90</span>
+                            </div>
+                        </li>
+
+                        <li>
+                            <img class="item current-item" src="../produtos/calibã/caliba-capa.jpg" alt="caliba">
+                            <div>
+                                <h5>CALIBÃ E A BRUXA</h5>
+                                <span>R$ 59,90</span>
+                            </div>
+                        </li>
+
+                    </ul>
+                    <button class="arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path
+                                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                        </svg></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <footer>
+        <section class="footer">
+            <section class="container-footer">
+                <div class="column" id="logo2">
+                    <img id="logo2" src="../img/logopreto.png" alt="">
+                </div>
+
+                <div class="column">
+                    <section>
+                        <h5>Privacidade e Termos</h5><br>
+                    </section>
+                    <section>
+                        <ul type="none">
+                            <li>Política de Pagamento</li>
+                            <li>Política de Privacidade</li>
+                            <li>Troca e Devolução</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="column">
+                    <section>
+                        <h5>Mapa do Site</h5><br>
+                    </section>
+                    <section>
+                        <ul type="none">
+                            <li>Quem Somos</li>
+                            <li>Todos os Livros</li>
+                            <li>Autores</li>
+                            <li>Gêneros</li>
+                            <li>Fale Conosco</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="column">
+                    <section>
+                        <h5>Formas de pagamento</h5><br>
+                    </section>
+                    <section class="cards">
+                        <a href=""><img id="cards" src="../img/cards-transparent.png" alt=""></a>
+                    </section>
+                </div>
+                <div class="column" id="redes-sociais">
+                    <section>
+                        <h5>Redes Sociais</h5><br>
+                    </section>
+                    <section>
+                        <nav>
+                            <a href=""><img height="15rem" src="../img/instagram 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/google-plus-g 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/facebook-f 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/linkedin-in 1.png" alt=""></a>
+                        </nav>
+                    </section>
+                </div>
+            </section>
+            <section class="autores">
+                <nav>
+                    <ul type="none">
+                        <p>Desenvolvido por</p>
+                        <li> <a href="#"> Amanda</a> </li>
+                        <li> <a href="#"> Igor</a> </li>
+                        <li> <a href="#"> João Paulo</a> </li>
+                        <li> <a href="#"> Mateus</a> </li>
+                        <li> <a href="#"> Paloma</a> </li>
+                    </ul>
+                </nav>
+            </section>
+            <section>
+    </footer>
+</body>
+
+</html>
+
+</section>
+</body>
+
+</html>

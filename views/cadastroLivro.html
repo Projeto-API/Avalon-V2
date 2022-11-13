@@ -5,34 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CadastroLivro</title>
-    <link rel="stylesheet" href="/Avalon-V2/css/cadastroProdutos.css">
+    <link rel="stylesheet" href="../css/cadastroProdutos.css">
 </head>
 <body>
     <header>
         <div class="cadastroProutos">
-            <img class="logo" src="/Avalon-V2/img/logopreto.png" alt="">
+            <img class="logo" src="../img/logopreto.png" alt="">
             <a class="usuario" href=""> Usuario </a>
         </div>
     </header>
     <main>
-        <!-- <section class="box-sumario">
-            <nav class="sumario">
-                <ul>
-
-                        <li><a href="#">Home > </a></li>
-
-
-                        <li><a href="#">Meus Produtos > </a></li>
-
-
-                        <li><a href="#">Cadastro de Livro ></a></li>
-
-                </ul>
-            </nav>
-        </section> -->
         <div class="container">
-
-            <div>
+            <div class="papelPao">
+                <section class="box-sumario">
+                    <nav class="sumario">
+                        <ul>
+                            <li><a href="#">Home /  </a></li>
+                            <li><a href="#">Meus Produtos / </a></li>
+                            <li><a href="../views/home.html"> Cadastro de Livro </a></li>
+                        </ul>
+                    </nav>
+                </section>
                 <section class="box-menu">
                     <ul>
                         <li><a href="#">Cadastro de livro  </a></li>
@@ -41,82 +34,80 @@
                     </ul>
                 </section>
             </div>
-            
-            
+
             
             <div class="box-cadastro">
                 <form  class="formulario" action="">
-                    <fieldset>
-                        <legend><b> Cadastro de Livro</b></legend>
-                        <br>
-                        <div class="double">
-                            <label for="imagemCapa">Imagens Capa:</label>
-                            <input type="imagemCapa" name="imagemCapa" class="searchimg" required>
-                            <label for="imagensMiniaturas">Imagens Miniaturas:</label>
-                            <input type="imagensMiniaturas" name="imagensMiniaturas" class="searchimg" required>
-                        </div>
-                        <br>
-                        <div class="single">
-                            <label for="tituloLivro">Titulo do Livro:</label>
-                            <input type="tituloLivro" name="tituloLivro"   required>
-                        </div>
-                        <br>
-                        <div class="single">
-                                <label for="categoria">Categoria:</label>
-                                <input type="categoria" name="categoria"  required>
-                         </div>
-                        <br><br>
-                        <div class="double">
-                            <label for="autor">Autor:</label>
-                            <input type="text" name="autor" required>
-                            <label for="editora">Editora:</label>
-                            <input type="text" name="editora"   required>
-                        </div>
-                        <br><br>
-                        <div class="double">
-                            <label for="idioma">Idioma:</label>
-                            <input type="text" name="idioma"  required>
-                            <label for="paginas">Paginas:</label>
-                            <input type="text" name="paginas"   required>
-                        </div>
-                        <br><br>
-                        <div class="double">
-                            <label for="publicacao">Publicação:</label>
-                            <input type="text" name="publicacao"  required>
-                            <label for="dimesaoes">Dimensões:</label>
-                            <input type="text" name="dimesaoes"  required>
+                    <legend><h1> Cadastro de Livro</h1></legend>
+                    <br>
+                    <div class="double">
+                        <label for="imagemCapa">Imagens Capa:</label>
+                        <input  class ="alteraInp" type="text" name="imagemCapa" class="searchimg" value="Adicionar" required>
+                        <label for="imagensMiniaturas">Imagens Miniaturas:</label>
+                        <input class ="alteraInp" type="text" name="imagensMiniaturas" class="searchimg" value="Adicionar" required>
+                    </div>
+                    <br>
+                    <div class="double">
+                        <label for="tituloLivro">Titulo do Livro:</label>
+                        <input type="text" name="tituloLivro"   required>
+                        <label for="categoria">Categoria:</label>
+                        <input type="text" name="categoria" value="/Avalon-V2/views/home.html" required></a>
+                    </div>
+                    <br><br>
+                    <div class="double">
+                        <label for="autor">Autor:</label>
+                        <input type="text" name="autor" required>
+                        <label for="editora">Editora:</label>
+                        <input type="text" name="editora"   required>
+                    </div>
+                    <br><br>
+                    <div class="double">
+                        <label for="idioma">Idioma:</label>
+                        <input type="text" name="idioma"  required>
+                        <label for="paginas">Paginas:</label>
+                        <input type="text" name="paginas"   required>
+                    </div>
+                    <br><br>
+                    <div class="double">
+                        <label for="publicacao">Publicação:</label>
+                        <input type="text" name="publicacao"  required>
+                        <label for="dimesaoes">Dimensões:</label>
+                        <input type="text" name="dimesaoes"  required>
                         </div>
                         <br><br>
                         <div class="double">
                             <label for="acabamento">Acabamento:</label>
                             <input type="text" name="acabamento"  required>
-                            <label for="nome">ISBN:</label>
+                            <label for="nome">ISBN -10 :</label>
                             <input type="text" name="name"  required>
                         </div>
                         <br><br>
-                        <div class="preco">
-                        <label for="nome">Preço:</label>
-                        <input type="text" name="name" required>
-                    </div>
-                    <br><br>
-                    <div class="single">
-                        <label for="sinopse">Sinopse:</label>
-                        <textarea name="sinopse" ></textarea>
-                    </div>
-                    <br><br>
-                </fieldset>
-                <section>
-                    <div class="button">
-                          <input type="cancelar" name="cancelar" value="cancelar">
-                    </div>
-                    <div class="button">
-                        <input type="salvar" name="salvar" id="salvar" value="salvar">
-                    </div>
-                    <div class="button">
-                        <input type="pulicar" name="pulicar" value="pulicar">
-                    </div>
-                </section>
-            </form> 
+                        <div class="double">
+                            <label for="nome">Preço:</label>
+                            <input type="text" name="name" required>
+                            <label for="nome">ISBN -20 :</label>
+                            <input type="text" name="name"  required>
+                        </div>
+                        <br><br>
+                        <div class="single">
+                            <label for="sinopse">Sinopse:</label>
+                            <textarea name="sinopse" ></textarea>
+                        </div>
+                        <br><br>
+                        <section class="configbutton">
+                            <div class="button">
+                                <input class = "cancelar" type="cancelar" name="cancelar" value="Cancelar">
+                            </div>
+                            <div class="button">
+                                <input class = salvar type="salvar" name="salvar" id="salvar" value="Salvar">
+                            </div>
+                            <div class="button">
+                                <input class = publicar type="pulicar" name="pulicar" value="Publicar">
+                            </div>
+                        </section>
+                    </form> 
+                </div>
+            </div>
         </div>
     </div>
     </main>

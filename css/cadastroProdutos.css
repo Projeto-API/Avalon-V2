@@ -1,0 +1,193 @@
+*{
+    margin: 0;
+
+}
+body{
+    font-size: arial;
+
+}
+
+.cadastroProutos{
+    display: flex;
+    background-color: #386C5F;
+    border-radius: 2rem;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.cadastroProutos img{
+    width: 5rem;
+    margin: 2rem;
+}
+
+.usuario{
+    display: flex;
+    margin-bottom: 2.5rem;
+    margin-right: 4rem;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: azure;
+    text-decoration: none;
+    text-align: center;
+    
+    
+}
+
+
+/* .box-sumario{
+    display: flex;
+    flex-direction: row;
+
+    
+} */
+main{
+    display: flex;
+   
+
+}
+
+nav ul,
+nav li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0.5rem;
+}
+nav ul {
+    display: flex;
+}
+.container{
+    display: flex;
+    
+}
+
+.box-menu{
+    display: flex;
+    flex-direction: column;
+    background-color: #338866;
+    width: 100%;
+    height: 15rem;
+    bottom: 2rem;
+    
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 2rem;
+    margin-left: 1rem;
+ 
+}
+.box-menu ul li {
+    font-style: 32rem;
+    color: azure;
+    margin: 2rem;
+    
+}
+
+.box-menu ul li a{
+    color: azure;
+    text-decoration: none;
+        display: inline;
+    font-size: 2rem;
+     
+}
+
+.box-cadastro {
+    margin: 2rem;
+    text-align: center;
+
+
+
+
+}
+
+.single{
+    display: flex;
+    align-items: center;
+    
+    
+
+    
+
+}
+
+.autor{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.double{
+    display: flex;
+    justify-content: space-between;
+    
+    
+    align-items: center;
+
+    
+    
+}
+
+.searchimg{
+    display: flex;
+    align-items: center;
+    height: 10rem;
+    width: 10rem;
+    border-radius: 2rem;
+   
+
+}
+.preco{
+    
+    display: flex;
+    height: 3rem;
+    max-width: 65rem;
+    width: 20rem;
+    max-height: 2rem;
+    border-radius: 2rem;
+    margin-right: 15rem ;
+    align-items: center;
+
+}
+
+.box-cadastro form fieldset div label{
+    text-align: left;
+    font-size: 1.5rem;
+}
+
+div form fieldset label{
+    margin: 1rem;
+    display: flex;
+    
+    
+}
+div form fieldset input{
+    display: flex;
+    align-items: flex-end;
+    height: 2rem;
+    width: 20rem;
+    border-radius: 2rem;
+    
+
+}
+div .single input {
+    height: 2.0rem;
+    width: 100%;
+    max-width: 80rem;
+
+}
+textarea {
+    height: 20rem;
+    width: 85rem;
+    
+}
+
+.button input {
+
+    display: flex;
+    flex-direction: row;
+
+    background-color:aqua;
+    
+
+}
+
+
+

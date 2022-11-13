@@ -5,126 +5,125 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CadastroLivro</title>
+    <link rel="stylesheet" href="/Avalon-V2/css/cadastroProdutos.css">
 </head>
 <body>
     <header>
-        <section>
-            <div>
-                <img src="/Avalon-V2/img/logopreto.png" alt="">
-                <a href=""> Usuario </a>
-            </div>
-        </section>
-    </header>
-    <section>
-        <div class="box-sumario">
-            <section>
-                <nav>
-                    <ul>
-                        <li><a href="#">Home > </a></li>
-                        <li><a href="#">Meus Produtos > </a></li>
-                        <li><a href="#">Cadastro de Livro ></a></li>
-                    </ul>
-                </nav>
-            </section>
+        <div class="cadastroProutos">
+            <img class="logo" src="/Avalon-V2/img/logopreto.png" alt="">
+            <a class="usuario" href=""> Usuario </a>
         </div>
-    </section>
-    <section>
+    </header>
+    <main>
+        <!-- <section class="box-sumario">
+            <nav class="sumario">
+                <ul>
 
-        <div class="box-menu">
-            <section>
-                <nav>
+                        <li><a href="#">Home > </a></li>
+
+
+                        <li><a href="#">Meus Produtos > </a></li>
+
+
+                        <li><a href="#">Cadastro de Livro ></a></li>
+
+                </ul>
+            </nav>
+        </section> -->
+        <div class="container">
+
+            <div>
+                <section class="box-menu">
                     <ul>
                         <li><a href="#">Cadastro de livro  </a></li>
                         <li><a href="#">Envios </a></li>
                         <li><a href="#">Informações de Vendas </a></li>
                     </ul>
-                </nav>
-            </section>
-        </div>
-    </section>
-    <main>
-        <div class="box-cadastro">
-            <form action="">
-                <fieldset>
-                    <legend><b> Cadastro de Livro</b></legend>
-                    <br>
-                    <div class="inputBox">
-                        <input type="text" name="tituloLivro" id="tituloLivro" class="inputUser" required>
-                        <label for="tituloLivro">Titulo do Livro:</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="categoria" id="categoria" class="inputUser" required>
-                        <label for="categoria">Categoria:</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="autor" id="autor" class="inputUser" required>
-                        <label for="autor">Autor:</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="editora" id="editora" class="inputUser" required>
-                        <label for="editora">Editora:</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="idioma" id="idioma" class="inputUser" required>
-                        <label for="idioma">Idioma:</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="paginas" id="paginas" class="inputUser" required>
-                        <label for="paginas">Paginas:</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="publicacao" id="publicacao" class="inputUser" required>
-                        <label for="publicacao">Publicação:</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="dimesaoes" id="dimesaoes" class="inputUser" required>
-                        <label for="dimesaoes">Dimensões:</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="acabamento" id="acabamento" class="inputUser" required>
-                        <label for="acabamento">Acabamento:</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="name" id="name" class="inputUser" required>
-                        <label for="nome">ISBN:</label>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="name" id="name" class="inputUser" required>
+                </section>
+            </div>
+            
+            
+            
+            <div class="box-cadastro">
+                <form  class="formulario" action="">
+                    <fieldset>
+                        <legend><b> Cadastro de Livro</b></legend>
+                        <br>
+                        <div class="double">
+                            <label for="imagemCapa">Imagens Capa:</label>
+                            <input type="imagemCapa" name="imagemCapa" class="searchimg" required>
+                            <label for="imagensMiniaturas">Imagens Miniaturas:</label>
+                            <input type="imagensMiniaturas" name="imagensMiniaturas" class="searchimg" required>
+                        </div>
+                        <br>
+                        <div class="single">
+                            <label for="tituloLivro">Titulo do Livro:</label>
+                            <input type="tituloLivro" name="tituloLivro"   required>
+                        </div>
+                        <br>
+                        <div class="single">
+                                <label for="categoria">Categoria:</label>
+                                <input type="categoria" name="categoria"  required>
+                         </div>
+                        <br><br>
+                        <div class="double">
+                            <label for="autor">Autor:</label>
+                            <input type="text" name="autor" required>
+                            <label for="editora">Editora:</label>
+                            <input type="text" name="editora"   required>
+                        </div>
+                        <br><br>
+                        <div class="double">
+                            <label for="idioma">Idioma:</label>
+                            <input type="text" name="idioma"  required>
+                            <label for="paginas">Paginas:</label>
+                            <input type="text" name="paginas"   required>
+                        </div>
+                        <br><br>
+                        <div class="double">
+                            <label for="publicacao">Publicação:</label>
+                            <input type="text" name="publicacao"  required>
+                            <label for="dimesaoes">Dimensões:</label>
+                            <input type="text" name="dimesaoes"  required>
+                        </div>
+                        <br><br>
+                        <div class="double">
+                            <label for="acabamento">Acabamento:</label>
+                            <input type="text" name="acabamento"  required>
+                            <label for="nome">ISBN:</label>
+                            <input type="text" name="name"  required>
+                        </div>
+                        <br><br>
+                        <div class="preco">
                         <label for="nome">Preço:</label>
+                        <input type="text" name="name" required>
                     </div>
                     <br><br>
-                    <div class="inputBox">
-                        <textarea name="sinopse" id="sinopse" rows="5" cols="33"></textarea>
+                    <div class="single">
                         <label for="sinopse">Sinopse:</label>
+                        <textarea name="sinopse" ></textarea>
                     </div>
                     <br><br>
                 </fieldset>
                 <section>
-                    <div>
-                        <input type="cancelar" name="cancelar" id="cancelar">
+                    <div class="button">
+                          <input type="cancelar" name="cancelar" value="cancelar">
                     </div>
-                    <div>
-                        <input type="salvar" name="salvar" id="salvar">
+                    <div class="button">
+                        <input type="salvar" name="salvar" id="salvar" value="salvar">
                     </div>
-                    <div>
-                        <input type="pulicar" name="pulicar" id="pulicar">
+                    <div class="button">
+                        <input type="pulicar" name="pulicar" value="pulicar">
                     </div>
                 </section>
             </form> 
         </div>
+    </div>
     </main>
 </body>
 </html>
+
+
                     
             
                 

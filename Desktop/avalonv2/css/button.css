@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ropa+Sans&display=swap');
+
+
+.comprar {
+    width: 8rem;
+    height: 2rem;
+    background-color: #4EC16E;
+    border-radius: 1rem;
+    cursor: pointer;
+    z-index: 2;
+    box-shadow: .25rem .25rem 1rem black;
+}
+
+.comprar a {
+    color: white;
+    font-weight: bold;
+}
+
+.comprar:hover {
+    transform: scale(1.1);
+    transition-property: all;
+    transition-duration: 0.2s;
+}
+
+
+
+

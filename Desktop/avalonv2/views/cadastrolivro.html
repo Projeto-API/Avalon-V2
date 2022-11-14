@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CadastroLivro</title>
+    <link rel="stylesheet" href="../css/cadastroProdutos.css">
+  
+
+</head>
+
+<body>
+    <header>
+        <div class="cadastroProutos">
+            <img class="logo" src="../img/logopreto.png" alt="">
+            <a class="usuario" href=""> Usuario </a>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="papelPao">
+                <section class="box-sumario">
+                    <nav class="sumario">
+                        <ul>
+                            <li><a href="#">Home / </a></li>
+                            <li><a href="#">Meus Produtos / </a></li>
+                            <li><a href="../views/home.html"> Cadastro de Livro </a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="box-menu">
+                    <ul>
+                        <li><a href="#">Cadastro de livro </a></li>
+                        <li><a href="#">Envios </a></li>
+                        <li><a href="#">Informações de Vendas </a></li>
+                    </ul>
+                </section>
+            </div>
+
+
+            <div class="box-cadastro">
+                <form class="formulario" action="">
+                    <legend>
+                        <h1> Cadastro de Livro</h1>
+                    </legend>
+                    <br>
+                    <div class="double">
+                        <label for="imagemCapa">Imagens Capa:</label>
+                        <input class="alteraInp" type="text" name="imagemCapa" class="searchimg" value="Adicionar"
+                            required>
+                        <label for="imagensMiniaturas">Imagens Miniaturas:</label>
+                        <input class="alteraInp" type="text" name="imagensMiniaturas" class="searchimg"
+                            value="Adicionar" required>
+                    </div>
+                    <br>
+                    <div class="double">
+                        <label for="tituloLivro">Titulo do Livro:</label>
+                        <input type="text" name="tituloLivro" id="titulo" required>
+                        <label for="categoria">Categoria:</label>
+                        <input type="text" name="categoria" value="categoria" required></a>
+                    </div>
+                    <br><br>
+                    <div class="double">
+                        <label for="autor">Autor:</label>
+                        <input type="text" name="autor" id="autordolivro" required>
+                        <label for="editora">Editora:</label>
+                        <input type="text" name="editora" required>
+                    </div>
+                    <br><br>
+                    <div class="double">
+                        <label for="idioma">Idioma:</label>
+                        <input type="text" name="idioma" required>
+                        <label for="paginas">Paginas:</label>
+                        <input type="text" name="paginas" required>
+                    </div>
+                    <br><br>
+                    <div class="double">
+                        <label for="publicacao">Publicação:</label>
+                        <input type="text" name="publicacao" id="public" required>
+                        <label for="dimesaoes">Dimensões:</label>
+                        <input type="text" name="dimesaoes" required>
+                    </div>
+                    <br><br>
+                    <div class="double">
+                        <label for="acabamento">Acabamento:</label>
+                        <input type="text" name="acabamento" required>
+                        <label for="nome">ISBN -10 :</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <br><br>
+                    <div class="double">
+                        <label for="nome">Preço:</label>
+                        <input type="text" name="name" required>
+                        <label for="nome">ISBN -20 :</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <br><br>
+                    <div class="single">
+                        <label for="sinopse">Sinopse:</label>
+                        <textarea name="sinopse"></textarea>
+                    </div>
+                    <br><br>
+                        <section class="configbutton">
+                        <div class="button">
+                            <input class="cancelar" type="submit" name="cancelar" value="Cancelar">
+                            <input class=salvar type="submit" name="salvar" id="salvar" value="Salvar">
+                            <input class=publicar type="submit" name="publicar" value="Publicar">
+                        </div>
+                    </section>
+                    </section>
+                </form>
+            </div>
+        </div>
+        </div>
+        </div>
+    </main>
+</body>
+
+</html>

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/carrinho.css">
     <link rel="stylesheet" href="../css/button.css">
     <title>Avalon</title>
 </head>
@@ -72,17 +72,35 @@
             <section>
     </header>
     <main>
-        <section>
-            <div class="carrinho-produtos">
-                <div class="imagem-produto"></div>
-                <div class="nome-produto"></div>
-                <div class="quantidade"></div>
-                <div class="preco"></div>
+        <section class="containerCheckout">
+            <div class="checkout">
+                <div class="Produto">
+                    <img class="imagemProduto" src="../produtos/my broken mariko/mariko-capa.jpg" alt="">
+                </div>
+                <div class="informationProduto">
+                    <div class="nome-produto">
+                        <h5>My Broken Mariko</h5>
+                    </div>
+                    <div class="informationProdutoValue">
+                        <div class="quantidade">
+                            <a href="" class="diminuirQtd">-</a>
+                            <input type="text" class="quantidadeValue" value="1">
+                            <a href="" class="aumentarQtd">+</a>
+                        </div>
+                        <div class="preco">
+                            <span> R$ 39,90 </span>
+                        </div>
+                        <div class="excluir">
+                            <button id="excluir">X</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <div class="carrinho-opções">
                 <div class="entrega"></div>
                 <div class="cupom"></div>
-                <div class="preco-total" ></div>
+                <div class="preco-total"></div>
                 <div class="finalizar"></div>
             </div>
         </section>

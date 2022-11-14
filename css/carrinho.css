@@ -11,3 +11,52 @@
     height: auto;
 }
 
+.containerCheckout {
+    padding-top: 65px;
+}
+
+.checkout {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.imagemProduto {
+    border-radius: 5%;
+    margin: 2rem 1.5rem;
+    display: flex;
+    width: 5rem;
+}
+
+.informationProduto {
+    justify-content: center;
+    min-width: 12rem;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 1rem;
+    width: 70vw;
+}
+
+.informationProdutoValue {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+
+.quantidadeValue {
+    text-align: center;
+    width: 2rem;
+}
+
+.excluir {
+    max-width: 2rem;
+    width: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: center;
+    cursor: pointer;
+
+}

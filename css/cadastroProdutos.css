@@ -224,7 +224,7 @@ textarea {
     
 }
 
-.button input {
+.button {
 
     display: flex;
     flex-direction: row;

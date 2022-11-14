@@ -42,25 +42,24 @@ main{
 
 .papelPao{
     top: 2rem;
-    margin-left: 2.5rem
-    width: 100%;
+    margin-left: 1rem;
+
 }
 
 nav ul,
 nav li {
     list-style: none;
-    margin: 0;
-    padding: 0;
     margin-bottom: 0.5rem;
-    width: 100%;
-}
-nav ul {
     display: flex;
+    margin-inline-start: auto;
+
+
 }
+
 .container{
     display: flex;
     background-color: #949494;
-    border-radius: 4rem;
+    border-radius: 2rem;
     width: 100%;
     
 }
@@ -74,19 +73,18 @@ legend {
     display: flex;
     flex-direction: column;
     background-color: #D9D9D9;
-    width: 100%;
+    width: 22rem;
     opacity: 0.8;
-  
-    bottom: 2rem;
-    
     border-radius: 2rem;
-    text-decoration: none;
- 
+    margin-left: 1rem;
 }
 .box-menu ul li {
     font-style: 32rem;
     color: #386C5F;
     margin: 2rem;
+    list-style: none;
+    
+    
     
 }
 
@@ -94,7 +92,7 @@ legend {
     color: #386C5F;
     text-decoration: none;
     display: inline;
-    font-size: 29px;
+    font-size: 25px;
      
 }
 

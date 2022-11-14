@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Cadastro Produto</title>
+    <link rel="stylesheet"  href="../css/modalCadastro.css">
+
+
+<script type = "text/javascript">
+
+function abrirModal() {
+    document.getElementById('bg-modal').style.top ="0";
+}
+function fecharModal() {
+        document.getElementById('bg-modal').style.top = "-100%";
+}
+</script>
+<button class="open-modal" onclick="abrirModal()">abrir</button>
+
+</head>
+
+<body>
+    <section class="bg-modal" id="bg-modal">
+        <div class="modal">
+            <div class="categoria">
+                <div class="botaoFechar">
+                    <span class="close" onclick="fecharModal()">&times;</span>
+                </div>
+                <div class="titulo">
+                    <h2 class="editarCategoria">Editar Categoria</h2>
+                    <input class="pesquisar" type="text" placeholder="Nome das Categorias">
+                </div>
+            </div>
+            <div class="categortiaInput">
+                <div class="box-01">
+                    <ul class="bloco">
+                        <li class="blocoli">Não Ficção</li>
+                        <li class="blocoli">Ficção</li>
+                        <li class="blocoli">Biografia</li>
+                        <li class="blocoli">Ciencias</li>
+                        <li class="blocoli">HQs e Mangás</li>
+                        <li class="blocoli">Classicos</li>
+                        <li class="blocoli">Intestigação</li>
+                        <li class="blocoli">Crimese</li>
+                        <li class="blocoli">Fantasia</li>
+                        <li class="blocoli">Ficção Cientí</li>
+                        <li class="blocoli">Filmes, sérieames</li>
+                        <li class="blocoli">Infantil</li>
+                        <li class="blocoli">Romance</li>
+                 
+                   </ul>
+                    <ul class="bloco">
+                        <li class="blocoli">Não Ficção</li>
+                        <li class="blocoli">Ficção</li>
+                        <li class="blocoli">Biografia</li>
+                    </ul>
+                    <ul class="bloco">
+                        <li class="blocoli">Filmes, sérieames</li>
+                        <li class="blocoli">Infantil</li>
+                        <li class="blocoli">Romance</li>
+                    </ul>
+                    <div class="baixoBox-01"></div>
+                </div>
+                <div class="selecao01">
+                    <a class="a">Categoria selecionada :</a>
+                </div>
+                <div class="selecao02">
+                    <a class="a">Nenhuma categoria foi escolhida</a>
+                </div>
+            </div>
+            <div class="button-modal">
+                <div >
+                    <button class="cancelar" type="submit" value="">Cancelar</button>
+                </div>
+                <div>
+                    <button class="confirmar" type="submit" >Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
+
+
+
+
+        
+
+   

@@ -6,20 +6,18 @@ body{
     font-size: arial;
 
 }
-
 .cadastroProutos{
     display: flex;
-    background-color: #386C5F;
+    background-color: #338866;
+    opacity: 0.8;
     border-radius: 2rem;
     align-items: flex-end;
     justify-content: space-between;
 }
-
 .cadastroProutos img{
     width: 5rem;
     margin: 2rem;
 }
-
 .usuario{
     display: flex;
     margin-bottom: 2.5rem;
@@ -29,11 +27,7 @@ body{
     color: azure;
     text-decoration: none;
     text-align: center;
-    
-    
 }
-
-
 section .box-sumario{
     display: flex;
     flex-direction: column;
@@ -65,7 +59,7 @@ nav ul {
 }
 .container{
     display: flex;
-    background-color: #9CD9C2;
+    background-color: #949494;
     border-radius: 4rem;
     width: 100%;
     
@@ -79,8 +73,9 @@ legend {
 .box-menu{
     display: flex;
     flex-direction: column;
-    background-color: #338866;
+    background-color: #D9D9D9;
     width: 100%;
+    opacity: 0.8;
   
     bottom: 2rem;
     
@@ -90,13 +85,13 @@ legend {
 }
 .box-menu ul li {
     font-style: 32rem;
-    color: azure;
+    color: #386C5F;
     margin: 2rem;
     
 }
 
 .box-menu ul li a{
-    color: azure;
+    color: #386C5F;
     text-decoration: none;
     display: inline;
     font-size: 29px;
@@ -106,48 +101,44 @@ legend {
 .box-cadastro {
     margin: 2rem;
     text-align: center;
-    background-color: #338866;
+    background-color: #D9D9D9;
     border-radius: 2rem;
     width: 100%;
     display:inline-block;
     gap: 2rem;
-    color: aliceblue;
+    color: #386C5F;
 
 
 
 
 }
-/* .double .alteraInp{
+.double .alteraInp{
     color: red;
     text-align: center;
+    height: 8rem;
+    width: 8rem;
+    margin: center;
+    max-width: 8rem;
 
-} */
+
+}
 
 .single{
     display: flex;
     align-items: center;
-    
-    
-
-    
-
-}
-
-.autor{
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .double{
     display: flex;
     justify-content: space-between;
-    
-    
     align-items: center;
-
-    
-    
 }
+.autor{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
 
 .searchimg{
     display: flex;
@@ -175,7 +166,7 @@ legend {
     text-align: left;
     font-size: 1.5rem;
     width: 155px;
-    color: aliceblue;
+    color: #386C5F;
 }
 
 div form label{
@@ -191,7 +182,8 @@ div form input{
     width: 20rem;
     border-radius: 2rem;
     margin-right: auto;
-    background-color: #9CD9C2;
+    background-color: #338866;
+    opacity: 0.5;
     
 
 }
@@ -203,7 +195,7 @@ div form input{
     width: 20rem;
     border-radius: 2rem;
     margin-right: auto;
-    background-color: #9CD9C2;
+    background-color: #338866;
     
 
 }
@@ -221,7 +213,8 @@ textarea {
     max-width: 63.5rem;
     border-radius: 23px;
     margin: 2rem;
-    background-color: #9CD9C2;
+    background-color: #338866;
+    opacity: 0.5;
     
 }
 

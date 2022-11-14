@@ -33,7 +33,7 @@ window.addEventListener('load', function(){
         }
         let ulErrors = document.querySelector('div.errors ul');
         for(let i = 0; i < errorsMessages.leght; i++){
-ulErrors.innerHTML += '<li>' + '</li>'
+        ulErrors.innerHTML += '<li>' + '</li>'
         }
     })
     })

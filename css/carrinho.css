@@ -99,8 +99,6 @@ table {
     line-height: 1.5rem;
     width: 100%;
     border-collapse: collapse;
-
-
 }
 
 tbody {
@@ -121,7 +119,7 @@ tbody {
 }
 
 tfoot {
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 #calcular {
@@ -130,8 +128,69 @@ tfoot {
 
 .containerEntrega input,
 .containerCheckout input {
-    font-weight: 600;
+    font-weight: 400;
     padding-left: 1rem;
     width: 65vw;
     border-radius: 5px;
+}
+
+.finalizarCompra {
+    padding: 1rem 0;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    body {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .containerProduto {
+        padding-top: 80px;
+    }
+
+    .cabecalho {
+        width: 100vw;
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+    }
+
+
+    #header1 {
+        width: 100%;
+        padding-left: 15vw;
+    }
+
+    #header2 {
+        padding: 0 1rem;
+    }
+
+    #header3 {
+        padding-left: 3rem;
+        padding-right: 17vw;
+    }
+
+
+    .informationProduto {
+        align-items: center;
+        justify-content: space-around;
+        display: flex;
+        flex-direction: row;
+        gap: 5rem;
+    }
+
+    .nomeProduto {
+        width: 30vw;
+    }
+
+    .informationProdutoValue {
+        justify-content: right;
+        gap: 5rem;
+    }
+
+ 
+   
+  
+
 }

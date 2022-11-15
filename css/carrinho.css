@@ -135,9 +135,3 @@ tfoot {
     width: 65vw;
     border-radius: 5px;
 }
-
-.containerEntrega,
-.containerCheckout {
-    position: auto;
-
-}

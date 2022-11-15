@@ -18,16 +18,14 @@ header * {
 
 header {
     position: fixed;
-    max-width: 100%;
     width: 100%;
     z-index: 3;
 }
 
-
 .container-header {
+    padding: 1rem 2rem;
     display: flex;
     align-items: center;
-    padding: 0 10%;
     justify-content: space-between;
     height: 40px;
     max-height: 5rem;
@@ -45,7 +43,7 @@ header {
 .icons {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: right;
 }
 
 .icons div:hover {
@@ -56,7 +54,7 @@ header {
 }
 
 .icons div {
-    padding: 10%;
+    padding: 0 10px;
 }
 
 #logo {
@@ -64,7 +62,7 @@ header {
     align-items: center;
     justify-content: center;
     height: 7vw;
-    max-height: 2.5rem;
+    max-height: 30px;
     flex-wrap: nowrap;
 }
 
@@ -86,8 +84,8 @@ button {
 }
 
 svg {
-    height: 6vw;
-    max-height: 2.5rem;
+
+    height: 22px;
     width: auto;
 }
 
@@ -145,7 +143,7 @@ svg {
     background-color: #9CD9C2;
     font-size: .9rem;
     flex-direction: column;
-    border-radius: 2vw 2vw 0 0;
+    border-radius: 20px 20px 0 0;
 }
 
 .container-footer {
@@ -166,7 +164,7 @@ svg {
 
 
 #cards {
-    height: 10vw;
+    height: 35px;
     max-height: 3rem;
     background-color: transparent;
 }
@@ -183,7 +181,7 @@ svg {
     justify-content: space-around;
 }
 
-.autores  ul {
+.autores ul {
     padding: 1rem;
     gap: 1rem;
     height: auto;
@@ -226,8 +224,6 @@ svg {
         display: none;
     }
 
-
-
     .lista {
         width: 100%;
         display: flex;
@@ -245,10 +241,11 @@ svg {
         height: auto;
         display: flex;
         flex-direction: row;
-             }
+    }
 
 
 }
+
 @media (min-width: 1200px) {
 
     header,
@@ -257,10 +254,7 @@ svg {
         margin: 0 auto;
     }
 
-    svg {
-        max-height: 6vh;
-        width: auto;
-    }
+    
 
 
 

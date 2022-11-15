@@ -11,7 +11,7 @@
     height: auto;
 }
 
-.containerProduto {
+main {
     padding-top: 65px;
 }
 
@@ -123,14 +123,14 @@ tfoot {
 }
 
 #calcular {
-    width: 35vw;
+    width: 35%;
 }
 
 .containerEntrega input,
 .containerCheckout input {
     font-weight: 400;
     padding-left: 1rem;
-    width: 65vw;
+    width: 65%;
     border-radius: 5px;
 }
 
@@ -140,17 +140,13 @@ tfoot {
 }
 
 @media (min-width: 768px) {
-    body {
-        max-width: 100%;
-        margin: 0 auto;
-    }
-
-    .containerProduto {
-        padding-top: 80px;
+    main {
+        padding-top: 85px;
     }
 
     .cabecalho {
-        width: 100vw;
+        font-size: .8rem;
+        width: 100%;
         display: flex;
         justify-content: flex-end;
         list-style: none;
@@ -182,15 +178,51 @@ tfoot {
 
     .nomeProduto {
         width: 30vw;
+        max-width: 360px;
     }
 
     .informationProdutoValue {
         justify-content: right;
         gap: 5rem;
     }
+}
 
- 
-   
-  
+@media (min-width: 1200px) {
+    body {
+        margin: 0 auto;
+    }
+
+    main {
+        background-color: aqua;
+        min-height: 600px;
+        width: 1200px;
+        
+        justify-content: center;
+        display: flex;
+    }
+
+    .containerProduto {
+        width: 900px;
+    }
+
+    .containerFinalizacao {
+        margin-top: 28px;
+        width: 300px;
+    }
+
+
+
+    #header1 {
+        padding-left: 7rem;
+    }
+
+    #header2 {
+        
+    }
+
+    #header3 {
+        padding-left: 3.5rem;
+        padding-right: 9rem;
+    }
 
 }

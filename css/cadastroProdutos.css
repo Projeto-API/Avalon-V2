@@ -201,32 +201,32 @@ div .single input {
 
 }
 textarea {
-    height: 20rem;
+    
     width: 100%;
+    height: 10rem;
+    max-height:10rem;
     max-width: 733px;
     border-radius: 23px;
     margin-left: 5rem;
     background-color: #338866;
     opacity: 0.5;
     
+    
 }
 .button input {
-
-    /* display: flex; */
-    flex-direction: row;
+    display: flex;
     text-align: center;
     font-size: 1.5rem;
-    padding: 2px 0 2px 0;
-    /* width: 100%; */
-    max-width: 44%;  
+    justify-content: space-evenly; 
 }
 .configbutton {
     background-color: #386C5F;
     margin-top: 1rem;
     display: flex;
-    justify-content: space-evenly;
     padding: 2rem;
     border-radius: 2rem;
+    justify-content: space-between;
+    align-items: baseline;
 }
 .cancelar{
     background-color: red;

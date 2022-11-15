@@ -17,7 +17,7 @@ function verificarFormulario(){
         let errorsMessages = [];
         
         let tituloLivro = document.getElementById("tituloLivro");
-        if(tituloLivro.value == '" '){
+        if(tituloLivro.value == ''){
             errorsMessages.push("O campo Livro não pode estar vazio")
             
         } else if(tituloLivro.value.length < 3  ) {

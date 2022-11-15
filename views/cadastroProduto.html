@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CadastroProdutos</title>
+    <script type="text/javascript" src="../script.js/modalCadastro.js" ></script>
     <link rel="stylesheet" href="../css/cadastroProdutos.css">
-
+    <title>CadastroProdutos</title>
 
 </head>
 <body>
@@ -53,7 +53,7 @@
                         <label for="tituloLivro">Titulo do Livro:</label>
                         <input type="text" name="tituloLivro"   required>
                         <label for="categoria">Categoria:</label>
-                        <input type="text" name="categoria" value="categoria" required></a>
+                        <input class="open-modal" onclick="abrirModal()" type="text" name="categoria" value="categoria" required></a>
                     </div>
                     <br><br>
                     <div class="double">
@@ -107,12 +107,77 @@
                                 <input class = publicar type="pulicar" name="pulicar" value="Publicar">
                             </div>
                         </section>
+                        
                     </form> 
                 </div>
             </div>
         </div>
     </div>
     </main>
+    
+    <section class="bg-modal" id="bg-modal">
+        <div class="modal">
+            <div class="categoria">
+                <div class="botaoFechar">
+                    <span class="close" onclick="fecharModal()">&times;</span>
+                </div>
+                <div class="titulo">
+                    <h2 class="editarCategoria">Editar Categoria</h2>
+                    <input class="pesquisar" type="text" placeholder="Nome das Categorias">
+                </div>
+            </div>
+            <div class="categortiaInput">
+                <div class="box-01">
+                    <ul class="bloco">
+                        <li class="blocoli">Não Ficção</li>
+                        <li class="blocoli">Ficção</li>
+                        <li class="blocoli">Biografia</li>
+                        <li class="blocoli">Ciencias</li>
+                        <li class="blocoli">HQs e Mangás</li>
+                        <li class="blocoli">Classicos</li>
+                        <li class="blocoli">Intestigação</li>
+                        <li class="blocoli">Crimese</li>
+                        <li class="blocoli">Fantasia</li>
+                        <li class="blocoli">Ficção Cientí</li>
+                        <li class="blocoli">Filmes, sérieames</li>
+                        <li class="blocoli">Infantil</li>
+                        <li class="blocoli">Romance</li>
+                 
+                   </ul>
+                   <div>
+                    <button class="addItem">></button>
+                   </div>
+                    <ul class="bloco">
+                        <li class="blocoli">Não Ficção</li>
+                        <li class="blocoli">Ficção</li>
+                        <li class="blocoli">Biografia</li>
+                    </ul>
+                    <button class="addItem">></button>
+                    <ul class="bloco">
+                        <li class="blocoli">Filmes, sérieames</li>
+                        <li class="blocoli">Infantil</li>
+                        <li class="blocoli">Romance</li>
+                    </ul>
+                    <div class="baixoBox-01"></div>
+                </div>
+                <div class="selecao01">
+                    <a class="a">Categoria selecionada :</a>
+                </div>
+                <div class="selecao02">
+                    <a class="a">Nenhuma categoria foi escolhida</a>
+                </div>
+            </div>
+            <div class="button-modal">
+                <div >
+                    <button class="cancelar" type="submit" value="">Cancelar</button>
+                </div>
+                <div>
+                    <button class="confirmar" type="submit" >Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
 </body>
 </html>
 

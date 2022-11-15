@@ -59,6 +59,10 @@ main {
     width: 2rem;
 }
 
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
 .excluir {
     max-width: 2rem;
     width: 1rem;
@@ -193,10 +197,8 @@ tfoot {
     }
 
     main {
-        background-color: aqua;
         min-height: 600px;
-        width: 1200px;
-        
+
         justify-content: center;
         display: flex;
     }
@@ -216,9 +218,7 @@ tfoot {
         padding-left: 7rem;
     }
 
-    #header2 {
-        
-    }
+    #header2 {}
 
     #header3 {
         padding-left: 3.5rem;

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CadastroLivro</title>
     <link rel="stylesheet" href="../css/cadastroProdutos.css">
- 
+<script src="../js/validacoescadastroproduto.js" defer></script>
 
 </head>
 
@@ -70,33 +70,28 @@
                     </div>
                     <br><br>
                     <div class="double">
-                        <label for="idioma">Idioma:</label>
-                        <input type="text" name="idioma" required>
+                       
                         <label for="paginas">Paginas:</label>
                         <input type="text" name="paginas" required>
                     </div>
-                    <br><br>
                     <div class="double">
-                        <label for="publicacao">Publicação:</label>
-                        <input type="text" name="publicacao" required>
+                    <div class="invisible err-length-public">
+                        Seu campo esta incompleto!
+                     </div>
+                    </div>
+                    <div class="double">
+                        <label for="public">Publicação:</label>
+
+                        <input type="text" name="publicacao" id="public" required>
+                    
                         <label for="dimesaoes">Dimensões:</label>
                         <input type="text" name="dimesaoes" required>
                     </div>
-                    <br><br>
-                    <div class="double">
-                        <label for="acabamento">Acabamento:</label>
-                        <input type="text" name="acabamento" required>
-                        <label for="nome">ISBN -10 :</label>
-                        <input type="text" name="name" required>
-                    </div>
-                    <br><br>
                     <div class="double">
                         <label for="nome">Preço:</label>
                         <input type="text" name="name" required>
-                        <label for="nome">ISBN -20 :</label>
-                        <input type="text" name="name" required>
                     </div>
-                    <br><br>
+                    
                     <div class="single">
                         <label for="sinopse">Sinopse:</label>
                         <textarea name="sinopse"></textarea>

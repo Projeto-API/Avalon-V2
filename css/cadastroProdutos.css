@@ -6,7 +6,9 @@ body{
     font-size: arial;
 
 }
-
+.invisible{
+    display: none;
+}
 .cadastroProutos{
     display: flex;
     background-color: #386C5F;

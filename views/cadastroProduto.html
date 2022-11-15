@@ -39,56 +39,56 @@
 
             
             <div class="box-cadastro">
-                <form  class="formulario" action="">
+                <form  class="formulario" id="formulario" action="">
                     <legend><h1> Cadastro de Livro</h1></legend>
                     <br>
                     <div class="double">
                         <label for="imagemCapa">Imagens Capa:</label>
-                        <input  class ="alteraInp" type="text" name="imagemCapa" class="searchimg" value="Adicionar" required>
+                        <input  class ="alteraInp" type="text" name="imagemCapa" class="searchimg" >
                         <label for="imagensMiniaturas">Imagens Miniaturas:</label>
-                        <input class ="alteraInp" type="text" name="imagensMiniaturas" class="searchimg" value="Adicionar" required>
+                        <input class ="alteraInp" type="text" name="imagensMiniaturas" class="searchimg" >
                     </div>
                     <br>
                     <div class="double">
                         <label for="tituloLivro">Titulo do Livro:</label>
-                        <input type="text" name="tituloLivro"   required>
+                        <input type="text" name="tituloLivro" id="tituloLivro" >
                         <label for="categoria">Categoria:</label>
-                        <input class="open-modal" onclick="abrirModal()" type="text" name="categoria" value="categoria" required></a>
+                        <input class="open-modal" onclick="abrirModal()" type="text" name="categoria"  ></a>
                     </div>
                     <br><br>
                     <div class="double">
                         <label for="autor">Autor:</label>
-                        <input type="text" name="autor" required>
+                        <input type="text" name="autor" id="autor" >
                         <label for="editora">Editora:</label>
-                        <input type="text" name="editora"   required>
+                        <input type="text" name="editora" id="editora"   >
                     </div>
                     <br><br>
                     <div class="double">
                         <label for="idioma">Idioma:</label>
-                        <input type="text" name="idioma"  required>
+                        <input type="text" name="idioma"  >
                         <label for="paginas">Paginas:</label>
-                        <input type="text" name="paginas"   required>
+                        <input type="text" name="paginas"   >
                     </div>
                     <br><br>
                     <div class="double">
                         <label for="publicacao">Publicação:</label>
-                        <input type="text" name="publicacao"  required>
+                        <input type="text" name="publicacao" >
                         <label for="dimesaoes">Dimensões:</label>
-                        <input type="text" name="dimesaoes"  required>
+                        <input type="text" name="dimesaoes"  >
                         </div>
                         <br><br>
                         <div class="double">
                             <label for="acabamento">Acabamento:</label>
-                            <input type="text" name="acabamento"  required>
+                            <input type="text" name="acabamento"  >
                             <label for="nome">ISBN -10 :</label>
-                            <input type="text" name="name"  required>
+                            <input type="text" name="name"  >
                         </div>
                         <br><br>
                         <div class="double">
                             <label for="nome">Preço:</label>
-                            <input type="text" name="name" required>
+                            <input type="text" name="name" >
                             <label for="nome">ISBN -20 :</label>
-                            <input type="text" name="name"  required>
+                            <input type="text" name="name"  >
                         </div>
                         <br><br>
                         <div class="single">
@@ -96,20 +96,25 @@
                             <textarea name="sinopse" ></textarea>
                         </div>
                         <br><br>
+                        <div>
+
+
+                        </div>
+                        <br><br>
                         <section class="configbutton">
                             <div class="button">
                                 <input class = "cancelar" type="cancelar" name="cancelar" value="Cancelar">
                             </div>
                             <div class="button">
-                                <input class = salvar type="salvar" name="salvar" id="salvar" value="Salvar">
+                                <input class = salvar type="submit" onclick="verificarFormulario()" name="salvar" id="salvar" value="Salvar">
                             </div>
                             <div class="button">
-                                <input class = publicar type="pulicar" name="pulicar" value="Publicar">
+                                <input class = publicar  onclick="verificarFormulario()"type="submit" name="pulicar" value="Publicar">
                             </div>
                         </section>
                         
-                    </form> 
-                </div>
+                    </div>
+                </form> 
             </div>
         </div>
     </div>

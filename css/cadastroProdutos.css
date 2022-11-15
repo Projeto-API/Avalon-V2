@@ -252,6 +252,41 @@ textarea {
     opacity: 0.6;
 
 }
+/* ----------------------------Erros ------------------- */
+.errors{
+    width: 100%;
+    max-width: 46rem;
+    border: solid 2px gre;
+    margin-bottom: 10px;
+    margin-left: 5rem;
+    border-radius: 2rem;
+    margin-top: 1.5rem;
+}
+
+.no-erros{
+    display: none;
+}
+
+.linhaerros{
+    color: red;
+    margin-left: 2rem;
+    text-align-last: start;
+    font-size: 19px;
+    margin-top: 12px;
+    font-weight: bolder;
+
+}
+
+
+
+
+
+
+
+
+
+
+
 /* -----------------------Modal ----------------- */
 
 section .bg-modal{

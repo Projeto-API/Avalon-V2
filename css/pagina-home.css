@@ -22,12 +22,12 @@
     justify-content: center;
 }
 
-/* main {
+main {
     display: flex;
     max-width: 100%;
     align-items: center;
     flex-direction: column;
-} */
+}
 
 .big3 {
     display: flex;
@@ -69,7 +69,7 @@
 }
 
 .big3-icons:hover {
-    width: 38vw;
+    width: 33vw;
     filter: brightness(150%);
     transform: scale(.95);
     transition-property: all;
@@ -119,7 +119,7 @@
 .lançamento {
     padding: 4vw 5vw;
     position: relative;
-    width: 100%;
+    width: 100vw;
 
 }
 

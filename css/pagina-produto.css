@@ -1,0 +1,110 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+    
+
+
+/*comecei aqui -->*/
+
+.columninformation {
+
+    border: 1px solid black;
+    padding: 1rem 2rem;
+    font-style: normal;
+    font-weight: 70;
+    font-size: 17px;
+    display: flex;
+    justify-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+ .columninformation > div  {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+ }
+
+ .columninformation > div p:last-child {
+    font-weight: 600;
+ }
+
+ .author {
+    background-color: #286152;
+    padding: 3rem;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    
+ }
+
+ .author > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    margin-bottom: 1.9rem;
+    
+}
+
+ .author > div:last-child p:first-child {
+    font-size: 1.2rem;
+
+ }
+
+ .author > div:last-child h5{
+    font-size: 1.1rem;
+ } 
+
+
+.columnauthor {
+    
+    padding: 4rem 2rem;
+    font-family: 'Asul';
+    font-style: normal;
+    font-weight: 70;
+    font-size: 17px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+    
+}
+
+.imageauthor {
+    background-image: url(./img/emily.webp);
+    width: 10rem;
+    height: 10rem;
+    background-size: cover;
+    background-position: 75% 30%;
+    border-radius: 50%;
+}
+
+
+.columnauthor2 {
+    
+    font-family: 'Asul';
+    font-style: normal;
+    font-weight: 70;
+    font-size: 17px;
+    color: white;
+    
+    
+
+}
+
+.columnauthor3 {
+    
+    font-family: 'Asul';
+    font-style: normal;
+
+}
+
+/*terminei aqui*/

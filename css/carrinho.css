@@ -18,6 +18,7 @@
 .cabecalho {
     display: none;
 }
+
 .produto {
     margin: .5rem;
     display: flex;
@@ -68,6 +69,75 @@
     cursor: pointer;
 }
 
+.containerEntrega {
+    padding: .5rem;
+    margin: .5rem;
+    background-color: #F6F9FF;
+    border-radius: 1rem;
+}
+
+.containerEntrega div {
+    display: flex;
+}
+
+.containerCheckout {
+    margin: .5rem;
+    padding: .5rem;
+    background-color: #F6F9FF;
+    border-radius: 1rem;
+}
+
+.desconto {
+    padding: 1rem 0;
+}
+
+.desconto div {
+    display: flex;
+}
+
+table {
+    line-height: 1.5rem;
+    width: 100%;
+    border-collapse: collapse;
+
+
+}
+
 tbody {
+    height: 10px;
     font-size: .8rem;
+    justify-content: right;
+    border-bottom: 1px solid;
+}
+
+
+.monetary {
+    text-align: right;
+}
+
+#desconto,
+#entrega {
+    color: #4EC16E;
+}
+
+tfoot {
+    font-weight: bolder;
+}
+
+#calcular {
+    width: 35vw;
+}
+
+.containerEntrega input,
+.containerCheckout input {
+    font-weight: 600;
+    padding-left: 1rem;
+    width: 65vw;
+    border-radius: 5px;
+}
+
+.containerEntrega,
+.containerCheckout {
+    position: auto;
+
 }

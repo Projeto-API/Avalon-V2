@@ -6,9 +6,7 @@
 html, body{
     width: 100%;
     height: 100%;
-
 }
-
 main{
     width: 1200px;
     display: flex;
@@ -39,7 +37,6 @@ body{
     font-size: 2rem;
     text-decoration: none;
     color: azure;
-    text-decoration: none;
     text-align: center;
 }
 section .box-sumario{
@@ -48,27 +45,26 @@ section .box-sumario{
 
     
 }
-
 .papelPao{
     max-width: 1200px;
     top: 2rem;
     margin-left: 1rem;
-
 }
 
 nav ul,
 nav li {
     max-width: 1200px;
     margin-bottom: 0.5rem;
-    display: flex;
+    display: -webkit-box;
     margin-inline-start: auto;
-
-
+    flex-direction: row;
+    /* justify-content: center; */
+    padding: 3px;
 }
-
 .container{
     display: flex;
     margin-top: 0.5rem;
+    width: 100%;
     max-width: 1200px;
     display: flex;
     background-color: #949494;
@@ -98,22 +94,16 @@ legend {
     margin: 2rem;
     list-style: none;
     width: 100%;
-    
-    
-    
-    
 }
-
 .box-menu ul li a{
     color: #386C5F;
     text-decoration: none;
     display: inline;
-    font-size: 25px;
+    font-size: 18px;
     list-style: none;
 
      
 }
-
 .box-cadastro {
     width: 100%;
     margin: 2rem;
@@ -124,10 +114,7 @@ legend {
     display:inline-block;
     gap: 2rem;
     color: #386C5F;
-
-
-
-
+    margin-top: 45PX;
 }
 .double .alteraInp{
     color: red;
@@ -136,15 +123,15 @@ legend {
     width: 8rem;
     margin: center;
     max-width: 8rem;
-
-
+    margin-right: 6rem;
 }
-
 .single{
     display: flex;
-    align-items: center;
+    max-width: 1200;
+    width: 100%;
+    flex-direction: column;
+    align-items: baseline;
 }
-
 .double{
     display: flex;
     justify-content: space-between;
@@ -154,9 +141,6 @@ legend {
     display: flex;
     justify-content: space-evenly;
 }
-
-
-
 .searchimg{
     max-width: 1200px;
     display: flex;
@@ -164,8 +148,6 @@ legend {
     height: 100%;
     width: 100%;
     border-radius: 2rem;
-   
-
 }
 .preco{
     
@@ -179,15 +161,14 @@ legend {
     align-items: center;
 
 }
-
 .box-cadastro form div label{
     display: flex;
-    text-align: left;
-    font-size: 1.5rem;
+    text-align: end;
+    font-size: 19px;
     max-width: 1200px;
     color: #386C5F;
+    width: 55%;
 }
-
 div form label{
     margin: 1rem;
     display: flex;
@@ -196,16 +177,14 @@ div form label{
 }
 div form input{
     height: 2rem;
-    width: 17rem;
+    width: 100%;
+    max-width: 17rem;
     border-radius: 2rem;
     margin-right: auto;
     background-color: #338866;
     opacity: 0.5;
+    margin-right: 4rem;
 }
-    
-
-}
-
 .categoriaInput{
     display: flex;
     align-items: flex-end;
@@ -214,11 +193,7 @@ div form input{
     border-radius: 2rem;
     margin-right: auto;
     background-color: #338866;
-    
-
 }
-
-
 div .single input {
     height: 2.0rem;
     width: 100%;
@@ -230,12 +205,11 @@ textarea {
     width: 100%;
     max-width: 733px;
     border-radius: 23px;
-    margin: 2rem;
+    margin-left: 5rem;
     background-color: #338866;
     opacity: 0.5;
     
 }
-
 .button input {
 
     /* display: flex; */
@@ -244,12 +218,8 @@ textarea {
     font-size: 1.5rem;
     padding: 2px 0 2px 0;
     /* width: 100%; */
-    max-width: 44%;
-   
+    max-width: 44%;  
 }
-
-
-
 .configbutton {
     background-color: #386C5F;
     margin-top: 1rem;
@@ -257,9 +227,7 @@ textarea {
     justify-content: space-evenly;
     padding: 2rem;
     border-radius: 2rem;
-
 }
-
 .cancelar{
     background-color: red;
     color: white;
@@ -268,7 +236,6 @@ textarea {
     opacity: 0.6;
 
 }
-
 .salvar{
     background-color: #C9C16D;
     color: white;
@@ -277,7 +244,6 @@ textarea {
     opacity: 0.6;
 
 }
-
 .publicar{
     background-color: green;
     color: white;
@@ -286,8 +252,6 @@ textarea {
     opacity: 0.6;
 
 }
-
-
 /* -----------------------Modal ----------------- */
 
 section .bg-modal{
@@ -296,34 +260,26 @@ section .bg-modal{
     flex-direction: column;
     width: 100%;
     height: 100%;
-
-
 }
-
 .bg-modal{
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.75);
     position: fixed;
     z-index: 2;
-    top: 0%;
+    top: -150%;
     display: block;
-    transition: 350ms;
-    
+    transition: 350ms;   
 }
-
 div .categoriaInput{
     width: 100%;
     height: 100%;
-    background-color: #9CD9C2;
-    
+    background-color: #9CD9C2;   
 }
 .baixoBox-01{
     display: flex;
     flex-direction: column;
-
 }
-
 .modal{
     width: 100%;
     height: 100%;
@@ -333,8 +289,7 @@ div .categoriaInput{
     border:1px solid #000;
     border-radius: 5px;
     margin: 50px auto 0 auto; 
-
-    
+    border-radius: 1rem
 }
 .modal span {
     float: right;
@@ -342,12 +297,10 @@ div .categoriaInput{
     color: #000;
     cursor: pointer;
 }
-
 .modal span:hover{
     color: #990000;
     transition: 350ms;
 }
-
 .box-01{
     background-color: #386C5F;
     width: 100%;
@@ -361,8 +314,7 @@ div .categoriaInput{
     flex-direction: row;
     border-radius: 2rem;
 }
-
-.cancelar{
+.cancelarModal{
     background-color: red;
     color: white;
     border-style: none;
@@ -375,7 +327,6 @@ div .categoriaInput{
     margin-left: 33rem;
     font-size: 1.3rem;
     opacity: 0.6;
-
 }
 .confirmar{
     background-color: #386C5F;
@@ -389,7 +340,6 @@ div .categoriaInput{
     opacity: 0.6;
 
 }
-
 .categoria{
     width: 100%;
     background-color: #9CD9C2;
@@ -404,7 +354,6 @@ div .categoriaInput{
     margin-left: 2rem;
     margin-top: 1rem;
 }
-
 .pesquisar{
     display: flex;
     margin-top: 1rem ;
@@ -421,7 +370,6 @@ div .categoriaInput{
     margin-right: 14px;
     margin-bottom: -4px;
 }
-
 .selecao01,
 .selecao02
 {
@@ -458,8 +406,7 @@ div .categoriaInput{
     height: 42px;
     width: 39px;
     margin-left: -20px;
-    background-color:  #4EC16E;
-
+    background-color:  #4EC16E
 
 }
 

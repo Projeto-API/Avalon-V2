@@ -14,7 +14,7 @@
 main {
     padding-top: 65px;
 }
-
+/* SEÇÃO REFERENTE ÀS INFORMAÇÕES DO PRODUTO */
 .cabecalho {
     display: none;
 }
@@ -73,6 +73,8 @@ input[type="number"] {
     cursor: pointer;
 }
 
+/* SEÇÃO REFERENTE À ENTREGA */
+
 .containerEntrega {
     padding: .5rem;
     margin: .5rem;
@@ -83,6 +85,8 @@ input[type="number"] {
 .containerEntrega div {
     display: flex;
 }
+
+/* SEÇÃO REFERENTE À ENTREGA */
 
 .containerCheckout {
     margin: .5rem;
@@ -212,13 +216,9 @@ tfoot {
         width: 300px;
     }
 
-
-
     #header1 {
         padding-left: 7rem;
     }
-
-    #header2 {}
 
     #header3 {
         padding-left: 3.5rem;

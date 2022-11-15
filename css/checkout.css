@@ -18,24 +18,60 @@
     height: 50px;
 }
 
-.entrega{
+.entrega {
     padding: 0 1rem;
     padding-top: 80px;
-  
+
 }
 
 .entrega svg {
-    width: 3rem;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    color: #4EC16E;
 }
+
 .enderecoSalvo {
+
     align-items: center;
     display: flex;
-    justify-content: space-around;
-    background-color: ;
+    justify-content: flex-start;
+    background-color: #F6F9FF;
+    border-radius: 1rem;
+    cursor: pointer;
 }
 
 .enderecoInformation {
-    font-size: .8rem;
+    padding: .5rem 0;
+    font-size: .7rem;
     display: flex;
     flex-direction: column;
+}
+
+.enderecoNovo {
+    background-color: #F6F9FF;
+    padding: .5rem;
+    width: 100%;
+    max-width: 25rem;
+    font-size: .7rem;
+    border-radius: 1rem;
+
+}
+
+.enderecoNovo input {
+    width: 100%;
+    background-color: white;
+    border: .75px solid rgb(102, 102, 102);
+    border-radius: 5px;
+}
+
+.columnAdress1 {
+    gap: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.columnAdress1 input {
+    padding-left: .5rem;
+    justify-content: space-around;
 }

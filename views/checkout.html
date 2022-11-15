@@ -84,25 +84,62 @@
                 </ul>
             </nav>
         </header>
-       <section class="entrega">
-        <h5>Endereço de Entrega</h5>
-        <div class="enderecoSalvo">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
-                <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z"/>
-                <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z"/>
-              </svg>
-              <div class="enderecoInformation">
-              <span class="nome">Mateus</span>
-              <span class="endereco">Rua das Borboletas Psicodélicas, 50</span>
-              <span class="bairro">Vila Guarani</span>
-              <span class="cidade">São Paulo - SP</span>
-              <span class="cep">04313-110</span>
+        <section class="entrega">
+            <h5>Endereço de Entrega</h5>
+            <div class="enderecoSalvo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-house-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                    <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z" />
+                </svg>
+                <div class="enderecoInformation">
+                    <span class="nome">Mateus</span><br>
+                    <span class="endereco">Rua das Borboletas Psicodélicas, 50</span><br>
+                    <span class="bairro">Vila Guarani</span><br>
+                    <span class="cidade">São Paulo - SP</span><br>
+                    <span class="cep">04313-110</span><br>
+                </div>
             </div>
+            <a href="">Alterar endereço de entrega</a>
+            <form action="cadastrar" class="enderecoNovo">
+                <p>
+                    <label for="destinatario">Destinatário</label> <br>
+                    <input type="text" name="sujeito" id="destinatario" autocomplete="on">
+                </p>
+                <div class="columnAdress1">
+                    <p>
+                        <label for="cep">CEP</label> <br>
+                        <input type="text" name="sujeito" id="cep" autocomplete="on">
+                    </p>
+                    <p>
+                        <label for="bairro">Bairro</label> <br>
+                        <input type="text" name="adress1" id="bairro">
+                    </p>
+                </div>
+                <p>
+                    <label for="rua">Rua/Avenida</label> <br>
+                    <input type="text" name="adress3" id="rua">
+                </p>
+                <div class="columnAdress1">
+                    <p>
+                        <label for="numero">Número</label> <br>
+                        <input type="text" name="adress4" id="numero">
+                    </p>
+                    <p>
+                        <label for="complemento">Complemento</label> <br>
+                        <input type="text" name="adress5" id="complemento" placeholder="Opcional">
+                    </p>
+                </div>
+                <p>
+                    <label for="reference">Ponto de referência</label> <br>
+                    <input type="text" name="adress5" id="complemento">
+                </p>
 
-        </div>
-       </section>
-       <section class="pagamento"></section>
-       <section class="resumo"></section>
+            </form>
+        </section>
+        <section class="pagamento"></section>
+        <section class="resumo"></section>
 
 
     </main>

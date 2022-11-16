@@ -1,17 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ropa+Sans&display=swap');
 
-
-
-
 main{
     display: flex;
 }
 
-nav li {
-    width: 100%;
-}
 nav ul {
     display: flex;
+}
+.caixatexto{
+    display: flex;
+    margin: 5rem;
+    font-size: 9px;
+    font-family: poppins;
+    font-weight: 200;
+    text-align: center;
+    flex-direction: column;
+    white-space: nowrap;
 }
 
 .informacaodospedidos {
@@ -26,23 +30,21 @@ nav ul {
 
 }
 .containermenu {
-    margin: 2rem;
-    margin-top: 12rem;
-    margin-left: -29rem;
+    margin: 13rem;
+    margin-left: -30rem;
     flex-direction: column;
-    background-color: #9CD9C2;
+    background-color: #c6efe0;
     border-radius: 2rem;
     width:90%;
     display:flex;
     color: black;
 }
 .listapagos{
-margin: 6rem;
-margin-left: 18rem;
-    background-color: #9CD9C2;
+    margin: 8rem;
+    background-color:  #c6efe0;
     border-radius: 2rem;
-    width:80%;
-    height: 10%;
+    width:70%;
+    height: 8%;
     display:flex;
     color: black;
     align-items: center;
@@ -60,46 +62,70 @@ margin-left: 18rem;
 .numeropedido li a {
     align-items: center;
     text-decoration: none;
-    padding: .8rem 1rem;
     color: #05a065;
     font-size: clamp(.6rem, 100%, .8rem);
-    white-space: nowrap;
 
 }
 .fotousuario >img{
-    width: 90%;
+    width: 80%;
+    height: 40%;
+    border-radius: 300%;
     display: flex;
-    border-radius: 10rem;
+    flex-direction: column;
     align-items: center;
+    margin: 1.5rem;
+}
+.botoes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.sobrenome li{
+  
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    font-size: 16px;
+    font-family: poppins;
+    font-weight: 600;
 }
 .meusdados {
-    margin: 1rem;
-    margin-top: 6rem;
+    margin: 0rem;
+  
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
-    width: 60%;
+    color:rgb(90, 86, 86);
+    width: 80%;
+    height: 30%;
+    font-family: poppins;
+    font-weight: 700;
+    font-size: 16px;
     background-color: aliceblue;
     border-radius: 12rem;
 }
 .minhaconta {
-    margin: 1rem;
-    margin-top: 6rem;
+   margin: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
-    width: 60%;
+    color:rgb(90, 86, 86);
+    width: 80%;
+    font-size: 16px;
+    font-family: poppins;
+    font-weight: 700;
+    height: 30%;
     background-color: aliceblue;
     border-radius: 12rem;
 }
 .fotousuario{
-    margin: 6rem;
-    background-color: #9CD9C2;;
+    margin: 3rem;
+    background-color: #c6efe0;;
     border-radius: 2rem;
-    width: 80%;
-    height: 85%;
+    width: 40%;
+    height: 107%;
     flex-direction: column;
     display:flex;
     gap: 1rem;
@@ -112,9 +138,14 @@ margin-left: 18rem;
 .listapagos li a {
     padding: .2rem 1rem;
     color: black;
-    font-size: clamp(.5rem, 90%, .7rem);
+    font-size: 10px;
     font-family: poppins;
   font-weight: 700;
   text-align: center;
     
+}
+.box-usuario{
+    display: flex;
+    margin: 9rem;
+    width: 100%;
 }

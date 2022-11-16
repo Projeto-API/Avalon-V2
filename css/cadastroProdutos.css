@@ -7,6 +7,11 @@ header{
     top: 0;
     position : static !important;
 }
+a{
+    color:#338866 !important;
+}
+
+
 
 body{
     width: 100%;
@@ -123,11 +128,12 @@ legend {
     background-color: #D9D9D9;
     border-radius: 2rem;
     max-width: 1200px;
-    display:inline-block;
+    display:flex;
     gap: 2rem;
     color: #386C5F;
     margin-top: 45PX;
     padding: 0 1rem;
+    justify-content: center;
 }
 
 .box-cadastro h1{
@@ -150,6 +156,7 @@ legend {
     margin: center;
     max-width: 8rem;
     margin-right: 6rem;
+    align-self: flex-end;
 }
 .single{
     display: flex;
@@ -247,8 +254,8 @@ textarea {
     width: 11rem;
 }
 .configbutton {
-    background-color: #386C5F;
-    margin-top: 1rem;
+    background-color: #338866                                 ;
+    margin-bottom: 1rem;
     display: flex;
     padding: 2rem;
     border-radius: 2rem;

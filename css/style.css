@@ -108,6 +108,10 @@ svg {
     overflow-x: auto;
     box-shadow: 0 .01rem .4rem .01rem #949494;
 }
+.single{
+    display: flex;
+    align-items: center;
+}
 
 .navegacao nav ul {
     display: flex;

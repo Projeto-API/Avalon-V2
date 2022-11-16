@@ -7,64 +7,77 @@ body{
     font-size: arial;
 }
 
-.listamenu ul li a {
-    align-items: center;
-    font-size:12px;
-    flex-direction: column;
-    display:flex;
-    color: aliceblue;
-    
-}
-
 main{
     display: flex;
 }
+h1{
+    color: black;
+    display: flex;
+}
 nav li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    margin-bottom: 0.5rem;
     width: 100%;
 }
 nav ul {
     display: flex;
 }
-.pedidos{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: space-between;
+h1{
     align-items: center;
+    font-size: 19px;
+    display: flex;
+    margin-top: -25rem;
+    text-align: center;
+    width: 100%;
 }
-.informacaodospedidos{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+.informacaodospedidos {
+margin: 16rem;
+margin-left: -2rem;
+    background-color: rgb(241, 239, 239);
+    border-radius: 2rem;
+    width: 60%;
+    height: 10%;
+    display:flex;
+
 }
 .containermenu {
-    margin: 9rem;
+    margin: 14rem;
+    margin-bottom: 1rem;
     text-align: center;
-    background-color: #9CD9C2;;
+    background-color: #9CD9C2;
     border-radius: 2rem;
-    width: 150%;
-    height: 70%;
+    width: 90%;
     display:flex;
-    flex-direction: column;
-    color: aliceblue;
+    margin-left: 0rem;
+    color: black
 }
-.box-usuario { 
-    background-color:white;;    
+
+nav .listamenu{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+}
+.listamenu li a {
+    align-items: center;
+    text-decoration: none;
+    padding: .8rem 1rem;
+    color: black;
+    font-size: clamp(.6rem, 100%, .8rem);
+    white-space: nowrap;
+}
+.numeropedido li a {
+    align-items: center;
+    text-decoration: none;
+    padding: .8rem 1rem;
+    color: #05a065;
+    font-size: clamp(.6rem, 100%, .8rem);
+    white-space: nowrap;
+
 }
 .fotousuario >img{
     width: 70%;
     align-items: center;
     display: flex;
     border-radius: 300%;
-}
-ul li {
-    align-items: center;
 }
 .meusdados {
     margin: 1rem;
@@ -93,11 +106,15 @@ ul li {
     background-color: #9CD9C2;;
     border-radius: 2rem;
     width: 50%;
-    height: 80%;
+    height: 75%;
     flex-direction: column;
     display:flex;
     gap: 1rem;
     align-items: center;
    
 }
-
+.valida{
+    display: flex;
+    justify-items: center;
+    width: 80%;
+}

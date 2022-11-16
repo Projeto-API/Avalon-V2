@@ -48,7 +48,7 @@
     box-shadow: .25rem .25rem 1rem black;
 }
 
-#finalizarCompra a{
+#finalizarCompra a {
     width: 100%;
 }
 
@@ -57,4 +57,8 @@
     transition-property: all;
     transition-duration: 0.2s;
     color: white;
-    }
+}
+
+.adicionar :hover {
+    color: white;
+}

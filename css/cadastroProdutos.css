@@ -244,6 +244,7 @@ textarea {
     text-align: center;
     font-size: 1.5rem;
     justify-content: space-evenly; 
+    width: 11rem;
 }
 .configbutton {
     background-color: #386C5F;
@@ -252,7 +253,8 @@ textarea {
     padding: 2rem;
     border-radius: 2rem;
     justify-content: space-between;
-    align-items: baseline;
+    align-items: center;
+
 }
 .cancelar{
     background-color: red;
@@ -485,10 +487,13 @@ div .categoriaInput{
         flex-direction: column-reverse;
         gap: 1rem;
         align-items: center;
+       
+        
     }
     .papelPao{
         display: none
     }
+    
 
 }
 

@@ -6,16 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="../script.js/modalCadastro.js" ></script>
     <link rel="stylesheet" href="../css/cadastroProdutos.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>CadastroProdutos</title>
 
 </head>
 <body>
     <header>
+        <section class="container-header">
+            <img id="logo" src="../img/logopreto.png" alt="">
+            <nav class="icons">
+                <div class="conta">
+                    <ul type="none">
+                        <li><a href="">Minha Conta </a></li>
+                        <li><a href="../views/cadastroLivro.html">Faça login</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <button id="login">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-person-fill" viewBox="-2 -2 20 20">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </section>
 
-        <div class="cadastroProutos">
-            <img class="logo" src="../img/logopreto.png" alt="">
-            <a class="usuario" href=""> Usuario </a>
-        </div>
     </header>
     <main>
         <div class="container">
@@ -44,52 +59,80 @@
                     <legend><h1> Cadastro de Livro</h1></legend>
                     <br>
                     <div class="double">
-                        <label for="imagemCapa">Imagens Capa:</label>
-                        <input  class ="alteraInp" type="text" name="imagemCapa" class="searchimg" >
-                        <label for="imagensMiniaturas">Imagens Miniaturas:</label>
-                        <input class ="alteraInp" type="text" name="imagensMiniaturas" class="searchimg" >
+                        <div>
+                            <label for="imagemCapa">Imagens Capa:</label>
+                            <input  class ="alteraInp" type="text" name="imagemCapa" class="searchimg" >
+                        </div>
+                        <div>
+                            <label for="imagensMiniaturas">Imagens Miniaturas:</label>
+                            <input class ="alteraInp" type="text" name="imagensMiniaturas" class="searchimg" >
+                        </div>
                     </div>
                     <br>
                     <div class="double">
-                        <label for="tituloLivro">Titulo do Livro:</label>
-                        <input type="text" name="tituloLivro" id="tituloLivro" >
-                        <label for="categoria">Categoria:</label>
-                        <input class="open-modal" onclick="abrirModal()" type="text" name="categoria"  ></a>
+                        <div>
+                            <label for="tituloLivro">Titulo do Livro:</label>
+                            <input type="text" name="tituloLivro" id="tituloLivro" >
+                        </div>
+                        <div>
+                            <label for="categoria">Categoria:</label>
+                            <input class="open-modal" onclick="abrirModal()" type="text" name="categoria"  ></a>
+                        </div>
                     </div>
                   
                     <div class="double">
-                        <label for="autor">Autor:</label>
-                        <input type="text" name="autor" id="autor" >
-                        <label for="editora">Editora:</label>
-                        <input type="text" name="editora" id="editora"   >
+                        <div>
+                            <label for="autor">Autor:</label>
+                            <input type="text" name="autor" id="autor" >
+                        </div>
+                        <div>
+                            <label for="editora">Editora:</label>
+                            <input type="text" name="editora" id="editora"   >
+                        </div>
                     </div>
                   
                     <div class="double">
-                        <label for="idioma">Idioma:</label>
-                        <input type="text" name="idioma"  >
-                        <label for="paginas">Paginas:</label>
-                        <input type="text" name="paginas"   >
+                        <div>
+                            <label for="idioma">Idioma:</label>
+                            <input type="text" name="idioma"  >                         
+                        </div>
+                        <div>
+                            <label for="paginas">Paginas:</label>
+                            <input type="text" name="paginas"   >
+                        </div>
                     </div>
                    
                     <div class="double">
-                        <label for="publicacao">Publicação:</label>
-                        <input type="text" name="publicacao" >
-                        <label for="dimesaoes">Dimensões:</label>
-                        <input type="text" name="dimesaoes"  >
+                        <div>
+                            <label for="publicacao">Publicação:</label>
+                            <input type="text" name="publicacao" >
+                        </div>
+                        <div>
+                            <label for="dimesaoes">Dimensões:</label>
+                            <input type="text" name="dimesaoes"  >
+                        </div>
                         </div>
                        
                         <div class="double">
-                            <label for="acabamento">Acabamento:</label>
-                            <input type="text" name="acabamento"  >
-                            <label for="nome">ISBN -10 :</label>
-                            <input type="text" name="name"  >
+                            <div>
+                                <label for="acabamento">Acabamento:</label>
+                                <input type="text" name="acabamento"  >
+                            </div>
+                            <div>
+                                <label for="nome">ISBN -10 :</label>
+                                <input type="text" name="name"  >
+                            </div>
                         </div>
                       
                         <div class="double">
-                            <label for="nome">Preço:</label>
-                            <input type="text" name="name" >
-                            <label for="nome">ISBN -20 :</label>
-                            <input type="text" name="name"  >
+                            <div>
+                                <label for="nome">Preço:</label>
+                                <input type="text" name="name"  raquery >
+                            </div>
+                            <div>
+                                <label for="nome">ISBN -20 :</label>
+                                <input type="text" name="name"  >
+                            </div>
                         </div>
                         
 

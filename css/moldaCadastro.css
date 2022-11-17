@@ -36,10 +36,11 @@ div .categoriaInput{
     width: 100%;
     height: 100%;
     max-width: 34rem;
-    max-height: 45rem;
+    max-height: 47rem;
     background-color: #338866;
     border-radius: 10px;
-    margin: 50px auto 0 auto; 
+    margin: 50px auto 0 auto;
+    
 
     
 }
@@ -72,10 +73,21 @@ span.close {
     font-family: 'Poppins', sans-serif;
 
 }
+
+.botaoFechar {
+    justify-content: center;
+    margin-right: 14px;
+    margin-bottom: 4px;
+    display: flex;rem;
+}
 .categoria-modal{
+    margin-top: 12rem;
     display: flex;
     justify-content: center;
 
+}
+.xFechar{
+    display: contents;
 }
 
 .cadastro {
@@ -83,6 +95,7 @@ span.close {
     background-color: #9CD9C2;
     border-radius: 5rem;
     width: 28rem;
+    height: 45rem;
     margin-top: 1rem;
     font-weight: bolder;
     align-items: center;

@@ -4,12 +4,12 @@ window.addEventListener('load', function(){
     formularioForm.addEventListener('submit', function(event){
 
  
-    let formpublic = document.getElementById('public');
-    if(formpublic.value.length < 10 ){
+    let formidioma = document.getElementById('idioma');
+    if(formidioma.value.length < 10 ){
         event.preventDefault()
-        document.querySelector('.err-length-public').classList.remove('invisible')
+        document.querySelector('.err-length-idioma').classList.remove('invisible')
     }else{
-        document.querySelector('.err-length-public').classList.add('invisible')
+        document.querySelector('.err-length-idioma').classList.add('invisible')
     }
     })
     })

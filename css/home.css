@@ -22,13 +22,6 @@
     justify-content: center;
 }
 
-/* main {
-    display: flex;
-    max-width: 100%;
-    align-items: center;
-    flex-direction: column;
-} */
-
 .big3 {
     display: flex;
     align-items: center;
@@ -223,6 +216,8 @@
     transition-duration: 0.2s;
 }
 
+
+
 @media (min-width: 768px) {
     body {
         max-width: 100%;
@@ -267,8 +262,6 @@
         position: absolute;
     }
 }
-
-
 
 
 
@@ -326,4 +319,3 @@
         position: absolute;
     }
 }
-

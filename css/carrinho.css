@@ -60,6 +60,11 @@ main {
     width: 2rem;
 }
 
+#preco {
+    font-weight: 600;
+    color: #386C5F;
+}
+
 input[type="number"] {
     -moz-appearance: textfield;
 }
@@ -143,7 +148,7 @@ tfoot {
     border-radius: 5px;
 }
 
-.finalizarCompra {
+.continuar {
     padding: 1rem 0;
     width: 100%;
 }

@@ -38,25 +38,23 @@
     color: white;
 }
 
-#finalizarCompra {
+#continuar {
     font-weight: bold;
     width: 100%;
     height: 2rem;
     background-color: #4EC16E;
     border-radius: 1rem;
     cursor: pointer;
-    box-shadow: .25rem .25rem 1rem black;
+    
 }
 
-#finalizarCompra a {
-    width: 100%;
+#continuar a {
+    width: 90%;
 }
 
-.finalizarCompra :hover {
-    transform: scale(1.05);
-    transition-property: all;
-    transition-duration: 0.2s;
+.continuar :hover {
     color: white;
+
 }
 
 .adicionar :hover {

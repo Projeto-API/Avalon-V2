@@ -11,16 +11,22 @@
     height: auto;
 }
 
+main {
+    max-width: 25rem;
+}
+
 .cabecalho {
     display: none;
     position: absolute;
-    padding-top: 80px;
+    padding-top: 65px;
     height: 50px;
 }
 
+/*  ENDEREÇO SALVO */
+
 .entrega {
-    padding: 0 1rem;
-    padding-top: 80px;
+    margin: .5rem;
+    padding-top: 65px;
 }
 
 .entrega svg {
@@ -30,23 +36,19 @@
     color: #4EC16E;
 }
 
-.entrega h5 {
-    border: .75px solid rgb(102, 102, 102);
-    padding: 0 .5rem;
-    border-radius: 5px;
-}
 
 .enderecoSalvo {
-    margin: .5rem;
+    
+
     align-items: center;
     display: flex;
-    background-color: #F6F9FF;
+    background-color:#F6F9FF;
     border-radius: 1rem;
     cursor: pointer;
 }
 
 .addAdress {
-    margin: 0 2rem;
+    margin: 0 1rem;
     font-size: .6rem;
     text-decoration: underline;
 }
@@ -59,14 +61,12 @@
 }
 
 .enderecoNovo {
-    display: none;
-    background-color: #F6F9FF;
+    background-color: ;
     padding: .5rem;
     width: 100%;
     max-width: 25rem;
     font-size: .7rem;
     border-radius: 1rem;
-
 }
 
 .enderecoNovo input {
@@ -87,6 +87,7 @@
     justify-content: space-around;
 }
 
+/* BOTÃO ADICIONAR */
 .adicionar {
     padding: .5rem;
     width: 100%;
@@ -94,9 +95,13 @@
     justify-content: center;
 }
 
+.adicionar a {
+    width: 100%;
+}
+
 #adicionar {
     font-weight: bold;
-    width: 50%;
+    width: 100%;
     height: 2rem;
     background-color: #4EC16E;
     border-radius: 1rem;
@@ -105,7 +110,7 @@
 
 
 .opcao {
-    margin: 01rem;
+    margin: .5rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -115,14 +120,15 @@
 }
 
 .opcoesFrete {
-    margin: .5rem;
     background-color: #F6F9FF;
     border-radius: 1rem;
 }
 
 
 .opcao svg {
-    width: 2rem;
+    padding-left: 1rem;
+    align-items: center;
+    width: 3rem;
 }
 
 .opcaoInformation {
@@ -138,4 +144,133 @@
 .opcaoPrice {
     text-align: center;
     width: 100%;
+}
+
+.pagamento {
+    margin: .5rem;
+
+}
+
+.opcoesPagamento {
+    display: flex;
+    padding: .5rem;
+}
+
+.opcoesPagamento :hover {
+    background-color: #F6F9FF;
+    color: #4EC16E;
+
+}
+
+.itemPagamento {
+    width: 9rem;
+    height: 100%;
+    font-size: .8rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.imagePagamento {
+    width: 50px;
+}
+
+.pagamentoEscolhido {
+    gap: 1rem;
+    background-color: #F6F9FF;
+    padding: .5rem;
+    width: 100%;
+    max-width: 25rem;
+    font-size: .7rem;
+    border-radius: 1rem;
+}
+
+.pagamentoEscolhido input {
+    width: 100%;
+    background-color: white;
+    border: .75px solid rgb(102, 102, 102);
+    border-radius: 5px;
+}
+
+.pagamentoEscolhido div {
+    gap: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* RESUMO PEDIDO */
+.resumo {
+    margin: .5rem;
+}
+
+.produto {
+
+    display: flex;
+    align-items: center;
+    background-color: #F6F9FF;
+    border-radius: 1rem;
+}
+
+.imagemProduto {
+    margin: .5rem;
+    border-radius: .5rem;
+    display: flex;
+    width: 4rem;
+}
+
+#produtoTitulo {
+    padding-bottom: 1rem;
+    text-align: left;
+}
+
+.informationProduto {
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+}
+
+.informationProdutoValue {
+    width: 100%;
+    display: flex;
+
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.quantidadeValue {
+    text-align: center;
+    width: 2rem;
+}
+
+#preco {
+    font-weight: 600;
+    color: #386C5F;
+}
+
+
+#excluir {
+    display: none;
+}
+
+.itemName {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: fit-content;
+    margin: .5rem;
+    padding: 0 .5rem ;
+    background-color: #386C5F;
+    color: white;
+    border-radius:  0 15px  15px 0;
+}
+
+.continuar {
+    padding: .5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

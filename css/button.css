@@ -49,10 +49,10 @@
 }
 
 #continuar a {
-    width: 90%;
+    width: 100%;
 }
 
-.continuar :hover {
+#continuar :hover {
     color: white;
 
 }

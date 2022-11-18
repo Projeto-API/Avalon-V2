@@ -85,7 +85,7 @@
             </nav>
         </header>
         <section class="entrega">
-            <h5>Endereço de Entrega</h5>
+            <h5 class="itemName">Endereço de Entrega</h5>
             <div class="enderecoSalvo">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                     class="bi bi-house-fill" viewBox="0 0 16 16">
@@ -142,9 +142,9 @@
             </div>
 
             <div class="containerFrete">
-                <h5>Opções de Entrega</h5>
+                <h5 class="itemName">Opções de Entrega</h5>
                 <div class="opcoesFrete">
-                    <div class="opcao">
+                    <a href="" class="opcao">
                         <svg class="checkbox" height="16" viewBox="0 0 16 16" width="16"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -158,9 +158,9 @@
                             <span class="tempoEntrega">Até 10 dias úteis</span>
                         </div>
                         <span class="opcaoPrice">R$ 10,90</span>
-                    </div>
+                    </a>
 
-                    <div class="opcao">
+                    <a href="" class="opcao">
                         <svg class="checkbox" height="16" viewBox="0 0 16 16" width="16"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -174,13 +174,99 @@
                             <span class="tempoEntrega">Até 10 dias úteis</span>
                         </div>
                         <span class="opcaoPrice">R$ 10,90</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="pagamento">
+            <h5 class="itemName">Pagamento</h5>
+            <div class="opcoesPagamento">
+                <a href="" class="itemPagamento">
+                    <span> Cartão de Crédito</span>
+                    <svg class="imagePagamentgo" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+                        <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z" />
+                        <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z" />
+                    </svg>
+                </a>
+
+                <a href="" class="itemPagamento">
+                    <span>Boleto Bancário</span>
+                    <img class="imagePagamento" src="/img/boleto 1.png" alt="">
+                </a>
+
+                <a href="" class="itemPagamento">
+                    <span>PIX</span>
+                    <img class="imagePagamento" src="/img/pix-106.png" alt="">
+                    </svg>
+                </a>
+            </div>
+            <div class="pagamentoEscolhido">
+                <p>
+                    <label for="numberCard">Número do Cartão</label> <br>
+                    <input type="text" name="numberCard" id="numberCard">
+                </p>
+
+                <p>
+                    <label for="nameCard">Nome impresso no cartão</label> <br>
+                    <input type="text" name="nameCard" id="nameCard">
+                </p>
+                <div>
+                    <p>
+                        <label for="validityDate">Validade</label> <br>
+                        <input type="text" name="validityDate" id="validityDate">
+                    </p>
+                    <p>
+                        <label for="securityNumber">Código de segurança</label> <br>
+                        <input type="text" name="securityNumber" id="securityNumber">
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        <section class="resumo">
+            <h5 class="itemName">Resumo do Pedido</h5>
+            <div class="resumoPedido">
+                <div class="produto">
+                    <img class="imagemProduto" src="../produtos/my broken mariko/mariko-capa.jpg" alt="">
+                    <div class="informationProduto">
+                        <h5 id="produtoTitulo">MY BROKEN MARIKO</h5>
+                        <div class="informationProdutoValue">
+                            <input type="number" class="quantidadeValue" value="1">
+                            <span id="preco"> R$ 39,90 </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="produto">
+                    <img class="imagemProduto" src="../produtos/manifesto/capa.jpg" alt="">
+                    <div class="informationProduto">
+                        <h5 id="produtoTitulo">MANIFESTO COMUNISTA</h5>
+                        <div class="informationProdutoValue">
+                            <input type="number" class="quantidadeValue" value="1">
+                            <span id="preco"> R$ 34,90 </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto">
+                    <img class="imagemProduto" src="../produtos/Revolução dos bichos/revolucaodos bichos-capa.jpeg"
+                        alt="">
+                    <div class="informationProduto">
+                        <h5 id="produtoTitulo">REVOLUÇÃO DOS BICHOS</h5>
+                        <div class="informationProdutoValue">
+                            <input type="number" class="quantidadeValue" value="1">
+                            <span id="preco"> R$ 19,90 </span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="pagamento"></section>
-        <section class="resumo"></section>
-
+        <div class="continuar">
+            <button id="continuar"><a href="checkout.html">FINALIZAR COMPRA</a></button>
+        </div>
 
     </main>
 

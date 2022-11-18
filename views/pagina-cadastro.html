@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/pagina-login.css">
     <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/pagina-cadastro.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,7 +17,7 @@
     <header>
 
         <section class="container-header">
-            <img id="logo" src="img/logopreto.png" alt="">
+            <img id="logo" src="/Avalon-V2/img/logopreto.png" alt="">
 
             <div class="busca">
                 <form action="/search">
@@ -87,18 +85,19 @@
             <div class="cadastro2">
                 <h3>CADASTRO</h3>
             </div>
-            <ul>
+            <form action="/email">
+            <ul class="cadastro-ul">
 
                 <li class="email">E-mail</li>
 
                 <div class="exemplo">
 
 
-                    <form action="/email">
+                    
 
                         <input type="text" id="span1" placeholder="exemplo@gmail.com">
 
-                    </form>
+                    
 
                 </div>
 
@@ -108,37 +107,38 @@
 
                 <div class="senha2">
 
-                    <form action="/password">
+                    
 
                         <input type="password" name="password" id="span2" placeholder="********">
 
-                    </form>
+                    
                 </div>
 
                 <li class="confirmesenha">Confirme senha</li>
 
                 <div class="confirmesenha2">
 
-                    <form action="/password">
+                    
 
                         <input type="password" name="password" id="span2" placeholder="********">
 
-                    </form>
+                    
                 </div>
 
                 <li class="telefone">Telefone</li>
 
                 <div class="telefone2">
 
-                    <form action="/password">
+                    
 
-                        <input type="password" name="password" id="span3" placeholder="(99)9999-9999">
+                        <input type="tel" name="telefone" id="span3" placeholder="(99)9999-9999">
 
-                    </form>
+                    
                 </div>
 
                 
                 <button class="cadastrar">CADASTRAR</button>
+            </form>
 
                 
 

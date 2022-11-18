@@ -297,7 +297,7 @@ display: none;
 .errors{
     width: 100%;
     max-width: 46rem;
-    border: solid 2px gre;
+    border: solid 2px red;
     margin-bottom: 10px;
     margin-left: 5rem;
     border-radius: 2rem;

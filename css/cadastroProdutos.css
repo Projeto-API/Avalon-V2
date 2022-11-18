@@ -288,6 +288,12 @@ textarea {
 
 }
 /* ----------------------------Erros ------------------- */
+.invisible{
+display: none;
+}
+
+
+
 .errors{
     width: 100%;
     max-width: 46rem;

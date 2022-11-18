@@ -8,20 +8,38 @@
 
 }
 
+main {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.cadastro-ul {
+    width: 90%;
+    align-items: center;
+}
+
 
 
 .cadastro {
     display: flex;
     background-color: #9CD9C2;
-    border-radius: 5%;
-    width: 32rem;
-    height: 42rem;
+    border-radius: 4%;
+    width: 80%;
+    height: 34rem;
     padding: 1%;
     margin: 1rem;
     flex-direction: column;
     align-items: center;
     margin-right: 15px;
     font-weight: bolder;
+    min-width: 18rem;
+    max-width: 768px;
 
 
 }
@@ -35,27 +53,25 @@ ul {
 .cadastro2 {
     display: flex;
     font-weight: bolder;
-    font-size: 23px;
+    font-size: 20px;
     padding-top: .5rem;
 }
 
 .email {
     display: flex;
     font-weight: bold;
-    margin-left: 2rem;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bolder;
+    justify-content: center;
 
 }
 
 #span1 {
     display: flex;
-    font-size: 1rem;
-    height: 4rem;
-    width: 25rem;
+    height: 3.5rem;
     border-radius: 2rem;
     border: none;
-    background: url(/projeto-integrador/avalon/img/cartinha.png);
+    background: url(/Avalon-V2/img/cartinha.png);
     background-repeat: no-repeat;
     background-size: 1.8em;
     padding-left: 4.5rem;
@@ -69,12 +85,13 @@ ul {
     display: flex;
     background-color: white;
     border-radius: 3rem;
-    width: 25rem;
-    height: 4rem;
-    margin: 1rem;
-    justify-content: center;
-    align-items: center;
+    width: 17rem;
+    height: 3.5rem;
+    margin: .5rem;
+    text-decoration: underline;
     color: rgb(98, 96, 96);
+    width: 100%;
+    
 
 }
 
@@ -89,9 +106,9 @@ div .exemplo {
 .senha {
     display: flex;
     font-weight: bold;
-    margin-left: 2rem;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bolder;
+    justify-content: center;
 
 
 }
@@ -99,29 +116,27 @@ div .exemplo {
 .confirmesenha {
     display: flex;
     font-weight: bold;
-    margin-left: 2rem;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bolder;
+    justify-content: center;
 }
 
 .telefone {
     display: flex;
     font-weight: bold;
-    margin-left: 2rem;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bolder;
+    justify-content: center;
 }
 
 #span2 {
     letter-spacing: 2px;
     display: flex;
-    font-size: 1rem;
-    height: 4rem;
-    width: 25rem;
+    height: 3.5rem;
     max-width: 100%;
     border-radius: 2rem;
     border: none;
-    background: url(/projeto-integrador/avalon/img/cadeado.png);
+    background: url(/Avalon-V2/img/cadeado.png);
     background-repeat: no-repeat;
     background-size: 1.5em;
     padding-left: 4rem;
@@ -131,13 +146,11 @@ div .exemplo {
 #span3 {
     letter-spacing: 2px;
     display: flex;
-    font-size: 1rem;
-    height: 4rem;
-    width: 25rem;
+    height: 3.5rem;
     max-width: 100%;
     border-radius: 2rem;
     border: none;
-    background: url(/projeto-integrador/avalon/img/telefone.png);
+    background: url(/Avalon-V2/img/telefone.png);
     background-repeat: no-repeat;
     background-size: 1.5em;
     padding-left: 4rem;
@@ -148,36 +161,36 @@ div .exemplo {
     display: flex;
     background-color: white;
     border-radius: 3rem;
-    width: 25rem;
-    height: 4rem;
-    margin: 1rem;
-    justify-content: center;
-    align-items: center;
+    height: 3.5rem;
+    margin: .5rem;
+    text-decoration: underline;
     color: rgb(98, 96, 96);
+    width: 100%;
+    
 }
 
 .confirmesenha2 {
     display: flex;
     background-color: white;
     border-radius: 3rem;
-    width: 25rem;
-    height: 4rem;
-    margin: 1rem;
-    justify-content: center;
-    align-items: center;
+    height: 3.5rem;
+    margin: .5rem;
+    text-decoration: underline;
     color: rgb(98, 96, 96);
+    width: 100%;
+    
 }
 
 .telefone2 {
     display: flex;
     background-color: white;
     border-radius: 3rem;
-    width: 25rem;
-    height: 4rem;
-    margin: 1rem;
-    justify-content: center;
-    align-items: center;
+    height: 3.5rem;
+    margin: .5rem;
+    text-decoration: underline;
     color: rgb(98, 96, 96);
+    width: 100%;
+    
 }
 
 .cadastrar {
@@ -187,11 +200,12 @@ div .exemplo {
     font-weight: bold;
     background-color: rgb(17, 202, 125);
     border-radius: 3rem;
-    height: 4rem;
+    height: 3.5rem;
     align-items: center;
-    font-size: 20px;
+    font-size: 15px;
     letter-spacing: 4px;
     font-weight: bolder;
+    width: 100%;
 
 }
 
@@ -200,16 +214,20 @@ div .exemplo {
 
     main
      {
-        max-width: 100%;
-        margin: 0 auto;
+        
     }
 
 }
 
 @media (min-width: 768px) {
-        main {
-            max-width: 100%;
-            margin: 0 auto;
-        }
+
+    main {
+
+        
+    }
+
+    .cadastro-ul {
+        width: 80%;
+    }
 
 }

@@ -16,7 +16,7 @@ section .bg-usuario{
     background: rgba(0,0,0,0.75);
     position: fixed;
     z-index: 2;
-    top: 0%;
+    top: -150%;
     display: block;
     transition: 350ms;
     

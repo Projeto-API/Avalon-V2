@@ -80,7 +80,7 @@ nav li {
     width: 100%;
     max-width: 1200px;
     display: flex;
-    background-color: #949494;
+    background-color: #FFFFFF;
     border-radius: 2rem;
     margin-top: 1rem;
    
@@ -125,15 +125,16 @@ legend {
 .box-cadastro {
     width: 100%;
     margin: 2rem;
-    background-color: #D9D9D9;
+    background-color: #9CD9C2;
     border-radius: 2rem;
     max-width: 1200px;
     display:flex;
     gap: 2rem;
-    color: #386C5F;
+    color: #9CD9C2;
     margin-top: 45PX;
     padding: 0 1rem;
     justify-content: center;
+    
 }
 
 .box-cadastro h1{
@@ -216,7 +217,7 @@ div form input{
     width: 100%;
     max-width: 17rem;
     border-radius: 2rem;
-    background-color: #338866;
+    background-color: #FFFFFF;
     opacity: 0.5;
 }
 .categoriaInput{
@@ -226,7 +227,7 @@ div form input{
     width: 20rem;
     border-radius: 2rem;
     margin-right: auto;
-    background-color: #338866;
+    background-color: #FFFFFF;
 }
 div .single input {
     height: 2.0rem;
@@ -241,7 +242,7 @@ textarea {
     max-height:10rem;
     max-width: 733px;
     border-radius: 23px;
-    background-color: #338866;
+    background-color: #FFFFFF;
     opacity: 0.5;
     
     
@@ -254,7 +255,7 @@ textarea {
     width: 11rem;
 }
 .configbutton {
-    background-color: #338866                                 ;
+    background-color: #9CD9C2                                 ;
     margin-bottom: 1rem;
     display: flex;
     padding: 2rem;

@@ -49,7 +49,7 @@ window.addEventListener('load', function () {
       if (value.includes('@') && value.includes('.')) {
         return
       } else {
-        createError(input, 'O campo deve conter @ e .', 'input');
+        createError(input, 'O campo deve conter @', 'input');
       }
     };
   
@@ -70,12 +70,12 @@ window.addEventListener('load', function () {
   
         switch (input.name) {
           case 'email':
-            validateLength(input, 10, 180);
+            validateLength(input, 6, 8);
             validateEmail(input);
             break;
   
           case 'senha':
-            validateLength(input, 8, 100);
+            validateLength(input, 6, 8);
             break;
   
   

@@ -33,6 +33,7 @@ form {
     width: 100%;
     height: 43rem;
     padding: 1%;
+
     margin: 1rem;
     flex-direction: column;
     align-items: center;
@@ -107,6 +108,7 @@ div .exemplo {
     font-weight: bold;
     font-size: 15px;
     font-weight: bolder;
+   
 
 }
 
@@ -122,20 +124,7 @@ div .exemplo {
     background-position: 2rem;
 }
 
-.senha2 {
-    display: flex;
-    background-color: white;
-    border-radius: 3rem;
-    width: 100%;
-    height: 3.5rem;
-    margin: .5rem;
-    justify-content: center;
-    align-items: center;
-    text-decoration: underline;
-    color: rgb(98, 96, 96);
 
-
-}
 
 .entrar {
     display: flex;

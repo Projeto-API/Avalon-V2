@@ -29,7 +29,7 @@ form {
     background-color: #9CD9C2;
     border-radius: 4%;
     width: 80%;
-    height: 39rem;
+    height: 37rem;
     padding: 1%;
     margin: 1rem;
     flex-direction: column;
@@ -76,9 +76,6 @@ ul {
     background-position: 2rem;
 }
 
-
-
-
 .exemplo {
     display: flex;
     background-color: white;
@@ -107,17 +104,17 @@ div .exemplo {
     font-size: 15px;
     font-weight: bolder;
     justify-content: center;
-
-
+    background: url(../img/cadeado.png);
 }
-
-.confirmesenha {
+.password {
     display: flex;
     font-weight: bold;
     font-size: 15px;
     font-weight: bolder;
     justify-content: center;
+    background: url(../img/cadeado.png);
 }
+
 
 .telefone {
     display: flex;
@@ -127,19 +124,6 @@ div .exemplo {
     justify-content: center;
 }
 
-#outrasenha {
-    letter-spacing: 2px;
-    display: flex;
-    height: 3.5rem;
-    max-width: 100%;
-    border-radius: 2rem;
-    border: none;
-    background: url(../img/cadeado.png);
-    background-repeat: no-repeat;
-    background-size: 1.5em;
-    padding-left: 4rem;
-    background-position: 2rem;
-}
 
 #span3 {
     letter-spacing: 2px;
@@ -167,24 +151,15 @@ div .exemplo {
     
 }
 
-.confirmesenha2 {
+
+
+.form-auth input {
     display: flex;
     background-color: white;
     border-radius: 3rem;
     height: 3.5rem;
     margin: .5rem;
-    text-decoration: underline;
-    color: rgb(98, 96, 96);
-    width: 100%;
-    
-}
-
-.form-auth input {
-    display: flex;
-    background-color: white;
-    border-radius: 1rem;
-    height: 3.5rem;
-    margin: .5rem;
+    text-align: center;
     text-decoration: underline;
     color: rgb(98, 96, 96);
     width: 100%;
@@ -192,33 +167,22 @@ div .exemplo {
 }
 
 /* ----------------------------Erros ------------------- */
- 
-    .errors{
+
+    .error{
         width: 100%;
         max-width: 46rem;
-        border: solid 2px red;
         margin-bottom: 10px;
         margin-left: 5rem;
+        font-size: 12px;
         border-radius: 2rem;
+        color: red;
         margin-top: 1.5rem;
     }
     
     .no-erros{
         display: none;
     }
-    
-    .linhaerros{
-        color: red;
-        margin-left: 2rem;
-        text-align-last: start;
-        font-size: 19px;
-        margin-top: 12px;
-        font-weight: bolder;
-    
-    }
- 
-     
-    
+      
 @media (min-width: 1200px) {
 
    
@@ -226,30 +190,12 @@ div .exemplo {
 }
     /* ----------------------------VALIDACAO ------------------- */
 
-
-
-.form-comments button{
-    display: flex;
-    margin: 1rem;
-    justify-content: center;
-    font-weight: bold;
-    background-color: rgb(17, 202, 125);
-    border-radius: 3rem;
-    height: 3.5rem;
-    align-items: center;
-    font-size: 15px;
-    letter-spacing: 4px;
-    font-weight: bolder;
-    width: 100%;
-}
-
-
 .form-auth {
     display: flex;
     background-color: #9CD9C2;
     border-radius: 4%;
-    width: 80%;
-    height: 34rem;
+    width: 70%;
+    height: 32rem;
     padding: 1%;
     margin: 1rem;
     flex-direction: column;
@@ -283,11 +229,7 @@ div .exemplo {
     padding: 20px;
 }
 
-.error {
-  color: red;
-  margin: 0;
-  padding: 0;
-}
+
 
 @media(max-width:560px){
   .busca{

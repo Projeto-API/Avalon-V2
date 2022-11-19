@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ropa+Sans&display=swap');
 
+button a {
+    text-decoration: none;
+    color: black;
+}
 
 .comprar {
     width: 8rem;
@@ -9,6 +13,7 @@
     cursor: pointer;
     z-index: 2;
     box-shadow: .25rem .25rem 1rem black;
+
 }
 
 .comprar a {
@@ -45,7 +50,7 @@
     background-color: #4EC16E;
     border-radius: 1rem;
     cursor: pointer;
-    
+
 }
 
 #continuar a {

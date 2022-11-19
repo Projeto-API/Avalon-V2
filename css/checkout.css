@@ -13,6 +13,7 @@
 
 main {
     max-width: 25rem;
+    padding-top: 65px;
 }
 
 .cabecalho {
@@ -26,7 +27,7 @@ main {
 
 .entrega {
     margin: .5rem;
-    padding-top: 65px;
+
 }
 
 .entrega svg {
@@ -38,11 +39,9 @@ main {
 
 
 .enderecoSalvo {
-    
-
     align-items: center;
     display: flex;
-    background-color:#F6F9FF;
+    background-color: #F6F9FF;
     border-radius: 1rem;
     cursor: pointer;
 }
@@ -206,7 +205,7 @@ main {
 }
 
 .produto {
-
+    justify-content: left;
     display: flex;
     align-items: center;
     background-color: #F6F9FF;
@@ -223,6 +222,7 @@ main {
 #produtoTitulo {
     padding-bottom: 1rem;
     text-align: left;
+    width: 100%;
 }
 
 .informationProduto {
@@ -231,6 +231,7 @@ main {
     flex-direction: column;
     padding: 1rem;
     width: 100%;
+
 }
 
 .informationProdutoValue {
@@ -262,15 +263,33 @@ main {
     height: 30px;
     width: fit-content;
     margin: .5rem;
-    padding: 0 .5rem ;
+    padding: 0 .5rem;
     background-color: #386C5F;
     color: white;
-    border-radius:  0 15px  15px 0;
+    border-radius: 0 15px 15px 0;
 }
 
 .continuar {
-    padding: .5rem;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    margin: .5rem;
+}
+
+@media (min-width: 1200px) {
+    main {
+        padding-top: 65px;
+        max-width: 1200px;
+        display: flex;
+        align-items: flex-start;
+
+    }
+
+    .entrega,
+    .pagamento {
+        max-width: 365px;
+        opacity: 20%;
+    }
+
+    .entrega:hover,
+    .pagamento:hover {
+        opacity: 100%;
+    }
 }

@@ -229,7 +229,20 @@ div .exemplo {
     padding: 20px;
 }
 
-
+.form-comments button{
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+    font-weight: bold;
+    background-color: rgb(17, 202, 125);
+    border-radius: 3rem;
+    height: 3.5rem;
+    align-items: center;
+    font-size: 15px;
+    letter-spacing: 4px;
+    font-weight: bolder;
+    width: 100%;
+}
 
 @media(max-width:560px){
   .busca{

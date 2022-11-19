@@ -16,6 +16,7 @@ main {
     padding-top: 65px;
 }
 
+/* NOVO HEADER */
 .cabecalho {
     display: none;
     position: absolute;
@@ -130,6 +131,7 @@ main {
     cursor: pointer;
 }
 
+/* OPÇÕES DE ENTREGA */
 
 .opcao {
     margin: .5rem;
@@ -161,7 +163,6 @@ main {
 .opcaoInformation {
     padding: 0 2rem;
     width: 100%;
-
 }
 
 .tempoEntrega {
@@ -173,9 +174,9 @@ main {
     width: 100%;
 }
 
+/* OPÇÕES DE PAGAMENTO */
 .pagamento {
     margin: .5rem;
-
 }
 
 .opcoesPagamento {
@@ -234,11 +235,12 @@ main {
 
 /* RESUMO PEDIDO */
 .resumo {
-    margin: .5rem;
+
     font-size: .8rem;
 }
 
 .produto {
+    margin: .5rem;
     justify-content: left;
     display: flex;
     align-items: center;
@@ -271,7 +273,6 @@ main {
 .informationProdutoValue {
     width: 100%;
     display: flex;
-
     flex-direction: row;
     gap: 1rem;
 }
@@ -304,12 +305,49 @@ main {
     border-radius: 0 15px 15px 0;
 }
 
+.resumo h5 {
+    margin-left: 1rem;
+}
+
+table {
+
+    line-height: 1.5rem;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tbody {
+    height: 10px;
+    font-size: .8rem;
+    justify-content: right;
+    border-bottom: 1px solid;
+}
+
+.table td {
+    padding: 0 1rem;
+}
+
+.monetary {
+    text-align: right;
+}
+
+#desconto {
+    color: #4EC16E;
+}
+
+tfoot {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
 .continuar {
     margin: .5rem;
 }
 
+
+
 @media (min-width: 1200px) {
-    
+
 
     .container-header-checkout {
         width: 1200px;

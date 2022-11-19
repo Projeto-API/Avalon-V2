@@ -1,9 +1,25 @@
 
 function abrirCarrinhoFlutuante() {
-    alert("abrir")
-    document.getElementsByTagName('.carrinhoFlutuante').style.width = "30%";
+    document.getElementById('carrinhoFlutuante').style.width = "21rem"
 }
+
 function fecharCarrinhoFlutuante() {
-    alert("fechar")
-    document.getElementsByTagName('.carrinhoFlutuante').style.width= "0%";
+    document.getElementById('carrinhoFlutuante').style.width = "0"
 }
+
+
+function excluirDentroCarrinho(excluiProduto ) {
+
+    let arrayDiv = document.getElementsByTagName("div");
+
+    for (let index = 0; index < arrayDiv.length; index++) {
+        var element = arrayDiv[index]
+        if(element.id == excluiProduto){
+            element.style.display= "none"
+        }
+    }
+    
+}
+
+
+

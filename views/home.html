@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/button.css">
-    <link rel="stylesheet" href="../css/moldaCadastro.css">
+    <link rel="stylesheet" href="../modal/modalCadastro.css">
     <script type="text/javascript" src="../script.js/modalCadastro.js" ></script>
     <title>Avalon</title>
 </head>
@@ -30,7 +30,8 @@
                 <div class="conta">
                     <ul type="none">
                         <li><a href="">Minha Conta </a></li>
-                        <li><a href="../views/cadastroLivro.html">Faça login</a></li>
+                        <li><a href="../views/cadastroLivro.html" class="open-modal">Faça login</a></li>
+                        
                     </ul>
                 </div>
                 <div>
@@ -47,6 +48,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-person-fill" viewBox="-2 -2 20 20">
                             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                         </svg>
+                        <button class="open-modal" onclick="abrirModal()">abrir</button>
                     </button>
                 </div>
                 <div>
@@ -405,7 +407,77 @@
 
 
                 </section>
+            </div>
     </section>
+
+
+
+
+    <section class="bg-modal" id="bg-modal">
+        <div class="modal">
+            <section class="login">
+                <div class="botaoFechar">
+                    <span class="close" onclick="fecharModal()">&times;</span>
+                </div>
+                <div>
+                    <div class="login2">
+                        <h3>LOGIN</h3>
+                    </div>
+
+                </div>
+                <ul>
+        
+                    <li class="email">E-mail</li>
+        
+                    <div class="exemplo">
+        
+        
+                        <form action="/email">
+        
+                            <input type="text" id="span1" placeholder="exemplo@gmail.com">
+        
+                        </form>
+        
+                    </div>
+    
+                    <li class="senha">Senha</li>
+        
+                    <div class="senha2">
+        
+                        <form action="/password">
+        
+                            <input type="password" name="password" id="span2" placeholder="********">
+        
+                        </form>
+                    </div>
+        
+                    <button class="entrar">ENTRAR</button>
+                    <button class="esqueci">Esqueci minha senha</button>
+                    <button class="cadastro">Não tenho cadastro</button>
+        
+                    <li class="redes">Login com as redes sociais</li>
+        
+        
+                </ul>
+                
+                <div class="google">
+        
+                    <img id="google" src="img/google.png" alt="">
+                    <button class="google2">continue with google</button>
+                    
+                    
+                </div>
+                <div class="facebook">
+        
+                    <img id="facebook" src="img/facebook.png" alt="">
+                    <button class="facebook2">continue with facebook</button>
+                    
+                    
+                </div>
+        
+                
+        
+            </section>
 </body>
 
 </html>

@@ -1,11 +1,12 @@
-function abrirUsuario() {
+
+function abrirModal() {
+    alert("abriu")
     document.getElementById('bg-usuario').style.top ="0";
 }
-function fecharUsuario() {
+function fecharModal() {
+    alert("fechou")
     document.getElementById('bg-usuario').style.top = "-150%";
 }
-
-
 
 
 

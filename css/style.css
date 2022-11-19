@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ropa+Sans&display=swap');
 
-footer,
-header,
-body {
+* {
     margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
@@ -152,7 +150,7 @@ svg {
 }
 
 
-.cards {
+.cards * {
     height: 35px;
     max-height: 3rem;
     background-color: transparent;
@@ -234,18 +232,15 @@ svg {
 
     header,
     footer {
-        width: 100%;
+        width: 100% ;
         margin: 0 auto;
     }
 
     .container-header,
     .container-footer {
-        width: 1200px;
+        width:  1200px  ;
+        margin: auto;
+        
+        
     }
-
-
-
-
-
-
 }

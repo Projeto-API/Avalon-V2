@@ -16,6 +16,9 @@ main {
     padding-top: 65px;
 }
 
+.navegacao {
+    display: none;
+}
 /* SEÇÃO REFERENTE ÀS INFORMAÇÕES DO PRODUTO */
 .cabecalho {
     display: none;
@@ -50,16 +53,21 @@ main {
 }
 
 .informationProdutoValue {
-    display: flex;
+        display: flex;
     justify-content: flex-start;
     flex-direction: row;
     gap: 1rem;
 }
 
+.informationProdutoValue a {
+    text-decoration: none;
+    color: black;
+}
+
 .quantidadeValue {
     text-align: center;
     width: 2rem;
-}
+    }
 
 #preco {
     font-weight: 600;
@@ -167,7 +175,6 @@ tfoot {
         list-style: none;
     }
 
-
     #header1 {
         width: 100%;
         padding-left: 15vw;
@@ -203,10 +210,8 @@ tfoot {
 }
 
 @media (min-width: 1200px) {
-
-
     main {
-        max-height: 600px;
+        height: 100vh;
         justify-content: center;
         display: flex;
     }

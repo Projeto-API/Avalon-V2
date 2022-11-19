@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/button.css">
-    <link rel="stylesheet" href="../modal/modalCadastro.css">
-    <script type="text/javascript" src="../script.js/modalCadastro.js" ></script>
     <title>Avalon</title>
 </head>
 
@@ -17,7 +15,7 @@
     <header>
 
         <section class="container-header">
-            <img id="logo" src="../img/logopreto.png" alt="">
+            <a href="/views/home.html"><img id="logo" src="../img/logopreto.png" alt=""></a>
 
             <div class="busca">
                 <form action="/search">
@@ -30,8 +28,7 @@
                 <div class="conta">
                     <ul type="none">
                         <li><a href="">Minha Conta </a></li>
-                        <li><a href="../views/cadastroLivro.html" class="open-modal">Faça login</a></li>
-                        
+                        <li><a href="">Faça login</a></li>
                     </ul>
                 </div>
                 <div>
@@ -48,7 +45,6 @@
                         <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-person-fill" viewBox="-2 -2 20 20">
                             <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                         </svg>
-                        <button class="open-modal" onclick="abrirModal()">abrir</button>
                     </button>
                 </div>
                 <div>
@@ -67,7 +63,7 @@
         <section class="navegacao">
             <nav class="lista">
                 <ul type="none">
-                    <li> <a href="#"> PÁGINA INICIAL</a> </li>
+                    <li> <a href="home.html"> PÁGINA INICIAL</a> </li>
                     <li> <a href="#"> HOME</a> </li>
                     <li> <a href="#"> TODOS OS LIVROS</a> </li>
                     <li> <a href="#"> GÊNEROS</a> </li>
@@ -77,6 +73,7 @@
             </nav>
             <section>
     </header>
+
     <main>
         <section class="banner">
             <img id="banner" src="../img/banner.jpg" alt="">
@@ -141,7 +138,8 @@
                         </li>
 
                         <li>
-                            <img class="item current-item" src="../produtos/moby dick/mobydick-capa.jpg" alt="moby-dick">
+                            <img class="item current-item" src="../produtos/moby dick/mobydick-capa.jpg"
+                                alt="moby-dick">
                             <div>
                                 <h5>MOBY DICK</h5>
                                 <span>R$ 129,90</span>
@@ -238,7 +236,8 @@
                         </li>
 
                         <li>
-                            <img class="item current-item" src="../produtos/moby dick/mobydick-capa.jpg" alt="moby-dick">
+                            <img class="item current-item" src="../produtos/moby dick/mobydick-capa.jpg"
+                                alt="moby-dick">
                             <div>
                                 <h5>MOBY DICK</h5>
                                 <span>R$ 129,90</span>
@@ -265,6 +264,165 @@
     </main>
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     <footer>
         <section class="footer">
             <section class="container-footer">
@@ -273,9 +431,7 @@
                 </div>
 
                 <div class="column">
-                    <section>
-                        <h5>Privacidade e Termos</h5><br>
-                    </section>
+                    <h5>Privacidade e Termos</h5><br>
                     <section>
                         <ul type="none">
                             <li>Política de Pagamento</li>
@@ -286,40 +442,29 @@
                 </div>
 
                 <div class="column">
-                    <section>
-                        <h5>Mapa do Site</h5><br>
-                    </section>
-                    <section>
-                        <ul type="none">
-                            <li>Quem Somos</li>
-                            <li>Todos os Livros</li>
-                            <li>Autores</li>
-                            <li>Gêneros</li>
-                            <li>Fale Conosco</li>
-                        </ul>
-                    </section>
+                    <h5>Mapa do Site</h5><br>
+                    <ul type="none">
+                        <li>Quem Somos</li>
+                        <li>Todos os Livros</li>
+                        <li>Autores</li>
+                        <li>Gêneros</li>
+                        <li>Fale Conosco</li>
+                    </ul>
                 </div>
 
                 <div class="column">
-                    <section>
-                        <h5>Formas de pagamento</h5><br>
-                    </section>
-                    <section class="cards">
-                        <a href=""><img id="cards" src="../img/cards-transparent.png" alt=""></a>
-                    </section>
+                    <h5>Formas de pagamento</h5><br>
+                    <a href=""><img class="cards" src="../img/cards-transparent.png" alt=""></a>
+
                 </div>
                 <div class="column" id="redes-sociais">
-                    <section>
-                        <h5>Redes Sociais</h5><br>
-                    </section>
-                    <section>
-                        <nav>
-                            <a href=""><img height="15rem" src="../img/instagram 1.png" alt=""></a>
-                            <a href=""><img height="15rem" src="../img/google-plus-g 1.png" alt=""></a>
-                            <a href=""><img height="15rem" src="../img/facebook-f 1.png" alt=""></a>
-                            <a href=""><img height="15rem" src="../img/linkedin-in 1.png" alt=""></a>
-                        </nav>
-                    </section>
+                    <h5>Redes Sociais</h5><br>
+                    <nav>
+                        <a href=""><img height="15rem" src="../img/instagram 1.png" alt=""></a>
+                        <a href=""><img height="15rem" src="../img/google-plus-g 1.png" alt=""></a>
+                        <a href=""><img height="15rem" src="../img/facebook-f 1.png" alt=""></a>
+                        <a href=""><img height="15rem" src="../img/linkedin-in 1.png" alt=""></a>
+                    </nav>
                 </div>
             </section>
             <section class="autores">
@@ -336,148 +481,6 @@
             </section>
             <section>
     </footer>
-    <section class="bg-modal" id="bg-modal">
-        <div class="modal">
-            <div class="categoria-modal">
-                <div class="xFechar">
-                </div>
-                <section class="cadastro">
-                    <div class="botaoFechar">
-                        <span class="close" onclick="fecharModal()">&times;</span>
-                    </div>
-
-                    <div class="cadastro2">
-                        <div>
-                            <h3>CADASTRO</h3>
-                        </div>
-                    </div>
-                    <ul>
-
-                        <li class="email">E-mail</li>
-
-                        <div class="exemplo">
-
-
-                            <form action="/email">
-
-                                <input type="text" id="span1" placeholder="exemplo@gmail.com">
-
-                            </form>
-
-                        </div>
-
-
-
-                        <li class="senha">Senha</li>
-
-                        <div class="senha2">
-
-                            <form action="/password">
-
-                                <input type="password" name="password" id="span2" placeholder="********">
-
-                            </form>
-                        </div>
-
-                        <li class="confirmesenha">Confirme senha</li>
-
-                        <div class="confirmesenha2">
-
-                            <form action="/password">
-
-                                <input type="password" name="password" id="span2" placeholder="********">
-
-                            </form>
-                        </div>
-
-                        <li class="telefone">Telefone</li>
-
-                        <div class="telefone2">
-
-                            <form action="/password">
-
-                                <input type="password" name="password" id="span3" placeholder="(99)9999-9999">
-
-                            </form>
-                        </div>
-
-
-                        <button class="cadastrar">CADASTRAR</button>
-
-
-
-                </section>
-            </div>
-    </section>
-
-
-
-
-    <section class="bg-modal" id="bg-modal">
-        <div class="modal">
-            <section class="login">
-                <div class="botaoFechar">
-                    <span class="close" onclick="fecharModal()">&times;</span>
-                </div>
-                <div>
-                    <div class="login2">
-                        <h3>LOGIN</h3>
-                    </div>
-
-                </div>
-                <ul>
-        
-                    <li class="email">E-mail</li>
-        
-                    <div class="exemplo">
-        
-        
-                        <form action="/email">
-        
-                            <input type="text" id="span1" placeholder="exemplo@gmail.com">
-        
-                        </form>
-        
-                    </div>
-    
-                    <li class="senha">Senha</li>
-        
-                    <div class="senha2">
-        
-                        <form action="/password">
-        
-                            <input type="password" name="password" id="span2" placeholder="********">
-        
-                        </form>
-                    </div>
-        
-                    <button class="entrar">ENTRAR</button>
-                    <button class="esqueci">Esqueci minha senha</button>
-                    <button class="cadastro">Não tenho cadastro</button>
-        
-                    <li class="redes">Login com as redes sociais</li>
-        
-        
-                </ul>
-                
-                <div class="google">
-        
-                    <img id="google" src="img/google.png" alt="">
-                    <button class="google2">continue with google</button>
-                    
-                    
-                </div>
-                <div class="facebook">
-        
-                    <img id="facebook" src="img/facebook.png" alt="">
-                    <button class="facebook2">continue with facebook</button>
-                    
-                    
-                </div>
-        
-                
-        
-            </section>
 </body>
 
 </html>
@@ -486,3 +489,4 @@
 </body>
 
 </html>
+

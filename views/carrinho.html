@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/carrinho.css">
+    <link rel="stylesheet" href="../css/button.css">
+    <title>Avalon</title>
+</head>
+
+<body>
+
+    <header>
+        <section class="container-header">
+            <a href="/views/home.html"><img id="logo" src="../img/logopreto.png" alt=""></a>
+
+            <div class="busca">
+                <form action="/search">
+                    <input type="text" name="search" id="search" scr="../img/lupa.png"
+                        placeholder="Títulos, Autores e Gêneros ">
+                </form>
+            </div>
+
+            <div class="icons">
+
+                <a href="" id="lupa">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </a>
+
+                <a href="" id="login">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                </a>
+
+                <a href="" id="car-shopping">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>
+                </a>
+
+
+
+            </div>
+        </section>
+
+        <section class="navegacao">
+            <nav class="lista">
+                <ul type="none">
+                    <li> <a href="home.html"> PÁGINA INICIAL</a> </li>
+                    <li> <a href="#"> HOME</a> </li>
+                    <li> <a href="#"> TODOS OS LIVROS</a> </li>
+                    <li> <a href="#"> GÊNEROS</a> </li>
+                    <li> <a href="#"> QUEM SOMOS</a> </li>
+                    <li> <a href="#"> FALE CONOSCO</a> </li>
+                </ul>
+            </nav>
+            <section>
+    </header>
+    <main>
+        <section class="containerProduto">
+            <ul class="cabecalho">
+                <li id="header1"><span>PRODUTO</span></li>
+                <li id="header2"><span>QUANTIDADE</span></li>
+                <li id="header3"><span>PREÇO</span></li>
+            </ul>
+
+            <div class="produto">
+                <img class="imagemProduto" src="../produtos/my broken mariko/mariko-capa.jpg" alt="">
+                <div class="informationProduto">
+                    <div class="nomeProduto">
+                        <h5 id="produtoTitulo">MY BROKEN MARIKO</h5>
+                    </div>
+                    <div class="informationProdutoValue">
+                        <div>
+                            <a href="" class="diminuirQtd">-</a>
+                            <input type="number" class="quantidadeValue" value="1">
+                            <a href="" class="aumentarQtd">+</a>
+                        </div>
+                        <span id="preco"> R$ 39,90 </span>
+                        <button id="excluir">X</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img class="imagemProduto" src="../produtos/manifesto/capa.jpg" alt="">
+                <div class="informationProduto">
+                    <div class="nomeProduto">
+                        <h5 id="produtoTitulo">MANIFESTO COMUNISTA</h5>
+                    </div>
+                    <div class="informationProdutoValue">
+                        <div>
+                            <a href="" class="diminuirQtd">-</a>
+                            <input type="number" class="quantidadeValue" value="1">
+                            <a href="" class="aumentarQtd">+</a>
+                        </div>
+                        <span id="preco"> R$ 34,90 </span>
+                        <button id="excluir">X</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="produto">
+                <img class="imagemProduto" src="../produtos/Revolução dos bichos/revolucaodos bichos-capa.jpeg" alt="">
+                <div class="informationProduto">
+                    <div class="nomeProduto">
+                        <h5 id="produtoTitulo">REVOLUÇÃO DOS BICHOS</h5>
+                    </div>
+                    <div class="informationProdutoValue">
+                        <div>
+                            <a href="" class="diminuirQtd">-</a>
+                            <input type="number" class="quantidadeValue" value="1">
+                            <a href="" class="aumentarQtd">+</a>
+                        </div>
+                        <span id="preco"> R$ 19,90 </span>
+                        <button id="excluir">X</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="containerFinalizacao">
+            <div class="containerEntrega">
+                <h6>Entrega</h6>
+                <div>
+                    <input id="endereco" type="text" placeholder="CEP">
+                    <button id="calcular"><a href="">CALCULAR</a></button>
+                </div>
+            </div>
+
+            <div class="containerCheckout">
+                <h5>RESUMO DO PEDIDO</h5>
+                <div class="desconto">
+                    <label>Cupom de Desconto<label>
+                            <div>
+                                <input id="cupom" type="text" placeholder="CÓDIGO">
+                                <button id="calcular"><a href="">ADICIONAR</a></button>
+                            </div>
+                </div>
+
+                <table class="table">
+                    <tbody>
+                        <tr class="itens">
+                            <td class="info">Subtotal</td>
+                            <td class="monetary">R$ 94,70</td>
+                        </tr>
+                        <tr class="itens">
+                            <td class="info">Entrega</td>
+                            <td class="monetary" id="desconto">Grátis</td>
+                        </tr>
+                        <tr class="itens">
+                            <td class="info">Desconto</td>
+                            <td class="monetary" id="desconto">- R$ 9,47</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td class="info">Total</td>
+                            <td class="monetary">R$ 85,23</td>
+                        </tr>
+                    </tfoot>
+                </table>
+
+                <div class="continuar">
+                    <button id="continuar"><a href="checkout.html">CONTINUAR</a></button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <section class="footer">
+            <section class="container-footer">
+                <div class="column" id="logo2">
+                    <img id="logo2" src="../img/logopreto.png" alt="">
+                </div>
+
+                <div class="column">
+                    <section>
+                        <h5>Privacidade e Termos</h5><br>
+                    </section>
+                    <section>
+                        <ul type="none">
+                            <li>Política de Pagamento</li>
+                            <li>Política de Privacidade</li>
+                            <li>Troca e Devolução</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="column">
+                    <section>
+                        <h5>Mapa do Site</h5><br>
+                    </section>
+                    <section>
+                        <ul type="none">
+                            <li>Quem Somos</li>
+                            <li>Todos os Livros</li>
+                            <li>Autores</li>
+                            <li>Gêneros</li>
+                            <li>Fale Conosco</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="column">
+                    <section>
+                        <h5>Formas de pagamento</h5><br>
+                    </section>
+                    <section class="cards">
+                        <a href=""><img id="cards" src="../img/cards-transparent.png" alt=""></a>
+                    </section>
+                </div>
+                <div class="column" id="redes-sociais">
+                    <section>
+                        <h5>Redes Sociais</h5><br>
+                    </section>
+                    <section>
+                        <nav>
+                            <a href=""><img height="15rem" src="../img/instagram 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/google-plus-g 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/facebook-f 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/linkedin-in 1.png" alt=""></a>
+                        </nav>
+                    </section>
+                </div>
+            </section>
+            <section class="autores">
+                <nav>
+                    <ul type="none">
+                        <p>Desenvolvido por</p>
+                        <li> <a href="#"> Amanda</a> </li>
+                        <li> <a href="#"> Igor</a> </li>
+                        <li> <a href="#"> João Paulo</a> </li>
+                        <li> <a href="#"> Mateus</a> </li>
+                        <li> <a href="#"> Paloma</a> </li>
+                    </ul>
+                </nav>
+            </section>
+            <section>
+    </footer>
+</body>
+
+</html>
+
+</section>
+</body>
+
+</html>

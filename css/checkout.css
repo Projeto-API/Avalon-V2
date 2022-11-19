@@ -23,11 +23,34 @@ main {
     height: 50px;
 }
 
+.navegacao {
+    display: none;
+}
+
+.container-header-checkout {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.icons {
+    color: black;
+    opacity: 70%;
+    font-size: .6rem;
+}
+
+.icons div {
+    font-size: .8rem;
+    display: flex;
+    flex-direction: column;
+}
+
 /*  ENDEREÇO SALVO */
 
 .entrega {
     margin: .5rem;
-
 }
 
 .entrega svg {
@@ -123,6 +146,11 @@ main {
     border-radius: 1rem;
 }
 
+.opcoesFrete a {
+    text-decoration: none;
+    color: black;
+}
+
 
 .opcao svg {
     padding-left: 1rem;
@@ -153,6 +181,11 @@ main {
 .opcoesPagamento {
     display: flex;
     padding: .5rem;
+}
+
+.opcoesPagamento a {
+    text-decoration: none;
+    color: black;
 }
 
 .opcoesPagamento :hover {
@@ -202,6 +235,7 @@ main {
 /* RESUMO PEDIDO */
 .resumo {
     margin: .5rem;
+    font-size: .8rem;
 }
 
 .produto {
@@ -261,6 +295,7 @@ main {
     display: flex;
     align-items: center;
     height: 30px;
+    font-size: .7rem;
     width: fit-content;
     margin: .5rem;
     padding: 0 .5rem;
@@ -274,6 +309,13 @@ main {
 }
 
 @media (min-width: 1200px) {
+    
+
+    .container-header-checkout {
+        width: 1200px;
+        gap: 50rem;
+    }
+
     main {
         padding-top: 65px;
         max-width: 1200px;
@@ -286,6 +328,10 @@ main {
     .pagamento {
         max-width: 365px;
         opacity: 20%;
+    }
+
+    .resumo {
+        width: 470px;
     }
 
     .entrega:hover,

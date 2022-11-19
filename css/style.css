@@ -27,7 +27,7 @@ header {
     justify-content: space-around;
     height: 50px;
     width: 100%;
-    
+
 }
 
 .icons {
@@ -138,14 +138,15 @@ svg {
 .container-footer {
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.container-footer div {
-    padding: 1.5rem 3vw;
+
+.column {
+    padding: 1.5rem ;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
 }
@@ -211,6 +212,8 @@ svg {
         justify-content: center;
         align-items: center;
     }
+
+   
 
     #logo2 {
         display: block;

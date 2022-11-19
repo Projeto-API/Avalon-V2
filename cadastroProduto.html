@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../modal/modalNovoCadastro.js" ></script>
+    <link rel="stylesheet" href="../css/cadastroProdutos.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>CadastroProdutos</title>
+
+</head>
+<body>
+    <header>
+        <section class="container-header">
+            <img id="logo" src="../img/logopreto.png" alt="">
+            <nav class="icons">
+                <div class="conta">
+                    <ul type="none">
+                        <li><a href="">Minha Conta </a></li>
+                        <li><a href="../views/cadastroLivro.html">Faça login</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <button id="login">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-person-fill" viewBox="-2 -2 20 20">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                        </svg>
+                    </button>
+                </div>
+            </nav>
+        </section>
+
+    </header>
+    <main>
+        <div class="container">
+            <div class="papelPao">
+                <section class="box-sumario">
+                    <nav class="sumario">
+                        <ul>
+                            <li><a href="../views/home.html">Home </a></li>
+                            <li><a href="#">Meus Produtos</a></li>
+                            <li><a href="../views/cadastroProduto.html">Cadastro Produtos</a></li>
+                        </ul>
+                    </nav>
+                </section>
+                <section class="box-menu">
+                    <ul>
+                        <li><a href="#">Cadastro de livro  </a></li>
+                        <li><a href="#">Envios </a></li>
+                        <li><a href="#">Informações de Vendas </a></li>
+                    </ul>
+                </section>
+            </div>
+
+            
+            <div class="box-cadastro">
+                <form  class="formulario" id="formulario" action="">
+                    <legend><h1> Cadastro de Livro</h1></legend>
+                    <br>
+                    <div class="double">
+                        <div>
+                            <label for="imagemCapa">Imagens Capa:</label>
+                            <input  class ="alteraInp"  name="imagemCapa" class="searchimg" >
+                        </div>
+                        <div>
+                            <label for="imagensMiniaturas">Imagens Miniaturas:</label>
+                            <input class ="alteraInp"  name="imagensMiniaturas" class="searchimg" >
+                        </div>
+                    </div>
+                    <br>
+                    <div class="double">
+                        <div>
+                            <label for="tituloLivro">Titulo do Livro:</label>
+                            <input type="text" name="tituloLivro" id="tituloLivro" required>
+                        </div>
+                        <div>
+                            <label for="categoria">Categoria:</label>
+                            <input class="open-modal" onclick="abrirModal()" type="text"  value = "categoria" name="categoria" required ></a>
+                        </div>
+                    </div>
+                  
+                    <div class="double">
+                        <div>
+                            <label for="autor">Autor:</label>
+                            <input type="text" name="autor" id="autor" required>
+                        </div>
+                        <div>
+                            <label for="editora">Editora:</label>
+                            <input type="text" name="editora" id="editora"  required >
+                        </div>
+                    </div>
+                  
+                    <div class="double">
+                        <div>
+                            <label for="idioma">Idioma:</label>
+                            <input type="text" name="idioma" required >                         
+                        </div>
+                        <div>
+                            <label for="paginas">Paginas:</label>
+                            <input type="text" name="paginas"  required >
+                        </div>
+                    </div>
+                   
+                    <div class="double">
+                        <div>
+                            <label for="publicacao">Publicação:</label>
+                            <input type="text" name="publicacao" required>
+                        </div>
+                        <div>
+                            <label for="dimesaoes">Dimensões:</label>
+                            <input type="text" name="dimesaoes" required>
+                        </div>
+                        </div>
+                       
+                        <div class="double">
+                            <div>
+                                <label for="acabamento">Acabamento:</label>
+                                <input type="text" name="acabamento" required >
+                            </div>
+                            <div>
+                                <label for="nome">ISBN -10 :</label>
+                                <input type="text" name="name" required >
+                            </div>
+                        </div>
+                      
+                        <div class="double">
+                            <div>
+                                <label for="nome">Preço:</label>
+                                <input type="text" name="name"  required >
+                            </div>
+                            <div>
+                                <label for="nome">ISBN -20 :</label>
+                                <input type="text" name="name" required >
+                            </div>
+                        </div>
+                        
+
+                        <div class="single">
+                            <label for="sinopse">Sinopse:</label>
+                            <textarea name="sinopse" ></textarea>
+                        </div>
+                        
+                        <div class="no-errors"  id ="div-errors">
+                            <ul class="linhaerros"> </ul>
+                        </div>
+              
+                        <section class="configbutton">
+                            <div class="button">
+                                <input class = "cancelar" type="submit" name="cancelar" value="Cancelar">
+                            </div>
+                            <div class="button">
+                                <input class="publicar" onclick="verificarFormulario()" type="submit" name="pulicar" value="Publicar">
+                            </div>
+                        </section>
+                        
+                    </div>
+                </form> 
+            </div>
+        </div>
+    </div>
+    </main>
+    
+    <section class="bg-modal" >
+        <div class="modal">
+            <div class="categoria">
+                <div class="botaoFechar">
+                    <span class="close" onclick="fecharModal()">&times;</span>
+                </div>
+                <div class="titulo">
+                    <h2 class="editarCategoria">Editar Categoria</h2>
+                    <input class="pesquisar" type="text" placeholder="Nome das Categorias">
+                </div>
+            </div>
+            <div class="categortiaInput">
+                <div class="box-01">
+                    <ul class="bloco">
+                        <li class="blocoli">Não Ficção</li>
+                        <li class="blocoli">Ficção</li>
+                        <li class="blocoli">Biografia</li>
+                        <li class="blocoli">Ciencias</li>
+                        <li class="blocoli">HQs e Mangás</li>
+                        <li class="blocoli">Classicos</li>
+                        <li class="blocoli">Intestigação</li>
+                        <li class="blocoli">Crimese</li>
+                        <li class="blocoli">Fantasia</li>
+                        <li class="blocoli">Ficção Cientí</li>
+                        <li class="blocoli">Filmes, sérieames</li>
+                        <li class="blocoli">Infantil</li>
+                        <li class="blocoli">Romance</li>
+                 
+                   </ul>
+                   <div>
+                    <button class="addItem">></button>
+                   </div>
+                    <ul class="bloco">
+                        <li class="blocoli">Não Ficção</li>
+                        <li class="blocoli">Ficção</li>
+                        <li class="blocoli">Biografia</li>
+                    </ul>
+                    <button class="addItem">></button>
+                    <ul class="bloco">
+                        <li class="blocoli">Filmes, sérieames</li>
+                        <li class="blocoli">Infantil</li>
+                        <li class="blocoli">Romance</li>
+                    </ul>
+                    <div class="baixoBox-01"></div>
+                </div>
+                <div class="selecao01">
+                    <a class="a">Categoria selecionada :</a>
+                </div>
+                <div class="selecao02">
+                    <a class="a">Nenhuma categoria foi escolhida</a>
+                </div>
+            </div>
+            <div class="button-modal">
+                <div >
+                    <button class="cancelarModal" type="submit" value="">Cancelar</button>
+                </div>
+                <div>
+                    <button class="confirmar" type="submit" >Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+</html>
+
+
+                    
+            
+                

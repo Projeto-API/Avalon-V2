@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style-login.css">
     <link rel="stylesheet" href="../css/pagina-cadastro.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Avalon</title>
+    <script src="../js/validacoescadastro.js" defer></script>
 </head>
 
 <body>
     <header>
 
         <section class="container-header">
-            <img id="logo" src="/Avalon-V2/img/logopreto.png" alt="">
+            <img id="logo" src="../img/logopreto.png" alt="">
 
             <div class="busca">
                 <form action="/search">
@@ -85,7 +86,7 @@
             <div class="cadastro2">
                 <h3>CADASTRO</h3>
             </div>
-            <form action="/email">
+            <form class="formulario" id="formulario" action="">
             <ul class="cadastro-ul">
 
                 <li class="email">E-mail</li>
@@ -95,8 +96,10 @@
 
                     
 
-                        <input type="text" id="span1" placeholder="exemplo@gmail.com">
-
+                        <input type="text" id="span1" name="email"   id="email"    placeholder="exemplo@gmail.com" required>
+                        <div class="invisible err-length-email">
+                            Insira um email válido.
+                        </div>
                     
 
                 </div>
@@ -109,7 +112,10 @@
 
                     
 
-                        <input type="password" name="password" id="span2" placeholder="********">
+                        <input type="password" name="pass" id="outrasenha"placeholder="********" required>
+                        <div class="invisible err-length-outrasenha">
+                            Senha deve ser + que 8 caracteres !
+                        </div>
 
                     
                 </div>
@@ -120,8 +126,10 @@
 
                     
 
-                        <input type="password" name="password" id="span2" placeholder="********">
-
+                        <input type="password" name="pass" id="span2"placeholder="********" required>
+                        <div class="invisible err-length-pass">
+                            Senha deve ser + que 8 caracteres !
+                        </div>
                     
                 </div>
 
@@ -131,24 +139,19 @@
 
                     
 
-                        <input type="tel" name="telefone" id="span3" placeholder="(99)9999-9999">
-
+                        <input type="tel" name="telefone" id="tel"  placeholder="(99)9999-9999" required>
+                        <div class="invisible err-length-tel">
+                            Telefone inválido !
+                            <div class="no-errors" id="tel">
+                                <ul class="linhaerros"> </ul>
+                            </div>
+                        </div>
                     
                 </div>
 
                 
-                <button class="cadastrar">CADASTRAR</button>
+                <button class="cadastrar" type="submit" name="cadastrar"    value="cadastrar">CADASTRAR</button>
             </form>
-
-                
-
-                
-
-
-            
-
-            
-
         </section>
 
 
@@ -160,7 +163,7 @@
         <section class="footer">
             <section class="container-footer">
                 <div class="column" id="logo2">
-                    <img id="logo2" src="img/logopreto.png" alt="">
+                    <img id="logo2" src="../img/logopreto.png" alt="">
                 </div>
 
                 <div class="column">
@@ -196,7 +199,7 @@
                         <h5>Formas de pagamento</h5><br>
                     </section>
                     <section class="cards">
-                        <a href=""><img id="cards" src="img/cards-transparent.png" alt=""></a>
+                        <a href=""><img id="cards" src="../img/cards-transparent.png" alt=""></a>
                     </section>
                 </div>
                 <div class="column" id="redes-sociais">
@@ -205,10 +208,10 @@
                     </section>
                     <section>
                         <nav>
-                            <a href=""><img height="15rem" src="img/instagram 1.png" alt=""></a>
-                            <a href=""><img height="15rem" src="img/google-plus-g 1.png" alt=""></a>
-                            <a href=""><img height="15rem" src="img/facebook-f 1.png" alt=""></a>
-                            <a href=""><img height="15rem" src="img/linkedin-in 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/instagram 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/google-plus-g 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/facebook-f 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/linkedin-in 1.png" alt=""></a>
                         </nav>
                     </section>
                 </div>
@@ -232,6 +235,5 @@
 </html>
 
 </section>
-
 
 </html>

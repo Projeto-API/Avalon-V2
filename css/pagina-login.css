@@ -236,19 +236,13 @@ div .exemplo {
 
 @media (min-width: 1200px) {
 
-    main
-     {
-       
-    }
+   
 
 }
 
 @media (min-width: 768px) {
 
-        main {
-
-            
-        }
+       
 
         .login-ul {
             width: 80%;

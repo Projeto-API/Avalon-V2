@@ -71,7 +71,7 @@ ul {
     height: 3.5rem;
     border-radius: 2rem;
     border: none;
-    background: url(/Avalon-V2/img/cartinha.png);
+    background: url(../img/cartinha.png);
     background-repeat: no-repeat;
     background-size: 1.8em;
     padding-left: 4.5rem;
@@ -129,14 +129,14 @@ div .exemplo {
     justify-content: center;
 }
 
-#span2 {
+#outrasenha {
     letter-spacing: 2px;
     display: flex;
     height: 3.5rem;
     max-width: 100%;
     border-radius: 2rem;
     border: none;
-    background: url(/Avalon-V2/img/cadeado.png);
+    background: url(../img/cadeado.png);
     background-repeat: no-repeat;
     background-size: 1.5em;
     padding-left: 4rem;
@@ -150,7 +150,7 @@ div .exemplo {
     max-width: 100%;
     border-radius: 2rem;
     border: none;
-    background: url(/Avalon-V2/img/telefone.png);
+    background: url(../img/telefone.png);
     background-repeat: no-repeat;
     background-size: 1.5em;
     padding-left: 4rem;
@@ -208,8 +208,72 @@ div .exemplo {
     width: 100%;
 
 }
-
-
+/* ----------------------------Erros ------------------- */
+.invisible{
+    display: none;
+    }
+    .error {
+        color: red;
+        margin: 0;
+        padding: 0;
+      }
+    
+    
+    .errors{
+        width: 100%;
+        max-width: 46rem;
+        border: solid 2px red;
+        margin-bottom: 10px;
+        margin-left: 5rem;
+        border-radius: 2rem;
+        margin-top: 1.5rem;
+    }
+    
+    .no-erros{
+        display: none;
+    }
+    
+    .linhaerros{
+        color: red;
+        margin-left: 2rem;
+        text-align-last: start;
+        font-size: 19px;
+        margin-top: 12px;
+        font-weight: bolder;
+    
+    }
+    /* ----------------------------Erros ------------------- */
+.invisible{
+    display: none;
+    }
+    
+    
+    
+    .errors{
+        width: 100%;
+        max-width: 46rem;
+        border: solid 2px red;
+        margin-bottom: 10px;
+        margin-left: 5rem;
+        border-radius: 2rem;
+        margin-top: 1.5rem;
+    }
+    
+    .no-erros{
+        display: none;
+    }
+    
+    .linhaerros{
+        color: red;
+        margin-left: 2rem;
+        text-align-last: start;
+        font-size: 19px;
+        margin-top: 12px;
+        font-weight: bolder;
+    
+    }
+    
+    
 @media (min-width: 1200px) {
 
    

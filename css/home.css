@@ -354,19 +354,16 @@
     background-color: #F6F9FF;
     border-radius: 1rem;
 }
-
 .imagemProduto {
     margin: .5rem;
     border-radius: .5rem;
     display: flex;
     width: 4rem;
 }
-
 #produtoTitulo {
     padding-bottom: 1rem;
     font-size: .8rem;
 }
-
 .informationProduto {
     justify-content: center;
     display: flex;
@@ -374,28 +371,23 @@
     margin: 1rem;
     width: 100%;
 }
-
 .informationProdutoValue {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
     gap: 1rem;
 }
-
 .quantidadeValue {
     text-align: center;
     width: 2rem;
 }
-
 #preco {
     font-weight: 600;
     color: #386C5F;
 }
-
 input[type="number"] {
     -moz-appearance: textfield;
 }
-
 .excluir {
     max-width: 2rem;
     width: 1rem;
@@ -405,7 +397,6 @@ input[type="number"] {
     justify-content: center;
     cursor: pointer;
 }
-
 .continuar {
     top: auto;
     bottom: 0;

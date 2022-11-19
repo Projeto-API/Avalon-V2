@@ -16,6 +16,7 @@ main {
     padding-top: 65px;
 }
 
+/* NOVO HEADER */
 .cabecalho {
     display: none;
     position: absolute;
@@ -130,6 +131,7 @@ main {
     cursor: pointer;
 }
 
+/* OPÇÕES DE ENTREGA */
 
 .opcao {
     margin: .5rem;
@@ -161,7 +163,6 @@ main {
 .opcaoInformation {
     padding: 0 2rem;
     width: 100%;
-
 }
 
 .tempoEntrega {
@@ -173,9 +174,9 @@ main {
     width: 100%;
 }
 
+/* OPÇÕES DE PAGAMENTO */
 .pagamento {
     margin: .5rem;
-
 }
 
 .opcoesPagamento {

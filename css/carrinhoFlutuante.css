@@ -8,7 +8,8 @@
 }
 
 * body {
-    height: auto;
+    background-color: #c9cfd1;
+    line-height: 1.5em;
 }
 
 
@@ -17,14 +18,27 @@
 
 .headerFlutuante {
     background-color: #386C5F;
+    padding: 8px;
     display: flex;
+    width: 100%;
+    top: 0;
     justify-content: space-between;
-    padding: 0.5rem 1rem;
 
 }
 
 .carrinhoFlutuante {
-    width: 350px;
+    background: #111;
+    height: 100%;
+    width:30%;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    position: fixed;
+    right: 0%;
+    top: 0;
+    transition: all 0.5s;
+    z-index: 1;
+    font-size: 19px
     }
 .produto {
     margin: .5rem;

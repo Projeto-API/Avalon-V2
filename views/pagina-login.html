@@ -14,20 +14,16 @@
     <title>Avalon</title>
     <script src="../js/validacoeslogin.js" defer></script>
 </head>
-
 <body>
     <header>
-
         <section class="container-header">
-            <img id="logo" src="/Avalon-V2/img/logopreto.png" alt="">
-
+            <img id="logo" src="../img/logopreto.png" alt="">
             <div class="busca">
                 <form action="/search">
-                    <input type="text" name="search" id="search" scr="img/lupa.png"
+                    <input type="text" name="search" id="search" scr="../img/lupa.png"
                         placeholder="Títulos, Autores e Gêneros ">
                 </form>
             </div>
-
             <nav class="icons">
                 <div class="conta">
                     <ul type="none">
@@ -59,11 +55,8 @@
                         </svg>
                     </button>
                 </div>
-
-
             </nav>
         </section>
-
         <section class="navegacao">
             <nav class="lista">
                 <ul type="none">
@@ -77,87 +70,39 @@
             </nav>
             <section>
     </header>
-
     <!-- comecei aqui -->
-
     <main>
-
         <section class="login">
-
-            
                 <h3 class="login2">LOGIN</h3>
-            
-
-            <form action="/email">
-            <ul class="login-ul">
-
-                <li class="email">E-mail</li>
-
-                <div class="exemplo">
-
-
+                <form class="form-auth card" method="post" action="/registro">
+                    <li class="email">E-mail</li>
+                    <input type="email" name="email" placeholder="Digite seu email">
+                    <li class="senha">Digite sua senha</li>
+                    <input type="senha" name="senha" placeholder="Digite sua senha">
+                    <button class="entrar">ENTRAR</button>
+                    <div class="esqueci">Esqueci minha senha</div>
+                    <div class="cadastro">Não tenho cadastro</div>
+    
+                    <li class="redes">Login com as redes sociais</li>  
                     
-
-                        <input type="text" id="span1" placeholder="exemplo@gmail.com">
-
-                    
-
-                </div>
-
-
-
-                <li class="senha">Senha</li>
-
-                <div class="senha2">
-
-                    
-
-                        <input type="password" name="password" id="span2" placeholder="********">
-
-                    
-                </div>
-
-                <button class="entrar">ENTRAR</button>
-
-            
-                <button class="esqueci">Esqueci minha senha</button>
-                <button class="cadastro">Não tenho cadastro</button>
-
-                <li class="redes">Login com as redes sociais</li>
-
-
-            </ul>
         </form>
-
             <div class="google">
-
-                <img id="google" src="/Avalon-V2/img/google.png" alt="">
-                <button class="google2">continue with google</button>
-                
-                
+                <img id="google" src="../img/google.png" alt="">
+                <button class="google2">continue with google</button>   
             </div>
             <div class="facebook">
-
-                <img id="facebook" src="/Avalon-V2/img/facebook.png" alt="">
-                <button class="facebook2">continue with facebook</button>
-                
-                
+                <img id="facebook" src="../img/facebook.png" alt="">
+                <button class="facebook2">continue with facebook</button>    
             </div>
-
-            
-
         </section>
 
-
     </main>
-
     <!-- terminei aqui -->
-
     <footer>
         <section class="footer">
             <section class="container-footer">
                 <div class="column" id="logo2">
-                    <img id="logo2" src="/Avalon-V2/img/logopreto.png" alt="">
+                    <img id="logo2" src="../img/logopreto.png" alt="">
                 </div>
 
                 <div class="column">
@@ -187,13 +132,12 @@
                         </ul>
                     </section>
                 </div>
-
                 <div class="column">
                     <section>
                         <h5>Formas de pagamento</h5><br>
                     </section>
                     <section class="cards">
-                        <a href=""><img id="cards" src="/Avalon-V2/img/cards-transparent.png" alt=""></a>
+                        <a href=""><img id="cards" src="../img/cards-transparent.png" alt=""></a>
                     </section>
                 </div>
                 <div class="column" id="redes-sociais">
@@ -202,10 +146,10 @@
                     </section>
                     <section>
                         <nav>
-                            <a href=""><img height="15rem" src="/Avalon-V2/img/instagram 1.png" alt=""></a>
-                            <a href=""><img height="15rem" src="/Avalon-V2/img/google-plus-g 1.png" alt=""></a>
-                            <a href=""><img height="15rem" src="/Avalon-V2/img/facebook-f 1.png" alt=""></a>
-                            <a href=""><img height="15rem" src="/Avalon-V2/img/linkedin-in 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/instagram 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/google-plus-g 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/facebook-f 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/linkedin-in 1.png" alt=""></a>
                         </nav>
                     </section>
                 </div>
@@ -225,10 +169,6 @@
             <section>
     </footer>
 </body>
-
 </html>
-
 </section>
-
-
 </html>

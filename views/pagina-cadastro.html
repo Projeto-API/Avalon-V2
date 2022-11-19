@@ -86,75 +86,22 @@
             <div class="cadastro2">
                 <h3>CADASTRO</h3>
             </div>
-            <form class="formulario" id="formulario" action="">
-            <ul class="cadastro-ul">
-
+            <form class="form-auth card" method="post" action="/registro">
                 <li class="email">E-mail</li>
+             
+                <input type="email"  name="email" placeholder="Digite seu email">
+                <li class="email">Senha</li>
+              
+                <input type="senha" name="senha" placeholder="Digite sua senha">
+                <li class="email">Confirme sua senha</li>
 
-                <div class="exemplo">
-
-
-                    
-
-                        <input type="text" id="span1" name="email"   id="email"    placeholder="exemplo@gmail.com" required>
-                        <div class="invisible err-length-email">
-                            Insira um email válido.
-                        </div>
-                    
-
-                </div>
-
-
-
-                <li class="senha">Senha</li>
-
-                <div class="senha2">
-
-                    
-
-                        <input type="password" name="pass" id="outrasenha"placeholder="********" required>
-                        <div class="invisible err-length-outrasenha">
-                            Senha deve ser + que 8 caracteres !
-                        </div>
-
-                    
-                </div>
-
-                <li class="confirmesenha">Confirme senha</li>
-
-                <div class="confirmesenha2">
-
-                    
-
-                        <input type="password" name="pass" id="span2"placeholder="********" required>
-                        <div class="invisible err-length-pass">
-                            Senha deve ser + que 8 caracteres !
-                        </div>
-                    
-                </div>
-
-                <li class="telefone">Telefone</li>
-
-                <div class="telefone2">
-
-                    
-
-                        <input type="tel" name="telefone" id="tel"  placeholder="(99)9999-9999" required>
-                        <div class="invisible err-length-tel">
-                            Telefone inválido !
-                            <div class="no-errors" id="tel">
-                                <ul class="linhaerros"> </ul>
-                            </div>
-                        </div>
-                    
-                </div>
-
+                <input type="telefone" name="telefone" placeholder="Confirme sua senha">
+                <li class="email">Telefone</li>
                 
-                <button class="cadastrar" type="submit" name="cadastrar"    value="cadastrar">CADASTRAR</button>
-            </form>
-        </section>
-
-
+                <input type="password" name="password" placeholder="Digite um numero de telefone">
+                <button type="submit">
+                    Cadastra-se
+                </button>
     </main>
 
     <!-- terminei aqui -->

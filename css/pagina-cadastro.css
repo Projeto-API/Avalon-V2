@@ -24,21 +24,19 @@ form {
     align-items: center;
 }
 
-
-
 .cadastro {
     display: flex;
     background-color: #9CD9C2;
     border-radius: 4%;
     width: 80%;
-    height: 34rem;
+    height: 39rem;
     padding: 1%;
     margin: 1rem;
     flex-direction: column;
     align-items: center;
     margin-right: 15px;
     font-weight: bolder;
-    min-width: 18rem;
+    min-width: 16rem;
     max-width: 768px;
 
 
@@ -181,10 +179,10 @@ div .exemplo {
     
 }
 
-.telefone2 {
+.form-auth input {
     display: flex;
     background-color: white;
-    border-radius: 3rem;
+    border-radius: 1rem;
     height: 3.5rem;
     margin: .5rem;
     text-decoration: underline;
@@ -193,7 +191,44 @@ div .exemplo {
     
 }
 
-.cadastrar {
+/* ----------------------------Erros ------------------- */
+ 
+    .errors{
+        width: 100%;
+        max-width: 46rem;
+        border: solid 2px red;
+        margin-bottom: 10px;
+        margin-left: 5rem;
+        border-radius: 2rem;
+        margin-top: 1.5rem;
+    }
+    
+    .no-erros{
+        display: none;
+    }
+    
+    .linhaerros{
+        color: red;
+        margin-left: 2rem;
+        text-align-last: start;
+        font-size: 19px;
+        margin-top: 12px;
+        font-weight: bolder;
+    
+    }
+ 
+     
+    
+@media (min-width: 1200px) {
+
+   
+
+}
+    /* ----------------------------VALIDACAO ------------------- */
+
+
+
+.form-comments button{
     display: flex;
     margin: 1rem;
     justify-content: center;
@@ -206,86 +241,62 @@ div .exemplo {
     letter-spacing: 4px;
     font-weight: bolder;
     width: 100%;
-
-}
-/* ----------------------------Erros ------------------- */
-.invisible{
-    display: none;
-    }
-    .error {
-        color: red;
-        margin: 0;
-        padding: 0;
-      }
-    
-    
-    .errors{
-        width: 100%;
-        max-width: 46rem;
-        border: solid 2px red;
-        margin-bottom: 10px;
-        margin-left: 5rem;
-        border-radius: 2rem;
-        margin-top: 1.5rem;
-    }
-    
-    .no-erros{
-        display: none;
-    }
-    
-    .linhaerros{
-        color: red;
-        margin-left: 2rem;
-        text-align-last: start;
-        font-size: 19px;
-        margin-top: 12px;
-        font-weight: bolder;
-    
-    }
-    /* ----------------------------Erros ------------------- */
-.invisible{
-    display: none;
-    }
-    
-    
-    
-    .errors{
-        width: 100%;
-        max-width: 46rem;
-        border: solid 2px red;
-        margin-bottom: 10px;
-        margin-left: 5rem;
-        border-radius: 2rem;
-        margin-top: 1.5rem;
-    }
-    
-    .no-erros{
-        display: none;
-    }
-    
-    .linhaerros{
-        color: red;
-        margin-left: 2rem;
-        text-align-last: start;
-        font-size: 19px;
-        margin-top: 12px;
-        font-weight: bolder;
-    
-    }
-    
-    
-@media (min-width: 1200px) {
-
-   
-
 }
 
-@media (min-width: 768px) {
 
-  
+.form-auth {
+    display: flex;
+    background-color: #9CD9C2;
+    border-radius: 4%;
+    width: 80%;
+    height: 34rem;
+    padding: 1%;
+    margin: 1rem;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px;
+    font-weight: bolder;
+    min-width: 18rem;
+    max-width: 768px;
+}
 
-    .cadastro-ul {
-        width: 80%;
-    }
 
+.form-auth button{
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+    font-weight: bold;
+    background-color: rgb(17, 202, 125);
+    border-radius: 3rem;
+    height: 3.5rem;
+    align-items: center;
+    font-size: 15px;
+    letter-spacing: 4px;
+    font-weight: bolder;
+    width: 100%;
+}
+
+.form-auth.card {
+    padding: 20px;
+}
+.register.card{
+    padding: 20px;
+}
+
+.error {
+  color: red;
+  margin: 0;
+  padding: 0;
+}
+
+@media(max-width:560px){
+  .busca{
+    display: none;
+  }
+  .content-auth{
+    justify-content: center;
+  }
+  #banner{
+    display: none;
+  }
 }

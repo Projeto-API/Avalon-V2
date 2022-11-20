@@ -80,7 +80,7 @@ nav li {
     width: 100%;
     max-width: 1200px;
     display: flex;
-    background-color: #FFFFFF;
+    background-color: #949494;
     border-radius: 2rem;
     margin-top: 1rem;
    
@@ -94,11 +94,10 @@ legend {
 .box-menu{
     display: flex;
     flex-direction: column;
-    background-color:aliceblue;
+    background-color: #D9D9D9;
      opacity: 0.8;
     border-radius: 2rem;
-    width: 100%;
-    opacity: 0.8;
+    width: 100%
 }
 .box-menu ul li {
     max-width: 1200px;
@@ -126,21 +125,19 @@ legend {
 .box-cadastro {
     width: 100%;
     margin: 2rem;
-    background-color: #9CD9C2;
+    background-color: #D9D9D9;
     border-radius: 2rem;
     max-width: 1200px;
-
+    display:flex;
     gap: 2rem;
-    color: #9CD9C2;
+    color: #386C5F;
     margin-top: 45PX;
     padding: 0 1rem;
     justify-content: center;
-    
 }
 
 .box-cadastro h1{
     text-align: center;
-    color: #386C5F;
 
 
 }
@@ -158,15 +155,14 @@ legend {
     width: 8rem;
     margin: center;
     max-width: 8rem;
-    justify-content: center;
-
+    margin-right: 6rem;
+    align-self: flex-end;
 }
 .single{
     display: flex;
     max-width: 1200;
     width: 100%;
     flex-direction: column;
-    align-items: center;
 
 }
 .double{
@@ -181,7 +177,6 @@ legend {
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
-    align-items: center;
     
     
 }
@@ -221,9 +216,8 @@ div form input{
     width: 100%;
     max-width: 17rem;
     border-radius: 2rem;
-    background-color: #FFFFFF;
+    background-color: #338866;
     opacity: 0.5;
-    font-size: 19px;
 }
 .categoriaInput{
     display: flex;
@@ -232,7 +226,7 @@ div form input{
     width: 20rem;
     border-radius: 2rem;
     margin-right: auto;
-    background-color: #FFFFFF;
+    background-color: #338866;
 }
 div .single input {
     height: 2.0rem;
@@ -242,12 +236,12 @@ div .single input {
 }
 textarea {
     
-    width: 96%;
+    width: 100%;
     height: 10rem;
     max-height:10rem;
     max-width: 733px;
     border-radius: 23px;
-    background-color: #FFFFFF;
+    background-color: #338866;
     opacity: 0.5;
     
     
@@ -260,13 +254,13 @@ textarea {
     width: 11rem;
 }
 .configbutton {
-    background-color: #9CD9C2                                 ;
+    background-color: #338866                                 ;
     margin-bottom: 1rem;
     display: flex;
     padding: 2rem;
     border-radius: 2rem;
-      align-items: center;
-    justify-content: space-around
+    justify-content: space-between;
+    align-items: center;
 
 }
 .cancelar{
@@ -294,10 +288,16 @@ textarea {
 
 }
 /* ----------------------------Erros ------------------- */
+.invisible{
+display: none;
+}
+
+
+
 .errors{
     width: 100%;
     max-width: 46rem;
-    border: solid 2px gre;
+    border: solid 2px red;
     margin-bottom: 10px;
     margin-left: 5rem;
     border-radius: 2rem;
@@ -335,7 +335,6 @@ section .bg-modal{
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 1200;
     height: 100%;
 }
 .bg-modal{
@@ -390,7 +389,6 @@ div .categoriaInput{
     align-items: center;
     flex-direction: row;
     border-radius: 2rem;
-    opacity: 0.8;
 }
 .cancelarModal{
     background-color: red;
@@ -431,7 +429,6 @@ div .categoriaInput{
 .editarCategoria{
     margin-left: 2rem;
     margin-top: 1rem;
-    color: #386C5F;
 }
 .pesquisar{
     display: flex;
@@ -442,8 +439,7 @@ div .categoriaInput{
     width: 21rem;
     border-radius: 2rem;
     text-align: center;
-    background-color: #FFFFFF;
-    opacity: 0.8;
+    background-color: #CACACA;
 }
 .botaoFechar{
     justify-content: end;
@@ -467,8 +463,7 @@ div .categoriaInput{
 }
 
 .bloco{
-    background-color: #FFFFFF;
-    opacity: 0.8;
+    background-color: #CACACA;
     width: 15rem;
     height: 26rem;
     margin: 2rem;
@@ -487,18 +482,15 @@ div .categoriaInput{
     height: 42px;
     width: 39px;
     margin-left: -20px;
-    background-color:  #4EC16E;
-    opacity: 0.8;
+    background-color:  #4EC16E
 
 }
-
-
-@media (max-width:850px){
+@media (max-width:880px){
     .double{
         flex-direction: column;
     }
     .double > div{
-        align-items: center;
+        align-items: stretch;
         
     }
     .box-cadastro form div label{
@@ -514,14 +506,6 @@ div .categoriaInput{
     .papelPao{
         display: none
     }
-    @media (max-width:880px){
-
-        .box-cadastro{
-            display: flex;
-            justify-content: center;
-        }
-    }
-
-
+    
 
 }

@@ -118,8 +118,9 @@ div .exemplo {
     background: url(/Avalon-V2/img/cadeado.png);
     background-repeat: no-repeat;
     background-size: 1.8em;
-    padding-left: 4.5rem;
+    padding-left: 7rem;
     background-position: 2rem;
+    
 }
 
 .senha2 {
@@ -133,6 +134,8 @@ div .exemplo {
     align-items: center;
     text-decoration: underline;
     color: rgb(98, 96, 96);
+    
+   
 
 
 }

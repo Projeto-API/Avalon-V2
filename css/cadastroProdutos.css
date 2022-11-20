@@ -235,9 +235,9 @@ div form input{
     background-color: #FFFFFF;
 }
 div .single input {
-    height: 2.0rem;
+    height: 9rem;
     width: 100%;
-    max-width: 80rem;
+    max-width: 44rem;
 
 }
 textarea {

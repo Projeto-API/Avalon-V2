@@ -92,8 +92,4 @@ window.addEventListener('load', function () {
         }
       });
     });
-<<<<<<< HEAD
   });
-=======
-  });
->>>>>>> 2316efe3a66965ab60c627a408d65e2cd9d3d655

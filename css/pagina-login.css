@@ -102,6 +102,10 @@ div .exemplo {
 
 }
 
+li.senha{
+    list-style-type: none;
+}
+
 .password {
     display: flex;
     font-weight: bold;

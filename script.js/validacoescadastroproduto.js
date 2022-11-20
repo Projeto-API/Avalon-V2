@@ -44,14 +44,7 @@ window.addEventListener('load', function () {
       }
     });
   
-    const validateEmail = function (input) {
-      const { value } = input;
-      if (value.includes('@') && value.includes('.')) {
-        return
-      } else {
-        createError(input, 'O campo deve conter @ ', 'input');
-      }
-    };
+  
   
     const validateLength = function (input, min, max) {
       const { value } = input;
@@ -69,11 +62,9 @@ window.addEventListener('load', function () {
         removeErrors('input');
   
         switch (input.name) {
-          case 'email':
-            validateEmail(input, 2, 6);
-            break;
+     
   
-          case 'password':
+          case 'titulodolivro':
             validateLength(input, 2, 6);
             break;
   

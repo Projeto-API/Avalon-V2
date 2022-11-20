@@ -1,60 +1,85 @@
-window.addEventListener('load', function(){
-    let formularioForm = document.querySelector('form.formulario');
-    
-    formularioForm.addEventListener('submit', function(event){
-        event.preventDefault()
- 
-    let formidioma = document.getElementById('idioma');
-    if(formidioma.value.length < 5 ){
-       
-        document.querySelector('.err-length-idioma').classList.remove('invisible')
-    }else{
-        document.querySelector('.err-length-idioma').classList.add('invisible')
+window.addEventListener('load', function () {
+    const form = document.querySelector('main form.form-auth');
+    const inputList = document.querySelectorAll('main form.form-auth input');
+    let hasErrors = false;
+    let hasFormErrors = false;
+  
+    const removeErrors = function (errorType) {
+      if (errorType === 'form') {
+        hasFormErrors = false;
+      } else {
+        hasErrors = false;
+      }
+  
+      const errorSpans = document.querySelectorAll('main form.form-auth span.error');
+      errorSpans.forEach(span => span.remove());
+    };
+  
+    const createError = function (input, mensagem, errorType) {
+      if (errorType === 'form') {
+        hasFormErrors = true;
+      } else {
+        hasErrors = true;
+      }
+  
+      const errorSpan = document.createElement('span');
+      errorSpan.classList.add('error');
+      errorSpan.innerText = mensagem;
+      input.insertAdjacentElement('afterend', errorSpan);
+    };
+  
+    form.addEventListener('submit', function (event) {
+      // Validacao
+      event.preventDefault();
+      removeErrors('form');
+  
+      inputList.forEach(input => {
+        if (!input.value) {
+          createError(input, 'Campo Obrigatório', 'form');
+        }
+      });
+  
+      if (!hasErrors && !hasFormErrors) {
+        this.submit();
+      }
+    });
+  
+    const validateEmail = function (input) {
+      const { value } = input;
+      if (value.includes('@') && value.includes('.')) {
+        return
+      } else {
+        createError(input, 'O campo deve conter @ ', 'input');
+      }
+    };
+  
+    const validateLength = function (input, min, max) {
+      const { value } = input;
+  
+      if (value.length >= min && value.length <= max) {
+        return
+      } else {
+        createError(input, `O campo deve ter entre ${min} e ${max} caracteres`, 'input');
+      }
     }
-    let formautor = document.getElementById('autor');
-    if(formautor.value.length < 6 ){
-       
-        document.querySelector('.err-length-autor').classList.remove('invisible')
-    }else{
-        document.querySelector('.err-length-autor').classList.add('invisible')
-    }
-    let formdescricao = document.getElementById('descricao');
-    if(formdescricao.value.length < 12 ){
-       
-        document.querySelector('.err-length-descricao').classList.remove('invisible')
-    }else{
-        document.querySelector('.err-length-descricao').classList.add('invisible')
-    }
-    let formpag = document.getElementById('pag');
-    if(formpag.value.length < 1 ){
-       
-        document.querySelector('.err-length-pag').classList.remove('invisible')
-    }else{
-        document.querySelector('.err-length-pag').classList.add('invisible')
-    }
-    let formpreco = document.getElementById('preco');
-    if(formpreco.value.length < 4 ){
-       
-        document.querySelector('.err-length-preco').classList.remove('invisible')
-    }else{
-        document.querySelector('.err-length-preco').classList.add('invisible')
-    }
-    let formacabamento = document.getElementById('acabamento');
-    if(formacabamento.value.length < 3 ){
-       
-        document.querySelector('.err-length-acabamento').classList.remove('invisible')
-    }else{
-        document.querySelector('.err-length-acabamento').classList.add('invisible')
-    }
-    
-    })
-    })
-    let inputs = document.querySelectorAll('form input')
-    inputs.forEach(input =>{console.log("err-length-" + input.name)})
-
-    function abrirModal() {
-        document.getElementById('bg-modal').style.top ="0";
-    }
-    function fecharModal() {
-        document.getElementById('bg-modal').style.top = "-150%";
-    }
+  
+  
+    inputList.forEach(input => {
+      input.addEventListener('change', function () {
+        removeErrors('input');
+  
+        switch (input.name) {
+          case 'email':
+            validateEmail(input, 2, 6);
+            break;
+  
+          case 'password':
+            validateLength(input, 2, 6);
+            break;
+  
+          default:
+            break;
+        }
+      });
+    });
+  });

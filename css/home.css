@@ -14,7 +14,6 @@
 /* SECTION 1 - BANNER + 3 CATEGORAS  */
 
 #banner {
-    padding-top: 65px;
     height: 100%;
     width: 100%;
     display: block;
@@ -224,7 +223,6 @@
     }
 
     #banner {
-        padding-top: 80px;
         height: 100%;
         width: 100%;
         display: block;

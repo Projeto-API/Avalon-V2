@@ -1,59 +1,71 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ropa+Sans&display=swap');
 
-* {
-    margin: 0 auto;
+footer *,
+header * {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
+* a {
+    text-decoration: none;
+    color: black;
+}
 
 /* HEADER */
 
 
 header {
     position: fixed;
+    max-width: 100%;
     width: 100%;
     z-index: 3;
+}
+
+
+.container-header {
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    justify-content: space-between;
+    height: 40px;
+    max-height: 5rem;
+    width: 100%;
     background-color: #9CD9C2;
 }
 
-.container-header {
-    padding: 1rem 2rem;
+.container-header nav ul {
     display: flex;
+    gap: 50px;
+    justify-content: center;
     align-items: center;
-    justify-content: space-around;
-    height: 50px;
-    width: 100%;
 }
 
 .icons {
-    gap: 1rem;
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
-.icons a {
-    text-decoration: none;
-    color: black;
-}
-
-.icons a:hover {
-    text-decoration: none;
-    color: black;
+.icons div:hover {
     transform: scale(1.1);
     transition-property: all;
     transition-duration: 0.2s;
+
 }
 
-
+.icons div {
+    padding: 10%;
+}
 
 #logo {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 30px;
-    cursor: pointer;
+    height: 7vw;
+    max-height: 2.5rem;
+    flex-wrap: nowrap;
 }
 
 button {
@@ -65,13 +77,22 @@ button {
     cursor: pointer;
 }
 
+.conta {
+    display: none;
+}
+
+#lupa {
+    display: flex;
+}
+
 svg {
-    height: 25px;
+    height: 6vw;
+    max-height: 2.5rem;
     width: auto;
 }
 
 #search {
-    /* display: none; */
+    display: none;
 }
 
 
@@ -124,28 +145,28 @@ svg {
     background-color: #9CD9C2;
     font-size: .9rem;
     flex-direction: column;
-    border-radius: 20px 20px 0 0;
+    border-radius: 2vw 2vw 0 0;
 }
 
 .container-footer {
     display: flex;
     align-items: flex-start;
-    justify-content: space-evenly;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
-
-.column {
-    padding: 1.5rem ;
+.container-footer div {
+    padding: 1.5rem 3vw;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
     flex-wrap: wrap;
 }
 
 
-.cards * {
-    height: 35px;
+
+#cards {
+    height: 10vw;
     max-height: 3rem;
     background-color: transparent;
 }
@@ -162,41 +183,50 @@ svg {
     justify-content: space-around;
 }
 
-.autores ul {
+.autores  ul {
     padding: 1rem;
     gap: 1rem;
     height: auto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
-}
-
-.autores a {
-    text-decoration: none;
-    color: black;
 }
 
 
 
 @media (min-width: 768px) {
 
+    header,
+    footer {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .container-header {
+        height: 50px;
+    }
+
+
     #search {
         display: flex;
         font-size: .8rem;
         font-style: italic;
-        padding-left: 1rem;
+        padding: 0 1rem;
         height: 2rem;
         width: 50vw;
-        max-width: 700px;
+        max-height: 2rem;
+        max-width: 100%;
         border-radius: 2rem;
         border: none;
-
+        
     }
 
     #lupa {
         display: none;
     }
+
+
 
     .lista {
         width: 100%;
@@ -204,8 +234,6 @@ svg {
         justify-content: center;
         align-items: center;
     }
-
-   
 
     #logo2 {
         display: block;
@@ -217,24 +245,27 @@ svg {
         height: auto;
         display: flex;
         flex-direction: row;
-    }
+             }
 
 
 }
+
+
 
 @media (min-width: 1200px) {
 
     header,
     footer {
-        width: 100% ;
+        max-width: 100%;
         margin: 0 auto;
     }
 
-    .container-header,
-    .container-footer {
-        width:  1200px  ;
-        margin: auto;
-        
-        
+    svg {
+        max-height: 6vh;
+        width: auto;
     }
+
+
+
+
 }

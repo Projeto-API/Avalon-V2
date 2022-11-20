@@ -5,30 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="(max-width: 800px)" href="pagina-login.css" />
-    <link rel="stylesheet" href="../css/style-login.css">
-    <link rel="stylesheet" href="../css/pagina-login.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <title>Avalon</title>
-    <script src="../script.js/validacoeslogin.js" defer></script>
+    <link rel="stylesheet" href="../css/style-home.css">
+    <link rel="stylesheet" href="../css/usuario.css">
+       <title>Avalon</title>
 </head>
+
 <body>
     <header>
+
         <section class="container-header">
             <img id="logo" src="../img/logopreto.png" alt="">
+
             <div class="busca">
                 <form action="/search">
                     <input type="text" name="search" id="search" scr="../img/lupa.png"
                         placeholder="Títulos, Autores e Gêneros ">
                 </form>
             </div>
+
             <nav class="icons">
                 <div class="conta">
                     <ul type="none">
-                        <li><a href="pagina-cadastro.html">Minha Conta </a></li>
-                        <li><a href="pagina-login.html">Faça login</a></li>
+                        <li><a href="">Minha Conta </a></li>
+                        <li><a href="">Faça login</a></li>
                     </ul>
                 </div>
                 <div>
@@ -55,8 +54,11 @@
                         </svg>
                     </button>
                 </div>
+
+
             </nav>
         </section>
+
         <section class="navegacao">
             <nav class="lista">
                 <ul type="none">
@@ -70,39 +72,92 @@
             </nav>
             <section>
     </header>
-    <!-- comecei aqui -->
     <main>
-        <section class="login">
-                <h3 class="login2">LOGIN</h3>
-                <form class="form-auth card" method="post" action="../views/usuario.html">
-                    <li class="email">E-mail</li> 
-                    <input type="email"  name="email" placeholder="Digite seu email">
-                    
-                    <li class="password">Senha</li>
-                    <input type="password" name="password" placeholder="Digite sua senha">
-                                        
-                    <button href="#" type="submit">
-                        Entrar
-                    </button>
-                    <div class="esqueci">Esqueci minha senha</div>
-                    <div class="cadastro"><a href="../views/pagina-cadastro.html">Não tenho cadastro</a></div>
-                    <li class="redes"><a href="../views/intranet.html">Intranet</a></li> 
-    
-                    <li class="redes">Login com as redes sociais</li>  
-                    
-        </form>
-            <div class="google">
-                <img id="google" src="../img/google.png" alt="">
-                <button class="google2">continue with google</button>   
-            </div>
-            <div class="facebook">
-                <img id="facebook" src="../img/facebook.png" alt="">
-                <button class="facebook2">continue with facebook</button>    
+        <section class="box-usuario">
+            <div class="fotousuario">
+                <img src="../img/Lordvoldemort.jpg">
+                <div class="sobrenome">
+                    <li>NOME SOBRENOME</li>
+                </div>
+                <div class="botoes">
+                    <button class="meusdados">MINHA CONTA</button>
+                    <button class="minhaconta">MEUS PEDIDOS</button>
+                </div>
             </div>
         </section>
+        <section class="todososcontainers">
+            <div class="caixatexto">
+                <h1>MEUS PEDIDOS</h1>
+            </div>
+            <div class="todosospedidos">
+                <nav class="listapagos">
+                    <ul type="none">
+                        <li> <a href="#">TODOS OS PEDIDOS</a> </li>
+                        <li> <a href="#">CANCELADOS</a> </li>
+                        <li> <a href="#">PAGOS</a> </li>
+                        <li> <a href="#">ENVIADOS</a> </li>
+                    </ul>
+                </nav>
+            </div>
+            <section class="containermenu">
+                <nav class="listamenu">
+                    <section class="numerodopedido">
+                    </section>
 
+                    <ul type="none">
+                        <li> <a href="#">Número do Pedido</a> </li>
+                        <li> <a href="#">Data</a> </li>
+                        <li> <a href="#">Pagamento</a> </li>
+                        <li> <a href="#">Status</a> </li>
+                    </ul>
+                    <section class="informacaodospedidos">
+                        <ul type="none">
+                            <li> <a href="#">9999999</a> </li>
+                            <li> <a href="#">00/00/00</a> </li>
+                            <li> <a href="#">BOLETO</a> </li>
+                            <li> <a href="#">ENVIADO</a> </li>
+                        </ul>
+
+                    </section>
+                    <section class="informacaodospedidos">
+
+                        <ul type="none">
+                            <li> <a href="#">9999999</a> </li>
+                            <li> <a href="#">00/00/00</a> </li>
+                            <li> <a href="#">BOLETO</a> </li>
+                            <li> <a href="#">ENVIADO</a> </li>
+                        </ul>
+
+                    </section>
+                    <section class="informacaodospedidos">
+                        <ul type="none">
+                            <li> <a href="#">9999999</a> </li>
+                            <li> <a href="#">00/00/00</a> </li>
+                            <li> <a href="#">BOLETO</a> </li>
+                            <li> <a href="#">ENVIADO</a> </li>
+                        </ul>
+                    </section>
+                    <section class="informacaodospedidos">
+                        <ul type="none">
+                            <li> <a href="#">9999999</a> </li>
+                            <li> <a href="#">00/00/00</a> </li>
+                            <li> <a href="#">BOLETO</a> </li>
+                            <li> <a href="#">ENVIADO</a> </li>
+                        </ul>
+                    </section>
+                    <section class="informacaodospedidos">
+                        <ul type="none">
+                            <li> <a href="#">9999999</a> </li>
+                            <li> <a href="#">00/00/00</a> </li>
+                            <li> <a href="#">BOLETO</a> </li>
+                            <li> <a href="#">ENVIADO</a> </li>
+                        </ul>
+                    </section>
+            </section>
+        </section>
+        </nav>
+        </form>
     </main>
-    <!-- terminei aqui -->
     <footer>
         <section class="footer">
             <section class="container-footer">
@@ -137,6 +192,7 @@
                         </ul>
                     </section>
                 </div>
+
                 <div class="column">
                     <section>
                         <h5>Formas de pagamento</h5><br>
@@ -174,6 +230,5 @@
             <section>
     </footer>
 </body>
-</html>
-</section>
+
 </html>

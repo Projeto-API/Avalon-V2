@@ -74,6 +74,11 @@ body {
     width: 2rem;
 }
 
+input[type=number] { 
+    -moz-appearance: textfield;
+    appearance: textfield;
+ 
+ }
 #preco {
     font-size: 1rem;
     font-weight: 600;

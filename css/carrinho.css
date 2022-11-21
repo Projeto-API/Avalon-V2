@@ -19,6 +19,7 @@ main {
 .navegacao {
     display: none;
 }
+
 /* SEÇÃO REFERENTE ÀS INFORMAÇÕES DO PRODUTO */
 .cabecalho {
     display: none;
@@ -53,7 +54,7 @@ main {
 }
 
 .informationProdutoValue {
-        display: flex;
+    display: flex;
     justify-content: flex-start;
     flex-direction: row;
     gap: 1rem;
@@ -67,7 +68,7 @@ main {
 .quantidadeValue {
     text-align: center;
     width: 2rem;
-    }
+}
 
 #preco {
     font-weight: 600;

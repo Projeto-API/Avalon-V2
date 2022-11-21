@@ -1,6 +1,6 @@
 
 function abrirCarrinhoFlutuante() {
-    document.getElementById('carrinhoFlutuante').style.width = "21rem"
+    document.getElementById('carrinhoFlutuante').style.width = "22rem"
 }
 
 function fecharCarrinhoFlutuante() {

@@ -10,7 +10,6 @@
 
 /* HEADER */
 
-
 header {
     position: fixed;
     width: 100%;
@@ -19,13 +18,12 @@ header {
 }
 
 .container-header {
-    padding: 1rem 2rem;
+    padding: 0 1rem;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 50px;
     width: 100%;
-
 }
 
 .icons {
@@ -47,29 +45,11 @@ header {
     transition-duration: 0.2s;
 }
 
-
-
 #logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 30px;
+    display: block;
+    height: 35px;
+    padding-left: 25vw;
 }
-
-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.conta {
-    display: none;
-}
-
-
 
 svg {
     height: 25px;
@@ -80,42 +60,19 @@ svg {
     display: none;
 }
 
+#login {
+    display: none;
+}
+
+#menuHamburguer,
+#lupa,
+#car-shopping {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
 
 .navegacao {
-    letter-spacing: .05rem;
-    align-items: center;
-    padding: 0 5%;
-    display: inline-block;
-    height: 25px;
-    width: 100%;
-    background-color: #9CD9C2;
-    word-wrap: break-word;
-    overflow-x: auto;
-    box-shadow: 0 .01rem .4rem .01rem #949494;
-}
-
-.navegacao nav ul {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-
-.lista li a {
-    align-items: center;
-    text-decoration: none;
-    padding: .8rem 1rem;
-    color: black;
-    font-size: clamp(.6rem, 100%, .8rem);
-    white-space: nowrap;
-}
-
-.lista li a:hover {
-    background-color: #4EC16E;
-    color: white;
-}
-
-.conta {
     display: none;
 }
 
@@ -142,7 +99,7 @@ svg {
 
 
 .column {
-    padding: 1.5rem ;
+    padding: 1.5rem;
     align-items: flex-start;
     justify-content: center;
     flex-direction: column;
@@ -186,24 +143,6 @@ svg {
 
 
 @media (min-width: 768px) {
-
-    #search {
-        display: flex;
-        font-size: .8rem;
-        font-style: italic;
-        padding-left: 1rem;
-        height: 2rem;
-        width: 50vw;
-        max-width: 700px;
-        border-radius: 2rem;
-        border: none;
-
-    }
-
-    #lupa {
-        display: none;
-    }
-
     .lista {
         width: 100%;
         display: flex;
@@ -211,7 +150,7 @@ svg {
         align-items: center;
     }
 
-   
+
 
     #logo2 {
         display: block;
@@ -232,15 +171,83 @@ svg {
 
     header,
     footer {
-        width: 100% ;
+        width: 100%;
         margin: 0 auto;
     }
 
+    .container-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 50px;
+        width: 100%;
+    }
+
+    #search {
+        display: flex;
+        font-size: .8rem;
+        font-style: italic;
+        padding-left: 1rem;
+        height: 2rem;
+        width: 50vw;
+        max-width: 700px;
+        border-radius: 2rem;
+        border: none;
+    }
+
+    #logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    #menuHamburguer,
+    #lupa {
+        display: none;
+    }
+
+    #login,
+    #car-shopping {
+        display: flex;
+        align-items: center;
+    }
+
+    .navegacao {
+        display: inline-block;
+        letter-spacing: .05rem;
+        align-items: center;
+
+        width: 100%;
+        background-color: #9CD9C2;
+        border-top: 1px solid #4EC16E;
+    }
+
+    .navegacao nav ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .lista li a {
+        width: 100%;
+        align-items: center;
+        text-decoration: none;
+        margin: 1rem;
+        color: black;
+        font-size: .8rem;
+        white-space: nowrap;
+    }
+
+    .lista ul :hover {
+        background-color: #4EC16E;
+        color: white;
+    }
+
+
     .container-header,
     .container-footer {
-        width:  1200px  ;
+        width: 1200px;
         margin: auto;
-        
-        
     }
 }

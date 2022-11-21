@@ -1,5 +1,9 @@
 /* Carrinho Flutuante */
 
+body {
+    height: 100%;
+    margin: 0;
+}
 
 .headerFlutuante {
     background-color: #386C5F;
@@ -17,45 +21,34 @@
 
 .carrinhoFlutuante {
     background-color: white;
-    height: 100%;
-    margin: 0;
-    margin-top: 81px;
     list-style: none;
     text-align: center;
     position: fixed;
     right: 0;
-    top: 0;
+    top: 50px;
     transition: all 0.5s;
     z-index: 99;
-    font-size: 19px
+    font-size: 16px;
+    height: 100vh;
 }
 
 .produto {
-    margin: .5rem;
-    display: flex;
-    width: auto;
-    justify-content: flex-start;
-    background-color: #F6F9FF;
-    border-radius: 1rem;
+    background-color: aqua;
 }
 
 .imagemProduto {
     margin: .5rem;
     border-radius: .5rem;
-    display: flex;
-    width: 4rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50px;
 }
 
 #produtoTitulo {
+    text-align: left;
     padding-bottom: 1rem;
-}
-
-.informationProduto {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    width: 100%;
+    font-size: .7rem;
 }
 
 .informationProdutoValue {
@@ -76,6 +69,7 @@
 }
 
 #preco {
+    font-size: 1rem;
     font-weight: 600;
     color: #386C5F;
 }
@@ -92,7 +86,6 @@
 
 .continuar {
     top: auto;
-    bottom: 0;
     position: fixed;
-    width: 20rem;
+    width: 18rem;
 }

@@ -26,7 +26,7 @@ form {
 
 
 
-.login {
+.pageLogin {
     display: flex;
     background-color: #9CD9C2;
     border-radius: 4%;
@@ -76,9 +76,6 @@ ul {
     padding-left: 4.5rem;
     background-position: 2rem;
 }
-
-
-
 
 .exemplo {
     display: flex;
@@ -236,6 +233,10 @@ li.senha{
     width: 1.5rem;
     height: 1.5rem;   
 }
+
+/* BOTÕES */
+
+
 /* ----------------------------Erros ------------------- */
 .error {
     color: red;
@@ -266,8 +267,6 @@ li.senha{
 
 }
  /* ----------------------------VALIDACAO ------------------- */
-
-
 
 
 

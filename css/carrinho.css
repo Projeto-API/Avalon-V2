@@ -13,7 +13,7 @@
 }
 
 main {
-    padding-top: 65px;
+    padding-top: 50px;
 }
 
 .navegacao {
@@ -55,7 +55,7 @@ main {
 
 .informationProdutoValue {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
     flex-direction: row;
     gap: 1rem;
 }
@@ -65,7 +65,7 @@ main {
     color: black;
 }
 
-.quantidadeValue {
+#quantidadeValue {
     text-align: center;
     width: 2rem;
 }
@@ -80,13 +80,12 @@ input[type="number"] {
 }
 
 .excluir {
-    max-width: 2rem;
-    width: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: center;
-    cursor: pointer;
+    display: block;
+    color: red;
+    font-weight: bold;
+    width: 15px;
+    background-color: #F6F9FF;
+    border: none;
 }
 
 /* SEÇÃO REFERENTE À ENTREGA */
@@ -158,6 +157,14 @@ tfoot {
     border-radius: 5px;
 }
 
+/* BOTÕES */
+
+.aumentarQtd, 
+.diminuirQtd {
+    border: none;
+    background-color: #F6F9FF;
+    cursor: pointer;
+}
 .continuar {
     padding: 1rem 0;
     width: 100%;
@@ -165,7 +172,7 @@ tfoot {
 
 @media (min-width: 768px) {
     main {
-        padding-top: 85px;
+        padding-top: 60px;
     }
 
     .cabecalho {
@@ -187,7 +194,7 @@ tfoot {
 
     #header3 {
         padding-left: 3rem;
-        padding-right: 17vw;
+        padding-right: 19.5vw;
     }
 
 
@@ -211,6 +218,7 @@ tfoot {
 }
 
 @media (min-width: 1200px) {
+    
     main {
         height: 100vh;
         justify-content: center;
@@ -232,7 +240,7 @@ tfoot {
 
     #header3 {
         padding-left: 3.5rem;
-        padding-right: 9rem;
+        padding-right: 9.5rem;
     }
 
 }

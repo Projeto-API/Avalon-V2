@@ -8,6 +8,13 @@
 
 }
 
+#header2 {
+    display: flex;
+    background-color: black;
+    align-items: flex-start;
+}
+
+
 main {
     display: flex;
     justify-content: center;
@@ -45,6 +52,7 @@ form {
 ul {
     display: flex;
     flex-direction: column;
+    color: ;
 
 }
 
@@ -244,14 +252,3 @@ div .exemplo {
     width: 100%;
 }
 
-@media(max-width:560px){
-  .busca{
-    display: none;
-  }
-  .content-auth{
-    justify-content: center;
-  }
-  #banner{
-    display: none;
-  }
-}

@@ -1,68 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="text/javascript" src="../modal/modalNovoCadastro.js" ></script>
+    <script type="text/javascript" src="../modal/modalNovoCadastro.js"></script>
     <link rel="stylesheet" href="../css/cadastroProdutos.css">
     <link rel="stylesheet" href="../css/style.css">
     <title>CadastroProdutos</title>
     <script src="../script.js/validacoescadastroproduto.js" defer></script>
 </head>
+
 <body>
     <header>
-        <section class="container-header">
+        <section class="container-header" id="header2">
             <a href="home.html" class="logo"><img id="logo" src="../img/logopreto.png" alt=""></a>
 
-            <div class="busca">
-                <form action="/search">
-                    <input type="text" name="search" id="search" scr="../img/lupa.png"
-                        placeholder="Títulos, Autores e Gêneros ">
-                </form>
-            </div>
-
-            <div class="icons">
-
-                <a href="" id="lupa">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-search" viewBox="0 0 16 16">
-                        <path
-                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                    </svg>
-                </a>
-
-                <a href="pagina-login.html" id="login">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-person-fill" viewBox="0 0 16 16">
-                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                    </svg>
-                </a>
+            <a href="pagina-login.html" id="login">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                </svg>
+            </a>
 
 
-                <a href="" id="car-shopping">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-cart-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                    </svg>
-                </a>
-
-            </div>
-        </section>
-
-        <section class="navegacao">
-            <nav class="lista">
-                <ul type="none">
-                    <li> <a href="home.html"> PÁGINA INICIAL</a> </li>
-                    <li> <a href="estiloProdutos.html"> TODOS OS LIVROS</a> </li>
-                    <li> <a href="#"> GÊNEROS</a> </li>
-                    <li> <a href="#"> QUEM SOMOS</a> </li>
-                    <li> <a href="#"> FALE CONOSCO</a> </li>
-                    <li> <a href="cadastroProduto.html"> CADASTRO DE PRODUTOS</a> </li>
-                </ul>
-            </nav>
-            <section>
     </header>
     <main>
         <div class="container">
@@ -87,10 +49,12 @@
 
 
             <div class="box-cadastro">
-         
+
                 <form class="form-auth card" method="post" action="/registro">
-                    <legend><h1> Cadastro de Livro</h1></legend>
-                  
+                    <legend>
+                        <h1> Cadastro de Livro</h1>
+                    </legend>
+
                     <div class="double">
                         <div>
                             <label for="imagemCapa">Imagens Capa:</label>
@@ -101,12 +65,12 @@
                             <input class="alteraInp" name="imagensMiniaturas" class="searchimg">
                         </div>
                     </div>
-                    
+
                     <div class="double">
                         <div>
                             <label for="tituloLivro">Titulo do Livro:</label>
-                            <input type="tituloLivro"  name="tituloLivro" placeholder="Digite o nome do livro">
-                           
+                            <input type="tituloLivro" name="tituloLivro" placeholder="Digite o nome do livro">
+
                         </div>
                         <div>
                             <label for="categoria">Categoria:</label>
@@ -118,84 +82,83 @@
                     <div class="double">
                         <div>
                             <label for="autor">Autor:</label>
-                            <input type="autor"  name="autor" placeholder="Digite o nome do autor">
-                           
+                            <input type="autor" name="autor" placeholder="Digite o nome do autor">
+
                         </div>
                         <div>
                             <label for="editora">Editora:</label>
-                            <input type="editora"  name="editora" placeholder="Digite a editora">
-                            
+                            <input type="editora" name="editora" placeholder="Digite a editora">
+
                         </div>
                     </div>
 
                     <div class="double">
                         <div>
                             <label for="idioma">Idioma:</label>
-                            <input type="idioma"  name="idioma" placeholder="Digite o idioma">
-                          
+                            <input type="idioma" name="idioma" placeholder="Digite o idioma">
+
                         </div>
                         <div>
                             <label for="paginas">Paginas:</label>
-                            <input type="paginas"  name="paginas" placeholder="Digite o numero de paginas">
-                           
+                            <input type="paginas" name="paginas" placeholder="Digite o numero de paginas">
+
                         </div>
                     </div>
 
                     <div class="double">
                         <div>
                             <label for="publicacao">Publicação:</label>
-                            <input type="publicacao"  name="publicacao" placeholder="Digite o ano de publicação">
-                            
+                            <input type="publicacao" name="publicacao" placeholder="Digite o ano de publicação">
+
                         </div>
-                    <div>
+                        <div>
                             <label for="dimesoes">Dimensões:</label>
-                            <input type="dimensoes"  name="dimensoes" placeholder="Coloque a dimensão do produto">
-                           
+                            <input type="dimensoes" name="dimensoes" placeholder="Coloque a dimensão do produto">
+
                         </div>
                     </div>
 
                     <div class="double">
                         <div>
                             <label for="acabamento">Acabamento:</label>
-                            <input type="acabamento"  name="acabamento" placeholder="Campo não pode estar vazio">
-                            
+                            <input type="acabamento" name="acabamento" placeholder="Campo não pode estar vazio">
+
                         </div>
                         <div>
                             <label for="nome">ISBN -10 :</label>
-                            <input type="isbn"  name="isbn" placeholder="Campo não pode estar vazio">
-                            
+                            <input type="isbn" name="isbn" placeholder="Campo não pode estar vazio">
+
                         </div>
                     </div>
 
                     <div class="double">
                         <div>
                             <label for="preco">Preço:</label>
-                            <input type="preco"  name="preco" placeholder="Coloque o valor do produto">
-                            
+                            <input type="preco" name="preco" placeholder="Coloque o valor do produto">
+
                         </div>
                         <div>
                             <label for="nome">ISBN -20 :</label>
-                            <input type="isbn"  name="isbn" placeholder="Campo não pode estar vazio">
-                          
+                            <input type="isbn" name="isbn" placeholder="Campo não pode estar vazio">
+
                         </div>
                     </div>
 
 
                     <div class="single">
                         <label for="sinopse">Sinopse:</label>
-                        <input type="sinopse"  name="sinopse" placeholder="Coloque a descrição">
-                        
+                        <input type="sinopse" name="sinopse" placeholder="Coloque a descrição">
+
                     </div>
 
-                
+
 
                     <section class="configbutton">
                         <div class="button">
                             <input class="cancelar" type="submit" name="cancelar" value="Cancelar">
                         </div>
                         <div class="button">
-                            <input class="publicar"  type="submit" name="publicar"
-                                value="Publicar">
+                            <input class="publicar" type="submit" name="publicar" value="Publicar">
                         </div>
                     </section>
 
@@ -205,8 +168,8 @@
         </div>
         </div>
     </main>
-                        
-    
+
+
     <section class="bg-modal" id="bg-modal">
         <div class="modal">
             <div class="categoria">
@@ -234,11 +197,11 @@
                         <li class="blocoli">Filmes, sérieames</li>
                         <li class="blocoli">Infantil</li>
                         <li class="blocoli">Romance</li>
-                 
-                   </ul>
-                   <div>
-                    <button class="addItem">></button>
-                   </div>
+
+                    </ul>
+                    <div>
+                        <button class="addItem">></button>
+                    </div>
                     <ul class="bloco">
                         <li class="blocoli">Não Ficção</li>
                         <li class="blocoli">Ficção</li>
@@ -260,16 +223,16 @@
                 </div>
             </div>
             <div class="button-modal">
-                <div >
+                <div>
                     <button class="cancelarModal" type="submit" value="">Cancelar</button>
                 </div>
                 <div>
-                    <button class="confirmar" type="submit" >Confirmar</button>
+                    <button class="confirmar" type="submit">Confirmar</button>
                 </div>
             </div>
         </div>
     </section>
-    
-</body>
-</html>
 
+</body>
+
+</html>

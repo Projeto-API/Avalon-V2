@@ -16,62 +16,54 @@
 
 <body>
     <header>
-
         <section class="container-header">
-            <img id="logo" src="../img/logopreto.png" alt="">
+            <a href="home.html" class="logo"><img id="logo" src="../img/logopreto.png" alt=""></a>
 
             <div class="busca">
                 <form action="/search">
-                    <input type="text" name="search" id="search" scr="img/lupa.png"
+                    <input type="text" name="search" id="search" scr="../img/lupa.png"
                         placeholder="Títulos, Autores e Gêneros ">
                 </form>
             </div>
 
-            <nav class="icons">
-                <div class="conta">
-                    <ul type="none">
-                        <li><a href="">Minha Conta </a></li>
-                        <li><a href="">Faça login</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <button id="lupa">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-search" viewBox="-2 -2 20 20">
-                            <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                        </svg>
-                    </button>
-                </div>
+            <div class="icons">
 
-                <div>
-                    <button id="login">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-person-fill" viewBox="-2 -2 20 20">
-                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                        </svg>
-                    </button>
-                </div>
-                <div>
-                    <button id="car-shopping">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-cart" viewBox="-2 -2 20 20">
-                            <path
-                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                        </svg>
-                    </button>
-                </div>
+                <a href="" id="lupa">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </a>
+
+                <a href="pagina-login.html" id="login">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                </a>
 
 
-            </nav>
+                <a href="" id="car-shopping">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>
+                </a>
+
+            </div>
         </section>
 
         <section class="navegacao">
             <nav class="lista">
                 <ul type="none">
-                    <li> <a href="#"> PÁGINA INICIAL</a> </li>
-                    <li> <a href="#"> HOME</a> </li>
-                    <li> <a href="#"> TODOS OS LIVROS</a> </li>
+                    <li> <a href="home.html"> PÁGINA INICIAL</a> </li>
+                    <li> <a href="estiloProdutos.html"> TODOS OS LIVROS</a> </li>
                     <li> <a href="#"> GÊNEROS</a> </li>
                     <li> <a href="#"> QUEM SOMOS</a> </li>
                     <li> <a href="#"> FALE CONOSCO</a> </li>
+                    <li> <a href="cadastroProduto.html"> CADASTRO DE PRODUTOS</a> </li>
                 </ul>
             </nav>
             <section>
@@ -87,18 +79,18 @@
                 <h3>CADASTRO</h3>
             </div>
             <form class="form-auth card" method="post" action="/registro">
-                <li class="email">E-mail</li> 
-                <input type="email"  name="email" placeholder="Digite seu email">
-                
+                <li class="email">E-mail</li>
+                <input type="email" name="email" placeholder="Digite seu email">
+
                 <li class="senha">Senha</li>
                 <input type="senha" name="senha" placeholder="Digite sua senha">
-                
+
                 <li class="password">Confirme sua senha</li>
                 <input type="password" name="password" placeholder="Confirme sua senha">
-                
+
                 <li class="telefone">Telefone</li>
                 <input type="telefone" name="telefone" placeholder="Digite um numero de telefone">
-                
+
                 <button type="submit">
                     Cadastre-se
                 </button>

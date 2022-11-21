@@ -7,8 +7,6 @@ function fecharUsuario() {
 
 
 
-
-
 function verificarFormulario(){
  
     let formularioForm = document.querySelector('form.formulario')

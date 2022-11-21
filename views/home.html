@@ -8,15 +8,14 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/button.css">
-    <script type="text/javascript" src="../script.js/carrinhoFlutuante.js" defer ></script>
+    <script type="text/javascript" src="../script.js/carrinhoFlutuante.js" defer></script>
     <title>Home</title>
 </head>
 
 <body>
     <header>
-
         <section class="container-header">
-            <a href="/views/home.html"><img id="logo" src="../img/logopreto.png" alt=""></a>
+            <a href="home.html" class="logo"><img id="logo" src="../img/logopreto.png" alt=""></a>
 
             <div class="busca">
                 <form action="/search">
@@ -25,53 +24,44 @@
                 </form>
             </div>
 
-            <nav class="icons">
-                <div class="conta">
-                    <ul type="none">
-                        <li><a href="#">Minha Conta </a></li>
-                        <li><a href="#">Faça login</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <button id="lupa">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-search" viewBox="-2 -2 20 20">
-                            <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                        </svg>
-                    </button>
-                </div>
+            <div class="icons">
 
-                <div>
-                    <button  id="login"><a href="./pagina-login.html">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-person-fill" viewBox="-2 -2 20 20">
-                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                        
-                        </svg>
-                    </a>
-                    </button>
-                </div>
-                <div>
-                    <button onclick=abrirCarrinhoFlutuante() id="car-shopping">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-cart" viewBox="-2 -2 20 20">
-                            <path
-                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                        </svg>
-                    </button>
-                </div>
+                <a href="" id="lupa">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </a>
+
+                <a href="pagina-login.html" id="login">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                </a>
 
 
-            </nav>
+                <a href="" id="car-shopping">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>
+                </a>
+
+            </div>
         </section>
 
         <section class="navegacao">
             <nav class="lista">
                 <ul type="none">
-                    <li> <a href="../views/home.html"> PÁGINA INICIAL</a> </li>
-                    <li> <a href="../views/home.html"> HOME</a> </li>
-                    <li> <a href="../views/estiloProdutos.html"> TODOS OS LIVROS</a> </li>
+                    <li> <a href="home.html"> PÁGINA INICIAL</a> </li>
+                    <li> <a href="estiloProdutos.html"> TODOS OS LIVROS</a> </li>
                     <li> <a href="#"> GÊNEROS</a> </li>
                     <li> <a href="#"> QUEM SOMOS</a> </li>
-                    <li> <a class="open-modal" onclick="abrirModal()" href="#"> FALE CONOSCO</a> </li>
+                    <li> <a href="#"> FALE CONOSCO</a> </li>
+                    <li> <a href="cadastroProduto.html"> CADASTRO DE PRODUTOS</a> </li>
                 </ul>
             </nav>
             <section>
@@ -116,8 +106,9 @@
                             </div>
                         </li>
 
-                        <li>
-                            <img class="item current-item" src="../produtos/DNA/DNA capa.jpg" alt="dna">
+                        <li><a href="detalhes.html">
+                                <img class="item current-item" src="../produtos/DNA/DNA capa.jpg" alt="dna">
+                            </a>
                             <div>
                                 <h5>DNA MILIONÁRIO</h5>
                                 <span>R$ 49,90</span>
@@ -265,7 +256,7 @@
             </div>
         </section>
     </main>
-   <footer>
+    <footer>
         <section class="footer">
             <section class="container-footer">
                 <div class="column" id="logo2">
@@ -324,21 +315,21 @@
             <section>
     </footer>
     <div>
-        <button  onclick=abrirCarrinhoFlutuante()> Abrir </button>
-    
+        <button onclick=abrirCarrinhoFlutuante()> Abrir </button>
+
     </div>
     <div>
-        <button  onclick=botaoTeste()> Teste </button>
-    
+        <button onclick=botaoTeste()> Teste </button>
+
     </div>
-    
+
     <div class="carrinhoFlu">
-        <section class="carrinhoFlutuante" id="carrinhoFlutuante" >
-            <div class="headerFlutuante" id="primeiro" >
+        <section class="carrinhoFlutuante" id="carrinhoFlutuante">
+            <div class="headerFlutuante" id="primeiro">
                 <h5>MEU CARRINHO</h5>
-                <button id="excluir"onclick="fecharCarrinhoFlutuante()">X</button>
+                <button id="excluir" onclick="fecharCarrinhoFlutuante()">X</button>
             </div>
-            <section class="containerProduto" id="containerProduto">                                                                                                                                                                                                                                                                      
+            <section class="containerProduto" id="containerProduto">
                 <div class="produto1" id="produto1">
                     <img class="imagemProduto" src="../produtos/my broken mariko/mariko-capa.jpg" alt="">
                     <div class="informationProduto">
@@ -352,14 +343,14 @@
                                 <a href="" class="aumentarQtd">+</a>
                             </div>
                             <span id="preco"> R$ 39,90 </span>
-                            <button id="excluir"  onclick="excluirDentroCarrinho('produto1')">X</button>
+                            <button id="excluir" onclick="excluirDentroCarrinho('produto1')">X</button>
                         </div>
                     </div>
                 </div>
-    
-                <div class="produto2"id="produto2">
+
+                <div class="produto2" id="produto2">
                     <img class="imagemProduto" src="../produtos/manifesto/capa.jpg" alt="">
-                    <div class="informationProduto" >
+                    <div class="informationProduto">
                         <div class="nomeProduto">
                             <h5 id="produtoTitulo">MANIFESTO COMUNISTA</h5>
                         </div>
@@ -370,13 +361,14 @@
                                 <a href="" class="aumentarQtd">+</a>
                             </div>
                             <span id="preco"> R$ 34,90 </span>
-                            <button id="excluir" onclick="excluirDentroCarrinho('produto2')" >X</button>
+                            <button id="excluir" onclick="excluirDentroCarrinho('produto2')">X</button>
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="produto3" id="produto3">
-                    <img class="imagemProduto" src="../produtos/Revolução dos bichos/revolucaodos bichos-capa.jpeg" alt="">
+                    <img class="imagemProduto" src="../produtos/Revolução dos bichos/revolucaodos bichos-capa.jpeg"
+                        alt="">
                     <div class="informationProduto">
                         <div class="nomeProduto">
                             <h5 id="produtoTitulo">REVOLUÇÃO DOS BICHOS</h5>
@@ -393,14 +385,14 @@
                     </div>
                 </div>
             </section>
-    
+
             <div class="continuar">
                 <button id="continuar"><a href="carrinho.html">CONTINUAR</a></button>
             </div>
-    
+
         </section>
-    
-    <div>
+
+        <div>
 </body>
 
 </html>
@@ -409,4 +401,3 @@
 </body>
 
 </html>
-

@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
     <link rel="stylesheet" href="../css/pagina-login.css">
     <link rel="stylesheet" href="../css/button.css">
-
 
     <title>Intranet</title>
     <script src="../script.js/validacoeslogin.js" defer></script>
@@ -16,119 +15,42 @@
 
 <body>
     <header>
-        <section class="container-header" id="header2">
+        <section class="container-header" id="headerLogin">
             <a href="home.html" class="logo"><img id="logo" src="../img/logopreto.png" alt=""></a>
-
             </a>
         </section>
 
     </header>
     <!-- comecei aqui -->
     <main>
-        <section class="pagelogin">
-            <h3 class="login2">LOGIN</h3>
-            <form class="form-auth card" method="/cadastroProduto.html" action="/views/cadastroProduto.html">
+        <section class="pageLogin">
+            <h5 class="login2">INTRANET</h5>
+            <form class="form-auth card" method="get" action="/views/usuario.html">
                 <li class="email">E-mail</li>
                 <input type="email" name="email" placeholder="Digite seu email">
 
                 <li class="password">Senha</li>
-                <input type="password" name="password" placeholder="Digite sua senha">
+                <input id="password" type="password" name="password" placeholder="Digite sua senha">
 
-                <button class="continuar" type="submit">
-                    Entrar
+                <button class="entrar" type="submit"><a href="/views/cadastroProduto.html">
+                    ENTRAR</a>
                 </button>
-                <div class="esqueci">Esqueci minha senha</div>
-                <div class="cadastro">Não tenho cadastro</div>
-                <div class="cadastro"><a href="../views/pagina-login.html">login</a></div>
-
-                <li class="redes">Login com as redes sociais</li>
+                <a href="" class="esqueci">Esqueci minha senha</a>
+                <a href="" class="cadastro">Não tenho cadastro</a>
+                <a href="/views/pagina-login.html" class="cadastro">Login</a>
 
             </form>
-            <div class="google">
-                <img id="google" src="../img/google.png" alt="">
-                <button class="google2">continue with google</button>
-            </div>
-            <div class="facebook">
-                <img id="facebook" src="../img/facebook.png" alt="">
-                <button class="facebook2">continue with facebook</button>
-            </div>
+            <div class="redes">
+                <h5 class="login3">Login com redes sociais</h5>
+                <a href=""><img id="google" src="../img/google.png" alt="">continue with google</a>
+                <a href=""><img id="facebook" src="../img/facebook.png" alt="">continue with facebook</a>
         </section>
 
     </main>
     <!-- terminei aqui -->
-    <footer>
-        <section class="footer">
-            <section class="container-footer">
-                <div class="column" id="logo2">
-                    <img id="logo2" src="../img/logopreto.png" alt="">
-                </div>
 
-                <div class="column">
-                    <section>
-                        <h5>Privacidade e Termos</h5><br>
-                    </section>
-                    <section>
-                        <ul type="none">
-                            <li>Política de Pagamento</li>
-                            <li>Política de Privacidade</li>
-                            <li>Troca e Devolução</li>
-                        </ul>
-                    </section>
-                </div>
-
-                <div class="column">
-                    <section>
-                        <h5>Mapa do Site</h5><br>
-                    </section>
-                    <section>
-                        <ul type="none">
-                            <li>Quem Somos</li>
-                            <li>Todos os Livros</li>
-                            <li>Autores</li>
-                            <li>Gêneros</li>
-                            <li>Fale Conosco</li>
-                        </ul>
-                    </section>
-                </div>
-                <div class="column">
-                    <section>
-                        <h5>Formas de pagamento</h5><br>
-                    </section>
-                    <section class="cards">
-                        <a href=""><img id="cards" src="../img/cards-transparent.png" alt=""></a>
-                    </section>
-                </div>
-                <div class="column" id="redes-sociais">
-                    <section>
-                        <h5>Redes Sociais</h5><br>
-                    </section>
-                    <section>
-                        <nav>
-                            <a href=""><img height="15rem" src="../img/instagram 1.png" alt=""></a>
-                            <a href=""><img height="15rem" src="../img/google-plus-g 1.png" alt=""></a>
-                            <a href=""><img height="15rem" src="../img/facebook-f 1.png" alt=""></a>
-                            <a href=""><img height="15rem" src="../img/linkedin-in 1.png" alt=""></a>
-                        </nav>
-                    </section>
-                </div>
-            </section>
-            <section class="autores">
-                <nav>
-                    <ul type="none">
-                        <p>Desenvolvido por</p>
-                        <li> <a href="#"> Amanda</a> </li>
-                        <li> <a href="#"> Igor</a> </li>
-                        <li> <a href="#"> João Paulo</a> </li>
-                        <li> <a href="#"> Mateus</a> </li>
-                        <li> <a href="#"> Paloma</a> </li>
-                    </ul>
-                </nav>
-            </section>
-            <section>
-    </footer>
 </body>
 
 </html>
-</section>
 
-</html>
+

@@ -21,7 +21,7 @@ button a {
     height: 2rem;
     background-color: #4EC16E;
     border-radius: 1rem;
- 
+
 }
 
 .comprar a {
@@ -148,4 +148,28 @@ button a {
     width: 15px;
     background-color: #F6F9FF;
     border: none;
+}
+
+.entrar {
+    display: flex;
+;
+    font-weight: bold;
+    background-color: rgb(17, 202, 125);
+    border-radius: 3rem;
+    height: 2rem;
+    align-items: center;
+    letter-spacing: 3px;
+    font-weight: bolder;
+    width: 100%;
+}
+
+.entrar a {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.entrar :hover {
+    color: white;
 }

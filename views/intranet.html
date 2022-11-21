@@ -5,96 +5,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" media="(max-width: 800px)" href="pagina-login.css" />
-    <link rel="stylesheet" href="../css/style-login.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/pagina-login.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/button.css">
+
+
     <title>Intranet</title>
     <script src="../script.js/validacoeslogin.js" defer></script>
 </head>
+
 <body>
     <header>
-        <section class="container-header">
+        <section class="container-header" id="header2">
             <a href="home.html" class="logo"><img id="logo" src="../img/logopreto.png" alt=""></a>
 
-            <div class="busca">
-                <form action="/search">
-                    <input type="text" name="search" id="search" scr="../img/lupa.png"
-                        placeholder="Títulos, Autores e Gêneros ">
-                </form>
-            </div>
-
-            <div class="icons">
-
-                <a href="" id="lupa">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-search" viewBox="0 0 16 16">
-                        <path
-                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                    </svg>
-                </a>
-
-                <a href="pagina-login.html" id="login">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-person-fill" viewBox="0 0 16 16">
-                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
-                    </svg>
-                </a>
-
-
-                <a href="" id="car-shopping">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-cart-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                    </svg>
-                </a>
-
-            </div>
+            </a>
         </section>
 
-        <section class="navegacao">
-            <nav class="lista">
-                <ul type="none">
-                    <li> <a href="home.html"> PÁGINA INICIAL</a> </li>
-                    <li> <a href="estiloProdutos.html"> TODOS OS LIVROS</a> </li>
-                    <li> <a href="#"> GÊNEROS</a> </li>
-                    <li> <a href="#"> QUEM SOMOS</a> </li>
-                    <li> <a href="#"> FALE CONOSCO</a> </li>
-                    <li> <a href="cadastroProduto.html"> CADASTRO DE PRODUTOS</a> </li>
-                </ul>
-            </nav>
-            <section>
     </header>
     <!-- comecei aqui -->
     <main>
-        <section class="login">
-                <h3 class="login2">Intranet </h3>
-                <form class="form-auth card" method="post" action="../views/cadastroProduto.html">
-                    <li class="email">E-mail</li> 
-                    <input type="email"  name="email" placeholder="Digite seu email">
-                    
-                    <li class="password">Senha</li>
-                    <input type="password" name="password" placeholder="Digite sua senha">
-                                        
-                    <button href="#" type="submit">
-                        Entrar
-                    </button>
-                    <div class="esqueci">Esqueci minha senha</div>
-                    <div class="cadastro"><a href="../views/pagina-cadastro.html">Não tenho cadastro</a></div>
-    
-                    <li class="redes">Login com as redes sociais</li>  
-                    
-        </form>
+        <section class="pagelogin">
+            <h3 class="login2">LOGIN</h3>
+            <form class="form-auth card" method="/cadastroProduto.html" action="/views/cadastroProduto.html">
+                <li class="email">E-mail</li>
+                <input type="email" name="email" placeholder="Digite seu email">
+
+                <li class="password">Senha</li>
+                <input type="password" name="password" placeholder="Digite sua senha">
+
+                <button class="continuar" type="submit">
+                    Entrar
+                </button>
+                <div class="esqueci">Esqueci minha senha</div>
+                <div class="cadastro">Não tenho cadastro</div>
+                <div class="cadastro"><a href="../views/pagina-login.html">login</a></div>
+
+                <li class="redes">Login com as redes sociais</li>
+
+            </form>
             <div class="google">
                 <img id="google" src="../img/google.png" alt="">
-                <button class="google2">continue with google</button>   
+                <button class="google2">continue with google</button>
             </div>
             <div class="facebook">
                 <img id="facebook" src="../img/facebook.png" alt="">
-                <button class="facebook2">continue with facebook</button>    
+                <button class="facebook2">continue with facebook</button>
             </div>
         </section>
 
@@ -171,6 +127,8 @@
             <section>
     </footer>
 </body>
+
 </html>
 </section>
+
 </html>

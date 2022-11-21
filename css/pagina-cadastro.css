@@ -8,6 +8,40 @@
 
 }
 
+bod {
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    padding-top: 70px;
+    justify-content: center;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    background-color: #9CD9C2;
+}
+
+.container-header {
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 60px;
+    width: 100%;
+}
+
+#logo {
+    display: block;
+    height: 35px;
+    padding-left: 5vw;
+
+}
+
 #header2 {
     display: flex;
     background-color: black;
@@ -20,47 +54,28 @@ main {
     justify-content: center;
 }
 
-form {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
-.cadastro-ul {
-    width: 90%;
-    align-items: center;
-}
-
 .cadastro {
+    width: 100%;
+    max-width: 365px;
+    margin: 1rem;
+    top: 50px;
     display: flex;
     background-color: #9CD9C2;
-    border-radius: 4%;
-    width: 80%;
-    height: 37rem;
-    padding: 1%;
-    margin: 1rem;
+    border-radius: 1rem;
+    height: 100%;
     flex-direction: column;
     align-items: center;
-    margin-right: 15px;
     font-weight: bolder;
-    min-width: 16rem;
-    max-width: 768px;
-
 
 }
 
-ul {
-    display: flex;
-    flex-direction: column;
-    color: ;
 
-}
 
 .cadastro2 {
     display: flex;
     font-weight: bolder;
-    font-size: 20px;
-    padding-top: .5rem;
+
+
 }
 
 .email {
@@ -68,7 +83,6 @@ ul {
     font-weight: bold;
     font-size: 15px;
     font-weight: bolder;
-    justify-content: center;
 
 }
 
@@ -94,16 +108,12 @@ ul {
     text-decoration: underline;
     color: rgb(98, 96, 96);
     width: 100%;
-    
-
 }
 
 div .exemplo {
     display: flex;
     justify-content: center;
     align-items: center;
-    justify-items: center;
-
 }
 
 .senha {
@@ -111,15 +121,14 @@ div .exemplo {
     font-weight: bold;
     font-size: 15px;
     font-weight: bolder;
-    justify-content: center;
     background: url(../img/cadeado.png);
 }
+
 .password {
     display: flex;
     font-weight: bold;
     font-size: 15px;
     font-weight: bolder;
-    justify-content: center;
     background: url(../img/cadeado.png);
 }
 
@@ -129,7 +138,7 @@ div .exemplo {
     font-weight: bold;
     font-size: 15px;
     font-weight: bolder;
-    justify-content: center;
+
 }
 
 
@@ -156,99 +165,88 @@ div .exemplo {
     text-decoration: underline;
     color: rgb(98, 96, 96);
     width: 100%;
-    
+
+}
+
+.form-auth li {
+    font-size: 1rem;
+    margin: .5rem;
+    padding-left: 2rem;
+    width: 100%;
+    text-align: left;
+}
+
+.form-auth a {
+    font-size: .8rem;
+    padding-left: 1rem;
+    width: 100%;
+    text-align: left;
 }
 
 
-
 .form-auth input {
-    display: flex;
-    background-color: white;
+    background: white;
+    padding-left: 1rem;
+    width: 90%;
+    color: gray;
+    border: none;
     border-radius: 3rem;
     height: 3.5rem;
-    margin: .5rem;
-    text-align: center;
-    text-decoration: underline;
-    color: rgb(98, 96, 96);
-    width: 100%;
-    
+
+}
+
+.form-auth button {
+    display: flex;
+    margin: 2rem;
+    justify-content: center;
+    font-weight: bold;
+    background-color: #4EC16E;
+    border-radius: 3rem;
+    height: 3.5rem;
+    align-items: center;
+    letter-spacing: 4px;
+    font-weight: bolder;
+    width: 90%;
+}
+
+h5 {
+    font-size: 20px;
+    padding-top: .5rem;
 }
 
 /* ----------------------------Erros ------------------- */
 
-    .error{
-        width: 100%;
-        max-width: 46rem;
-        margin-bottom: 10px;
-        margin-left: 5rem;
-        font-size: 12px;
-        border-radius: 2rem;
-        color: red;
-        margin-top: 1.5rem;
-    }
-    
-    .no-erros{
-        display: none;
-    }
-      
-@media (min-width: 1200px) {
-
-   
-
+.error {
+    width: 100%;
+    max-width: 46rem;
+    margin-bottom: 10px;
+    margin-left: 5rem;
+    font-size: 12px;
+    border-radius: 2rem;
+    color: red;
+    margin-top: 1.5rem;
 }
-    /* ----------------------------VALIDACAO ------------------- */
+
+.no-erros {
+    display: none;
+}
+
+
+
+/* ----------------------------VALIDACAO ------------------- */
+
 
 .form-auth {
+    padding: 2rem 0;
     display: flex;
-    background-color: #9CD9C2;
-    border-radius: 4%;
-    width: 70%;
-    height: 32rem;
-    padding: 1%;
-    margin: 1rem;
+    width: 100%;
     flex-direction: column;
     align-items: center;
-    margin-right: 15px;
-    font-weight: bolder;
-    min-width: 18rem;
-    max-width: 768px;
 }
 
+@media (min-width: 1200px) {
+    .container-header {
+        width: 1200px;
+    }
 
-.form-auth button{
-    display: flex;
-    margin: 1rem;
-    justify-content: center;
-    font-weight: bold;
-    background-color: rgb(17, 202, 125);
-    border-radius: 3rem;
-    height: 3.5rem;
-    align-items: center;
-    font-size: 15px;
-    letter-spacing: 4px;
-    font-weight: bolder;
-    width: 100%;
 }
-
-.form-auth.card {
-    padding: 20px;
-}
-.register.card{
-    padding: 20px;
-}
-
-.form-comments button{
-    display: flex;
-    margin: 1rem;
-    justify-content: center;
-    font-weight: bold;
-    background-color: rgb(17, 202, 125);
-    border-radius: 3rem;
-    height: 3.5rem;
-    align-items: center;
-    font-size: 15px;
-    letter-spacing: 4px;
-    font-weight: bolder;
-    width: 100%;
-}
-

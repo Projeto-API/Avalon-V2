@@ -8,6 +8,11 @@ function fecharCarrinhoFlutuante() {
 }
 
 
+
+
+menuHammburguer
+
+
 function excluirDentroCarrinho(excluiProduto ) {
 
     let arrayDiv = document.getElementsByTagName("div");
@@ -23,27 +28,27 @@ function excluirDentroCarrinho(excluiProduto ) {
 
 
 
-// function incluirDentroCarrinho() {
-//     let em = document.createElement('em')
-//     em.innerHTML = <div class="produto" id="produto1">
-//     <img class="imagemProduto" src="../produtos/my broken mariko/mariko-capa.jpg" alt="">
-//     <div class="informationProduto">
-//         <div class="nomeProduto">
-//             <h5 id="produtoTitulo">MY BROKEN MARIKO</h5>
-//         </div>
-//         <div class="informationProdutoValue">
-//             <div>
-//                 <a href="" class="diminuirQtd">-</a>
-//                 <input type="number" class="quantidadeValue" value="1">
-//                 <a href="" class="aumentarQtd">+</a>
-//             </div>
-//             <span id="preco"> R$ 39,90 </span>
-//             <button id="excluir"  onclick="excluirDentroCarrinho('produto4')">X</button>
-//         </div>
-//     </div>
-// </div>
-//     document.querySelector('#containerProduto').appendChild(em)
-// }
+function incluirDentroCarrinho() {
+    let em = document.createElement('em')
+    em.innerHTML = `<div class="produto" id="produto4">
+    <img class="imagemProduto" src="../produtos/my broken mariko/mariko-capa.jpg" alt="">
+    <div class="informationProduto">        
+        <div class="nomeProduto">
+            <h5 id="produtoTitulo">MY BROKEN MARIKO</h5>
+        </div>
+        <div class="informationProdutoValue">
+            <div>
+                <a href="" class="diminuirQtd">-</a>
+                <input type="number" class="quantidadeValue" value="1">
+                <a href="" class="aumentarQtd">+</a>
+            </div>
+            <span id="preco"> R$ 39,90 </span>
+            <button id="excluir"  onclick="excluirDentroCarrinho('produto4')">X</button>
+        </div>
+    </div>
+</div>`
+    document.querySelector('#containerProduto').appendChild(em)
+}
 
 
 

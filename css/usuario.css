@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ropa+Sans&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 
 main {
@@ -22,15 +17,6 @@ align-items: center;
 justify-content: center;
 width: 25%;
 }
-
-nav.lista {
-    margin-top: -0.3rem;
-
-}
-.navegacao{
-    overflow: hidden;
-}
-
 .todososcontainers{
     display: flex;
     flex-direction: column;
@@ -257,6 +243,5 @@ nav.listapagos{
         text-align: center;
         white-space: pre-wrap;
         padding:none;
-    
     }
 }

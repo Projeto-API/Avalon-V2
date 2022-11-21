@@ -5,89 +5,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/carrinhoFlutuante.css">
+    
     <link rel="stylesheet" href="../css/button.css">
-
     <script type="text/javascript" src="../script.js/script.js" defer></script>
     <title>Avalon</title>
 </head>
 
 <body>
     <main class="corpo">
-        <input type="checkbox" name="toggle">
-        <div>
-            <label for="categoria">Categoria:</label>
-            <input class="open-modal" onclick="abrirCarrinhoFlutuante()" type="text" value="categoria" name="categoria"
-                required></a>
+      
+        <div class="produto">
+            <img class="imagemProduto" src="../produtos/my broken mariko/mariko-capa.jpg" alt="">
+            <div class="informationProduto">
+                <div class="nomeProduto">
+                    <h5 id="produtoTitulo">MY BROKEN MARIKO</h5>
+                </div>
+                <div class="informationProdutoValue">
+                    <div>
+                        <button onclick="diminuirQtd('down')" class="diminuirQtd">-</button>
+                        <input type="number" id="quantidadeValue" value="2">
+                        <button type="button" onclick="aumentarQtd('up')" class="aumentarQtd">+</button>
+                    </div>
+                    <span id="preco"> R$ 39,90 </span>
+                    <button class="excluir">X</button>
+                </div>
+            </div>
         </div>
 
-
-        <section class="carrinhoFlutuante" id="carrinhoFlutuante">
-            <div class="headerFlutuante">
-                <h5>MEU CARRINHO</h5>
-                <button id="excluir" onclick="fecharCarrinhoFlutuante()">X</button>
+        <div class="produto">
+            <img class="imagemProduto" src="../produtos/manifesto/capa.jpg" alt="">
+            <div class="informationProduto">
+                <div class="nomeProduto">
+                    <h5 id="produtoTitulo">MANIFESTO COMUNISTA</h5>
+                </div>
+                <div class="informationProdutoValue">
+                    <div>
+                        <button onclick="diminuirQtd('down')" class="diminuirQtd">-</button>
+                        <input type="number" id="quantidadeValue" value="1">
+                        <button type="button" onclick="aumentarQtd('up')" class="aumentarQtd">+</button>
+                    </div>
+                    <span id="preco"> R$ 34,90 </span>
+                    <button class="excluir">X</button>
+                </div>
             </div>
-            <section class="containerProduto">
-                <div class="produto">
-                    <img class="imagemProduto" src="../produtos/my broken mariko/mariko-capa.jpg" alt="">
-                    <div class="informationProduto">
-                        <div class="nomeProduto">
-                            <h5 id="produtoTitulo">MY BROKEN MARIKO</h5>
-                        </div>
-                        <div class="informationProdutoValue">
-                            <div>
-                                <a href="" class="diminuirQtd">-</a>
-                                <input type="number" class="quantidadeValue" value="1">
-                                <a href="" class="aumentarQtd">+</a>
-                            </div>
-                            <span id="preco"> R$ 39,90 </span>
-                            <button id="excluir">X</button>
-                        </div>
-                    </div>
-                </div>
+        </div>
 
-                <div class="produto">
-                    <img class="imagemProduto" src="../produtos/manifesto/capa.jpg" alt="">
-                    <div class="informationProduto">
-                        <div class="nomeProduto">
-                            <h5 id="produtoTitulo">MANIFESTO COMUNISTA</h5>
-                        </div>
-                        <div class="informationProdutoValue">
-                            <div>
-                                <a href="" class="diminuirQtd">-</a>
-                                <input type="number" class="quantidadeValue" value="1">
-                                <a href="" class="aumentarQtd">+</a>
-                            </div>
-                            <span id="preco"> R$ 34,90 </span>
-                            <button id="excluir">X</button>
-                        </div>
-                    </div>
+        <div class="produto">
+            <img class="imagemProduto" src="../produtos/Revolução dos bichos/revolucaodos bichos-capa.jpeg" alt="">
+            <div class="informationProduto">
+                <div class="nomeProduto">
+                    <h5 id="produtoTitulo">REVOLUÇÃO DOS BICHOS</h5>
                 </div>
-
-                <div class="produto">
-                    <img class="imagemProduto" src="../produtos/Revolução dos bichos/revolucaodos bichos-capa.jpeg"
-                        alt="">
-                    <div class="informationProduto">
-                        <div class="nomeProduto">
-                            <h5 id="produtoTitulo">REVOLUÇÃO DOS BICHOS</h5>
-                        </div>
-                        <div class="informationProdutoValue">
-                            <div>
-                                <button onclick="diminuirQtd()" class="diminuirQtd">-</button>
-                                <input type="number" class="quantidadeValue" value="1">
-                                <button onclick="diminuirQtd()" class="aumentarQtd">+</button>
-                            </div>
-                            <span id="preco"> R$ 19,90 </span>
-                            <button id="excluir">X</button>
-                        </div>
+                <div class="informationProdutoValue">
+                    <div>
+                        <button onclick="diminuirQtd('down')" class="diminuirQtd">-</button>
+                        <input type="number" id="quantidadeValue" value="1">
+                        <button type="button" onclick="aumentarQtd('up')" class="aumentarQtd">+</button>
                     </div>
+                    <span id="preco"> R$ 19,90 </span>
+                    <button class="excluir" id="excluir">X</button>
                 </div>
-            </section>
-
-            <div class="next-page">
-                <button class="continuar" id="carFlutuanteContinuar"><a href="checkout.html">CONTINUAR</a></button>
             </div>
+        </div>
+
+        </section>
+
+        <div class="next-page-cart">
+            <button class="continuar" id="continuar"><a href="checkout.html">CONTINUAR</a></button>
+        </div>
         </section>
     </main>
 

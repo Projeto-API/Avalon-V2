@@ -48,6 +48,7 @@ button a {
 }
 
 .continuar {
+    padding: 1rem;
     align-items: center;
     display: flex;
     font-weight: bold;
@@ -59,9 +60,6 @@ button a {
     border: none;
 }
 
-.next-page {
-    padding-top: 1rem;
-}
 .continuar a {
     width: 100%;
 }
@@ -141,4 +139,13 @@ button a {
     opacity: 1;
     transform: scale(1.2);
     transition-duration: 200ms;
+}
+
+#excluir {
+    display: block;
+    color: red;
+    font-weight: bold;
+    width: 15px;
+    background-color: #F6F9FF;
+    border: none;
 }

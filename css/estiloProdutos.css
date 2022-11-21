@@ -13,20 +13,10 @@
 
 
 ul li {
+    width: 100%;
     list-style: none;
-}
-
-header.header_produtos {
-    position: sticky;
-    top: 0;
-
-
-}
-
-.navegacao {
-    overflow-y: hidden;
-}
-
+    text-align: left;
+    }
 
 main.produtos {
     display: flex;

@@ -1,34 +1,27 @@
-*{
-    padding: 0;
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-header{
-    top: 0;
-    position : static !important;
-}
-a{
-    color:#338866 !important;
+* body {
+    height: auto;
 }
 
 
-
-body{
-    width: 100%;
-    height: 100%;
-    
-    
-}
-main{
+main {
+    padding-top: 50px;
     max-width: 1200px;
     margin: auto;
-    
-}
-body{
-    font-size: arial;
 
 }
-.cadastroProutos{
+
+#search {
+    display: none;
+}
+
+.cadastroProutos {
     display: flex;
     max-width: 1200px;
     background-color: #338866;
@@ -36,13 +29,15 @@ body{
     border-radius: 2rem;
     align-items: flex-end;
     justify-content: space-between;
-    
+
 }
-.cadastroProutos img{
+
+.cadastroProutos img {
     width: 5rem;
     margin: 2rem;
 }
-.usuario{
+
+.usuario {
     display: flex;
     margin-bottom: 2.5rem;
     margin-right: 4rem;
@@ -51,13 +46,15 @@ body{
     color: azure;
     text-align: center;
 }
-section .box-sumario{
+
+section .box-sumario {
     display: flex;
     flex-direction: column;
 
-    
+
 }
-.papelPao{
+
+.papelPao {
     max-width: 1200px;
     top: 2rem;
     margin-left: 1rem;
@@ -73,16 +70,15 @@ nav li {
     /* justify-content: center; */
     padding: 3px;
 }
-.container{
+
+.container {
     display: flex;
-    margin-top: 0.5rem;
     width: 100%;
     max-width: 1200px;
     display: flex;
     background-color: #FFFFFF;
     border-radius: 2rem;
-    margin-top: 1rem;
-   
+
 }
 
 legend {
@@ -90,22 +86,22 @@ legend {
 
 }
 
-.box-menu{
+.box-menu {
     display: flex;
     flex-direction: column;
-    background-color:aliceblue;
-     opacity: 0.8;
+    background-color: aliceblue;
+    opacity: 0.8;
     border-radius: 2rem;
     width: 100%;
     opacity: 0.8;
 }
+
 .box-menu ul li {
-    max-width: 1200px;
-    font-style: 32rem;
     color: #386C5F;
     list-style: none;
     width: 100%;
 }
+
 .box-menu ul {
     display: flex;
     flex-direction: column;
@@ -113,15 +109,16 @@ legend {
     padding: 1rem;
 }
 
-.box-menu ul li a{
+.box-menu ul li a {
     color: #386C5F;
     text-decoration: none;
     display: inline;
-    font-size: 18px;
+    font-size: 1rem;
     list-style: none;
 
-     
+
 }
+
 .box-cadastro {
     width: 100%;
     margin: 2rem;
@@ -134,23 +131,24 @@ legend {
     margin-top: 45PX;
     padding: 0 1rem;
     justify-content: center;
-    
+
 }
 
-.box-cadastro h1{
+.box-cadastro h3 {
     text-align: center;
-    color: #386C5F;
+    color: black;
 
 
 }
 
-.form-auth{
+.form-auth {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
 
 }
-.double .alteraInp{
+
+.double .alteraInp {
     color: red;
     text-align: center;
     height: 8rem;
@@ -160,7 +158,8 @@ legend {
     justify-content: center;
 
 }
-.single{
+
+.single {
     display: flex;
     max-width: 1500;
     width: 100%;
@@ -168,27 +167,31 @@ legend {
     align-items: center;
 
 }
-.double{
+
+.double {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     width: 100%;
 
 }
-.double > div{
+
+.double>div {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
     align-items: center;
-    
-    
+
+
 }
-.autor{
+
+.autor {
     display: flex;
     justify-content: space-evenly;
 }
-.searchimg{
+
+.searchimg {
     max-width: 1200px;
     display: flex;
     align-items: center;
@@ -196,8 +199,9 @@ legend {
     width: 100%;
     border-radius: 2rem;
 }
-.preco{
-    
+
+.preco {
+
     display: flex;
     height: 3rem;
     max-width: 65rem;
@@ -208,23 +212,26 @@ legend {
 
 }
 
-.box-cadastro form div label{
+.box-cadastro form div label {
     display: flex;
-    font-size: 19px;
+    font-size: 1rem;
     color: #386C5F;
-    width: 55%;
+    width: 100%;
 }
 
-div form input{
+div form input {
     height: 2rem;
     width: 100%;
     max-width: 17rem;
     border-radius: 2rem;
-    background-color: #FFFFFF;
+    background-color: white;
     opacity: 0.5;
-    font-size: 19px;
+    font-size: .8rem;
+    padding-left: 1rem;
+    border: none;
 }
-.categoriaInput{
+
+.categoriaInput {
     display: flex;
     align-items: flex-end;
     height: 7rem;
@@ -233,6 +240,7 @@ div form input{
     margin-right: auto;
     background-color: #FFFFFF;
 }
+
 div .single input {
     height: 12rem;
     width: 100%;
@@ -244,20 +252,21 @@ div .single input {
     display: flex;
     text-align: center;
     font-size: 1.5rem;
-    justify-content: space-evenly; 
+    justify-content: space-evenly;
     width: 11rem;
 }
+
 .configbutton {
-    background-color: #9CD9C2                                 ;
+    background-color: #9CD9C2;
     margin-bottom: 1rem;
     display: flex;
     padding: 2rem;
     border-radius: 2rem;
-      align-items: center;
+    align-items: center;
     justify-content: space-around
-
 }
-.cancelar{
+
+.cancelar {
     background-color: red;
     color: white;
     border-color: black;
@@ -266,7 +275,7 @@ div .single input {
 
 }
 
-.publicar{
+.publicar {
     background-color: green;
     color: white;
     border-color: black;
@@ -274,8 +283,10 @@ div .single input {
     opacity: 0.6;
 
 }
+
+
 /* ----------------------------Erros ------------------- */
-.errors{
+.errors {
     width: 100%;
     max-width: 46rem;
     border: solid 2px gre;
@@ -285,11 +296,11 @@ div .single input {
     margin-top: 1.5rem;
 }
 
-.no-errors{
+.no-errors {
     display: none;
 }
 
-.linhaerrors{
+.linhaerrors {
     color: red;
     margin-left: 2rem;
     text-align-last: start;
@@ -299,11 +310,13 @@ div .single input {
 
 }
 
-
+.icons {
+    display: none;
+}
 
 /* -----------------------Modal ----------------- */
 
-section .bg-modal{
+section .bg-modal {
     background-color: #338866;
     display: flex;
     flex-direction: column;
@@ -311,47 +324,54 @@ section .bg-modal{
     max-width: 1200;
     height: 100%;
 }
-.bg-modal{
+
+.bg-modal {
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.75);
+    background: rgba(0, 0, 0, 0.75);
     position: fixed;
     z-index: 2;
     top: -150%;
     display: block;
-    transition: 350ms;   
+    transition: 350ms;
 }
-div .categoriaInput{
+
+div .categoriaInput {
     width: 100%;
     height: 100%;
-    background-color: #9CD9C2;   
+    background-color: #9CD9C2;
 }
-.baixoBox-01{
+
+.baixoBox-01 {
     display: flex;
     flex-direction: column;
 }
-.modal{
+
+.modal {
     width: 100%;
     height: 100%;
     max-width: 60rem;
     max-height: 42rem;
     background-color: #9CD9C2;
-    border:1px solid #000;
+    border: 1px solid #000;
     border-radius: 5px;
-    margin: 50px auto 0 auto; 
+    margin: 50px auto 0 auto;
     border-radius: 1rem
 }
+
 .modal span {
     float: right;
     font-size: 50px;
     color: #000;
     cursor: pointer;
 }
-.modal span:hover{
+
+.modal span:hover {
     color: #990000;
     transition: 350ms;
 }
-.box-01{
+
+.box-01 {
     background-color: #386C5F;
     width: 100%;
     height: 100%;
@@ -365,7 +385,8 @@ div .categoriaInput{
     border-radius: 2rem;
     opacity: 0.8;
 }
-.cancelarModal{
+
+.cancelarModal {
     background-color: red;
     color: white;
     border-style: none;
@@ -379,7 +400,8 @@ div .categoriaInput{
     font-size: 1.3rem;
     opacity: 0.6;
 }
-.confirmar{
+
+.confirmar {
     background-color: #386C5F;
     color: white;
     border-style: none;
@@ -391,24 +413,28 @@ div .categoriaInput{
     opacity: 0.6;
 
 }
-.categoria{
+
+.categoria {
     width: 100%;
     background-color: #9CD9C2;
-    
+
 }
-.titulo{
+
+.titulo {
     display: flex;
     display: inline;
 
 }
-.editarCategoria{
+
+.editarCategoria {
     margin-left: 2rem;
     margin-top: 1rem;
     color: #386C5F;
 }
-.pesquisar{
+
+.pesquisar {
     display: flex;
-    margin-top: 1rem ;
+    margin-top: 1rem;
     margin-bottom: 1rem;
     margin-left: 1rem;
     height: 2rem;
@@ -418,20 +444,22 @@ div .categoriaInput{
     background-color: #FFFFFF;
     opacity: 0.8;
 }
-.botaoFechar{
+
+.botaoFechar {
     justify-content: end;
     margin-right: 14px;
     margin-bottom: -4px;
 }
+
 .selecao01,
-.selecao02
-{
+.selecao02 {
     display: inline-flex;
     margin-left: 3rem;
     margin-right: -3rem;
     color: black;
 }
-.button-modal{
+
+.button-modal {
     display: flex;
     left: 2rem;
     margin-left: 2rem;
@@ -439,7 +467,7 @@ div .categoriaInput{
     border-radius: 2rem;
 }
 
-.bloco{
+.bloco {
     background-color: #FFFFFF;
     opacity: 0.8;
     width: 15rem;
@@ -449,35 +477,36 @@ div .categoriaInput{
     list-style: none;
     line-height: 2rem;
 }
-.bloco li{
+
+.bloco li {
     margin-left: 2rem;
     color: black;
 
 }
-.addItem{
+
+.addItem {
     font-size: 30px;
     border-radius: 1rem;
     height: 42px;
     width: 39px;
     margin-left: -20px;
-    background-color:  #4EC16E;
+    background-color: #4EC16E;
     opacity: 0.8;
 
 }
+
 /* -----------------------Validacao ----------------- */
 
-.error{
+.error {
+    text-align: center;
     width: 100%;
     max-width: 46rem;
-    margin-bottom: 10px;
-    margin-left: 5rem;
     font-size: 12px;
-    border-radius: 2rem;
     color: red;
-    margin-top: 1.5rem;
+
 }
 
-.no-errors{
+.no-errors {
     display: none;
 }
 
@@ -486,38 +515,39 @@ div .categoriaInput{
 
 
 
-@media (max-width:850px){
-    .double{
+@media (max-width:850px) {
+    .double {
         flex-direction: column;
     }
-    .double > div{
+
+    .double>div {
         align-items: center;
-        
+
     }
-    .box-cadastro form div label{
+
+    .box-cadastro form div label {
         align-self: flex-start;
     }
-    .configbutton{
+
+    .configbutton {
         flex-direction: column-reverse;
         gap: 1rem;
         align-items: center;
-       
-        
+
+
     }
-    .papelPao{
+
+    .papelPao {
         display: none
     }
-    @media (max-width:880px){
 
-        .box-cadastro{
+    @media (max-width:880px) {
+
+        .box-cadastro {
             display: flex;
             justify-content: center;
         }
     }
-
-
-    
-    
-
-
 }
+
+

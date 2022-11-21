@@ -319,7 +319,9 @@ h6 {
     }
 
     main {
-        max-width: 1200px;
+        width: 1200px;
+    
+        
     }
 
     #capa {
@@ -327,6 +329,7 @@ h6 {
     }
 
     .container {
+        max-width: ;
         height: 600px;
         padding-top: 7rem;
 

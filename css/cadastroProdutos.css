@@ -60,8 +60,8 @@ section .box-sumario {
     margin-left: 1rem;
 }
 
-nav ul,
-nav li {
+.box-sumario nav ul,
+.box-sumario nav li {
     max-width: 1200px;
     margin-bottom: 0.5rem;
     display: -webkit-box;
@@ -550,4 +550,8 @@ div .categoriaInput {
     }
 }
 
-
+@media (min-width: 1200px) {
+    #chaveHamburguer {
+        display: none;
+    }
+}

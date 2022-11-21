@@ -152,51 +152,6 @@ main {
     align-items: center;
 }
 
-/* BOTOES - ARROW LEFT E RIGHT */
-
-.arrow-left {
-    top: 0;
-    bottom: 0;
-    left: .5rem;
-    right: auto;
-    margin: auto;
-    position: absolute;
-    width: 9vw;
-    height: 9vw;
-    max-width: 50px;
-    max-height: 50px;
-    background-color: #4EC16E;
-    border-radius: 20%;
-    color: white;
-    opacity: .5;
-    cursor: pointer;
-}
-
-.arrow-right {
-    top: 0;
-    bottom: 0;
-    left: auto;
-    right: .5rem;
-    margin: auto;
-    position: absolute;
-    width: 9vw;
-    height: 9vw;
-    max-width: 50px;
-    max-height: 50px;
-    background-color: #4EC16E;
-    border-radius: 20%;
-    color: white;
-    opacity: .5;
-    cursor: pointer;
-}
-
-.arrow-left:hover,
-.arrow-right:hover {
-    opacity: 1;
-    transform: scale(1.2);
-    transition-duration: 200ms;
-}
-
 /* BOTAO COMPRAR */
 
 .grid {

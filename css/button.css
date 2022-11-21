@@ -12,25 +12,26 @@ button a {
 }
 
 .comprar {
-    width: 8rem;
+    z-index: 3;
+    align-items: center;
+    justify-content: ;
+    display: flex;
+    font-weight: bold;
+    width: 100%;
     height: 2rem;
+    background-color: #4EC16E;
     border-radius: 1rem;
-    cursor: pointer;
-    z-index: 2;
-    border: none;
-    box-shadow: .25rem .25rem 1rem black;
-
+ 
 }
 
 .comprar a {
-    color: white;
-    font-weight: bold;
+    justify-content: center;
+    width: 100%;
 }
 
-.comprar:hover {
-    transform: scale(1.1);
-    transition-property: all;
-    transition-duration: 0.2s;
+.comprar :hover {
+    color: white;
+
 }
 
 #calcular {
@@ -94,4 +95,50 @@ button a {
 
 .adicionar :hover {
     color: white;
+}
+
+/* BOTOES - ARROW LEFT E RIGHT */
+
+.arrow-left {
+    top: 0;
+    bottom: 0;
+    left: .5rem;
+    right: auto;
+    margin: auto;
+    position: absolute;
+    width: 9vw;
+    height: 9vw;
+    max-width: 50px;
+    max-height: 50px;
+    background-color: #4EC16E;
+    border-radius: 20%;
+    color: white;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.arrow-right {
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: .5rem;
+    margin: auto;
+    position: absolute;
+    width: 9vw;
+    height: 9vw;
+    max-width: 50px;
+    max-height: 50px;
+    background-color: #4EC16E;
+    border-radius: 20%;
+    color: white;
+    opacity: .5;
+    cursor: pointer;
+}
+
+
+.arrow-left:hover,
+.arrow-right:hover {
+    opacity: 1;
+    transform: scale(1.2);
+    transition-duration: 200ms;
 }

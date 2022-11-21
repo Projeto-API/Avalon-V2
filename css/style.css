@@ -13,7 +13,7 @@
 header {
     position: fixed;
     width: 100%;
-    z-index: 3;
+    z-index: 99;
     background-color: #9CD9C2;
 }
 

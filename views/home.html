@@ -8,12 +8,35 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="../css/menu-hamburguer.css">
     <script type="text/javascript" src="../script.js/carrinhoFlutuante.js" defer ></script>
+    <script type="text/javascript" src="../script.js/modalCadastro.js" defer ></script>
     <title>Home</title>
 </head>
 
 <body>
     <header>
+        <section id="menu-hamburguer">
+
+            <input type="checkbox" id="chec">
+            <label href="abrirHamburguer"  for="chec">
+                <img onclick=abrirHamburguer() href="#"src="/img/livro.png">
+    
+            </a>
+            </label>
+            <nav id="chave-hamburguer">
+                <ul>
+                    <li> <a href="../views/home.html"> PÁGINA INICIAL</a> </li>
+                    <li> <a href="../views/home.html"> HOME</a> </li>
+                    <li> <a href="../views/estiloProdutos.html"> TODOS OS LIVROS</a> </li>
+                    <li> <a href="#"> GÊNEROS</a> </li>
+                    <li> <a href="#"> QUEM SOMOS</a> </li>
+                    <li> <a class="open-modal" onclick="abrirModal()" href="#"> FALE CONOSCO</a> </li>
+                </ul>
+                
+            </nav>
+            
+        </section>
 
         <section class="container-header">
             <a href="/views/home.html"><img id="logo" src="../img/logopreto.png" alt=""></a>
@@ -401,6 +424,8 @@
         </section>
     
     <div>
+   
+            
 </body>
 
 </html>

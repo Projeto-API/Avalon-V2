@@ -7,8 +7,6 @@ function fecharUsuario() {
 
 
 
-
-
 function verificarFormulario(){
  
     let formularioForm = document.querySelector('form.formulario')
@@ -50,4 +48,14 @@ function verificarFormulario(){
     })
  }
 
+
+ function abrirHamburguer() {
+
+    let hamburger = document.getElementById("chave-hamburguer")
+        if(hamburger.style.left =="-350px"){
+            hamburger.style.left = "0px"
+        } else {
+            hamburger.style.left = "-350px";
+        }
+    }
 

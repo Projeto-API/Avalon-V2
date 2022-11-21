@@ -29,7 +29,7 @@ window.addEventListener('load', function () {
   };
 
   form.addEventListener('submit', function (event) {
-    // Validar campos obrigatórios
+    // Validacao
     event.preventDefault();
     removeErrors('form');
 
@@ -44,64 +44,85 @@ window.addEventListener('load', function () {
     }
   });
 
-  const validateEmail = function (input) {
+  const validatepreco = function (input) {
     const { value } = input;
-    if (value.includes('@') && value.includes('.')) {
+    if (value.includes('$') && value.length >= max) {
       return
     } else {
-      createError(input, 'O campo deve conter @ e .', 'input');
+      createError(input, 'O campo deve conter $ ', 'input');
+    }
+  };
+
+  const validatepublicacao = function (input) {
+    const { value } = input;
+    if (value.includes('/') && value.includes('.')) {
+      return
+    } else {
+      createError(input, 'O campo deve conter / ', 'input');
     }
   };
 
   const validateLength = function (input, min, max) {
     const { value } = input;
 
-    if (value.length >= min && value.length < max) {
+    if (value.length >= min && value.length >= max) {
       return
     } else {
       createError(input, `O campo deve ter entre ${min} e ${max} caracteres`, 'input');
     }
   }
 
-  const validateDate = function (input, min, max) {
-    const { value } = input;
-    const ano = value.split('-')[0];
-    const idade = new Date().getFullYear() - parseInt(ano);
-    if (idade >= min && idade < max) {
-      return
-    } else {
-      createError(input, `A idade deve ser entre ${min} e ${max} anos`, 'input');
-    }
-  }
+
 
   inputList.forEach(input => {
     input.addEventListener('change', function () {
       removeErrors('input');
 
       switch (input.name) {
-        case 'email':
-          validateLength(input, 10, 180);
-          validateEmail(input);
+       
+        case 'tituloLivro':
+          validateLength(input, 2, 9);
           break;
 
-        case 'editora':
-          validateLength(input, 2, 80);
-          break;
-
-        case 'idioma':
-          validateLength(input, 2, 100);
+          case 'idioma':
+          validateLength(input, 6, 8);
           break;
 
         case 'publicacao':
-          validateLength(input, 10, 15);
+          validatepublicacao(input, 1, 7);
           break;
 
-        case 'titulo':
-          validateLength(input, 8, 100);
+        case 'dimensoes':
+          validateLength(input, 2, 4);
           break;
 
-       
+          case 'sinopse':
+            validateLength(input, 10, 20);
+            break;
 
+            case 'paginas':
+              validateLength(input, 1, 3);
+              break;
+  
+
+            case 'acabamento':
+              validateLength(input, 2, 4);
+              break;
+
+              case 'preco':
+                validatepreco(input, 4, 6);
+                break;
+                case 'autor':
+                  validateLength(input, 2, 8);
+                  break;
+
+                  case 'isbn':
+                  validateLength(input, 2, 3);
+                  break;
+
+                  case 'editora':
+                    validateLength(input, 2, 7);
+                    break;
         default:
           break;
       }

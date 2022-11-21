@@ -56,7 +56,7 @@ window.addEventListener('load', function () {
   const validateLength = function (input, min, max) {
     const { value } = input;
 
-    if (value.length >= min && value.length < max) {
+    if (value.length >= min && value.length >= max) {
       return
     } else {
       createError(input, `O campo deve ter entre ${min} e ${max} caracteres`, 'input');

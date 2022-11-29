@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 *{
     padding: 0;
     margin: 0;
@@ -33,48 +32,11 @@ body{
     display: flex;
     max-width: 1200px;
 
-=======
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-* body {
-    height: auto;
-}
-
-
-main {
-    padding-top: 50px;
-    max-width: 1200px;
-    margin: auto;
-
-}
-
-#search {
-    display: none;
-}
-
-.cadastroProutos {
-    display: flex;
-    max-width: 1200px;
->>>>>>> main
     background-color: #338866;
     opacity: 0.8;
     border-radius: 2rem;
     align-items: flex-end;
     justify-content: space-between;
-<<<<<<< HEAD
-    
-}
-.cadastroProutos img{
-    width: 5rem;
-    margin: 2rem;
-}
-.usuario{
-=======
 
 }
 
@@ -84,7 +46,6 @@ main {
 }
 
 .usuario {
->>>>>>> main
     display: flex;
     margin-bottom: 2.5rem;
     margin-right: 4rem;
@@ -93,7 +54,6 @@ main {
     color: azure;
     text-align: center;
 }
-<<<<<<< HEAD
 section .box-sumario{
     display: flex;
     flex-direction: column;
@@ -101,29 +61,13 @@ section .box-sumario{
     
 }
 .papelPao{
-=======
-
-section .box-sumario {
-    display: flex;
-    flex-direction: column;
-
-
-}
-
-.papelPao {
->>>>>>> main
     max-width: 1200px;
     top: 2rem;
     margin-left: 1rem;
 }
 
-<<<<<<< HEAD
 nav ul,
 nav li {
-=======
-.box-sumario nav ul,
-.box-sumario nav li {
->>>>>>> main
     max-width: 1200px;
     margin-bottom: 0.5rem;
     display: -webkit-box;
@@ -132,7 +76,6 @@ nav li {
     /* justify-content: center; */
     padding: 3px;
 }
-<<<<<<< HEAD
 .container{
     display: flex;
     margin-top: 0.5rem;
@@ -143,17 +86,6 @@ nav li {
     border-radius: 2rem;
     margin-top: 1rem;
    
-=======
-
-.container {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    background-color: #FFFFFF;
-    border-radius: 2rem;
-
->>>>>>> main
 }
 
 legend {
@@ -161,7 +93,6 @@ legend {
 
 }
 
-<<<<<<< HEAD
 .box-menu{
     display: flex;
     flex-direction: column;
@@ -173,24 +104,10 @@ legend {
 .box-menu ul li {
     max-width: 1200px;
     font-style: 32rem;
-=======
-.box-menu {
-    display: flex;
-    flex-direction: column;
-    background-color: aliceblue;
-    opacity: 0.8;
-    border-radius: 2rem;
-    width: 100%;
-    opacity: 0.8;
-}
-
-.box-menu ul li {
->>>>>>> main
     color: #386C5F;
     list-style: none;
     width: 100%;
 }
-<<<<<<< HEAD
 .box-menu ul {
     display: flex;
     flex-direction: column;
@@ -223,49 +140,10 @@ legend {
 
 .box-cadastro h1{
     text-align: center;
-=======
-
-.box-menu ul {
-    display: flex;
-    flex-direction: column;
-    gap: rem;
-    padding: 1rem;
-}
-
-.box-menu ul li a {
-    color: #386C5F;
-    text-decoration: none;
-    display: inline;
-    font-size: 1rem;
-    list-style: none;
 
 
 }
 
-.box-cadastro {
-    width: 100%;
-    margin: 2rem;
-    background-color: #9CD9C2;
-    border-radius: 2rem;
-    max-width: 1200px;
-
-    gap: 2rem;
-    color: #9CD9C2;
-    margin-top: 45PX;
-    padding: 0 1rem;
-    justify-content: center;
-
-}
-
-.box-cadastro h3 {
-    text-align: center;
-    color: black;
->>>>>>> main
-
-
-}
-
-<<<<<<< HEAD
 .formulario{
     display: flex;
     flex-direction: column;
@@ -273,23 +151,12 @@ legend {
 
 }
 .double .alteraInp{
-=======
-.form-auth {
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-
-}
-
-.double .alteraInp {
->>>>>>> main
     color: red;
     text-align: center;
     height: 8rem;
     width: 8rem;
     margin: center;
     max-width: 8rem;
-<<<<<<< HEAD
     margin-right: 6rem;
     align-self: flex-end;
 }
@@ -301,29 +168,12 @@ legend {
 
 }
 .double{
-=======
-    justify-content: center;
-
-}
-
-.single {
-    display: flex;
-    max-width: 1500;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-
-}
-
-.double {
->>>>>>> main
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     width: 100%;
 
 }
-<<<<<<< HEAD
 .double > div{
     width: 100%;
     display: flex;
@@ -337,25 +187,6 @@ legend {
     justify-content: space-evenly;
 }
 .searchimg{
-=======
-
-.double>div {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.7rem;
-    align-items: center;
-
-
-}
-
-.autor {
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.searchimg {
->>>>>>> main
     max-width: 1200px;
     display: flex;
     align-items: center;
@@ -363,21 +194,14 @@ legend {
     width: 100%;
     border-radius: 2rem;
 }
-<<<<<<< HEAD
 .preco{
     
-=======
-
-.preco {
-
->>>>>>> main
     display: flex;
     height: 3rem;
     max-width: 65rem;
     width: 100%;
     max-height: 2rem;
     border-radius: 2rem;
-<<<<<<< HEAD
    
     align-items: center;
 
@@ -390,25 +214,10 @@ legend {
 }
 
 div form input{
-=======
-    align-items: center;
-
-}
-
-.box-cadastro form div label {
-    display: flex;
-    font-size: 1rem;
-    color: #386C5F;
-    width: 100%;
-}
-
-div form input {
->>>>>>> main
     height: 2rem;
     width: 100%;
     max-width: 17rem;
     border-radius: 2rem;
-<<<<<<< HEAD
     background-color: #338866;
     opacity: 0.5;
 }
@@ -439,67 +248,24 @@ textarea {
     
     
 }
-=======
-    background-color: white;
-    opacity: 0.5;
-    font-size: .8rem;
-    padding-left: 1rem;
-    border: none;
-}
-
-.categoriaInput {
-    display: flex;
-    align-items: flex-end;
-    height: 7rem;
-    width: 20rem;
-    border-radius: 2rem;
-    margin-right: auto;
-    background-color: #FFFFFF;
-}
-
-div .single input {
-    height: 12rem;
-    width: 100%;
-    max-width: 44rem;
-
-}
-
->>>>>>> main
 .button input {
     display: flex;
     text-align: center;
     font-size: 1.5rem;
-<<<<<<< HEAD
     justify-content: space-evenly; 
     width: 11rem;
 }
 .configbutton {
     background-color: #338866                                 ;
-=======
-    justify-content: space-evenly;
-    width: 11rem;
-}
-
-.configbutton {
-    background-color: #9CD9C2;
->>>>>>> main
     margin-bottom: 1rem;
     display: flex;
     padding: 2rem;
     border-radius: 2rem;
-<<<<<<< HEAD
     justify-content: space-between;
     align-items: center;
 
 }
 .cancelar{
-=======
-    align-items: center;
-    justify-content: space-around
-}
-
-.cancelar {
->>>>>>> main
     background-color: red;
     color: white;
     border-color: black;
@@ -507,7 +273,6 @@ div .single input {
     opacity: 0.6;
 
 }
-<<<<<<< HEAD
 .salvar{
     background-color: #C9C16D;
     color: white;
@@ -517,10 +282,6 @@ div .single input {
 
 }
 .publicar{
-=======
-
-.publicar {
->>>>>>> main
     background-color: green;
     color: white;
     border-color: black;
@@ -528,7 +289,6 @@ div .single input {
     opacity: 0.6;
 
 }
-<<<<<<< HEAD
 /* ----------------------------Erros ------------------- */
 .invisible{
 display: none;
@@ -540,34 +300,17 @@ display: none;
     width: 100%;
     max-width: 46rem;
     border: solid 2px red;
-=======
-
-
-/* ----------------------------Erros ------------------- */
-.errors {
-    width: 100%;
-    max-width: 46rem;
-    border: solid 2px gre;
->>>>>>> main
     margin-bottom: 10px;
     margin-left: 5rem;
     border-radius: 2rem;
     margin-top: 1.5rem;
 }
 
-<<<<<<< HEAD
 .no-erros{
     display: none;
 }
 
 .linhaerros{
-=======
-.no-errors {
-    display: none;
-}
-
-.linhaerrors {
->>>>>>> main
     color: red;
     margin-left: 2rem;
     text-align-last: start;
@@ -577,7 +320,6 @@ display: none;
 
 }
 
-<<<<<<< HEAD
 
 
 
@@ -591,41 +333,20 @@ display: none;
 /* -----------------------Modal ----------------- */
 
 section .bg-modal{
-=======
-.icons {
-    display: none;
-}
-
-/* -----------------------Modal ----------------- */
-
-section .bg-modal {
->>>>>>> main
     background-color: #338866;
     display: flex;
     flex-direction: column;
     width: 100%;
-<<<<<<< HEAD
     height: 100%;
 }
 .bg-modal{
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.75);
-=======
-    max-width: 1200;
-    height: 100%;
-}
-
-.bg-modal {
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.75);
->>>>>>> main
     position: fixed;
     z-index: 2;
     top: -150%;
     display: block;
-<<<<<<< HEAD
     transition: 350ms;   
 }
 div .categoriaInput{
@@ -638,63 +359,27 @@ div .categoriaInput{
     flex-direction: column;
 }
 .modal{
-=======
-    transition: 350ms;
-}
-
-div .categoriaInput {
-    width: 100%;
-    height: 100%;
-    background-color: #9CD9C2;
-}
-
-.baixoBox-01 {
-    display: flex;
-    flex-direction: column;
-}
-
-.modal {
->>>>>>> main
     width: 100%;
     height: 100%;
     max-width: 60rem;
     max-height: 42rem;
     background-color: #9CD9C2;
-<<<<<<< HEAD
     border:1px solid #000;
     border-radius: 5px;
     margin: 50px auto 0 auto; 
     border-radius: 1rem
 }
-=======
-    border: 1px solid #000;
-    border-radius: 5px;
-    margin: 50px auto 0 auto;
-    border-radius: 1rem
-}
-
->>>>>>> main
 .modal span {
     float: right;
     font-size: 50px;
     color: #000;
     cursor: pointer;
 }
-<<<<<<< HEAD
 .modal span:hover{
     color: #990000;
     transition: 350ms;
 }
 .box-01{
-=======
-
-.modal span:hover {
-    color: #990000;
-    transition: 350ms;
-}
-
-.box-01 {
->>>>>>> main
     background-color: #386C5F;
     width: 100%;
     height: 100%;
@@ -706,15 +391,8 @@ div .categoriaInput {
     align-items: center;
     flex-direction: row;
     border-radius: 2rem;
-<<<<<<< HEAD
 }
 .cancelarModal{
-=======
-    opacity: 0.8;
-}
-
-.cancelarModal {
->>>>>>> main
     background-color: red;
     color: white;
     border-style: none;
@@ -728,12 +406,7 @@ div .categoriaInput {
     font-size: 1.3rem;
     opacity: 0.6;
 }
-<<<<<<< HEAD
 .confirmar{
-=======
-
-.confirmar {
->>>>>>> main
     background-color: #386C5F;
     color: white;
     border-style: none;
@@ -745,28 +418,16 @@ div .categoriaInput {
     opacity: 0.6;
 
 }
-<<<<<<< HEAD
 .categoria{
     width: 100%;
     background-color: #9CD9C2;
     
 }
 .titulo{
-=======
-
-.categoria {
-    width: 100%;
-    background-color: #9CD9C2;
-
-}
-
-.titulo {
->>>>>>> main
     display: flex;
     display: inline;
 
 }
-<<<<<<< HEAD
 .editarCategoria{
     margin-left: 2rem;
     margin-top: 1rem;
@@ -774,59 +435,28 @@ div .categoriaInput {
 .pesquisar{
     display: flex;
     margin-top: 1rem ;
-=======
-
-.editarCategoria {
-    margin-left: 2rem;
-    margin-top: 1rem;
-    color: #386C5F;
-}
-
-.pesquisar {
-    display: flex;
-    margin-top: 1rem;
->>>>>>> main
     margin-bottom: 1rem;
     margin-left: 1rem;
     height: 2rem;
     width: 21rem;
     border-radius: 2rem;
     text-align: center;
-<<<<<<< HEAD
     background-color: #CACACA;
 }
 .botaoFechar{
-=======
-    background-color: #FFFFFF;
-    opacity: 0.8;
-}
-
-.botaoFechar {
->>>>>>> main
     justify-content: end;
     margin-right: 14px;
     margin-bottom: -4px;
 }
-<<<<<<< HEAD
 .selecao01,
 .selecao02
 {
-=======
-
-.selecao01,
-.selecao02 {
->>>>>>> main
     display: inline-flex;
     margin-left: 3rem;
     margin-right: -3rem;
     color: black;
 }
-<<<<<<< HEAD
 .button-modal{
-=======
-
-.button-modal {
->>>>>>> main
     display: flex;
     left: 2rem;
     margin-left: 2rem;
@@ -834,14 +464,8 @@ div .categoriaInput {
     border-radius: 2rem;
 }
 
-<<<<<<< HEAD
 .bloco{
     background-color: #CACACA;
-=======
-.bloco {
-    background-color: #FFFFFF;
-    opacity: 0.8;
->>>>>>> main
     width: 15rem;
     height: 26rem;
     margin: 2rem;
@@ -849,28 +473,17 @@ div .categoriaInput {
     list-style: none;
     line-height: 2rem;
 }
-<<<<<<< HEAD
 .bloco li{
-=======
-
-.bloco li {
->>>>>>> main
     margin-left: 2rem;
     color: black;
 
 }
-<<<<<<< HEAD
 .addItem{
-=======
-
-.addItem {
->>>>>>> main
     font-size: 30px;
     border-radius: 1rem;
     height: 42px;
     width: 39px;
     margin-left: -20px;
-<<<<<<< HEAD
     background-color:  #4EC16E
 
 }
@@ -897,70 +510,4 @@ div .categoriaInput {
     }
     
 
-=======
-    background-color: #4EC16E;
-    opacity: 0.8;
-
-}
-
-/* -----------------------Validacao ----------------- */
-
-.error {
-    text-align: center;
-    width: 100%;
-    max-width: 46rem;
-    font-size: 12px;
-    color: red;
-
-}
-
-.no-errors {
-    display: none;
-}
-
-
-
-
-
-
-@media (max-width:850px) {
-    .double {
-        flex-direction: column;
-    }
-
-    .double>div {
-        align-items: center;
-
-    }
-
-    .box-cadastro form div label {
-        align-self: flex-start;
-    }
-
-    .configbutton {
-        flex-direction: column-reverse;
-        gap: 1rem;
-        align-items: center;
-
-
-    }
-
-    .papelPao {
-        display: none
-    }
-
-    @media (max-width:880px) {
-
-        .box-cadastro {
-            display: flex;
-            justify-content: center;
-        }
-    }
-}
-
-@media (min-width: 1200px) {
-    #chaveHamburguer {
-        display: none;
-    }
->>>>>>> main
 }

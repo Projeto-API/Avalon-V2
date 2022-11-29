@@ -1,95 +1,59 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ropa+Sans&display=swap');
 
-footer *,
-header * {
-    margin: 0;
+* {
+    margin: 0 auto;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    
 }
 
-* a {
-    text-decoration: none;
-    color: black;
-}
 
 /* HEADER */
 
-
 header {
-    position: sticky;
-    max-width: 100%;
+    position: fixed;
     width: 100%;
-    z-index: 3;
-    top: 0;
-}
-
-
-.container-header {
-    display: flex;
-    align-items: center;
-    padding: 0 10%;
-    justify-content: space-between;
-    height: 40px;
-    max-height: 5rem;
-    width: 100%;
+    z-index: 99;
     background-color: #9CD9C2;
 }
 
-.container-header nav ul {
+.container-header {
+    padding: 0 1rem;
     display: flex;
-    gap: 50px;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
 }
 
 .icons {
+    gap: 1rem;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
-.icons div:hover {
+.icons a {
+    text-decoration: none;
+    color:black;
+    
+}
+
+.icons a:hover {
+    text-decoration: none;
+    color: black;
     transform: scale(1.1);
     transition-property: all;
     transition-duration: 0.2s;
-
-}
-
-.icons div {
-    padding: 10%;
 }
 
 #logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 7vw;
-    max-height: 2.5rem;
-    flex-wrap: nowrap;
-}
-
-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.conta {
-    display: none; 
-}
-
-#lupa {
-    display: flex;
+    display: block;
+    height: 35px;
+    padding-left: 25vw;
 }
 
 svg {
-    height: 6vw;
-    max-height: 2.5rem;
+    height: 25px;
     width: auto;
 }
 
@@ -97,48 +61,21 @@ svg {
     display: none;
 }
 
+#login {
+    display: none;
+}
+
+#menuHamburguer,
+#lupa,
+#car-shopping {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    opacity: 80%;
+}
 
 .navegacao {
-    letter-spacing: .05rem;
-    align-items: center;
-    padding: 0 5%;
-    display: inline-block;
-    height: 25px;
-    width: 100%;
-    background-color: #9CD9C2;
-    word-wrap: break-word;
-    overflow-x: auto;
-    overflow-y: hidden ;
-    box-shadow: 0 .01rem .4rem .01rem #949494;
-}
-.single{
-    display: flex;
-    align-items: center;
-}
-
-.navegacao nav ul {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-
-.lista li a {
-    align-items: center;
-    text-decoration: none;
-    padding: .8rem 1rem;
-    color: black;
-    font-size: clamp(.6rem, 100%, .8rem);
-    white-space: nowrap;
-}
-
-.lista li a:hover {
-    background-color: #4EC16E;
-    color: white;
-}
-
-.conta {
-
+    display: none;
 }
 
 /* FOOTER */
@@ -152,28 +89,28 @@ svg {
     background-color: #9CD9C2;
     font-size: .9rem;
     flex-direction: column;
-    border-radius: 2vw 2vw 0 0;
+    border-radius: 20px 20px 0 0;
 }
 
 .container-footer {
     display: flex;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-wrap: wrap;
 }
 
-.container-footer div {
-    padding: 1.5rem 3vw;
+
+.column {
+    padding: 1.5rem;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
 }
 
 
-
-#cards {
-    height: 10vw;
+.cards {
+    height: 35px;
     max-height: 3rem;
     background-color: transparent;
 }
@@ -190,57 +127,32 @@ svg {
     justify-content: space-around;
 }
 
-.autores  ul {
+.autores ul {
     padding: 1rem;
     gap: 1rem;
     height: auto;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     flex-direction: column;
+}
+
+.autores a {
+    text-decoration: none;
+    color: black;
 }
 
 
 
 @media (min-width: 768px) {
-
-    header,
-    footer {
-        max-width: 100%;
-        /* margin: 0 auto; */
-    }
-
-    .container-header {
-        height: 50px;
-    }
-
-
-    #search {
-        display: flex;
-        font-size: .8rem;
-        font-style: italic;
-        padding: 0 1rem;
-        height: 2rem;
-        width: 50vw;
-        max-height: 2rem;
-        max-width: 100%;
-        border-radius: 2rem;
-        border: none;
-
-    }
-
-    #lupa {
-        display: none;
-    }
-
-
-
     .lista {
         width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
+
 
     #logo2 {
         display: block;
@@ -252,25 +164,92 @@ svg {
         height: auto;
         display: flex;
         flex-direction: row;
-             }
+    }
 
 
 }
+
 @media (min-width: 1200px) {
 
     header,
     footer {
-        max-width: 100%;
+        width: 100%;
         margin: 0 auto;
     }
 
-    svg {
-        max-height: 6vh;
-        width: auto;
+    .container-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 50px;
+        width: 100%;
+    }
+
+    #search {
+        display: flex;
+        font-size: .8rem;
+        font-style: italic;
+        padding-left: 1rem;
+        height: 2rem;
+        width: 50vw;
+        max-width: 700px;
+        border-radius: 2rem;
+        border: none;
+    }
+
+    #logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    #chaveHamburguer,
+    #lupa {
+        display: none;
+    }
+
+    #login,
+    #car-shopping {
+        display: flex;
+        align-items: center;
+    }
+
+    .navegacao {
+        display: inline-block;
+        letter-spacing: .05rem;
+        align-items: center;
+
+        width: 100%;
+        background-color: #9CD9C2;
+        border-top: 1px solid #4EC16E;
+    }
+
+    .navegacao nav ul {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .lista li a {
+        width: 100%;
+        align-items: center;
+        text-decoration: none;
+        margin: 1rem;
+        color: black;
+        font-size: .8rem;
+        white-space: nowrap;
+    }
+
+    .lista ul :hover {
+        background-color: #4EC16E;
+        color: white;
     }
 
 
-
-
+    .container-header,
+    .container-footer {
+        width: 1200px;
+        margin: auto;
+    }
 }
-

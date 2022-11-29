@@ -1,36 +1,42 @@
 /* Carrinho Flutuante */
 
+body {
+    height: 100%;
+    margin: 0;
+}
+
+
 .headerFlutuante {
     background-color: #386C5F;
+    color: #F6F9FF;
     padding: 8px;
     display: flex;
     width: 100%;
     top: 0;
     justify-content: space-between;
-
 }
 
 .carrinhoFlutuante {
-    background: #111;
+    background: white;
     height: 100%;
-    width:0%;
+    width: 0%;
     margin: 0;
     list-style: none;
     text-align: center;
     position: fixed;
     right: 0%;
-    top: 0;
+    top: 75px;
     transition: all 0.5s;
-    z-index: 1;
+    z-index: 3;
     font-size: 19px
 }
 .produto1 , 
 .produto2 ,
-.produto3 
-{
+.produto3{
     margin: .5rem;
     display: flex;
-    width: auto;    justify-content: flex-start;
+    width: auto;
+    justify-content: flex-start;
     background-color: #F6F9FF;
     border-radius: 1rem;
 }
@@ -47,21 +53,16 @@
 .imagemProduto {
     margin: .5rem;
     border-radius: .5rem;
-    display: flex;
-    width: 4rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50px;
 }
 
 #produtoTitulo {
+    text-align: left;
     padding-bottom: 1rem;
-    font-size: .8rem;
-}
-
-.informationProduto {
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    margin: 1rem;
-    width: 100%;
+    font-size: .7rem;
 }
 
 .informationProdutoValue {
@@ -71,36 +72,60 @@
     gap: 1rem;
 }
 
+.informationProdutoValue a {
+    text-decoration: none;
+    color: black;
+}
+
 .quantidadeValue {
     text-align: center;
     width: 2rem;
 }
 
+input[type=number] { 
+    -moz-appearance: textfield;
+    appearance: textfield;
+ 
+ }
 #preco {
+    font-size: 1rem;
     font-weight: 600;
     color: #386C5F;
 }
 
-input[type="number"] {
-    -moz-appearance: textfield;
+#continuar {
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    width: 100%;
+    height: 2rem;
+    background-color: #4EC16E;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: none;
 }
 
-.excluir {
-    max-width: 2rem;
-    width: 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    justify-content: center;
-    cursor: pointer;
+.next-page-cart {
+    padding: 1rem;
+    width: 100%;
 }
 
 .continuar {
-    top: auto;
-    bottom: 0;
-    position: fixed;
-    margin: 1rem ;
-    width: 300px;
+    margin: 1rem;
+
+    width: auto;
+  }
+
+.continuar a {
+    width: 100%;
 }
 
 
+@media (min-width: 1200px) {
+    body * {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+
+}

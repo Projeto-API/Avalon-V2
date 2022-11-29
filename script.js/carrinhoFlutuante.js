@@ -1,11 +1,16 @@
 
 function abrirCarrinhoFlutuante() {
-    document.getElementById('carrinhoFlutuante').style.width = "21rem"
+    document.getElementById('carrinhoFlutuante').style.width = "20rem"
 }
 
 function fecharCarrinhoFlutuante() {
     document.getElementById('carrinhoFlutuante').style.width = "0"
 }
+
+
+
+
+menuHammburguer
 
 
 function excluirDentroCarrinho(excluiProduto ) {
@@ -44,6 +49,4 @@ function incluirDentroCarrinho() {
 </div>`
     document.querySelector('#containerProduto').appendChild(em)
 
-
-}
 

@@ -1,8 +1,17 @@
 {
+<<<<<<< HEAD
   "name": "avalon-v2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+=======
+  "dependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "name": "avalon-v2",
+  "version": "1.0.0",
+  "main": "script.js",
+>>>>>>> main
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,7 +25,11 @@
     "url": "https://github.com/Projeto-API/Avalon-V2/issues"
   },
   "homepage": "https://github.com/Projeto-API/Avalon-V2#readme",
+<<<<<<< HEAD
   "dependencies": {
     "nodemon": "^2.0.20"
   }
+=======
+  "description": ""
+>>>>>>> main
 }

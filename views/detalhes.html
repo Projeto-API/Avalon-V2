@@ -7,15 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/detalhes.css">
+    <link rel="stylesheet" href="../css/carrinhoFlutuante.css">
     <link rel="stylesheet" href="../css/button.css">
+
+    <script type="text/javascript" src="../script.js/menuHamburguer.js" defer></script>
+    <script type="text/javascript" src="../script.js/carrinhoFlutuante.js" defer></script>
     <title>Avalon</title>
 </head>
 
 <body>
     <header>
-
         <section class="container-header">
-            <img id="logo" src="../img/logopreto.png" alt="">
+
+            <a onclick=abrirHamburguer() id="chaveHamburguer"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="currentColor" class="bi bi-book-half" viewBox="0 0 16 16">
+                    <path
+                        d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                </svg></a>
+
+            <a href="home.html" class="logo"><img id="logo" src="../img/logopreto.png" alt=""></a>
 
             <div class="busca">
                 <form action="/search">
@@ -24,136 +34,140 @@
                 </form>
             </div>
 
-            <nav class="icons">
-                <div class="conta">
-                    <ul type="none">
-                        <li><a href="">Minha Conta </a></li>
-                        <li><a href="">Faça login</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <button id="lupa">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-search" viewBox="-2 -2 20 20">
-                            <path
-                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
-                        </svg>
-                    </button>
-                </div>
+            <div class="icons">
 
-                <div>
-                    <button id="login">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-person-fill" viewBox="-2 -2 20 20">
-                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                        </svg>
-                    </button>
-                </div>
-                <div>
-                    <button id="car-shopping">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="bi bi-cart" viewBox="-2 -2 20 20">
-                            <path
-                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
-                        </svg>
-                    </button>
-                </div>
+                <a href="" id="lupa">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </a>
+
+                <a href="pagina-login.html" id="login">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                </a>
 
 
-            </nav>
+                <a onclick=abrirCarrinhoFlutuante() id="car-shopping">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>
+                </a>
+
+            </div>
         </section>
+
         <section class="navegacao">
             <nav class="lista">
                 <ul type="none">
-                    <li> <a href="#"> PÁGINA INICIAL</a> </li>
-                    <li> <a href="#"> HOME</a> </li>
-                    <li> <a href="#"> TODOS OS LIVROS</a> </li>
+                    <li> <a href="home.html"> PÁGINA INICIAL</a> </li>
+                    <li> <a href="estiloProdutos.html"> TODOS OS LIVROS</a> </li>
                     <li> <a href="#"> GÊNEROS</a> </li>
                     <li> <a href="#"> QUEM SOMOS</a> </li>
                     <li> <a href="#"> FALE CONOSCO</a> </li>
+                    <li> <a href="cadastroProduto.html"> CADASTRO DE PRODUTOS</a> </li>
                 </ul>
             </nav>
             <section>
     </header>
-    <main>
-        <section class="detalhesdolivro">
-            <section class="imagensdolivrovertical">
-                <div class="container">
-                    <img class="setas" src="../img/setacima.png" alt="">
-                    <img class="livrinhos" src="../img/image 4.png" alt="">
-                    <img class="livrinhos" src="../img/image2.png" alt="">
-                    <img class="livrinhos" src="../img/image3.png" alt="">
-                    <img class="setas" src="../img/setabaixo.png" alt="">
-                </div>
-                <section class="capaprincipal">
-                    <img id="capa" src="../img/uivantes.png" alt="">
-                </section>
-            </section>
-            <section class="descricaodolivro">
-                <div class="título">
-                    <h5>O MORRO DOS VENTOS UIVANTES</h5>
-                    <h6> Por Emily Bonte</h6>
-                </div>
-                <div class="detalhes">
-               
-                        <p class="sinopse">
-                            Publicado pela primeira vez em 1847, O Morro dos Ventos
-                            Uivantes é um romance de igual beleza e brutalidade.
-                            Com múltiplas perspectivas narrativas, o livro toca
-                            em temas primordiais para a sociedade, como questões
-                            de alteridade, empatia, comunicação e preconceitos.
-                            Reconhecido como uma das grandes obras da literatura
-                            mundial, o livro já teve mais de 10 adaptações
-                            cinematográficas, influenciando também a música pop
-                            com a canção de Kate Bush no final da década de 1970.
-                        </p>
 
+
+    <main>
+        <section class="container">
+            <div class="container1">
+                <div class="capaprincipal">
+                    <img id="capa" src="../img/uivantes.png" alt="">
                 </div>
-                    <div class="containercomprar">
-                        <span class="precolivro">R$59,90</span>
+
+                <div class="miniaturas">
+                    <ul class="gallery-miniaturas">
+                        <img class="livrinhos" src="../img/image 4.png" alt="">
+                        <img class="livrinhos" src="../img/image2.png" alt="">
+                        <img class="livrinhos" src="../img/image3.png" alt="">
+                        <img class="livrinhos" src="../img/image2.png" alt="">
+                        <img class="livrinhos" src="../img/image 4.png" alt="">
+                    </ul>
+                </div>
+            </div>
+
+            <div class="container2">
+                <div class="sinopse">
+                    <h5>O MORRO DOS VENTOS UIVANTES</h5>
+                    <h6> Por Emily Bonte</h6><br>
+
+                    <p> Publicado pela primeira vez em 1847, O Morro dos Ventos
+                        Uivantes é um romance de igual beleza e brutalidade.
+                        Com múltiplas perspectivas narrativas, o livro toca
+                        em temas primordiais para a sociedade, como questões
+                        de alteridade, empatia, comunicação e preconceitos.
+                        Reconhecido como uma das grandes obras da literatura
+                        mundial, o livro já teve mais de 10 adaptações
+                        cinematográficas, influenciando também a música pop
+                        com a canção de Kate Bush no final da década de 1970.
+                    </p>
+                </div>
+                <div class="price-qtt">
+                    <span class="precolivro">R$59,90</span>
+                    <form>
                         <label for="quantidade">
-                            <div class="quantidades">
-                                <input type="number" id="quantidade">
-                                <button>COMPRAR</button>
-                            </div>
-                        </div>
-            </section>
+                            <input type="number" id="quantidade">
+                        </label>
+                    </form>
+                </div>
+                <div class="containerfilho2">
+                    <button class="comprar" id="comprar"><a href="">COMPRAR</a></button>
+                </div>
+            </div>
+            </div>
+
         </section>
+
+
         <section class="containercolumninformation">
-            <div class="columninformation">
-                <div>
+            <ul class="columninformation">
+                <li>
                     <p>Editora</p>
                     <p>Principis</p>
-                </div>
-                <div>
+                </li>
+                <li>
                     <p>Ano de publicação</p>
                     <p>2019</p>
-                </div>
-                <div>
+                </li>
+                <li>
                     <p>Idioma</p>
                     <p>Português</p>
-                </div>
-                <div>
+                </li>
+                <li>
                     <p>Páginas</p>
                     <p>368</p>
-                </div>
-                <div>
+                </li>
+                <li>
                     <p> Dimensões</p>
                     <p>15.24x2.08x22.86cm</p>
-                </div>
-                <div>
+                </li>
+                <li>
                     <p> Acabamento</p>
                     <p>Capa comum</p>
-                </div>
-                <div>
+                </li>
+                <li>
                     <p> ISBN-10</p>
                     <p>8594318235</p>
-                </div>
-                <div>
+                </li>
+                <li>
                     <p>ISBN-13</p>
                     <p>978-8594318237</p>
-                </div>
+                </li>
         </section>
         <section class="containercolumninformation">
-            <div class="columnauthor">
-                <p> É considerado um clássico da literatura
+            <div class="abstract">
+                <p>
+                    É considerado um clássico da literatura
                     inglesa e recebeu fortes críticas no século
                     XIX por ser uma escrita controversa
                     e intensa. O romance teve várias
@@ -162,7 +176,6 @@
                 </p>
 
                 <p>
-
                     Esta é uma história divide opiniões
                     entre os leitores. Os personagens em
                     destaque são profundos, complexos,
@@ -172,17 +185,16 @@
                     e Catherine.
                 </p>
             </div>
-                    </section>
+        </section>
 
         <section class="author">
-
             <div class="imageauthor">
                 <img src="../img/emilybronte.jpg">
             </div>
-            <div class="columnauthor3">
-                <h5>SOBRE O AUTOR</h5>
-                <p>Emily Brontë</p>
 
+            <div class="columnauthor">
+                <h5>SOBRE O AUTOR</h5><br>
+                <h6>Emily Brontë</h6>
                 <p> Descubra mais livros do autor,
                     veja autores semelhantes,
                     leia blogs de autores e muito mais.</p>
@@ -202,8 +214,7 @@
                         </svg></button>
                     <ul class="gallery">
                         <li>
-                            <img class="item current-item" src="../img/mariko-capa.jpg"
-                                alt="mariko">
+                            <img class="item current-item" src="../img/mariko-capa.jpg" alt="mariko">
                             <div>
                                 <h5>MY BROKEN MARIKO</h5>
                                 <span>R$ 39,90</span>
@@ -219,8 +230,7 @@
                         </li>
 
                         <li>
-                            <img class="item current-item" src="../img/miseraveis-capa.jpeg"
-                                alt="miseraveis">
+                            <img class="item current-item" src="../img/miseraveis-capa.jpeg" alt="miseraveis">
                             <div>
                                 <h5>OS MISERÁVEIS</h5>
                                 <span>R$ 139,90</span>
@@ -239,8 +249,7 @@
                         </li>
 
                         <li>
-                            <img class="item current-item" src="../img/mobydick-capa.jpg"
-                                alt="moby-dick">
+                            <img class="item current-item" src="../img/mobydick-capa.jpg" alt="moby-dick">
                             <div>
                                 <h5>MOBY DICK</h5>
                                 <span>R$ 129,90</span>
@@ -265,6 +274,7 @@
             </div>
         </section>
     </main>
+
     <footer>
         <section class="footer">
             <section class="container-footer">
@@ -341,4 +351,3 @@
 </html>
 
 </section>
-

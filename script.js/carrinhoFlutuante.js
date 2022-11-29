@@ -14,25 +14,25 @@ menuHammburguer
 
 
 function excluirDentroCarrinho(excluiProduto ) {
-    
 
     let arrayDiv = document.getElementsByTagName("div");
+
     for (let index = 0; index < arrayDiv.length; index++) {
         var element = arrayDiv[index]
         if(element.id == excluiProduto){
             element.style.display= "none"
-            
         }
     }
     
 }
 
+
+
 function incluirDentroCarrinho() {
     let em = document.createElement('em')
-    em.innerHTML = `
-    <div class="produto4" id="produto4">
+    em.innerHTML = `<div class="produto" id="produto4">
     <img class="imagemProduto" src="../produtos/my broken mariko/mariko-capa.jpg" alt="">
-    <div class="informationProduto">
+    <div class="informationProduto">        
         <div class="nomeProduto">
             <h5 id="produtoTitulo">MY BROKEN MARIKO</h5>
         </div>
@@ -48,5 +48,7 @@ function incluirDentroCarrinho() {
     </div>
 </div>`
     document.querySelector('#containerProduto').appendChild(em)
+}
+
 
 

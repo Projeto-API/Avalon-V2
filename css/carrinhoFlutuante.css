@@ -30,24 +30,16 @@ body {
     z-index: 3;
     font-size: 19px
 }
-.produto1 , 
-.produto2 ,
-.produto3{
+
+.produto1,
+.produto2,
+.produto3 {
     margin: .5rem;
     display: flex;
     width: auto;
     justify-content: flex-start;
     background-color: #F6F9FF;
     border-radius: 1rem;
-}
-
-.produto4{
-    margin: .5rem;
-    display: flex;
-    width: auto;    justify-content: flex-start;
-    background-color: #F6F9FF;
-    border-radius: 1rem;
-
 }
 
 .imagemProduto {

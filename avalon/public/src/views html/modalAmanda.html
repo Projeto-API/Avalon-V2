@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/moldaCadastro.css">
+    <script type="text/javascript" src="../script.js/modalCadastro.js"></script>
+    <title>Modal Cadastro Produto</title>
+    <button class="open-modal" onclick="abrirModal()">abrir</button>
+
+</head>
+
+<body>
+    <section class="bg-modal" id="bg-modal">
+        <div class="modal">
+            <div class="categoria-modal">
+                <div class="xFechar">
+                </div>
+                <section class="cadastro">
+                    <div class="botaoFechar">
+                        <span class="close" onclick="fecharModal()">&times;</span>
+                    </div>
+
+                    <div class="cadastro2">
+                        <div>
+                            <h3>CADASTRO</h3>
+                        </div>
+                    </div>
+                    <ul>
+
+                        <li class="email">E-mail</li>
+
+                        <div class="exemplo">
+
+
+                            <form action="/email">
+
+                                <input type="text" id="span1" placeholder="exemplo@gmail.com">
+
+                            </form>
+
+                        </div>
+
+
+
+                        <li class="senha">Senha</li>
+
+                        <div class="senha2">
+
+                            <form action="/password">
+
+                                <input type="password" name="password" id="span2" placeholder="********">
+
+                            </form>
+                        </div>
+
+                        <li class="confirmesenha">Confirme senha</li>
+
+                        <div class="confirmesenha2">
+
+                            <form action="/password">
+
+                                <input type="password" name="password" id="span2" placeholder="********">
+
+                            </form>
+                        </div>
+
+                        <li class="telefone">Telefone</li>
+
+                        <div class="telefone2">
+
+                            <form action="/password">
+
+                                <input type="password" name="password" id="span3" placeholder="(99)9999-9999">
+
+                            </form>
+                        </div>
+
+
+                        <button class="cadastrar">CADASTRAR</button>
+
+
+
+                </section>
+    </section>
+</body>
+
+</html>

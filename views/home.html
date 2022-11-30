@@ -9,16 +9,17 @@
     <link rel="stylesheet" href="../css/home.css">
     <link rel="stylesheet" href="../css/button.css">
     <link rel="stylesheet" href="../css/carrinhoFlutuante.css">
-    
+
     <script type="text/javascript" src="../script.js/menuHamburguer.js" defer></script>
     <script type="text/javascript" src="../script.js/carrinhoFlutuante.js" defer></script>
+    <script type="text/javascript" src="../script.js/script.js" defer></script>
     <title>Home</title>
 </head>
 
 <body>
     <header>
         <section class="container-header">
-        
+
             <a onclick=abrirHamburguer() src="#" id="chaveHamburguer"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                     height="16" fill="currentColor" class="bi bi-book-half" viewBox="0 0 16 16">
                     <path
@@ -96,82 +97,80 @@
         </section>
 
         <section>
+            <h5>LANÇAMENTOS</h5>
             <div class="lançamento">
-                <h5>LANÇAMENTOS</h5>
-
                 <div class="carrousel">
-                    <button class="arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    <button id="prev" class="arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                             fill="currentColor" class="bi bi-caret-left-fill" viewBox="-2 -2 20 20">
                             <path
                                 d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
                         </svg></button>
-                    <ul class="gallery">
-                        <li>
-                            <img class="item current-item" src="../produtos/my broken mariko/mariko-capa.jpg"
-                                alt="mariko">
+
+                    <div class="gallery">
+                        <li class="item current-item">
+                            <img src="../produtos/my broken mariko/mariko-capa.jpg" alt="mariko">
                             <div>
                                 <h5>MY BROKEN MARIKO</h5>
                                 <span>R$ 39,90</span>
                             </div>
                         </li>
 
-                        <li><a href="detalhes.html">
-                                <img class="item current-item" src="../produtos/DNA/DNA capa.jpg" alt="dna">
-                            </a>
+                        <li class="item current-item">
+                            <img src="../produtos/DNA/DNA capa.jpg" alt="dna">
                             <div>
                                 <h5>DNA MILIONÁRIO</h5>
                                 <span>R$ 49,90</span>
                             </div>
                         </li>
 
-                        <li>
-                            <img class="item current-item" src="../produtos/Lady killers/capa.jpeg" alt="lady-killers">
+                        <li class="item current-item">
+                            <img src="../produtos/Lady killers/capa.jpeg" alt="lady-killers">
                             <div>
                                 <h5>LADY KILLERS</h5>
                                 <span>R$ 59,90</span>
                             </div>
                         </li>
 
-                        <li>
-                            <img class="item current-item" src="../produtos/manifesto/capa.jpg" alt="hobbit">
+                        <li class="item current-item">
+                            <img src="../produtos/manifesto/capa.jpg" alt="hobbit">
                             <div>
                                 <h5>MANIFESTO DO PARTIDO COMUNISTA</h5>
                                 <span>R$ 34,90</span>
                             </div>
                         </li>
 
-                        <li>
-                            <img class="item current-item" src="../produtos/moby dick/mobydick-capa.jpg"
-                                alt="moby-dick">
+                        <li class="item current-item">
+                            <img src="../produtos/moby dick/mobydick-capa.jpg" alt="moby-dick">
                             <div>
                                 <h5>MOBY DICK</h5>
                                 <span>R$ 129,90</span>
                             </div>
                         </li>
 
-                        <li>
-                            <img class="item current-item" src="../produtos/calibã/caliba-capa.jpg" alt="caliba">
+                        <li class="item current-item">
+                            <img src="../produtos/calibã/caliba-capa.jpg" alt="caliba">
                             <div>
                                 <h5>CALIBÃ E A BRUXA</h5>
                                 <span>R$ 59,90</span>
                             </div>
                         </li>
 
-                    </ul>
-                    <button class="arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                            fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                    </div>
+                    <button id="next" class="arrow-right control"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
                             <path
                                 d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
                         </svg></button>
+
                 </div>
-            </div>
         </section>
 
         <section class="destaque">
             <h4>DESTAQUES</h4><br>
             <nav>
                 <div class="grid">
-                    <button class="comprar " id="destaque-comprar"><a onclick=incluirDentroCarrinho() href="#">COMPRAR</a></button>
+                    <button class="comprar " id="destaque-comprar"><a onclick=incluirDentroCarrinho()
+                            href="#">COMPRAR</a></button>
                     <div>
                         <a href=""><img id="grid-1" src="../produtos/destaque-capa.png" alt=""></a>
                     </div>
@@ -195,32 +194,31 @@
                 <h5>CONTINUE VENDO</h5>
 
                 <div class="carrousel">
-                    <button class="arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                            fill="currentColor" class="bi bi-caret-left-fill" viewBox="-2 -2 20 20">
+                    <button onclick="side_slide(-1)" class="arrow-left control"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill"
+                            viewBox="-2 -2 20 20">
                             <path
                                 d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
                         </svg></button>
-                    <ul class="gallery">
-                        <li>
-                            <img class="item current-item" src="../produtos/my broken mariko/mariko-capa.jpg"
-                                alt="mariko">
+                    <div class="gallery">
+                        <li class="item current-item">
+                            <img src="../produtos/my broken mariko/mariko-capa.jpg" alt="mariko">
                             <div>
                                 <h5>MY BROKEN MARIKO</h5>
                                 <span>R$ 39,90</span>
                             </div>
                         </li>
 
-                        <li>
-                            <a href=""><img class="item current-item" src="../produtos/DNA/DNA capa.jpg" alt="dna"></a>
+                        <li class="item current-item">
+                            <img src="../produtos/DNA/DNA capa.jpg" alt="dna">
                             <div>
                                 <h5>DNA MILIONÁRIO</h5>
                                 <span>R$ 49,90</span>
                             </div>
                         </li>
 
-                        <li>
-                            <img class="item current-item" src="../produtos/miseraveis/miseraveis-capa.jpeg"
-                                alt="miseraveis">
+                        <li class="item current-item">
+                            <img src="../produtos/miseraveis/miseraveis-capa.jpeg" alt="miseraveis">
                             <div>
                                 <h5>OS MISERÁVEIS</h5>
                                 <span>R$ 139,90</span>
@@ -228,9 +226,8 @@
 
                         </li>
 
-                        <li>
-
-                            <img class="item current-item" src="../produtos/HOBBIT/hobbit-capa.jpg" alt="hobbit">
+                        <li class="item current-item">
+                            <img src="../produtos/HOBBIT/hobbit-capa.jpg" alt="hobbit">
                             <div>
                                 <h5>O HOBBIT</h5>
                                 <span>R$ 59,90</span>
@@ -238,26 +235,25 @@
 
                         </li>
 
-                        <li>
-                            <img class="item current-item" src="../produtos/moby dick/mobydick-capa.jpg"
-                                alt="moby-dick">
+                        <li class="item current-item">
+                            <img src="../produtos/moby dick/mobydick-capa.jpg" alt="moby-dick">
                             <div>
                                 <h5>MOBY DICK</h5>
                                 <span>R$ 129,90</span>
                             </div>
                         </li>
 
-                        <li>
-                            <img class="item current-item" src="../produtos/calibã/caliba-capa.jpg" alt="caliba">
+                        <li class="item current-item">
+                            <img src="../produtos/calibã/caliba-capa.jpg" alt="caliba">
                             <div>
                                 <h5>CALIBÃ E A BRUXA</h5>
                                 <span>R$ 59,90</span>
                             </div>
                         </li>
 
-                    </ul>
-                    <button class="arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                            fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                    </div>
+                    <button class="arrow-right control"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" viewBox="0 0 16 16">
                             <path
                                 d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
                         </svg></button>
@@ -323,80 +319,6 @@
             </section>
             <section>
     </footer>
-
-
-    <div class="carrinhoFlu">
-        <section class="carrinhoFlutuante" id="carrinhoFlutuante">
-            <div class="headerFlutuante" id="primeiro">
-                <h5>MEU CARRINHO</h5>
-                <button id="excluir" onclick="fecharCarrinhoFlutuante()">X</button>
-            </div>
-            <section class="containerProduto" id="containerProduto">
-                <div class="produto1" id="produto1">
-                    <img class="imagemProduto" src="../produtos/my broken mariko/mariko-capa.jpg" alt="">
-                    <div class="informationProduto">
-                        <div class="nomeProduto">
-                            <h5 id="produtoTitulo">MY BROKEN MARIKO</h5>
-                        </div>
-                        <div class="informationProdutoValue">
-                            <div>
-                                <a href="" class="diminuirQtd">-</a>
-                                <input type="number" class="quantidadeValue" value="1">
-                                <a href="" class="aumentarQtd">+</a>
-                            </div>
-                            <span id="preco"> R$ 39,90 </span>
-                            <button id="excluir" onclick="excluirDentroCarrinho('produto1')">X</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="produto2" id="produto2">
-                    <img class="imagemProduto" src="../produtos/manifesto/capa.jpg" alt="">
-                    <div class="informationProduto">
-                        <div class="nomeProduto">
-                            <h5 id="produtoTitulo">MANIFESTO COMUNISTA</h5>
-                        </div>
-                        <div class="informationProdutoValue">
-                            <div>
-                                <a href="" class="diminuirQtd">-</a>
-                                <input type="number" class="quantidadeValue" value="1">
-                                <a href="" class="aumentarQtd">+</a>
-                            </div>
-                            <span id="preco"> R$ 34,90 </span>
-                            <button id="excluir" onclick="excluirDentroCarrinho('produto2')">X</button>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="produto3" id="produto3">
-                    <img class="imagemProduto" src="../produtos/Revolução dos bichos/revolucaodos bichos-capa.jpeg"
-                        alt="">
-                    <div class="informationProduto">
-                        <div class="nomeProduto">
-                            <h5 id="produtoTitulo">REVOLUÇÃO DOS BICHOS</h5>
-                        </div>
-                        <div class="informationProdutoValue">
-                            <div>
-                                <a href="" class="diminuirQtd">-</a>
-                                <input type="number" class="quantidadeValue" value="1">
-                                <a href="" class="aumentarQtd">+</a>
-                            </div>
-                            <span id="preco"> R$ 19,90 </span>
-                            <button id="excluir" onclick="excluirDentroCarrinho('produto3')">X</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div class="continuar">
-                <button id="continuar"><a href="carrinho.html">CONTINUAR</a></button>
-            </div>
-
-        </section>
-
-        <div>
-       
-                <div>
 
 </body>
 

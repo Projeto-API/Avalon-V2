@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ropa+Sans&display=swap');
 
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -10,12 +11,16 @@
 * body {
     height: auto;
 }
+=======
+
+>>>>>>> paloma
 
 main {
     display: flex;
     align-items: center;
 }
 
+<<<<<<< HEAD
 main nav ul {
     display: flex;
     justify-content: space-evenly;
@@ -29,6 +34,19 @@ main nav ul li {
 }
 
 .todososcontainers {
+=======
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+nav ul li{
+display: flex;
+align-items: center;
+justify-content: center;
+width: 25%;
+}
+.todososcontainers{
+>>>>>>> paloma
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -40,8 +58,12 @@ main nav ul li {
     margin-bottom: 2rem;
     margin: 2rem;
 }
+<<<<<<< HEAD
 
 .caixatexto {
+=======
+.caixatexto{
+>>>>>>> paloma
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -50,17 +72,27 @@ main nav ul li {
     margin-left: -3rem; */
     white-space: nowrap;
     font-family: poppins;
+<<<<<<< HEAD
 
 }
 
+=======
+   
+}
+>>>>>>> paloma
 .informacaodospedidos {
     margin: 2rem 0;
     background-color: rgb(241, 239, 239);
     border-radius: 2rem;
     height: 100%;
     max-height: 13%;
+<<<<<<< HEAD
     display: flex;
 
+=======
+    display:flex;
+   
+>>>>>>> paloma
 }
 
 section.informacaodospedidos {
@@ -69,13 +101,17 @@ section.informacaodospedidos {
     text-align: center;
     justify-items: center;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> paloma
 .containermenu {
     /* margin: 15rem;
     margin-left: -40rem; */
     flex-direction: column;
     background-color: #c6efe0;
     border-radius: 2rem;
+<<<<<<< HEAD
     width: 100%;
     height: 31rem;
     display: flex;
@@ -99,11 +135,37 @@ section.informacaodospedidos {
 }
 
 nav.listapagos {
+=======
+    width:100%;
+    height: 31rem;
+    display:flex;
+}
+.listapagos{
+    /* margin: 13rem;
+    margin-top: -13rem;
+    margin-left: -3rem; */
+    
+    justify-content: space-around;
+    background-color:  #c6efe0;
+    border-radius: 2rem;
+    width:100%;
+    height: 100%;
+
+    max-height: 8%;
+    display:flex;
+    color: black;
+    
+}
+nav.listapagos{
+>>>>>>> paloma
     display: block;
 
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> paloma
 .informacaodospedidos li a,
 .listamenu li a {
     align-items: center;
@@ -112,7 +174,11 @@ nav.listapagos {
     color: black;
     font-size: clamp(.6rem, 100%, .8rem);
     font-family: poppins;
+<<<<<<< HEAD
     font-weight: 700;
+=======
+  font-weight: 700;
+>>>>>>> paloma
     white-space: nowrap;
 }
 
@@ -124,8 +190,12 @@ nav.listapagos {
     font-size: clamp(.6rem, 100%, .8rem);
 
 }
+<<<<<<< HEAD
 
 .fotousuario>img {
+=======
+.fotousuario >img{
+>>>>>>> paloma
     max-width: 80%;
     max-height: 100%;
     width: 100%;
@@ -136,16 +206,25 @@ nav.listapagos {
     align-items: center;
     margin: 1.5rem;
 }
+<<<<<<< HEAD
 
 .botoes {
+=======
+.botoes{
+>>>>>>> paloma
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
+<<<<<<< HEAD
 
 .sobrenome li {
 
+=======
+.sobrenome li{
+  
+>>>>>>> paloma
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -154,6 +233,7 @@ nav.listapagos {
     font-family: poppins;
     font-weight: 600;
 }
+<<<<<<< HEAD
 
 .meusdados {
     margin: 0rem;
@@ -162,6 +242,15 @@ nav.listapagos {
     align-items: center;
     justify-content: center;
     color: rgb(90, 86, 86);
+=======
+.meusdados {
+    margin: 0rem;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:rgb(90, 86, 86);
+>>>>>>> paloma
     width: 80%;
     height: 30%;
     font-family: poppins;
@@ -170,6 +259,7 @@ nav.listapagos {
     background-color: aliceblue;
     border-radius: 12rem;
 }
+<<<<<<< HEAD
 
 .minhaconta {
     margin: 2rem;
@@ -177,6 +267,14 @@ nav.listapagos {
     align-items: center;
     justify-content: center;
     color: rgb(90, 86, 86);
+=======
+.minhaconta {
+   margin: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:rgb(90, 86, 86);
+>>>>>>> paloma
     max-width: 80%;
     width: 100%;
     font-size: 16px;
@@ -187,6 +285,7 @@ nav.listapagos {
     background-color: aliceblue;
     border-radius: 12rem;
 }
+<<<<<<< HEAD
 
 .fotousuario {
     margin: 3rem;
@@ -215,20 +314,52 @@ nav.listapagos {
 }
 
 .todosospedidos {
+=======
+.fotousuario{
+    margin: 3rem;
+    background-color: #c6efe0;;
+    border-radius: 2rem;
+    flex-direction: column;
+    display:flex;
+    gap: 1rem;
+    
+   
+}
+.informacaodospedidos ul li a{
+    color: #05a065;
+}
+.listapagos li a {
+ justify-content: space-evenly;
+    color: black;
+    font-size: 10px;
+    font-family: poppins;
+  font-weight: 700;
+ 
+  
+}
+.todosospedidos{
+>>>>>>> paloma
     display: flex;
     margin-top: 2rem;
     margin-bottom: 1rem;
     width: 100%;
     height: 80%;
+<<<<<<< HEAD
 
 }
 
 .box-usuario {
+=======
+  
+}
+.box-usuario{
+>>>>>>> paloma
     display: flex;
     margin-top: 3rem;
 }
 
 
+<<<<<<< HEAD
 @media (max-width: 768px) {
 
     main {
@@ -238,11 +369,22 @@ nav.listapagos {
     }
 
     .todososcontainers {
+=======
+@media (max-width: 701px) {
+
+    main{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .todososcontainers{
+>>>>>>> paloma
         max-width: 100%;
         margin-top: -2rem;
         margin-bottom: 2rem;
         width: 80%;
     }
+<<<<<<< HEAD
 
 
 
@@ -251,11 +393,21 @@ nav.listapagos {
 @media (max-width: 365px) {
 
     .todososcontainers {
+=======
+    
+
+
+}
+@media (max-width: 425px) {
+
+    .todososcontainers{
+>>>>>>> paloma
         max-width: 100%;
         margin-top: -2rem;
         margin-bottom: 2rem;
     }
 
+<<<<<<< HEAD
     .fotousuario {
         gap: none;
     }
@@ -279,3 +431,24 @@ nav.listapagos {
         padding-top: 80px;
     }
 }
+=======
+
+}
+
+@media (max-width: 375px) {
+
+    .todososcontainers{
+        max-width: 100%;
+        margin-top: -2rem;
+        margin-bottom: 2rem;
+    }
+    .fotousuario{
+        gap: none;
+    }
+    .informacaodospedidos li a, .listamenu li a{
+        text-align: center;
+        white-space: pre-wrap;
+        padding:none;
+    }
+}
+>>>>>>> paloma

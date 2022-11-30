@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 * {
     margin: 0;
     padding: 0;
@@ -24,11 +25,48 @@ main {
 .cadastroProutos {
     display: flex;
     max-width: 1200px;
+=======
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+    top: 0;
+    position : static !important;
+}
+a{
+    color:#338866 !important;
+}
+
+
+
+body{
+    width: 100%;
+    height: 100%;
+    
+    
+}
+main{
+    max-width: 1200px;
+    margin: auto;
+    
+}
+body{
+    font-size: arial;
+
+}
+.cadastroProutos{
+    display: flex;
+    max-width: 1200px;
+
+>>>>>>> paloma
     background-color: #338866;
     opacity: 0.8;
     border-radius: 2rem;
     align-items: flex-end;
     justify-content: space-between;
+<<<<<<< HEAD
 
 }
 
@@ -38,6 +76,15 @@ main {
 }
 
 .usuario {
+=======
+    
+}
+.cadastroProutos img{
+    width: 5rem;
+    margin: 2rem;
+}
+.usuario{
+>>>>>>> paloma
     display: flex;
     margin-bottom: 2.5rem;
     margin-right: 4rem;
@@ -46,6 +93,7 @@ main {
     color: azure;
     text-align: center;
 }
+<<<<<<< HEAD
 
 section .box-sumario {
     display: flex;
@@ -55,13 +103,27 @@ section .box-sumario {
 }
 
 .papelPao {
+=======
+section .box-sumario{
+    display: flex;
+    flex-direction: column;
+
+    
+}
+.papelPao{
+>>>>>>> paloma
     max-width: 1200px;
     top: 2rem;
     margin-left: 1rem;
 }
 
+<<<<<<< HEAD
 .box-sumario nav ul,
 .box-sumario nav li {
+=======
+nav ul,
+nav li {
+>>>>>>> paloma
     max-width: 1200px;
     margin-bottom: 0.5rem;
     display: -webkit-box;
@@ -70,6 +132,7 @@ section .box-sumario {
     /* justify-content: center; */
     padding: 3px;
 }
+<<<<<<< HEAD
 
 .container {
     display: flex;
@@ -79,6 +142,18 @@ section .box-sumario {
     background-color: #FFFFFF;
     border-radius: 2rem;
 
+=======
+.container{
+    display: flex;
+    margin-top: 0.5rem;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    background-color: #949494;
+    border-radius: 2rem;
+    margin-top: 1rem;
+   
+>>>>>>> paloma
 }
 
 legend {
@@ -86,6 +161,7 @@ legend {
 
 }
 
+<<<<<<< HEAD
 .box-menu {
     display: flex;
     flex-direction: column;
@@ -97,10 +173,24 @@ legend {
 }
 
 .box-menu ul li {
+=======
+.box-menu{
+    display: flex;
+    flex-direction: column;
+    background-color: #D9D9D9;
+     opacity: 0.8;
+    border-radius: 2rem;
+    width: 100%
+}
+.box-menu ul li {
+    max-width: 1200px;
+    font-style: 32rem;
+>>>>>>> paloma
     color: #386C5F;
     list-style: none;
     width: 100%;
 }
+<<<<<<< HEAD
 
 .box-menu ul {
     display: flex;
@@ -137,10 +227,45 @@ legend {
 .box-cadastro h3 {
     text-align: center;
     color: black;
+=======
+.box-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.box-menu ul li a{
+    color: #386C5F;
+    text-decoration: none;
+    display: inline;
+    font-size: 18px;
+    list-style: none;
+
+     
+}
+.box-cadastro {
+    width: 100%;
+    margin: 2rem;
+    background-color: #D9D9D9;
+    border-radius: 2rem;
+    max-width: 1200px;
+    display:flex;
+    gap: 2rem;
+    color: #386C5F;
+    margin-top: 45PX;
+    padding: 0 1rem;
+    justify-content: center;
+}
+
+.box-cadastro h1{
+    text-align: center;
+>>>>>>> paloma
 
 
 }
 
+<<<<<<< HEAD
 .form-auth {
     display: flex;
     flex-direction: column;
@@ -149,12 +274,22 @@ legend {
 }
 
 .double .alteraInp {
+=======
+.formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+.double .alteraInp{
+>>>>>>> paloma
     color: red;
     text-align: center;
     height: 8rem;
     width: 8rem;
     margin: center;
     max-width: 8rem;
+<<<<<<< HEAD
     justify-content: center;
 
 }
@@ -169,12 +304,26 @@ legend {
 }
 
 .double {
+=======
+    margin-right: 6rem;
+    align-self: flex-end;
+}
+.single{
+    display: flex;
+    max-width: 1200;
+    width: 100%;
+    flex-direction: column;
+
+}
+.double{
+>>>>>>> paloma
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     width: 100%;
 
 }
+<<<<<<< HEAD
 
 .double>div {
     width: 100%;
@@ -192,6 +341,21 @@ legend {
 }
 
 .searchimg {
+=======
+.double > div{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    
+    
+}
+.autor{
+    display: flex;
+    justify-content: space-evenly;
+}
+.searchimg{
+>>>>>>> paloma
     max-width: 1200px;
     display: flex;
     align-items: center;
@@ -199,15 +363,21 @@ legend {
     width: 100%;
     border-radius: 2rem;
 }
+<<<<<<< HEAD
 
 .preco {
 
+=======
+.preco{
+    
+>>>>>>> paloma
     display: flex;
     height: 3rem;
     max-width: 65rem;
     width: 100%;
     max-height: 2rem;
     border-radius: 2rem;
+<<<<<<< HEAD
     align-items: center;
 
 }
@@ -220,10 +390,25 @@ legend {
 }
 
 div form input {
+=======
+   
+    align-items: center;
+
+}
+.box-cadastro form div label{
+    display: flex;
+    font-size: 19px;
+    color: #386C5F;
+    width: 55%;
+}
+
+div form input{
+>>>>>>> paloma
     height: 2rem;
     width: 100%;
     max-width: 17rem;
     border-radius: 2rem;
+<<<<<<< HEAD
     background-color: white;
     opacity: 0.5;
     font-size: .8rem;
@@ -248,25 +433,73 @@ div .single input {
 
 }
 
+=======
+    background-color: #338866;
+    opacity: 0.5;
+}
+.categoriaInput{
+    display: flex;
+    align-items: flex-end;
+    height: 2rem;
+    width: 20rem;
+    border-radius: 2rem;
+    margin-right: auto;
+    background-color: #338866;
+}
+div .single input {
+    height: 2.0rem;
+    width: 100%;
+    max-width: 80rem;
+
+}
+textarea {
+    
+    width: 100%;
+    height: 10rem;
+    max-height:10rem;
+    max-width: 733px;
+    border-radius: 23px;
+    background-color: #338866;
+    opacity: 0.5;
+    
+    
+}
+>>>>>>> paloma
 .button input {
     display: flex;
     text-align: center;
     font-size: 1.5rem;
+<<<<<<< HEAD
     justify-content: space-evenly;
     width: 11rem;
 }
 
 .configbutton {
     background-color: #9CD9C2;
+=======
+    justify-content: space-evenly; 
+    width: 11rem;
+}
+.configbutton {
+    background-color: #338866                                 ;
+>>>>>>> paloma
     margin-bottom: 1rem;
     display: flex;
     padding: 2rem;
     border-radius: 2rem;
+<<<<<<< HEAD
     align-items: center;
     justify-content: space-around
 }
 
 .cancelar {
+=======
+    justify-content: space-between;
+    align-items: center;
+
+}
+.cancelar{
+>>>>>>> paloma
     background-color: red;
     color: white;
     border-color: black;
@@ -274,8 +507,20 @@ div .single input {
     opacity: 0.6;
 
 }
+<<<<<<< HEAD
 
 .publicar {
+=======
+.salvar{
+    background-color: #C9C16D;
+    color: white;
+    border-color: black;
+    border-width: 0.2rem;
+    opacity: 0.6;
+
+}
+.publicar{
+>>>>>>> paloma
     background-color: green;
     color: white;
     border-color: black;
@@ -283,6 +528,7 @@ div .single input {
     opacity: 0.6;
 
 }
+<<<<<<< HEAD
 
 
 /* ----------------------------Erros ------------------- */
@@ -290,17 +536,38 @@ div .single input {
     width: 100%;
     max-width: 46rem;
     border: solid 2px gre;
+=======
+/* ----------------------------Erros ------------------- */
+.invisible{
+display: none;
+}
+
+
+
+.errors{
+    width: 100%;
+    max-width: 46rem;
+    border: solid 2px red;
+>>>>>>> paloma
     margin-bottom: 10px;
     margin-left: 5rem;
     border-radius: 2rem;
     margin-top: 1.5rem;
 }
 
+<<<<<<< HEAD
 .no-errors {
     display: none;
 }
 
 .linhaerrors {
+=======
+.no-erros{
+    display: none;
+}
+
+.linhaerros{
+>>>>>>> paloma
     color: red;
     margin-left: 2rem;
     text-align-last: start;
@@ -310,6 +577,7 @@ div .single input {
 
 }
 
+<<<<<<< HEAD
 .icons {
     display: none;
 }
@@ -317,10 +585,26 @@ div .single input {
 /* -----------------------Modal ----------------- */
 
 section .bg-modal {
+=======
+
+
+
+
+
+
+
+
+
+
+/* -----------------------Modal ----------------- */
+
+section .bg-modal{
+>>>>>>> paloma
     background-color: #338866;
     display: flex;
     flex-direction: column;
     width: 100%;
+<<<<<<< HEAD
     max-width: 1200;
     height: 100%;
 }
@@ -329,10 +613,19 @@ section .bg-modal {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.75);
+=======
+    height: 100%;
+}
+.bg-modal{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.75);
+>>>>>>> paloma
     position: fixed;
     z-index: 2;
     top: -150%;
     display: block;
+<<<<<<< HEAD
     transition: 350ms;
 }
 
@@ -348,23 +641,46 @@ div .categoriaInput {
 }
 
 .modal {
+=======
+    transition: 350ms;   
+}
+div .categoriaInput{
+    width: 100%;
+    height: 100%;
+    background-color: #9CD9C2;   
+}
+.baixoBox-01{
+    display: flex;
+    flex-direction: column;
+}
+.modal{
+>>>>>>> paloma
     width: 100%;
     height: 100%;
     max-width: 60rem;
     max-height: 42rem;
     background-color: #9CD9C2;
+<<<<<<< HEAD
     border: 1px solid #000;
     border-radius: 5px;
     margin: 50px auto 0 auto;
     border-radius: 1rem
 }
 
+=======
+    border:1px solid #000;
+    border-radius: 5px;
+    margin: 50px auto 0 auto; 
+    border-radius: 1rem
+}
+>>>>>>> paloma
 .modal span {
     float: right;
     font-size: 50px;
     color: #000;
     cursor: pointer;
 }
+<<<<<<< HEAD
 
 .modal span:hover {
     color: #990000;
@@ -372,6 +688,13 @@ div .categoriaInput {
 }
 
 .box-01 {
+=======
+.modal span:hover{
+    color: #990000;
+    transition: 350ms;
+}
+.box-01{
+>>>>>>> paloma
     background-color: #386C5F;
     width: 100%;
     height: 100%;
@@ -383,10 +706,15 @@ div .categoriaInput {
     align-items: center;
     flex-direction: row;
     border-radius: 2rem;
+<<<<<<< HEAD
     opacity: 0.8;
 }
 
 .cancelarModal {
+=======
+}
+.cancelarModal{
+>>>>>>> paloma
     background-color: red;
     color: white;
     border-style: none;
@@ -400,8 +728,12 @@ div .categoriaInput {
     font-size: 1.3rem;
     opacity: 0.6;
 }
+<<<<<<< HEAD
 
 .confirmar {
+=======
+.confirmar{
+>>>>>>> paloma
     background-color: #386C5F;
     color: white;
     border-style: none;
@@ -413,6 +745,7 @@ div .categoriaInput {
     opacity: 0.6;
 
 }
+<<<<<<< HEAD
 
 .categoria {
     width: 100%;
@@ -421,10 +754,19 @@ div .categoriaInput {
 }
 
 .titulo {
+=======
+.categoria{
+    width: 100%;
+    background-color: #9CD9C2;
+    
+}
+.titulo{
+>>>>>>> paloma
     display: flex;
     display: inline;
 
 }
+<<<<<<< HEAD
 
 .editarCategoria {
     margin-left: 2rem;
@@ -435,31 +777,56 @@ div .categoriaInput {
 .pesquisar {
     display: flex;
     margin-top: 1rem;
+=======
+.editarCategoria{
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+.pesquisar{
+    display: flex;
+    margin-top: 1rem ;
+>>>>>>> paloma
     margin-bottom: 1rem;
     margin-left: 1rem;
     height: 2rem;
     width: 21rem;
     border-radius: 2rem;
     text-align: center;
+<<<<<<< HEAD
     background-color: #FFFFFF;
     opacity: 0.8;
 }
 
 .botaoFechar {
+=======
+    background-color: #CACACA;
+}
+.botaoFechar{
+>>>>>>> paloma
     justify-content: end;
     margin-right: 14px;
     margin-bottom: -4px;
 }
+<<<<<<< HEAD
 
 .selecao01,
 .selecao02 {
+=======
+.selecao01,
+.selecao02
+{
+>>>>>>> paloma
     display: inline-flex;
     margin-left: 3rem;
     margin-right: -3rem;
     color: black;
 }
+<<<<<<< HEAD
 
 .button-modal {
+=======
+.button-modal{
+>>>>>>> paloma
     display: flex;
     left: 2rem;
     margin-left: 2rem;
@@ -467,9 +834,14 @@ div .categoriaInput {
     border-radius: 2rem;
 }
 
+<<<<<<< HEAD
 .bloco {
     background-color: #FFFFFF;
     opacity: 0.8;
+=======
+.bloco{
+    background-color: #CACACA;
+>>>>>>> paloma
     width: 15rem;
     height: 26rem;
     margin: 2rem;
@@ -477,19 +849,28 @@ div .categoriaInput {
     list-style: none;
     line-height: 2rem;
 }
+<<<<<<< HEAD
 
 .bloco li {
+=======
+.bloco li{
+>>>>>>> paloma
     margin-left: 2rem;
     color: black;
 
 }
+<<<<<<< HEAD
 
 .addItem {
+=======
+.addItem{
+>>>>>>> paloma
     font-size: 30px;
     border-radius: 1rem;
     height: 42px;
     width: 39px;
     margin-left: -20px;
+<<<<<<< HEAD
     background-color: #4EC16E;
     opacity: 0.8;
 
@@ -554,4 +935,32 @@ div .categoriaInput {
     #chaveHamburguer {
         display: none;
     }
+=======
+    background-color:  #4EC16E
+
+}
+@media (max-width:880px){
+    .double{
+        flex-direction: column;
+    }
+    .double > div{
+        align-items: stretch;
+        
+    }
+    .box-cadastro form div label{
+        align-self: flex-start;
+    }
+    .configbutton{
+        flex-direction: column-reverse;
+        gap: 1rem;
+        align-items: center;
+       
+        
+    }
+    .papelPao{
+        display: none
+    }
+    
+
+>>>>>>> paloma
 }

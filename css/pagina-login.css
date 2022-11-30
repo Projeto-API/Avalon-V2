@@ -8,6 +8,7 @@
 
 }
 
+<<<<<<< HEAD
 * body {
     height: auto;
 
@@ -42,6 +43,11 @@ header {
     height: 35px;
     padding-left: 5vw;
 
+=======
+main {
+    display: flex;
+    justify-content: center;
+>>>>>>> paloma
 }
 
 form {
@@ -50,6 +56,7 @@ form {
     justify-content: center;
 }
 
+<<<<<<< HEAD
 .pageLogin {
     width: 100%;
     max-width: 365px;
@@ -63,12 +70,39 @@ form {
     align-items: center;
     font-weight: bolder;
 
+=======
+.login-ul {
+    width: 90%;
+    align-items: center;
+}
+
+
+
+.login {
+    display: flex;
+    background-color: #9CD9C2;
+    border-radius: 4%;
+    width: 100%;
+    height: 43rem;
+    padding: 1%;
+    margin: 1rem;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px;
+    font-weight: bolder;
+    min-width: 18rem;
+    max-width: 768px;
+>>>>>>> paloma
 }
 
 ul {
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> paloma
 }
 
 .login2 {
@@ -76,6 +110,11 @@ ul {
     font-weight: bolder;
     font-size: 20px;
     padding-top: .5rem;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> paloma
 }
 
 .email {
@@ -98,6 +137,12 @@ ul {
     background-position: 2rem;
 }
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> paloma
 .exemplo {
     display: flex;
     background-color: white;
@@ -120,19 +165,71 @@ div .exemplo {
 
 }
 
+<<<<<<< HEAD
 li.senha {
     list-style-type: none;
 }
 
 .password {
     width: 50rem;
+=======
+.senha {
+>>>>>>> paloma
     display: flex;
     font-weight: bold;
     font-size: 15px;
     font-weight: bolder;
+<<<<<<< HEAD
     border: none;
 }
 
+=======
+
+}
+
+#span2 {
+    display: flex;
+    height: 4rem;
+    border-radius: 2rem;
+    border: none;
+    background: url(/Avalon-V2/img/cadeado.png);
+    background-repeat: no-repeat;
+    background-size: 1.8em;
+    padding-left: 4.5rem;
+    background-position: 2rem;
+}
+
+.senha2 {
+    display: flex;
+    background-color: white;
+    border-radius: 3rem;
+    width: 100%;
+    height: 3.5rem;
+    margin: .5rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: underline;
+    color: rgb(98, 96, 96);
+
+
+}
+
+.entrar{
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+    font-weight: bold;
+    background-color: rgb(17, 202, 125);
+    border-radius: 3rem;
+    height: 2rem;
+    align-items: center;
+    font-size: 15px;
+    letter-spacing: 3.5px;
+    font-weight: bolder;
+    width: 100%;
+
+}
+>>>>>>> paloma
 
 .esqueci {
     display: flex;
@@ -142,7 +239,10 @@ li.senha {
     color: rgb(98, 96, 96);
     justify-content: flex-start;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> paloma
 .cadastro {
     display: flex;
     text-decoration: underline;
@@ -152,12 +252,20 @@ li.senha {
     justify-content: flex-start;
 }
 
+<<<<<<< HEAD
 .redesSociais {
+=======
+.redes {
+>>>>>>> paloma
     display: flex;
     justify-content: center;
     font-weight: bolder;
     padding-top: 2rem;
     padding-bottom: .8rem;
+<<<<<<< HEAD
+=======
+
+>>>>>>> paloma
 }
 
 .google {
@@ -172,6 +280,7 @@ li.senha {
     align-items: center;
     justify-content: center;
     font-size: 13px;
+<<<<<<< HEAD
     border: none;
 }
 
@@ -217,6 +326,56 @@ li.senha {
 }
 
 .errors {
+=======
+
+}
+
+.google2 {
+    display: flex;
+    font-weight: bolder;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 1rem;
+}
+
+#google {
+    width: 1.5rem;
+    height: 1.5rem;   
+}
+
+.facebook {
+    display: flex;
+    margin: .5rem;
+    font-weight: bolder;
+    background-color: rgb(253, 254, 254);
+    border-radius: 3rem;
+    height: 3rem;
+    width: 80%;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+}
+
+.facebook2 {
+    display: flex;
+    font-weight: bolder;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 1rem;
+}
+
+#facebook {
+    width: 1.5rem;
+    height: 1.5rem;   
+}
+/* ----------------------------Erros ------------------- */
+.error {
+    color: red;
+    margin: 0;
+    padding: 0;
+  }
+.errors{
+>>>>>>> paloma
     width: 100%;
     max-width: 46rem;
     border: solid 2px red;
@@ -226,11 +385,19 @@ li.senha {
     margin-top: 1.5rem;
 }
 
+<<<<<<< HEAD
 .no-erros {
     display: none;
 }
 
 .linhaerros {
+=======
+.no-erros{
+    display: none;
+}
+
+.linhaerros{
+>>>>>>> paloma
     color: red;
     margin-left: 2rem;
     text-align-last: start;
@@ -239,6 +406,7 @@ li.senha {
     font-weight: bolder;
 
 }
+<<<<<<< HEAD
 
 /* ----------------------------VALIDACAO ------------------- */
 
@@ -292,13 +460,82 @@ li.senha {
     letter-spacing: 4px;
     font-weight: bolder;
     width: 100%;
+=======
+ /* ----------------------------VALIDACAO ------------------- */
+
+
+
+
+
+.form-auth {
+    display: flex;
+    background-color: #9CD9C2;
+    border-radius: 4%;
+    width: 100%;
+    height: 30rem;
+    padding: 1%;
+    margin: 1rem;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 15px;
+    font-weight: bolder;
+    min-width: 18rem;
+    max-width: 768px;
+}
+
+.form-auth input {
+    background: #f7f7f7;
+    padding: 7px 29px;
+    color: gray;
+    border: 0.5px solid #bbbbbb;
+    border-radius:3rem;
+    width: 80%;
+    height: 3.5rem;
+}
+.form-auth button{
+    display: flex;
+    margin: 1rem;
+    justify-content: center;
+    font-weight: bold;
+    background-color: rgb(17, 202, 125);
+    border-radius: 3rem;
+    height: 3.5rem;
+    align-items: center;
+    font-size: 15px;
+    letter-spacing: 4px;
+    font-weight: bolder;
+    width: 80%;
+>>>>>>> paloma
 }
 
 .form-auth.card {
     padding: 20px;
 }
+<<<<<<< HEAD
 
 .register.card {
     padding: 20px;
 }
 
+=======
+.register.card{
+    padding: 20px;
+}
+
+@media (min-width: 1200px) {
+
+   
+
+}
+
+@media (min-width: 768px) {
+
+        .login-ul {
+            width: 80%;
+        }
+
+        
+
+
+}
+>>>>>>> paloma

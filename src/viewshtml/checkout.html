@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
+    <link rel="stylesheet" href="../avalon/public/css/style.css">
+    <link rel="stylesheet" href="../avalon/public/css/checkout.css">
+    <link rel="stylesheet" href="../avalon/public/css/button.css">
+=======
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/checkout.css">
+    <link rel="stylesheet" href="../css/button.css">
+>>>>>>> palomafv
+    <title>Avalon</title>
+</head>
+
+<body>
+    <header>
+        <section class="container-header">
+        
+            <a onclick=abrirHamburguer() src="#" id="chaveHamburguer"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="currentColor" class="bi bi-book-half" viewBox="0 0 16 16">
+                    <path
+                        d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                </svg></a>
+            <a href="home.html" class="logo"><img id="logo" src="../img/logopreto.png" alt=""></a>
+
+            <div class="busca">
+                <form action="/search">
+                    <input type="text" name="search" id="search" scr="../img/lupa.png"
+                        placeholder="Títulos, Autores e Gêneros ">
+                </form>
+            </div>
+
+            <div class="icons">
+
+                <a href="" id="lupa">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </a>
+
+                <a href="pagina-login.html" id="login">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                </a>
+
+
+                <a onclick=abrirCarrinhoFlutuante() id="car-shopping">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="navegacao">
+            <nav class="lista">
+                <ul type="none">
+                    <li> <a href="home.html"> PÁGINA INICIAL</a> </li>
+                    <li> <a href="estiloProdutos.html"> TODOS OS LIVROS</a> </li>
+                    <li> <a href="#"> GÊNEROS</a> </li>
+                    <li> <a href="#"> QUEM SOMOS</a> </li>
+                    <li> <a href="#"> FALE CONOSCO</a> </li>
+                    <li> <a href="cadastroProduto.html"> CADASTRO DE PRODUTOS</a> </li>
+                </ul>
+            </nav>
+            <section>
+    </header>
+    
+    <main>
+        
+        <section class="entrega">
+            <h5 class="itemName">Endereço de Entrega</h5>
+            <div class="enderecoSalvo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-house-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L8 2.207l6.646 6.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.707 1.5Z" />
+                    <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z" />
+                </svg>
+                <div class="enderecoInformation">
+                    <span class="nome">Mateus</span><br>
+                    <span class="endereco">Rua das Borboletas Psicodélicas, 50</span><br>
+                    <span class="bairro">Vila Guarani</span><br>
+                    <span class="cidade">São Paulo - SP</span><br>
+                    <span class="cep">04313-110</span><br>
+                </div>
+            </div>
+            <a class="addAdress" href="">Alterar endereço de entrega</a>
+            <form action="cadastrar" class="enderecoNovo">
+                <p>
+                    <label for="destinatario">Destinatário</label> <br>
+                    <input type="text" name="sujeito" id="destinatario" autocomplete="on">
+                </p>
+                <div class="columnAdress1">
+                    <p>
+                        <label for="cep">CEP</label> <br>
+                        <input type="text" name="sujeito" id="cep" autocomplete="on">
+                    </p>
+                    <p>
+                        <label for="bairro">Bairro</label> <br>
+                        <input type="text" name="adress1" id="bairro">
+                    </p>
+                </div>
+                <p>
+                    <label for="rua">Rua/Avenida</label> <br>
+                    <input type="text" name="adress3" id="rua">
+                </p>
+                <div class="columnAdress1">
+                    <p>
+                        <label for="numero">Número</label> <br>
+                        <input type="text" name="adress4" id="numero">
+                    </p>
+                    <p>
+                        <label for="complemento">Complemento</label> <br>
+                        <input type="text" name="adress5" id="complemento" placeholder="Opcional">
+                    </p>
+                </div>
+                <p>
+                    <label for="reference">Ponto de referência</label> <br>
+                    <input type="text" name="adress5" id="complemento">
+                </p>
+
+            </form>
+            <div class="adicionar">
+                <button id="adicionar"><a href="">ADICIONAR</a></button>
+            </div>
+
+            <div class="containerFrete">
+                <h5 class="itemName">Opções de Entrega</h5>
+                <div class="opcoesFrete">
+                    <a href="" class="opcao">
+                        <svg class="checkbox" height="16" viewBox="0 0 16 16" width="16"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8 8-3.584 8-8-3.584-8-8-8zm0 14.4A6.398 6.398 0 0 1 1.6 8c0-3.536 2.864-6.4 6.4-6.4 3.536 0 6.4 2.864 6.4 6.4 0 3.536-2.864 6.4-6.4 6.4z"
+                                fill="#666">
+                            </path>
+                        </svg>
+
+                        <div class="opcaoInformation">
+                            <span class="transportadora">Sedex</span><br>
+                            <span class="tempoEntrega">Até 10 dias úteis</span>
+                        </div>
+                        <span class="opcaoPrice">R$ 10,90</span>
+                    </a>
+
+                    <a href="" class="opcao">
+                        <svg class="checkbox" height="16" viewBox="0 0 16 16" width="16"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8 8-3.584 8-8-3.584-8-8-8zm0 14.4A6.398 6.398 0 0 1 1.6 8c0-3.536 2.864-6.4 6.4-6.4 3.536 0 6.4 2.864 6.4 6.4 0 3.536-2.864 6.4-6.4 6.4z"
+                                fill="#666">
+                            </path>
+                        </svg>
+
+                        <div class="opcaoInformation">
+                            <span class="transportadora">Transportadora</span><br>
+                            <span class="tempoEntrega">Até 10 dias úteis</span>
+                        </div>
+                        <span class="opcaoPrice">R$ 14,90</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="pagamento">
+            <h5 class="itemName">Pagamento</h5>
+            <div class="opcoesPagamento">
+                <a href="" class="itemPagamento">
+                    <span> Cartão de Crédito</span>
+                    <svg class="imagePagamento" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-credit-card" viewBox="0 0 16 16">
+                        <path
+                            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z" />
+                        <path d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z" />
+                    </svg>
+                </a>
+
+                <a href="" class="itemPagamento">
+                    <span>Boleto Bancário</span>
+                    <img class="imagePagamento" src="/img/boleto 1.png" alt="">
+                </a>
+
+                <a href="" class="itemPagamento">
+                    <span>PIX</span>
+                    <img class="imagePagamento" src="/img/pix-106.png" alt="">
+                    </svg>
+                </a>
+            </div>
+            <div class="pagamentoEscolhido">
+                <p>
+                    <label for="numberCard">Número do Cartão</label> <br>
+                    <input type="text" name="numberCard" id="numberCard">
+                </p>
+
+                <p>
+                    <label for="nameCard">Nome impresso no cartão</label> <br>
+                    <input type="text" name="nameCard" id="nameCard">
+                </p>
+                <div>
+                    <p>
+                        <label for="validityDate">Validade</label> <br>
+                        <input type="text" name="validityDate" id="validityDate">
+                    </p>
+                    <p>
+                        <label for="securityNumber">Código de segurança</label> <br>
+                        <input type="text" name="securityNumber" id="securityNumber">
+                    </p>
+                </div>
+            </div>
+
+        </section>
+        <section class="resumo">
+            <h5 class="itemName">Resumo do Pedido</h5>
+            <div class="resumoPedido">
+                <div class="produto">
+                    <img class="imagemProduto" src="../produtos/my broken mariko/mariko-capa.jpg" alt="">
+                    <div class="informationProduto">
+                        <h5 id="produtoTitulo">MY BROKEN MARIKO</h5>
+                        <div class="informationProdutoValue">
+                            <span id="quantidadeResumo"> 1 unid.</span>
+                            <span id="preco"> R$ 39,90 </span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="produto">
+                    <img class="imagemProduto" src="../produtos/manifesto/capa.jpg" alt="">
+                    <div class="informationProduto">
+                        <h5 id="produtoTitulo">MANIFESTO COMUNISTA</h5>
+                        <div class="informationProdutoValue">
+                            <span id="quantidadeResumo"> 1 unid.</span>
+                            <span id="preco"> R$ 34,90 </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="produto">
+                    <img class="imagemProduto" src="../produtos/Revolução dos bichos/revolucaodos bichos-capa.jpeg"
+                        alt="">
+                    <div class="informationProduto">
+                        <h5 id="produtoTitulo">REVOLUÇÃO DOS BICHOS</h5>
+                        <div class="informationProdutoValue">
+                            <span id="quantidadeResumo"> 1 unid.</span>
+                            <span id="preco"> R$ 19,90 </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <table class="table">
+                <tbody>
+                    <tr class="itens">
+                        <td class="info">Subtotal</td>
+                        <td class="monetary">R$ 94,70</td>
+                    </tr>
+                    <tr class="itens">
+                        <td class="info">Entrega</td>
+                        <td class="monetary" id="desconto">Grátis</td>
+                    </tr>
+                    <tr class="itens">
+                        <td class="info">Desconto</td>
+                        <td class="monetary" id="desconto">- R$ 9,47</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td class="info">Total</td>
+                        <td class="monetary">R$ 85,23</td>
+                    </tr>
+                </tfoot>
+            </table>
+
+            <div class="next-page">
+                <button class="continuar" id="finalizarCompra"><a href="../views/home.html">FINALIZAR COMPRA</a></button>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <section class="footer">
+            <section class="container-footer">
+                <div class="column" id="logo2">
+                    <img id="logo2" src="../img/logopreto.png" alt="">
+                </div>
+
+                <div class="column">
+                    <section>
+                        <h5>Privacidade e Termos</h5><br>
+                    </section>
+                    <section>
+                        <ul type="none">
+                            <li>Política de Pagamento</li>
+                            <li>Política de Privacidade</li>
+                            <li>Troca e Devolução</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="column">
+                    <section>
+                        <h5>Mapa do Site</h5><br>
+                    </section>
+                    <section>
+                        <ul type="none">
+                            <li>Quem Somos</li>
+                            <li>Todos os Livros</li>
+                            <li>Autores</li>
+                            <li>Gêneros</li>
+                            <li>Fale Conosco</li>
+                        </ul>
+                    </section>
+                </div>
+
+                <div class="column">
+                    <section>
+                        <h5>Formas de pagamento</h5><br>
+                    </section>
+                    <section class="cards">
+                        <a href=""><img id="cards" src="../img/cards-transparent.png" alt=""></a>
+                    </section>
+                </div>
+                <div class="column" id="redes-sociais">
+                    <section>
+                        <h5>Redes Sociais</h5><br>
+                    </section>
+                    <section>
+                        <nav>
+                            <a href=""><img height="15rem" src="../img/instagram 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/google-plus-g 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/facebook-f 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/linkedin-in 1.png" alt=""></a>
+                        </nav>
+                    </section>
+                </div>
+            </section>
+            <section class="autores">
+                <nav>
+                    <ul type="none">
+                        <p>Desenvolvido por</p>
+                        <li> <a href="#"> Amanda</a> </li>
+                        <li> <a href="#"> Igor</a> </li>
+                        <li> <a href="#"> João Paulo</a> </li>
+                        <li> <a href="#"> Mateus</a> </li>
+                        <li> <a href="#"> Paloma</a> </li>
+                    </ul>
+                </nav>
+            </section>
+            <section>
+    </footer>
+</body>
+
+</html>
+
+</section>
+</body>
+
+</html>

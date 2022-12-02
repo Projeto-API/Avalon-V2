@@ -10,8 +10,6 @@ function fecharCarrinhoFlutuante() {
 
 
 
-menuHammburguer
-
 
 function excluirDentroCarrinho(excluiProduto ) {
 

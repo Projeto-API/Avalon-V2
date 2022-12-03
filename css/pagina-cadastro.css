@@ -71,7 +71,7 @@ ul {
     height: 3.5rem;
     border-radius: 2rem;
     border: none;
-    background: url(/Avalon-V2/img/cartinha.png);
+    background: url(/img/cartinha.png);
     background-repeat: no-repeat;
     background-size: 1.8em;
     padding-left: 4.5rem;
@@ -136,7 +136,7 @@ div .exemplo {
     max-width: 100%;
     border-radius: 2rem;
     border: none;
-    background: url(/Avalon-V2/img/cadeado.png);
+    background: url(/img/cadeado.png);
     background-repeat: no-repeat;
     background-size: 1.5em;
     padding-left: 4rem;
@@ -150,7 +150,7 @@ div .exemplo {
     max-width: 100%;
     border-radius: 2rem;
     border: none;
-    background: url(/Avalon-V2/img/telefone.png);
+    background: url(/img/telefone.png);
     background-repeat: no-repeat;
     background-size: 1.5em;
     padding-left: 4rem;

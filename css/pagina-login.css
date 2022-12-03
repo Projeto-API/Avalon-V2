@@ -70,7 +70,7 @@ ul {
     height: 4rem;
     border-radius: 2rem;
     border: none;
-    background: url(/Avalon-V2/img/cartinha.png);
+    background: url(/img/cartinha.png);
     background-repeat: no-repeat;
     background-size: 2em;
     padding-left: 4.5rem;
@@ -114,7 +114,7 @@ div .exemplo {
     height: 4rem;
     border-radius: 2rem;
     border: none;
-    background: url(/Avalon-V2/img/cadeado.png);
+    background: url(/img/cadeado.png);
     background-repeat: no-repeat;
     background-size: 1.8em;
     padding-left: 4.5rem;

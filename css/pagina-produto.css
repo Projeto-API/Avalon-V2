@@ -79,7 +79,7 @@
 }
 
 .imageauthor {
-    background-image: url(./img/emily.webp);
+    background-image: url(/img/emily.webp);
     width: 10rem;
     height: 10rem;
     background-size: cover;

@@ -13,6 +13,17 @@
 
 }
 
+/* HEADER TIPO 2 */
+.header2 .icons,
+.busca,
+.navegacao {
+    display: none;
+}
+
+.footer {
+    display: none;
+}
+
 main {
     width: 100%;
     display: flex;

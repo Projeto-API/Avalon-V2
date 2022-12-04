@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ropa+Sans&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
+
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
@@ -12,6 +11,8 @@
 }
 
 main {
+    margin: auto;
+    justify-content: center;
     padding-top: 50px;
 }
 
@@ -19,7 +20,7 @@ ul li {
     width: 100%;
     list-style: none;
     text-align: left;
-    }
+}
 
 main.produtos {
     display: flex;
@@ -229,7 +230,7 @@ a:link {
 
 
 @media (min-width: 1200px) {
-    main {
+    main, .continue-vendo {
         width: 1200px;
     }
 }

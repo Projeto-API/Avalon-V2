@@ -104,11 +104,3 @@ input[type=number] {
 
 
 
-@media (min-width: 1200px) {
-    body * {
-        max-width: 100%;
-        margin: 0 auto;
-    }
-
-
-}

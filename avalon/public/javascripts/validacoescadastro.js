@@ -56,7 +56,7 @@ window.addEventListener('load', function () {
   const validateLength = function (input, min, max) {
     const { value } = input;
 
-    if (value.length >= min && value.length >= max) {
+    if (value.length >= min && value.length <= max) {
       return
     } else {
       createError(input, `O campo deve ter entre ${min} e ${max} caracteres`, 'input');
@@ -70,22 +70,18 @@ window.addEventListener('load', function () {
 
       switch (input.name) {
         case 'email':
-          validateEmail(input);
+          validateEmail(input, 2, 6);
           break;
 
         case 'senha':
-          validateLength(input, 2, 6);
+          validateLength(input, 3, 6);
           break;
-
-
-        case 'telefone':
-          validateLength(input, 8, 9);
-          break;
-
-        case 'password':
-          validateLength(input, 2, 6);
-          break;
-
+          case 'password':
+            validateLength(input, 2, 6);
+            break;
+            case 'telefone':
+              validateLength(input, 2, 6);
+              break;
 
         default:
           break;

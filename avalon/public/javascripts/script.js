@@ -16,68 +16,31 @@ function diminuirQtd(op) {
 
 // -----ARROWS CARROSEL -------
 
-const controls = document.querySelectorAll(".control");
-let currentItem = 0;
-const items = document.querySelectorAll(".item");
-const maxItems = items.length;
+const gap = .1;
 
-// controls.forEach((control) => {
-//   control.addEventListener("click", (e) => {
-//     isLeft = e.target.classList.contains("arrow-left");
+const carousel = document.getElementById("carrousel"),
+  content = document.getElementById("gallery"),
+  next = document.getElementById("next"),
+  prev = document.getElementById("prev");
 
-//     if (isLeft) {
-//       currentItem -= 1;
-//     } else {
-//       currentItem += 1;
-//     }
+next.addEventListener("click", e => {
+  carousel.scrollBy(width + gap, 0);
+  if (carousel.scrollWidth !== 0) {
+    prev.style.display = "flex";
+  }
+  if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+    next.style.display = "none";
+  }
+});
+prev.addEventListener("click", e => {
+  carousel.scrollBy(-(width + gap), 0);
+  if (carousel.scrollLeft - width - gap <= 0) {
+    prev.style.display = "none";
+  }
+  if (!content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+    next.style.display = "flex";
+  }
+});
 
-//     if (currentItem >= maxItems) {
-//       currentItem = 0;
-//     }
-
-//     if (currentItem < 0) {
-//       currentItem = maxItems - 1;
-//     }
-
-//     items.forEach((item) => item.classList.remove("current-item"));
-
-//     items[currentItem].scrollIntoView({
-//       behavior: "smooth",
-     
-//     });
-
-//     items[currentItem].classList.add("current-item");
-//   });
-// });
-
-// let carousel = document.querySelector('.gallery')
-// let slides = document.querySelectorAll ('.item')
-// let prevBtn = document.getElementById ('prev')
-// let nextBtn = document.getElementById ('next')
-
-// let counter =1
-// let width = slides[1].clientWidth
-
-// carousel.style.transform = 'translateX(' + -width*counter + 'px)'
-
-// nextBtn.onclick = () => {
-//      counter++
-//      carousel.style.transform = 'translateX(' + -width*counter + 'px)'
-// }
-
-// prevBtn.onclick = () => {
-//   counter--
-//   carousel.style.transform = 'translateX(' + -width*counter + 'rem)'
-// }
-
-let prevBtn = document.getElementById ('prev')
-let nextBtn = document.getElementById ('next')
-
-const carousel = document.querySelector('.carrousel');
-const carouselWidth = document.querySelectorAll('gallery').offsetWidth;
-
-nextBtn.addEventListener('click', () => {
-  carousel.style.transform = 'translateX(-${carouselWith}px)'
-
-
-})
+let width = carousel.offsetWidth;
+window.addEventListener("resize", e => (width = carousel.offsetWidth));

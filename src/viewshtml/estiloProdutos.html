@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/estiloProdutos.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/carrinhoFlutuante.css">
+    <link rel="stylesheet" href="../css/button.css">
+    
+    <script type="text/javascript" src="../script.js/carrinhoFlutuante.js" defer></script>
+    <title>Avalon</title>
+</head>
+
+<body>
+    <header>
+        <section class="container-header">
+        
+            <a onclick=abrirHamburguer() src="#" id="chaveHamburguer"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                    height="16" fill="currentColor" class="bi bi-book-half" viewBox="0 0 16 16">
+                    <path
+                        d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z" />
+                </svg></a>
+            <a href="home.html" class="logo"><img id="logo" src="../img/logopreto.png" alt=""></a>
+
+            <div class="busca">
+                <form action="/search">
+                    <input type="text" name="search" id="search" scr="../img/lupa.png"
+                        placeholder="Títulos, Autores e Gêneros ">
+                </form>
+            </div>
+
+            <div class="icons">
+
+                <a href="" id="lupa">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </a>
+
+                <a href="pagina-login.html" id="login">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z" />
+                    </svg>
+                </a>
+
+
+                <a onclick=abrirCarrinhoFlutuante() id="car-shopping">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                    </svg>
+                </a>
+
+            </div>
+        </section>
+
+        <section class="navegacao">
+            <nav class="lista">
+                <ul type="none">
+                    <li> <a href="home.html"> PÁGINA INICIAL</a> </li>
+                    <li> <a href="estiloProdutos.html"> TODOS OS LIVROS</a> </li>
+                    <li> <a href="#"> GÊNEROS</a> </li>
+                    <li> <a href="#"> QUEM SOMOS</a> </li>
+                    <li> <a href="#"> FALE CONOSCO</a> </li>
+                    <li> <a href="cadastroProduto.html"> CADASTRO DE PRODUTOS</a> </li>
+                </ul>
+            </nav>
+            <section>
+    </header>
+
+    <main class="produtos">
+        <aside class="menu_categoria">
+            <div class="menu-main">
+                <h2 class="categoria"> CATEGORIA </h2>
+                <ul>
+                    <li> <a class="link_menu" href="#"> Não Ficção</a></li>
+                    <li> <a class="link_menu" href="#">Ficção</a></li>
+                    <li> <a class="link_menu" href="#">Biografia</a></li>
+                    <li> <a class="link_menu" href="#">Ciencias</a></li>
+                    <li> <a class="link_menu" href="#">Classicos</a></li>
+                    <li> <a class="link_menu" href="#">Crimes e Intestigação</a></li>
+                    <li> <a class="link_menu" href="#">Fantasia</a></li>
+                    <li> <a class="link_menu" href="#">Ficção Científica</a></li>
+                    <li> <a class="link_menu" href="#">Filmes, séries e Games</a></li>
+                    <li> <a class="link_menu" href="#">Hqs e Mangás</a></li>
+                    <li> <a class="link_menu" href="#">Infantil</a></li>
+                    <li> <a class="link_menu" href="#">Romance</a></li>
+                    <li> <a class="link_menu" href="#">Stephen King</a></li>
+                    <li> <a class="link_menu" href="#">Terro e Supense</a></li>
+                    <li> <a class="link_menu" href="#">Young Adult</a></li>
+                    <li> <a class="link_menu" href="#"> Não Ficção</a></li>
+                    <li> <a class="link_menu" href="#">Ficção</a></li>
+                    <li> <a class="link_menu" href="#">Biografia</a></li>
+                    <li> <a class="link_menu" href="#">Ciencias</a></li>
+                    <li> <a class="link_menu" href="#">Classicos</a></li>
+                    <li> <a class="link_menu" href="#">Crimes e Intestigação</a></li>
+                    <li> <a class="link_menu" href="#">Fantasia</a></li>
+                    <li> <a class="link_menu" href="#">Ficção Científica</a></li>
+                    <li> <a class="link_menu" href="#">Filmes, séries e Games</a></li>
+                    <li> <a class="link_menu" href="#">Hqs e Mangás</a></li>
+                    <li> <a class="link_menu" href="#">Infantil</a></li>
+                    <li> <a class="link_menu" href="#">Romance</a></li>
+                    <li> <a class="link_menu" href="#">Stephen King</a></li>
+                    <li> <a class="link_menu" href="#">Terro e Supense</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <section>
+            <div class="filtro">
+                <h3 class="resultado">Resultados: 360</h3>
+                <select id="sort-by" name="sort-by" class="sort-by">
+                    <option value="menorPreco">menores preços</option>
+                    <option value="maiorPreco">maiores preços</option>
+                    <option value="maisRelevante">mais relevante</option>
+                    <option value="maisVendido">mais Vendido</option>
+                </select>
+            </div>
+            <div class="galeria">
+                <div class="catalogo_produtos">
+                    <img src="../img/1661966653.webp">
+                    <a>Titulo do Livro </a>
+                    <a> R$29,90</a>
+                    <button class="comprar"><a href="#">COMPRAR</a></button>
+                </div>
+
+                <div class="catalogo_produtos">
+                    <img src="../img/1663870733.webp">
+                    <a>Titulo do Livro </a>
+                    <a> R$29,90</a>
+                    <button class="comprar"><a href="#">COMPRAR</a></button>
+                </div>
+
+                <div class="catalogo_produtos">
+                    <img src="../img/1664561630.webp">
+                    <a>Titulo do Livro </a>
+                    <a> R$29,90</a>
+                    <button class="comprar"><a href="#">COMPRAR</a></button>
+                </div>
+
+                <div class="catalogo_produtos">
+                    <img src="../img/1664561630.webp">
+                    <a>Titulo do Livro </a>
+                    <a> R$29,90</a>
+                    <button class="comprar"><a href="#">COMPRAR</a></button>
+                </div>
+
+                <div class="catalogo_produtos">
+                    <img src="../img/1664561630.webp">
+                    <a>Titulo do Livro </a>
+                    <a> R$29,90</a>
+                    <button class="comprar"><a href="#">COMPRAR</a></button>
+                </div>
+
+                <div class="catalogo_produtos">
+                    <img src="../img/1664561630.webp">
+                    <a>Titulo do Livro </a>
+                    <a> R$29,90</a>
+                    <button class="comprar"><a href="#">COMPRAR</a></button>
+                </div>
+
+                <div class="catalogo_produtos">
+                    <img src="../img/capa (1).jpg">
+                    <a>Titulo do Livro </a>
+                    <a> R$29,90</a>
+                    <button class="comprar"><a href="#">COMPRAR</a></button>
+                </div>
+
+                <div class="catalogo_produtos">
+                    <img src="../img/capa (1).jpg">
+                    <a>Titulo do Livro </a>
+                    <a> R$29,90</a>
+                    <button class="comprar"><a href="#">COMPRAR</a></button>
+                </div>
+
+                <div class="catalogo_produtos">
+                    <img src="../img/capa (1).jpg">
+                    <a>Titulo do Livro </a>
+                    <a> R$29,90</a>
+                    <button class="comprar"><a href="#">COMPRAR</a></button>
+
+                </div>
+
+                <div class="catalogo_produtos">
+                    <img src="../img/1661966653.webp">
+                    <a>Titulo do Livro </a>
+                    <a> R$29,90</a>
+                    <button class="comprar"><a href="#">COMPRAR</a></button>
+
+                </div>
+                <div class="catalogo_produtos">
+                    <img src="../img/1661966653.webp">
+                    <a>Titulo do Livro </a>
+                    <a> R$29,90</a>
+                    <button class="comprar"><a href="#">COMPRAR</a></button>
+
+                </div>
+                <div class="catalogo_produtos">
+                    <img src="../img/1661966653.webp">
+                    <a>Titulo do Livro </a>
+                    <a> R$29,90</a>
+                    <button class="comprar"><a href="#">COMPRAR</a></button>
+                </div>
+                <div class="catalogo_produtos">
+                    <img src="../img/1663870733.webp">
+                    <a>Titulo do Livro </a>
+                    <a> R$29,90</a>
+                    <button class="comprar"><a href="#">COMPRAR</a></button>
+                </div>
+                <div class="catalogo_produtos">
+                    <img src="../img/1663870733.webp">
+                    <a>Titulo do Livro </a>
+                    <a> R$29,90</a>
+                    <button class="comprar"><a href="#">COMPRAR</a></button>
+                </div>
+                <div class="catalogo_produtos">
+                    <img src="../img/1663870733.webp">
+                    <a>Titulo do Livro </a>
+                    <a> R$29,90</a>
+                    <button class="comprar"><a href="#">COMPRAR</a></button>
+                </div>
+                <div class="catalogo_produtos">
+                    <img src="../img/capa (1).jpg">
+                    <a>Titulo do Livro </a>
+                    <a> R$29,90</a>
+                    <button class="comprar"><a href="#">COMPRAR</a></button>
+                </div>
+            </div>
+    </main>
+    <section>
+        <div class="continue-vendo">
+            <h5>CONTINUE VENDO</h5>
+
+            <div class="carrousel">
+                <button class="arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-caret-left-fill" viewBox="-2 -2 20 20">
+                        <path
+                            d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                    </svg></button>
+                <ul class="gallery">
+                    <li>
+                        <img class="item current-item" src="../produtos/my broken mariko/mariko-capa.jpg" alt="mariko">
+                        <div>
+                            <h5>MY BROKEN MARIKO</h5>
+                            <span>R$ 39,90</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href=""><img class="item current-item" src="../produtos/DNA/DNA capa.jpg" alt="dna"></a>
+                        <div>
+                            <h5>DNA MILIONÁRIO</h5>
+                            <span>R$ 49,90</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img class="item current-item" src="../produtos/miseraveis/miseraveis-capa.jpeg"
+                            alt="miseraveis">
+                        <div>
+                            <h5>OS MISERÁVEIS</h5>
+                            <span>R$ 139,90</span>
+                        </div>
+
+                    </li>
+
+                    <li>
+
+                        <img class="item current-item" src="../produtos/HOBBIT/hobbit-capa.jpg" alt="hobbit">
+                        <div>
+                            <h5>O HOBBIT</h5>
+                            <span>R$ 59,90</span>
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <img class="item current-item" src="../produtos/moby dick/mobydick-capa.jpg" alt="moby-dick">
+                        <div>
+                            <h5>MOBY DICK</h5>
+                            <span>R$ 129,90</span>
+                        </div>
+                    </li>
+
+                    <li>
+                        <img class="item current-item" src="../produtos/calibã/caliba-capa.jpg" alt="caliba">
+                        <div>
+                            <h5>CALIBÃ E A BRUXA</h5>
+                            <span>R$ 59,90</span>
+                        </div>
+                    </li>
+
+                </ul>
+                <button class="arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                    </svg></button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <section class="footer">
+            <section class="container-footer">
+                <div class="column" id="logo2">
+                    <img id="logo2" src="../img/logopreto.png" alt="">
+                </div>
+                <div class="column">
+                    <section>
+                        <h5>Privacidade e Termos</h5><br>
+                    </section>
+                    <section>
+                        <ul type="none">
+                            <li>Política de Pagamento</li>
+                            <li>Política de Privacidade</li>
+                            <li>Troca e Devolução</li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="column">
+                    <section>
+                        <h5>Mapa do Site</h5><br>
+                    </section>
+                    <section>
+                        <ul type="none">
+                            <li>Quem Somos</li>
+                            <li>Todos os Livros</li>
+                            <li>Autores</li>
+                            <li>Gêneros</li>
+                            <li>Fale Conosco</li>
+                        </ul>
+                    </section>
+                </div>
+                <div class="column">
+                    <section>
+                        <h5>Formas de pagamento</h5><br>
+                    </section>
+                    <section class="cards">
+                        <a href=""><img id="cards" src="../img/cards-transparent.png" alt=""></a>
+                    </section>
+                </div>
+                <div class="column" id="redes-sociais">
+                    <section>
+                        <h5>Redes Sociais</h5><br>
+                    </section>
+                    <section>
+                        <nav>
+                            <a href=""><img height="15rem" src="../img/instagram 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/google-plus-g 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/facebook-f 1.png" alt=""></a>
+                            <a href=""><img height="15rem" src="../img/linkedin-in 1.png" alt=""></a>
+                        </nav>
+                    </section>
+                </div>
+            </section>
+            <section class="autores">
+                <nav>
+                    <ul type="none">
+                        <p>Desenvolvido por</p>
+                        <li> <a href="#"> Amanda</a> </li>
+                        <li> <a href="#"> Igor</a> </li>
+                        <li> <a href="#"> João Paulo</a> </li>
+                        <li> <a href="#"> Mateus</a> </li>
+                        <li> <a href="#"> Paloma</a> </li>
+                    </ul>
+                </nav>
+            </section>
+    </footer>
+</body>
+
+</html>

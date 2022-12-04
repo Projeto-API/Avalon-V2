@@ -21,4 +21,8 @@ router.get('/carrinho', function (req, res, next) {
 router.get('/pedidos', function (req, res, next) {
   res.render('usuario', { title: 'Express', css: 'usuario' });
 });
+
+router.get('/intranet', function (req, res, next) {
+  res.render('intranet', { title: 'Express', css: 'usuario' });
+});
 module.exports = router;

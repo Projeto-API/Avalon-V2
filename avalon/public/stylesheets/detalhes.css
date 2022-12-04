@@ -47,7 +47,7 @@ main {
 .gallery-miniaturas {
     display: flex;
     flex-flow: row nowrap;
-    overflow-x: auto;
+    overflow-x: hidden;
 }
 
 .título {
@@ -162,7 +162,7 @@ h6 {
 
 .carrousel {
     padding-top: 2rem;
-    overflow-x: auto;
+    overflow-x: hidden;
     display: flex;
     justify-content: flex-start;
     width: 100%;
@@ -229,14 +229,14 @@ h6 {
         justify-content: flex-start;
         width: 100%;
         flex-flow: row nowrap;
-        overflow-x: auto;
+        overflow-x: hidden;
 
     }
 
     .gallery-miniaturas {
         display: flex;
         flex-flow: row nowrap;
-        overflow-x: auto;
+        overflow-x: hidden;
     }
 
     .container2 {
@@ -284,7 +284,7 @@ h6 {
         padding: 1rem 0;
         flex-direction: row;
         flex-flow: row nowrap;
-        overflow-x: auto;
+        overflow-x: hidden;
     }
 
 
@@ -348,7 +348,7 @@ h6 {
         width: 4rem;
         gap: 1rem;
         flex-flow: column nowrap;
-        overflow-y: auto;
+        overflow-y: hidden;
     }
 
     .miniaturas {

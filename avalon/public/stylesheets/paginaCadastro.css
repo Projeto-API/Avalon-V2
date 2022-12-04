@@ -177,7 +177,7 @@ div .exemplo {
 }
 
 .form-auth li {
-    font-size: .8rem;
+    font-size: 9rem;
     margin: .5rem;
     padding-left: 2rem;
     width: 100%;
@@ -185,7 +185,7 @@ div .exemplo {
 }
 
 .form-auth input {
-    font-size: .8rem;
+    font-size: .9rem;
     background: white;
     padding-left: 1rem;
     width: 90%;

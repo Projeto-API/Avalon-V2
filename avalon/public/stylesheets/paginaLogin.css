@@ -89,13 +89,7 @@ ul {
     padding-top: .5rem;
 }
 
-.email {
-    display: flex;
-    font-weight: bold;
-    font-size: 15px;
-    font-weight: bolder;
-
-}
+.email {}
 
 #span1 {
     display: flex;
@@ -267,7 +261,9 @@ li.senha {
 }
 
 .form-auth li {
-    font-size: 1rem;
+    display: flex;
+    font-weight: bolder;
+    font-size: .9rem;
     margin: .5rem;
     padding-left: 1rem;
     width: 100%;
@@ -282,13 +278,14 @@ li.senha {
 }
 
 .form-auth input {
+    font-size: .9rem;
     background: white;
     padding-left: 1rem;
     width: 100%;
     color: gray;
     border: none;
     border-radius: 3rem;
-    height: 3.5rem;
+    height: 3rem;
 }
 
 .form-auth button {

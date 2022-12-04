@@ -17,4 +17,8 @@ router.get('/checkout', function (req, res, next) {
 router.get('/carrinho', function (req, res, next) {
   res.render('carrinho', { title: 'Express', css: 'carrinho' });
 });
+
+router.get('/pedidos', function (req, res, next) {
+  res.render('usuario', { title: 'Express', css: 'usuario' });
+});
 module.exports = router;

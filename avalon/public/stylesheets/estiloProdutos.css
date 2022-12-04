@@ -11,6 +11,9 @@
     height: auto;
 }
 
+main {
+    padding-top: 50px;
+}
 
 ul li {
     width: 100%;

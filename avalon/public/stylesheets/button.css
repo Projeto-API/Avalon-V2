@@ -95,6 +95,22 @@ button a {
     color: white;
 }
 
+/* BOTÃO FINALIZAR COMPRA */
+
+#finalizarCompra {
+    align-items: center;
+    font-weight: bold;
+    width: 100%;
+    height: 2rem;
+    background-color: #4EC16E;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+
+.finalizarCompra :hover {
+    color: white;
+}
 /* BOTOES - ARROW LEFT E RIGHT */
 
 .arrow-left {

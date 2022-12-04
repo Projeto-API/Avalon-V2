@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ropa+Sans&display=swap');
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+* body {
+    height: auto;
+}
+
+main {
+    max-width: 25rem;
+    padding-top: 50px;
+}
+
+
+/* NOVO HEADER */
+.cabecalho {
+    display: none;
+    position: absolute;
+    padding-top: 65px;
+    height: 50px;
+}
+
+.navegacao {
+    display: none;
+}
+
+.container-header-checkout {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#lupa,
+#car-shopping {
+    display: none;
+}
+
+#logo {
+    display: flex;
+    padding-right: 20vw;
+}
+
+/*  ENDEREÇO SALVO */
+
+.entrega {
+    margin: .5rem;
+}
+
+.entrega svg {
+    align-items: center;
+    justify-content: flex-start;
+    width: 20vw;
+    color: #4EC16E;
+}
+
+
+.enderecoSalvo {
+    align-items: center;
+    display: flex;
+    background-color: #F6F9FF;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.addAdress {
+    margin: 0 1rem;
+    font-size: .6rem;
+    text-decoration: underline;
+}
+
+.enderecoInformation {
+    padding: .5rem 0;
+    width: 70vw;
+    text-align: left;
+    font-size: .7rem;
+}
+
+.enderecoNovo {
+    background-color: ;
+    padding: .5rem;
+    width: 100%;
+    max-width: 25rem;
+    font-size: .7rem;
+    border-radius: 1rem;
+}
+
+.enderecoNovo input {
+    width: 100%;
+    background-color: white;
+    border: .75px solid rgb(102, 102, 102);
+    border-radius: 5px;
+}
+
+.columnAdress1 {
+    gap: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.columnAdress1 input {
+    padding-left: .5rem;
+    justify-content: space-around;
+}
+
+
+/* OPÇÕES DE ENTREGA */
+
+.opcao {
+    margin: .5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: .8rem;
+
+}
+
+.opcoesFrete {
+    background-color: #F6F9FF;
+    border-radius: 1rem;
+}
+
+.opcoesFrete a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.opcao svg {
+    padding-left: 1rem;
+    align-items: center;
+    width: 3rem;
+}
+
+.opcaoInformation {
+    padding: 0 2rem;
+    width: 100%;
+}
+
+.tempoEntrega {
+    font-size: .6rem;
+}
+
+.opcaoPrice {
+    text-align: center;
+    width: 100%;
+}
+
+/* OPÇÕES DE PAGAMENTO */
+.pagamento {
+    margin: .5rem;
+}
+
+.opcoesPagamento {
+    display: flex;
+    padding: .5rem;
+}
+
+.opcoesPagamento a {
+    text-decoration: none;
+    color: black;
+}
+
+.opcoesPagamento :hover {
+    background-color: #F6F9FF;
+    color: #4EC16E;
+
+}
+
+.itemPagamento {
+    width: 9rem;
+    height: 100%;
+    font-size: .8rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.imagePagamento {
+    width: 50px;
+}
+
+.pagamentoEscolhido {
+    gap: 1rem;
+    background-color: #F6F9FF;
+    padding: .5rem;
+    width: 100%;
+    max-width: 25rem;
+    font-size: .7rem;
+    border-radius: 1rem;
+}
+
+.pagamentoEscolhido input {
+    width: 100%;
+    background-color: white;
+    border: .75px solid rgb(102, 102, 102);
+    border-radius: 5px;
+}
+
+.pagamentoEscolhido div {
+    gap: 1rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* RESUMO PEDIDO */
+.resumo {
+
+    font-size: .8rem;
+}
+
+.produto {
+    margin: .5rem;
+    justify-content: left;
+    display: flex;
+    align-items: center;
+    background-color: #F6F9FF;
+    border-radius: 1rem;
+}
+
+.imagemProduto {
+    margin: .5rem;
+    border-radius: .5rem;
+    display: flex;
+    width: 4rem;
+}
+
+#produtoTitulo {
+    padding-bottom: 1rem;
+    text-align: left;
+    width: 100%;
+}
+
+.informationProduto {
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    width: 100%;
+
+}
+
+.informationProdutoValue {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.quantidadeValue {
+    text-align: center;
+    width: 2rem;
+}
+
+#preco {
+    font-weight: 600;
+    color: #386C5F;
+}
+
+
+#excluir {
+    display: none;
+}
+
+.itemName {
+    display: flex;
+    align-items: center;
+    height: 30px;
+    font-size: .7rem;
+    width: fit-content;
+    margin: .5rem;
+    padding: 0 .5rem;
+    background-color: #386C5F;
+    color: white;
+    border-radius: 0 15px 15px 0;
+}
+
+.resumo h5 {
+    margin-left: 1rem;
+}
+
+table {
+
+    line-height: 1.5rem;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tbody {
+    height: 10px;
+    font-size: .8rem;
+    justify-content: right;
+    border-bottom: 1px solid;
+}
+
+.table td {
+    padding: 0 1rem;
+}
+
+.monetary {
+    text-align: right;
+}
+
+#desconto {
+    color: #4EC16E;
+}
+
+tfoot {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.next-page {
+    padding: 1rem 1rem;
+}
+
+#finalizarCompra {}
+
+
+
+
+@media (min-width: 1200px) {
+
+    main {
+        padding-top: 50px;
+        max-width: 1200px;
+        display: flex;
+        align-items: flex-start;
+
+    }
+
+      #search {
+        display: none;
+    }
+    .entrega,
+    .pagamento {
+        max-width: 365px;
+        opacity: 20%;
+    }
+
+    .resumo {
+        width: 470px;
+    }
+
+    .entrega:hover,
+    .pagamento:hover {
+        opacity: 100%;
+    }
+}

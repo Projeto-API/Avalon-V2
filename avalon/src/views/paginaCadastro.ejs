@@ -1,10 +1,12 @@
 <%- include('partials/header') %>
 <main>
+  
+    <script  src="/javascripts/validacoescadastro.js" defer></script>
     <section class="cadastro">
         <div class="cadastro2">
             <h5>CADASTRO</h5>
         </div>
-        <form class="form-auth card" method="post" action="/views/usuario.ejs">
+        <form class="form-auth card" method="post" action="/registro">
             <li class="email">E-mail</li>
             <input type="email" name="email" placeholder="Digite seu email">
             <li class="senha">Senha</li>

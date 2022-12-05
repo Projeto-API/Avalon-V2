@@ -13,5 +13,11 @@ router.get('/detalhes', function (req, res, next) {
 router.get('/estiloProdutos', function (req, res, next) {
   res.render('estiloProdutos', { title: 'Express', css: 'estiloProdutos' });
 });
+<<<<<<< HEAD
+=======
+router.get('/usuario', function (req, res, next) {
+  res.render('usuario', { title: 'Express', css: 'usuario' });
+});
+>>>>>>> paloma
 
 module.exports = router;

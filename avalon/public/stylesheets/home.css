@@ -119,13 +119,11 @@ main {
 }
 
 .carrousel {
-    padding-top: 2rem;
-    overflow-x: auto;
+    margin: 0 auto;
+    /* overflow: hidden; */
     display: flex;
-    justify-content: flex-start;
     width: 100%;
     cursor: pointer;
-
 }
 
 .gallery {
@@ -135,7 +133,7 @@ main {
     list-style: none;
 }
 
-.gallery * div {
+.gallery li {
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -145,8 +143,9 @@ main {
 }
 
 
-.item {
-    max-height: 15rem;
+.item img{
+    margin: 10px;
+    max-height: 12rem;
     height: 50vw;
     border-radius: 5%;
     align-items: center;

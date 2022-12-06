@@ -71,6 +71,7 @@ svg {
     align-items: center;
     cursor: pointer;
     opacity: 80%;
+    flex-direction: column;
 }
 
 .navegacao {

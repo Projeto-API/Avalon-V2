@@ -319,13 +319,8 @@ tfoot {
 }
 
 .next-page {
-    padding: 1rem 1rem;
+    margin: 1rem;
 }
-
-#finalizarCompra {}
-
-
-
 
 @media (min-width: 1200px) {
 

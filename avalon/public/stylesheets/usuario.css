@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ropa+Sans&display=swap');
 
-<<<<<<< HEAD:css/usuario.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/usuario.css
 * {
     margin: 0;
     padding: 0;
@@ -14,22 +10,12 @@
 * body {
     height: auto;
 }
-<<<<<<< HEAD:css/usuario.css
-=======
-
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/usuario.css
 
 main {
     display: flex;
     align-items: center;
 }
 
-<<<<<<< HEAD:css/usuario.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/usuario.css
 main nav ul {
     display: flex;
     justify-content: space-evenly;
@@ -43,22 +29,6 @@ main nav ul li {
 }
 
 .todososcontainers {
-<<<<<<< HEAD:css/usuario.css
-=======
-nav ul {
-    display: flex;
-    justify-content: space-evenly;
-}
-nav ul li{
-display: flex;
-align-items: center;
-justify-content: center;
-width: 25%;
-}
-.todososcontainers{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/usuario.css
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -70,17 +40,8 @@ width: 25%;
     margin-bottom: 2rem;
     margin: 2rem;
 }
-<<<<<<< HEAD:css/usuario.css
-<<<<<<< HEAD
 
 .caixatexto {
-=======
-.caixatexto{
->>>>>>> paloma
-=======
-
-.caixatexto {
->>>>>>> main:avalon/public/css/usuario.css
     display: flex;
     flex-direction: column;
     gap: 3rem;
@@ -89,38 +50,17 @@ width: 25%;
     margin-left: -3rem; */
     white-space: nowrap;
     font-family: poppins;
-<<<<<<< HEAD:css/usuario.css
-<<<<<<< HEAD
 
 }
 
-=======
-   
-}
->>>>>>> paloma
-=======
-
-}
-
->>>>>>> main:avalon/public/css/usuario.css
 .informacaodospedidos {
     margin: 2rem 0;
     background-color: rgb(241, 239, 239);
     border-radius: 2rem;
     height: 100%;
     max-height: 13%;
-<<<<<<< HEAD:css/usuario.css
-<<<<<<< HEAD
     display: flex;
 
-=======
-    display:flex;
-   
->>>>>>> paloma
-=======
-    display: flex;
-
->>>>>>> main:avalon/public/css/usuario.css
 }
 
 section.informacaodospedidos {
@@ -129,24 +69,13 @@ section.informacaodospedidos {
     text-align: center;
     justify-items: center;
 }
-<<<<<<< HEAD:css/usuario.css
-<<<<<<< HEAD
 
-=======
->>>>>>> paloma
-=======
-
->>>>>>> main:avalon/public/css/usuario.css
 .containermenu {
     /* margin: 15rem;
     margin-left: -40rem; */
     flex-direction: column;
     background-color: #c6efe0;
     border-radius: 2rem;
-<<<<<<< HEAD:css/usuario.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/usuario.css
     width: 100%;
     height: 31rem;
     display: flex;
@@ -170,44 +99,11 @@ section.informacaodospedidos {
 }
 
 nav.listapagos {
-<<<<<<< HEAD:css/usuario.css
-=======
-    width:100%;
-    height: 31rem;
-    display:flex;
-}
-.listapagos{
-    /* margin: 13rem;
-    margin-top: -13rem;
-    margin-left: -3rem; */
-    
-    justify-content: space-around;
-    background-color:  #c6efe0;
-    border-radius: 2rem;
-    width:100%;
-    height: 100%;
-
-    max-height: 8%;
-    display:flex;
-    color: black;
-    
-}
-nav.listapagos{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/usuario.css
     display: block;
 
 
 }
-<<<<<<< HEAD:css/usuario.css
-<<<<<<< HEAD
 
-=======
->>>>>>> paloma
-=======
-
->>>>>>> main:avalon/public/css/usuario.css
 .informacaodospedidos li a,
 .listamenu li a {
     align-items: center;
@@ -216,15 +112,7 @@ nav.listapagos{
     color: black;
     font-size: clamp(.6rem, 100%, .8rem);
     font-family: poppins;
-<<<<<<< HEAD:css/usuario.css
-<<<<<<< HEAD
     font-weight: 700;
-=======
-  font-weight: 700;
->>>>>>> paloma
-=======
-    font-weight: 700;
->>>>>>> main:avalon/public/css/usuario.css
     white-space: nowrap;
 }
 
@@ -236,17 +124,8 @@ nav.listapagos{
     font-size: clamp(.6rem, 100%, .8rem);
 
 }
-<<<<<<< HEAD:css/usuario.css
-<<<<<<< HEAD
 
 .fotousuario>img {
-=======
-.fotousuario >img{
->>>>>>> paloma
-=======
-
-.fotousuario>img {
->>>>>>> main:avalon/public/css/usuario.css
     max-width: 80%;
     max-height: 100%;
     width: 100%;
@@ -257,36 +136,16 @@ nav.listapagos{
     align-items: center;
     margin: 1.5rem;
 }
-<<<<<<< HEAD:css/usuario.css
-<<<<<<< HEAD
 
 .botoes {
-=======
-.botoes{
->>>>>>> paloma
-=======
-
-.botoes {
->>>>>>> main:avalon/public/css/usuario.css
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
-<<<<<<< HEAD:css/usuario.css
-<<<<<<< HEAD
 
 .sobrenome li {
 
-=======
-.sobrenome li{
-  
->>>>>>> paloma
-=======
-
-.sobrenome li {
-
->>>>>>> main:avalon/public/css/usuario.css
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -295,10 +154,6 @@ nav.listapagos{
     font-family: poppins;
     font-weight: 600;
 }
-<<<<<<< HEAD:css/usuario.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/usuario.css
 
 .meusdados {
     margin: 0rem;
@@ -307,18 +162,6 @@ nav.listapagos{
     align-items: center;
     justify-content: center;
     color: rgb(90, 86, 86);
-<<<<<<< HEAD:css/usuario.css
-=======
-.meusdados {
-    margin: 0rem;
-  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color:rgb(90, 86, 86);
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/usuario.css
     width: 80%;
     height: 30%;
     font-family: poppins;
@@ -327,10 +170,6 @@ nav.listapagos{
     background-color: aliceblue;
     border-radius: 12rem;
 }
-<<<<<<< HEAD:css/usuario.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/usuario.css
 
 .minhaconta {
     margin: 2rem;
@@ -338,17 +177,6 @@ nav.listapagos{
     align-items: center;
     justify-content: center;
     color: rgb(90, 86, 86);
-<<<<<<< HEAD:css/usuario.css
-=======
-.minhaconta {
-   margin: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color:rgb(90, 86, 86);
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/usuario.css
     max-width: 80%;
     width: 100%;
     font-size: 16px;
@@ -359,10 +187,6 @@ nav.listapagos{
     background-color: aliceblue;
     border-radius: 12rem;
 }
-<<<<<<< HEAD:css/usuario.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/usuario.css
 
 .fotousuario {
     margin: 3rem;
@@ -391,64 +215,20 @@ nav.listapagos{
 }
 
 .todosospedidos {
-<<<<<<< HEAD:css/usuario.css
-=======
-.fotousuario{
-    margin: 3rem;
-    background-color: #c6efe0;;
-    border-radius: 2rem;
-    flex-direction: column;
-    display:flex;
-    gap: 1rem;
-    
-   
-}
-.informacaodospedidos ul li a{
-    color: #05a065;
-}
-.listapagos li a {
- justify-content: space-evenly;
-    color: black;
-    font-size: 10px;
-    font-family: poppins;
-  font-weight: 700;
- 
-  
-}
-.todosospedidos{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/usuario.css
     display: flex;
     margin-top: 2rem;
     margin-bottom: 1rem;
     width: 100%;
     height: 80%;
-<<<<<<< HEAD:css/usuario.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/usuario.css
 
 }
 
 .box-usuario {
-<<<<<<< HEAD:css/usuario.css
-=======
-  
-}
-.box-usuario{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/usuario.css
     display: flex;
     margin-top: 3rem;
 }
 
 
-<<<<<<< HEAD:css/usuario.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/usuario.css
 @media (max-width: 768px) {
 
     main {
@@ -458,28 +238,11 @@ nav.listapagos{
     }
 
     .todososcontainers {
-<<<<<<< HEAD:css/usuario.css
-=======
-@media (max-width: 701px) {
-
-    main{
-        display: flex;
-        flex-direction: column;
-       
-    }
-    .todososcontainers{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/usuario.css
         max-width: 100%;
         margin-top: -2rem;
         margin-bottom: 2rem;
         width: 80%;
     }
-<<<<<<< HEAD:css/usuario.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/usuario.css
 
 
 
@@ -488,29 +251,11 @@ nav.listapagos{
 @media (max-width: 365px) {
 
     .todososcontainers {
-<<<<<<< HEAD:css/usuario.css
-=======
-    
-
-
-}
-@media (max-width: 425px) {
-
-    .todososcontainers{
->>>>>>> paloma
         max-width: 100%;
         margin-top: -2rem;
         margin-bottom: 2rem;
     }
 
-<<<<<<< HEAD
-=======
-        max-width: 100%;
-        margin-top: -2rem;
-        margin-bottom: 2rem;
-    }
-
->>>>>>> main:avalon/public/css/usuario.css
     .fotousuario {
         gap: none;
     }
@@ -533,29 +278,4 @@ nav.listapagos{
         width: 1200px;
         padding-top: 80px;
     }
-<<<<<<< HEAD:css/usuario.css
 }
-=======
-
-}
-
-@media (max-width: 375px) {
-
-    .todososcontainers{
-        max-width: 100%;
-        margin-top: -2rem;
-        margin-bottom: 2rem;
-    }
-    .fotousuario{
-        gap: none;
-    }
-    .informacaodospedidos li a, .listamenu li a{
-        text-align: center;
-        white-space: pre-wrap;
-        padding:none;
-    }
-}
->>>>>>> paloma
-=======
-}
->>>>>>> main:avalon/public/css/usuario.css

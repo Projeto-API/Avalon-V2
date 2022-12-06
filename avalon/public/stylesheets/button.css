@@ -14,7 +14,7 @@ button a {
 .comprar {
     z-index: 3;
     align-items: center;
-  
+
     display: flex;
     font-weight: bold;
     width: 100%;
@@ -69,7 +69,7 @@ button a {
 
 }
 
-/* BOTÃO ADICIONAR */
+/* BOTÃO CONTINUAR */
 .adicionar {
     padding: .5rem;
     width: 100%;
@@ -95,50 +95,48 @@ button a {
     color: white;
 }
 
+/* BOTÃO FINALIZAR COMPRA */
+
+
+
+
+.finalizarCompra :hover {
+    color: white;
+}
+
 /* BOTOES - ARROW LEFT E RIGHT */
 
-.arrow-left {
-    top: 0;
-    bottom: 0;
-    left: .5rem;
-    right: auto;
-    margin: auto;
-    position: absolute;
-    width: 9vw;
-    height: 9vw;
-    max-width: 50px;
-    max-height: 50px;
-    background-color: #4EC16E;
-    border-radius: 20%;
-    color: white;
-    opacity: .5;
+
+#prev,
+#next {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: #4EC16E;
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+   
     cursor: pointer;
+    position: absolute;
 }
 
-.arrow-right {
-    top: 0;
-    bottom: 0;
-    left: auto;
-    right: .5rem;
-    margin: auto;
-    position: absolute;
-    width: 9vw;
-    height: 9vw;
-    max-width: 50px;
-    max-height: 50px;
-    background-color: #4EC16E;
-    border-radius: 20%;
-    color: white;
-    opacity: .5;
-    cursor: pointer;
+#prev:hover,
+#next:hover {
+    color: #F6F9FF;
 }
 
+#prev {
+    top: 45%;
+    left: -20px;
+    transform: translate(50%, -50%);
+    display: none;
+}
 
-.arrow-left:hover,
-.arrow-right:hover {
-    opacity: 1;
-    transform: scale(1.2);
-    transition-duration: 200ms;
+#next {
+    top: 45%;
+    right: -20px;
+    transform: translate(-50%, -50%);
 }
 
 #excluir {
@@ -152,7 +150,7 @@ button a {
 
 .entrar {
     display: flex;
-;
+    ;
     font-weight: bold;
     background-color: rgb(17, 202, 125);
     border-radius: 3rem;

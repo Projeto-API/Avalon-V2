@@ -71,13 +71,16 @@ main {
     transition-duration: 0.1s;
 }
 
+.title {
+    margin: 1rem;
+}
 
 /* SECTION 1 - DESTAQUES  */
 
 .destaque {
     flex-direction: column;
     width: 100%;
-    padding: 2rem;
+    padding: 1rem;
     font-size: .8rem;
     color: white;
     background-color: #386C5F;
@@ -111,42 +114,42 @@ main {
 /*  CARROSEIS  */
 
 .continue-vendo,
-.lançamento {
-    padding: 2rem;
-    position: relative;
-    width: 100%;
+.lancamento {
 
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .carrousel {
-    margin: 0 auto;
-    /* overflow: hidden; */
-    display: flex;
-    width: 100%;
-    cursor: pointer;
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 .gallery {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 2rem;
-    list-style: none;
+    margin: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
 }
+
+
 
 .gallery li {
     display: flex;
     flex-direction: column;
     justify-items: center;
-    min-width: 3rem;
-    max-width: 10rem;
+    width: 10rem;
     text-align: center;
+    list-style: none;
 }
 
 
-.item img{
+.item img {
     margin: 10px;
     max-height: 12rem;
-    height: 50vw;
+    height: 100%;
     border-radius: 5%;
     align-items: center;
 }
@@ -172,7 +175,6 @@ main {
     transition-property: all;
     transition-duration: 0.2s;
 }
-
 
 
 @media (min-width: 768px) {
@@ -253,13 +255,6 @@ main {
         align-items: center;
         justify-content: center;
 
-    }
-
-    .continue-vendo,
-    .lançamento {
-        padding: 2rem;
-        position: relative;
-        width: 100%;
     }
 
     /* BOTAO COMPRAR */

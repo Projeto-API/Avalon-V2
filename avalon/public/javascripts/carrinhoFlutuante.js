@@ -1,4 +1,3 @@
-
 function abrirCarrinhoFlutuante() {
     document.getElementById('carrinhoFlutuante').style.width = "20rem"
 }
@@ -46,6 +45,4 @@ function incluirDentroCarrinho() {
 </div>`
     document.querySelector('#containerProduto').appendChild(em)
 }
-
-
 

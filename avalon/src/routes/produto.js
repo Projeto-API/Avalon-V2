@@ -11,7 +11,6 @@ router.get('/cadastroProdutos', function (req, res, next) {
 router.get('/detalhes', function (req, res, next) {
   res.render('detalhes', { title: 'Express', css: 'detalhes' });
 });
-
 router.get('/estiloProdutos', function (req, res, next) {
   res.render('estiloProdutos', { title: 'Express', css: 'estiloProdutos' });
 });

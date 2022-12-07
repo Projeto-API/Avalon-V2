@@ -1,4 +1,6 @@
-<%- include('partials/header') %>
+
+<%- include('partials/header') %> 
+
 
     <main>
         <section class="containerProduto">
@@ -7,6 +9,12 @@
                 <li id="header2"><span>QUANTIDADE</span></li>
                 <li id="header3"><span>PREÇO</span></li>
             </ul>
+
+
+            <% for( const carrinho of listaLivrosServicos ) { %>
+                <%= carrinho.titulo %> 
+
+              <% } %>
 
             <div class="produto">
                 <img class="imagemProduto" src="/images/produtos/my broken mariko/mariko-capa.jpg" alt="">
@@ -26,7 +34,7 @@
                 </div>
             </div>
 
-            <div class="produto">
+            <!-- <div class="produto">
                 <img class="imagemProduto" src="/images/produtos/manifesto/capa.jpg" alt="">
                 <div class="informationProduto">
                     <div class="nomeProduto">
@@ -42,8 +50,8 @@
                         <button class="excluir">X</button>
                     </div>
                 </div>
-            </div>
-
+            </div> -->
+<!-- 
             <div class="produto">
                 <img class="imagemProduto" src="/images/produtos/Revolução dos bichos/revolucaodos bichos-capa.jpeg" alt="">
                 <div class="informationProduto">
@@ -60,7 +68,7 @@
                         <button class="excluir">X</button>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </section>
 
         <section class="containerFinalizacao">
@@ -106,7 +114,7 @@
                 </table>
 
                 <div class="next-page">
-                    <button class="continuar" id="finalizarCompra"><a href="checkout.html">CONTINUAR</a></button>
+                    <button class="continuar" id="finalizarCompra"><a href="/users/checkout">CONTINUAR</a></button>
                 </div>
             </div>
         </section>

@@ -1,10 +1,13 @@
 var express = require('express');
+const ControllerCarrinho = require('../controllers/ControllerCarrinho');
 var router = express.Router();
 
-/* GET produto page. */
-router.get('/carrinho', function (req, res, next) {
-  res.render('carrinho', { title: 'Express', css: 'carrinho' });
-});
+
+
+router.get('/carrinho', ControllerCarrinho.listaLivrosServicos);
+
+
+
 router.get('/cadastroProdutos', function (req, res, next) {
   res.render('cadastroProdutos', { title: 'Express', css: 'cadastroProdutos' });
 });

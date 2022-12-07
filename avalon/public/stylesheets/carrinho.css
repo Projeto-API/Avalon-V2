@@ -170,6 +170,9 @@ tfoot {
     width: 100%;
 }
 
+#carrinhoFlutuante {
+    display: none !important;
+}
 @media (min-width: 768px) {
     main {
         padding-top: 60px;

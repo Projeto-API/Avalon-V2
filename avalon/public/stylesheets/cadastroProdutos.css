@@ -555,3 +555,7 @@ div .categoriaInput {
         display: none;
     }
 }
+
+#carrinhoFlutuante {
+    display: none !important;
+}

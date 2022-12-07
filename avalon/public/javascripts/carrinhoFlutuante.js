@@ -22,8 +22,6 @@ function excluirDentroCarrinho(excluiProduto) {
     
 }
 
-
-
 function incluirDentroCarrinho() {
     let em = document.createElement('em')
     em.innerHTML = `<div class="produto" id="produto4">

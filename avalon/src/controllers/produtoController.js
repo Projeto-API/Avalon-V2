@@ -1,6 +1,9 @@
-const produtoController = {
-    cadastroProduto:(req, res)=>{
-        res.send("Cadastrando um produto");
+const produtoModel = require('../models/produtoModel')
+
+module.exports = {
+    listaproduto: (req, res) => {
+        const produto = produtoModel.produto();
+       
+        res.render('cadastroProdutos', { title: 'Express', css: 'cadastroProdutos',produto });
     }
 }
-module.exports = produtoController

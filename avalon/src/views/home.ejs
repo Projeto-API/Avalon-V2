@@ -1,0 +1,202 @@
+<%- include('partials/header') %>
+
+    <main>
+        <section class="banner">
+            <img id="banner" src="images/banner.jpg" alt="">
+        </section>
+        <section class="big3">
+            <div class="big3-icons">
+                <a href="detalhes.ejs">MAIS VENDIDOS</a>
+                <div><img src="images/mais vendidos.png" alt=""></div>
+            </div>
+            <div class="big3-icons">
+                <a href="detalhes.ejs">LIVROS</a>
+                <div><img src="images/livros.png" alt=""></div>
+            </div>
+            <div class="big3-icons">
+                <a href="detalhes.ejs">HQ</a>
+                <div><img src="images/quadrinhos.png" alt=""></div>
+            </div>
+        </section>
+
+        <section >
+            <div class="lancamento">
+                <h5 class="title">LANÇAMENTOS</h5>
+
+                <div class="carrousel" id="carrousel">
+                    <div class="gallery" id="gallery">
+                        <li class="item current-item">
+                            <img src="images/produtos/my broken mariko/mariko-capa.jpg" alt="mariko">
+                            <div>
+                                <h5>MY BROKEN MARIKO</h5>
+                                <span>R$ 39,90</span>
+                            </div>
+                        </li>
+
+                        <li class="item current-item">
+                            <img src="images/produtos/DNA/DNA capa.jpg" alt="dna">
+                            <div>
+                                <h5>DNA MILIONÁRIO</h5>
+                                <span>R$ 49,90</span>
+                            </div>
+                        </li>
+
+                        <li class="item current-item">
+                            <img src="/images/produtos/Lady killers/capa.jpeg" alt="lady-killers">
+                            <div>
+                                <h5>LADY KILLERS</h5>
+                                <span>R$ 59,90</span>
+                            </div>
+                        </li>
+
+                        <li class="item current-item">
+                            <img src="images/produtos/manifesto/capa.jpg" alt="hobbit">
+                            <div>
+                                <h5>MANIFESTO DO PARTIDO COMUNISTA</h5>
+                                <span>R$ 34,90</span>
+                            </div>
+                        </li>
+
+                        <li class="item current-item">
+                            <img src="images/produtos/moby dick/mobydick-capa.jpg" alt="moby-dick">
+                            <div>
+                                <h5>MOBY DICK</h5>
+                                <span>R$ 129,90</span>
+                            </div>
+                        </li>
+
+                        <li class="item current-item">
+                            <img src="images/produtos/calibã/caliba-capa.jpg" alt="caliba">
+                            <div>
+                                <h5>CALIBÃ E A BRUXA</h5>
+                                <span>R$ 59,90</span>
+                            </div>
+                        </li>
+
+                        <li class="item current-item">
+                            <img src="images/produtos/moby dick/mobydick-capa.jpg" alt="moby-dick">
+                            <div>
+                                <h5>MOBY DICK</h5>
+                                <span>R$ 129,90</span>
+                            </div>
+                        </li>
+
+                        <li class="item current-item">
+                            <img src="images/produtos/calibã/caliba-capa.jpg" alt="caliba">
+                            <div>
+                                <h5>CALIBÃ E A BRUXA</h5>
+                                <span>R$ 59,90</span>
+                            </div>
+                        </li>
+
+                    </div>
+                </div>
+                <button id="prev" class="arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                    <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                  </svg></button>
+                <button id="next" class="arrow-right"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                    </svg></button>
+            </div>
+        </section>
+
+        <section class="destaque">
+            <h4>DESTAQUES</h4><br>
+            <nav>
+                <div class="grid">
+                    <button class="comprar " id="destaque-comprar"><a onclick=incluirDentroCarrinho()
+                            href="#">COMPRAR</a></button>
+                    <div>
+                        <a href=""><img id="grid-1" src="images/produtos/destaque-capa.png" alt=""></a>
+                    </div>
+                    <div>
+                        <div>
+                            <a href=""><img id="grid-2" src="images/produtos/destaque-1.png" alt=""></a>
+                        </div>
+                        <div>
+                            <a href=""><img id="grid-3" src="images/produtos/destaque-2.png" alt=""></a>
+                        </div>
+                    </div>
+                    <div>
+                        <a href=""><img id="grid-4" src="images/produtos/destaque-3.png" alt=""></a>
+                    </div>
+                </div>
+            </nav>
+        </section>
+
+        <section>
+            <div class="continue-vendo">
+                <h5 class="title">CONTINUE VENDO</h5>
+
+                <div class="carrousel" id="carrousel">
+                    <div class="gallery" id="gallery">
+                        <li class="item current-item">
+                            <img src="/images/produtos/my broken mariko/mariko-capa.jpg" alt="mariko">
+                            <div>
+                                <h5>MY BROKEN MARIKO</h5>
+                                <span>R$ 39,90</span>
+                            </div>
+                        </li>
+
+                        <li class="item current-item">
+                            <img src="/images/produtos/DNA/DNA capa.jpg" alt="dna">
+                            <div>
+                                <h5>DNA MILIONÁRIO</h5>
+                                <span>R$ 49,90</span>
+                            </div>
+                        </li>
+
+                        <li class="item current-item">
+                            <img src="/images/produtos/miseraveis/miseraveis-capa.jpeg" alt="miseraveis">
+                            <div>
+                                <h5>OS MISERÁVEIS</h5>
+                                <span>R$ 139,90</span>
+                            </div>
+
+                        </li>
+
+                        <li class="item current-item">
+                            <img src="/images/produtos/HOBBIT/hobbit-capa.jpg" alt="hobbit">
+                            <div>
+                                <h5>O HOBBIT</h5>
+                                <span>R$ 59,90</span>
+                            </div>
+
+                        </li>
+
+                        <li class="item current-item">
+                            <img src="/images/produtos/moby dick/mobydick-capa.jpg" alt="moby-dick">
+                            <div>
+                                <h5>MOBY DICK</h5>
+                                <span>R$ 129,90</span>
+                            </div>
+                        </li>
+
+                        <li class="item current-item">
+                            <img src="/images/produtos/calibã/caliba-capa.jpg" alt="caliba">
+                            <div>
+                                <h5>CALIBÃ E A BRUXA</h5>
+                                <span>R$ 59,90</span>
+                            </div>
+                        </li>
+
+                    </div>
+                </div>
+                <button id="prev" class="arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-caret-left-fill" viewBox="-2 -2 20 20">
+                        <path
+                            d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                    </svg></button>
+                <button id="next" class="arrow-right control"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                    </svg></button>
+            </div>
+        </section>
+
+    </main>
+
+    <%- include('partials/footer') %>

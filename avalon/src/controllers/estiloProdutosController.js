@@ -1,8 +1,9 @@
-const produtosModel = require('../models/produtosModel');
+const estiloProdutosModel = require('../models/estiloProdutosModel')
 
 module.exports = {
-    index: (req, res)=> {
-        const estiloProdutos = produtosModel.index();
-        return res.render('estiloProdutos', {estiloProdutos, javascripts: "/javascripts/adicionarAoCarrinho.js"})
+    listaestiloProdutos: (req, res) => {
+        const estiloProdutos = estiloProdutosModel.index();
+       
+        res.render('estiloProdutos', { title: 'Express', css: 'estiloProdutos', estiloProdutos });
     }
 }

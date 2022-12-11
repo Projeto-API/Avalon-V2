@@ -1,3 +1,18 @@
+module.exports = {
+    mostraCarrinho: (req, res) => {
+        res.render('carrinho', {js: "/js/carrinho.js"})
+    }
+}
+
+
+
+
+
+
+
+
+
+
 // const ServiceLivrosModel = require('../models/ServiceLivrosModel');
 
 // module.exports = { 

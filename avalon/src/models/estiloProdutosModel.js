@@ -1,34 +1,27 @@
+
+
 module.exports = {
     index: () => {
        return [
          {
            id: 1,
-           nome: 'Banho',
+           nome: 'O hobbit',
            valor: 'R$ 30,00',
-           descricao: 'Higienização completa',
-           imagem: 'banho'
+           imagem: "hobbit-capa.jpg"
          },
          {
            id: 2,
-           nome: 'Tosa',
+           nome: 'Arrume sua Cama',
            valor: 'R$ 20,00',
-           descricao: 'Tosa completa',
-           imagem: 'tosa'
+           imagem: 'Arrume sua Cama.jpeg'
          },
          {
            id: 3,
-           nome: 'Corte de unhas',
-           valor: 'R$ 5,00',
-           descricao: 'Corte de unhas, todas as patas',
-           imagem: 'corte-unha'
+           nome: 'Morro dos ventos uivantes',
+           valor: 'R$ 49,00',
+           imagem: 'uivantes.png'
          },
-         {
-           id: 4,
-           nome: 'Creche',
-           valor: 'R$ 50,00',
-           descricao: 'Cuidamos do seu pet',
-           imagem: 'corte-unha'
-         },
+         
        ]
      }
    }

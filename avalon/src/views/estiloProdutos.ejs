@@ -50,18 +50,52 @@
             </div>
             <div class="galeria">
 
-                <div class="catalogo_produtos">
-                    
-                    <img id="imagemLivro" src="/images/1661966653.webp">
-                    <a id="nomeLivro"> </a>
-                    <a id="precoLivro"> </a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
 
                 
-                    <section class="servicos-lista">
-                      <div class="container">
-                        <h1>Serviços</h1>
+                <section class= "catalogo_produtos">
+                    <div class="container">
+                      <h1>Produtos</h1>
+
+
+
+                
+                          <% listaEstiloProdutos.forEach((produto, i) => {%>
+                              <article id="produto- <%= i %>">
+                                <div class="thumb">
+                                  <img src="/images/<%=produto.imagem%>" />
+                                </div>
+                                <div class="info">
+                                  <h3><%= produto.nome %></h3>
+                                  <P><%= produto.valor %> </P>
+                                  
+                                  <input type="hidden" value="<%= produto.id %>">
+                                  <a href="#" class="comprar">comprar</a>
+                                </div>
+                              </article>
+                            <% }) %>
+                
+                        </div>
+                      </section>
+                
+
+
+
+               
+                
+                    
+                    <!-- <div><img id="imagemLivro" src="/images/1661966653.webp"></div>
+
+                    <div>
+                    <a id="nomeLivro"> Arrume sua Cama </a>
+                    <a id="valorLivro">29,90 </a>
+                    <button class="comprar"><a href="#">COMPRAR</a></button>
+                    </div>
+                </div> -->
+
+
+
+
+                
               
                     
               

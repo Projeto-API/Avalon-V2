@@ -1,15 +1,14 @@
 var express = require('express');
+const paginaCadastroController = require('../controllers/paginaCadastroController');
+const paginaLoginController = require('../controllers/paginaLoginController');
+const usuarioController = require('../controllers/usuarioController');
+
 var router = express.Router();
-/* GET users listing. */
 
-router.get('/paginaCadastro', function (req, res, next) {
-  res.render('paginaCadastro', { title: 'Express', css: 'paginaCadastro' });
-});
-
-router.get('/paginaLogin', function (req, res, next) {
-  res.render('paginaLogin', { title: 'Express', css: 'paginaLogin' });
-});
-
+// /* GET home page. */
+router.get('/paginaCadastro', paginaCadastroController.listapaginaCadastro);
+router.get('/paginaLogin', paginaLoginController.listapaginaLogin);
+router.get('/usuario', usuarioController.listausuario);
 router.get('/checkout', function (req, res, next) {
   res.render('checkout', { title: 'Express', css: 'checkout' });
 });
@@ -18,11 +17,12 @@ router.get('/carrinho', function (req, res, next) {
   res.render('carrinho', { title: 'Express', css: 'carrinho' });
 });
 
-router.get('/pedidos', function (req, res, next) {
-  res.render('usuario', { title: 'Express', css: 'usuario' });
-});
-
 router.get('/intranet', function (req, res, next) {
   res.render('intranet', { title: 'Express', css: 'usuario' });
 });
+
+ 
+
 module.exports = router;
+
+

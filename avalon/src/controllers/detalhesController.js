@@ -1,6 +1,9 @@
-const detalhesController = {
-    index: (req, res) =>{
-        return res.render("index");
+const detalhesModel = require('../models/detalhesModel')
+
+module.exports = {
+    listadetalhes: (req, res) => {
+        const detalhes = detalhesModel.index();
+       
+        res.render('detalhes', { title: 'Express', css: 'detalhes', detalhes });
     }
-};
-module.exports =detalhesController;
+}

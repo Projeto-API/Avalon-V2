@@ -27,8 +27,15 @@ body {
     right: 0%;
     top: 75px;
     transition: all 0.5s;
+<<<<<<< HEAD
     z-index: 1000;
     font-size: 19px
+=======
+    z-index: 3;
+    font-size: 19px;
+  flex-direction: column;
+  display: flex;
+>>>>>>> paloma
 }
 
 .produto1,

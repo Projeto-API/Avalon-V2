@@ -1,7 +1,18 @@
 var express = require('express');
+<<<<<<< HEAD
 const ControllerCarrinho = require('../controllers/ControllerCarrinho');
+=======
+const estiloProdutosController = require('../controllers/estiloProdutosController');
+const detalhesController = require('../controllers/detalhesController');
+const cadastroProdutosController = require('../controllers/cadastroProdutosController');
+>>>>>>> paloma
 var router = express.Router();
+router.get('/cadastroProdutos', cadastroProdutosController.listacadastroProdutos);
+router.get('/detalhes', detalhesController.listadetalhes);
+router.get('/estiloProdutos', estiloProdutosController.listaestiloProdutos);
 
+
+<<<<<<< HEAD
 
 
 router.get('/carrinho', ControllerCarrinho.listaLivrosServicos);
@@ -23,3 +34,9 @@ router.get('/usuario', function (req, res, next) {
 });
 
 module.exports = router;
+=======
+router.get('/carrinho', function (req, res, next) {
+    res.render('carrinho', { title: 'Express', css: 'carrinho' });
+  });
+module.exports = router;
+>>>>>>> paloma

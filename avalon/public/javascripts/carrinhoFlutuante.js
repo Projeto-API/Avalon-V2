@@ -3,7 +3,7 @@ function abrirCarrinhoFlutuante() {
 }
 
 function fecharCarrinhoFlutuante() {
-    document.getElementById('carrinhoFlutuante').style.width = "-20rem"
+    document.getElementById('carrinhoFlutuante').style.width = "0"
 }
 
 

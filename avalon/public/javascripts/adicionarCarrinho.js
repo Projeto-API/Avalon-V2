@@ -1,12 +1,14 @@
 const btnsAdd = document.querySelectorAll('.comprar')
 
-comprar.forEach((comprar, i) => {
+btnsAdd.forEach((btn, i) => {
     const containerServico = document.getElementById("servico-" + i)
     const imagemServico = containerServico.children[0].children[0].src
     const nomeServico = containerServico.children[1].children[0].innerText
     const valorServico = containerServico.children[1].children[1].innerText
     const descricaoServico = containerServico.children[1].children[2].innerText
     const idServico = containerServico.children[1].children[3].value
+
+    let carrinho = []
 
     const servico = {
         id: idServico,

@@ -1,3 +1,12 @@
+let formCarrinho = document.getElementById("formCarrinho")
+    formCarrinho.onsubmit = function (event){
+        event.preventDefault()
+        let carrinho = JSON.parse(localStorage.getItem("carrinho"))
+        let inputProdutos = document.getElementById("produtosCarrinho")
+        inputProdutos.value = carrinho.map(item => item.id)
+        this.submit()
+    }
+
 function abrirCarrinhoFlutuante() {
     document.getElementById('carrinhoFlutuante').style.width = "20rem"
 }
@@ -21,6 +30,8 @@ function excluirDentroCarrinho(excluiProduto) {
     }
     
 }
+
+
 
 function incluirDentroCarrinho() {
     let em = document.createElement('em')

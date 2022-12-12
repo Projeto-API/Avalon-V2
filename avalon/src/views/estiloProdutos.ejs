@@ -49,15 +49,13 @@
                 </select>
             </div>
             <div class="galeria">
-                <% listaestiloProdutos.forEach((servico, i) => {%>
-                <article id="servico-<%= i %>">
-                    <div class="catalogo_produtos">
+                <% estiloProdutos.forEach((servico, i) => {%>
+                    <div id="servico-<%= i %>" class="catalogo_produtos">
                         <img src="<%= servico.imagem %>" >
                         <a><%= servico.nome %> </a>
                         <a> R$ <%= servico.valor %></a>
                         <button class="comprar"><a href="#">COMPRAR</a></button>
                     </div>
-                </article>
                 <% }) %>
             </div>
     </main>

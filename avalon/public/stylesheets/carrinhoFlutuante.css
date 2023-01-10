@@ -102,22 +102,5 @@ input[type=number] {
     width: 100%;
 }
 
-.continuar {
-    margin: 1rem;
-
-    width: auto;
-  }
-
-.continuar a {
-    width: 100%;
-}
 
 
-@media (min-width: 1200px) {
-    body * {
-        max-width: 100%;
-        margin: 0 auto;
-    }
-
-
-}

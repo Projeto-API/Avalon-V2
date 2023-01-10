@@ -1,7 +1,3 @@
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 * {
     margin: 0;
     padding: 0;
@@ -28,54 +24,11 @@ main {
 .cadastroProutos {
     display: flex;
     max-width: 1200px;
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-*{
-    padding: 0;
-    margin: 0;
-}
-
-header{
-    top: 0;
-    position : static !important;
-}
-a{
-    color:#338866 !important;
-}
-
-
-
-body{
-    width: 100%;
-    height: 100%;
-    
-    
-}
-main{
-    max-width: 1200px;
-    margin: auto;
-    
-}
-body{
-    font-size: arial;
-
-}
-.cadastroProutos{
-    display: flex;
-    max-width: 1200px;
-
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     background-color: #338866;
     opacity: 0.8;
     border-radius: 2rem;
     align-items: flex-end;
     justify-content: space-between;
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 
 }
 
@@ -85,18 +38,6 @@ body{
 }
 
 .usuario {
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-    
-}
-.cadastroProutos img{
-    width: 5rem;
-    margin: 2rem;
-}
-.usuario{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     display: flex;
     margin-bottom: 2.5rem;
     margin-right: 4rem;
@@ -105,10 +46,6 @@ body{
     color: azure;
     text-align: center;
 }
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 
 section .box-sumario {
     display: flex;
@@ -118,35 +55,13 @@ section .box-sumario {
 }
 
 .papelPao {
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-section .box-sumario{
-    display: flex;
-    flex-direction: column;
-
-    
-}
-.papelPao{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     max-width: 1200px;
     top: 2rem;
     margin-left: 1rem;
 }
 
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
 .box-sumario nav ul,
 .box-sumario nav li {
-=======
-nav ul,
-nav li {
->>>>>>> paloma
-=======
-.box-sumario nav ul,
-.box-sumario nav li {
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     max-width: 1200px;
     margin-bottom: 0.5rem;
     display: -webkit-box;
@@ -155,10 +70,6 @@ nav li {
     /* justify-content: center; */
     padding: 3px;
 }
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 
 .container {
     display: flex;
@@ -168,21 +79,6 @@ nav li {
     background-color: #FFFFFF;
     border-radius: 2rem;
 
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-.container{
-    display: flex;
-    margin-top: 0.5rem;
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    background-color: #949494;
-    border-radius: 2rem;
-    margin-top: 1rem;
-   
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 }
 
 legend {
@@ -190,10 +86,6 @@ legend {
 
 }
 
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 .box-menu {
     display: flex;
     flex-direction: column;
@@ -205,30 +97,10 @@ legend {
 }
 
 .box-menu ul li {
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-.box-menu{
-    display: flex;
-    flex-direction: column;
-    background-color: #D9D9D9;
-     opacity: 0.8;
-    border-radius: 2rem;
-    width: 100%
-}
-.box-menu ul li {
-    max-width: 1200px;
-    font-style: 32rem;
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     color: #386C5F;
     list-style: none;
     width: 100%;
 }
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 
 .box-menu ul {
     display: flex;
@@ -265,51 +137,10 @@ legend {
 .box-cadastro h3 {
     text-align: center;
     color: black;
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-.box-menu ul {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-}
-
-.box-menu ul li a{
-    color: #386C5F;
-    text-decoration: none;
-    display: inline;
-    font-size: 18px;
-    list-style: none;
-
-     
-}
-.box-cadastro {
-    width: 100%;
-    margin: 2rem;
-    background-color: #D9D9D9;
-    border-radius: 2rem;
-    max-width: 1200px;
-    display:flex;
-    gap: 2rem;
-    color: #386C5F;
-    margin-top: 45PX;
-    padding: 0 1rem;
-    justify-content: center;
-}
-
-.box-cadastro h1{
-    text-align: center;
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 
 
 }
 
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 .form-auth {
     display: flex;
     flex-direction: column;
@@ -318,28 +149,12 @@ legend {
 }
 
 .double .alteraInp {
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-.formulario{
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-
-}
-.double .alteraInp{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     color: red;
     text-align: center;
     height: 8rem;
     width: 8rem;
     margin: center;
     max-width: 8rem;
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     justify-content: center;
 
 }
@@ -354,32 +169,12 @@ legend {
 }
 
 .double {
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-    margin-right: 6rem;
-    align-self: flex-end;
-}
-.single{
-    display: flex;
-    max-width: 1200;
-    width: 100%;
-    flex-direction: column;
-
-}
-.double{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     width: 100%;
 
 }
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 
 .double>div {
     width: 100%;
@@ -397,24 +192,6 @@ legend {
 }
 
 .searchimg {
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-.double > div{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.2rem;
-    
-    
-}
-.autor{
-    display: flex;
-    justify-content: space-evenly;
-}
-.searchimg{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     max-width: 1200px;
     display: flex;
     align-items: center;
@@ -422,30 +199,15 @@ legend {
     width: 100%;
     border-radius: 2rem;
 }
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
 
 .preco {
 
-=======
-.preco{
-    
->>>>>>> paloma
-=======
-
-.preco {
-
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     display: flex;
     height: 3rem;
     max-width: 65rem;
     width: 100%;
     max-height: 2rem;
     border-radius: 2rem;
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     align-items: center;
 
 }
@@ -458,31 +220,10 @@ legend {
 }
 
 div form input {
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-   
-    align-items: center;
-
-}
-.box-cadastro form div label{
-    display: flex;
-    font-size: 19px;
-    color: #386C5F;
-    width: 55%;
-}
-
-div form input{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     height: 2rem;
     width: 100%;
     max-width: 17rem;
     border-radius: 2rem;
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     background-color: white;
     opacity: 0.5;
     font-size: .8rem;
@@ -507,88 +248,25 @@ div .single input {
 
 }
 
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-    background-color: #338866;
-    opacity: 0.5;
-}
-.categoriaInput{
-    display: flex;
-    align-items: flex-end;
-    height: 2rem;
-    width: 20rem;
-    border-radius: 2rem;
-    margin-right: auto;
-    background-color: #338866;
-}
-div .single input {
-    height: 2.0rem;
-    width: 100%;
-    max-width: 80rem;
-
-}
-textarea {
-    
-    width: 100%;
-    height: 10rem;
-    max-height:10rem;
-    max-width: 733px;
-    border-radius: 23px;
-    background-color: #338866;
-    opacity: 0.5;
-    
-    
-}
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 .button input {
     display: flex;
     text-align: center;
     font-size: 1.5rem;
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     justify-content: space-evenly;
     width: 11rem;
 }
 
 .configbutton {
     background-color: #9CD9C2;
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-    justify-content: space-evenly; 
-    width: 11rem;
-}
-.configbutton {
-    background-color: #338866                                 ;
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     margin-bottom: 1rem;
     display: flex;
     padding: 2rem;
     border-radius: 2rem;
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     align-items: center;
     justify-content: space-around
 }
 
 .cancelar {
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-    justify-content: space-between;
-    align-items: center;
-
-}
-.cancelar{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     background-color: red;
     color: white;
     border-color: black;
@@ -596,25 +274,8 @@ textarea {
     opacity: 0.6;
 
 }
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
 
 .publicar {
-=======
-.salvar{
-    background-color: #C9C16D;
-    color: white;
-    border-color: black;
-    border-width: 0.2rem;
-    opacity: 0.6;
-
-}
-.publicar{
->>>>>>> paloma
-=======
-
-.publicar {
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     background-color: green;
     color: white;
     border-color: black;
@@ -622,10 +283,6 @@ textarea {
     opacity: 0.6;
 
 }
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 
 
 /* ----------------------------Erros ------------------- */
@@ -633,47 +290,17 @@ textarea {
     width: 100%;
     max-width: 46rem;
     border: solid 2px gre;
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-/* ----------------------------Erros ------------------- */
-.invisible{
-display: none;
-}
-
-
-
-.errors{
-    width: 100%;
-    max-width: 46rem;
-    border: solid 2px red;
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     margin-bottom: 10px;
     margin-left: 5rem;
     border-radius: 2rem;
     margin-top: 1.5rem;
 }
 
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 .no-errors {
     display: none;
 }
 
 .linhaerrors {
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-.no-erros{
-    display: none;
-}
-
-.linhaerros{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     color: red;
     margin-left: 2rem;
     text-align-last: start;
@@ -683,10 +310,6 @@ display: none;
 
 }
 
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 .icons {
     display: none;
 }
@@ -694,32 +317,10 @@ display: none;
 /* -----------------------Modal ----------------- */
 
 section .bg-modal {
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-
-
-
-
-
-
-
-
-
-
-/* -----------------------Modal ----------------- */
-
-section .bg-modal{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     background-color: #338866;
     display: flex;
     flex-direction: column;
     width: 100%;
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     max-width: 1200;
     height: 100%;
 }
@@ -728,25 +329,10 @@ section .bg-modal{
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.75);
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-    height: 100%;
-}
-.bg-modal{
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.75);
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     position: fixed;
     z-index: 2;
     top: -150%;
     display: block;
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     transition: 350ms;
 }
 
@@ -762,58 +348,23 @@ div .categoriaInput {
 }
 
 .modal {
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-    transition: 350ms;   
-}
-div .categoriaInput{
-    width: 100%;
-    height: 100%;
-    background-color: #9CD9C2;   
-}
-.baixoBox-01{
-    display: flex;
-    flex-direction: column;
-}
-.modal{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     width: 100%;
     height: 100%;
     max-width: 60rem;
     max-height: 42rem;
     background-color: #9CD9C2;
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     border: 1px solid #000;
     border-radius: 5px;
     margin: 50px auto 0 auto;
     border-radius: 1rem
 }
 
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-    border:1px solid #000;
-    border-radius: 5px;
-    margin: 50px auto 0 auto; 
-    border-radius: 1rem
-}
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 .modal span {
     float: right;
     font-size: 50px;
     color: #000;
     cursor: pointer;
 }
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 
 .modal span:hover {
     color: #990000;
@@ -821,16 +372,6 @@ div .categoriaInput{
 }
 
 .box-01 {
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-.modal span:hover{
-    color: #990000;
-    transition: 350ms;
-}
-.box-01{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     background-color: #386C5F;
     width: 100%;
     height: 100%;
@@ -842,21 +383,10 @@ div .categoriaInput{
     align-items: center;
     flex-direction: row;
     border-radius: 2rem;
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     opacity: 0.8;
 }
 
 .cancelarModal {
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-}
-.cancelarModal{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     background-color: red;
     color: white;
     border-style: none;
@@ -870,17 +400,8 @@ div .categoriaInput{
     font-size: 1.3rem;
     opacity: 0.6;
 }
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
 
 .confirmar {
-=======
-.confirmar{
->>>>>>> paloma
-=======
-
-.confirmar {
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     background-color: #386C5F;
     color: white;
     border-style: none;
@@ -892,10 +413,6 @@ div .categoriaInput{
     opacity: 0.6;
 
 }
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 
 .categoria {
     width: 100%;
@@ -904,25 +421,10 @@ div .categoriaInput{
 }
 
 .titulo {
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-.categoria{
-    width: 100%;
-    background-color: #9CD9C2;
-    
-}
-.titulo{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     display: flex;
     display: inline;
 
 }
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 
 .editarCategoria {
     margin-left: 2rem;
@@ -933,76 +435,31 @@ div .categoriaInput{
 .pesquisar {
     display: flex;
     margin-top: 1rem;
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-.editarCategoria{
-    margin-left: 2rem;
-    margin-top: 1rem;
-}
-.pesquisar{
-    display: flex;
-    margin-top: 1rem ;
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     margin-bottom: 1rem;
     margin-left: 1rem;
     height: 2rem;
     width: 21rem;
     border-radius: 2rem;
     text-align: center;
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     background-color: #FFFFFF;
     opacity: 0.8;
 }
 
 .botaoFechar {
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-    background-color: #CACACA;
-}
-.botaoFechar{
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     justify-content: end;
     margin-right: 14px;
     margin-bottom: -4px;
 }
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
 
 .selecao01,
 .selecao02 {
-=======
-.selecao01,
-.selecao02
-{
->>>>>>> paloma
-=======
-
-.selecao01,
-.selecao02 {
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     display: inline-flex;
     margin-left: 3rem;
     margin-right: -3rem;
     color: black;
 }
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
 
 .button-modal {
-=======
-.button-modal{
->>>>>>> paloma
-=======
-
-.button-modal {
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     display: flex;
     left: 2rem;
     margin-left: 2rem;
@@ -1010,20 +467,9 @@ div .categoriaInput{
     border-radius: 2rem;
 }
 
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
 .bloco {
     background-color: #FFFFFF;
     opacity: 0.8;
-=======
-.bloco{
-    background-color: #CACACA;
->>>>>>> paloma
-=======
-.bloco {
-    background-color: #FFFFFF;
-    opacity: 0.8;
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     width: 15rem;
     height: 26rem;
     margin: 2rem;
@@ -1031,41 +477,19 @@ div .categoriaInput{
     list-style: none;
     line-height: 2rem;
 }
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
 
 .bloco li {
-=======
-.bloco li{
->>>>>>> paloma
-=======
-
-.bloco li {
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     margin-left: 2rem;
     color: black;
 
 }
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
 
 .addItem {
-=======
-.addItem{
->>>>>>> paloma
-=======
-
-.addItem {
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     font-size: 30px;
     border-radius: 1rem;
     height: 42px;
     width: 39px;
     margin-left: -20px;
-<<<<<<< HEAD:css/cadastroProdutos.css
-<<<<<<< HEAD
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
     background-color: #4EC16E;
     opacity: 0.8;
 
@@ -1130,35 +554,4 @@ div .categoriaInput{
     #chaveHamburguer {
         display: none;
     }
-<<<<<<< HEAD:css/cadastroProdutos.css
-=======
-    background-color:  #4EC16E
-
-}
-@media (max-width:880px){
-    .double{
-        flex-direction: column;
-    }
-    .double > div{
-        align-items: stretch;
-        
-    }
-    .box-cadastro form div label{
-        align-self: flex-start;
-    }
-    .configbutton{
-        flex-direction: column-reverse;
-        gap: 1rem;
-        align-items: center;
-       
-        
-    }
-    .papelPao{
-        display: none
-    }
-    
-
->>>>>>> paloma
-=======
->>>>>>> main:avalon/public/css/cadastroProdutos.css
 }

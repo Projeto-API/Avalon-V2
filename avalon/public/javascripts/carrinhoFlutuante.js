@@ -1,10 +1,9 @@
-
 function abrirCarrinhoFlutuante() {
     document.getElementById('carrinhoFlutuante').style.width = "20rem"
 }
 
 function fecharCarrinhoFlutuante() {
-    document.getElementById('carrinhoFlutuante').style.width = "0"
+    document.getElementById('carrinhoFlutuante').style.width = "-20rem"
 }
 
 
@@ -22,8 +21,6 @@ function excluirDentroCarrinho(excluiProduto) {
     }
     
 }
-
-
 
 function incluirDentroCarrinho() {
     let em = document.createElement('em')
@@ -46,6 +43,4 @@ function incluirDentroCarrinho() {
 </div>`
     document.querySelector('#containerProduto').appendChild(em)
 }
-
-
 

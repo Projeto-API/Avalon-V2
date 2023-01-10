@@ -1,20 +1,14 @@
 var express = require('express');
+const estiloProdutosController = require('../controllers/estiloProdutosController');
+const detalhesController = require('../controllers/detalhesController');
+const cadastroProdutosController = require('../controllers/cadastroProdutosController');
 var router = express.Router();
+router.get('/cadastroProdutos', cadastroProdutosController.listacadastroProdutos);
+router.get('/detalhes', detalhesController.listadetalhes);
+router.get('/estiloProdutos', estiloProdutosController.listaestiloProdutos);
 
-/* GET produto page. */
-router.get('/cadastroProduto', function (req, res, next) {
-  res.render('cadastroProduto', { title: 'Express', css: 'cadastroProduto' });
-});
 
-router.get('/detalhes', function (req, res, next) {
-  res.render('detalhes', { title: 'Express', css: 'detalhes' });
-});
-
-router.get('/estiloProdutos', function (req, res, next) {
-  res.render('estiloProdutos', { title: 'Express', css: 'estiloProdutos' });
-});
-router.get('/usuario', function (req, res, next) {
-  res.render('usuario', { title: 'Express', css: 'usuario' });
-});
-
+router.get('/carrinho', function (req, res, next) {
+    res.render('carrinho', { title: 'Express', css: 'carrinho' });
+  });
 module.exports = router;

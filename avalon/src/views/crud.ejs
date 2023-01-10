@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style-login.css">
+    <link rel="stylesheet" href="../css/pagina-cadastro.css">
+    <link rel="stylesheet" href="../css/button.css">
+    <link rel="stylesheet" href="/stylesheets/<%=css%>.css">
+
+    <script src="../script.js/validacoescadastro.js" defer></script>
+    <title>Avalon</title>
+
+</head>
+
+<body>
+    <header>
+        <section class="container-header" id="headerLogin">
+            <a href="home.html" class="logo"><img id="logo" src="../img/logopreto.png" alt=""></a>
+            </a>
+        </section>
+
+    </header>
+
+    <!-- comecei aqui -->
+
+    <main>
+        <div class="section-crud">
+            <button class="continuar"><span>Refazer</span></button>
+            <button class="continuar"><span>Voltar</span></button>
+            <button class="continuar"><span>Adicionar</span></button>
+            <button class="continuar"><span>Deletar</span></button>
+            <form action="/read">
+                <input type="text" name="read" id="read" placeholder="Buscar ">
+        </div>
+        <div class="crud-list">
+            <table class="table table-crud">
+                <thead>
+                    <th><input type="checkbox"></th>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th class="hidden">Categoria</th>
+                    <th class="hidden">Autor</th>
+                    <th class="hidden">Editora</th>
+                    <th class="hidden">Idioma</th>
+                    <th class="hidden">Páginas</th>
+                    <th class="hidden">Publicação</th>
+                    <th class="hidden">Dimensões</th>
+                    <th class="hidden">Acabamento</th>
+                    <th class="hidden hidden-desktop">ISBN-10</th>
+                    <th class="hidden hidden-desktop">ISBN-20</th>
+                    <th class="hidden hidden-desktop">Sinopse</th>
+                    <th>Preço</th>
+                    <th></th>
+                    <th></th>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="data in information | filter:search">
+                        <td><input type="checkbox"></td>
+                        <td>ID</td>
+                        <td>Título</td>
+                        <td class="hidden">Categoria</td>
+                        <td class="hidden">Autor</td>
+                        <td class="hidden">Editora</td>
+                        <td class="hidden">Idioma</td>
+                        <td class="hidden">Páginas</td>
+                        <td class="hidden">Publicação</td>
+                        <td class="hidden">Dimensões</td>
+                        <td class="hidden">Acabamento</td>
+                        <td class="hidden hidden-desktop">ISBN-10</td>
+                        <td class="hidden hidden-desktop">ISBN-20</td>
+                        <td class="hidden hidden-desktop">Sinopse</td>
+                        <td>Preço</td>
+                        <td>
+                            <span class="fa fa-edit" ng-click="editInfo(data)"><br><small>Edit</small></span>
+                        </td>
+                        <td>
+                            <span class="fa fa-trash" ng-click="deleteInfo(data)"><br><small>Delete</small></span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </main>
+
+    <!-- terminei aqui -->
+</body>
+
+</html>
+
+</section>
+
+</html>

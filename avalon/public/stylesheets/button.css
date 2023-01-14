@@ -120,10 +120,14 @@ button a {
     position: absolute;
 }
 
+<<<<<<< HEAD
 #prev:hover,
 #next:hover {
     color: ;
 }
+=======
+
+>>>>>>> paloma
 
 #prev {
     top: 45%;

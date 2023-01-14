@@ -1,0 +1,125 @@
+main {
+    margin: 0;
+    padding-top: 70px;
+    width: 100%;
+
+
+}
+
+.hidden {
+    display: none;
+}
+
+.container-crud {
+    margin: 10px;
+    background-color: #386C5F;
+    border-radius: 20px;
+
+}
+
+.crud-itens {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.itens-content {
+    margin: 10px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    width: 500px;
+
+}
+
+#read {
+    padding: 5px;
+    border-radius: 10px;
+    width: 200px;
+    border: none;
+}
+
+.table {
+    font-size: .8rem;
+    width: 100%;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.table>thead,
+.table>tbody {
+    height: 40px;
+
+}
+
+.table>tbody>tr>td {
+    border-top: 1px solid #ddd;
+}
+
+/* ----MODAL--- */
+
+.box-cadastro {
+    margin: 0 auto;
+    display: none;
+    /* Hidden by default */
+    /* position: fixed; */
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    align-items: center;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+
+    flex-wrap: wrap;
+    background-color: #fefefe;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 100%;
+    max-width: 1200px;
+    /* Could be more or less, depending on screen size */
+}
+
+.cadastroProduto {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background-color: aquamarine;
+    width: 100%;
+    height: 500px;
+}
+
+.configbutton {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.button input {
+    background-color: #4EC16E;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media (min-width: 1200px) {
+
+
+    .hidden-desktop {
+        display: none;
+    }
+
+}

@@ -1,0 +1,179 @@
+<%- include('partials/header') %>
+
+
+    <script src="/javascripts/crud.js" defer></script>
+    <!-- comecei aqui -->
+
+    <main>
+        <section class="container-crud">
+            <div class="crud-itens">
+                <div class="itens-content">
+                    <button id="myBtn" class="continuar"><a>Adicionar</a></button>
+                    <button class="continuar"><a>Deletar</a></button>
+                    <form action="/read">
+                        <input type="text" name="read" id="read" placeholder="Buscar ">
+                </div>
+            </div>
+            <div class="crud-list">
+                <table class="table table-crud">
+                    <thead>
+                        <th><input type="checkbox"></th>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th class="hidden">Categoria</th>
+                        <th class="hidden">Autor</th>
+                        <th class="hidden">Editora</th>
+                        <th class="hidden">Idioma</th>
+                        <th class="hidden">Páginas</th>
+                        <th class="hidden">Publicação</th>
+                        <th class="hidden">Dimensões</th>
+                        <th class="hidden">Acabamento</th>
+                        <th class="hidden hidden-desktop">ISBN-10</th>
+                        <th class="hidden hidden-desktop">ISBN-20</th>
+                        <th class="hidden hidden-desktop">Sinopse</th>
+                        <th>Preço</th>
+                        <th></th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>ID</td>
+                            <td>Título</td>
+                            <td class="hidden">Categoria</td>
+                            <td class="hidden">Autor</td>
+                            <td class="hidden">Editora</td>
+                            <td class="hidden">Idioma</td>
+                            <td class="hidden">Páginas</td>
+                            <td class="hidden">Publicação</td>
+                            <td class="hidden">Dimensões</td>
+                            <td class="hidden">Acabamento</td>
+                            <td class="hidden hidden-desktop">ISBN-10</td>
+                            <td class="hidden hidden-desktop">ISBN-20</td>
+                            <td class="hidden hidden-desktop">Sinopse</td>
+                            <td>Preço</td>
+                            <td>
+                                <button class="edit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                        <path
+                                            d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                    </svg>
+                                </button>
+                            </td>
+                            <td>
+                                <button class="delete"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                        <path
+                                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                        <path fill-rule="evenodd"
+                                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                                    </svg>
+                                    </svg>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="box-cadastro" id="box-cadastro">
+                <div class="modal-content">
+                    <div class="cadastroProduto">
+                        <form method="post" action="/registro">
+                            <div>
+                                <p>
+                                    <label for="tituloLivro">Titulo do Livro:</label> <br>
+                                    <input type="tituloLivro" name="tituloLivro" placeholder="Digite o nome do livro">
+                                </p>
+                                <p>
+                                    <label for="categoria">Categoria:</label> <br>
+                                    <input class="open-modal" onclick="abrirModal()" type="text" value="categoria"
+                                        name="categoria" required></a>
+                                </p>
+                                <p>
+                                    <label for="autor">Autor:</label> <br>
+                                    <input type="autor" name="autor" placeholder="Digite o nome do autor">
+                                </p>
+                                <p>
+                                    <label for="editora">Editora:</label> <br>
+                                    <input type="editora" name="editora" placeholder="Digite a editora">
+                                </p>
+                                <p>
+                                    <label for="idioma">Idioma:</label> <br>
+                                    <input type="idioma" name="idioma" placeholder="Digite o idioma">
+                                </p>
+                                <p>
+                                    <label for="paginas">Paginas:</label> <br>
+                                    <input type="paginas" name="paginas" placeholder="Digite o numero de paginas">
+                                </p>
+                                <p>
+                                    <label for="publicacao">Publicação:</label> <br>
+                                    <input type="publicacao" name="publicacao" placeholder="Digite o ano de publicação">
+                                </p>
+
+                                <p>
+                                    <label for="dimesoes">Dimensões:</label> <br>
+                                    <input type="dimensoes" name="dimensoes"
+                                        placeholder="Coloque a dimensão do produto">
+                                </p>
+                            </div>
+
+                            <div>
+                                <p>
+                                    <label for="acabamento">Acabamento:</label> <br>
+                                    <input type="acabamento" name="acabamento" placeholder="Campo não pode estar vazio">
+                                </p>
+                                <p>
+                                    <label for="nome">ISBN -10 :</label> <br>
+                                    <input type="isbn" name="isbn" placeholder="Campo não pode estar vazio">
+                                </p>
+                                <p>
+                                    <label for="preco">Preço:</label> <br>
+                                    <input type="preco" name="preco" placeholder="Coloque o valor do produto">
+                                </p>
+                                <p>
+                                    <label for="nome">ISBN -20 :</label> <br>
+                                    <input type="isbn" name="isbn" placeholder="Campo não pode estar vazio">
+                                </p>
+                            </div>
+                            <p>
+                                <label for="sinopse">Sinopse:</label> <br>
+                                <input type="sinopse" name="sinopse" placeholder="Coloque a descrição">
+                            </p>
+
+                            <div class="double">
+                                <div>
+                                    <label for="imagemCapa">Imagens Capa:</label> <br>
+                                    <input class="alteraInp" name="imagemCapa" class="searchimg">
+                                </div>
+                                <div>
+                                    <label for="imagensMiniaturas">Imagens Miniaturas:</label> <br>
+                                    <input class="alteraInp" name="imagensMiniaturas" class="searchimg">
+                                </div>
+                            </div>
+
+                            <section class="configbutton">
+                                <div class="button">
+                                    <input class="cancelar" type="submit" name="cancelar" value="Cancelar">
+                                </div>
+                                <div class="button">
+                                    <input class="publicar" type="submit" name="publicar" value="Publicar">
+                                </div>
+                            </section>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- terminei aqui -->
+    </body>
+
+    </html>
+
+    </section>
+
+    </html>

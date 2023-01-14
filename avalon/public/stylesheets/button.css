@@ -14,7 +14,6 @@ button a {
 .comprar {
     z-index: 3;
     align-items: center;
-
     display: flex;
     font-weight: bold;
     width: 100%;

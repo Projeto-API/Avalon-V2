@@ -1,11 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ropa+Sans&display=swap');
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
 
 * body {
     height: auto;
@@ -103,6 +96,7 @@ h6 {
 
 .containercolumninformation {
     width: 100%;
+    max-width: 1200px;
 }
 
 .columninformation {
@@ -131,13 +125,15 @@ h6 {
     padding: 2rem;
     background-color: #286152;
     display: flex;
-    align-items: flex-start;
+    justify-content: flex-start;
     width: 100%;
+    max-width: 1200px;
 }
 
 .columnauthor {
     color: black;
-    padding: 0 1rem;
+    padding-left: 2rem;
+    width: 100%;
 }
 
 .abstract {
@@ -151,48 +147,53 @@ h6 {
 
 
 
+.title {
+    margin: 1rem;
+}
+
 /*  CARROSEIS  */
 
-.continue-vendo {
-    padding: 2rem 2rem;
-    position: relative;
-    width: 100vw;
+.continue-vendo,
+.lancamento {
 
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .carrousel {
-    padding-top: 2rem;
-    overflow-x: hidden;
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 .gallery {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 2rem;
-    list-style: none;
+    margin: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
 }
 
-.gallery * div {
-    padding-top: 5%;
+
+
+.gallery li {
     display: flex;
     flex-direction: column;
     justify-items: center;
-    min-width: 3rem;
-    max-width: 10rem;
+    width: 10rem;
     text-align: center;
+    list-style: none;
 }
 
 
-.item {
-    max-height: 15rem;
-    height: 50vw;
+.item img {
+    margin: 10px;
+    max-height: 12rem;
+    height: 100%;
     border-radius: 5%;
     align-items: center;
 }
+
 
 @media (min-width: 768px) {
     body {

@@ -120,10 +120,7 @@ button a {
     position: absolute;
 }
 
-#prev:hover,
-#next:hover {
-    color: #F6F9FF;
-}
+
 
 #prev {
     top: 45%;

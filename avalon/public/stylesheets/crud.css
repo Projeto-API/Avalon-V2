@@ -2,8 +2,6 @@ main {
     margin: 0;
     padding-top: 70px;
     width: 100%;
-
-
 }
 
 .hidden {
@@ -56,6 +54,10 @@ main {
     border-top: 1px solid #ddd;
 }
 
+.form-crud>input {
+    background-color: #888;
+}
+
 /* ----MODAL--- */
 
 .box-cadastro {
@@ -79,12 +81,9 @@ main {
 .modal-content {
     display: flex;
     flex-direction: column;
-
     flex-wrap: wrap;
-    background-color: #fefefe;
     /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
     width: 100%;
     max-width: 1200px;
     /* Could be more or less, depending on screen size */
@@ -96,24 +95,88 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     flex-wrap: wrap;
-    background-color: aquamarine;
+    background-color: F6F9FF;
+    border-radius: 20px;
     width: 100%;
     height: 500px;
 }
 
-.configbutton {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+.form-crud-label {
+    height: 500px;
 }
 
-.button input {
+form {
     background-color: #4EC16E;
-    width: 200px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    width: 100%;
 }
+
+
+
+.form-crud-input {
+    border: none;
+    border-radius: 10px;
+    height: 25px;
+    padding-left: 5px;
+}
+
+/* ----------------------------Buttons ------------------- */
+
+.configbutton {
+    display: flex;
+    padding-top: 20px;
+    gap: 5px;
+}
+
+#cancelarModal {
+    background-color: red;
+}
+
+/* ----------------------------Erros ------------------- */
+.errors {
+    width: 100%;
+    max-width: 46rem;
+    border: solid 2px gre;
+    margin-bottom: 10px;
+    margin-left: 5rem;
+    border-radius: 2rem;
+    margin-top: 1.5rem;
+}
+
+.no-errors {
+    display: none;
+}
+
+.linhaerrors {
+    color: red;
+    margin-left: 2rem;
+    text-align-last: start;
+    font-size: 19px;
+    margin-top: 12px;
+    font-weight: bolder;
+
+}
+
+.icons {
+    display: none;
+}
+
+
+
+/* -----------------------Validacao ----------------- */
+
+.error {
+    text-align: center;
+    width: 100%;
+    max-width: 46rem;
+    font-size: 12px;
+    color: red;
+
+}
+
+.no-errors {
+    display: none;
+}
+
 
 @media (min-width: 1200px) {
 

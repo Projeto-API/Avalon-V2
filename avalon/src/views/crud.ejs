@@ -1,96 +1,83 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style-login.css">
-    <link rel="stylesheet" href="../css/pagina-cadastro.css">
-    <link rel="stylesheet" href="../css/button.css">
-    <link rel="stylesheet" href="/stylesheets/<%=css%>.css">
-
-    <script src="../script.js/validacoescadastro.js" defer></script>
-    <title>Avalon</title>
-
-</head>
-
-<body>
-    <header>
-        <section class="container-header" id="headerLogin">
-            <a href="home.html" class="logo"><img id="logo" src="../img/logopreto.png" alt=""></a>
-            </a>
-        </section>
-
-    </header>
+<%- include('partials/header') %>
 
     <!-- comecei aqui -->
 
     <main>
-        <div class="section-crud">
-            <button class="continuar"><span>Refazer</span></button>
-            <button class="continuar"><span>Voltar</span></button>
-            <button class="continuar"><span>Adicionar</span></button>
-            <button class="continuar"><span>Deletar</span></button>
-            <form action="/read">
-                <input type="text" name="read" id="read" placeholder="Buscar ">
-        </div>
-        <div class="crud-list">
-            <table class="table table-crud">
-                <thead>
-                    <th><input type="checkbox"></th>
-                    <th>ID</th>
-                    <th>Título</th>
-                    <th class="hidden">Categoria</th>
-                    <th class="hidden">Autor</th>
-                    <th class="hidden">Editora</th>
-                    <th class="hidden">Idioma</th>
-                    <th class="hidden">Páginas</th>
-                    <th class="hidden">Publicação</th>
-                    <th class="hidden">Dimensões</th>
-                    <th class="hidden">Acabamento</th>
-                    <th class="hidden hidden-desktop">ISBN-10</th>
-                    <th class="hidden hidden-desktop">ISBN-20</th>
-                    <th class="hidden hidden-desktop">Sinopse</th>
-                    <th>Preço</th>
-                    <th></th>
-                    <th></th>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="data in information | filter:search">
-                        <td><input type="checkbox"></td>
-                        <td>ID</td>
-                        <td>Título</td>
-                        <td class="hidden">Categoria</td>
-                        <td class="hidden">Autor</td>
-                        <td class="hidden">Editora</td>
-                        <td class="hidden">Idioma</td>
-                        <td class="hidden">Páginas</td>
-                        <td class="hidden">Publicação</td>
-                        <td class="hidden">Dimensões</td>
-                        <td class="hidden">Acabamento</td>
-                        <td class="hidden hidden-desktop">ISBN-10</td>
-                        <td class="hidden hidden-desktop">ISBN-20</td>
-                        <td class="hidden hidden-desktop">Sinopse</td>
-                        <td>Preço</td>
-                        <td>
-                            <span class="fa fa-edit" ng-click="editInfo(data)"><br><small>Edit</small></span>
-                        </td>
-                        <td>
-                            <span class="fa fa-trash" ng-click="deleteInfo(data)"><br><small>Delete</small></span>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
+        <section class="container-crud">
+            <div class="crud-itens">
+                <div class="itens-content">
+                    <button class="continuar"><a>Adicionar</a></button>
+                    <button class="continuar"><a>Deletar</a></button>
+                    <form action="/read">
+                        <input type="text" name="read" id="read" placeholder="Buscar ">
+                </div>
+            </div>
+            <div class="crud-list">
+                <table class="table table-crud">
+                    <thead>
+                        <th><input type="checkbox"></th>
+                        <th>ID</th>
+                        <th>Título</th>
+                        <th class="hidden">Categoria</th>
+                        <th class="hidden">Autor</th>
+                        <th class="hidden">Editora</th>
+                        <th class="hidden">Idioma</th>
+                        <th class="hidden">Páginas</th>
+                        <th class="hidden">Publicação</th>
+                        <th class="hidden">Dimensões</th>
+                        <th class="hidden">Acabamento</th>
+                        <th class="hidden hidden-desktop">ISBN-10</th>
+                        <th class="hidden hidden-desktop">ISBN-20</th>
+                        <th class="hidden hidden-desktop">Sinopse</th>
+                        <th>Preço</th>
+                        <th></th>
+                        <th></th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td>ID</td>
+                            <td>Título</td>
+                            <td class="hidden">Categoria</td>
+                            <td class="hidden">Autor</td>
+                            <td class="hidden">Editora</td>
+                            <td class="hidden">Idioma</td>
+                            <td class="hidden">Páginas</td>
+                            <td class="hidden">Publicação</td>
+                            <td class="hidden">Dimensões</td>
+                            <td class="hidden">Acabamento</td>
+                            <td class="hidden hidden-desktop">ISBN-10</td>
+                            <td class="hidden hidden-desktop">ISBN-20</td>
+                            <td class="hidden hidden-desktop">Sinopse</td>
+                            <td>Preço</td>
+                            <td>
+                                <button class="edit"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                        fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
+                                        <path
+                                            d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z" />
+                                    </svg>
+                                </button>
+                            </td>
+                            <td>
+                                <button class="delete"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                                    <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                                    <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                                  </svg>
+                                </svg>
+                            </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
     </main>
 
     <!-- terminei aqui -->
-</body>
+    </body>
 
-</html>
+    </html>
 
-</section>
+    </section>
 
-</html>
+    </html>

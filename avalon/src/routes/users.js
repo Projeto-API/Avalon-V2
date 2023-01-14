@@ -21,6 +21,9 @@ router.get('/intranet', function (req, res, next) {
   res.render('intranet', { title: 'Express', css: 'usuario' });
 });
 
+router.get('/crud', function (req, res, next) {
+  res.render('crud', { title: 'Express', css: 'crud' });
+});
  
 
 module.exports = router;

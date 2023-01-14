@@ -1,188 +1,232 @@
-main {
-    margin: 0;
-    padding-top: 70px;
-    width: 100%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
 
-.hidden {
-    display: none;
-}
+
+main {
+  padding-top: 70px;
+  max-width: 1200px;
+  }
 
 .container-crud {
-    margin: 10px;
-    background-color: #386C5F;
-    border-radius: 20px;
-
+  margin: 10px;
+ 
+  border-radius: 10px;
+  background: #9CD9C2;
+  justify-content: center;
 }
 
-.crud-itens {
-    display: flex;
-    width: 100%;
-    justify-content: flex-end;
+.container-header-crud {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
 }
 
-.itens-content {
-    margin: 10px;
-    align-items: center;
-    display: flex;
-    gap: 10px;
-    width: 500px;
-
+.header-crud {
+  margin: auto 10px;
+  min-height: 70px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  right: 0;
+  width: 500px;
 }
 
 #read {
-    padding: 5px;
-    border-radius: 10px;
-    width: 200px;
-    border: none;
-}
-
-.table {
-    font-size: .8rem;
-    width: 100%;
-    justify-content: space-between;
-    text-align: center;
-}
-
-.table>thead,
-.table>tbody {
-    height: 40px;
-
-}
-
-.table>tbody>tr>td {
-    border-top: 1px solid #ddd;
-}
-
-.form-crud>input {
-    background-color: #888;
-}
-
-/* ----MODAL--- */
-
-.box-cadastro {
-    margin: 0 auto;
-    display: none;
-    /* Hidden by default */
-    /* position: fixed; */
-    /* Stay in place */
-    z-index: 1;
-    /* Sit on top */
-    align-items: center;
-    width: 100%;
-    /* Full width */
-    height: 100%;
-    /* Full height */
-    overflow: auto;
-    /* Enable scroll if needed */
-
-}
-
-.modal-content {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    /* 15% from the top and centered */
-    padding: 20px;
-    width: 100%;
-    max-width: 1200px;
-    /* Could be more or less, depending on screen size */
-}
-
-.cadastroProduto {
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    background-color: F6F9FF;
-    border-radius: 20px;
-    width: 100%;
-    height: 500px;
-}
-
-.form-crud-label {
-    height: 500px;
-}
-
-form {
-    background-color: #4EC16E;
-    width: 100%;
+  padding: 5px;
+  border-radius: 10px;
+  width: 200px;
+  border: none;
 }
 
 
-
-.form-crud-input {
-    border: none;
-    border-radius: 10px;
-    height: 25px;
-    padding-left: 5px;
+.header span {
+  font-weight: 900;
+  font-size: 20px;
+  word-break: break-all;
 }
 
-/* ----------------------------Buttons ------------------- */
-
-.configbutton {
-    display: flex;
-    padding-top: 20px;
-    gap: 5px;
+.btnCrud {
+  padding: 1rem;
+  align-items: center;
+  width: 150px;
+  display: flex;
+  font-weight: bold;
+  height: 2rem;
+  background-color: #4EC16E;
+  border-radius: 1rem;
+  cursor: pointer;
+  border: none;
 }
 
-#cancelarModal {
-    background-color: red;
+.btnCrud a {
+  width: 100%;
 }
 
-/* ----------------------------Erros ------------------- */
-.errors {
-    width: 100%;
-    max-width: 46rem;
-    border: solid 2px gre;
-    margin-bottom: 10px;
-    margin-left: 5rem;
-    border-radius: 2rem;
-    margin-top: 1.5rem;
-}
-
-.no-errors {
-    display: none;
-}
-
-.linhaerrors {
-    color: red;
-    margin-left: 2rem;
-    text-align-last: start;
-    font-size: 19px;
-    margin-top: 12px;
-    font-weight: bolder;
+.btnCrud :hover {
+  color: white;
 
 }
 
-.icons {
-    display: none;
+#btnSalvar {
+  width: 100%;
+}
+
+.divTable {
+  padding: 10px;
+  width: auto;
+  height: inherit;
+  overflow: auto;
+}
+
+.divTable::-webkit-scrollbar {
+  width: 12px;
+  background-color: whitesmoke;
+}
+
+.divTable::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: darkgray;
+}
+
+table {
+  width: 100%;
+  border-spacing: 10px;
+  word-break: break-all;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: whitesmoke;
+}
+
+tr {
+  border-bottom: 1px solid rgb(238, 235, 235) !important;
+}
+
+tbody tr td {
+  vertical-align: text-top;
+  padding: 6px;
+  max-width: 50px;
+}
+
+thead tr th {
+  padding: 5px;
+  text-align: start;
+  margin-bottom: 50px;
+}
+
+tbody tr {
+  margin-bottom: 50px;
+}
+
+thead tr th.acao {
+  width: 100px !important;
+  text-align: center;
+}
+
+tbody tr td.acao {
+  text-align: center;
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 10px;
+  }
+
+  .header span {
+    font-size: 15px;
+  }
+
+  thead tr th.acao {
+    width: auto !important;
+  }
+
+  td button i {
+    font-size: 20px !important;
+  }
+
+  td button i:first-child {
+    margin-right: 0;
+  }
+
+  .modal {
+    width: 90% !important;
+  }
+
+  .modal label {
+    font-size: 12px !important;
+  }
+}
+
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  width: 50%;
+}
+
+.modal label {
+  font-size: 14px;
+  width: 100%;
+}
+
+.modal input {
+  width: 100%;
+  outline: none;
+  padding: 5px 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 
 
-
-/* -----------------------Validacao ----------------- */
-
-.error {
-    text-align: center;
-    width: 100%;
-    max-width: 46rem;
-    font-size: 12px;
-    color: red;
-
+.active {
+  display: flex;
 }
 
-.no-errors {
-    display: none;
+.active .modal {
+  animation: modal .4s;
 }
 
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
 
-@media (min-width: 1200px) {
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
 
+td button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
 
-    .hidden-desktop {
-        display: none;
-    }
+td button i {
+  font-size: 25px;
+}
 
+td button i:first-child {
+  margin-right: 10px;
 }

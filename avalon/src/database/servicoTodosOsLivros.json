@@ -22,19 +22,8 @@
         "imagem": "/images/1661966653.webp",
         "nome": "Livro 5",
         "valor": 30
-    },
-    {
-        "id": 5,
-        "imagem": "/images/1661966653.webp",
-        "nome": "Teste05",
-        "valor": 15
-    },
-    {
-        "id": 6,
-        "imagem": "/images/1661966653.webp",
-        "nome": "Teste 02 ",
-        "valor": 20
     }
+    
 
    
 ]

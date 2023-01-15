@@ -50,11 +50,11 @@
             </div>
             <div class="galeria">
                 <% estiloProdutos.forEach((servico, i) => {%>
-                    <div id="servico-<%= i %>" class="catalogo_produtos">
+                    <div id="servico-<%= i %>" class="catalogo_produtos servico-<%= i %>">
                         <img src="<%= servico.imagem %>" >
-                        <a><%= servico.nome %> </a>
+                        <a ><%= servico.nome %> </a>
                         <a> R$ <%= servico.valor %></a>
-                        <button class="comprar"><a href="#">COMPRAR</a></button>
+                        <button class="comprar"><a onclick= "incluirDentroCarrinho('servico-<%=i%>')" href="#">COMPRAR</a></button>
                     </div>
                 <% }) %>
             </div>

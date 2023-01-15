@@ -1,6 +1,14 @@
+// module.exports = {
+//     mostraCarrinho: (req, res) => {
+//         res.render('carrinho', {js: "/js/carrinho.js"})
+//     }
+// }
+
+const Carrinho = require('../models/Carrinho')
 module.exports = {
-    mostraCarrinho: (req, res) => {
-        res.render('carrinho', {js: "/js/carrinho.js"})
+    index: (req, res) => {
+        const carrinho = Carrinho.findAll();
+        res.render('carrinho',  { carrinho })
     }
 }
 

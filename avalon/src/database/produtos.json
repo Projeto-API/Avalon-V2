@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "nome": "Banho",
+        "valor": "R$ 30,00"
+    },
+    {
+        "id": 2,
+        "nome": "Tosa",
+        "valor": "R$ 15,00"
+    },
+    {
+        "id": 3,
+        "nome": "Corte de unhas",
+        "valor": "R$ 5,00"
+    },
+    {
+        "id": "a71b9dd4-a881-4be1-919e-e796c7ba5935",
+        "nome": "Tosa Maneira",
+        "valor": "15.22"
+    }
+]

@@ -1,103 +1,114 @@
 <%- include('partials/header') %>
 
-    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
-    <script src="/javascripts/crud.js" defer></script>
+  <link rel="stylesheet" href="/stylesheets/crud.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 
-    <main>
-        <div class="container-crud">
-            <div class="container-header-crud">
-                <div class="header-crud">
-                    <button onclick="openModal()" class="btnCrud"><a> Adicionar</a></button>
-                    <button class="btnCrud"><a> Deletar</a></button>
-                    <form action="/read">
-                        <input type="text" name="read" id="read" placeholder="Buscar ">
+  <script src="/javascripts/crud.js" defer></script>
 
-                </div>
-            </div>
-            <div class="divTable">
-                <table>
-                    <thead>
-                        <tr>
-                            <th><input type="checkbox"></th>
-                            <th>ID</th>
-                            <th>Título</th>
-                            <th>Preço</th>
-                            <th class="acao">Editar</th>
-                            <th class="acao">Excluir</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <td><input type="checkbox"></td>
-                        <td>ID</td>
-                    </tbody>
-                </table>
-            </div>
-
-            <div class="modal-container">
-                <div class="modal">
-                    <form>
-                        <label class="form-crud-label" for="tituloLivro">Titulo do Livro:</label> <br>
-                        <input class="form-crud-input" id="titulo" type="tituloLivro" name="tituloLivro"
-                            placeholder="Digite o nome do livro">
-
-                        <label class="form-crud-label" for="preco">Preço:</label> <br>
-                        <input class="form-crud-input" id="preco" type="text" name="preco"
-                            placeholder="Coloque o valor do produto">
-
-                        <label class="form-crud-label" for="categoria">Categoria:</label> <br>
-                        <input class="form-crud-input" class="open-modal" onclick="abrirModal()" type="text"
-                            value="categoria" name="categoria" required></a>
-
-                        <label class="form-crud-label" for="autor">Autor:</label> <br>
-                        <input class="form-crud-input" type="text" name="autor" placeholder="Digite o nome do autor">
-
-                        <label class="form-crud-label" for="editora">Editora:</label> <br>
-                        <input class="form-crud-input" type="text" name="editora" placeholder="Digite a editora">
-
-                        <label class="form-crud-label" for="idioma">Idioma:</label> <br>
-                        <input class="form-crud-input" type="text" name="idioma" placeholder="Digite o idioma">
-
-                        <label class="form-crud-label" for="paginas">Paginas:</label> <br>
-                        <input class="form-crud-input" type="text" name="paginas"
-                            placeholder="Digite o numero de paginas">
-
-                        <label class="form-crud-label" for="publicacao">Publicação:</label> <br>
-                        <input class="form-crud-input" type="text" name="publicacao"
-                            placeholder="Digite o ano de publicação">
-
-                        <label class="form-crud-label" for="dimesoes">Dimensões:</label> <br>
-                        <input class="form-crud-input" type="text" name="dimensoes"
-                            placeholder="Coloque a dimensão do produto">
-
-                        <label class="form-crud-label" for="acabamento">Acabamento:</label> <br>
-                        <select name="acabamento" id="acabamenti">
-                            <option value="dura">Capa Dura</option>
-                            <option value="brochura">Brochura</option>
-                        </select>
-
-                        <label class="form-crud-label" for="nome">ISBN -10 :</label> <br>
-                        <input class="form-crud-input" type="text" name="isbn" placeholder="Campo não pode estar vazio">
-
-                        <label class="form-crud-label" for="nome">ISBN -20 :</label> <br>
-                        <input class="form-crud-input" type="text" name="isbn" placeholder="Campo não pode estar vazio">
-
-                        <label class="form-crud-label" for="sinopse">Sinopse:</label> <br>
-                        <textarea class="form-crud-input" name="sinopse"> Coloque a descrição</textarea>
-
-                        <label class="form-crud-label" for="imagemCapa">Imagen Capa:</label> <br>
-                        <input type="file" class="alteraInp" name="imagemCapa">
-
-                        <label class="form-crud-label" for="imagensMiniaturas">Imagens Miniaturas:</label> <br>
-                        <input type="file" class="alteraInp" name="imagensMiniaturas" multiple>
-
-                        <button class="btnCrud" id="btnSalvar"><a> Salvar</a></button>
-                    </form>
-                </div>
-            </div>
+  <main>
+    <div class="container-crud">
+      <div class="container-header-crud">
+        <div class="header-crud">
+          <button onclick="openModal()" class="btnCrud"><a>Adicionar</a></button>
+          <button class="btnCrud"><a> Deletar</a></button>
+          <form action="/read">
+            <input type="text" name="read" id="read" placeholder="Buscar ">
 
         </div>
-    </main>
+      </div>
+      <div class="divTable">
+        <table>
+          <thead>
+            <tr>
+              <th><input type="checkbox"></th>
+              <th>ID</th>
+              <th>Título</th>
+              <th>Preço</th>
+              <th class="acao">Editar</th>
+              <th class="acao">Excluir</th>
 
-    </body>
+            </tr>
+          </thead>
 
-    </html>
+          <tbody>
+            <% produtos.forEach(produto=> { %>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>
+                  <%= produto.id %>
+                </td>
+                <td>
+                  <%= produto.nome %>
+                </td>
+                <td>
+                  <%= produto.valor %>
+                </td>
+                <td class="acao">
+                  <form action="/servicos/editar/<%= produto.id %>?_method=PUT" method="POST">
+                    <button type="submit "><i class='bx bx-edit'></i></button>
+                  </form>
+                </td>
+                <td class="acao">
+                  <button onclick="deleteItem(${index})"><i class='bx bx-trash'></i></button>
+                </td>
+              </tr>
+              <% }) %>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="modal-container">
+        <div class="modal">
+          <form>
+            <label class="form-crud-label" for="tituloLivro">Titulo do Livro:</label> <br>
+            <input class="form-crud-input" id="titulo" type="text" name="nome"
+              placeholder="Digite o nome do livro">
+
+            <label class="form-crud-label" for="preco">Preço:</label> <br>
+            <input class="form-crud-input" id="crud-preco" type="text" name="valor" placeholder="Coloque o valor do produto">
+
+            <label class="form-crud-label" for="categoria">Categoria:</label> <br>
+            <input class="form-crud-input" class="open-modal" type="text" value="categoria" name="descricao"
+              required></a>
+
+            <label class="form-crud-label" for="autor">Autor:</label> <br>
+            <input class="form-crud-input" type="text" name="autor" placeholder="Digite o nome do autor">
+
+            <label class="form-crud-label" for="editora">Editora:</label> <br>
+            <input class="form-crud-input" type="text" name="editora" placeholder="Digite a editora">
+
+            <label class="form-crud-label" for="idioma">Idioma:</label> <br>
+            <input class="form-crud-input" type="text" name="idioma" placeholder="Digite o idioma">
+
+            <label class="form-crud-label" for="paginas">Paginas:</label> <br>
+            <input class="form-crud-input" type="text" name="paginas" placeholder="Digite o numero de paginas">
+
+            <label class="form-crud-label" for="publicacao">Publicação:</label> <br>
+            <input class="form-crud-input" type="text" name="publicacao" placeholder="Digite o ano de publicação">
+
+            <label class="form-crud-label" for="dimesoes">Dimensões:</label> <br>
+            <input class="form-crud-input" type="text" name="dimensoes" placeholder="Coloque a dimensão do produto">
+
+            <label class="form-crud-label" for="acabamento">Acabamento:</label> <br>
+            <input class="form-crud-input" type="text" name="acabamento" placeholder="Campo não pode estar vazio">
+
+            <label class="form-crud-label" for="nome">ISBN -10 :</label> <br>
+            <input class="form-crud-input" type="text" name="isbn" placeholder="Campo não pode estar vazio">
+
+            <label class="form-crud-label" for="nome">ISBN -20 :</label> <br>
+            <input class="form-crud-input" type="text" name="isbn" placeholder="Campo não pode estar vazio">
+
+            <label class="form-crud-label" for="sinopse">Sinopse:</label> <br>
+            <input class="form-crud-input" type="text" name="sinopse" placeholder="Coloque a descrição">
+            <!-- 
+                <label class="form-crud-label" for="imagemCapa">Imagen Capa:</label> <br>
+                <input type="file" class="alteraInp" name="imagemCapa">
+
+                <label class="form-crud-label" for="imagensMiniaturas">Imagens Miniaturas:</label> <br>
+                <input type="file" class="alteraInp" name="imagensMiniaturas" multiple> -->
+            <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
+          </form>
+        </div>
+      </div>
+      </section>
+  </main>

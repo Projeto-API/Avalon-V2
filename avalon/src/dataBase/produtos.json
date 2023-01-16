@@ -1,0 +1,17 @@
+[
+    {
+        "id": 1,
+        "nome": "O morro dos ventos Uivantes",
+        "valor": "R$ 45,00"
+    },
+    {
+        "id": 2,
+        "nome": "Harry Potter e a pedra Filosofal",
+        "valor": "R$ 35,00"
+    },
+    {
+        "id": 3,
+        "nome": "Lady Killers",
+        "valor": "R$ 55,00"
+    }
+]

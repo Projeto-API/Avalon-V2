@@ -1,4 +1,5 @@
 <%- include('partials/header') %>
+<link rel="stylesheet" href="/stylesheets/paginaCadastro.css">
 <main>
   
     <script  src="/javascripts/validacoescadastro.js" defer></script>
@@ -6,7 +7,7 @@
         <div class="cadastro2">
             <h5>CADASTRO</h5>
         </div>
-        <form class="form-auth card" method="post" action="/registro/?_method=PUT">
+        <form class="form-auth card" method="post" action="/registro">
             <li class="email">E-mail</li>
             <input type="email" name="email" placeholder="Digite seu email">
             <li class="senha">Senha</li>

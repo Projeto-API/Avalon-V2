@@ -1,17 +1,34 @@
 var express = require('express');
+
 const estiloProdutosController = require('../controllers/estiloProdutosController');
 const detalhesController = require('../controllers/detalhesController');
 const cadastroProdutosController = require('../controllers/cadastroProdutosController');
-const ServicosController = require('../controllers/servicosController')
+const produtoController = require('../controllers/produtoController');
+
 var router = express.Router();
 router.get('/cadastroProdutos', cadastroProdutosController.listacadastroProdutos);
 router.get('/detalhes', detalhesController.listadetalhes);
 router.get('/estiloProdutos', estiloProdutosController.listaestiloProdutos);
-router.get('/admin', ServicosController.mostraAdminServicos);
+
 
 router.get('/carrinho', function (req, res, next) {
     res.render('carrinho', { title: 'Express', css: 'carrinho' });
-    router.delete('../remove', ServicosController.deletaServico)
   });
+
+
+  // C - Criação de novos serviços
+router.get('/cadastrar', produtoController.editar);
+
+
+// R - Leitura de serviços
+router.get('/', produtoController.index);
+router.get('/admin', produtoController.admin);
+
+// U - Atualização de serviços
+router.get('/editar/:id', produtoController.editar);
+
+router.get('/excluir/:id', produtoController.excluir);
+
+
 
 module.exports = router;

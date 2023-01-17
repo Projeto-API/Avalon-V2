@@ -52,9 +52,12 @@
                 <% estiloProdutos.forEach((servico, i) => {%>
                     <div id="servico-<%= i %>" class="catalogo_produtos servico-<%= i %>">
                         <img src="<%= servico.imagem %>" >
-                        <a ><%= servico.nome %> </a>
-                        <a> R$ <%= servico.valor %></a>
-                        <button class="comprar"><a onclick= "incluirDentroCarrinho('servico-<%=i%>')" href="#">COMPRAR</a></button>
+                        <form id="formCarrinho" action="/carrinho" method="post">
+                            <a ><%= servico.nome %> </a>   
+                            <a> R$ <%= servico.valor %></a>
+                            <input type="hidden" name="produtosId" value="<%= servico.id %>">
+                            <button type="submit" class="comprar">COMPRAR</a></button>
+                        </form>
                     </div>
                 <% }) %>
             </div>

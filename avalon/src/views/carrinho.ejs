@@ -3,9 +3,11 @@
 
 
     <main>
+        <section class="carrinho-header">
+            <h3> Carrinho</h3>
+         </section>
         <section class="containerProduto">
-           
-            <ul  class="cabecalho">
+           <ul  class="cabecalho">
                 <li id="header1"><span>PRODUTO</span></li>
                 <li id="header2"><span>QUANTIDADE</span></li>
                 <li id="header3"><span>PREÇO</span></li>
@@ -15,11 +17,11 @@
 
             <div class="produto">
                 <% carrinho.forEach(item => { %>
-                <img class="imagemProduto" src="/images/produtos/my broken mariko/mariko-capa.jpg" alt="">
+                <img class="imagemProduto" src=<% item.imagem %> alt="">
                 <div class="informationProduto">
                     <div class="nomeProduto">
-                        <%= item.nome %>
-                        <h5 id="produtoTitulo">MY BROKEN MARIKO</h5>
+                        
+                        <h5 id="produtoTitulo"><%= item.nome %></h5>
                     </div>
                     <div class="informationProdutoValue">
                         <div>
@@ -27,14 +29,16 @@
                             <input type="number" id="quantidadeValue" value="2">
                             <button type="button" onclick="aumentarQtd('up')" class="aumentarQtd">+</button>
                         </div>
-                        <%= item.preco %>
-                        <span id="preco"> R$ 39,90 </span>
+                        
+                        <span id="preco"> R$ <%= item.valor %> </span>
 
                         <button>Atualizar</button>
                         <button class="excluir">X</button>
                     </div>
                 </div>
             </div>
+
+            
 
             <!-- <div class="produto">
                 <img class="imagemProduto" src="/images/produtos/manifesto/capa.jpg" alt="">

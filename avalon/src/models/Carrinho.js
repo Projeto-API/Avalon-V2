@@ -5,22 +5,14 @@ const filename = path.join(__dirname,"../database/carrinho.json");
 
 module.exports ={
 
-    save: (data) =>{
+    save: function (data) {
        return fs.writeFileSync(filename,data )
     },
-    createOne:(req) => {
-        let novoServico = {
-            id:servicos [servicos.lenght -1].id +1,
-            nome: req.body.nome,
-            valor: req.body.valor,
-            imagem:req.file.filename
-        }
-        carrinho.push(novoServico);
+    add: function (produtoId)  {
+        carrinho.push(produtoId);
         this.save(JSON.stringify(carrinho,null,4));
-        
     },
-
-    findAll: () =>{
+    findAll: function () {
         return carrinho
     }
 }

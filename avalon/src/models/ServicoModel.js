@@ -17,6 +17,9 @@ module.exports = {
     servicos.push(novoServico)
     fs.writeFileSync(path.join(__dirname, "../database/servicoTodosOsLivros.json"), JSON.stringify(servicos, null, 4))
   },
+  findAllById: (ids) => {
+    return servicos.filter(servico => ids.includes(servico.id));
+  },
   findOne: (req) => {
     let found = servicos.find(servico => servico.id == req.query.id)
     return found

@@ -1,16 +1,14 @@
-// Get the modal
-var modal = document.getElementById("box-cadastro");
+const modal = document.querySelector('.modal-container')
+const tbody = document.querySelector('tbody')
+const sTitulo = document.querySelector('#titulo')
+const sPreco = document.querySelector('#preco')
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
+const btnSalvar = document.querySelector('#btnSalvar')
 
 // Get the <span> element that closes the modal
 var btnCancelar = document.getElementById("cancelarModal");
 
-// When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+
 
 // When the user clicks on <span> (x), close the modal
 btnCancelar.onclick = function() {

@@ -38,7 +38,7 @@ module.exports = {
     this.armazenar(produtos);
   },
 
-  excluir (id) {
+  deletar (id) {
     if (!id) return
 
    produtos = produtos.filter(produto => produto.id != id);

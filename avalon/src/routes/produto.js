@@ -27,7 +27,6 @@ router.get('/admin', produtoController.admin);
 // U - Atualização de serviços
 router.get('/editar/:id', produtoController.editar);
 
-router.get('/excluir/:id', produtoController.excluir);
 
 
 

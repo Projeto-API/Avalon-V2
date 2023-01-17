@@ -1,5 +1,5 @@
 const produtoModel = require('../models/produtoModel');
-const { validationResult } = require('express-validator');
+
 
 module.exports = {
   index: (req, res) => {
@@ -56,16 +56,9 @@ module.exports = {
     return res.redirect('/admin');
   },
 
-  excluir: (req, res) => {
-    const { id } = req.params;   let { errors } = validationResult(req);    produtoModel.excluir(id);
-    if (errors.length) {
-        const errosFormatados = {};
-        errors.forEach(erro => errosFormatados[erro.param] = erro.msg);
-        return res.render('excluir', {
-            errors: errosFormatados,
-            produto: { id, ...req.body }
-          });
-        }
-        produtoModel.excluir(id, req.body);
-        res.send("O produto de id " + req.body.id + " foi deletado com sucesso")
-      }}
+  deletar: (req, res) => {
+    const { id } = req.params;
+    produtoModel.deletar(id);
+    return res.redirect('/admin');
+  }
+};

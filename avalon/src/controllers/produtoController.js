@@ -1,5 +1,5 @@
 const produtoModel = require('../models/produtoModel');
-
+const { validationResult } = require('express-validator');
 
 module.exports = {
   index: (req, res) => {
@@ -7,6 +7,17 @@ module.exports = {
 
     return res.render('produtos', { produtos }); // ----->  Enviando os dados para a view
   },
+
+  // admin: async (req, res) => {
+
+
+  //   res.render('crud', {title : 'Avalon - Painel do administrador'});
+    
+    
+    
+    
+    
+  //   },
 
   admin: (req, res) => {
     const produtos = produtoModel.index();
@@ -34,8 +45,12 @@ module.exports = {
       return res.render('cadastro-edicao', { errors: errosFormatados, produto: null });
     }
 
+
     produtoModel.criar(req.body);
-    return res.redirect('/admin');
+
+    res.send("O produto de nome " + req.body.nome + " foi criado com sucesso")
+
+    // return res.redirect('/admin');
   },
 
   atualizar: (req, res) => {

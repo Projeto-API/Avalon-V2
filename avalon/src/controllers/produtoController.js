@@ -1,3 +1,4 @@
+const { deletar } = require('../models/produtoModel');
 const produtoModel = require('../models/produtoModel');
 // const { validationResult } = require('express-validator');
 
@@ -41,6 +42,7 @@ module.exports = {
     return res.redirect('/produto/admin');
 
   }
+ 
 
   // atualizar: (req, res) => {
   //   const { id } = req.params;
@@ -59,10 +61,11 @@ module.exports = {
   //   produtoModel.atualizar(id, req.body);
   //   return res.redirect('/admin');
   // },
-
-  // deletar: (req, res) => {
-  //   const { id } = req.params;
-  //   produtoModel.deletar(id);
-  //   return res.redirect('/admin');
-  // }
+  deletar: (req, res) => {
+    const { id } = req.params;
+    produtoModel.deletar(id);
+    return res.redirect('/produto/admin');
+  }
 };
+
+

@@ -50,6 +50,9 @@
                 </td>
                 <td class="acao">
                   <button onclick="deleteItem({index})"><i class='bx bx-trash'></i></button>
+                  <form action="/produto/deletar/<%= produto.id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="btn btn-secondary">Delete</button>
+                    </form>
                 </td>
               </tr>
               <% }) %>
@@ -79,10 +82,6 @@
 
                         <label class="form-crud-label" for="idioma">Idioma:</label> <br>
                         <input class="form-crud-input" type="text" name="idioma" placeholder="Digite o idioma">
-
-                        <label class="form-crud-label" for="paginas">Paginas:</label> <br>
-                        <input class="form-crud-input" type="text" name="paginas"
-                            placeholder="Digite o numero de paginas">
 
                         <label class="form-crud-label" for="publicacao">Publicação:</label> <br>
                         <input class="form-crud-input" type="text" name="publicacao"

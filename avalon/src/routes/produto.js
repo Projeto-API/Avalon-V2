@@ -32,8 +32,9 @@ router.post('/admin', produtoController.criar);
 
 
 // // D - Remoção de serviços
-// router.delete('/deletar/:id', produtoController.deletar);
 
-
-
+router.delete('/produto/:id', (req, res) => {
+  let {id} = req.params
+   produtos = produto.filter(produto => produto.id != id);
+});
 module.exports = router;

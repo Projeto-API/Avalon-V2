@@ -6,6 +6,81 @@ main {
   max-width: 1200px;
   }
 
+  .modal-container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  height: ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: white;
+  border-radius: 10px;
+  width: 600px;
+
+}
+
+.modal label {
+  font-size: 14px;
+  width: 100%;
+}
+
+.modal input {
+  width: 100%;
+  outline: none;
+  padding: 5px 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+ 
+}
+
+.active {
+  display: flex;
+}
+
+.active .modal {
+  animation: modal .4s;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+td button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+td button i {
+  font-size: 25px;
+}
+
+td button i:first-child {
+  margin-right: 10px;
+}
 .container-crud {
   margin: 10px;
  
@@ -157,76 +232,3 @@ tbody tr td.acao {
   }
 }
 
-.modal-container {
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-  z-index: 999;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 40px;
-  background-color: white;
-  border-radius: 10px;
-  width: 50%;
-}
-
-.modal label {
-  font-size: 14px;
-  width: 100%;
-}
-
-.modal input {
-  width: 100%;
-  outline: none;
-  padding: 5px 10px;
-  width: 100%;
-  margin-bottom: 20px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-}
-
-
-.active {
-  display: flex;
-}
-
-.active .modal {
-  animation: modal .4s;
-}
-
-@keyframes modal {
-  from {
-    opacity: 0;
-    transform: translate3d(0, -60px, 0);
-  }
-
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-td button {
-  border: none;
-  outline: none;
-  background: transparent;
-}
-
-td button i {
-  font-size: 25px;
-}
-
-td button i:first-child {
-  margin-right: 10px;
-}

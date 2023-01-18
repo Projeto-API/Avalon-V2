@@ -1,5 +1,5 @@
 const produtoModel = require('../models/produtoModel');
-
+// const { validationResult } = require('express-validator');
 
 module.exports = {
   index: (req, res) => {
@@ -7,6 +7,8 @@ module.exports = {
 
     return res.render('produtos', { produtos }); // ----->  Enviando os dados para a view
   },
+
+
 
   admin: (req, res) => {
     const produtos = produtoModel.index();
@@ -25,40 +27,42 @@ module.exports = {
   },
 
   criar: (req, res) => {
-    let { errors } = validationResult(req);
+    // let { errors } = validationResult(req);
 
-    if (errors.length) {
-      const errosFormatados = {};
-      errors.forEach(erro => errosFormatados[erro.param] = erro.msg);
+    // if (errors.length) {
+    //   const errosFormatados = {};
+    //   errors.forEach(erro => errosFormatados[erro.param] = erro.msg);
 
-      return res.render('cadastro-edicao', { errors: errosFormatados, produto: null });
-    }
+    //   return res.render('crud', { errors: errosFormatados, produto: null });
+    // }
+
 
     produtoModel.criar(req.body);
-    return res.redirect('/admin');
-  },
+    return res.redirect('/produto/admin');
 
-  atualizar: (req, res) => {
-    const { id } = req.params;
-    let { errors } = validationResult(req);
-
-    if (errors.length) {
-      const errosFormatados = {};
-      errors.forEach(erro => errosFormatados[erro.param] = erro.msg);
-
-      return res.render('cadastro-edicao', {
-        errors: errosFormatados,
-        produto: { id, ...req.body }
-      });
-    }
-
-    produtoModel.atualizar(id, req.body);
-    return res.redirect('/admin');
-  },
-
-  deletar: (req, res) => {
-    const { id } = req.params;
-    produtoModel.deletar(id);
-    return res.redirect('/admin');
   }
+
+  // atualizar: (req, res) => {
+  //   const { id } = req.params;
+  //   let { errors } = validationResult(req);
+
+  //   if (errors.length) {
+  //     const errosFormatados = {};
+  //     errors.forEach(erro => errosFormatados[erro.param] = erro.msg);
+
+  //     return res.render('cadastro-edicao', {
+  //       errors: errosFormatados,
+  //       produto: { id, ...req.body }
+  //     });
+  //   }
+
+  //   produtoModel.atualizar(id, req.body);
+  //   return res.redirect('/admin');
+  // },
+
+  // deletar: (req, res) => {
+  //   const { id } = req.params;
+  //   produtoModel.deletar(id);
+  //   return res.redirect('/admin');
+  // }
 };

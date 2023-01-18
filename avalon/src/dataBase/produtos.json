@@ -1,17 +1,1 @@
-[
-    {
-        "id": 1,
-        "nome": "O morro dos ventos Uivantes",
-        "valor": "R$ 30,00"
-    },
-    {
-        "id": 2,
-        "nome": "Harry Potter e a Pedra Filosofal",
-        "valor": "R$ 15,00"
-    },
-    {
-        "id": 3,
-        "nome": "A Revolução dos bichos",
-        "valor": "R$ 5,00"
-    }
-]
+[{"id":1,"nome":"O morro dos ventos Uivantes","valor":"R$ 30,00"},{"id":2,"nome":"Harry Potter e a Pedra Filosofal","valor":"R$ 15,00"},{"id":3,"nome":"A Revolução dos bichos","valor":"R$ 5,00"},{"id":4,"nome":"Adoleta","valor":"123"}]

@@ -79,23 +79,22 @@ module.exports = {
   // }
 
 
-// atualizar: (req, res) => {
-//   const { id } = req.params;
-//   let { errors } = validationResult(req);
+editar: (req, res) => {
+const { id } = req.params;
+// let { errors } = validationResult(req);
 
 //   if (errors.length) {
 //     const errosFormatados = {};
 //     errors.forEach(erro => errosFormatados[erro.param] = erro.msg);
 
-//     return res.render('cadastro-edicao', {
 //       errors: errosFormatados,
 //       servico: { id, ...req.body }
 //     });
 //   }
 
-//   ServicoModel.atualizar(id, req.body);
-//   return res.redirect('/produto/admin');
-// },
+produtoModel.editar(id, req.body);
+return res.redirect('/produto/admin');
+},
 
 deletar (id) {
   if (!id) return

@@ -5,6 +5,7 @@ const estiloProdutosController = require('../controllers/estiloProdutosControlle
 const detalhesController = require('../controllers/detalhesController');
 const cadastroProdutosController = require('../controllers/cadastroProdutosController');
 
+
 // 
 const produtoController = require('../controllers/produtoController');
 
@@ -14,9 +15,6 @@ router.get('/detalhes', detalhesController.listadetalhes);
 router.get('/estiloProdutos', estiloProdutosController.listaestiloProdutos);
 
 
-router.get('/carrinho', function (req, res, next) {
-    res.render('carrinho', { title: 'Express', css: 'carrinho' });
-  });
 
 
   // C - Criação de novos serviços
@@ -28,7 +26,7 @@ router.post('/admin', produtoController.criar);
 // // router.get('/admin', produtoController.admin);
 
 // // U - Atualização de serviços
-// router.get('/editar/:id', produtoController.editar);
+router.put('/editar/:id', produtoController.editar);
 
 
 // // D - Remoção de serviços

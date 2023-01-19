@@ -82,7 +82,7 @@ td button i:first-child {
   margin-right: 10px;
 }
 .container-crud {
-  margin: 10px;
+  margin: 19px;
  
   border-radius: 10px;
   background: #9CD9C2;
@@ -146,6 +146,7 @@ td button i:first-child {
 }
 
 .divTable {
+
   padding: 10px;
   width: auto;
   height: inherit;

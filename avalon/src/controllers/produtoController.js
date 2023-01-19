@@ -13,16 +13,7 @@ module.exports = {
     return res.render('crud', { produtos });
   },
 
-  editar: (req, res) => {
-    const { id } = req.params;
-    let produto = null
 
-    if (id) {
-      produto = produtoModel.buscar(id);
-    }
-
-    return res.render('cadastro-edicao', { produto, errors: {} });
-  },
 
   criar: (req, res) => {
     produtoModel.criar(req.body);
@@ -30,9 +21,21 @@ module.exports = {
 
   },
 
+  editar: (req, res) => {
+  produtoModel.editar(req);
+  
+  res.send("O produto de id " + req.body.id + " foi atualizado com sucesso")
+  },
+
+
+
   deletar: (req, res) => {
     const { id } = req.params;
     produtoModel.deletar(id);
-    return res.redirect('/produto/admin');
+    
+    res.send("O produto de id " + req.body.id + " foi deletado com sucesso")
   }
 };
+
+
+

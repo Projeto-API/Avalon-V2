@@ -61,9 +61,13 @@
         </section>
 
         <div class="continuar">
-            <button id="continuar"><a href="carrinho.html">CONTINUAR</a></button>
+            <form id="formCarrinho"    method="get" action="/carrinho">
+                <input type="hidden" name="produtos" id="produtosCarrinho">
+                <button type="submit" id="continuar">CONTINUAR</button>
+            </form>
         </div>
 
     </section>
 
 <div>
+

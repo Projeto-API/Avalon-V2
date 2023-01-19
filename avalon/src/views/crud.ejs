@@ -42,8 +42,9 @@
                   <%= produto.valor %>
                 </td>
                 <td class="acao">
-                  <form action="/servicos/editar/<%= produto.id %>?_method=PUT" method="POST">
-                    <button type="submit "><i class='bx bx-edit'></i></button>
+                  <form action="/produto/editar/<%= produto.id %>?_method=PUT" method="PUT">
+                    <button onclick="openModal()" class="bx bx-edit"></button>
+                    
                   </form>
                 </td>
                 <form action="/produto/deletar/<%= produto.id %>?_method=DELETE" method="POST">

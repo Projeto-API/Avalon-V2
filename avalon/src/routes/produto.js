@@ -23,7 +23,7 @@ router.post('/admin', produtoController.criar);
 
 
 // Rota de busca de produtos
-router.get('/buscar/:id', produtoController.buscar);
+router.get('/buscar', produtoController.buscar);
 
 
 // // U - Atualização de serviços

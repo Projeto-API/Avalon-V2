@@ -1,109 +1,110 @@
 const path = require('path');
 const fs = require('fs');
 
-const produtos = require('../database/produtos.json');
+
 const nomeArquivoProdutos = path.join(__dirname, '../database/produtos.json');
 // const { validationResult } = require('express-validator');
 
 module.exports = {
   index() {
-    return produtos
+    return JSON.parse(fs.readFileSync(nomeArquivoProdutos))
   },
 
   armazenar(produtos) {
     fs.writeFileSync(nomeArquivoProdutos, JSON.stringify(produtos));
   },
 
-  // criar ({ nome, valor, descricao }) {
+  // ----------FUNÇÃO SIMPLIFICADA----------
+  criar: function (produto) {
 
-  criar({
-    nome,
-    valor,
-    categoria,
-    autor,
-    editora,
-    idioma,
-    paginas,
-    publicacao,
-    dimensoes,
-    acabamento,
-    isbnUm,
-    isbnDois,
-    sinopse,
-    imagemCapa,
-    imagensMiniaturas }) {
+    const produtos = this.index();
 
-    produtos.push({
-      id: produtos[produtos.length - 1].id + 1, 
-      nome,
-      valor,
-      categoria,
-      autor,
-      editora,
-      idioma,
-      paginas,
-      publicacao,
-      dimensoes,
-      acabamento,
-      isbnUm,
-      isbnDois,
-      sinopse,
-      imagemCapa,
-      imagensMiniaturas
-    });
-    this.armazenar(produtos);
-    // let { errors } = validationResult(req);
 
-    // if (errors.length) {
-    //   const errosFormatados = {};
-    //   errors.forEach(erro => errosFormatados[erro.param] = erro.msg);
+    const lastID = produtos[produtos.length - 1]?.id
 
-    //   return res.render('cadastro-edicao', { errors: errosFormatados, produto: null });
-    // }
+    if (lastID) {
+      produto.id = lastID + 1
+    } 
+    else {produto.id = 1}
 
-    // produtoModel.criar(req.body);
-    // return res.redirect('/produto/admin');
+    produtos.push(produto);
+    this.armazenar(produtos)
+
   },
-  
 
 
- 
-  // deletar (id) {
-  //   if (!id) return
+  // criar({
+  //   nome,
+  //   valor,
+  //   categoria,
+  //   autor,
+  //   editora,
+  //   idioma,
+  //   paginas,
+  //   publicacao,
+  //   dimensoes,
+  //   acabamento,
+  //   isbnUm,
+  //   isbnDois,
+  //   sinopse,
+  //   imagemCapa,
+  //   imagensMiniaturas }) {
 
   //   const produtos = this.index();
-  //   const novosProdutos = produtos.filter(produto => produto.id != id);
-  //   // O passo abaixo remove imagens submetidas através do multer.
-  //   // fs.unlinkSync(path.join(__dirname, '../../public/' + servico.filename)).
-  //   this.armazenar(novosProdutos);
-  // }
 
+  //   produtos.push({
+  //     id: produtos[produtos.length - 1].id + 1,
+  //     nome,
+  //     valor,
+  //     categoria,
+  //     autor,
+  //     editora,
+  //     idioma,
+  //     paginas,
+  //     publicacao,
+  //     dimensoes,
+  //     acabamento,
+  //     isbnUm,
+  //     isbnDois,
+  //     sinopse,
+  //     imagemCapa,
+  //     imagensMiniaturas
+  //   });
 
-editar: (req, res) => {
-const { id } = req.params;
-// let { errors } = validationResult(req);
+  //   this.armazenar(produtos);
 
-//   if (errors.length) {
-//     const errosFormatados = {};
-//     errors.forEach(erro => errosFormatados[erro.param] = erro.msg);
+  // },
 
-//       errors: errosFormatados,
-//       servico: { id, ...req.body }
-//     });
-//   }
+  buscar: function (req, res) {
+    let found = this.index().filter(produto => produto.id == req.query.buscar)
+    return found
+  },
 
-produtoModel.editar(id, req.body);
-return res.redirect('/produto/admin');
-},
+  editar: (req, res) => {
+    const { id } = req.params;
+    // let { errors } = validationResult(req);
 
-deletar (id) {
-  if (!id) return
+    //   if (errors.length) {
+    //     const errosFormatados = {};
+    //     errors.forEach(erro => errosFormatados[erro.param] = erro.msg);
 
-  const produtos = this.index();
-  const novosProdutos = produtos.filter(produto => produto.id != id);
-  // O passo abaixo remove imagens submetidas através do multer.
-  // fs.unlinkSync(path.join(__dirname, '../../public/' + servico.filename)).
-  this.armazenar(novosProdutos);
-}
+    //       errors: errosFormatados,
+    //       servico: { id, ...req.body }
+    //     });
+    //   }
+
+    produtoModel.editar(id, req.body);
+    return res.redirect('/produto/admin');
+  },
+
+  deletar(id) {
+    if (!id) return
+
+    const produtos = this.index();
+    const novosProdutos = produtos.filter(produto => produto.id != id);
+    // O passo abaixo remove imagens submetidas através do multer.
+    // fs.unlinkSync(path.join(__dirname, '../../public/' + servico.filename)).
+    this.armazenar(novosProdutos);
+  }
 }
 

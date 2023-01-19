@@ -1,15 +1,12 @@
-const { deletar } = require('../models/produtoModel');
 const produtoModel = require('../models/produtoModel');
-// const { validationResult } = require('express-validator');
+const { validationResult } = require('express-validator');
 
 module.exports = {
   index: (req, res) => {
-    const produtos = produtoModel.index(); // <--- Pedindo os dados para o modelo
+    const servicos = ServicoModel.index(); // <--- Pedindo os dados para o modelo
 
-    return res.render('produtos', { produtos }); // ----->  Enviando os dados para a view
+    return res.render('servicos', { servicos }); // ----->  Enviando os dados para a view
   },
-
-
 
   admin: (req, res) => {
     const produtos = produtoModel.index();
@@ -28,44 +25,14 @@ module.exports = {
   },
 
   criar: (req, res) => {
-    // let { errors } = validationResult(req);
-
-    // if (errors.length) {
-    //   const errosFormatados = {};
-    //   errors.forEach(erro => errosFormatados[erro.param] = erro.msg);
-
-    //   return res.render('crud', { errors: errosFormatados, produto: null });
-    // }
-
-
     produtoModel.criar(req.body);
     return res.redirect('/produto/admin');
 
-  }
- 
+  },
 
-  // atualizar: (req, res) => {
-  //   const { id } = req.params;
-  //   let { errors } = validationResult(req);
-
-  //   if (errors.length) {
-  //     const errosFormatados = {};
-  //     errors.forEach(erro => errosFormatados[erro.param] = erro.msg);
-
-  //     return res.render('cadastro-edicao', {
-  //       errors: errosFormatados,
-  //       produto: { id, ...req.body }
-  //     });
-  //   }
-
-  //   produtoModel.atualizar(id, req.body);
-  //   return res.redirect('/admin');
-  // },
   deletar: (req, res) => {
     const { id } = req.params;
     produtoModel.deletar(id);
     return res.redirect('/produto/admin');
   }
 };
-
-

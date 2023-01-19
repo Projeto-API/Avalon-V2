@@ -25,11 +25,9 @@
               <th>Título</th>
               <th>Preço</th>
               <th class="acao">Editar</th>
-              <th class="acao">Excluir</th>
-
+              <th class="acao">Excluir</th>  
             </tr>
           </thead>
-
           <tbody>
             <% produtos.forEach(produto=> { %>
               <tr>
@@ -48,13 +46,15 @@
                     <button type="submit "><i class='bx bx-edit'></i></button>
                   </form>
                 </td>
-                <td class="acao">
-                  <button onclick="deleteItem({index})"><i class='bx bx-trash'></i></button>
-                  <form action="/produto/deletar/<%= produto.id %>?_method=DELETE" method="POST">
-                    <button type="submit" class="btn btn-secondary">Delete</button>
-                    </form>
-                </td>
-              </tr>
+                <form action="/produto/deletar/<%= produto.id %>?_method=DELETE" method="POST">
+                  
+                  <td class="acao">
+                    <button onclick="deleteItem({index})"><i class='bx bx-trash'></i></button>
+                  </td>
+  
+                </form>
+                
+    
               <% }) %>
           </tbody>
         </table>
@@ -79,13 +79,6 @@
 
                         <label class="form-crud-label" for="editora">Editora:</label> <br>
                         <input class="form-crud-input" type="text" name="editora" placeholder="Digite a editora">
-
-                        <label class="form-crud-label" for="idioma">Idioma:</label> <br>
-                        <input class="form-crud-input" type="text" name="idioma" placeholder="Digite o idioma">
-
-                        <label class="form-crud-label" for="publicacao">Publicação:</label> <br>
-                        <input class="form-crud-input" type="text" name="publicacao"
-                            placeholder="Digite o ano de publicação">
 
                         <label class="form-crud-label" for="sinopse">Sinopse:</label> <br>
                         <textarea class="form-crud-input" name="sinopse"> Coloque a descrição</textarea>

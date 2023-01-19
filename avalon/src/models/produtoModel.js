@@ -54,9 +54,15 @@ module.exports = {
     this.armazenar(produtos);
   },
 
+ 
   deletar (id) {
-    //se o id não é passado, para a execução
-   produtos = produtos.filter(produto => produto.id != id);
-   this.armazenar(produtos);
+    if (!id) return
+
+    const produtos = this.index();
+    const novosProdutos = produtos.filter(produto => produto.id != id);
+    // O passo abaixo remove imagens submetidas através do multer.
+    // fs.unlinkSync(path.join(__dirname, '../../public/' + servico.filename)).
+    this.armazenar(novosProdutos);
   }
-}
+};
+

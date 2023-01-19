@@ -33,48 +33,6 @@ module.exports = {
   },
 
 
-  // criar({
-  //   nome,
-  //   valor,
-  //   categoria,
-  //   autor,
-  //   editora,
-  //   idioma,
-  //   paginas,
-  //   publicacao,
-  //   dimensoes,
-  //   acabamento,
-  //   isbnUm,
-  //   isbnDois,
-  //   sinopse,
-  //   imagemCapa,
-  //   imagensMiniaturas }) {
-
-  //   const produtos = this.index();
-
-  //   produtos.push({
-  //     id: produtos[produtos.length - 1].id + 1,
-  //     nome,
-  //     valor,
-  //     categoria,
-  //     autor,
-  //     editora,
-  //     idioma,
-  //     paginas,
-  //     publicacao,
-  //     dimensoes,
-  //     acabamento,
-  //     isbnUm,
-  //     isbnDois,
-  //     sinopse,
-  //     imagemCapa,
-  //     imagensMiniaturas
-  //   });
-
-  //   this.armazenar(produtos);
-
-  // },
-
   buscar: function (req, res) {
     let found = this.index().filter(produto => produto.id == req.query.buscar)
     return found

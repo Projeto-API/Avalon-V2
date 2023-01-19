@@ -78,6 +78,9 @@ td button i {
   font-size: 25px;
 }
 
+#editar {
+  font-size: 25px;
+}
 td button i:first-child {
   margin-right: 10px;
 }
@@ -131,6 +134,8 @@ td button i:first-child {
   cursor: pointer;
   border: none;
 }
+
+
 
 .btnCrud a {
   width: 100%;

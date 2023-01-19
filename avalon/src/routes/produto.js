@@ -21,9 +21,10 @@ router.get('/estiloProdutos', estiloProdutosController.listaestiloProdutos);
 router.get('/admin', produtoController.admin);
 router.post('/admin', produtoController.criar);
 
-// // R - Leitura de serviços
-// router.get('/', produtoController.index);
-// // router.get('/admin', produtoController.admin);
+
+// Rota de busca de produtos
+router.get('/buscar/:id', produtoController.buscar);
+
 
 // // U - Atualização de serviços
 router.put('/editar/:id', produtoController.editar);

@@ -13,7 +13,7 @@
           <button class="btnCrud"><a> Deletar</a></button>
           <form action="/read">
             <input type="text" name="read" id="read" placeholder="Buscar ">
-
+          
         </div>
       </div>
       <div class="divTable">
@@ -43,7 +43,7 @@
                 </td>
                 <td class="acao">
                   <form action="/produto/editar/<%= produto.id %>?_method=PUT" method="PUT">
-                    <button onclick="openModal()" class="bx bx-edit"></button>
+                    <button onclick="openModal()" class="bx bx-edit" id="editar"></button>
                     
                   </form>
                 </td>
@@ -55,7 +55,7 @@
   
                 </form>
                 
-    
+              </form>
               <% }) %>
           </tbody>
         </table>

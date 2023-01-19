@@ -27,6 +27,10 @@ module.exports = {
   res.send("O produto de id " + req.body.id + " foi atualizado com sucesso")
   },
 
+  buscar: (req, res) => {
+
+    res.send(produtoModel.findOne(req))
+},
 
 
   deletar: (req, res) => {

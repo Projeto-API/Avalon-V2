@@ -2,67 +2,109 @@ const path = require('path');
 const fs = require('fs');
 
 const produtos = require('../database/produtos.json');
-const nomeArquivoprodutos = path.join(__dirname, '../database/produtos.json');
+const nomeArquivoProdutos = path.join(__dirname, '../database/produtos.json');
+// const { validationResult } = require('express-validator');
 
 module.exports = {
-  index () {
+  index() {
     return produtos
   },
 
-  armazenar (produtos) {
-    fs.writeFileSync(nomeArquivoprodutos, JSON.stringify(produtos));
+  armazenar(produtos) {
+    fs.writeFileSync(nomeArquivoProdutos, JSON.stringify(produtos));
   },
 
   // criar ({ nome, valor, descricao }) {
 
-  criar (req) {
+  criar({
+    nome,
+    valor,
+    categoria,
+    autor,
+    editora,
+    idioma,
+    paginas,
+    publicacao,
+    dimensoes,
+    acabamento,
+    isbnUm,
+    isbnDois,
+    sinopse,
+    imagemCapa,
+    imagensMiniaturas }) {
 
-
-    let novoLivro = {
-      id: produtos[produtos.length -1].id + 1,
-      nome: req.body.nome,
-      valor: req.body.valor
-     
-    }
-
-    // enviando para o produtos JSON
-    produtos.push(novoLivro);
+    produtos.push({
+      id: produtos[produtos.length - 1].id + 1, 
+      nome,
+      valor,
+      categoria,
+      autor,
+      editora,
+      idioma,
+      paginas,
+      publicacao,
+      dimensoes,
+      acabamento,
+      isbnUm,
+      isbnDois,
+      sinopse,
+      imagemCapa,
+      imagensMiniaturas
+    });
     this.armazenar(produtos);
+    // let { errors } = validationResult(req);
 
-    console.log(produtos);
+    // if (errors.length) {
+    //   const errosFormatados = {};
+    //   errors.forEach(erro => errosFormatados[erro.param] = erro.msg);
+
+    //   return res.render('cadastro-edicao', { errors: errosFormatados, produto: null });
+    // }
+
+    // produtoModel.criar(req.body);
+    // return res.redirect('/produto/admin');
   },
+  
 
-  buscar (id) {
-    return produtos.find(produto => produto.id == id);
-  },
-
-
-  atualizar (id, { nome, valor, descricao }) {
-    // validacoes para parar a execução
-    if (!id) return
-
-    if (!nome || !valor || !descricao) return
-
-// criacao de variavel auxiliar
-    const produto = this.buscar(id);
-//apos localizar o id, sobrescreve o valor dos campos.
-    produto.nome = nome;
-    produto.valor = valor;
-    produto.descricao = descricao;
-
-
-    this.armazenar(produtos);
-  },
 
  
-  deletar (id) {
-    if (!id) return
+  // deletar (id) {
+  //   if (!id) return
 
-    const produtos = this.index();
-    const novosProdutos = produtos.filter(produto => produto.id != id);
-    // O passo abaixo remove imagens submetidas através do multer.
-    // fs.unlinkSync(path.join(__dirname, '../../public/' + servico.filename)).
-    this.armazenar(novosProdutos);
-  }
-};
+  //   const produtos = this.index();
+  //   const novosProdutos = produtos.filter(produto => produto.id != id);
+  //   // O passo abaixo remove imagens submetidas através do multer.
+  //   // fs.unlinkSync(path.join(__dirname, '../../public/' + servico.filename)).
+  //   this.armazenar(novosProdutos);
+  // }
+
+
+// atualizar: (req, res) => {
+//   const { id } = req.params;
+//   let { errors } = validationResult(req);
+
+//   if (errors.length) {
+//     const errosFormatados = {};
+//     errors.forEach(erro => errosFormatados[erro.param] = erro.msg);
+
+//     return res.render('cadastro-edicao', {
+//       errors: errosFormatados,
+//       servico: { id, ...req.body }
+//     });
+//   }
+
+//   ServicoModel.atualizar(id, req.body);
+//   return res.redirect('/produto/admin');
+// },
+
+deletar (id) {
+  if (!id) return
+
+  const produtos = this.index();
+  const novosProdutos = produtos.filter(produto => produto.id != id);
+  // O passo abaixo remove imagens submetidas através do multer.
+  // fs.unlinkSync(path.join(__dirname, '../../public/' + servico.filename)).
+  this.armazenar(novosProdutos);
+}
+}
 

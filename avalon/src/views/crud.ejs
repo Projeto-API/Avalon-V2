@@ -9,11 +9,14 @@
     <div class="container-crud">
       <div class="container-header-crud">
         <div class="header-crud">
+          <button class="btnCrud" ><a href="/produto/admin">Todos</a></button>
           <button onclick="openModal()" class="btnCrud"><a>Adicionar</a></button>
           <button class="btnCrud"><a> Deletar</a></button>
-          <form action="/read">
-            <input type="text" name="read" id="read" placeholder="Buscar ">
-          
+          <form action="/produto/buscar" method="get">
+            <input type="text" name="buscar" id="read" placeholder="Buscar ">
+          </form>
+
+
         </div>
       </div>
       <div class="divTable">
@@ -25,7 +28,7 @@
               <th>Título</th>
               <th>Preço</th>
               <th class="acao">Editar</th>
-              <th class="acao">Excluir</th>  
+              <th class="acao">Excluir</th>
             </tr>
           </thead>
           <tbody>
@@ -44,48 +47,44 @@
                 <td class="acao">
                   <form action="/produto/editar/<%= produto.id %>?_method=PUT" method="PUT">
                     <button onclick="openModal()" class="bx bx-edit" id="editar"></button>
-                    
                   </form>
                 </td>
-                <form action="/produto/deletar/<%= produto.id %>?_method=DELETE" method="POST">
-                  
-                  <td class="acao">
-                    <button onclick="deleteItem({index})"><i class='bx bx-trash'></i></button>
-                  </td>
-  
+                <td class="acao">
+                  <form action="/produto/deletar/<%= produto.id %>?_method=DELETE" method="POST">
+                    <button><i class='bx bx-trash'></i></button>
+                </td>
                 </form>
-                
-              </form>
-              <% }) %>
+                </form>
+                <% }) %>
           </tbody>
         </table>
       </div>
 
       <div class="modal-container">
         <div class="modal">
-          <form action="/produto/admin"  method="POST">
+                    <form action="/produto/admin" method="POST">
             <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
-            <input class="form-crud-input" id="titulo" type="text" name="nome"
-              placeholder="Digite o nome do livro">
+            <input class="form-crud-input" id="titulo" type="text" name="nome" placeholder="Digite o nome do livro">
 
             <label class="form-crud-label" for="valor">Preço:</label> <br>
-            <input class="form-crud-input" id="crud-preco" type="text" name="valor" placeholder="Coloque o valor do produto">
+            <input class="form-crud-input" id="crud-preco" type="text" name="valor"
+              placeholder="Coloque o valor do produto">
 
             <label class="form-crud-label" for="categoria">Categoria:</label> <br>
-                        <input class="form-crud-input" class="open-modal" type="text"
-                            value="categoria" name="categoria" required></a>
+            <input class="form-crud-input" class="open-modal" type="text" value="categoria" name="categoria"
+              required></a>
 
-                        <label class="form-crud-label" for="autor">Autor:</label> <br>
-                        <input class="form-crud-input" type="text" name="autor" placeholder="Digite o nome do autor">
+            <label class="form-crud-label" for="autor">Autor:</label> <br>
+            <input class="form-crud-input" type="text" name="autor" placeholder="Digite o nome do autor">
 
-                        <label class="form-crud-label" for="editora">Editora:</label> <br>
-                        <input class="form-crud-input" type="text" name="editora" placeholder="Digite a editora">
+            <label class="form-crud-label" for="editora">Editora:</label> <br>
+            <input class="form-crud-input" type="text" name="editora" placeholder="Digite a editora">
 
-                        <label class="form-crud-label" for="sinopse">Sinopse:</label> <br>
-                        <textarea class="form-crud-input" name="sinopse"> Coloque a descrição</textarea>
+            <label class="form-crud-label" for="sinopse">Sinopse:</label> <br>
+            <textarea class="form-crud-input" name="sinopse"> Coloque a descrição</textarea>
 
-                        <label class="form-crud-label" for="imagemCapa">Imagen Capa:</label> <br>
-                        <input type="file" class="alteraInp" name="imagemCapa">
+            <label class="form-crud-label" for="imagemCapa">Imagem Capa:</label> <br>
+            <input type="file" class="alteraInp" name="imagemCapa">
 
             <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
           </form>

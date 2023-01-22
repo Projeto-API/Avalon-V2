@@ -14,8 +14,8 @@ module.exports = {
   },
 
 
-
   criar: (req, res) => {
+
     produtoModel.criar(req.body);
     return res.redirect('/produto/admin');
 
@@ -27,9 +27,10 @@ module.exports = {
   res.send("O produto de id " + req.body.id + " foi atualizado com sucesso")
   },
 
-  buscar: (req, res) => {
 
-    res.send(produtoModel.findOne(req))
+  buscar: (req, res) => {
+    const produtos = produtoModel.buscar(req)
+    res.render('crud', { produtos })
 },
 
 
@@ -37,9 +38,12 @@ module.exports = {
     const { id } = req.params;
     produtoModel.deletar(id);
     
-    res.send("O produto de id " + req.body.id + " foi deletado com sucesso")
+    
+    console.log("O produto de id " + req.body.id + " foi deletado com sucesso");
+    return res.redirect('/produto/admin')
   }
 };
+
 
 
 

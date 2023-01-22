@@ -23,7 +23,6 @@ module.exports = {
 
   editar: (req, res) => {
   produtoModel.editar(req);
-  
   res.send("O produto de id " + req.body.id + " foi atualizado com sucesso")
   },
 
@@ -37,8 +36,6 @@ module.exports = {
   deletar: (req, res) => {
     const { id } = req.params;
     produtoModel.deletar(id);
-    
-    
     console.log("O produto de id " + req.body.id + " foi deletado com sucesso");
     return res.redirect('/produto/admin')
   }

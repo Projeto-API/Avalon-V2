@@ -38,9 +38,16 @@ module.exports = {
     return found
   },
 
-  editar: (req, res) => {
-    const { id } = req.params;
-    // let { errors } = validationResult(req);
+  editar: (req) => {
+    servicos.forEach(produto => {
+      if (produto.id != req.body.id) return
+      produto.nome = req.body.nome
+      produto.descricao = req.body.descricao
+      produto.valor = req.body.valor
+      produto.imagem = req.body.imagem
+    })
+    fs.writeFileSync(path.join(__dirname, "../database/produtos.json"), JSON.stringify(produto, null, 4))
+    // letproduto{ errors } = validationResult(req);
 
     //   if (errors.length) {
     //     const errosFormatados = {};

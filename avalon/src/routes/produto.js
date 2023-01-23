@@ -27,7 +27,7 @@ router.get('/buscar', produtoController.buscar);
 
 
 // // U - Atualização de serviços
-router.put('/editar/:id', produtoController.editar);
+router.get('/editar/:id', produtoController.buscarporid);
 
 
 // // D - Remoção de serviços

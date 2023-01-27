@@ -22,12 +22,7 @@ router.get('/admin', produtoController.admin);
 router.post('/admin', produtoController.criar);
 
 
-// Rota de busca de produtos
-router.get('/buscar', produtoController.buscar);
 
-
-// // U - Atualização de serviços
-router.put('/editar/:id', produtoController.editar);
 
 
 // // D - Remoção de serviços

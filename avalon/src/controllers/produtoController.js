@@ -1,11 +1,12 @@
 const produtoModel = require('../models/produtoModel');
 
 
+
 module.exports = {
   index: (req, res) => {
-    const servicos = ServicoModel.index(); // <--- Pedindo os dados para o modelo
+    const produtos = produtoModel.index(); // <--- Pedindo os dados para o modelo
 
-    return res.render('servicos', { servicos }); // ----->  Enviando os dados para a view
+    return res.render('produtos', { produtos }); // ----->  Enviando os dados para a view
   },
 
   admin: (req, res) => {
@@ -21,24 +22,13 @@ module.exports = {
 
   },
 
-  editar: (req, res) => {
-  produtoModel.editar(req);
-  
-  res.send("O produto de id " + req.body.id + " foi atualizado com sucesso")
-  },
-
-
-  buscar: (req, res) => {
-    const produtos = produtoModel.buscar(req)
-    res.render('crud', { produtos })
-},
 
 
   deletar: (req, res) => {
     const { id } = req.params;
     produtoModel.deletar(id);
-    
-    
+
+
     console.log("O produto de id " + req.body.id + " foi deletado com sucesso");
     return res.redirect('/produto/admin')
   }

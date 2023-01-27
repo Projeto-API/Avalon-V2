@@ -135,8 +135,6 @@ td button i:first-child {
   border: none;
 }
 
-
-
 .btnCrud a {
   width: 100%;
 }
@@ -149,6 +147,16 @@ td button i:first-child {
 #btnSalvar {
   width: 100%;
 }
+
+.crudform {
+  
+  align-items: center;
+}
+
+.crudform :hover {
+  color: white;
+}
+
 
 .divTable {
 

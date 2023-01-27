@@ -13,5 +13,6 @@ function openModal(edit = false, index = 0) {
             modal.classList.remove('active')
         }
     }
- 
+
 }
+

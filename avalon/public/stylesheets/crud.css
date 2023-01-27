@@ -36,7 +36,7 @@ main {
   width: 100%;
 }
 
-.modal input {
+.modal input, .modal textarea {
   width: 100%;
   outline: none;
   padding: 5px 10px;
@@ -45,8 +45,14 @@ main {
   border-top: none;
   border-left: none;
   border-right: none;
+  resize:none;
+  
+ }
+
+ .modal textarea::placeholder {
+  font-size: 13px;
+ }
  
-}
 
 .active {
   display: flex;
@@ -81,9 +87,11 @@ td button i {
 #editar {
   font-size: 25px;
 }
+
 td button i:first-child {
   margin-right: 10px;
 }
+
 .container-crud {
   margin: 19px;
  

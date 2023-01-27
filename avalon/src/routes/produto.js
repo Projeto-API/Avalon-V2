@@ -36,8 +36,6 @@ router.post('/admin', upload.single("capaImg"),produtoController.criar);
 
 
 
-
-
 // // D - Remoção de serviços
 
 router.delete('/deletar/:id', produtoController.deletar);

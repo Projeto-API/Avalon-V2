@@ -9,9 +9,10 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
 var methodOverride = require('method-override');
-
+var session = require('express-session');
 var indexRouter = require('../src/routes/index');
 var usersRouter = require('../src/routes/users');
+var carrinhoRouter = require('../src/routes/carrinho');
 // const carrinhoRouter = require('../src/routes/carrinho')
 var produtoRouter = require('../src/routes/produto');
 
@@ -24,15 +25,18 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 
+// app.use(session({ secret: 'Nosso segredo.'}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(methodOverride('_method'));
 
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/produto', produtoRouter);
+app.use('/carrinho', carrinhoRouter);
 // app.use('/carrinho', carrinhoRouter)
 
 

@@ -7,3 +7,7 @@ module.exports = {
         res.render('paginaCadastro', { title: 'Express', css: 'paginaCadastro', paginaCadastro });
     }
 }
+
+
+
+

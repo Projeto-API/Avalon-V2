@@ -35,9 +35,9 @@ module.exports = {
   buscarporid: (req, res) => {
   
     const produtos = produtoModel.buscarId(req)
-    console.log("req em prod", req.id)
-  console.log("Produtos", produtos)
+
   res.render('editarProduto', { produtos })
+
 },
   deletar: (req, res) => {
     const { id } = req.params;
@@ -47,6 +47,32 @@ module.exports = {
   }
 };
 
+ // function openModal(edit = false, index = 0) {
+  //   modal.classList.add('active')
+  
+  //   modal.onclick = e => {
+  //     if (e.target.className.indexOf('modal-container') !== -1) {
+  //       modal.classList.remove('active')
+  //     }
+  //   }
+  
+  //   if (edit) {
+  //     produto.nome = itens[index].nome
+  //     produto.id = itens[index].id
+  //     produto.valor = itens[index].valor
+  //     id = index
+  //   } else {
+  //     produto.nome = ''
+  //     produto.id = ''
+  //     produto.valor = ''
+  //   }
+    
+  // }
+  
+  // function editItem(index) {
+  
+  //   openModal(true, index)
+  // }
 
 
 

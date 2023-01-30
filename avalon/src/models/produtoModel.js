@@ -41,8 +41,8 @@ module.exports = {
   buscarId: function (req, res) {
     console.log("req", req.params.id)
     let found = this.index().filter(produto => produto.id == req.params.id)
-    console.log(">>>>", found)
-    return found
+    fs.writeFileSync(path.join(__dirname, "../database/produtos.json"), JSON.stringify(produto, null, 4))
+    return JSON.parse(fs.readFileSync(produto));
   },
 
   editar: (req) => {
@@ -53,7 +53,8 @@ module.exports = {
       produto.valor = req.body.valor
       produto.imagem = req.body.imagem
     })
-    fs.writeFileSync(path.join(__dirname, "../database/produtos.json"), JSON.stringify(produto, null, 4))
+   
+   
     // letproduto{ errors } = validationResult(req);
 
     //   if (errors.length) {

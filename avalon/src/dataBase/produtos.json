@@ -1,23 +1,5 @@
 [
     {
-        "id": 2,
-        "nome": "Harry Potter",
-        "valor": "R$ 30,00",
-        "categoria": "Higienização completa",
-        "autor": "Higienização completa",
-        "editora": "Higienização completa",
-        "idioma": "Higienização completa",
-        "paginas": "Higienização completa",
-        "publicacao": "Higienização completa",
-        "dimensoes": "Higienização completa",
-        "acabamento": "Higienização completa",
-        "isbn10": "Higienização completa",
-        "isbn20": "Higienização completa",
-        "sinopse": "Higienização completa",
-        "capa": "banho",
-        "imagens": "banho"
-    },
-    {
         "id": 3,
         "nome": "O morro dos ventos uivantes",
         "valor": "45,00",

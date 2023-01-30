@@ -13,9 +13,9 @@ const produtoController = require('../controllers/produtoController');
 //   destination: (req, file, cb) => {
 //       cb(null, "public/images/servicos")
 //   } ,
-  filename: (req, file, cb) => {
-      cb(null, Date.now() + path.extname(file.originalname))
-  } ,
+  // filename: (req, file, cb) => {
+  //     cb(null, Date.now() + path.extname(file.originalname))
+  // } ,
 
 // const upload = multer({storage: storage, limits: {fileSize: 10000000}})
 

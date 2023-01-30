@@ -35,8 +35,10 @@ module.exports = {
   buscarporid: (req, res) => {
   
     const produtos = produtoModel.buscarId(req)
+    res.send(produtoModel.findByParams(req))
 
   res.render('editarProduto', { produtos })
+  
 
 },
   deletar: (req, res) => {

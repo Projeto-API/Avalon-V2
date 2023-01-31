@@ -1,23 +1,12 @@
-const carrinho = require('../models/Carrinho');
-const Produto = require('../models/produtoModel');
-
+const Carrinho = require('../models/Carrinho')
 module.exports = {
-  index: (req, res) => {
-    const carrinho = carrinho.findAll();
-    // const produto = Produto.findAllById(carrinho.map(id => +id));
-
-    res.render('carrinho', { produto });
-  },
-
-  add: (req, res) => {
-    const { produtoId } = req.body;
-    carrinho.add(produtoId);
-    res.redirect('/carrinho');
-  },
-
-  remove: (req, res) => {
-    const { id } = req.params;
-    carrinho.remove(id);
-    res.redirect('/carrinho');
-  }
+    index: (req, res) => {
+        const carrinho = Carrinho.findAll();
+        res.render('carrinho',  { carrinho , css: 'carrinho' })
+    },
+    add:(req,res) =>{
+        const { produtoId} =req.body;
+        Carrinho.add(produtoId);
+        res.redirect('/carrinho');
+    }
 }

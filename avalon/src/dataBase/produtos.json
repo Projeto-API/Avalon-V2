@@ -1,15 +1,5 @@
 [
     {
-        "id": 3,
-        "nome": "O morro dos ventos uivantes",
-        "valor": "45,00",
-        "categoria": "categoria",
-        "autor": "George Lucas",
-        "editora": "George Lucas",
-        "sinopse": "o morro",
-        "imagemCapa": ""
-    },
-    {
         "nome": "Star Wars",
         "valor": "45,00",
         "categoria": "categoria",
@@ -28,5 +18,15 @@
         "sinopse": "eeeee",
         "imagemCapa": "",
         "id": 5
+    },
+    {
+        "nome": "O morro dos ventos uivantes",
+        "valor": "30,00",
+        "categoria": "categoria",
+        "autor": "JK",
+        "editora": "George Lucas",
+        "sinopse": " Coloqueddedede a descrição",
+        "imagemCapa": "",
+        "id": 6
     }
 ]

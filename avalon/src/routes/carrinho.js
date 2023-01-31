@@ -1,8 +1,7 @@
-const router = require('express').Router();
-const CarrinhoController = require('../controllers/carrinhoController');
+
+const router = require ('express').Router();
+const CarrinhoController =require('../controllers/carrinhoController');
 
 router.get('/', CarrinhoController.index);
 router.post('/', CarrinhoController.add);
-router.delete('/delete/:id', CarrinhoController.remove);
-
-module.exports = router;
+module.exports = router

@@ -5,7 +5,7 @@ const tbody = document.querySelector('tbody')
 let itens
 let id
 
-function openModal(edit = false, index = 0) {
+function openModal(editar = false, index = 0) {
     modal.classList.add('active');
 
     modal.onclick = e => {

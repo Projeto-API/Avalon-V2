@@ -22,7 +22,11 @@ module.exports = {
 
   },
 
-
+  editar: (req, res) => {
+    produtoModel.editar(req);
+    res.send("O produto de id " + req.body.id + " foi atualizado com sucesso")
+    },
+  
 
   deletar: (req, res) => {
     const { id } = req.params;

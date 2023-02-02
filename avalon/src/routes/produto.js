@@ -31,9 +31,14 @@ router.get('/estiloProdutos', estiloProdutosController.listaestiloProdutos);
 
 
   // C - Criação de novos serviços
-router.get('/admin', produtoController.admin);
+
 router.post('/admin', upload.single("capaImg"),produtoController.criar);
 
+  // R - Leitura novos serviços
+router.get('/admin', produtoController.admin);
+
+// // U - Atualização de serviços
+router.get('/editar/:id', produtoController.buscarporid);
 
 
 // // D - Remoção de serviços

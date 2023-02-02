@@ -32,6 +32,19 @@ module.exports = {
 
   },
 
+  buscar: function (req, res) {
+    console.log("req", req.query)
+    let found = this.index().filter(produto => produto.id == req.query.buscar)
+    return found
+  },
+  buscarId: function (req, res) {
+    console.log("req", req.params.id)
+    let found = this.index().filter(produto => produto.id == req.params.id)
+    console.log(">>>>", found)
+    return found
+  },
+
+
   editar: (req) => {
     produtos.forEach(produto => {
       if (produto.id != req.body.id) return

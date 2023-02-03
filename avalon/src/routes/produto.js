@@ -38,7 +38,7 @@ router.post('/admin', upload.single("capaImg"),produtoController.criar);
 router.get('/admin', produtoController.admin);
 
 // // U - Atualização de serviços
-router.get('/editar/:id', produtoController.buscarporid);
+router.get('/editar/:id', produtoController.editar);
 
 
 // // D - Remoção de serviços

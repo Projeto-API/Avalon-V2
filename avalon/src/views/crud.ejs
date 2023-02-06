@@ -46,7 +46,7 @@
                 </td>
                 <td class="acao">
                   <form action="/produto/editar/<%= produto.id %>">
-                    <button onclick="openModal()" class="crudform"><i class='bx bx-edit'></i></button>
+                    <button  class="crudform"><i class='bx bx-edit'></i></button>
 
                   </form>
                 </td>
@@ -67,39 +67,35 @@
         <div class="modal">
 
 
-              <form action="/produto/admin" method="POST" enctype="multipart/form-data">
-          
-                <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
-                <input class="form-crud-input" id="titulo" type="text" name="nome" placeholder="Digite o nome do livro "
-               >
+                <form action="/produto/admin" method="POST" enctype="multipart/form-data">
 
-                <label class="form-crud-label" for="valor">Preço:</label> <br>
-                <input class="form-crud-input" id="crud-preco" type="text" name="valor"
-                  placeholder="Coloque o valor do produto"
-                  >
+                  <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
+                  <input class="form-crud-input" id="titulo" type="text" name="nome"
+                    placeholder="Digite o nome do livro ">
 
-                <label class="form-crud-label" for="categoria">Categoria:</label> <br>
-                <input class="form-crud-input" class="open-modal" type="text" name="categoria"
-                  placeholder="Digite a categoria"
-                 >
+                  <label class="form-crud-label" for="valor">Preço:</label> <br>
+                  <input class="form-crud-input" id="crud-preco" type="text" name="valor"
+                    placeholder="Coloque o valor do produto">
 
-                <label class="form-crud-label" for="autor">Autor:</label> <br>
-                <input class="form-crud-input" type="text" name="autor" placeholder="Digite o nome do autor"
-                >
+                  <label class="form-crud-label" for="categoria">Categoria:</label> <br>
+                  <input class="form-crud-input" class="open-modal" type="text" name="categoria"
+                    placeholder="Digite a categoria">
 
-                <label class="form-crud-label" for="editora">Editora:</label> <br>
-                <input class="form-crud-input" type="text" name="editora" placeholder="Digite a editora"
-        >
+                  <label class="form-crud-label" for="autor">Autor:</label> <br>
+                  <input class="form-crud-input" type="text" name="autor" placeholder="Digite o nome do autor">
 
-                <label class="form-crud-label" for="sinopse">Sinopse:</label> <br>
-                <textarea class="form-crud-input" name="sinopse"
-                  placeholder="Escreva aqui a sinopse do produto" ></textarea>
+                  <label class="form-crud-label" for="editora">Editora:</label> <br>
+                  <input class="form-crud-input" type="text" name="editora" placeholder="Digite a editora">
 
-                <label class="form-crud-label" for="capaImg">Imagem Capa:</label> <br>
-                <input type="file" class="alteraInp" name="capaImg">
+                  <label class="form-crud-label" for="sinopse">Sinopse:</label> <br>
+                  <textarea class="form-crud-input" name="sinopse"
+                    placeholder="Escreva aqui a sinopse do produto"></textarea>
 
-                <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
-              </form>
+                  <label class="form-crud-label" for="capaImg">Imagem Capa:</label> <br>
+                  <input type="file" class="alteraInp" name="capaImg">
+
+                  <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
+                </form>
         </div>
       </div>
       </section>

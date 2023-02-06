@@ -14,6 +14,10 @@ function diminuirQtd(op) {
   }
 }
 
+// Modal
+
+
+
 // -----ARROWS CARROSEL -------
 
 const gap = .1;

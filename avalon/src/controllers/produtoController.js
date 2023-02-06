@@ -29,17 +29,20 @@ module.exports = {
 
     if (id) {
       produto = produtoModel.buscar(id);
-      res.buscar(id)
+
+
+      return res.buscar
     }
-
   },
 
 
 
-  atualizar: (req, res) => {
-    produtoModel.editar(req);
-    res.send("O produto de id " + req.body.id + " foi atualizado com sucesso")
-  },
+
+
+atualizar: (req, res) => {
+  produtoModel.editar(req);
+  res.send("O produto de id " + req.body.id + " foi atualizado com sucesso")
+},
 
 
   deletar: (req, res) => {

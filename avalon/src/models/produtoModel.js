@@ -32,7 +32,35 @@ module.exports = {
 
   },
 
- 
+  buscar: function (req, res) {
+    let found = this.index().filter(produto => produto.id == req.query.buscar)
+    return found
+  },
+
+
+  editar: (req) => {
+    produtos.forEach(produto => {
+      if (produto.id != req.body.id) return
+      produto.nome = req.body.nome
+      produto.descricao = req.body.descricao
+      produto.valor = req.body.valor
+      produto.imagem = req.body.imagem
+    })
+    fs.writeFileSync(path.join(__dirname, "../database/produtos.json"), JSON.stringify(produto, null, 4))
+    // letproduto{ errors } = validationResult(req);
+
+    //   if (errors.length) {
+    //     const errosFormatados = {};
+    //     errors.forEach(erro => errosFormatados[erro.param] = erro.msg);
+
+    //       errors: errosFormatados,
+    //       servico: { id, ...req.body }
+    //     });
+    //   }
+
+    produtoModel.editar(id, req.body);
+    return res.redirect('/produto/admin');
+  },
 
   deletar(id) {
     if (!id) return

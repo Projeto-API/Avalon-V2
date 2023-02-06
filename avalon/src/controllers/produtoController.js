@@ -1,6 +1,6 @@
+const { editModal } = require('../models/produtoModel');
 const produtoModel = require('../models/produtoModel');
 const { validationResult } = require('express-validator');
-
 
 module.exports = {
   index: (req, res) => {

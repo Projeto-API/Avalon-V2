@@ -4,13 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var methodOverride = require('method-override');
-<<<<<<< HEAD
-var session = require('express-session');
-=======
-
-
-
->>>>>>> igor
+// var session = require('express-session');
 var indexRouter = require('../src/routes/index');
 var usersRouter = require('../src/routes/users');
 var carrinhoRouter = require('../src/routes/carrinho');

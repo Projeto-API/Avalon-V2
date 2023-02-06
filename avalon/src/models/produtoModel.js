@@ -11,23 +11,9 @@ module.exports = {
   },
 
   armazenar(produtos) {
-    fs.writeFileSync(nomeArquivoProdutos, JSON.stringify(produtos,null,4));
+    fs.writeFileSync(nomeArquivoProdutos, JSON.stringify(produtos));
   },
 
-<<<<<<< HEAD
-  // ----------FUNÇÃO SIMPLIFICADA----------
-  criar: function (produto) {
-
-    const produtos = this.index();
-
-
-    const lastID = produtos[produtos.length - 1]?.id
-
-    if (lastID) {
-      produto.id = lastID + 1
-    } 
-    else {produto.id = 1}
-=======
 
   criar: function (produto) {
 
@@ -40,20 +26,18 @@ module.exports = {
       produto.id = lastID + 1
     }
     else { produto.id = 1 }
->>>>>>> igor
 
     produtos.push(produto);
     this.armazenar(produtos)
 
   },
-<<<<<<< HEAD
-
 
   buscar: function (req, res) {
-    console.log("req", req.query)
     let found = this.index().filter(produto => produto.id == req.query.buscar)
     return found
   },
+
+
   buscarId: function (req, res) {
     console.log("req", req.params.id)
     let found = this.index().filter(produto => produto.id == req.params.id)
@@ -61,69 +45,27 @@ module.exports = {
     return found
   },
 
-  editar: (req) => {
-    produtos.forEach(produto => {
-      if (produto.id != req.body.id) return
-      produto.nome = req.body.nome
-      produto.descricao = req.body.descricao
-      produto.valor = req.body.valor
-      produto.imagem = req.body.imagem
-    })
-    fs.writeFileSync(path.join(__dirname, "../database/produtos.json"), JSON.stringify(produto, null, 4))
-    // letproduto{ errors } = validationResult(req);
+  editar: function (req, id) {
+    if (!id) return
 
-    //   if (errors.length) {
-    //     const errosFormatados = {};
-    //     errors.forEach(erro => errosFormatados[erro.param] = erro.msg);
+    const produtos = this.index();
+    const novoProduto = produtos.find(produto => produto.id == id);
 
-    //       errors: errosFormatados,
-    //       servico: { id, ...req.body }
-    //     });
-    //   }
+    novoProduto.nome = req.body.nome
+    novoProduto.valor = req.body.valor
+    novoProduto.categoria = req.body.categoria
+    novoProduto.autor = req.body.autor
+    novoProduto.editora = req.body.editora
+    novoProduto.sinopse = req.body.sinopse
+    novoProduto.capaImg = req.body.capaImg
 
-    produtoModel.editar(id, req.body);
-    return res.redirect('/produto/admin');
+    this.armazenar(produtos)
+
   },
 
   deletar(id) {
     if (!id) return
 
-=======
-
-  buscar: function (req, res) {
-    let found = this.index().filter(produto => produto.id == req.query.buscar)
-    return found
-  },
-
-
-  editar: (req) => {
-    produtos.forEach(produto => {
-      if (produto.id != req.body.id) return
-      produto.nome = req.body.nome
-      produto.descricao = req.body.descricao
-      produto.valor = req.body.valor
-      produto.imagem = req.body.imagem
-    })
-    fs.writeFileSync(path.join(__dirname, "../database/produtos.json"), JSON.stringify(produto, null, 4))
-    // letproduto{ errors } = validationResult(req);
-
-    //   if (errors.length) {
-    //     const errosFormatados = {};
-    //     errors.forEach(erro => errosFormatados[erro.param] = erro.msg);
-
-    //       errors: errosFormatados,
-    //       servico: { id, ...req.body }
-    //     });
-    //   }
-
-    produtoModel.editar(id, req.body);
-    return res.redirect('/produto/admin');
-  },
-
-  deletar(id) {
-    if (!id) return
-
->>>>>>> igor
     const produtos = this.index();
     const novosProdutos = produtos.filter(produto => produto.id != id);
     // O passo abaixo remove imagens submetidas através do multer.
@@ -131,7 +73,3 @@ module.exports = {
     this.armazenar(novosProdutos);
   }
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> igor

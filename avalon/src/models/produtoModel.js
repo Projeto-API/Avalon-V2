@@ -38,28 +38,23 @@ module.exports = {
   },
 
 
-  editar: (req) => {
-    produtos.forEach(produto => {
-      if (produto.id != req.body.id) return
-      produto.nome = req.body.nome
-      produto.descricao = req.body.descricao
-      produto.valor = req.body.valor
-      produto.imagem = req.body.imagem
-    })
-    fs.writeFileSync(path.join(__dirname, "../database/produtos.json"), JSON.stringify(produto, null, 4))
-    // letproduto{ errors } = validationResult(req);
+  buscarId: function (req, res) {
+    console.log("req", req.params.id)
+    let found = this.index().filter(produto => produto.id == req.params.id)
+    console.log(">>>>", found)
+    return found
+  },
 
-    //   if (errors.length) {
-    //     const errosFormatados = {};
-    //     errors.forEach(erro => errosFormatados[erro.param] = erro.msg);
+  editar: function (req, id) {
+   
 
-    //       errors: errosFormatados,
-    //       servico: { id, ...req.body }
-    //     });
-    //   }
+    const produtos = this.index();
+    const novoProduto = produtos.find(produto => produto.id == id);
 
-    produtoModel.editar(id, req.body);
-    return res.redirect('/produto/admin');
+    novoProduto.nome = req.body.name
+ 
+    this.armazenar(produtos)
+
   },
 
   deletar(id) {

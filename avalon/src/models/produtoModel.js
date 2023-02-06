@@ -49,7 +49,7 @@ module.exports = {
     if (!id) return
 
     const produtos = this.index();
-    const novoProduto = produtos.find(produto => produto.id == id);
+    const novoProduto = produtos.filter(produto => produto.id == id);
 
     novoProduto.nome = req.body.nome
     novoProduto.valor = req.body.valor

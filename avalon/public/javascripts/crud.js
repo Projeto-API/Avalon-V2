@@ -4,6 +4,7 @@ const tbody = document.querySelector('tbody')
 
 function openModal() {
     modal.classList.add('active');
+    
 
     modal.onclick = e => {
         if (e.target.className.indexOf('modal-container') !== -1) {
@@ -40,11 +41,9 @@ function editModal(produto = "{}") {
         inputIMG.value = produto.capaImg
 
 
-        const form = document.querySelector('.form-crud')
-        form.action = `/produto/editar/${produto.id}?_method=PUT`
+        document.querySelector('.form-crud').action = `/produto/editar/${produto.id}?_method=PUT`
 
     }
-
     modal.onclick = e => {
         if (e.target.className.indexOf('modal-container') !== -1) {
             modal.classList.remove('active')

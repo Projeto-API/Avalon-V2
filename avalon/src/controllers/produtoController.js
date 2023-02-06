@@ -28,10 +28,7 @@ module.exports = {
   },
 
 
- 
-
-
-  atualizar: (req, res) => {
+   atualizar: (req, res) => {
     produtoModel.editar(req);
     console.log("O produto de id " + req.body.id + " foi editado com sucesso");
     return res.redirect('/produto/admin');

@@ -22,10 +22,15 @@ module.exports = {
 
   },
 
+  buscar: (req, res) => {
+    const produtos = produtoModel.buscar(req)
+    res.render('crud', { produtos })
+},
+
 
   editar: (req, res) => {
     const { id } = req.params;
-    let produto = null
+
 
     if (id) {
       produto = produtoModel.buscar(id);

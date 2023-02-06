@@ -32,8 +32,8 @@ module.exports = {
 
   },
 
-  buscar: function (id) {
-    let found = this.index().find(produto => produto.id == id)
+  buscar: function (req, res) {
+    let found = this.index().filter(produto => produto.id == req.query.buscar)
     return found
   },
 

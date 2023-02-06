@@ -34,6 +34,9 @@ router.get('/estiloProdutos', estiloProdutosController.listaestiloProdutos);
 
 router.post('/admin', upload.single("capaImg"),produtoController.criar);
 
+// Rota de busca de produtos
+router.get('/buscar', produtoController.buscar);
+
   // R - Leitura novos serviços
 router.get('/admin', produtoController.admin);
 

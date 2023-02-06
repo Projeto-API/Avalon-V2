@@ -3,7 +3,7 @@ const fs = require('fs');
 
 
 const nomeArquivoProdutos = path.join(__dirname, '../database/produtos.json');
-const { validationResult } = require('express-validator');
+// const { validationResult } = require('express-validator');
 
 module.exports = {
   index() {
@@ -11,7 +11,7 @@ module.exports = {
   },
 
   armazenar(produtos) {
-    fs.writeFileSync(nomeArquivoProdutos, JSON.stringify(produtos));
+  fs.writeFileSync(nomeArquivoProdutos, JSON.stringify(produtos));
   },
 
 

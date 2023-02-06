@@ -15,7 +15,10 @@
           <button class="btnCrud"><a> Deletar</a></button>
           <form action="/produto/buscar" method="get">
             <input type="text" name="buscar" id="read" placeholder="Buscar ">
+<<<<<<< HEAD
             
+=======
+>>>>>>> igor
           </form>
 
 
@@ -47,16 +50,30 @@
                   <%= produto.valor %>
                 </td>
                 <td class="acao">
+<<<<<<< HEAD
                   <form action="/produto/editar/<%= produto.id %>?_method=PUT" method="PUT">
                     <button onclick="openModal()" class="bx bx-edit" id="editar"></button>
                   </form>
+=======
+                  <form action="/produto/editar/<%= produto.id %>">
+                    <button  class="crudform"><i class='bx bx-edit'></i></button>
+
+>>>>>>> igor
                   </form>
                 </td>
                 <td class="acao">
                   <form action="/produto/deletar/<%= produto.id %>?_method=DELETE" method="POST">
+<<<<<<< HEAD
                     <button><i class='bx bx-trash'></i></button>
                 </td>
                 </form>
+=======
+                    <button class="crudform"><i class='bx bx-trash'></i></button>
+                </td>
+
+                </form>
+
+>>>>>>> igor
                 </form>
                 <% }) %>
           </tbody>
@@ -65,6 +82,7 @@
 
       <div class="modal-container">
         <div class="modal">
+<<<<<<< HEAD
           <form action="/produto/admin" method="POST">
             <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
             <input class="form-crud-input" id="titulo" type="text" name="nome" placeholder="Digite o nome do livro">
@@ -89,9 +107,39 @@
 
             <label class="form-crud-label" for="imagemCapa">Imagem Capa:</label> <br>
             <input type="file" class="alteraInp" name="imagemCapa">
+=======
 
-            <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
-          </form>
+
+                <form action="/produto/admin" method="POST" enctype="multipart/form-data">
+
+                  <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
+                  <input class="form-crud-input" id="titulo" type="text" name="nome"
+                    placeholder="Digite o nome do livro ">
+
+                  <label class="form-crud-label" for="valor">Preço:</label> <br>
+                  <input class="form-crud-input" id="crud-preco" type="text" name="valor"
+                    placeholder="Coloque o valor do produto">
+
+                  <label class="form-crud-label" for="categoria">Categoria:</label> <br>
+                  <input class="form-crud-input" class="open-modal" type="text" name="categoria"
+                    placeholder="Digite a categoria">
+
+                  <label class="form-crud-label" for="autor">Autor:</label> <br>
+                  <input class="form-crud-input" type="text" name="autor" placeholder="Digite o nome do autor">
+>>>>>>> igor
+
+                  <label class="form-crud-label" for="editora">Editora:</label> <br>
+                  <input class="form-crud-input" type="text" name="editora" placeholder="Digite a editora">
+
+                  <label class="form-crud-label" for="sinopse">Sinopse:</label> <br>
+                  <textarea class="form-crud-input" name="sinopse"
+                    placeholder="Escreva aqui a sinopse do produto"></textarea>
+
+                  <label class="form-crud-label" for="capaImg">Imagem Capa:</label> <br>
+                  <input type="file" class="alteraInp" name="capaImg">
+
+                  <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
+                </form>
         </div>
       </div>
       </section>

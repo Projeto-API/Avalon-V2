@@ -25,6 +25,8 @@ router.post('/admin',validadorFormProdutos, produtoController.criar);
 // Rota de busca de produtos
 router.get('/buscar', produtoController.buscar);
 
+  // R - Leitura novos serviços
+router.get('/admin', produtoController.admin);
 
 // // U - Atualização de serviços
 router.get('/editar/:id', produtoController.buscarporid);

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [
     {
         "nome": "Star Wars",
@@ -30,3 +31,6 @@
         "id": 6
     }
 ]
+=======
+[{"nome":"O nome da Rosa","valor":"129,00","categoria":"categoria","autor":"","editora":"","sinopse":" Coloque a descrição","imagemCapa":"","id":1},{"nome":"Guerra e Paz","valor":"129,90","categoria":"categoria","autor":"","editora":"","sinopse":" Coloque a descrição","imagemCapa":"","id":2},{"nome":"Cem Anos de Solidão","valor":"59,90","categoria":"categoria","autor":"","editora":"","sinopse":" Coloque a descrição","imagemCapa":"","id":3}]
+>>>>>>> igor

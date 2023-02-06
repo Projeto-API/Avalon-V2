@@ -11,9 +11,11 @@
         <div class="header-crud">
           <button class="btnCrud"><a href="/produto/admin">Todos</a></button>
           <button onclick="openModal()" class="btnCrud"><a>Adicionar</a></button>
+
           <button class="btnCrud"><a> Deletar</a></button>
           <form action="/produto/buscar" method="get">
             <input type="text" name="buscar" id="read" placeholder="Buscar ">
+            
           </form>
 
 
@@ -69,6 +71,7 @@
 
             <label class="form-crud-label" for="valor">Preço:</label> <br>
             <input class="form-crud-input" id="crud-preco" type="text" name="valor"
+            
               placeholder="Coloque o valor do produto">
 
             <label class="form-crud-label" for="categoria">Categoria:</label> <br>

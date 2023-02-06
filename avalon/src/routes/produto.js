@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+const validadorFormProdutos = require('../dataBase/middlewares/validadorFormProdutos')
 const estiloProdutosController = require('../controllers/estiloProdutosController');
 const detalhesController = require('../controllers/detalhesController');
 const cadastroProdutosController = require('../controllers/cadastroProdutosController');
@@ -19,7 +19,7 @@ router.get('/estiloProdutos', estiloProdutosController.listaestiloProdutos);
 
   // C - Criação de novos serviços
 router.get('/admin', produtoController.admin);
-router.post('/admin', produtoController.criar);
+router.post('/admin',validadorFormProdutos, produtoController.criar);
 
 
 // Rota de busca de produtos

@@ -1,5 +1,5 @@
 const produtoModel = require('../models/produtoModel');
-
+const { validationResult } = require('express-validator');
 
 module.exports = {
   index: (req, res) => {
@@ -17,7 +17,15 @@ module.exports = {
   criar: (req, res) => {
 
     produtoModel.criar(req.body);
-    return res.redirect('/produto/admin');
+    return res.redirect('/produto/admin',);
+    let { errors } = validationResult(req);
+
+    if (errors.length) {
+      const errosFormatados = {};
+      errors.forEach(erro => errosFormatados[erro.param] = erro.msg);
+
+      return res.render('/produro/admin', { errors: errosFormatados, produto: null });
+    }
 
   },
 

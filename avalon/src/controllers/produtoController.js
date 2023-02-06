@@ -1,5 +1,5 @@
+const { editModal } = require('../models/produtoModel');
 const produtoModel = require('../models/produtoModel');
-
 
 
 module.exports = {
@@ -25,29 +25,17 @@ module.exports = {
   buscar: (req, res) => {
     const produtos = produtoModel.buscar(req)
     res.render('crud', { produtos })
-},
-
-
-  editar: (req, res) => {
-    const { id } = req.params;
-
-
-    if (id) {
-      produto = produtoModel.buscar(id);
-
-
-      return res.buscar
-    }
   },
 
 
+ 
 
 
-
-atualizar: (req, res) => {
-  produtoModel.editar(req);
-  res.send("O produto de id " + req.body.id + " foi atualizado com sucesso")
-},
+  atualizar: (req, res) => {
+    produtoModel.editar(req);
+    console.log("O produto de id " + req.body.id + " foi editado com sucesso");
+    return res.redirect('/produto/admin');
+  },
 
 
   deletar: (req, res) => {

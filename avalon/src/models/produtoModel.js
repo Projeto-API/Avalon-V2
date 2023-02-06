@@ -46,13 +46,19 @@ module.exports = {
   },
 
   editar: function (req, id) {
-   
+    if (!id) return
 
     const produtos = this.index();
     const novoProduto = produtos.find(produto => produto.id == id);
 
-    novoProduto.nome = req.body.name
- 
+    novoProduto.nome = req.body.nome
+    novoProduto.valor = req.body.valor
+    novoProduto.categoria = req.body.categoria
+    novoProduto.autor = req.body.autor
+    novoProduto.editora = req.body.editora
+    novoProduto.sinopse = req.body.sinopse
+    novoProduto.capaImg = req.body.capaImg
+
     this.armazenar(produtos)
 
   },

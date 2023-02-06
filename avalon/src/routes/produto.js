@@ -1,6 +1,19 @@
 var express = require('express');
 var router = express.Router();
-const validadorFormProdutos = require('../dataBase/middlewares/validadorFormProdutos')
+var multer = require('multer')
+var path = require('path')
+
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+  cb(null, "public/images/produtos")
+  },
+  filename: (req, file, cb) => {
+  cb(null, date.now() + path.extname(file.originalname))
+  }
+})
+
+var upload = multer({storage: storage})
+
 const estiloProdutosController = require('../controllers/estiloProdutosController');
 const detalhesController = require('../controllers/detalhesController');
 const cadastroProdutosController = require('../controllers/cadastroProdutosController');
@@ -18,9 +31,8 @@ router.get('/estiloProdutos', estiloProdutosController.listaestiloProdutos);
 
 
   // C - Criação de novos serviços
-router.get('/admin', produtoController.admin);
-router.post('/admin',validadorFormProdutos, produtoController.criar);
 
+router.post('/admin', upload.single("capaImg"),produtoController.criar);
 
 // Rota de busca de produtos
 router.get('/buscar', produtoController.buscar);
@@ -29,7 +41,8 @@ router.get('/buscar', produtoController.buscar);
 router.get('/admin', produtoController.admin);
 
 // // U - Atualização de serviços
-router.get('/editar/:id', produtoController.buscarporid);
+router.put('/editar/:id',produtoController.atualizar);
+
 
 
 // // D - Remoção de serviços

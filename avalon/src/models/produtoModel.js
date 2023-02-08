@@ -3,7 +3,7 @@ const fs = require('fs');
 
 
 const nomeArquivoProdutos = path.join(__dirname, '../database/produtos.json');
-// const { validationResult } = require('express-validator');
+const { validationResult } = require('express-validator');
 
 module.exports = {
   index() {
@@ -11,7 +11,7 @@ module.exports = {
   },
 
   armazenar(produtos) {
-  fs.writeFileSync(nomeArquivoProdutos, JSON.stringify(produtos));
+    fs.writeFileSync(nomeArquivoProdutos, JSON.stringify(produtos));
   },
 
 
@@ -49,7 +49,7 @@ module.exports = {
     if (!id) return
 
     const produtos = this.index();
-    const novoProduto = produtos.find(produto => produto.id == id);
+    const novoProduto = produtos.filter(produto => produto.id == id);
 
     novoProduto.nome = req.body.nome
     novoProduto.valor = req.body.valor
@@ -73,3 +73,4 @@ module.exports = {
     this.armazenar(novosProdutos);
   }
 }
+

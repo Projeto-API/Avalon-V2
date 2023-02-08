@@ -18,7 +18,7 @@ body {
 
 .carrinhoFlutuante { 
     background: white;
-  
+    height: 100%;
     width: 0;
     margin: 0;
     list-style: none;

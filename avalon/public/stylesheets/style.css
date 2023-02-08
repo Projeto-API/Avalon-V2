@@ -67,7 +67,7 @@ svg {
 #menuHamburguer,
 #lupa,
 #carrinhoFlutuante {
-   
+    display: flex;
     align-items: center;
     cursor: pointer;
     opacity: 80%;

@@ -31,48 +31,12 @@ function excluirDentroCarrinho(excluiProduto) {
     
 }
 
+carrinho.map((item, index)=>{
 
-const lista = []
-function incluirDentroCarrinho(object) {
-    // let em = document.createElement('em');
-    lista.AddEventListener = document.querySelector(object);
 
-   
+    let carrinho = JSON.parse(localStorage.getItem("carrinho"));
+
+    carrinho.setAttribute('data-key', index);
+    carrinho.querySelector('.imagemProduto').src = imagem.img;
     
-    console.log("olá estou aqui " + lista[0].innerHTML)
-
-    // const btnsAdd = document.querySelectorAll('.galeria')
-
-    // btnsAdd.forEach((btn, i) => {
-    //     const containerServico = document.getElementById("servico-" + i)
-    //     const imagemServico = containerServico.children[0].children[0].src
-    //     const nomeServico = containerServico.children[1].children[0].innerText
-    //     const valorServico = containerServico.children[1].children[1].innerText
-    //     const descricaoServico = containerServico.children[1].children[2].innerText
-    //     const idServico = containerServico.children[1].children[3].value
-    
-    
-//     em.innerHTML = `<div class="produto" id="produto4">
-//     <img class="imagemProduto" src="../produtos/my broken mariko/mariko-capa.jpg" alt="">
-//     <div class="informationProduto">        
-//         <div class="nomeProduto">
-//             <h5 id="produtoTitulo">MY BROKEN MARIKO</h5>
-//         </div>
-//         <div class="informationProdutoValue">
-//             <div>
-//                 <a href="" class="diminuirQtd">-</a>
-//                 <input type="number" class="quantidadeValue" value="1">
-//                 <a href="" class="aumentarQtd">+</a>
-//             </div>
-//             <span id="preco"> R$ 39,90 </span>
-//             <button id="excluir"  onclick="excluirDentroCarrinho('produto4')">X</button>
-//         </div>
-//     </div>
-// </div>`
-//     document.querySelector('#containerProduto').appendChild(em)
-}
-
-function teste (servico){
-    console.log("olá estou aqui")
-
-}
+});

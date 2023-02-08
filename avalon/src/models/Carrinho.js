@@ -1,7 +1,7 @@
 const carrinho = require('../database/carrinho.json')
 const path = require('path');
 const fs =require ('fs');
-const filename = path.join(__dirname,"../database/carrinho.json");
+const filename = path.join(__dirname,"/avalon/src/database/carrinho.json");
 
 module.exports ={
 

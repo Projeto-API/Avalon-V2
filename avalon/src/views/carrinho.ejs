@@ -3,9 +3,6 @@
 
 
     <main>
-        <section class="carrinho-header">
-            <h3> Carrinho</h3>
-         </section>
         <section class="containerProduto">
            <ul  class="cabecalho">
                 <li id="header1"><span>PRODUTO</span></li>
@@ -17,11 +14,10 @@
 
             <div class="produto">
                 <% carrinho.forEach(item => { %>
-                <img class="imagemProduto" src=<% item.imagem %> alt="">
+                <img class="imgProduto" src=<%= item.imagem %> alt="">
                 <div class="informationProduto">
-                    <div class="nomeProduto">
-                        
-                        <h5 id="produtoTitulo"><%= item.nome %></h5>
+                    <div class="nomeProduto">                       
+                        <h5 id="produto-Titulo"><%= item.nome %></h5>
                     </div>
                     <div class="informationProdutoValue">
                         <div>
@@ -37,44 +33,6 @@
                     </div>
                 </div>
             </div>
-
-            
-
-            <!-- <div class="produto">
-                <img class="imagemProduto" src="/images/produtos/manifesto/capa.jpg" alt="">
-                <div class="informationProduto">
-                    <div class="nomeProduto">
-                        <h5 id="produtoTitulo">MANIFESTO COMUNISTA</h5>
-                    </div>
-                    <div class="informationProdutoValue">
-                        <div>
-                            <button onclick="diminuirQtd('down')" class="diminuirQtd">-</button>
-                            <input type="number" id="quantidadeValue" value="1">
-                            <button type="button" onclick="aumentarQtd('up')" class="aumentarQtd">+</button>
-                        </div>
-                        <span id="preco"> R$ 34,90 </span>
-                        <button class="excluir">X</button>
-                    </div>
-                </div>
-            </div> -->
-<!-- 
-            <div class="produto">
-                <img class="imagemProduto" src="/images/produtos/Revolução dos bichos/revolucaodos bichos-capa.jpeg" alt="">
-                <div class="informationProduto">
-                    <div class="nomeProduto">
-                        <h5 id="produtoTitulo">REVOLUÇÃO DOS BICHOS</h5>
-                    </div>
-                    <div class="informationProdutoValue">
-                        <div>
-                            <button onclick="diminuirQtd('down')" class="diminuirQtd">-</button>
-                            <input type="number" id="quantidadeValue" value="1">
-                            <button type="button" onclick="aumentarQtd('up')" class="aumentarQtd">+</button>
-                        </div>
-                        <span id="preco"> R$ 19,90 </span>
-                        <button class="excluir">X</button>
-                    </div>
-                </div>
-            </div> -->
             <% })%>
         </section>
 

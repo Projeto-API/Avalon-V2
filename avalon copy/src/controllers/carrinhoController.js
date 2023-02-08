@@ -12,7 +12,7 @@ module.exports = {
     },
     add:(req,res) =>{
         const { produtoId} =req.body;
-        Carrinho.add(produtoId);
+        Carrinho.add(produtoId, nome);
         res.redirect('/carrinho');
     }
 }

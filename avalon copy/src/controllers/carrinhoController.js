@@ -23,7 +23,7 @@ module.exports = {
         console.log("oi estou aqui")
         const { produtoId} =req.body;
         Carrinho.remove(produtoId)
-        res.redirect('/carrinho')        
+               
     }
 
 

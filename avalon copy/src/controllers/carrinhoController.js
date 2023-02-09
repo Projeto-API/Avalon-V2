@@ -4,6 +4,9 @@
 //     }
 // }
 
+const estiloProdutosModel = require('../models/ServicoModel')
+
+
 const Carrinho = require('../models/Carrinho')
 module.exports = {
     index: (req, res) => {
@@ -12,9 +15,18 @@ module.exports = {
     },
     add:(req,res) =>{
         const { produtoId} =req.body;
-        Carrinho.add(produtoId, nome);
+        const estiloProdutos = estiloProdutosModel.index();
+        Carrinho.add(estiloProdutos[produtoId]);
         res.redirect('/carrinho');
+    },
+    delete:(req,res) =>{
+        console.log("oi estou aqui")
+        const { produtoId} =req.body;
+        Carrinho.remove(produtoId)
+        res.redirect('/carrinho')        
     }
+
+
 }
 
 

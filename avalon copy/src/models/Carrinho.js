@@ -15,5 +15,10 @@ module.exports ={
     },
     findAll: function () {
         return carrinho
+    },
+    remove: function(produtoId){
+        this.remove(produtoId);
+        
     }
+
 }

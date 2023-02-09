@@ -1,27 +1,47 @@
 [
     {
-        "id": 1,
+        "id": 0,
         "imagem": "/images/1661966653.webp",
         "nome": "Livro Nome",
         "valor": 5
     },
     {
-        "id": 2,
+        "id": 1,
         "imagem": "/images/1661966653.webp",
         "nome": "Livro ",
         "valor": 5
     },
     {
-        "id": 5,
+        "id": 2,
         "imagem": "/images/1661966653.webp",
         "nome": "Livro 3",
         "valor": 5
     },
     {
-        "id": 4,
+        "id": 3,
         "imagem": "/images/1661966653.webp",
         "nome": "Livro 5",
         "valor": 30
+    },
+
+
+    {
+        "id": 4,
+        "imagem": "../images/emilybronte.jpg",
+        "nome": "Livro 1 ",
+        "valor": 30
+    },
+    {
+        "id": 5,
+        "imagem": "../images/1661966653.webp",
+        "nome": "Livro  2 ",
+        "valor": 10
+    },
+    {
+        "id": 6,
+        "imagem": "../images/1664561630.webp",
+        "nome": "Livro 3 ",
+        "valor": 5
     }
     
 

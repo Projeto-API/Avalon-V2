@@ -29,8 +29,16 @@
             <button class="increase">+</button>
           </td>
           <td class="item-total">R$20,00</td>
-          <td><button class="remove">Remover</button></td>
+          <input type="hidden" name="produtoId">
+          <td>
+            <form action="/carrinho" method="delete">
+            <input type="hidden" name="produtoId" value="<%= item.id %>">
+            <button type="submit" class="remove">Remover</button>
+          </td>
+
+          </form>
           <% })%>
+ 
         </tr>
 
       </tbody>

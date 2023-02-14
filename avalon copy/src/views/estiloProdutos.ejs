@@ -53,8 +53,12 @@
                     <div id="servico-<%= i %>" class="catalogo_produtos servico-<%= i %>">
                         <img src="<%= servico.imagem %>" >
                         <form id="formCarrinho" action="/carrinho" method="post">
-                            <a ><%= servico.nome %> </a>   
-                            <a> R$ <%= servico.valor %></a>
+                            <div>
+                                <a ><%= servico.nome %> </a>   
+                            </div>
+                            <div>
+                                <a> R$ <%= servico.valor %></a>
+                            </div>
                             <input type="hidden" name="produtoId" value="<%= servico.id %>">
                             <button type="submit" class="comprar">COMPRAR</a></button>
                         </form>

@@ -45,22 +45,3 @@ function excluirDentroCarrinho(excluiProduto) {
 
 //Carrinho 
 
-let modalQt=1; 
-
-
-const c = (el) =>document.querySelector(el);
-const cs = (el) =>document.querySelectorAll(el);
-
-c('.button.increase').addEventListener('click', ()=>{
-    modalQt ++;
-    c('.quantity').innerHTML = modalQt;
-
-    
-})
-c('.button.decrease').addEventListener('click', ()=>{
-    if(modalQt > 1 ){
-        modalQt --;
-        c('.quantity').innerHTML = modalQt;
-    }
-
-})

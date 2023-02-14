@@ -8,6 +8,7 @@ var indexRouter = require('../src/routes/index');
 var usersRouter = require('../src/routes/users');
 var produtoRouter = require('../src/routes/produto');
 var carrinhoRouter = require('../src/routes/carrinho');
+var methodOverride = require('method-override')
 
 
 var app = express();
@@ -15,6 +16,8 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.use(methodOverride('_method'));
 
 app.use(logger('dev'));
 app.use(express.json());

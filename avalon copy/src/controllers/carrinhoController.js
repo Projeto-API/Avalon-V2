@@ -19,11 +19,11 @@ module.exports = {
         Carrinho.add(estiloProdutos[produtoId]);
         res.redirect('/carrinho');
     },
-    delete:(req,res) =>{
-        console.log("oi estou aqui")
-        const { produtoId} =req.body;
-        Carrinho.remove(produtoId)
-               
+    remove:(req,res) =>{
+        const {produtoId} =req.params;
+        Carrinho.remove({produtoId})
+        console.log(produtoId)
+        res.redirect('/carrinho');
     }
 
 

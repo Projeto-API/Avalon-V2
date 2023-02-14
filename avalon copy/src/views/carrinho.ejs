@@ -31,7 +31,7 @@
           <td class="item-total">R$20,00</td>
           <input type="hidden" name="produtoId">
           <td>
-            <form action="/carrinho" method="delete">
+            <form action="/carrinho/delete/<%= item.id %>?_method=DELETE" method="post">
             <input type="hidden" name="produtoId" value="<%= item.id %>">
             <button type="submit" class="remove">Remover</button>
           </td>

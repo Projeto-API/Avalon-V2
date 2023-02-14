@@ -27,7 +27,12 @@ header{
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+    margin-bottom: 20px;
+
   }
+  table.table {
+    max-width: 50%;
+}
   
   .cart-carrinho th,
   .cart-carrinho td {

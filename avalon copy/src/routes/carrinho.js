@@ -3,5 +3,5 @@ const CarrinhoController =require('../controllers/carrinhoController');
 
 router.get('/', CarrinhoController.index);
 router.post('/', CarrinhoController.add);
-router.delete('/delete/:id', CarrinhoController.remove);
+router.post('/deletar', CarrinhoController.remove);
 module.exports = router

@@ -11,18 +11,19 @@ const Carrinho = require('../models/Carrinho')
 module.exports = {
     index: (req, res) => {
         const carrinho = Carrinho.findAll();
-        res.render('carrinho',  { carrinho , css: 'carrinho' })
+        res.render('carrinho', { carrinho, css: 'carrinho' })
     },
-    add:(req,res) =>{
-        const { produtoId} =req.body;
+    add: (req, res) => {
+        const { produtoId } = req.body;
         const estiloProdutos = estiloProdutosModel.index();
+
         Carrinho.add(estiloProdutos[produtoId]);
         res.redirect('/carrinho');
     },
-    remove:(req,res) =>{
-        const {produtoId} =req.params;
-        Carrinho.remove({produtoId})
-        console.log(produtoId)
+    remove: (req, res) => {
+        const { produtoId } = req.body;
+        Carrinho.remove(produtoId);
+        const carrinho = Carrinho.findAll();
         res.redirect('/carrinho');
     }
 
@@ -40,7 +41,7 @@ module.exports = {
 
 // const ServiceLivrosModel = require('../models/ServiceLivrosModel');
 
-// module.exports = { 
+// module.exports = {
 //     index: (req, res) => {
 //         //controler comunicando com o model
 //         const servicos = ServiceLivroModel.index();

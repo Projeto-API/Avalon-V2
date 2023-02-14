@@ -13,13 +13,13 @@
     },
     {
         "id": 2,
-        "imagem": "/images/a hora da essencia.png",
+        "imagem": "/images/1661966653.webp",
         "nome": "Livro 3",
         "valor": 5
     },
     {
         "id": 3,
-        "imagem": "/images/1661966653.webp",
+        "imagem": "images/1664561630.webp",
         "nome": "Livro 5",
         "valor": 30
     }

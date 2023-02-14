@@ -1,32 +1,8 @@
 [
     {
-        "id": 5,
-        "imagem": "../images/1661966653.webp",
-        "nome": "Livro  2 ",
-        "valor": 10
-    },
-    {
         "id": 0,
         "imagem": "/images/1661966653.webp",
         "nome": "Livro Nome",
-        "valor": 5
-    },
-    {
-        "id": 1,
-        "imagem": "/images/1664561630.webp",
-        "nome": "Livro ",
-        "valor": 5
-    },
-    {
-        "id": 0,
-        "imagem": "/images/1661966653.webp",
-        "nome": "Livro Nome",
-        "valor": 5
-    },
-    {
-        "id": 2,
-        "imagem": "/images/a hora da essencia.png",
-        "nome": "Livro 3",
         "valor": 5
     }
 ]

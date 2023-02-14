@@ -10,7 +10,6 @@ var produtoRouter = require('../src/routes/produto');
 var carrinhoRouter = require('../src/routes/carrinho');
 var methodOverride = require('method-override')
 
-
 var app = express();
 
 // view engine setup

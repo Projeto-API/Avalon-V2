@@ -16,7 +16,9 @@ module.exports ={
         return carrinho
     },
     remove: function(id){
-        const novoCarrinho = carrinho.filter(item => item != id);
+
+        const novoCarrinho = carrinho.filter(item => item.id != id);
+
         this.save(JSON.stringify(novoCarrinho,null,4));
         
     }

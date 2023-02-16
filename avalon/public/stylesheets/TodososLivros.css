@@ -22,7 +22,7 @@ ul li {
     text-align: left;
 }
 
-main.produtos {
+main.Livros {
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -122,7 +122,7 @@ section .galeria {
 
 }
 
-.galeria>.catalogo_produtos {
+.galeria>.catalogo_Livros {
     background-color: #F6F9FF;
     border-radius: 1rem;
     margin: 0.8rem;

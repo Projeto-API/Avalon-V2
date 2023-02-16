@@ -31,9 +31,9 @@ body {
     font-size: 19px
 }
 
-.produto1,
-.produto2,
-.produto3 {
+.Livro1,
+.Livro2,
+.Livro3 {
     margin: .5rem;
     display: flex;
     width: auto;
@@ -42,7 +42,7 @@ body {
     border-radius: 1rem;
 }
 
-.imagemProduto {
+.imagemLivro {
     margin: .5rem;
     border-radius: .5rem;
     justify-content: center;
@@ -51,20 +51,20 @@ body {
     width: 50px;
 }
 
-#produtoTitulo {
+#LivroTitulo {
     text-align: left;
     padding-bottom: 1rem;
     font-size: .7rem;
 }
 
-.informationProdutoValue {
+.informationLivroValue {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
     gap: 1rem;
 }
 
-.informationProdutoValue a {
+.informationLivroValue a {
     text-decoration: none;
     color: black;
 }

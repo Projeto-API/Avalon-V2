@@ -9,10 +9,10 @@
     <div class="container-crud">
       <div class="container-header-crud">
         <div class="header-crud">
-          <button class="btnCrud"><a href="/produto/admin">Todos</a></button>
+          <button class="btnCrud"><a href="/Livro/admin">Todos</a></button>
           <button onclick="openModal()" class="btnCrud"><a>Adicionar</a></button>
           <button class="btnCrud"><a> Deletar</a></button>
-          <form action="/produto/buscar" method="get">
+          <form action="/Livro/buscar" method="get">
             <input type="text" name="buscar" id="read" placeholder="Buscar ">
           </form>
 
@@ -32,25 +32,25 @@
             </tr>
           </thead>
           <tbody>
-            <% produtos.forEach(produto=> { %>
+            <% Livros.forEach(Livro=> { %>
               <tr>
                 <td><input type="checkbox"></td>
                 <td>
-                  <%= produto.id %>
+                  <%= Livro.id %>
                 </td>
                 <td>
-                  <%= produto.nome %>
+                  <%= Livro.nome %>
                 </td>
                 <td>
-                  <%= produto.valor %>
+                  <%= Livro.valor %>
                 </td>
                 <td class="acao">
-                  <button onclick="editModal('<%= JSON.stringify(produto) %>')" class="crudform"><i
+                  <button onclick="editModal('<%= JSON.stringify(Livro) %>')" class="crudform"><i
                       class='bx bx-edit'></i></button>
 
                 </td>
                 <td class="acao">
-                  <form action="/produto/deletar/<%= produto.id %>?_method=DELETE" method="POST">
+                  <form action="/Livro/deletar/<%= Livro.id %>?_method=DELETE" method="POST">
                     <button class="crudform"><i class='bx bx-trash'></i></button>
                 </td>
 
@@ -65,14 +65,14 @@
       <div class="modal-container">
         <div class="modal">
 
-          <form class="form-crud" action="/produto/admin" method="POST" enctype="multipart/form-data">
+          <form class="form-crud" action="/Livro/admin" method="POST" enctype="multipart/form-data">
 
             <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
-            <input class="form-crud-input" id="titulo" type="text" name="nome" placeholder="Digite o nome do livro ">
+            <input class="form-crud-input" id="titulo" type="text" name="nome" placeholder="Digite o nome do Livro ">
 
             <label class="form-crud-label" for="valor">Preço:</label> <br>
             <input class="form-crud-input" id="crud-preco" type="text" name="valor"
-              placeholder="Coloque o valor do produto">
+              placeholder="Coloque o valor do Livro">
 
             <label class="form-crud-label" for="categoria">Categoria:</label> <br>
             <input class="form-crud-input" class="open-modal" type="text" name="categoria"
@@ -85,7 +85,7 @@
             <input class="form-crud-input" type="text" name="editora" placeholder="Digite a editora">
 
             <label class="form-crud-label" for="sinopse">Sinopse:</label> <br>
-            <textarea class="form-crud-input" name="sinopse" placeholder="Escreva aqui a sinopse do produto"></textarea>
+            <textarea class="form-crud-input" name="sinopse" placeholder="Escreva aqui a sinopse do Livro"></textarea>
 
             <label class="form-crud-label" for="capaImg">Imagem Capa:</label> <br>
             <input type="file" class="alteraInp" name="capaImg">

@@ -1,20 +1,9 @@
-const UsuarioModel = require('../models/UsuarioModel');
+const LoginModel = require('../models/LoginModel')
 
 module.exports = {
-  criarForm: (req, res) => {
-    return res.render('cadastro-usuario', {erros: [], user: null})
-  },
-
-  criar: (req, res) => {
-    const usuario = req.body;
-    const erros = [];
-
-    if (!usuario.email || !usuario.senha) {
-      erros.push({ msg: 'Login inválido!' });
-      return res.render('cadastro-usuario', {erros, user: null});
+    listaLogin: (req, res) => {
+        const Login = LoginModel.index();
+       
+        res.render('Login', { title: 'Express', css: 'Login', Login });
     }
-
-    UsuarioModel.criar(usuario);
-    return res.redirect('/login');
-  }
 }

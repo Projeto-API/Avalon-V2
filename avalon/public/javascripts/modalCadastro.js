@@ -1,8 +1,8 @@
-function abrirUsuario() {
-    document.getElementById('bg-usuario').style.top ="0";
+function abrirMinhaConta() {
+    document.getElementById('bg-MinhaConta').style.top ="0";
 }
-function fecharUsuario() {
-    document.getElementById('bg-usuario').style.top = "-150%";
+function fecharMinhaConta() {
+    document.getElementById('bg-MinhaConta').style.top = "-150%";
 }
 
 
@@ -20,7 +20,7 @@ function verificarFormulario(){
             errorsMessages.push("O campo Livro não pode estar vazio")
             
         } else if(tituloLivro.value.length < 3  ) {
-            errorsMessages.push("o tamanho do Titulo do livro tem de ser maior que 3")
+            errorsMessages.push("o tamanho do Titulo do Livro tem de ser maior que 3")
         }
         
         let autor = document.getElementById("autor");

@@ -11,12 +11,12 @@ main {
     display: none;
 }
 
-/* SEÇÃO REFERENTE ÀS INFORMAÇÕES DO PRODUTO */
+/* SEÇÃO REFERENTE ÀS INFORMAÇÕES DO Livro */
 .cabecalho {
     display: none;
 }
 
-.produto {
+.Livro {
     margin: .5rem;
     display: flex;
     width: auto;
@@ -25,18 +25,18 @@ main {
     border-radius: 1rem;
 }
 
-.imagemProduto {
+.imagemLivro {
     margin: .5rem;
     border-radius: .5rem;
     display: flex;
     width: 4rem;
 }
 
-#produtoTitulo {
+#LivroTitulo {
     padding-bottom: 1rem;
 }
 
-.informationProduto {
+.informationLivro {
     justify-content: center;
     display: flex;
     flex-direction: column;
@@ -44,14 +44,14 @@ main {
     width: 100%;
 }
 
-.informationProdutoValue {
+.informationLivroValue {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
     gap: 1rem;
 }
 
-.informationProdutoValue a {
+.informationLivroValue a {
     text-decoration: none;
     color: black;
 }
@@ -189,7 +189,7 @@ tfoot {
     }
 
 
-    .informationProduto {
+    .informationLivro {
         align-items: center;
         justify-content: space-around;
         display: flex;
@@ -197,12 +197,12 @@ tfoot {
         gap: 5rem;
     }
 
-    .nomeProduto {
+    .nomeLivro {
         width: 30vw;
         max-width: 360px;
     }
 
-    .informationProdutoValue {
+    .informationLivroValue {
         justify-content: right;
         gap: 5rem;
     }
@@ -216,7 +216,7 @@ tfoot {
         display: flex;
     }
 
-    .containerProduto {
+    .containerLivro {
         width: 900px;
     }
 

@@ -9,8 +9,8 @@ module.exports = {
     return fs.writeFileSync(filename, data);
   },
 
-  add: function (produtoId) {
-    carrinho.push(produtoId);
+  add: function (LivroId) {
+    carrinho.push(LivroId);
     this.save(JSON.stringify(carrinho, null, 4));
   },
 

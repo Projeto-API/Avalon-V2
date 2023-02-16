@@ -9,10 +9,10 @@
     <div class="container-crud">
       <div class="container-header-crud">
         <div class="header-crud">
-          <button class="btnCrud"><a href="/produto/admin">Todos</a></button>
+          <button class="btnCrud"><a href="/Livro/admin">Todos</a></button>
           <button onclick="openModal()" class="btnCrud"><a>Adicionar</a></button>
           <button class="btnCrud"><a> Deletar</a></button>
-          <form action="/produto/buscar" method="get">
+          <form action="/Livro/buscar" method="get">
             <input type="text" name="buscar" id="read" placeholder="Buscar ">
           </form>
 
@@ -32,20 +32,20 @@
             </tr>
           </thead>
           <tbody>
-            <% produtos.forEach(produto=> { %>
+            <% Livros.forEach(Livro=> { %>
               <tr>
                 <td><input type="checkbox"></td>
                 <td>
-                  <%= produto.id %>
+                  <%= Livro.id %>
                 </td>
                 <td>
-                  <%= produto.nome %>
+                  <%= Livro.nome %>
                 </td>
                 <td>
-                  <%= produto.valor %>
+                  <%= Livro.valor %>
                 </td>
                 <td class="acao">
-                  <form action="/produto/editar/<%= produto.id %>?_method=PUT" method="PUT">
+                  <form action="/Livro/editar/<%= Livro.id %>?_method=PUT" method="PUT">
                     <button onclick="openModal()" class="bx bx-edit" id="editar"></button>
                   </form>
                   </form>
@@ -60,13 +60,13 @@
 
       <div class="modal-container">
         <div class="modal">
-          <form action="/produto/admin" method="POST">
+          <form action="/Livro/admin" method="POST">
             <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
-            <input class="form-crud-input" id="titulo" type="text" name="nome" placeholder="Digite o nome do livro">
+            <input class="form-crud-input" id="titulo" type="text" name="nome" placeholder="Digite o nome do Livro">
 
             <label class="form-crud-label" for="valor">Preço:</label> <br>
             <input class="form-crud-input" id="crud-preco" type="text" name="valor"
-              placeholder="Coloque o valor do produto">
+              placeholder="Coloque o valor do Livro">
 
             <label class="form-crud-label" for="categoria">Categoria:</label> <br>
             <input class="form-crud-input" class="open-modal" type="text" value="categoria" name="categoria"

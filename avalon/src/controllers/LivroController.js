@@ -43,6 +43,16 @@ module.exports = {
     console.log("O Livro de id " + req.body.id + " foi deletado com sucesso");
     return res.redirect('/Livro/admin')
   }
+ //// -----BANCO DE DADOS ----- ////
+ 
+
+
+
+
+
+
+
+
 };
 
 

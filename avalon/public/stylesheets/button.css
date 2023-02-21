@@ -107,9 +107,6 @@ button a {
 }
 /* BOTÃO FINALIZAR COMPRA */
 
-
-
-
 .finalizarCompra :hover {
     color: white;
 }
@@ -143,6 +140,10 @@ button a {
     top: 45%;
     right: -20px;
     transform: translate(-50%, -50%);
+}
+
+#prev:hover,#next:hover {
+    color: white;
 }
 
 #excluir {

@@ -103,12 +103,10 @@ main {
     width: auto;
 }
 
-
 /*  CARROSEIS  */
 
 .continue-vendo,
 .lancamento {
-
     position: relative;
     max-width: 1200px;
     width: 100%;
@@ -127,7 +125,6 @@ main {
     grid-auto-flow: column;
 }
 
-
 .gallery li {
     display: flex;
     flex-direction: column;
@@ -136,7 +133,6 @@ main {
     text-align: center;
     list-style: none;
 }
-
 
 .item img {
     margin: 10px;
@@ -160,7 +156,6 @@ main {
     right: 15vw;
     position: absolute;
 }
-
 
 .item:hover {
     filter: brightness(60%);
@@ -265,4 +260,3 @@ main {
 
 }
 
-/* ------------------------Carrinho ----------------------------- */

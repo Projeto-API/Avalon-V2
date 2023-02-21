@@ -55,7 +55,7 @@
                 </td>
 
                 </form>
-
+<!--  -->
                 </form>
                 <% }) %>
           </tbody>
@@ -65,7 +65,8 @@
       <div class="modal-container">
         <div class="modal">
 
-          <form class="form-crud" action="/produto/admin" method="POST" enctype="multipart/form-data">
+          <form class="form-crud" action="/produto/editar/<%= produto.id %>?_method=PUT" method="POST" enctype="multipart/form-data"></form>
+          <!-- <form class="form-crud" action="/produto/admin" method="POST" enctype="multipart/form-data"> -->
 
             <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
             <input class="form-crud-input" id="titulo" type="text" name="nome" placeholder="Digite o nome do livro ">

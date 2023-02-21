@@ -29,7 +29,7 @@ module.exports = {
 
 
    atualizar: (req, res) => {
-    produtoModel.editar(req);
+    produtoModel.editar(id, req.body);
     console.log("O produto de id " + req.body.id + " foi editado com sucesso");
     return res.redirect('/produto/admin');
   },

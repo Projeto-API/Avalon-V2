@@ -38,14 +38,14 @@ module.exports = {
   },
 
 
-  buscarId: function (req, res) {
+  buscarId: function (req) {
     console.log("req", req.params.id)
     let found = this.index().filter(produto => produto.id == req.params.id)
     console.log(">>>>", found)
     return found
   },
 
-  editar: function (req, id) {
+  editar: function (req, nome) {
     if (!id) return
 
     const produtos = this.index();

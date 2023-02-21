@@ -1,18 +1,17 @@
 const modal = document.querySelector('.modal-container')
-const tbody = document.querySelector('tbody')
 
 
 function openModal() {
     modal.classList.add('active');
-    
+
 
     modal.onclick = e => {
         if (e.target.className.indexOf('modal-container') !== -1) {
             modal.classList.remove('active')
         }
     }
-
 }
+
 
 function editModal(produto = "{}") {
 
@@ -41,14 +40,15 @@ function editModal(produto = "{}") {
         inputIMG.value = produto.capaImg
 
 
-        document.querySelector('.form-crud').action = `/produto/editar/${produto.id}?_method=PUT`
+        // document.querySelector('.form-crud').action = `/produto/editar/${produto.id}?_method=PUT`
 
-    }
+    } 
+
     modal.onclick = e => {
         if (e.target.className.indexOf('modal-container') !== -1) {
             modal.classList.remove('active')
         }
     }
-
 }
+
 

@@ -1,14 +1,14 @@
 var express = require('express');
-const paginaCadastroController = require('../controllers/paginaCadastroController');
-const paginaLoginController = require('../controllers/paginaLoginController');
-const usuarioController = require('../controllers/usuarioController');
+const CadastroUsuarioController = require('../controllers/CadastroUsuarioController');
+const LoginController = require('../controllers/LoginController');
+const MinhaContaController = require('../controllers/MinhaContaController');
 
 var router = express.Router();
 
 // /* GET home page. */
-router.get('/paginaCadastro', paginaCadastroController.listapaginaCadastro);
-router.get('/paginaLogin', paginaLoginController.listapaginaLogin);
-router.get('/usuario', usuarioController.listausuario);
+router.get('/CadastroUsuario', CadastroUsuarioController.listaCadastroUsuario);
+router.get('/Login', LoginController.listaLogin);
+router.get('/MinhaConta', MinhaContaController.listaMinhaConta);
 router.get('/checkout', function (req, res, next) {
   res.render('checkout', { title: 'Express', css: 'checkout' });
 });
@@ -18,7 +18,7 @@ router.get('/carrinho', function (req, res, next) {
 });
 
 router.get('/intranet', function (req, res, next) {
-  res.render('intranet', { title: 'Express', css: 'usuario' });
+  res.render('intranet', { title: 'Express', css: 'MinhaConta' });
 });
 
 

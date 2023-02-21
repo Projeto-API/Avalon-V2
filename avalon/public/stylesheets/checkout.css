@@ -209,7 +209,7 @@ main {
     font-size: .8rem;
 }
 
-.produto {
+.Livro {
     margin: .5rem;
     justify-content: left;
     display: flex;
@@ -218,20 +218,20 @@ main {
     border-radius: 1rem;
 }
 
-.imagemProduto {
+.imagemLivro {
     margin: .5rem;
     border-radius: .5rem;
     display: flex;
     width: 4rem;
 }
 
-#produtoTitulo {
+#LivroTitulo {
     padding-bottom: 1rem;
     text-align: left;
     width: 100%;
 }
 
-.informationProduto {
+.informationLivro {
     justify-content: flex-start;
     display: flex;
     flex-direction: column;
@@ -240,7 +240,7 @@ main {
 
 }
 
-.informationProdutoValue {
+.informationLivroValue {
     width: 100%;
     display: flex;
     flex-direction: row;

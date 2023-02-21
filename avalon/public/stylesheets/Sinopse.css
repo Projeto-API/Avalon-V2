@@ -1,0 +1,404 @@
+
+
+* body {
+    height: auto;
+}
+
+
+main {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*MAIN */
+
+
+.capaprincipal {
+
+    padding-top: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #386C5F;
+}
+
+#capa {
+    max-width: 18rem;
+    width: 80vw;
+    padding-top: 2rem;
+    border-radius: 1rem;
+}
+
+.miniaturas {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.gallery-miniaturas {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: hidden;
+}
+
+.título {
+
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+h6 {
+    color: gray;
+    font-size: .9rem;
+
+}
+
+.sinopse {
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+.sinopse p {
+    padding: 3rem 0;
+    font-size: 1rem;
+}
+
+.precoLivro {
+    display: flex;
+    font-size: 1.5rem;
+    color: red;
+    font-weight: bold;
+
+}
+
+.price-qtt {
+    padding-left: 2rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    display: flex;
+}
+
+#quantidade {
+    display: none;
+}
+
+.containerfilho2 {
+    margin: 1rem;
+}
+
+.containercolumninformation {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.columninformation {
+    padding: 2rem;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    font-size: 1rem;
+    justify-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    list-style: none;
+}
+
+.columninformation>li {
+    padding: .5rem 0;
+}
+
+.columninformation>li p:last-child {
+    font-weight: bold;
+    font-size: .8rem;
+    align-items: center;
+}
+
+.author {
+    color: white;
+    padding: 2rem;
+    background-color: #286152;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.columnauthor {
+    color: black;
+    padding-left: 2rem;
+    width: 100%;
+}
+
+.abstract {
+    display: none;
+}
+
+.imageauthor>img {
+    display: none;
+
+}
+
+
+
+.title {
+    margin: 1rem;
+}
+
+/*  CARROSEIS  */
+
+.continue-vendo,
+.lancamento {
+
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.carrousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.gallery {
+    margin: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+}
+
+
+
+.gallery li {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 10rem;
+    text-align: center;
+    list-style: none;
+}
+
+
+.item img {
+    margin: 10px;
+    max-height: 12rem;
+    height: 100%;
+    border-radius: 5%;
+    align-items: center;
+}
+
+
+@media (min-width: 768px) {
+    body {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .container1 {
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .capaprincipal {
+        padding: 2rem 0;
+        background-color: white;
+
+    }
+
+    #capa {
+        width: 13rem;
+    }
+
+    .miniaturas {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        flex-flow: row nowrap;
+        overflow-x: hidden;
+
+    }
+
+    .gallery-miniaturas {
+        display: flex;
+        flex-flow: row nowrap;
+        overflow-x: hidden;
+    }
+
+    .container2 {
+        width: 70vw;
+        display: flex;
+        flex-direction: column;
+        font-size: 1.2rem;
+    }
+
+    .sinopse {
+        padding-top: 60px;
+    }
+
+    #quantidade {
+        display: flex;
+        justify-content: space-around;
+        font-size: 1rem;
+        max-width: 4rem;
+        text-align: center;
+        border-radius: .2rem;
+        align-items: center;
+    }
+
+    .price-qtt {
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        display: flex;
+    }
+
+    .containerfilho2 {
+        width: auto;
+        justify-content: center;
+        display: flex;
+    }
+
+    #comprar {
+        width: 70%;
+    }
+
+    .columninformation {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+        flex-direction: row;
+        flex-flow: row nowrap;
+        overflow-x: hidden;
+    }
+
+
+    .columninformation * p {
+        flex-wrap: nowrap;
+        min-width: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .abstract {
+        display: none;
+    }
+
+
+    .imageauthor>img {
+        max-width: 8rem;
+        display: flex;
+        width: 10vw;
+        border-radius: 200%;
+        flex-direction: column;
+    }
+}
+
+
+
+@media (min-width: 1200px) {
+    body * {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    main {
+        width: 1200px;
+    
+        
+    }
+
+    #capa {
+        padding-top: 0;
+    }
+
+    .container {
+      
+        height: 600px;
+        padding-top: 7rem;
+
+    }
+
+    .container1 {
+        height: 100%;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+    }
+
+    .gallery-miniaturas {
+        display: flex;
+        flex-direction: column;
+        height: 18rem;
+        width: 4rem;
+        gap: 1rem;
+        flex-flow: column nowrap;
+        overflow-y: hidden;
+    }
+
+    .miniaturas {
+        padding: 3rem 2rem;
+    }
+
+
+    .sinopse {
+        padding-top: 20px;
+        text-align: left;
+
+    }
+
+    .price-qtt {
+        width: 90%;
+        justify-content: space-around;
+
+
+    }
+
+    .containerfilho1 {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .columninformation {
+        display: flex;
+
+    }
+
+    .columninformation * p {
+        min-width: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .abstract {
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .author {
+        height: 280px;
+    }
+
+
+}

@@ -21,14 +21,14 @@ main {
 
 }
 
-.header2 {
+.header2, .footer{
     display: none;
 }
 
 #logo {
     display: block;
     height: 35px;
-    padding-left: 15vw;
+    padding-left: 0;
 }
 
 form {

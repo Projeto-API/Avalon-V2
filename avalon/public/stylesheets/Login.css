@@ -28,7 +28,7 @@ main {
 #logo {
     display: block;
     height: 35px;
-    padding-left: 0;
+    padding-left: 5rem;
 }
 
 form {

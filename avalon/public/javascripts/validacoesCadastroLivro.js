@@ -1,6 +1,7 @@
+
 window.addEventListener('load', function () {
-  const form = document.querySelector('main form.form-auth');
-  const inputList = document.querySelectorAll('main form.form-auth input');
+  const form = document.querySelector('form.form-crud');
+  const inputList = document.querySelectorAll('form.form-crud input');
   let hasErrors = false;
   let hasFormErrors = false;
 
@@ -11,7 +12,7 @@ window.addEventListener('load', function () {
       hasErrors = false;
     }
 
-    const errorSpans = document.querySelectorAll('main form.form-auth span.error');
+    const errorSpans = document.querySelectorAll('form.form-crud span.error');
     errorSpans.forEach(span => span.remove());
   };
 
@@ -25,7 +26,7 @@ window.addEventListener('load', function () {
     const errorSpan = document.createElement('span');
     errorSpan.classList.add('error');
     errorSpan.innerText = mensagem;
-    input.insertAdjacentElement('afterend', errorSpan);
+    input.insertAdjacentElement('beforebegin', errorSpan);
   };
 
   form.addEventListener('submit', function (event) {
@@ -79,12 +80,12 @@ window.addEventListener('load', function () {
       removeErrors('input');
 
       switch (input.name) {
-       
-        case 'tituloLivro':
+
+        case 'nome':
           validateLength(input, 2, 9);
           break;
 
-          case 'idioma':
+        case 'idioma':
           validateLength(input, 6, 8);
           break;
 
@@ -96,33 +97,32 @@ window.addEventListener('load', function () {
           validateLength(input, 2, 4);
           break;
 
-          case 'sinopse':
-            validateLength(input, 10, 20);
-            break;
+        case 'sinopse':
+          validateLength(input, 10, 20);
+          break;
 
-            case 'paginas':
-              validateLength(input, 1, 3);
-              break;
-  
+        case 'paginas':
+          validateLength(input, 1, 3);
+          break;
 
-            case 'acabamento':
-              validateLength(input, 2, 4);
-              break;
+        case 'acabamento':
+          validateLength(input, 2, 4);
+          break;
 
-              case 'preco':
-                validatepreco(input, 4, 6);
-                break;
-                case 'autor':
-                  validateLength(input, 2, 8);
-                  break;
+        case 'preco':
+          validatepreco(input, 4, 6);
+          break;
+        case 'autor':
+          validateLength(input, 2, 8);
+          break;
 
-                  case 'isbn':
-                  validateLength(input, 2, 3);
-                  break;
+        case 'isbn':
+          validateLength(input, 2, 3);
+          break;
 
-                  case 'editora':
-                    validateLength(input, 2, 7);
-                    break;
+        case 'editora':
+          validateLength(input, 2, 7);
+          break;
         default:
           break;
       }

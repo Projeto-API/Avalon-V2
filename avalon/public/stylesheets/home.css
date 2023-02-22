@@ -85,8 +85,7 @@ main {
 }
 
 #grid-1 {
-    height: 80vw;
-    align-items: center;
+    width: 80vw;
     filter: drop-shadow(.5rem .5rem 1rem black);
 }
 
@@ -111,7 +110,7 @@ main {
 }
 
 .carrousel {
-    overflow: auto;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
@@ -136,7 +135,7 @@ main {
     width: 100%;
 }
 
-.item div button{
+.item div button {
     width: 80%;
 }
 
@@ -168,13 +167,6 @@ main {
     right: 15vw;
     position: absolute;
 }
-
-/* .item:hover {
-    filter: brightness(60%);
-    transition-property: all;
-    transition-duration: 0.2s;
-} */
-
 
 @media (min-width: 768px) {
     body {

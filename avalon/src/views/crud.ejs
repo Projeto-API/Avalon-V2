@@ -72,26 +72,46 @@
         <div class="modal">
 
           <form class="form-crud" action="/produto/admin" method="POST" enctype="multipart/form-data">
+            <br>
+            <label class="form-crud-label" for="categoria">Categoria:</label> <br>
+            <select name="categoria" id="categoria">
+              <option value="hw">Histórias em Quadrinhos</option>
+              <option value="livro">Livros</option>
+            </select>
 
             <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
-            <input class="form-crud-input" id="titulo" type="text" name="nome" placeholder="Digite o nome do Livro ">
+            <input class="form-crud-input" id="titulo" type="text" name="nome" placeholder="Digite o nome do livro ">
 
             <label class="form-crud-label" for="valor">Preço:</label> <br>
             <input class="form-crud-input" id="crud-preco" type="text" name="valor"
               placeholder="Coloque o valor do Livro">
 
-            <label class="form-crud-label" for="categoria">Categoria:</label> <br>
-            <input class="form-crud-input" class="open-modal" type="text" name="categoria"
-              placeholder="Digite a categoria">
-
-            <label class="form-crud-label" for="autor">Autor:</label> <br>
-            <input class="form-crud-input" type="text" name="autor" placeholder="Digite o nome do autor">
-
             <label class="form-crud-label" for="editora">Editora:</label> <br>
             <input class="form-crud-input" type="text" name="editora" placeholder="Digite a editora">
 
+            <label class="form-crud-label" for="publicacao">Ano de Publicação:</label> <br>
+            <input class="form-crud-input" type="text" name="publicacao" placeholder="Digite o ano de publicação">
+
+            <label class="form-crud-label" for="idioma">Idioma:</label> <br>
+            <input class="form-crud-input" type="text" name="idioma" placeholder="Digite o idioma">
+
+            <label class="form-crud-label" for="paginas">Páginas:</label> <br>
+            <input class="form-crud-input" type="text" name="paginas" placeholder="Digite o número de paginas">
+
+            <label class="form-crud-label" for="dimensoes">Dimensões:</label> <br>
+            <input class="form-crud-input" type="text" name="dimensoes" placeholder="Digite as dimensões em cm">
+
+            <label class="form-crud-label" for="categoria">Acabamento:</label> <br>
+            <select name="categoria" id="categoria">
+              <option value="comum">Capa Comum</option>
+              <option value="dura">Capa Dura</option>
+            </select>
+
+            <label class="form-crud-label" for="isbn">ISBN-13:</label> <br>
+            <input class="form-crud-input" type="text" name="dimensoes" placeholder="Digite o ISBN">
+
             <label class="form-crud-label" for="sinopse">Sinopse:</label> <br>
-            <textarea class="form-crud-input" name="sinopse" placeholder="Escreva aqui a sinopse do Livro"></textarea>
+            <textarea class="form-crud-input" name="sinopse" placeholder="Escreva aqui a sinopse do livro"></textarea>
 
             <label class="form-crud-label" for="capaImg">Imagem Capa:</label> <br>
             <input type="file" class="alteraInp" name="capaImg">

@@ -1,21 +1,27 @@
 <%- include('partials/header') %>
 
   <link rel="stylesheet" href="/stylesheets/crud.css">
-  
-
   <script src="/javascripts/crud.js" defer></script>
 
   <main>
+    <div class="crud-types">
+      <button class="btnCrud"><a href="/Livro/admin">Editoras</a></button>
+      <button class="btnCrud"><a href="/Livro/admin">Autores</a></button>
+    </div>
     <div class="container-crud">
+
+      <h4 class="crud-title">CADASTRO LIVROS</h4>
+
       <div class="container-header-crud">
         <div class="header-crud">
           <button class="btnCrud"><a href="/Livro/admin">Todos</a></button>
           <button onclick="openModal()" class="btnCrud"><a>Adicionar</a></button>
           <button class="btnCrud"><a> Deletar</a></button>
-          <form action="/Livro/buscar" method="get">
-            <input type="text" name="buscar" id="read" placeholder="Buscar ">
-          </form>
-
+          <div class="search-crud">
+            <form action="/Livro/buscar" method="get">
+              <input type="text" name="buscar" id="read" placeholder="Buscar ">
+            </form>
+          </div>
 
         </div>
       </div>
@@ -55,7 +61,7 @@
                 </td>
 
                 </form>
-<!--  -->
+                <!--  -->
                 </form>
                 <% }) %>
           </tbody>

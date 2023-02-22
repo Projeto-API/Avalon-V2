@@ -15,14 +15,23 @@ function excluirDentroCarrinho(excluiLivro) {
 
     for (let index = 0; index < arrayDiv.length; index++) {
         var element = arrayDiv[index]
-        if(element.id == excluiLivro){
-            element.style.display= "none"
+        if (element.id == excluiLivro) {
+            element.style.display = "none"
         }
     }
-    
+
 }
 
-function incluirDentroCarrinho() {
+
+
+
+let comprar = document.querySelectorAll('.comprar')
+
+comprar.forEach(button => {
+    button.addEventListener('click', addCart)
+});
+
+function addCart() {
     let em = document.createElement('em')
     em.innerHTML = `<div class="Livro" id="Livro4">
     <img class="imagemLivro" src="../Livros/my broken mariko/mariko-capa.jpg" alt="">
@@ -43,4 +52,5 @@ function incluirDentroCarrinho() {
 </div>`
     document.querySelector('#containerLivro').appendChild(em)
 }
+
 

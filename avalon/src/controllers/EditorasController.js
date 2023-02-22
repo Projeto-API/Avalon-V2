@@ -1,50 +1,50 @@
-// const { Editora } = require('../models');
-// const {Op} = require('sequelize');
+const { Editora } = require('../models');
+const {Op} = require('sequelize');
 
-// module.exports = {
-//   index: async (req, res) => {
-//     const { search } = req.query;
-//     const editoras = await Editora.findAll({
-//       where: search ? { nome: {[Op.like]: '%' + search + '%'} } : null 
-//     });
+module.exports = {
+  index: async (req, res) => {
+    const { search } = req.query;
+    const editoras = await Editora.findAll({
+      where: search ? { nome: {[Op.like]: '%' + search + '%'} } : null 
+    });
 
-//     res.render('editoras', { editoras });
-//   },
+    res.render('editoras', { editoras });
+  },
 
-//   form: async (req, res) => {
-//     let editora;
-//     const { id } = req.params;
+  form: async (req, res) => {
+    let editora;
+    const { id } = req.params;
 
-//     if (id) editora = await Editora.findByPk(id);
+    if (id) editora = await Editora.findByPk(id);
 
-//     res.render('adicionarEditora', { editora });
-//   },
+    res.render('adicionarEditora', { editora });
+  },
 
-//   criar: async (req, res) => {
-//     const { nome } = req.body;
-//     await Editora.create({ nome });
+  criar: async (req, res) => {
+    const { nome } = req.body;
+    await Editora.create({ nome });
 
-//     res.redirect('/editoras');
-//   },
+    res.redirect('/editoras');
+  },
 
-//   editar: async (req, res) => {
-//     const { id } = req.params;
-//     const { nome } = req.body;
+  editar: async (req, res) => {
+    const { id } = req.params;
+    const { nome } = req.body;
 
-//     await Editora.update({ nome }, {
-//       where: { id }
-//     });
+    await Editora.update({ nome }, {
+      where: { id }
+    });
 
-//     res.redirect('/editoras');
-//   },
+    res.redirect('/editoras');
+  },
 
-//   remover: async (req, res) => {
-//     const { id } = req.params;
+  remover: async (req, res) => {
+    const { id } = req.params;
 
-//     await Editora.destroy({
-//       where: { id },
-//     });
+    await Editora.destroy({
+      where: { id },
+    });
 
-//     res.redirect('/editoras');
-//   },
-// };
+    res.redirect('/editoras');
+  },
+};

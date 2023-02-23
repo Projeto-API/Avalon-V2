@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+
+main {
+  padding-top: 70px;
+  max-width: 1200px;
+}
+
+/* CABEÇALHOS */
+.crud-types {
+  display: flex;
+  gap: 10px;
+  padding: 0 20px;
+  width: 100%;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.crud-types button {
+  background-color: #6bd5e6;
+  ;
+}
+
+.crud-title {
+  padding: 15px 20px;
+}
+
+.container-crud {
+  margin: 19px;
+  border-radius: 10px;
+  background: #9CD9C2;
+  justify-content: center;
+}
+
+.container-header-crud {
+  width: 100%;
+}
+
+.header-crud {
+  margin: auto 10px;
+  min-height: 70px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+
+.search-crud {
+  width: 100%;
+}
+
+#read {
+  padding: 5px;
+  border-radius: 10px;
+  width: 100%;
+  border: none;
+}
+
+.modal-container {
+  width: 100%;
+ height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 999;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal {
+  top: 50px;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  border-radius: 10px;
+  width: 600px;
+
+}
+
+.modal label {
+  font-size: 14px;
+  width: 100%;
+}
+
+.modal input,
+.modal textarea,
+.modal select {
+  background-color: white;
+  width: 100%;
+  outline: none;
+  padding: 5px 10px;
+  width: 100%;
+  margin-bottom: 20px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  resize: none;
+
+}
+
+.modal textarea::placeholder {
+  font-size: 13px;
+}
+
+.active {
+  display: flex;
+}
+
+.active .modal {
+  animation: modal .4s;
+}
+
+@keyframes modal {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -60px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+td button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+td button i {
+  font-size: 25px;
+}
+
+#editar {
+  font-size: 25px;
+}
+
+td button i:first-child {
+  margin-right: 10px;
+}
+
+.header span {
+  font-weight: 900;
+  font-size: 20px;
+  word-break: break-all;
+}
+
+.btnCrud {
+  padding: 1rem;
+  align-items: center;
+  width: 100%;
+  display: flex;
+  font-weight: bold;
+  height: 2rem;
+  background-color: #4EC16E;
+  border-radius: 1rem;
+  cursor: pointer;
+  border: none;
+}
+
+.btnCrud a {
+  width: 100%;
+}
+
+.btnCrud :hover {
+  color: white;
+
+}
+
+#btnSalvar {
+  width: 100%;
+}
+
+.crudform {
+
+  align-items: center;
+}
+
+.crudform :hover {
+  color: white;
+}
+
+
+.divTable {
+  padding: 10px;
+  width: auto;
+  height: inherit;
+  overflow: auto;
+}
+
+.divTable::-webkit-scrollbar {
+  width: 12px;
+  background-color: whitesmoke;
+}
+
+.divTable::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: darkgray;
+}
+
+table {
+  width: 100%;
+  border-spacing: 10px;
+  word-break: break-all;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: whitesmoke;
+}
+
+tr {
+  border-bottom: 1px solid rgb(238, 235, 235) !important;
+}
+
+tbody tr td {
+  vertical-align: text-top;
+  padding: 6px;
+
+}
+
+thead tr th {
+  padding: 5px;
+  text-align: start;
+  margin-bottom: 50px;
+}
+
+tbody tr {
+  margin-bottom: 50px;
+}
+
+thead tr th.acao {
+  width: 100px !important;
+  text-align: center;
+}
+
+tbody tr td.acao {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .crud-types {
+    width: 300px;
+    display: flex;
+    justify-content: flex-start;
+    margin: auto 10px;
+  }
+
+  .container-header-crud {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .header-crud {
+    flex-wrap: nowrap;
+    width: 500px;
+  }
+
+  #read {
+    width: 200px;
+  }
+}
+
+@media (max-width: 700px) {
+  .divTable {
+    font-size: 12px;
+  }
+
+  .header span {
+    font-size: 15px;
+  }
+
+  thead tr th.acao {
+    width: auto !important;
+  }
+
+  td button i {
+    font-size: 20px !important;
+  }
+
+  td button i:first-child {
+    margin-right: 0;
+  }
+
+  .modal {
+    width: 90% !important;
+  }
+
+  .modal label {
+    font-size: 12px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    padding-top: 90px;
+
+  }
+}
+
+/* ----------------------------Erros ------------------- */
+.error {
+  font-size: .7rem;
+  color: red;
+  margin: 0;
+  padding: 0;
+}
+
+.errors {
+  width: 100%;
+  max-width: 46rem;
+  border: solid 2px red;
+  margin-bottom: 10px;
+  margin-left: 5rem;
+  border-radius: 2rem;
+  margin-top: 1.5rem;
+}
+
+.no-erros {
+  display: none;
+}
+
+.linhaerros {
+  color: red;
+  margin-left: 2rem;
+  text-align-last: start;
+  font-size: 19px;
+  margin-top: 12px;
+  font-weight: bolder;
+
+}
+
+/* ----------------------------VALIDACAO ------------------- */
+
+.form-auth {
+  padding: 5rem 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.form-auth {
+  padding: 1rem;
+}
+
+.form-auth li {
+  display: flex;
+  font-weight: bolder;
+  font-size: .9rem;
+  margin: .5rem;
+  padding-left: 1rem;
+  width: 100%;
+  text-align: left;
+}
+
+.form-auth a {
+  font-size: .8rem;
+  padding-left: 1rem;
+  width: 100%;
+  text-align: left;
+}
+
+.form-auth input {
+  font-size: .9rem;
+  background: white;
+  padding-left: 1rem;
+  width: 100%;
+  color: gray;
+  border: none;
+  border-radius: 3rem;
+  height: 3rem;
+}
+
+.form-auth button {
+  display: flex;
+  margin: 2rem;
+  justify-content: center;
+  font-weight: bold;
+  background-color: #4EC16E;
+  border-radius: 3rem;
+  height: 3.5rem;
+  align-items: center;
+  letter-spacing: 4px;
+  font-weight: bolder;
+  width: 100%;
+}
+
+.form-auth.card {
+  padding: 20px;
+}
+
+.register.card {
+  padding: 20px;
+}

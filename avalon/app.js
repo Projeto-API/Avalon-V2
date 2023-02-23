@@ -8,7 +8,6 @@ const methodOverride = require('method-override');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const bibliotecaRouter = require('./routes/biblioteca');
-const editorasRouter = require('./routes/editoras');
 
 const app = express();
 
@@ -26,8 +25,6 @@ app.use(methodOverride('_method'));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/biblioteca', bibliotecaRouter);
-app.use('/editoras', editorasRouter);
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -46,4 +43,3 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-

@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const { Livro, Editora } = require('../models');
 
 const livrosPath = path.resolve(__dirname, '../database/livros.json');
 
@@ -13,13 +12,8 @@ function saveLivros (livros) {
 }
 
 module.exports = {
-  async index(req, res) {
-    const livros = await Livro.findAll({
-      include: [
-        { model: Editora, as: 'editora', require: true }
-      ],
-    });
-    res.render('biblioteca', { livros });
+  index(req, res) {
+    res.render('biblioteca', { livros: getLivros() });
   },
 
   form (req, res) {

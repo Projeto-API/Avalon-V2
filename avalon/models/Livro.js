@@ -42,3 +42,4 @@ const criarLivroModel = (sequelize, dataTypes) => {
   };
   
   module.exports = criarLivroModel;
+  

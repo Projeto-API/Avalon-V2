@@ -1,4 +1,4 @@
-const CadastroUsuarioModel = require('../models/CadastroUsuarioModel')
+const CadastroUsuarioModel = require('../../models/CadastroUsuarioModel')
 
 module.exports = {
     listaCadastroUsuario: (req, res) => {

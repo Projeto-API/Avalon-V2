@@ -1,4 +1,4 @@
-const SinopseModel = require('../models/SinopseModel')
+const SinopseModel = require('../../models/SinopseModel')
 
 module.exports = {
     listaSinopse: (req, res) => {

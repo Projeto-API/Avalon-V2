@@ -1,4 +1,4 @@
-const MinhaContaModel = require('../models/MinhaContaModel')
+const MinhaContaModel = require('../../models/MinhaContaModel')
 
 module.exports = {
     listaMinhaConta: (req, res) => {

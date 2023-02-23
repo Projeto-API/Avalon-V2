@@ -20,7 +20,7 @@ var upload = multer({storage: storage})
 const TodososLivrosController = require('../controllers/TodososLivrosController');
 const SinopseController = require('../controllers/SinopseController');
 const CadastroLivrosController = require('../controllers/CadastroLivrosController');
-const LivroController = require('../controllers/LivroController');
+// const LivroController = require('../controllers/LivroController');
 // const AutoresController = require('../controllers/AutoresController');
 
 //------------------------------------------ ROTAS --------------------------//
@@ -33,18 +33,18 @@ router.get('/TodososLivros', TodososLivrosController.listaTodososLivros);
 //---------------------------CRUD-----------//
   // C - Criação de novos serviços
 
-router.post('/admin', upload.single("capaImg"),LivroController.criar);
+// router.post('/admin', upload.single("capaImg"),LivroController.criar);
 
-// Rota de busca de Livros
-router.get('/buscar', LivroController.buscar);
+// // Rota de busca de Livros
+// router.get('/buscar', LivroController.buscar);
 
-  // R - Leitura novos serviços
-router.get('/admin', LivroController.admin);
+//   // R - Leitura novos serviços
+// router.get('/admin', LivroController.admin);
 
-// // U - Atualização de serviços
-router.put('/editar/:id',LivroController.atualizar);
+// // // U - Atualização de serviços
+// router.put('/editar/:id',LivroController.atualizar);
 
-// // D - Remoção de serviços
+// // // D - Remoção de serviços
 
-router.delete('/deletar/:id', LivroController.deletar);
+// router.delete('/deletar/:id', LivroController.deletar);
 module.exports = router;

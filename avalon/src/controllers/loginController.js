@@ -1,4 +1,4 @@
-const LoginModel = require('../models/LoginModel')
+const LoginModel = require('../../models/LoginModel')
 
 module.exports = {
     listaLogin: (req, res) => {

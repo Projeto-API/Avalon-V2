@@ -19,8 +19,8 @@
         <span class="item"><%= autor.id %></span>
         <span class="item"><%= autor.nome %></span>
         <span class="item actions">
-          <a href="/Livro/autores/form/<%= autor.id %>">Editar</a>
-          <form action="/Livro/autores/deletar/<%= autor.id %>?_method=DELETE" method="post">
+          <a href="/biblioteca/autores/form/<%= autor.id %>">Editar</a>
+          <form action="/biblioteca/autores/deletar/<%= autor.id %>?_method=DELETE" method="post">
             <button type="submit">Deletar</button>
           </form>
         </span>

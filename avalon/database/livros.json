@@ -1,17 +1,17 @@
 [
     {
-        "id": 1,
-        "titulo": "O Senhor dos Anéis: A Sociedade do Anel",
-        "editora": "DH-books"
+        "id": 4,
+        "titulo": "harry potter e a ordem da fenix",
+        "editora": "jk rowling"
     },
     {
-        "id": 2,
-        "titulo": "O Senhor dos Anéis: As Duas Torres",
-        "editora": "DH-books"
+        "id": 5,
+        "titulo": "harry potter e a ordem da fenix",
+        "editora": "George Lucas"
     },
     {
-        "id": 3,
-        "titulo": "Vingadores",
-        "editora": "Marvel"
+        "id": 6,
+        "titulo": "crepusculo",
+        "editora": "editora"
     }
 ]

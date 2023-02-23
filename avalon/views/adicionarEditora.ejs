@@ -1,23 +1,19 @@
 <%- include('partials/header') %>
 
 <main>
-  <h2>
-    <% if (editora) { %>
-      Editar
-    <% } else { %>
-      Adicionar
-    <% } %>
-     Editora
-  </h2>
+  <h2>Adicionar livro</h2>
 
-  <% if (editora) { %>
-    <form class="add-form" action="/editoras/<%= editora.id %>?_method=PUT" method="post">
+  <% if (livro) { %>
+    <form class="add-form" action="/biblioteca/editar/<%= livro.id %>?_method=PUT" method="post">
   <% } else { %>
-    <form class="add-form" action="/editoras" method="post">
+    <form class="add-form" action="/biblioteca" method="post">
   <% } %>
 
-    <label for="nome">Editora</label>
-    <input type="text" name="nome" id="nome" value="<%= editora && editora.nome %>">
+    <label for="titulo">Título</label>
+    <input type="text" name="titulo" id="titulo" value="<%= livro && livro.titulo %>">
+
+    <label for="editora">Editora</label>
+    <input type="text" name="editora" id="editora" value="<%= livro && livro.editora %>">
 
     <button type="submit">Enviar</button>
   </form>

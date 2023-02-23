@@ -1,21 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/stylesheets/style.css">
 
-  <title>Biblioteca</title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/nav.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/stylesheets/button.css">
+    <link rel="stylesheet" href="/stylesheets/carrinhoFlutuante.css">
+
+    <script src="/javascripts/menuHamburguer.js" defer></script>
+    <script src="/javascripts/carrinhoFlutuante.js" defer></script>
+    <script src="/javascripts/script.js" defer></script>
+    <script src="/javascripts/validacoescadastro.js" defer></script>
+    <script src="/javascripts/validacoeslogin.js" defer></script>
+    <script src="/javascripts/validacoesCadastroLivro.js" defer></script>
+
+    <title>Home</title>
 </head>
-<body>
-  <header>
-    <h1>Biblioteca</h1>
-    <nav>
-      <ul>
-        <li>
-          <a href="/biblioteca/form">Adicionar</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+
+
+    <body>
+        <header>
+            <section class="container-header ">
+                <div class="container-hamburguer header2">
+                    <div class="hamburger">
+                        <button onclick=abrirHamburguer() class="icons-btn"><i class='bx bx-book'></i></button>
+                    </div>
+
+                    <div class="sidebar">
+                        <div class="close-menu">
+                            <button onclick=fecharMenu() class="icons-btn"><i class='bx bx-x'></i></button>
+                        </div>
+                        <nav>
+
+                            <ul class="menu">
+                                <li class="menu-links"> <a href="/"> PÁGINA INICIAL</a> </li>
+                                <li class="menu-links"> <a href="/Livro/TodososLivros"> TODOS OS LIVROS</a> </li>
+                                <li class="menu-links"> <a href="#"> GÊNEROS</a> </li>
+                                <li class="menu-links"> <a href="#"> QUEM SOMOS</a> </li>
+                                <li class="menu-links"> <a class="open-modal" onclick="abrirModal()" href="#"> FALE CONOSCO</a> </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+
+                <div class="header-icons">
+                    <a href="/" class="logo"><img id="logo" src="/images/img/logopreto.png" alt=""></a>
+                </div>
+                <div class="busca header2" >
+                    <form action="/search">
+                        <input type="text" name="search" id="search" scr="images/lupa.png"
+                            placeholder="Títulos, Autores e Gêneros ">
+                    </form>
+                </div>
+
+                <div class="header-icons header2">
+                    <button class="icons-btn" id="lupa"><i class='bx bx-search'></i></button>
+                    <button class="icons-btn"><i class='bx bx-user'></i></button>
+                    <button onclick=abrirCarrinhoFlutuante() class="icons-btn"><i class='bx bx-cart'></i></button>
+                </div>
+            </section>
+
+            <section class="navegacao header2">
+                <nav class="lista">
+                    <ul type="none">
+                        <li> <a href="/"> PÁGINA INICIAL</a> </li>
+                        <li> <a href="/Livro/TodososLivros"> TODOS OS LIVROS</a> </li>
+                        <li> <a href="#"> GÊNEROS</a> </li>
+                        <li> <a href="#"> QUEM SOMOS</a> </li>
+                        <li> <a href="#"> FALE CONOSCO</a> </li>
+                    </ul>
+                </nav>
+                <section>
+        </header>

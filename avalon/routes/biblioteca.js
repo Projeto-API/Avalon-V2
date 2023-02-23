@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const LivrosController = require('../controllers/LivrosController');
 const AutoresController = require('../controllers/AutoresController');
-const EditorasController = require('../controllers/EditorasController');
+
 
 router.get('/', LivrosController.index);
 

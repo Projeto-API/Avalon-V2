@@ -1,14 +1,14 @@
 <div class="carrinhoFlu">
-    <section class="carrinhoFlutuante" id="carrinhoFlutuante" >
-        <div class="headerFlutuante" id="primeiro" >
+    <section class="carrinhoFlutuante" id="carrinhoFlutuante">
+        <div class="headerFlutuante" id="primeiro">
             <h5>MEU CARRINHO</h5>
-            <button id="excluir"onclick="fecharCarrinhoFlutuante()">X</button>
+            <button onclick=fecharCarrinhoFlutuante() class="icons-btn"><i class='bx bx-x'></i></button>
         </div>
-        <section class="containerLivro" id="containerLivro">                                                                                                                                                                                                                                                                      
+        <section class="containerLivro" id="containerLivro">
             <div class="Livro1" id="Livro1">
                 <img class="imagemLivro" src="/images/mariko-capa.jpg" alt="">
                 <div class="informationLivro">
-                    <div class="nomeLivro">                                                                                                                                                                       
+                    <div class="nomeLivro">
                         <h5 id="LivroTitulo">MY BROKEN MARIKO</h5>
                     </div>
                     <div class="informationLivroValue">
@@ -18,14 +18,14 @@
                             <a href="" class="aumentarQtd">+</a>
                         </div>
                         <span id="preco"> R$ 39,90 </span>
-                        <button id="excluir"  onclick="excluirDentroCarrinho('Livro1')">X</button>
+                        <button id="excluir" onclick="excluirDentroCarrinho('Livro1')">X</button>
                     </div>
                 </div>
             </div>
 
-            <div class="Livro2"id="Livro2">
-                <img class="imagemLivro" src="/images/Livros/manifesto/capa.jpg" alt="">
-                <div class="informationLivro" >
+            <div class="Livro2" id="Livro2">
+                <img class="imagemLivro" src="/images/produtos/manifesto/capa.jpg" alt="">
+                <div class="informationLivro">
                     <div class="nomeLivro">
                         <h5 id="LivroTitulo">MANIFESTO COMUNISTA</h5>
                     </div>
@@ -36,7 +36,7 @@
                             <a href="" class="aumentarQtd">+</a>
                         </div>
                         <span id="preco"> R$ 34,90 </span>
-                        <button id="excluir" onclick="excluirDentroCarrinho('Livro2')" >X</button>
+                        <button id="excluir" onclick="excluirDentroCarrinho('Livro2')">X</button>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
         </section>
 
         <div class="continuar">
-            <form id="formCarrinho"    method="get" action="/carrinho">
+            <form id="formCarrinho" method="get" action="/carrinho">
                 <input type="hidden" name="Livros" id="LivrosCarrinho">
                 <button type="submit" id="continuar">CONTINUAR</button>
             </form>
@@ -69,5 +69,4 @@
 
     </section>
 
-<div>
-
+    <div>

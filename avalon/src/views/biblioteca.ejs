@@ -1,8 +1,10 @@
 <%- include('partials/header') %>
-
+<link rel="stylesheet" href="/stylesheets/biblioteca.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 <main>
   <div class="search-box">
     <a class="add-button" href="/biblioteca/form">Adicionar</a>
+
     <form method="get">
       <button type="submit">Search</button>
       <input type="search" name="search" id="search">
@@ -33,6 +35,7 @@
         <span class="item actions">
           <a href="/biblioteca/form/<%= livro.id %>">Editar</a>
           <form action="/biblioteca/deletar/<%= livro.id %>?_method=DELETE" method="post">
+       
             <button type="submit">Deletar</button>
           </form>
         </span>

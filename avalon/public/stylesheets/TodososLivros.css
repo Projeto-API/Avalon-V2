@@ -185,48 +185,58 @@ a:link {
     font-size: 0.9rem;
 }
 
-.continue-vendo,
-.lançamento {
-    padding: 2rem;
-    position: relative;
-    width: 100%;
+/*  CARROSEIS  */
 
+.continue-vendo,
+.lancamento {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .carrousel {
-    padding-top: 2rem;
-    overflow-x: auto;
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    cursor: pointer;
-
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 .gallery {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 2rem;
-    list-style: none;
+    margin: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
 }
 
-.gallery * div {
+.gallery li {
     display: flex;
     flex-direction: column;
     justify-items: center;
-    min-width: 3rem;
-    max-width: 10rem;
+    width: 10rem;
     text-align: center;
+    list-style: none;
+}
+
+.item div {
+    width: 100%;
+}
+
+.item div button{
+    width: 80%;
 }
 
 
-.item {
-    max-height: 15rem;
-    height: 50vw;
+.item div h5 {
+    height: 40px;
+    width: 100%;
+}
+
+.item img {
+    margin: 10px;
+    max-height: 12rem;
+    height: 100%;
     border-radius: 5%;
     align-items: center;
 }
-
 
 
 @media (min-width: 1200px) {

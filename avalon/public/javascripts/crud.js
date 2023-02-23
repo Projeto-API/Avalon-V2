@@ -1,18 +1,16 @@
 const modal = document.querySelector('.modal-container')
-const tbody = document.querySelector('tbody')
 
 
 function openModal() {
     modal.classList.add('active');
-    
 
     modal.onclick = e => {
         if (e.target.className.indexOf('modal-container') !== -1) {
             modal.classList.remove('active')
         }
     }
-
 }
+
 
 function editModal(Livro = "{}") {
 
@@ -41,14 +39,16 @@ function editModal(Livro = "{}") {
         inputIMG.value = Livro.capaImg
 
 
-        document.querySelector('.form-crud').action = `/Livro/editar/${Livro.id}?_method=PUT`
+        const form = document.querySelector('.form-crud')
+        form.action = `/produto/editar/${produto.id}?_method=PUT`
 
     }
+
     modal.onclick = e => {
         if (e.target.className.indexOf('modal-container') !== -1) {
             modal.classList.remove('active')
         }
     }
-
 }
+
 

@@ -7,8 +7,11 @@ var router = express.Router();
 
 // /* GET home page. */
 router.get('/CadastroUsuario', CadastroUsuarioController.listaCadastroUsuario);
+
 router.get('/Login', LoginController.listaLogin);
+
 router.get('/MinhaConta', MinhaContaController.listaMinhaConta);
+
 router.get('/checkout', function (req, res, next) {
   res.render('checkout', { title: 'Express', css: 'checkout' });
 });

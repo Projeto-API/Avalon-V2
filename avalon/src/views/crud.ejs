@@ -38,21 +38,21 @@
             </tr>
           </thead>
           <tbody>
-            <% Livros.forEach(Livro=> { %>
+            <% produtos.forEach(produto=> { %>
               <tr>
                 <td><input type="checkbox"></td>
                 <td>
-                  <%= Livro.id %>
+                  <%= produto.id %>
                 </td>
                 <td>
-                  <%= Livro.nome %>
+                  <%= produto.titulo %>
                 </td>
                 <td>
-                  <%= Livro.valor %>
+                  <%= produto.preco %>
                 </td>
                 <td class="acao">
-                  <button onclick="editModal('<%= JSON.stringify(Livro) %>')" class="crudform"><i
-                      class='bx bx-edit'></i></button>
+                  <!-- <button onclick="editModal('<%= JSON.stringify(Livro) %>')" class="crudform"><i
+                      class='bx bx-edit'></i></button> -->
 
                 </td>
                 <td class="acao">
@@ -65,6 +65,7 @@
                 </form>
                 <% }) %>
           </tbody>
+
         </table>
       </div>
 

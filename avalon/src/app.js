@@ -10,7 +10,7 @@ var methodOverride = require('method-override');
 var indexRouter = require('../src/routes/index');
 var usersRouter = require('../src/routes/users');
 // const carrinhoRouter = require('../src/routes/carrinho')
-var LivroRouter = require('../src/routes/Livro');
+var LivroRouter = require('../src/routes/livro');
 
 
 var app = express();
@@ -30,7 +30,7 @@ app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/Livro', LivroRouter);
+app.use('/livro', LivroRouter);
 
 // app.use('/carrinho', carrinhoRouter)
 

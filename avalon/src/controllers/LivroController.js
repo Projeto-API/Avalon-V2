@@ -49,13 +49,12 @@ const { Produto } = require('../models')
 
 module.exports = {
   index: (req,res) => {
-    const produtos = Produto.findAll({});
+    const produtos = Produto.findAll();
     res.render('crud', { title: 'Express', css: 'crud', produtos })
 
     // res.render ('produtos', {produtos})
   }
 }
 
-const modelsObj = require('../models');
-console.log(Object.keys(modelsObj))
+
 

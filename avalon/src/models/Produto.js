@@ -1,8 +1,8 @@
 const criarProdutoModel = (sequelize, dataTypes) => {
    const colunas = {
     id: {
-        type: dataTypes.INTERGER,
-        primarykey: true,
+        type: dataTypes.INTEGER,
+        primaryKey: true,
         autoIncrement: true,
         allowNull: false
     },
@@ -23,4 +23,4 @@ const criarProdutoModel = (sequelize, dataTypes) => {
     return Produto
 };
 
-module.exports = criarProdutoModel;
+    module.exports = criarProdutoModel;

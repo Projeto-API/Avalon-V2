@@ -7,11 +7,11 @@
     <div class="crud-types">
       <button class="btnCrud"><a href="/Livro/admin/categoria">Categorias</a></button>
       <button class="btnCrud"><a href="/Livro/admin/editoras">Editoras</a></button>
-      <button class="btnCrud"><a href="/Livro/admin/autores">Autores</a></button>
+      <button class="btnCrud"><a href="/Livro/admin/livros">Livros</a></button>
     </div>
     <div class="container-crud">
 
-      <h4 class="crud-title">CADASTRO LIVROS</h4>
+      <h4 class="crud-title">CADASTRO AUTORES</h4>
 
       <div class="container-header-crud">
         <div class="header-crud">
@@ -32,8 +32,8 @@
             <tr>
               <th><input type="checkbox"></th>
               <th>ID</th>
-              <th>Título</th>
-              <th>Preço</th>
+              <th>Autor</th>
+              
               <th class="acao">Editar</th>
               <th class="acao">Excluir</th>
             </tr>
@@ -43,17 +43,15 @@
               <tr>
                 <td><input type="checkbox"></td>
                 <td>
-                  <%= produto.id %>
+                  <%= autor.id %>
                 </td>
                 <td>
-                  <%= produto.titulo %>
+                  <%= autor.nome %>
                 </td>
-                <td>
-                  <%= produto.preco %>
-                </td>
+
                 <td class="acao">
-                  <button onclick="editModal('<%= JSON.stringify(Livro) %>')" class="crudform"><i
-                      class='bx bx-edit'></i></button>
+                  <!-- <button onclick="editModal('<%= JSON.stringify(Livro) %>')" class="crudform"><i
+                      class='bx bx-edit'></i></button> -->
 
                 </td>
                 <td class="acao">

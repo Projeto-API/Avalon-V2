@@ -48,8 +48,8 @@
 const { Produto } = require('../models')
 
 module.exports = {
-  index: (req,res) => {
-    const produtos = Produto.findAll();
+  async index(req, res) {
+    const produtos = await Produto.findAll();
     res.render('crud', { title: 'Express', css: 'crud', produtos })
 
     // res.render ('produtos', {produtos})

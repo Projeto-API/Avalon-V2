@@ -2,7 +2,7 @@ const btnsAdd = document.querySelectorAll('.comprar')
 
 btnsAdd.forEach((btn, i) => {
     // const c = document.getElementById
-    const containerServico = c(".cart-carrinho + i)
+    const containerServico = c(".cart-carrinho + i")
     // const imagemServico = containerServico.querySelector('.galeria img').src = imagem.img;
     // const nomeServico = containerServico.children[1].children[0].innerText
     // const valorServico = containerServico.children[1].children[1].innerText

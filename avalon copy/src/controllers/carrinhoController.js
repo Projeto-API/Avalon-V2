@@ -21,7 +21,7 @@ module.exports = {
         res.redirect('/carrinho');
     },
     remove: (req, res) => {
-        const { produtoId } = req.body;
+        const { produtoId } = req.params;
         Carrinho.remove(produtoId);
         const carrinho = Carrinho.findAll();
         res.redirect('/carrinho');

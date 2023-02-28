@@ -1,0 +1,17 @@
+[
+    {
+        "id": 2,
+        "titulo": "O Senhor dos Anéis: As Duas Torres",
+        "editora": "DH-books"
+    },
+    {
+        "id": 3,
+        "titulo": "Vingadores",
+        "editora": "Marvel"
+    },
+    {
+        "id": 4,
+        "titulo": "1234",
+        "editora": "12"
+    }
+]

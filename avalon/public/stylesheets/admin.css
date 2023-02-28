@@ -354,12 +354,8 @@ main .body .item.actions {
 main .body .item.actions a,
 main .body .item.actions button {
   display: inline-block;
-
-  font-size: 9px;
   text-decoration: none;
-  
-  border: 1px solid #555;
-  cursor: pointer;
+
   color: #555;
   font-weight: 600;
 }

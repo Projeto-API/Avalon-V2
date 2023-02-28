@@ -13,10 +13,20 @@ const storage = multer.diskStorage({
 })
 
 var upload = multer({storage: storage})
+
 //---------BANDO DE DADOS LIVROS --------- ////
 
 const LivroController = require('../controllers/LivroController');
-router.get('/admin', LivroController.index)
+const AutorController = require('../controllers/AutorController');
+const CategoriaController = require('../controllers/CategoriaController');
+const EditoraController = require('../controllers/EditoraController');
+
+
+
+router.get('/admin', LivroController.index);
+router.get('/admin/autores', AutorController.index);
+router.get('/admin/categorias', CategoriaController.index);
+router.get('/admin/editoras', EditoraController.index);
 
 module.exports = router;
 // // -------------------------------------CONTROLLERS -------------------------------//

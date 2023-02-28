@@ -7,7 +7,7 @@
     <div class="crud-types">
       <button class="btnCrud"><a href="/Livro/admin/autores">Autores</a></button>
       <button class="btnCrud"><a href="/Livro/admin/editoras">Editoras</a></button>
-      <button class="btnCrud"><a href="/Livro/admin/livros">Livros</a></button>
+      <button class="btnCrud"><a href="/Livro/admin">Livros</a></button>
     </div>
     <div class="container-crud">
 
@@ -32,36 +32,13 @@
             <tr>
               <th><input type="checkbox"></th>
               <th>ID</th>
-              <th>Categoria</th>
+              <th>Autor</th>
+              
               <th class="acao">Editar</th>
               <th class="acao">Excluir</th>
             </tr>
           </thead>
-          <tbody>
-            <% produtos.forEach(produto=> { %>
-              <tr>
-                <td><input type="checkbox"></td>
-                <td>
-                  <%= categoria.id %>
-                </td>
-                <td>
-                  <%= categoria.nome %>
-                </td>
-                <td class="acao">
-                  <!-- <button onclick="editModal('<%= JSON.stringify(Livro) %>')" class="crudform"><i
-                      class='bx bx-edit'></i></button> -->
-
-                </td>
-                <td class="acao">
-                  <form action="/Livro/deletar/<%= Livro.id %>?_method=DELETE" method="POST">
-                    <button class="crudform"><i class='bx bx-trash'></i></button>
-                </td>
-
-                </form>
-                <!--  -->
-                </form>
-                <% }) %>
-          </tbody>
+          
 
         </table>
       </div>

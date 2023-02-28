@@ -1,14 +1,14 @@
-// const router = require('express').Router();
-// const EditorasController = require('../controllers/EditorasController')
+const router = require('express').Router();
+const EditoraController = require('../controllers/EditoraController')
 
-// router.get('/', EditorasController.index);
+router.get('/', EditoraController.index);
 
-// router.get('/form/:id?', EditorasController.form);
+router.get('/form/:id?', EditoraController.form);
 
-// router.post('/', EditorasController.criar);
+router.post('/', EditoraController.criar);
 
-// router.put('/:id', EditorasController.editar);
+router.put('/:id', EditoraController.editar);
 
-// router.delete('/:id', EditorasController.remover);
+router.delete('/:id', EditoraController.remover);
 
-// module.exports = router;
+module.exports = router;

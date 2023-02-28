@@ -1,9 +1,9 @@
-const CadastroUsuarioModel = require('../models/CadastroUsuarioModel')
+// const CadastroUsuarioModel = require('../models/CadastroUsuarioModel')
 
-module.exports = {
-    listaCadastroUsuario: (req, res) => {
-        // const CadastroUsuario = CadastroUsuarioModel.users();
+// module.exports = {
+//     listaCadastroUsuario: (req, res) => {
+//         // const CadastroUsuario = CadastroUsuarioModel.users();
        
-        res.render('CadastroUsuario', { title: 'Express', css: 'CadastroUsuario' });
-    }
-}
+//         res.render('CadastroUsuario', { title: 'Express', css: 'CadastroUsuario' });
+//     }
+// }

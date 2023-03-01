@@ -1,13 +1,13 @@
 <%- include('partials/header') %>
 
-  <link rel="stylesheet" href="/stylesheets/crud.css">
+  <link rel="stylesheet" href="/stylesheets/admin.css">
   <script src="/javascripts/crud.js" defer></script>
 
   <main>
     <div class="crud-types">
-      <button class="btnCrud"><a href="/Livro/admin/categorias">Categorias</a></button>
-      <button class="btnCrud"><a href="/Livro/admin/editoras">Editoras</a></button>
-      <button class="btnCrud"><a href="/Livro/admin">Livros</a></button>
+      <button class="btnCrud"><a href="/admin/categorias">Categorias</a></button>
+      <button class="btnCrud"><a href="/admin/editoras">Editoras</a></button>
+      <button class="btnCrud"><a href="/admin">Livros</a></button>
     </div>
     <div class="container-crud">
 
@@ -15,7 +15,7 @@
 
       <div class="container-header-crud">
         <div class="header-crud">
-          <button class="btnCrud"><a href="/Livro/admin">Todos</a></button>
+          <button class="btnCrud"><a href="/admin">Todos</a></button>
           <button onclick="openModal()" class="btnCrud"><a>Adicionar</a></button>
           <button class="btnCrud"><a> Deletar</a></button>
           <div class="search-crud">
@@ -46,7 +46,7 @@
       <div class="modal-container">
         <div class="modal">
 
-          <form class="form-crud" action="/produto/admin" method="POST" enctype="multipart/form-data">
+          <form class="form-crud" action="/admin" method="POST" enctype="multipart/form-data">
             <br>
             <label class="form-crud-label" for="categoria">Categoria:</label> <br>
             <select name="categoria" id="categoria">
@@ -64,19 +64,7 @@
             <label class="form-crud-label" for="editora">Editora:</label> <br>
             <input class="form-crud-input" type="text" name="editora" placeholder="Digite a editora">
 
-            <label class="form-crud-label" for="publicacao">Ano de Publicação:</label> <br>
-            <input class="form-crud-input" type="text" name="publicacao" placeholder="Digite o ano de publicação">
-
-            <label class="form-crud-label" for="idioma">Idioma:</label> <br>
-            <input class="form-crud-input" type="text" name="idioma" placeholder="Digite o idioma">
-
-            <label class="form-crud-label" for="paginas">Páginas:</label> <br>
-            <input class="form-crud-input" type="text" name="paginas" placeholder="Digite o número de paginas">
-
-            <label class="form-crud-label" for="dimensoes">Dimensões:</label> <br>
-            <input class="form-crud-input" type="text" name="dimensoes" placeholder="Digite as dimensões em cm">
-
-            <label class="form-crud-label" for="categoria">Acabamento:</label> <br>
+       
             <select name="categoria" id="categoria">
               <option value="comum">Capa Comum</option>
               <option value="dura">Capa Dura</option>

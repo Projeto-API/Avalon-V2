@@ -1,10 +1,11 @@
 <%- include('partials/header') %>
-
+<link rel="stylesheet" href="/stylesheets/admin.css">
+  <script src="/javascripts/crud.js" defer></script>
 <main>
   <h2>Adicionar livro</h2>
 
   <% if (livro) { %>
-    <form class="add-form" action="/admin/editar/<%= livro.id %>?_method=PUT" method="post">
+    <form class="add-form" action="/admin/adicionar-livro<%= livro.id %>?_method=PUT" method="post">
   <% } else { %>
     <form class="add-form" action="/admin" method="post">
   <% } %>
@@ -14,6 +15,19 @@
 
     <label for="editora">Editora</label>
     <input type="text" name="editora" id="editora" value="<%= livro && livro.editora %>">
+
+    <label for="editora">Preço</label>
+    <input type="text" name="editora" id="editora" value="<%= livro && livro.editora %>">
+
+
+    <label for="editora">Editora</label>
+    <input type="text" name="editora" id="editora" value="<%= livro && livro.editora %>">
+
+    <label class="form-crud-label" for="categoria">Acabamento:</label> <br>
+              <select name="categoria" id="categoria">
+                <option value="comum">Capa Comum</option>
+                <option value="dura">Capa Dura</option>
+              </select>
 
     <button type="submit">Enviar</button>
   </form>

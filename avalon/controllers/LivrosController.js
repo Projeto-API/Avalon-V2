@@ -58,12 +58,13 @@ module.exports = {
   },
 
   deletar (req, res) {
-    const id = req.params.id;
+    const id = req.params;
     let livros = getLivros();
 
     livros = livros.filter(livro => livro.id != id);
 
     saveLivros(livros);
-    res.redirect('/admin');
+    console.log("O produto de id " + req.body.id + " foi deletado com sucesso");
+    return res.redirect('/admin');
   }
 }

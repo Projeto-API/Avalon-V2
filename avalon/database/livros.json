@@ -1,10 +1,5 @@
 [
     {
-        "id": 2,
-        "titulo": "O Senhor dos Anéis: As Duas Torres",
-        "editora": "DH-books"
-    },
-    {
         "id": 3,
         "titulo": "Vingadores",
         "editora": "Marvel"
@@ -13,9 +8,6 @@
         "id": 4,
         "titulo": "1234",
         "editora": "12"
-    },
-    {
-        "id": 5
     },
     {
         "id": 6
@@ -28,5 +20,30 @@
     },
     {
         "id": 9
+    },
+    {
+        "id": 10,
+        "titulo": "harry potter e a ordem da fenix",
+        "editora": "George Lucas"
+    },
+    {
+        "id": 11,
+        "titulo": "1234",
+        "editora": "George Lucas"
+    },
+    {
+        "id": 12,
+        "titulo": "1234",
+        "editora": "George Lucas"
+    },
+    {
+        "id": 13,
+        "titulo": "",
+        "editora": [
+            "",
+            "",
+            ""
+        ],
+        "categoria": "comum"
     }
 ]

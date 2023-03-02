@@ -45,16 +45,45 @@
 //   }
 // };
 
-const { Produto } = require('../models')
+const { Produto, Editora } = require('../models')
+
+
+
 
 module.exports = {
   async index(req, res) {
     const produtos = await Produto.findAll();
-    res.render('crud', { title: 'Express', css: 'crud', produtos })
+    res.render('admin', { title: 'Express', css: 'crud', produtos })
+  },
 
-    // res.render ('produtos', {produtos})
+  async form (req, res) {
+    const editoras = await Editora.findAll();
+    res.render('admin', { title: 'Express', css: 'crud', editoras })
+  },
+  
+
+  // criar: async (req, res) => {
+  //   const { categoria, titulo, preco, editora_id, idioma,
+  //     paginas, acabamento } = req.body;
+  //   await Produto.create({
+  //     categoria, titulo, preco, editoras_id: editor, idioma,
+  //     paginas, acabamento
+  //   });
+
+  //   res.redirect('/admin');
+  // },
+
+
+  async deletar(req, res) {
+    const id = req.params.id;
+    await Produto.destroy({
+      where: {
+        id
+      }
+    })
+
+    res.redirect('/admin');
   }
+
 }
-
-
 

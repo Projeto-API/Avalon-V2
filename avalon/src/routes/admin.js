@@ -23,12 +23,17 @@ const EditoraController = require('../controllers/EditoraController');
 
 
 
-router.get('/admin', LivroController.index);
-router.get('/admin/autores', AutorController.index);
-router.get('/admin/categorias', CategoriaController.index);
-router.get('/admin/editoras', EditoraController.index);
+router.get('/', LivroController.index);
+router.get('/autores', AutorController.index);
+router.get('/categorias', CategoriaController.index);
+router.get('/editoras', EditoraController.index);
 
 module.exports = router;
+
+// router.post('/admin', upload.single("capaImg"),LivroController.criar);
+router.delete('/deletar/:id', LivroController.deletar);
+
+
 // // -------------------------------------CONTROLLERS -------------------------------//
 // const TodososLivrosController = require('../controllers/TodososLivrosController');
 // const SinopseController = require('../controllers/SinopseController');

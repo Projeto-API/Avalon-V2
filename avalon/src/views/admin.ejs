@@ -5,9 +5,9 @@
 
   <main>
     <div class="crud-types">
-      <button class="btnCrud"><a href="/Livro/admin/categorias">Categorias</a></button>
-      <button class="btnCrud"><a href="/Livro/admin/editoras">Editoras</a></button>
-      <button class="btnCrud"><a href="/Livro/admin/autores">Autores</a></button>
+      <button class="btnCrud"><a href="/admin/categorias">Categorias</a></button>
+      <button class="btnCrud"><a href="/admin/editoras">Editoras</a></button>
+      <button class="btnCrud"><a href="/admin/autores">Autores</a></button>
     </div>
     <div class="container-crud">
 
@@ -15,11 +15,11 @@
 
       <div class="container-header-crud">
         <div class="header-crud">
-          <button class="btnCrud"><a href="/Livro/admin">Todos</a></button>
+          <button class="btnCrud"><a href="/admin">Todos</a></button>
           <button onclick="openModal()" class="btnCrud"><a>Adicionar</a></button>
           <button class="btnCrud"><a> Deletar</a></button>
           <div class="search-crud">
-            <form action="/Livro/buscar" method="get">
+            <form action="/admin/buscar" method="get">
               <input type="text" name="buscar" id="read" placeholder="Buscar ">
             </form>
           </div>
@@ -34,6 +34,7 @@
               <th>ID</th>
               <th>Título</th>
               <th>Preço</th>
+              <th>Idioma</th>
               <th class="acao">Editar</th>
               <th class="acao">Excluir</th>
             </tr>
@@ -51,13 +52,15 @@
                 <td>
                   <%= produto.preco %>
                 </td>
+                <td>
+                  <%= produto.idioma %>
+                </td>
                 <td class="acao">
-                  <button onclick="editModal('<%= JSON.stringify(Livro) %>')" class="crudform"><i
-                      class='bx bx-edit'></i></button>
+                  <button onclick="editModal('<% produto %>')" class="crudform"><i class='bx bx-edit'></i></button>
 
                 </td>
                 <td class="acao">
-                  <form action="/Livro/deletar/<%= Livro.id %>?_method=DELETE" method="POST">
+                  <form action="/admin/deletar/<%= produto.id %>?_method=DELETE" method="POST">
                     <button class="crudform"><i class='bx bx-trash'></i></button>
                 </td>
 
@@ -84,15 +87,18 @@
             <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
             <input class="form-crud-input" id="titulo" type="text" name="nome" placeholder="Digite o nome do livro ">
 
-            <label class="form-crud-label" for="valor">Preço:</label> <br>
-            <input class="form-crud-input" id="crud-preco" type="text" name="valor"
+            <label class="form-crud-label" for="preco">Preço:</label> <br>
+            <input class="form-crud-input" id="crud-preco" type="text" name="preco"
               placeholder="Coloque o valor do Livro">
 
             <label class="form-crud-label" for="editora">Editora:</label> <br>
-            <input class="form-crud-input" type="text" name="editora" placeholder="Digite a editora">
-
-            <label class="form-crud-label" for="publicacao">Ano de Publicação:</label> <br>
-            <input class="form-crud-input" type="text" name="publicacao" placeholder="Digite o ano de publicação">
+            <select name="editora" id="editora">
+              <% editoras.forEach(editora=> { %>
+                <option value="<%= editora.id %>">
+                  <%= editora.nome %>
+                </option>
+                <% }) %>
+            </select>
 
             <label class="form-crud-label" for="idioma">Idioma:</label> <br>
             <input class="form-crud-input" type="text" name="idioma" placeholder="Digite o idioma">
@@ -100,11 +106,8 @@
             <label class="form-crud-label" for="paginas">Páginas:</label> <br>
             <input class="form-crud-input" type="text" name="paginas" placeholder="Digite o número de paginas">
 
-            <label class="form-crud-label" for="dimensoes">Dimensões:</label> <br>
-            <input class="form-crud-input" type="text" name="dimensoes" placeholder="Digite as dimensões em cm">
-
-            <label class="form-crud-label" for="categoria">Acabamento:</label> <br>
-            <select name="categoria" id="categoria">
+            <label class="form-crud-label" for="acabamento">Acabamento:</label> <br>
+            <select name="acabamento" id="acabamento">
               <option value="comum">Capa Comum</option>
               <option value="dura">Capa Dura</option>
             </select>

@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const { Livro, Editora } = require('../models');
+const { Livro, Editora, Autor } = require('../models');
 
 const livrosPath = path.resolve(__dirname, '../database/livros.json');
 
@@ -22,26 +22,20 @@ module.exports = {
     res.render('admin', { livros });
   },
 
-  form (req, res) {
+  async form (req, res) {
+    const editoras = await Editora.findAll()
+    const autores = await Autor.findAll()
     let livro;
     let id = req.params.id;
 
-    if (id) {
-      livro = getLivros().find(livro => livro.id == id);
-    }
-
-    res.render('adicionar-livro', { livro });
+   
+    res.render('adicionar-livro', { livro: null, editoras, autores });
   },
 
-  criar (req, res) {
-    const livros = getLivros();
-
-    livros.push({
-      id: livros.at(-1).id + 1,
-      ...req.body
-    });
-
-    saveLivros(livros);
+  async criar (req, res) {
+    const {titulo, editora, autores,} = req.body
+    await Livro.create({titulo, editoras_id: editora, autores_id: autores,})
+    
     res.redirect('/admin');
   },
 
@@ -57,13 +51,17 @@ module.exports = {
     res.redirect('/admin');
   },
 
-  deletar (req, res) {
-    const id = req.params;
-    let livros = getLivros();
-
-    livros = livros.filter(livro => livro.id != id);
-
-    saveLivros(livros);
+  async deletar (req, res) {
+    const {id} = req.params
+ 
+    try {
+      
+      await Livro.destroy ({where:{
+        id
+      }})
+    } catch (error) {
+     console.log("erro ao deletar livro", error) 
+    }
     console.log("O produto de id " + req.body.id + " foi deletado com sucesso");
     return res.redirect('/admin');
   }

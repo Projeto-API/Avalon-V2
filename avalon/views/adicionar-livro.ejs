@@ -14,18 +14,26 @@
     <input type="text" name="titulo" id="titulo" value="<%= livro && livro.titulo %>">
 
     <label for="editora">Editora</label>
-    <input type="text" name="editora" id="editora" value="<%= livro && livro.editora %>">
-
+    <select name="editora" id="editora">
+    <% editoras.forEach(editora => { %>
+<option value="<%= editora.id %>"><%= editora.nome %></option>          
+      <% }) %>
+    </select>
     <label for="editora">Preço</label>
     <input type="text" name="editora" id="editora" value="<%= livro && livro.editora %>">
 
 
-    <label for="editora">Editora</label>
-    <input type="text" name="editora" id="editora" value="<%= livro && livro.editora %>">
+    <label for="autor">Autor</label>
+    <select name="autor" id="autor">
+      <% autores.forEach(autor => { %>
+  <option value="<%= autor.id %>"><%= autor.nome %></option>          
+        <% }) %>
+      </select>
+    <input type="text" name="autor" id="autor" value="<%= livro && livro.autor %>">
 
     <label class="form-crud-label" for="categoria">Acabamento:</label> <br>
               <select name="categoria" id="categoria">
-                <option value="comum">Capa Comum</option>
+                      <option value="comum">Capa Comum</option>
                 <option value="dura">Capa Dura</option>
               </select>
 

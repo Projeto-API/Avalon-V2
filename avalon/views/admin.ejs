@@ -13,7 +13,7 @@
   <div class="container-header-crud">
     <div class="header-crud">
       <button class="btnCrud"><a href="/admin">Todos</a></button>
-    <a class="btnCrud" href="/admin/form">Adicionar</a>
+    <button class="btnCrud" ><a href="/admin/form">Adicionar</a></button>
     <div class="search-crud">
       <form action="/admin/buscar" method="get">
         <input type="text" name="buscar" id="read" placeholder="Buscar ">
@@ -51,7 +51,7 @@
           <a href="/admin/editar-livro/form/<%= livro.id %>"> <i class ="bx bx-edit"></i></a>
       
           <form action="/admin/deletar/<%= livro.id %>?_method=DELETE" method="post">
-            <button type="submit">Deletar</button>
+            <button type="submit"></button>
             <button class="crudform"><i class='bx bx-trash'></i></button>
             
           </form>

@@ -80,8 +80,9 @@
             <br>
             <label class="form-crud-label" for="categoria">Categoria:</label> <br>
             <select name="categoria" id="categoria">
-              <option value="hw">Histórias em Quadrinhos</option>
-              <option value="livro">Livros</option>
+              <% categorias.forEach(element=> { %>
+                <option value="<%= categoria.id %>"><% categoria.tipo %></option>
+                <% }) %>
             </select>
 
             <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
@@ -93,11 +94,7 @@
 
             <label class="form-crud-label" for="editora">Editora:</label> <br>
             <select name="editora" id="editora">
-              <% editoras.forEach(editora=> { %>
-                <option value="<%= editora.id %>">
-                  <%= editora.nome %>
-                </option>
-                <% }) %>
+
             </select>
 
             <label class="form-crud-label" for="idioma">Idioma:</label> <br>

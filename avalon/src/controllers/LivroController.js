@@ -67,16 +67,16 @@ module.exports = {
     res.render('admin', { title: 'Express', css: 'crud', categorias })
   },
 
-  // criar: async (req, res) => {
-  //   const { categoria, titulo, preco, editora_id, idioma,
-  //     paginas, acabamento } = req.body;
-  //   await Produto.create({
-  //     categoria, titulo, preco, editoras_id: editor, idioma,
-  //     paginas, acabamento
-  //   });
+  criar: async (req, res) => {
+    const { categoria, titulo, preco, editora_id, idioma,
+      paginas, acabamento } = req.body;
+    await Produto.create({
+      categoria, titulo, preco, editoras_id: editora, idioma,
+      paginas, acabamento
+    });
 
-  //   res.redirect('/admin');
-  // },
+    res.redirect('/admin');
+  },
 
 
   async deletar(req, res) {

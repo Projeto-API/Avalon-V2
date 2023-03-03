@@ -24,13 +24,16 @@ const EditoraController = require('../controllers/EditoraController');
 
 
 router.get('/', LivroController.index);
+router.get('/', LivroController.editora);
+router.get('/', LivroController.categoria);
+
 router.get('/autores', AutorController.index);
 router.get('/categorias', CategoriaController.index);
 router.get('/editoras', EditoraController.index);
 
 module.exports = router;
 
-// router.post('/admin', upload.single("capaImg"),LivroController.criar);
+router.post('/admin', upload.single("capaImg"),LivroController.criar);
 router.delete('/deletar/:id', LivroController.deletar);
 
 

@@ -34,7 +34,8 @@
               <th>ID</th>
               <th>Título</th>
               <th>Preço</th>
-              <th>Idioma</th>
+              <th>Categoria</th>
+              <th>Editora</th>
               <th class="acao">Editar</th>
               <th class="acao">Excluir</th>
             </tr>
@@ -53,7 +54,10 @@
                   <%= produto.preco %>
                 </td>
                 <td>
-                  <%= produto.idioma %>
+                  <%= produto.categoria %>
+                </td>
+                <td>
+                  <%= produto.editora %>
                 </td>
                 <td class="acao">
                   <button onclick="editModal('<% produto %>')" class="crudform"><i class='bx bx-edit'></i></button>
@@ -80,9 +84,7 @@
             <br>
             <label class="form-crud-label" for="categoria">Categoria:</label> <br>
             <select name="categoria" id="categoria">
-              <% categorias.forEach(element=> { %>
-                <option value="<%= categoria.id %>"><% categoria.tipo %></option>
-                <% }) %>
+
             </select>
 
             <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
@@ -94,7 +96,7 @@
 
             <label class="form-crud-label" for="editora">Editora:</label> <br>
             <select name="editora" id="editora">
-
+       
             </select>
 
             <label class="form-crud-label" for="idioma">Idioma:</label> <br>

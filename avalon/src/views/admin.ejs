@@ -68,9 +68,6 @@
                     <button class="crudform"><i class='bx bx-trash'></i></button>
                 </td>
 
-                </form>
-                <!--  -->
-                </form>
                 <% }) %>
           </tbody>
 
@@ -80,8 +77,9 @@
       <div class="modal-container">
         <div class="modal">
 
-          <form class="form-crud" action="/produto/admin" method="POST" enctype="multipart/form-data">
+          <form class="form-crud" action="/admin" method="POST" enctype="multipart/form-data">
             <br>
+            
             <label class="form-crud-label" for="categoria">Categoria:</label> <br>
             <select name="categoria" id="categoria">
 
@@ -96,7 +94,7 @@
 
             <label class="form-crud-label" for="editora">Editora:</label> <br>
             <select name="editora" id="editora">
-       
+
             </select>
 
             <label class="form-crud-label" for="idioma">Idioma:</label> <br>

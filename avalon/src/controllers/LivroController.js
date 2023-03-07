@@ -46,6 +46,7 @@
 // };
 
 const { Produto } = require('../models')
+const { Editora } = require('../models')
 const { Categoria } = require('../models')
 
 

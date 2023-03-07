@@ -33,8 +33,8 @@ module.exports = {
   },
 
   async criar (req, res) {
-    const {titulo, editora, autores,} = req.body
-    await Livro.create({titulo, editoras_id: editora, autores_id: autores,})
+    const {nome, editora, autor,} = req.body
+    await Livro.create({nome, editoras_id: editora, autores_id: autor,})
     
     res.redirect('/admin');
   },

@@ -7,6 +7,7 @@
 const estiloProdutosModel = require('../models/ServicoModel')
 
 
+
 const Carrinho = require('../models/Carrinho')
 module.exports = {
     index: (req, res) => {
@@ -21,9 +22,10 @@ module.exports = {
         res.redirect('/carrinho');
     },
     remove: (req, res) => {
-        const { produtoId } = req.params;
+        const { produtoId } = req.body;
         Carrinho.remove(produtoId);
         const carrinho = Carrinho.findAll();
+
         res.redirect('/carrinho');
     }
 

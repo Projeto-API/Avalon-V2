@@ -35,18 +35,15 @@ module.exports = {
   async criar (req, res) {
     const {nome, editora, autor,} = req.body
     await Livro.create({nome, editoras_id: editora, autores_id: autor,})
-    
+  
     res.redirect('/admin');
   },
 
   async editar (req, res) {
 console.log('amigo estou aqui')
     const {nome, editora, autor, id} = req.body
-
-    console.log(req.body)
-    await Livro.update({
-        nome, editoras_id: editora, autores_id: autor
-    },
+    console.log('estou aparecendo')
+    await Livro.update({nome, editoras_id: editora, autores_id: autor},
         {
             where: {id} 
  })
@@ -55,8 +52,7 @@ console.log('amigo estou aqui')
 
  async buscarLivro (req, res){
   const {id} = req.params
-
-
+ 
   const livro = await Livro.findOne({id})
   console.log(livro)
   const editora = await Editora.findOne({id:livro.editoras_id})
@@ -66,9 +62,7 @@ console.log('amigo estou aqui')
 
   async deletar (req, res) {
     const {id} = req.params
- 
-    try {
-      
+    try {  
       await Livro.destroy ({where:{
         id
       }})

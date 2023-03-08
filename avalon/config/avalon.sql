@@ -37,7 +37,7 @@ VALUES
 ('Lady Killeres', 1, 2),
 ('A revolucao dos bichos', 1, 2);
 
-DELETE FROM livros where id = 8;
+DELETE FROM livros where id = 17;
 
 
 
@@ -88,12 +88,8 @@ biografia VARCHAR(1000) NOT NULL,
 foto VARCHAR(45) NOT NULL
 );
 
-INSERT INTO autores set nome = 'Andre Vianco';
-
-INSERT INTO autores (nome)
-VALUES
-('JK Rowling'),
-('Darkside');
+INSERT INTO autores (nome, sobrenome, biografia, foto)
+VALUES ('Jk', 'howling', 'biografia', 1);
 
 
 

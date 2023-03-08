@@ -6,12 +6,18 @@
 
 
     <form class="add-form" action="/admin/editar-livro" method="post">
+
+
+      <label for="id">Id</label>
+    <input type="text" name="id" id="id" value="<%=livro.id %>">
+
   
 
     <label for="titulo">Título</label>
     <input type="text" name="nome" id="nome" value="<%=livro.nome %>">
 
     <label for="editora">Editora</label>
+    
     <input type="text" name="editora" id="editora" value="<%= editora.nome %>">
 
     <button type="submit">Enviar</button>

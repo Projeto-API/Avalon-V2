@@ -48,7 +48,7 @@
           <%= livro.preco %>
         </td>
         <td class="item actions">
-          <a href="/admin/editar-livro/form/<%= livro.id %>"> <i class ="bx bx-edit"></i></a>
+          <a href="/admin/editar/<%= livro.id %>"> <i class ="bx bx-edit"></i></a>
       
           <form action="/admin/deletar/<%= livro.id %>?_method=DELETE" method="post">
             <button type="submit"></button>

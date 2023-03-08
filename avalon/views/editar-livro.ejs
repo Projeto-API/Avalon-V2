@@ -4,27 +4,21 @@
 <main>
   <h2>Editar livro</h2>
 
-  <% if (livro) { %>
-    <form class="add-form" action="/admin/editar/editar-livro <%= livro.id %>?_method=PUT" method="post">
-  <% } else { %>
+
     <form class="add-form" action="/admin/editar-livro" method="post">
-  <% } %>
+  
 
     <label for="titulo">Título</label>
-    <input type="text" name="titulo" id="titulo" value="<%= livro && livro.titulo %>">
+    <input type="text" name="nome" id="nome" value="<%=livro.nome %>">
 
     <label for="editora">Editora</label>
-    <input type="text" name="editora" id="editora" value="<%= livro && livro.editora %>">
+    <input type="text" name="editora" id="editora" value="<%= editora.nome %>">
 
     <button type="submit">Enviar</button>
   </form>
 
 
-
-
-
-
-  <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
+  <!-- <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
   <input class="form-crud-input" id="titulo" type="text" name="nome" placeholder="Digite o nome do livro ">
 
   <label class="form-crud-label" for="valor">Preço:</label> <br>
@@ -41,7 +35,7 @@
   <label class="form-crud-label" for="categoria">Acabamento:</label> <br>
   <select name="categoria" id="categoria">
     <option value="comum">Capa Comum</option>
-    <option value="dura">Capa Dura</option>
+    <option value="dura">Capa Dura</option> -->
 </main>
 
 <%- include('partials/footer') %>

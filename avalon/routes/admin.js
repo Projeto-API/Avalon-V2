@@ -18,7 +18,8 @@ router.get('/admin/categorias', CategoriasController.index);
 // ----------------------------------------CRUD --------------------------------------------//
 router.get('/form/:id?', LivrosController.form);
 router.post('/', LivrosController.criar);
-router.put('/editar/:id', LivrosController.editar);
+router.post('/editar-livro', LivrosController.editar);
+router.get('/editar/:id',  LivrosController.buscarLivro)
 router.delete('/deletar/:id', LivrosController.deletar);
 
 

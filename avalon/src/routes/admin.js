@@ -24,8 +24,7 @@ const EditoraController = require('../controllers/EditoraController');
 
 
 router.get('/', LivroController.index);
-router.get('/', LivroController.editora);
-router.get('/', LivroController.categoria);
+router.get('/form/:id?', LivroController.form);
 
 
 router.get('/autores', AutorController.index);

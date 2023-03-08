@@ -18,5 +18,16 @@ module.exports = {
     const autores = await Autor.findAll();
     res.render('crudAutor', { title: 'Express', css: 'crud', autores })
 
+  },
+
+  async deletar(req, res) {
+    const  id = req.params.id;
+    await Autor.destroy({
+      where: {
+        id
+      }
+    })
+
+    res.redirect('/admin/autores');
   }
 }

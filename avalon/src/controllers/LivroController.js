@@ -54,32 +54,26 @@ const { Produto, Editora, Autor, Categoria } = require('../models')
 module.exports = {
   async index(req, res) {
     const produtos = await Produto.findAll();
-    res.render('admin', { title: 'Express', css: 'crud', produtos })
+    const editoras = await Editora.findAll({order: [['nome']]})
+    const autores = await Autor.findAll({order: [['nome']]})
+    const categorias = await Categoria.findAll({order: [['tipo']]})
+    const data = {
+      editoras, autores, categorias, produtos
+    }
+
+    res.render('admin', { title: 'Express', css: 'crud', data })
   },
-
-  async form (req, res) {
-    const editoras = await Editora.findAll()
-    const autores = await Autor.findAll()
-    const categorias = await Categoria.findAll()
-    let produto;
-    let id = req.params.id;
-
-   
-    res.render('admin', {  css: 'crud', produto: null, editoras, autores, categorias });
-  },
-
 
   criar: async (req, res) => {
-    const { categoria, titulo, preco, editora_id, idioma,
+    const { titulo, preco, idioma,
       paginas, acabamento } = req.body;
-    await Produto.create({
-      categoria, titulo, preco, editoras_id: editora, idioma,
+    await Editora.create({
+      titulo, preco, idioma,
       paginas, acabamento
     });
 
     res.redirect('/admin');
   },
-
 
   async deletar(req, res) {
     const id = req.params.id;

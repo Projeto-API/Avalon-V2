@@ -41,7 +41,7 @@
             </tr>
           </thead>
           <tbody>
-            <% produtos.forEach(produto=> { %>
+            <% data.produtos.forEach(produto=> { %>
               <tr>
                 <td><input type="checkbox"></td>
                 <td>
@@ -82,7 +82,9 @@
 
             <label class="form-crud-label" for="categoria">Categoria:</label> <br>
             <select name="categoria" id="categoria">
-
+              <% data.categorias.forEach(el=> { %>
+                <option value="<%= el.id %>"><%= el.tipo %></option>
+                <% }) %>
             </select>
 
             <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
@@ -94,9 +96,9 @@
 
             <label class="form-crud-label" for="editora">Editora:</label> <br>
             <select name="editora" id="editora">
-              <% editoras.forEach(editora => { %>
-                <option value="<%= editora.id %>"><%= editora.nome %></option>          
-                      <% }) %>
+              <% data.editoras.forEach(el=> { %>
+                <option value="<%= el.id %>"><%= el.nome %></option>
+                <% }) %>
             </select>
 
             <label class="form-crud-label" for="idioma">Idioma:</label> <br>

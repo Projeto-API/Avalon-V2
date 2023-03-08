@@ -24,7 +24,7 @@ const EditoraController = require('../controllers/EditoraController');
 
 
 router.get('/', LivroController.index);
-router.get('/form/:id?', LivroController.form);
+
 
 
 router.get('/autores', AutorController.index);
@@ -33,7 +33,7 @@ router.get('/editoras', EditoraController.index);
 
 module.exports = router;
 
-router.post('/admin', upload.single("capaImg"),LivroController.criar);
+router.post('/', upload.single("capaImg"),LivroController.criar);
 
 router.delete('/deletar/:id', LivroController.deletar);
 router.delete('/deletar/:id', CategoriaController.deletar);

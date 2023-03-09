@@ -41,7 +41,8 @@ module.exports = {
 
   async editar (req, res) {
 console.log('amigo estou aqui')
-    const {nome, editora, autor, id} = req.body
+    const {nome, editora, autor} = req.body
+    const {id} = req.params
     console.log('estou aparecendo')
     await Livro.update({nome, editoras_id: editora, autores_id: autor},
         {
@@ -50,13 +51,15 @@ console.log('amigo estou aqui')
     res.redirect('/admin');
   },
 
+  
+
  async buscarLivro (req, res){
   const {id} = req.params
- 
-  const livro = await Livro.findOne({id})
+  const livro = await Livro.findByPk(id,{
+    include:[{model: Editora, as:"editora"}]
+  })
   console.log(livro)
-  const editora = await Editora.findOne({id:livro.editoras_id})
-  res.render('editar-livro', {livro, editora});
+  res.render('editar-livro', {livro});
 
  },
 

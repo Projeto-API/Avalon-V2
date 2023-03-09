@@ -48,13 +48,13 @@ module.exports = {
   },
 
   async editar(req, res) {
-    console.log('amigo estou aqui')
-    const { titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor, categoria } = req.body
+    const { id } = req.params
+    
+    const { titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor} = req.body
 
     console.log(req.body)
     await Livro.update({
-      titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor, categoria,
-       editoras_id: editora, autores_id: autor, categorias: categoria
+      titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor
     },
       {
         where: { id }

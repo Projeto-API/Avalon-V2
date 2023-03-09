@@ -7,8 +7,14 @@ id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nome VARCHAR(150) NOT NULL
 );
 
-INSERT INTO editoras (nome) VALUES ('Darkside'), ('Darkside');
+INSERT INTO editoras (nome) VALUES ('JBC'), ('Darkside');
 
+CREATE TABLE categorias (
+	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    tipo VARCHAR(45) NOT NULL
+);
+
+INSERT INTO categorias (tipo) VALUES ('Histórias em Quadrinhos'), ('Livros');
 
 CREATE TABLE clientes (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -23,12 +29,20 @@ data_nascimento DATE
 );
 
 CREATE TABLE livros (
-id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
-nome VARCHAR(150) NOT NULL,
-editoras_id INT UNSIGNED NOT NULL,
-autores_id INT UNSIGNED NOT NULL,
-FOREIGN KEY (editoras_id) REFERENCES editoras(id),
-FOREIGN KEY (autores_id) REFERENCES autores(id)
+	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(150) NOT NULL,
+	preco DECIMAL(10,2) NOT NULL,
+    acabamento VARCHAR(45) NOT NULL,
+    sinopse VARCHAR(1000),
+    isbn VARCHAR (13) NOT NULL UNIQUE,
+    idioma VARCHAR (45) NOT NULL,
+    paginas INT UNSIGNED NOT NULL UNIQUE,
+    autores_id INT UNSIGNED NOT NULL,
+    editoras_id INT UNSIGNED NOT NULL,
+    categorias_id INT UNSIGNED NOT NULL,
+	FOREIGN KEY (autores_id) REFERENCES autores(id),
+    FOREIGN KEY (editoras_id) REFERENCES editoras(id),
+	FOREIGN KEY (categorias_id) REFERENCES categorias(id)
 );
 
 INSERT INTO livros (nome, autores_id, editoras_id)
@@ -105,7 +119,4 @@ validade_ofertas DATE NOT NULL,
 livros_id INT UNSIGNED NOT NULL,
 livros_editoras_id INT UNSIGNED NOT NULL
 );
-
-
-
 

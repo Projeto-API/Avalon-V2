@@ -74,17 +74,27 @@ module.exports = {
 
     res.redirect('/admin');
   },
-
-  async deletar(req, res) {
-    const id = req.params.id;
-    await Produto.destroy({
-      where: {
-        id
-      }
-    })
-
+  
+  async criar (req, res) {
+    const {titulo, preco, idioma, paginas, acabamento, editora, autores,} = req.body
+    await Livro.create({titulo, preco, idioma, paginas, acabamento, editoras_id: editora, autores_id: autores})
+    
     res.redirect('/admin');
-  }
+  },
 
+  async deletar (req, res) {
+    const {id} = req.params
+ 
+    try {
+      
+      await Produto.destroy ({where:{
+        id
+      }})
+    } catch (error) {
+     console.log("erro ao deletar livro", error) 
+    }
+    console.log("O produto de id " + req.body.id + " foi deletado com sucesso");
+    return res.redirect('/admin');
+  }
 }
 

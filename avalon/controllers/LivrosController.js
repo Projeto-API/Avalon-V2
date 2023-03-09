@@ -18,70 +18,74 @@ module.exports = {
     const editoras = await Editora.findAll();
     const autores = await Autor.findAll();
     const categorias = await Categoria.findAll();
-    const data = {  editoras, autores, categorias };
-  
-  res.render('admin', { livros, data })
-},
+    const data = { editoras, autores, categorias };
 
-  // async form(req, res) {
+    res.render('admin', { livros, data })
+  },
 
+  async form(req, res) {
+    let livro;
+    let livros ;
+    const  id  = req.params;id;
 
-  //   const editoras = await Editora.findAll()
-  //   const autores = await Autor.findAll()
+    if (id) livros = await Livro.findOne(id);
 
-  //   let livro;
-  //   let id = req.params.id;
+    res.render('adicionarLivro', { livro: null, livros });
 
-
-  //   res.render('adicionar-livro', { livro: null, editoras, autores });
-  // },
+  },
 
   async criar(req, res) {
-  const { nome, editora, autor, } = req.body
-  await Livro.create({ nome, editoras_id: editora, autores_id: autor, })
-
-  res.redirect('/admin');
-},
+    const { titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor, categoria } 
+    = req.body
+    await Livro.create({
+      titulo, preco, acabamento, sinopse, isbn, idioma, paginas,
+      editoras_id: editora,
+      autores_id: autor,
+      categorias_id: categoria
+    })
+    console.log(req.body)
+    res.redirect('/admin');
+  },
 
   async editar(req, res) {
-  console.log('amigo estou aqui')
-  const { nome, editora, autor, id } = req.body
+    console.log('amigo estou aqui')
+    const { titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor, categoria } = req.body
 
-  console.log(req.body)
-  await Livro.update({
-    nome, editoras_id: editora, autores_id: autor
+    console.log(req.body)
+    await Livro.update({
+      titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor, categoria,
+       editoras_id: editora, autores_id: autor, categorias: categoria
+    },
+      {
+        where: { id }
+      })
+    res.redirect('/admin');
   },
-    {
-      where: { id }
-    })
-  res.redirect('/admin');
-},
 
   async buscarLivro(req, res) {
-  const { id } = req.params
+    const { id } = req.params
 
+    const livro = await Livro.findByPk( id )
+    console.log(livro)
+    const editora = await Editora.findByPk(livro.editoras_id )
+    res.render('adicionarLivro', { livro, editora });
 
-  const livro = await Livro.findOne({ id })
-  console.log(livro)
-  const editora = await Editora.findOne({ id: livro.editoras_id })
-  res.render('editar-livro', { livro, editora });
-
-},
+  },
 
   async deletar(req, res) {
-  const { id } = req.params
+    const { id } = req.params
 
-  try {
+    try {
 
-    await Livro.destroy({
-      where: {
-        id
-      }
-    })
-  } catch (error) {
-    console.log("erro ao deletar livro", error)
+      await Livro.destroy({
+        where: {
+          id
+        }
+      })
+    } catch (error) {
+      console.log("erro ao deletar livro", error)
+    }
+    console.log("O produto de id " + req.body.id + " foi deletado com sucesso");
+    return res.redirect('/admin');
   }
-  console.log("O produto de id " + req.body.id + " foi deletado com sucesso");
-  return res.redirect('/admin');
-}
 }

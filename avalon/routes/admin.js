@@ -18,9 +18,16 @@ router.get('/admin/categorias', CategoriasController.index);
 
 // ----------------------------------------CRUD --------------------------------------------//
 
-router.post('/', LivrosController.criar);
-router.post('/editar-livro', LivrosController.editar);
+// GET ROUTES
 router.get('/editar/:id',  LivrosController.buscarLivro)
+router.get('/form', LivrosController.form);
+
+
+// POST ROUTES
+router.post('/livro', LivrosController.criar);
+router.post('/editar-livro', LivrosController.editar);
+
+// DELETE ROUTES
 router.delete('/deletar/:id', LivrosController.deletar);
 
 

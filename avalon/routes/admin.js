@@ -48,10 +48,18 @@ router.put('/editoras/editar/:id', EditorasController.editar);
 // DELETE ROUTES
 router.delete('/editoras/deletar/:id', EditorasController.deletar);
 
-// ----------------------------------------CRUD EDITORAS--------------------------------------------//
+// ----------------------------------------CRUD AUTORES--------------------------------------------//
 
 // GET ROUTES
 router.get('/autores', AutoresController.index);
+router.get('/autores', AutoresController.search);  
+router.get('/autores/form/:id?', AutoresController.form);
+router.get('/autores/editar/:id', AutoresController.buscarAutor)
+
+// POST E PUT ROUTES
+router.post('/autores', AutoresController.criar);
 
 
+// DELETE ROUTES
+router.delete('/autores/deletar/:id', AutoresController.deletar);
 module.exports = router;

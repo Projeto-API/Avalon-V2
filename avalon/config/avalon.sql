@@ -4,11 +4,27 @@ USE avalon;
 
 CREATE TABLE editoras (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
-nome VARCHAR(150) NOT NULL
+nome VARCHAR(150) NOT NULL,
+cnpj VARCHAR(18) NOT NULL
 );
 
-INSERT INTO editoras (nome) VALUES ('Darkside'), ('Darkside');
+INSERT INTO editoras (nome) VALUES ('JBC'), ('Darkside');
 
+CREATE TABLE categorias (
+	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    tipo VARCHAR(45) NOT NULL
+);
+
+INSERT INTO categorias (tipo) VALUES ('Histórias em Quadrinhos'), ('Livros');
+
+CREATE TABLE autores (
+id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+nome VARCHAR(150) NOT NULL,
+sobrenome VARCHAR(45) NOT NULL,
+biografia VARCHAR(1000) NOT NULL,
+foto VARCHAR(45) NOT NULL
+);
+INSERT INTO autores (nome) VALUES ('Jk rowling'), ('Darkside');
 
 CREATE TABLE clientes (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -22,25 +38,27 @@ endereco VARCHAR(45) NOT NULL,
 data_nascimento DATE
 );
 
-CREATE TABLE livros (
+CREATE TABLE status (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
-nome VARCHAR(150) NOT NULL,
-editoras_id INT UNSIGNED NOT NULL,
-autores_id INT UNSIGNED NOT NULL,
-FOREIGN KEY (editoras_id) REFERENCES editoras(id),
-FOREIGN KEY (autores_id) REFERENCES autores(id)
+descricao VARCHAR(45) NOT NULL
 );
 
-INSERT INTO livros (nome, autores_id, editoras_id)
-VALUES
-('Harry Potter: E a Pedra Filosofal', 1, 2),
-('Lady Killeres', 1, 2),
-('A revolucao dos bichos', 1, 2);
-
-DELETE FROM livros where id = 17;
-
-
-
+CREATE TABLE livros (
+	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(150) NOT NULL,
+	preco DECIMAL(10,2) NOT NULL,
+    acabamento VARCHAR(45) NOT NULL,
+    sinopse VARCHAR(1000),
+    isbn VARCHAR (13) NOT NULL UNIQUE,
+    idioma VARCHAR (45) NOT NULL,
+    paginas INT UNSIGNED NOT NULL UNIQUE,
+    autores_id INT UNSIGNED NOT NULL,
+    editoras_id INT UNSIGNED NOT NULL,
+    categorias_id INT UNSIGNED NOT NULL,
+	FOREIGN KEY (autores_id) REFERENCES autores(id),
+    FOREIGN KEY (editoras_id) REFERENCES editoras(id),
+	FOREIGN KEY (categorias_id) REFERENCES categorias(id)
+);
 
 CREATE TABLE itens_pedidos (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -65,12 +83,6 @@ itens_pedidos_livros_editoras_id INT UNSIGNED NOT NULL,
 clientes_id INT UNSIGNED NOT NULL
 );
 
-CREATE TABLE status (
-id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
-descricao VARCHAR(45) NOT NULL
-);
-
-
 CREATE TABLE livros_estoque (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
 quantidade VARCHAR(150) NOT NULL,
@@ -80,19 +92,6 @@ FOREIGN KEY (livros_id) REFERENCES livros (id),
 FOREIGN KEY (livros_editoras_id) REFERENCES editoras (id)
 );
 
-CREATE TABLE autores (
-id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
-nome VARCHAR(150) NOT NULL,
-sobrenome VARCHAR(45) NOT NULL,
-biografia VARCHAR(1000) NOT NULL,
-foto VARCHAR(45) NOT NULL
-);
-
-INSERT INTO autores (nome, sobrenome, biografia, foto)
-VALUES ('Jk', 'howling', 'biografia', 1);
-
-
-
 CREATE TABLE livros_em_ofertas (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
 preco DECIMAL(10,2) NOT NULL,
@@ -101,7 +100,3 @@ validade_ofertas DATE NOT NULL,
 livros_id INT UNSIGNED NOT NULL,
 livros_editoras_id INT UNSIGNED NOT NULL
 );
-
-
-
-

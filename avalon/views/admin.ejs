@@ -1,105 +1,67 @@
 <%- include('partials/header') %>
-<link rel="stylesheet" href="/stylesheets/admin.css">
+  <link rel="stylesheet" href="/stylesheets/admin.css">
   <script src="/javascripts/crud.js" defer></script>
-<main>
-  <div class="crud-types">
-    <button class="btnCrud"><a href="/admin/categorias">Categorias</a></button>
-    <button class="btnCrud"><a href="/admin/editoras">Editoras</a></button>
-    <button class="btnCrud"><a href="/admin/autores">Autores</a></button>
-  </div>
-  <div class="container-crud">
-    <h4 class="crud-title">CADASTRO LIVROS</h4>
+  <main>
+    <div class="crud-types">
+      <button class="btnCrud"><a href="/admin/categorias">Categorias</a></button>
+      <button class="btnCrud"><a href="/admin/editoras">Editoras</a></button>
+      <button class="btnCrud"><a href="/admin/autores">Autores</a></button>
+    </div>
+    <div class="container-crud">
+      <h4 class="crud-title">LIVROS</h4>
 
-  <div class="container-header-crud">
-    <div class="header-crud">
-      <button class="btnCrud"><a href="/admin">Todos</a></button>
-    <button class="btnCrud" ><a href="/admin/form">Adicionar</a></button>
-    <div class="search-crud">
-      <form action="/admin/buscar" method="get">
-        <input type="text" name="buscar" id="read" placeholder="Buscar ">
-      </form>
-  </div>
-</div>
-</div>
-  <div class="divTable">
-    <table>
-      <thead>
-        <tr>
-    <th><input type="checkbox"></th>
-      <th>ID</th>
-      <th>Título</th>
-      <th>Preço</th>
-      <th class="acao">Editar</th>
-       <th class="acao">Excluir</th>
-        </tr>
-        </thead>
-        <tbody>
-
-    <% livros.forEach(livro => { %>
-        <tr>
-        <td><input type="checkbox"></td>
-        <td>
-          <%= livro.id %>
-        </th>
-        <td>
-          <%= livro.nome %>
-        </td>
-        <td>
-          <%= livro.preco %>
-        </td>
-        <td class="item actions">
-          <a href="/admin/editar/<%= livro.id %>"> <i class ="bx bx-edit"></i></a>
-      
-          <form action="/admin/deletar/<%= livro.id %>?_method=DELETE" method="post">
-            <button type="submit"></button>
-            <button class="crudform"><i class='bx bx-trash'></i></button>
-            
-          </form>
-        </td>
-        <div class="modal-container">
-          <div class="modal">
-  
-            <form class="form-crud" action="/admin" method="POST" enctype="multipart/form-data">
-              <br>
-              <label class="form-crud-label" for="categoria">Categoria:</label> <br>
-              <select name="categoria" id="categoria">
-                <option value="hw">Histórias em Quadrinhos</option>
-                <option value="livro">Livros</option>
-              </select>
-  
-              <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
-              <input class="form-crud-input" id="titulo" type="text" name="nome" placeholder="Digite o nome do livro ">
-  
-              <label class="form-crud-label" for="valor">Preço:</label> <br>
-              <input class="form-crud-input" id="crud-preco" type="text" name="valor"
-                placeholder="Coloque o valor do Livro">
-  
-              <label class="form-crud-label" for="editora">Editora:</label> <br>
-              <input class="form-crud-input" type="text" name="editora" placeholder="Digite a editora">
-  
-              <label class="form-crud-label" for="publicacao">Ano de Publicação:</label> <br>
-              <input class="form-crud-input" type="text" name="publicacao" placeholder="Digite o ano de publicação">
-  
-  
-              <label class="form-crud-label" for="categoria">Acabamento:</label> <br>
-              <select name="categoria" id="categoria">
-                <option value="comum">Capa Comum</option>
-                <option value="dura">Capa Dura</option>
-              </select>
-  
-          
-              <label class="form-crud-label" for="sinopse">Sinopse:</label> <br>
-              <textarea class="form-crud-input" name="sinopse" placeholder="Escreva aqui a sinopse do livro"></textarea>
-  
-              <label class="form-crud-label" for="capaImg">Imagem Capa:</label> <br>
-              <input type="file" class="alteraInp" name="capaImg">
-  
-              <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
+      <div class="container-header-crud">
+        <div class="header-crud">
+          <button class="btnCrud"><a href="/admin">Todos</a></button>
+          <button class="btnCrud"><a href="/admin/form">Adicionar</a></button>
+          <div class="search-crud">
+            <form action="/admin/buscar" method="get">
+              <input type="text" name="buscar" id="read" placeholder="Buscar ">
             </form>
-    <% }) %>
-    </tbody>
-    </table>
-  </div>
-</main>
+          </div>
+        </div>
+      </div>
+      <div class="divTable">
+        <table>
+          <thead>
+            <tr>
+              <th><input type="checkbox"></th>
+              <th>ID</th>
+              <th>Título</th>
+              <th>Preço</th>
+              <th>Autor</th>
+              <th class="acao">Editar</th>
+              <th class="acao">Excluir</th>
+            </tr>
+          </thead>
+          <tbody>
 
-<%- include('partials/footer') %>
+            <% livros.forEach(el=> { %>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>
+                  <%= el.id %>
+                    </th>
+                <td>
+                  <%= el.titulo %>
+                </td>
+                <td>
+                  <%= el.preco %>
+                </td>
+                                <td class="acao">
+                                    <button class="crudform"><a href="/admin/editar-livro/<%= el.id %>"><i
+                        class='bx bx-edit'></i></a></i></button>
+                </td>
+                <td class="acao">
+                  <form action="/admin/deletar/<%= el.id %>?_method=DELETE" method="post">
+                    <button class="crudform"><i class='bx bx-trash'></i></button>
+                  </form>
+                </td>
+              </tr>
+              <% }) %>
+          </tbody>
+        </table>
+      </div>
+  </main>
+
+  <%- include('partials/footer') %>

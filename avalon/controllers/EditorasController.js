@@ -1,11 +1,18 @@
 const { Editora } = require('../models');
-const {Op} = require('sequelize');
+const { Op } = require('sequelize');
 
 module.exports = {
-  index: async (req, res) => {
+  async index(req, res) {
+
+    const editoras = await Editora.findAll();
+
+    res.render('editoras', { editoras })
+  },
+
+  search: async (req, res) => {
     const { search } = req.query;
     const editoras = await Editora.findAll({
-      where: search ? { nome: {[Op.like]: '%' + search + '%'} } : null 
+      where: search ? { nome: { [Op.like]: '%' + search + '%' } } : null
     });
 
     res.render('editoras', { editoras });
@@ -20,31 +27,44 @@ module.exports = {
     res.render('adicionarEditora', { editora });
   },
 
-  criar: async (req, res) => {
-    const { nome } = req.body;
-    await Editora.create({ nome });
+  async buscarEditora(req, res) {
+    const { id } = req.params
 
-    res.redirect('/editoras');
+    const editora = await Editora.findByPk(id)
+    res.render('adicionarEditora', { editora });
+
+  },
+
+  criar: async (req, res) => {
+    const { nome, cnpj } = req.body;
+    await Editora.create({ nome, cnpj });
+
+    res.redirect('/admin/editoras');
   },
 
   editar: async (req, res) => {
     const { id } = req.params;
-    const { nome } = req.body;
+    const { nome, cnpj } = req.body;
 
-    await Editora.update({ nome }, {
+    await Editora.update({ nome, cnpj }, {
       where: { id }
     });
 
-    res.redirect('/editoras');
+    res.redirect('/admin/editoras');
   },
 
-  remover: async (req, res) => {
-    const { id } = req.params;
+  async deletar (req, res) {
+    const { id } = req.params
 
-    await Editora.destroy({
-      where: { id },
-    });
+    try {
 
-    res.redirect('/editoras');
-  },
-};
+      await Editora.destroy({
+        where: {id}
+      })
+    } catch (error) {
+      console.log("erro ao deletar editora", error)
+    }
+    console.log("A editora de id " + req.body.id + " foi deletada com sucesso");
+    return res.redirect('/admin/editoras');
+  }
+}

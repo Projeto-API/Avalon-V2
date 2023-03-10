@@ -25,14 +25,14 @@
                   placeholder="Digite o nome da editora" value="<%= autor && autor.nome %>">
 
                 <label class="form-crud-label" for="biografia">Biografia:</label> <br>
-                <textarea class="form-crud-input" name="biografia" placeholder="Escreva aqui a biografia do autor"><%= autor && autor.biografia %></textarea 
-                    >
-          
-                 <label class="form-crud-label" for="foto">Imagem Autor:</label> <br>
-                 <input type="file" class="alteraInp" name="foto" value="<%= autor && autor.foto %>">
+                <textarea class="form-crud-input" name="biografia"
+                  placeholder="Escreva aqui a biografia do autor"><%= autor && autor.biografia %></textarea>
+
+                <label class="form-crud-label" for="foto">Imagem Autor:</label> <br>
+                <input type="file" class="alteraInp" name="foto" value="<%= autor && autor.foto %>">
 
                 <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
-
+            </form>
 
 
 

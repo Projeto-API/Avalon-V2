@@ -50,11 +50,11 @@ module.exports = {
     const { id } = req.params;
     const { nome, cnpj } = req.body;
 
-    await Editora.update({ nome, cnpj }, {
+    await Autor.update({ nome, cnpj }, {
       where: { id }
     });
 
-    res.redirect('/admin/editoras');
+    res.redirect('/admin/autores');
   },
 
   async deletar (req, res) {

@@ -36,6 +36,16 @@ module.exports = {
 
   },
 
+  async buscarLivro(req, res) {
+    const { id } = req.params
+
+    const livro = await Livro.findByPk( id )
+    console.log(livro)
+    const editora = await Editora.findByPk(livro.editoras_id )
+    res.render('adicionarLivro', { livro, editora });
+
+  },
+  
   async criar (req, res) {
     const {titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor, categoria} = req.body
     await Livro.create({titulo, preco, acabamento,sinopse, isbn, idioma, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria})
@@ -58,15 +68,7 @@ module.exports = {
     res.redirect('/admin');
   },
 
-  async buscarLivro(req, res) {
-    const { id } = req.params
 
-    const livro = await Livro.findByPk( id )
-    console.log(livro)
-    const editora = await Editora.findByPk(livro.editoras_id )
-    res.render('adicionarLivro', { livro, editora });
-
-  },
 
   async deletar(req, res) {
     const { id } = req.params

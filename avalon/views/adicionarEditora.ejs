@@ -1,26 +1,39 @@
 <%- include('partials/header') %>
+  <link rel="stylesheet" href="/stylesheets/admin.css">
+  <script src="/javascripts/crud.js" defer></script>
+  <main>
 
-<main>
-  <h2>
-    <% if (editora) { %>
-      Editar
-    <% } else { %>
-      Adicionar
-    <% } %>
-     Editora
-  </h2>
+    <div class="modal">
+      <h2>
+        <% if (editora) { %>
+          Editar
+          <% } else { %>
+            Adicionar
+            <% } %>
+              Editoras
+      </h2>
 
-  <% if (editora) { %>
-    <form class="add-form" action="/editoras/<%= editora.id %>?_method=PUT" method="post">
-  <% } else { %>
-    <form class="add-form" action="/editoras" method="post">
-  <% } %>
+      <% if (editora) { %>
+        <form class="add-form" action="/admin/editoras/editar/<%= editora.id %>?_method=PUT" method="post">
+          <% } else { %>
+            <form class="add-form" action="/admin/editoras" method="post">
+              <% } %>
+                <br>
 
-    <label for="nome">Editora</label>
-    <input type="text" name="nome" id="nome" value="<%= editora && editora.nome %>">
+                <label class="form-crud-label" for="nome">Nome da Editora:</label> <br>
+                <input class="form-crud-input" id="titulo" type="text" name="nome"
+                  placeholder="Digite o nome da editora" value="<%= editora && editora.nome %>">
 
-    <button type="submit">Enviar</button>
-  </form>
-</main>
+                <label class="form-crud-label" for="preco">CNPJ:</label> <br>
+                <input class="form-crud-input" id="crud-preco" type="text" name="cnpj"
+                  placeholder="Digite o CNPJ da editora " value="<%= editora && editora.cnpj %>">
 
-<%- include('partials/footer') %>
+
+                <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
+
+
+
+
+  </main>
+
+  <%- include('partials/footer') %>

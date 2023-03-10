@@ -5,11 +5,11 @@ module.exports = {
     const autores = await Autor.findAll({
       order: [
         ['nome', 'desc']
-      ],
-
-      include: [
-        {model: Livro, as: 'livros'}
       ]
+
+      // include: [
+      //   {model: Livro, as: 'livros'}
+      // ]
     });
     res.render('autores', { autores });
   }

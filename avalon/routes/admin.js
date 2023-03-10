@@ -4,6 +4,7 @@ const router = express.Router();
 
 // ------------CONTROLLERS E ROTAS PAINEL DE ADMINISTRADOR DO CRUD -------------//
 const LivrosController = require('../controllers/LivrosController');
+const EditorasController = require('../controllers/EditorasController');
 const AutoresController = require('../controllers/AutoresController');
 const CategoriasController = require('../controllers/CategoriasController');
 const TodososlivrosController = require('../controllers/TodososlivrosController');
@@ -16,7 +17,7 @@ router.get('/autores', AutoresController.index);
 router.get('/admin/categorias', CategoriasController.index);
 
 
-// ----------------------------------------CRUD --------------------------------------------//
+// ----------------------------------------CRUD LIVROS--------------------------------------------//
 
 // GET ROUTES
 router.get('/', LivrosController.index); 
@@ -32,8 +33,25 @@ router.put('/editar-livro/:id', LivrosController.editar);
 router.delete('/deletar/:id', LivrosController.deletar);
 
 
+// ----------------------------------------CRUD EDITORAS--------------------------------------------//
 
+// GET ROUTES
+router.get('/editoras', EditorasController.index);
+router.get('/editoras', EditorasController.search);  
+router.get('/editoras/form/:id?', EditorasController.form);
+router.get('/editoras/editar/:id', EditorasController.buscarEditora)
 
+// POST E PUT ROUTES
+router.post('/editoras', EditorasController.criar);
+router.put('/editoras/editar/:id', EditorasController.editar);
+
+// DELETE ROUTES
+router.delete('/editoras/deletar/:id', EditorasController.deletar);
+
+// ----------------------------------------CRUD EDITORAS--------------------------------------------//
+
+// GET ROUTES
+router.get('/autores', AutoresController.index);
 
 
 module.exports = router;

@@ -12,19 +12,20 @@ const SinopseController = require('../controllers/SinopseController');
 router.get('/Sinopse', SinopseController.index);
 router.get('/Todososlivros', TodososlivrosController.index);
 router.get('/autores', AutoresController.index);
-router.get('/', LivrosController.index);
+
 router.get('/admin/categorias', CategoriasController.index);
 
 
 // ----------------------------------------CRUD --------------------------------------------//
 
 // GET ROUTES
+router.get('/', LivrosController.index); 
 router.get('/editar-livro/:id',  LivrosController.buscarLivro)
-router.get('/form', LivrosController.form);
+router.get('/form/:id?', LivrosController.form);
 
 
 // POST ROUTES
-router.post('/livro', LivrosController.criar);
+router.post('/', LivrosController.criar);
 router.put('/editar-livro/:id', LivrosController.editar);
 
 // DELETE ROUTES

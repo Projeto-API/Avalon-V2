@@ -23,27 +23,23 @@ module.exports = {
     res.render('admin', { livros, data })
   },
 
-  async form(req, res) {
+  async form (req, res) {
+    const editoras = await Editora.findAll()
+    const autores = await Autor.findAll()
+    const categorias = await Categoria.findAll()
+
+   
     let livro;
-    let livros ;
-    const  id  = req.params;id;
+    let id = req.params.id;
 
-    if (id) livros = await Livro.findOne(id);
-
-    res.render('adicionarLivro', { livro: null, livros });
+    res.render('adicionarLivro', { livro: null, editoras, categorias, autores  });
 
   },
 
-  async criar(req, res) {
-    const { titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor, categoria } 
-    = req.body
-    await Livro.create({
-      titulo, preco, acabamento, sinopse, isbn, idioma, paginas,
-      editoras_id: editora,
-      autores_id: autor,
-      categorias_id: categoria
-    })
-    console.log(req.body)
+  async criar (req, res) {
+    const {nome, preco, acabamento, sinopse, isbn, paginas, editora, autor,} = req.body
+    await Livro.create({nome, preco, acabamento,sinopse, isbn, paginas, editoras_id: editora, autores_id: autor,})
+  
     res.redirect('/admin');
   },
 

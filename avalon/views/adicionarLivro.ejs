@@ -22,7 +22,9 @@
 
         <label class="form-crud-label" for="categoria">Categoria:</label> <br>
         <select name="categoria" id="categoria">
-          
+          <% categorias.forEach(el => { %>
+            <option value="<%= el.id %>"><%= el.tipo %></option>          
+                  <% }) %>
         </select>
 
         <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
@@ -33,9 +35,18 @@
         <input class="form-crud-input" id="crud-preco" type="text" name="preco" placeholder="Coloque o valor do Livro"
         value="<%= livro && livro.preco %>">
 
+        <label class="form-crud-label" for="autor">Autor:</label> <br>
+        <select name="autor" id="autor">
+          <% autores.forEach(el => { %>
+            <option value="<%= el.id %>"><%= el.nome %></option>          
+                  <% }) %>
+        </select>
+
         <label class="form-crud-label" for="editora">Editora:</label> <br>
         <select name="editora" id="editora">
-          <option value=""></option>
+          <% editoras.forEach(el => { %>
+            <option value="<%= el.id %>"><%= el.nome %></option>          
+                  <% }) %>
 
         </select>
 

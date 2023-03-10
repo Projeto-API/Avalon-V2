@@ -12,7 +12,7 @@ const SinopseController = require('../controllers/SinopseController');
 
 router.get('/Sinopse', SinopseController.index);
 router.get('/Todososlivros', TodososlivrosController.index);
-router.get('/autores', AutoresController.index);
+
 
 
 
@@ -20,6 +20,7 @@ router.get('/autores', AutoresController.index);
 
 // GET ROUTES
 router.get('/', LivrosController.index);
+router.get('/buscar', LivrosController.search);
 router.get('/editar-livro/:id',  LivrosController.buscarLivro)
 router.get('/form/:id?', LivrosController.form);
 
@@ -36,7 +37,7 @@ router.delete('/deletar/:id', LivrosController.deletar);
 
 // GET ROUTES
 router.get('/editoras', EditorasController.index);
-router.get('/editoras', EditorasController.search);  
+router.get('/editoras/buscar', EditorasController.search);  
 router.get('/editoras/form/:id?', EditorasController.form);
 router.get('/editoras/editar/:id', EditorasController.buscarEditora)
 
@@ -51,7 +52,7 @@ router.delete('/editoras/deletar/:id', EditorasController.deletar);
 
 // GET ROUTES
 router.get('/autores', AutoresController.index);
-router.get('/autores', AutoresController.search);  
+router.get('/autores/buscar', AutoresController.search);  
 router.get('/autores/form/:id?', AutoresController.form);
 router.get('/autores/editar/:id', AutoresController.buscarAutor)
 
@@ -66,7 +67,7 @@ router.delete('/autores/deletar/:id', AutoresController.deletar);
 
 // GET ROUTES
 router.get('/categorias', CategoriasController.index);
-router.get('/categorias', CategoriasController.search);  
+router.get('/categorias/buscar', CategoriasController.search);  
 router.get('/categorias/form/:id?', CategoriasController.form);
 router.get('/categorias/editar/:id', CategoriasController.buscarCategoria)
 

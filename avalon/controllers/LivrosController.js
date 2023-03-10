@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+const { Op } = require('sequelize');
 const { Livro, Editora, Autor, Categoria } = require('../models');
+Op
 
 const livrosPath = path.resolve(__dirname, '../database/livros.json');
 
@@ -21,6 +23,20 @@ module.exports = {
 
 
     res.render('admin', { livros, editoras, categorias, autores })
+  },
+
+  search: async (req, res) => {
+    const { search } = req.query;
+    const livros = await Livro.findAll({
+      where: search ? {
+        [Op.or]: [
+          { titulo: { [Op.like]: '%' + search + '%' } },
+          { id: search }
+        ]
+      } : null
+    });
+
+    res.render('admin', { livros })
   },
 
   async form(req, res) {

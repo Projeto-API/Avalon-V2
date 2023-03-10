@@ -1,4 +1,6 @@
+const { Op } = require('sequelize');
 const { Categoria } = require('../models');
+Op
 
 module.exports = {
   index: async (req, res) => {
@@ -13,7 +15,12 @@ module.exports = {
   search: async (req, res) => {
     const { search } = req.query;
     const categorias = await Categoria.findAll({
-      where: search ? { nome: { [Op.like]: '%' + search + '%' } } : null
+      where: search ? {
+        [Op.or]: [
+          { tipo: { [Op.like]: '%' + search + '%' } },
+          { id: search }
+        ]
+      } : null
     });
 
     res.render('categorias', { categorias });
@@ -54,18 +61,18 @@ module.exports = {
     res.redirect('/admin/categorias');
   },
 
-  async deletar (req, res) {
-    const { id } = req.params
-
-    try {
-
+  async deletar(req, res) {
+        try {
+          const { id } = req.params
       await Categoria.destroy({
-        where: {id}
+        where: { id }
       })
+      console.log("A categoria de id " + req.body.id + " foi deletada com sucesso");
+      return res.redirect('/admin/categorias');
+
     } catch (error) {
       console.log("erro ao deletar categoria", error)
     }
-    console.log("A categoria de id " + req.body.id + " foi deletada com sucesso");
-    return res.redirect('/admin/categorias');
+
   }
 }

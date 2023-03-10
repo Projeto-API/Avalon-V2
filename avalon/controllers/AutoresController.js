@@ -1,4 +1,6 @@
+const { Op } = require('sequelize');
 const { Autor, Livro } = require('../models');
+Op
 
 module.exports = {
   index: async (req, res) => {
@@ -13,10 +15,16 @@ module.exports = {
     });
     res.render('autores', { autores });
   },
+
   search: async (req, res) => {
     const { search } = req.query;
     const autores = await Autor.findAll({
-      where: search ? { nome: { [Op.like]: '%' + search + '%' } } : null
+      where: search ? {
+        [Op.or]: [
+          { nome: { [Op.like]: '%' + search + '%' } },
+          { id: search }
+        ]
+      } : null
     });
 
     res.render('autores', { autores });

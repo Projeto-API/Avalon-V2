@@ -18,9 +18,9 @@ module.exports = {
     const editoras = await Editora.findAll();
     const autores = await Autor.findAll();
     const categorias = await Categoria.findAll();
-    const data = { editoras, autores, categorias };
+    
 
-    res.render('admin', { livros, data })
+    res.render('admin', { livros, editoras, categorias, autores })
   },
 
   async form (req, res) {
@@ -37,8 +37,8 @@ module.exports = {
   },
 
   async criar (req, res) {
-    const {nome, preco, acabamento, sinopse, isbn, paginas, editora, autor,} = req.body
-    await Livro.create({nome, preco, acabamento,sinopse, isbn, paginas, editoras_id: editora, autores_id: autor,})
+    const {titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor, categoria} = req.body
+    await Livro.create({titulo, preco, acabamento,sinopse, isbn, idioma, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria})
   
     res.redirect('/admin');
   },

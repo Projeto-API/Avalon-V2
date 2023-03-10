@@ -24,7 +24,7 @@ router.get('/editar-livro/:id',  LivrosController.buscarLivro)
 router.get('/form/:id?', LivrosController.form);
 
 
-// POST ROUTES
+// POST E PUT ROUTES
 router.post('/', LivrosController.criar);
 router.put('/editar-livro/:id', LivrosController.editar);
 

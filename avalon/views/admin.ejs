@@ -29,6 +29,7 @@
               <th>ID</th>
               <th>Título</th>
               <th>Preço</th>
+              <th>Autor</th>
               <th class="acao">Editar</th>
               <th class="acao">Excluir</th>
             </tr>
@@ -47,9 +48,8 @@
                 <td>
                   <%= livro.preco %>
                 </td>
-                <td class="acao">
-                  
-                  <button class="crudform"><a href="/admin/editar-livro/<%= livro.id %>"><i
+                                <td class="acao">
+                                    <button class="crudform"><a href="/admin/editar-livro/<%= livro.id %>"><i
                         class='bx bx-edit'></i></a></i></button>
                 </td>
                 <td class="acao">

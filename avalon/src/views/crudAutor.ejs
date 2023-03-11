@@ -1,0 +1,93 @@
+<%- include('partials/header') %>
+
+  <link rel="stylesheet" href="/stylesheets/crud.css">
+  <script src="/javascripts/crud.js" defer></script>
+
+  <main>
+    <div class="crud-types">
+      <button class="btnCrud"><a href="/admin/categorias">Categorias</a></button>
+      <button class="btnCrud"><a href="/admin/editoras">Editoras</a></button>
+      <button class="btnCrud"><a href="/admin">Livros</a></button>
+    </div>
+    <div class="container-crud">
+
+      <h4 class="crud-title">CADASTRO AUTORES</h4>
+
+      <div class="container-header-crud">
+        <div class="header-crud">
+          <button class="btnCrud"><a href="/Livro/admin">Todos</a></button>
+          <button onclick="openModal()" class="btnCrud"><a>Adicionar</a></button>
+          <button class="btnCrud"><a> Deletar</a></button>
+          <div class="search-crud">
+            <form action="/Livro/buscar" method="get">
+              <input type="text" name="buscar" id="read" placeholder="Buscar ">
+            </form>
+          </div>
+
+        </div>
+      </div>
+      <div class="divTable">
+        <table>
+          <thead>
+            <tr>
+              <th><input type="checkbox"></th>
+              <th>ID</th>
+              <th>Nome</th>
+              <th>Sobrenome</th>
+
+              <th class="acao">Editar</th>
+              <th class="acao">Excluir</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% autores.forEach(autor=> { %>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>
+                  <%= autor.id %>
+                </td>
+                <td>
+                  <%= autor.nome %>
+                </td>
+                <td>
+                  <%= autor.sobrenome %>
+                </td>
+                <td class="acao">
+                  <button onclick="editModal('<% autor %>')" class="crudform"><i class='bx bx-edit'></i></button>
+
+                </td>
+                <td class="acao">
+                  <form action="/admin/autores/deletar/<%= autor.id %>?_method=DELETE" method="POST">
+                    <button class="crudform"><i class='bx bx-trash'></i></button>
+                </td>
+
+                <% }) %>
+          </tbody>
+
+        </table>
+      </div>
+
+      <div class="modal-container">
+        <div class="modal">
+
+          <form class="form-crud" action="/produto/admin" method="POST" enctype="multipart/form-data">
+            <br>
+
+            <label class="form-crud-label" for="nome">Nome:</label> <br>
+            <input class="form-crud-input" type="text" name="nome" placeholder="Digite o nome do Autor ">
+
+            <label class="form-crud-label" for="sobrenome">Sobrenome:</label> <br>
+            <input class="form-crud-input" type="text" name="sobrenome" placeholder="Digite o sobrenome do Autor ">
+
+            <label class="form-crud-label" for="biografia">Biografia:</label> <br>
+            <textarea class="form-crud-input" name="biografia" placeholder="Escreva aqui a biografia do Autor"></textarea>
+
+            <label class="form-crud-label" for="foto">Foto Autor:</label> <br>
+            <input type="file" class="alteraInp" name="foto">
+
+            <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
+          </form>
+        </div>
+      </div>
+      </section>
+  </main>

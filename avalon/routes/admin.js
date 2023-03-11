@@ -6,21 +6,21 @@ const router = express.Router();
 const LivrosController = require('../controllers/LivrosController');
 const EditorasController = require('../controllers/EditorasController');
 const AutoresController = require('../controllers/AutoresController');
-const CategoriasController = require('../controllers/CategoriasController');
+const CategoriasController = require('../controllers/CategoriasController')
 const TodososlivrosController = require('../controllers/TodososlivrosController');
 const SinopseController = require('../controllers/SinopseController');
 
 router.get('/Sinopse', SinopseController.index);
 router.get('/Todososlivros', TodososlivrosController.index);
-router.get('/autores', AutoresController.index);
 
-router.get('/admin/categorias', CategoriasController.index);
+
 
 
 // ----------------------------------------CRUD LIVROS--------------------------------------------//
 
 // GET ROUTES
-router.get('/', LivrosController.index); 
+router.get('/', LivrosController.index);
+router.get('/buscar', LivrosController.search);
 router.get('/editar-livro/:id',  LivrosController.buscarLivro)
 router.get('/form/:id?', LivrosController.form);
 
@@ -37,7 +37,7 @@ router.delete('/deletar/:id', LivrosController.deletar);
 
 // GET ROUTES
 router.get('/editoras', EditorasController.index);
-router.get('/editoras', EditorasController.search);  
+router.get('/editoras/buscar', EditorasController.search);  
 router.get('/editoras/form/:id?', EditorasController.form);
 router.get('/editoras/editar/:id', EditorasController.buscarEditora)
 
@@ -48,10 +48,35 @@ router.put('/editoras/editar/:id', EditorasController.editar);
 // DELETE ROUTES
 router.delete('/editoras/deletar/:id', EditorasController.deletar);
 
-// ----------------------------------------CRUD EDITORAS--------------------------------------------//
+// ----------------------------------------CRUD AUTORES--------------------------------------------//
 
 // GET ROUTES
 router.get('/autores', AutoresController.index);
+router.get('/autores/buscar', AutoresController.search);  
+router.get('/autores/form/:id?', AutoresController.form);
+router.get('/autores/editar/:id', AutoresController.buscarAutor)
+
+// POST E PUT ROUTES
+router.post('/autores', AutoresController.criar);
+router.put('/autores/editar/:id', AutoresController.editar);
+
+// DELETE ROUTES
+router.delete('/autores/deletar/:id', AutoresController.deletar);
+
+// ----------------------------------------CRUD Categorias--------------------------------------------//
+
+// GET ROUTES
+router.get('/categorias', CategoriasController.index);
+router.get('/categorias/buscar', CategoriasController.search);  
+router.get('/categorias/form/:id?', CategoriasController.form);
+router.get('/categorias/editar/:id', CategoriasController.buscarCategoria)
+
+// POST E PUT ROUTES
+router.post('/categorias', CategoriasController.criar);
+router.put('/categorias/editar/:id', CategoriasController.editar);
+
+// DELETE ROUTES
+router.delete('/categorias/deletar/:id', CategoriasController.deletar);
 
 
 module.exports = router;

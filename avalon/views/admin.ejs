@@ -16,7 +16,7 @@
           <button class="btnCrud"><a href="/admin/form">Adicionar</a></button>
           <div class="search-crud">
             <form action="/admin/buscar" method="get">
-              <input type="text" name="buscar" id="read" placeholder="Buscar ">
+              <input type="text" name="search" id="read" placeholder="Buscar ">
             </form>
           </div>
         </div>
@@ -29,7 +29,6 @@
               <th>ID</th>
               <th>Título</th>
               <th>Preço</th>
-              <th>Autor</th>
               <th class="acao">Editar</th>
               <th class="acao">Excluir</th>
             </tr>
@@ -48,8 +47,8 @@
                 <td>
                   <%= el.preco %>
                 </td>
-                                <td class="acao">
-                                    <button class="crudform"><a href="/admin/editar-livro/<%= el.id %>"><i
+                <td class="acao">
+                  <button class="crudform"><a href="/admin/editar-livro/<%= el.id %>"><i
                         class='bx bx-edit'></i></a></i></button>
                 </td>
                 <td class="acao">
@@ -63,5 +62,3 @@
         </table>
       </div>
   </main>
-
-  <%- include('partials/footer') %>

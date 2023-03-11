@@ -10,6 +10,11 @@ const criarEditoraModel = (sequelize, dataTypes) => {
     nome: {
       type: dataTypes.STRING,
       allowNull: false
+    },
+
+    cnpj: {
+      type: dataTypes.STRING,
+      allowNull: false
     }
   };
 

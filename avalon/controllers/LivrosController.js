@@ -1,6 +1,8 @@
 const fs = require('fs');
 const path = require('path');
+const { Op } = require('sequelize');
 const { Livro, Editora, Autor, Categoria } = require('../models');
+Op
 
 const livrosPath = path.resolve(__dirname, '../database/livros.json');
 
@@ -18,45 +20,61 @@ module.exports = {
     const editoras = await Editora.findAll();
     const autores = await Autor.findAll();
     const categorias = await Categoria.findAll();
-    
+
 
     res.render('admin', { livros, editoras, categorias, autores })
   },
 
-  async form (req, res) {
+  search: async (req, res) => {
+    const { search } = req.query;
+    const livros = await Livro.findAll({
+      where: search ? {
+        [Op.or]: [
+          { titulo: { [Op.like]: '%' + search + '%' } },
+          { id: search }
+        ]
+      } : null
+    });
+
+    res.render('admin', { livros })
+  },
+
+  async form(req, res) {
     const editoras = await Editora.findAll()
     const autores = await Autor.findAll()
     const categorias = await Categoria.findAll()
 
-   
     let livro;
     let id = req.params.id;
 
-    res.render('adicionarLivro', { livro: null, editoras, categorias, autores  });
+    res.render('adicionarLivro', { livro: null, editoras, categorias, autores });
 
   },
 
   async buscarLivro(req, res) {
     const { id } = req.params
 
-    const livro = await Livro.findByPk( id )
+    const livro = await Livro.findByPk(id)
+    const editoras = await Editora.findAll()
+    const categorias = await Categoria.findAll()
+    const autores = await Autor.findAll()
+
     console.log(livro)
-    const editora = await Editora.findByPk(livro.editoras_id )
-    res.render('adicionarLivro', { livro, editora });
+    res.render('adicionarLivro', { livro, editoras, categorias, autores });
 
   },
-  
-  async criar (req, res) {
-    const {titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor, categoria} = req.body
-    await Livro.create({titulo, preco, acabamento,sinopse, isbn, idioma, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria})
-  
+
+  async criar(req, res) {
+    const { titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor, categoria } = req.body
+    await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria })
+
     res.redirect('/admin');
   },
 
   async editar(req, res) {
     const { id } = req.params
-    
-    const { titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor} = req.body
+
+    const { titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor } = req.body
 
     console.log(req.body)
     await Livro.update({

@@ -18,9 +18,9 @@ const criarCategoriaModel = (sequelize, dataTypes) => {
     timestamps: false
   };
 
-  const Categoria = sequelize.define('Categoria', colunas, opcoes);
+  const Categoria = sequelize.define('Categoria', colunas, opcoes)
 
   return Categoria;
-};
+}
 
 module.exports = criarCategoriaModel;

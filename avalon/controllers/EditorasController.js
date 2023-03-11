@@ -12,10 +12,15 @@ module.exports = {
   search: async (req, res) => {
     const { search } = req.query;
     const editoras = await Editora.findAll({
-      where: search ? { nome: { [Op.like]: '%' + search + '%' } } : null
+      where: search ? {
+        [Op.or]: [
+          { nome: { [Op.like]: '%' + search + '%' } },
+          { id: search }
+        ]
+      } : null
     });
 
-    res.render('editoras', { editoras });
+    res.render('editoras', { editoras })
   },
 
   form: async (req, res) => {

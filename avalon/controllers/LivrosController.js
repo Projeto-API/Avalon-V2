@@ -6,13 +6,16 @@ Op
 
 const livrosPath = path.resolve(__dirname, '../database/livros.json');
 
-// const getLivros = () => {
-//   return JSON.parse(fs.readFileSync(livrosPath));
-// }
+const ERRO_500 = 'Erro interno do servidor!';
+const ERRO_404 = 'Livro não encontrado!';
+const ERRO_400 = 'Request inválido!';
 
-// function saveLivros(livros) {
-//   fs.writeFileSync(livrosPath, JSON.stringify(livros, null, 4));
-// }
+class NotFoundError extends Error {
+  constructor() {
+    super(ERRO_404);
+    this.name = 'NOT_FOUND';
+  }
+}
 
 module.exports = {
   async index(req, res) {
@@ -65,9 +68,17 @@ module.exports = {
   },
 
   async criar(req, res) {
+    try{
     const { titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor, categoria } = req.body
     await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria })
-
+return res.status(204).json();
+    } catch (erro){
+      console.log('Erro ao adiconar novo livro');
+      if (erro?.name === 'SequelizeValidationError') {
+        return res.status(400).json({mensagem: ERRO_400});
+      }
+      return res.status(500).json({mensagem: ERRO_500});
+    }
     res.redirect('/admin');
   },
 

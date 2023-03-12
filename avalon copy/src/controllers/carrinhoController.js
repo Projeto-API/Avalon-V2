@@ -6,8 +6,6 @@
 
 const estiloProdutosModel = require('../models/ServicoModel')
 
-
-
 const Carrinho = require('../models/Carrinho')
 module.exports = {
     index: (req, res) => {

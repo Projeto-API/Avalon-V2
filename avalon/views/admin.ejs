@@ -1,0 +1,64 @@
+<%- include('partials/header') %>
+  <link rel="stylesheet" href="/stylesheets/admin.css">
+  <script src="/javascripts/crud.js" defer></script>
+  <main>
+    <div class="crud-types">
+      <button class="btnCrud"><a href="/admin/categorias">Categorias</a></button>
+      <button class="btnCrud"><a href="/admin/editoras">Editoras</a></button>
+      <button class="btnCrud"><a href="/admin/autores">Autores</a></button>
+    </div>
+    <div class="container-crud">
+      <h4 class="crud-title">LIVROS</h4>
+
+      <div class="container-header-crud">
+        <div class="header-crud">
+          <button class="btnCrud"><a href="/admin">Todos</a></button>
+          <button class="btnCrud"><a href="/admin/form">Adicionar</a></button>
+          <div class="search-crud">
+            <form action="/admin/buscar" method="get">
+              <input type="text" name="search" id="read" placeholder="Buscar ">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="divTable">
+        <table>
+          <thead>
+            <tr>
+              <th><input type="checkbox"></th>
+              <th>ID</th>
+              <th>Título</th>
+              <th>Preço</th>
+              <th class="acao">Editar</th>
+              <th class="acao">Excluir</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <% livros.forEach(el=> { %>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>
+                  <%= el.id %>
+                    </th>
+                <td>
+                  <%= el.titulo %>
+                </td>
+                <td>
+                  <%= el.preco %>
+                </td>
+                <td class="acao">
+                  <button class="crudform"><a href="/admin/editar-livro/<%= el.id %>"><i
+                        class='bx bx-edit'></i></a></i></button>
+                </td>
+                <td class="acao">
+                  <form action="/admin/deletar/<%= el.id %>?_method=DELETE" method="post">
+                    <button class="crudform"><i class='bx bx-trash'></i></button>
+                  </form>
+                </td>
+              </tr>
+              <% }) %>
+          </tbody>
+        </table>
+      </div>
+  </main>

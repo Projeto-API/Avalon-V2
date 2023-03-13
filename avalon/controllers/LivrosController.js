@@ -6,7 +6,7 @@ Op
 
 const livrosPath = path.resolve(__dirname, '../database/livros.json');
 
-const ERRO_500 = 'Erro interno do servidor!';
+const ERRO_500 = 'Desculpe, é necessário preencher todos os dados';
 const ERRO_404 = 'Livro não encontrado!';
 const ERRO_400 = 'Request inválido!';
 

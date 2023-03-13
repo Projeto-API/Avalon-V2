@@ -4,7 +4,7 @@ const UserController = {
     index: async (req,res) => {
         let users = await Usuario.findAll();
 
-        console.log(users)
+        return res.render('usuarios', {users})
 
     }
 }

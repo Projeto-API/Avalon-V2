@@ -1,0 +1,85 @@
+
+
+  <div class="cart-carrinho">
+    <h3>Carrinho de livros</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Imagem</th>
+          <th>Autor</th>
+          <th>Preço</th>
+          <th>Quantidade</th>
+          <th>Total</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach(user=> { %>
+          <tr>
+
+            <td>
+              <%= user.id %>
+            </td>
+            <td>
+              <%= user.nome %>
+            </td>
+            <td>
+              <%= user.email %>
+            </td>
+            <td>
+              <%= user.senha %>
+            </td>
+
+            <td class="imagem-carrinho"> <img src=" " alt="" > </td>
+            <td>
+            <td>
+              <button class="decrease">-</button>
+              <input type="text" value="1" class="quantity">
+              <button class="increase">+</button>
+            </td>
+            <td class="item-total">R$20,00</td>
+            <input type="hidden" name="produtoId">
+            <td>
+              <form action="/carrinho/deletar" method="post">
+                <input type="hidden" name="produtoId" value="">
+                <button type="submit" class="remove">Remover</button>
+              </form>
+            </td>
+
+            <% })%>
+
+          </tr>
+
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4"></td>
+          <td>Total:</td>
+          <td class="cart-total">R$35,00</td>
+        </tr>
+      </tfoot>
+      <table class="table">
+        <tbody>
+          <tr class="itens">
+            <td class="info">Subtotal</td>
+            <td class="monetary">R$ 94,70</td>
+          <tr class="itens">
+          </tr>
+          <td class="info">Entrega</td>
+          <td class="monetary" id="desconto">Grátis</td>
+          <tr class="itens">
+          </tr>
+          <td class="info">Desconto</td>
+          <td class="monetary" id="desconto">- R$ 9,47</td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td class="info">Total</td>
+            <td class="monetary">R$ 85,23</td>
+          </tr>
+        </tfoot>
+  </div>
+  </table>

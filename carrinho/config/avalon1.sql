@@ -14,5 +14,5 @@ quantidade INTEGER NOT NULL
 
 INSERT INTO avalon1.carrinho
 (imagem,titulo,preco, quantidade)
-VALUES("/carrinho/public/images/1661966653.webp", "teste01", 32.00, 1)
-VALUES("/carrinho/public/images/produtos/calibã/caliba-capa.jpg", "teste01", 32.00, 1)
+VALUES("./images/1661966653.webp", "teste01", 32.00, 1)
+VALUES("./images/produtos/calibã/caliba-capa.jpg", "teste01", 32.00, 1)

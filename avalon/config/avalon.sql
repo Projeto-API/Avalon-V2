@@ -2,29 +2,29 @@ CREATE DATABASE avalon;
 
 USE avalon;
 
-CREATE TABLE editoras (
+CREATE TABLE avalon.editoras (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
-nome VARCHAR(150) NOT NULL,
-cnpj VARCHAR(18) NOT NULL
+nome VARCHAR(150),
+cnpj VARCHAR(18) 
 );
 
-INSERT INTO editoras (nome) VALUES ('JBC'), ('Darkside');
+INSERT INTO avalon.editoras (nome) VALUES ('JBC'), ('Darkside');
 
 CREATE TABLE categorias (
 	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     tipo VARCHAR(45) NOT NULL
 );
 
-INSERT INTO categorias (tipo) VALUES ('Histórias em Quadrinhos'), ('Livros');
+INSERT INTO avalon.categorias (tipo) VALUES ('Histórias em Quadrinhos'), ('Livros');
 
 CREATE TABLE autores (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nome VARCHAR(150) NOT NULL,
-sobrenome VARCHAR(45) NOT NULL,
-biografia VARCHAR(1000) NOT NULL,
-foto VARCHAR(45) NOT NULL
+sobrenome VARCHAR(45) ,
+biografia VARCHAR(1000) ,
+foto VARCHAR(45) 
 );
-INSERT INTO autores (nome) VALUES ('Jk rowling'), ('Darkside');
+INSERT INTO avalon.autores (nome) VALUES ('Jk rowling'), ('Darkside');
 
 CREATE TABLE clientes (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,

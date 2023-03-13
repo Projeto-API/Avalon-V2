@@ -2,6 +2,7 @@ let formCarrinho = document.getElementById("formCarrinho")
     formCarrinho.onsubmit = function (event){
         event.preventDefault()
         let carrinho = JSON.parse(localStorage.getItem("carrinho"))
+        console.log(carrinho)
         let inputProdutos = document.getElementById("produtosCarrinho")
         inputProdutos.value = carrinho.map(item => item.id)
         this.submit()

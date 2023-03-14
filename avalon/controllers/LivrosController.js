@@ -65,8 +65,8 @@ module.exports = {
   },
 
   async criar(req, res) {
-    const { titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor, categoria } = req.body
-    await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria })
+    const { titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor, categoria, capa, imagens } = req.body
+    await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria, capa, imagens  })
 
     res.redirect('/admin');
   },

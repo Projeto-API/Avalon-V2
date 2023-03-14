@@ -15,9 +15,9 @@
       </h2>
 
       <% if (livro) { %>
-        <form class="add-form form-crud" action="/admin/editar-livro/<%= livro.id %>?_method=PUT" method="post">
+        <form class="add-form form-crud" action="/admin/editar-livro/<%= livro.id %>?_method=PUT" method="post" enctype="multipart/form-data">
           <% } else { %>
-            <form class="add-form form-crud" action="/admin" method="post">
+            <form class="add-form form-crud" action="/admin" method="post" enctype="multipart/form-data">
               <% } %>
                 <br>
 
@@ -79,8 +79,11 @@
                 <textarea class="form-crud-input" name="sinopse" placeholder="Escreva aqui a sinopse do livro"></textarea 
                  value="<%= livro && livro.sinopse %>">
 
-                 <label class="form-crud-label" for="capaImg">Imagem Capa:</label> <br>
-                 <input type="file" class="alteraInp" name="capaImg">
+                <label class="form-crud-label" for="capaImg">Imagem Capa:</label> <br>
+                <input type="file" class="alteraInp" name="capa">
+
+                <label class="form-crud-label" for="capaImg">Imagens Produto:</label> <br>
+                <input type="file" class="alteraInp" name="imagens">
 
                 <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
       </form>

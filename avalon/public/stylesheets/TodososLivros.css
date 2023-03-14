@@ -107,8 +107,48 @@ section .galeria {
 
 
 }
+.grid-livros {
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    
+}
 
-.galeria>div {
+.grid-livros li {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 10rem;
+    text-align: center;
+    list-style: none;
+}
+
+.item div {
+    width: 100%;
+}
+
+.item div button {
+    width: 80%;
+}
+
+
+.item div h5 {
+    height: 40px;
+    width: 100%;
+}
+
+.item img {
+    margin: 10px;
+    max-height: 12rem;
+    height: 100%;
+    border-radius: 5%;
+    align-items: center;
+}
+
+
+/* .galeria>div {
     display: flex;
     flex-direction: column;
     border: 1px solid #fff;
@@ -139,7 +179,7 @@ section .galeria {
 
 .galeria {
     gap: 1rem;
-}
+} */
 
 .button {
     background: #69E0AE;

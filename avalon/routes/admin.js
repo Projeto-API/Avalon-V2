@@ -15,7 +15,7 @@ const CategoriasController = require('../controllers/CategoriasController')
 // GET ROUTES
 router.get('/', LivrosController.index);
 router.get('/buscar', LivrosController.search);
-router.get('/editar-livro/:id',  LivrosController.buscarLivro)
+router.get('/editar-livro/:id', LivrosController.buscarLivro)
 router.get('/form/:id?', LivrosController.form);
 
 

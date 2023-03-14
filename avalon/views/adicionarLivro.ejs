@@ -1,6 +1,7 @@
 <%- include('partials/header') %>
   <link rel="stylesheet" href="/stylesheets/admin.css">
-  <script src="/javascripts/crud.js" defer></script>
+
+  <script src="/javascripts/validacoesCadastroLivro.js" defer></script>
   <main>
 
     <div class="modal">
@@ -14,9 +15,9 @@
       </h2>
 
       <% if (livro) { %>
-        <form class="add-form" action="/admin/editar-livro/<%= livro.id %>?_method=PUT" method="post">
+        <form class="add-form form-crud" action="/admin/editar-livro/<%= livro.id %>?_method=PUT" method="post">
           <% } else { %>
-            <form class="add-form" action="/admin" method="post">
+            <form class="add-form form-crud" action="/admin" method="post">
               <% } %>
                 <br>
 

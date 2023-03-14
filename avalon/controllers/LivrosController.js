@@ -24,7 +24,6 @@ module.exports = {
     const autores = await Autor.findAll();
     const categorias = await Categoria.findAll();
 
-
     res.render('admin', { livros, editoras, categorias, autores })
   },
 

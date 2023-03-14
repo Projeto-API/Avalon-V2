@@ -16,7 +16,6 @@ CREATE TABLE categorias (
 );
 
 INSERT INTO categorias (tipo) VALUES ('Histórias em Quadrinhos'), ('Livros');
-<<<<<<< HEAD
 
 CREATE TABLE autores (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -25,9 +24,6 @@ sobrenome VARCHAR(45) NOT NULL,
 biografia VARCHAR(1000) NOT NULL,
 foto VARCHAR(45) NOT NULL
 );
-INSERT INTO autores (nome) VALUES ('Jk rowling'), ('Darkside');
-=======
->>>>>>> igorcr
 
 CREATE TABLE clientes (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
@@ -41,27 +37,9 @@ endereco VARCHAR(45) NOT NULL,
 data_nascimento DATE
 );
 
-<<<<<<< HEAD
 CREATE TABLE status (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
 descricao VARCHAR(45) NOT NULL
-=======
-CREATE TABLE livros (
-	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
-    titulo VARCHAR(150) NOT NULL,
-	preco DECIMAL(10,2) NOT NULL,
-    acabamento VARCHAR(45) NOT NULL,
-    sinopse VARCHAR(1000),
-    isbn VARCHAR (13) NOT NULL UNIQUE,
-    idioma VARCHAR (45) NOT NULL,
-    paginas INT UNSIGNED NOT NULL UNIQUE,
-    autores_id INT UNSIGNED NOT NULL,
-    editoras_id INT UNSIGNED NOT NULL,
-    categorias_id INT UNSIGNED NOT NULL,
-	FOREIGN KEY (autores_id) REFERENCES autores(id),
-    FOREIGN KEY (editoras_id) REFERENCES editoras(id),
-	FOREIGN KEY (categorias_id) REFERENCES categorias(id)
->>>>>>> igorcr
 );
 
 CREATE TABLE livros (
@@ -121,18 +99,3 @@ validade_ofertas DATE NOT NULL,
 livros_id INT UNSIGNED NOT NULL,
 livros_editoras_id INT UNSIGNED NOT NULL
 );
-
-<<<<<<< HEAD
-CREATE TABLE carrinho (
-id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
-imagem  VARCHAR(150) NOT NULL,
-titulo VARCHAR(150) NOT NULL,
-preco  DECIMAL(12)NOT NULL,
-quantidade INTEGER NOT NULL
-);
-
-INSERT INTO carrinho (imagem, titulo, preco, quantidade)
-VALUES ("/carrinho/public/images/1661966653.webp", "teste01", 32.00, 1), 
-("/carrinho/public/images/produtos/calibã/caliba-capa.jpg", "teste01", 32.00, 1);
-=======
->>>>>>> igorcr

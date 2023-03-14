@@ -125,7 +125,7 @@ nav.listapagos {
 
 }
 
-.fotousuario>img {
+.fotoMinhaConta>img {
     max-width: 80%;
     max-height: 100%;
     width: 100%;
@@ -188,7 +188,7 @@ nav.listapagos {
     border-radius: 12rem;
 }
 
-.fotousuario {
+.fotoMinhaConta {
     margin: 3rem;
     background-color: #c6efe0;
     ;
@@ -223,7 +223,7 @@ nav.listapagos {
 
 }
 
-.box-usuario {
+.box-MinhaConta {
     display: flex;
     margin-top: 3rem;
 }
@@ -256,7 +256,7 @@ nav.listapagos {
         margin-bottom: 2rem;
     }
 
-    .fotousuario {
+    .fotoMinhaConta {
         gap: none;
     }
 

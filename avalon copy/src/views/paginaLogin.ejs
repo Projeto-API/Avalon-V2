@@ -1,19 +1,33 @@
 <%- include('partials/header') %>
+<link rel="stylesheet" href="/stylesheets/Login.css">
 <main>
     <script src="/javascripts/validacoeslogin.js" defer></script>
     <section class="pageLogin">
         <h5 class="login2">LOGIN</h5>
+<<<<<<<< HEAD:avalon copy/src/views/paginaLogin.ejs
         <form class="form-auth card" method="get" action="/produto/usuario">
+========
+        <form class="form-auth card" method="get" action="/views/MinhaConta.ejs">
+>>>>>>>> main:avalon/views/login.ejs
             <li class="email">E-mail</li>
             <input type="email" name="email" placeholder="Digite seu email">
             <li class="password">Senha</li>
             <input id="password" type="password" name="password" placeholder="Digite sua senha">
+<<<<<<<< HEAD:avalon copy/src/views/paginaLogin.ejs
             <button class="entrar" type="submit"><a href="/produto/usuario">
                     ENTRAR</a>
             </button>
             <a href="" class="esqueci">Esqueci minha senha</a>
             <a href="" class="cadastro">Não tenho cadastro</a>
             <a href="/users/intranet" class="cadastro">Intranet</a>
+========
+            <button class="entrar" type="submit"><a href="/views/MinhaConta.ejs">
+                    ENTRAR</a>
+            </button>
+            <a href="" class="esqueci">Esqueci minha senha</a>
+            <a href="/users/CadastroUsuario" class="cadastro">Não tenho cadastro</a>
+            <a href="/views/intranet.ejs" class="cadastro">Intranet</a>
+>>>>>>>> main:avalon/views/login.ejs
         </form>
         <div class="redes">
             <h5 class="login3">Login com redes sociais</h5>

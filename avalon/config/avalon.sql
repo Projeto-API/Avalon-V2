@@ -2,6 +2,7 @@ CREATE DATABASE avalon;
 
 USE avalon;
 
+<<<<<<< HEAD
 CREATE TABLE avalon.editoras (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nome VARCHAR(150),
@@ -9,22 +10,43 @@ cnpj VARCHAR(18)
 );
 
 INSERT INTO avalon.editoras (nome) VALUES ('JBC'), ('Darkside');
+=======
+CREATE TABLE editoras (
+id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+nome VARCHAR(150) NOT NULL,
+cnpj VARCHAR(18) NOT NULL
+);
+
+INSERT INTO editoras (nome) VALUES ('JBC'), ('Darkside');
+>>>>>>> main
 
 CREATE TABLE categorias (
 	id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
     tipo VARCHAR(45) NOT NULL
 );
 
+<<<<<<< HEAD
 INSERT INTO avalon.categorias (tipo) VALUES ('Histórias em Quadrinhos'), ('Livros');
+=======
+INSERT INTO categorias (tipo) VALUES ('Histórias em Quadrinhos'), ('Livros');
+>>>>>>> main
 
 CREATE TABLE autores (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nome VARCHAR(150) NOT NULL,
+<<<<<<< HEAD
 sobrenome VARCHAR(45) ,
 biografia VARCHAR(1000) ,
 foto VARCHAR(45) 
 );
 INSERT INTO avalon.autores (nome) VALUES ('Jk rowling'), ('Darkside');
+=======
+sobrenome VARCHAR(45) NOT NULL,
+biografia VARCHAR(1000) NOT NULL,
+foto VARCHAR(45) NOT NULL
+);
+INSERT INTO autores (nome) VALUES ('Jk rowling'), ('Darkside');
+>>>>>>> main
 
 CREATE TABLE clientes (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,

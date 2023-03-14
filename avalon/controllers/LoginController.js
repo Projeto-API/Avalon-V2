@@ -2,6 +2,6 @@
 module.exports = {
   index: async (req, res) => {
 
-    res.render('sinopse');
+    res.render('login');
   }
 }

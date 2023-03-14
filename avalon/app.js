@@ -8,6 +8,8 @@ const methodOverride = require('method-override');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const adminRouter = require('./routes/admin');
+const produtoRouter = require('./routes/produto');
+const carrinhoRouter = require('./routes/carrinho');
 
 
 const app = express();
@@ -26,6 +28,8 @@ app.use(methodOverride('_method'));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
+app.use('/produto', produtoRouter);
+app.use('/carrinho', carrinhoRouter);
 
 
 // catch 404 and forward to error handler

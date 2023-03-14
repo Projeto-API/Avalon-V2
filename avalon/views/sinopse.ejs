@@ -7,7 +7,7 @@
                 <div class="capaprincipal">
                     <img id="capa" src="/images//uivantes.png" alt="">
                 </div>
-
+                
                 <div class="miniaturas">
                     <ul class="gallery-miniaturas">
                         <img class="livrinhos" src="/images//image 4.png" alt="">
@@ -21,22 +21,14 @@
 
             <div class="container2">
                 <div class="sinopse">
-                    <h5>O MORRO DOS VENTOS UIVANTES</h5>
+                    <h5 ><%= livro && livro.titulo %></h5>
                     <h6> Por Emily Bonte</h6><br>
 
-                    <p> Publicado pela primeira vez em 1847, O Morro dos Ventos
-                        Uivantes é um romance de igual beleza e brutalidade.
-                        Com múltiplas perspectivas narrativas, o Livro toca
-                        em temas primordiais para a sociedade, como questões
-                        de alteridade, empatia, comunicação e preconceitos.
-                        Reconhecido como uma das grandes obras da literatura
-                        mundial, o Livro já teve mais de 10 adaptações
-                        cinematográficas, influenciando também a música pop
-                        com a canção de Kate Bush no final da década de 1970.
+                    <p> <%= livro && livro.sinopse %>
                     </p>
                 </div>
                 <div class="price-qtt">
-                    <span class="precoLivro">R$59,90</span>
+                    <span class="precoLivro">R$ <%= livro && livro.preco %></span>
                     <form>
                         <label for="quantidade">
                             <input type="number" id="quantidade">
@@ -56,7 +48,7 @@
             <ul class="columninformation">
                 <li>
                     <p>Editora</p>
-                    <p>Principis</p>
+                    <p><%= livro && livro.editoras_id %></p>
                 </li>
                 <li>
                     <p>Ano de publicação</p>
@@ -64,23 +56,20 @@
                 </li>
                 <li>
                     <p>Idioma</p>
-                    <p>Português</p>
+                    <p><%= livro && livro.idioma %></p>
                 </li>
                 <li>
                     <p>Páginas</p>
-                    <p>368</p>
+                    <p><%= livro && livro.paginas %></p>
                 </li>
-                <li>
-                    <p> Dimensões</p>
-                    <p>15.24x2.08x22.86cm</p>
-                </li>
+    
                 <li>
                     <p> Acabamento</p>
-                    <p>Capa comum</p>
+                    <p><%= livro && livro.acabamento %></p>
                 </li>
                 <li>
                     <p>ISBN-13</p>
-                    <p>978-8594318237</p>
+                    <p><%= livro && livro.isbn %></p>
                 </li>
         </section>
         <section class="containercolumninformation">

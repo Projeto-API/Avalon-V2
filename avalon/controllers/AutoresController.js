@@ -56,9 +56,9 @@ module.exports = {
 
   editar: async (req, res) => {
     const { id } = req.params;
-    const { nome, cnpj } = req.body;
+    const { nome, biografia, foto } = req.body;
 
-    await Autor.update({ nome, cnpj }, {
+    await Autor.update({ nome, biografia, foto }, {
       where: { id }
     });
 

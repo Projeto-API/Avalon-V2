@@ -3,10 +3,10 @@ const router = express.Router();
 
 const SinopseController = require('../controllers/SinopseController');
 const TodosLivros = require('../controllers/TodosLivrosController');
-const home = require('../controllers/TodosLivrosController');
 
-router.get('/sinopse', SinopseController.index);
-router.get('/todos', TodosLivros.index);
+
+router.get('/sinopse/:id', SinopseController.index);
+router.get('/todos/', TodosLivros.index);
 
 
 

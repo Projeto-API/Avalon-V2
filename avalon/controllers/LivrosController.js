@@ -1,10 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-const { Op } = require('sequelize');
-const { Livro, Editora, Autor, Categoria } = require('../models');
-Op
-
-const livrosPath = path.resolve(__dirname, '../database/livros.json');
 
 // const getLivros = () => {
 //   return JSON.parse(fs.readFileSync(livrosPath));
@@ -13,6 +6,16 @@ const livrosPath = path.resolve(__dirname, '../database/livros.json');
 // function saveLivros(livros) {
 //   fs.writeFileSync(livrosPath, JSON.stringify(livros, null, 4));
 // }
+
+
+const fs = require('fs');
+const path = require('path');
+const { Op } = require('sequelize');
+const { Livro, Editora, Autor, Categoria } = require('../models');
+
+Op
+
+
 
 module.exports = {
   async index(req, res) {
@@ -66,7 +69,7 @@ module.exports = {
 
   async criar(req, res) {
     const { titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor, categoria, capa, imagens } = req.body
-    await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria, capa, imagens  })
+    await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria, capa, imagens })
 
     res.redirect('/admin');
   },

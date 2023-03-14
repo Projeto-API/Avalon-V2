@@ -1,4 +1,3 @@
-
 <%- include('partials/header') %>
 
   <div class="cart-carrinho">
@@ -16,29 +15,29 @@
         </tr>
       </thead>
       <tbody>
-        <% carrinho.forEach(item=> { %>
+        <% livros.forEach(livro=> { %>
           <tr>
 
             <td>
-              <%= item.id %>
+              <%= livro.id %>
             </td>
-            <td class="imagem-carrinho"> <img src=<%=item.imagem %> alt= "" > </td>
+            <td class="imagem-carrinho"> <img src="<%= livro.imagem %>" > </td>
             <td>
-              <%= item.nome %>
+              <%= livro.titulo %>
             </td>
-            <td>
-              <%= item.valor %>
+            <td>                                            
+              <%= livro.preco %>
             </td>
             <td>
               <button class="decrease">-</button>
-              <input type="text" value="1" class="quantity">
+              <input type="text" value="<%= livro.quantidade %>" class="quantity">
               <button class="increase">+</button>
             </td>
-            <td class="item-total">R$20,00</td>
+            <td class="item-total"></td>
             <input type="hidden" name="produtoId">
             <td>
               <form action="/carrinho/deletar" method="post">
-                <input type="hidden" name="produtoId" value="<%= item.id %>">
+                <input type="hidden" name="produtoId" value="<%= livro.id %>">
                 <button type="submit" class="remove">Remover</button>
               </form>
             </td>
@@ -74,7 +73,7 @@
         <tfoot>
           <tr>
             <td class="info">Total</td>
-            <td class="monetary">R$ 85,23</td>
+            <td src="/carrinho/public/images/1661966653.webp " class="monetary">R$ 85,23</td>
           </tr>
         </tfoot>
   </div>

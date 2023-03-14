@@ -1,4 +1,4 @@
-const servicos = require("../database/servicoTodosOsLivros.json")
+const servicos = require("../src/database/servicoTodosOsLivros.json")
 const fs = require('fs')
 const path = require('path')
 

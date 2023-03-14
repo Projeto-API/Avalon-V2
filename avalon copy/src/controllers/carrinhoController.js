@@ -1,51 +1,29 @@
-// module.exports = {
-//     mostraCarrinho: (req, res) => {
-//         res.render('carrinho', {js: "/js/carrinho.js"})
-//     }
-// }
+const{ Carrinho } = require('../../models/Carrinho')
 
-const estiloProdutosModel = require('../models/ServicoModel')
+const CarrinhoController = {
+    carrinho: async (req,res) => {
+        let livros = await Carrinho.findAll();
+        return res.render('carrinho', {livros})
 
-const Carrinho = require('../models/Carrinho')
-module.exports = {
-    index: (req, res) => {
-        const carrinho = Carrinho.findAll();
-        res.render('carrinho', { carrinho, css: 'carrinho' })
     },
-    add: (req, res) => {
-        const { produtoId } = req.body;
-        const estiloProdutos = estiloProdutosModel.index();
+    add: async (req, res) => {
+        const { produtoId } = await req.body;
+        const estiloProdutos =  await estiloProdutosModel.index();
+
 
         Carrinho.add(estiloProdutos[produtoId]);
         res.redirect('/carrinho');
     },
-    remove: (req, res) => {
+    remove: async (req, res) => {
         const { produtoId } = req.body;
-        Carrinho.remove(produtoId);
-        const carrinho = Carrinho.findAll();
-
+        await Carrinho.destroy({
+            where: {
+              id: produtoId
+            }
+          });
         res.redirect('/carrinho');
     }
-
-
+    
 }
 
-
-
-
-
-
-
-
-
-
-// const ServiceLivrosModel = require('../models/ServiceLivrosModel');
-
-// module.exports = {
-//     index: (req, res) => {
-//         //controler comunicando com o model
-//         const servicos = ServiceLivroModel.index();
-//         //controler comunicando com a view
-//         return res.render('carrinho', { servicos })
-//     }
-// }
+module.exports = CarrinhoController

@@ -1,51 +1,51 @@
-function abrirMinhaConta() {
-    document.getElementById('bg-MinhaConta').style.top ="0";
-}
-function fecharMinhaConta() {
-    document.getElementById('bg-MinhaConta').style.top = "-150%";
-}
+// function abrirMinhaConta() {
+//     document.getElementById('bg-MinhaConta').style.top ="0";
+// }
+// function fecharMinhaConta() {
+//     document.getElementById('bg-MinhaConta').style.top = "-150%";
+// }
 
 
 
-function verificarFormulario(){
+// function verificarFormulario(){
  
-    let formularioForm = document.querySelector('form.formulario')
-    formularioForm.addEventListener('submit', function(event){
+//     let formularioForm = document.querySelector('form.formulario')
+//     formularioForm.addEventListener('submit', function(event){
         
         
-        let errorsMessages = [];
+//         let errorsMessages = [];
         
-        let tituloLivro = document.getElementById("tituloLivro");
-        if(tituloLivro.value == ''){
-            errorsMessages.push("O campo Livro não pode estar vazio")
+//         let tituloLivro = document.getElementById("tituloLivro");
+//         if(tituloLivro.value == ''){
+//             errorsMessages.push("O campo Livro não pode estar vazio")
             
-        } else if(tituloLivro.value.length < 3  ) {
-            errorsMessages.push("o tamanho do Titulo do Livro tem de ser maior que 3")
-        }
+//         } else if(tituloLivro.value.length < 3  ) {
+//             errorsMessages.push("o tamanho do Titulo do Livro tem de ser maior que 3")
+//         }
         
-        let autor = document.getElementById("autor");
-        if(autor.value == ''){
-            errorsMessages.push("O campo Autor não pode estar vazio")
+//         let autor = document.getElementById("autor");
+//         if(autor.value == ''){
+//             errorsMessages.push("O campo Autor não pode estar vazio")
             
-        } else if(autor.value.length < 3  ) {
-            errorsMessages.push("o tamanho do Autor tem de ser maior que 3")
+//         } else if(autor.value.length < 3  ) {
+//             errorsMessages.push("o tamanho do Autor tem de ser maior que 3")
             
-        }
+//         }
       
-        if (errorsMessages.length > 0){
-            event.preventDefault();
+//         if (errorsMessages.length > 0){
+//             event.preventDefault();
 
-            let divErrors = document.getElementById('div-errors');
-            divErrors.classList.remove('no-errors');
-            divErrors.classList.add('errors');
+//             let divErrors = document.getElementById('div-errors');
+//             divErrors.classList.remove('no-errors');
+//             divErrors.classList.add('errors');
             
-            let ulErrors = document.querySelector('div.errors ul');
-            for (let i = 0; i < errorsMessages.length; i++) {
-                ulErrors.innerHTML += '<li>' + errorsMessages[i] + '</li>'
+//             let ulErrors = document.querySelector('div.errors ul');
+//             for (let i = 0; i < errorsMessages.length; i++) {
+//                 ulErrors.innerHTML += '<li>' + errorsMessages[i] + '</li>'
 
-            }
-        }
-    })
- }
+//             }
+//         }
+//     })
+//  }
 
 

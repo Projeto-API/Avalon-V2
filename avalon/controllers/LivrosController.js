@@ -6,7 +6,7 @@ Op
 
 const livrosPath = path.resolve(__dirname, '../database/livros.json');
 
-const ERRO_500 = 'Desculpe, é necessário preencher todos os dados';
+const ERRO_500 = 'Erro interno do servidor!';
 const ERRO_404 = 'Livro não encontrado!';
 const ERRO_400 = 'Request inválido!';
 
@@ -69,27 +69,29 @@ module.exports = {
 
   async criar(req, res) {
     try{
+   
     const { titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor, categoria } = req.body
     await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria })
-return res.status(204).json();
+    return res.render('adicionarLivro');
     } catch (erro){
-      console.log('Erro ao adiconar novo livro');
-      if (erro?.name === 'SequelizeValidationError') {
-        return res.status(400).json({mensagem: ERRO_400});
-      }
-      return res.status(500).json({mensagem: ERRO_500});
+      console.log(erro)
+      return res.status(500).json({mensagem: ERRO_500})
+ 
     }
-    res.redirect('/admin');
-  },
+
+    res.redirect('/admin')
+      },
+      
+    
+   
+  
 
   async editar(req, res) {
     const { id } = req.params
-
     const { titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor } = req.body
-
     console.log(req.body)
     await Livro.update({
-      titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor
+    titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor
     },
       {
         where: { id }

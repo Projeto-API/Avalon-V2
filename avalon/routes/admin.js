@@ -7,12 +7,6 @@ const LivrosController = require('../controllers/LivrosController');
 const EditorasController = require('../controllers/EditorasController');
 const AutoresController = require('../controllers/AutoresController');
 const CategoriasController = require('../controllers/CategoriasController')
-const TodososlivrosController = require('../controllers/TodososlivrosController');
-const SinopseController = require('../controllers/SinopseController');
-
-router.get('/Sinopse', SinopseController.index);
-router.get('/Todososlivros', TodososlivrosController.index);
-
 
 
 
@@ -21,7 +15,7 @@ router.get('/Todososlivros', TodososlivrosController.index);
 // GET ROUTES
 router.get('/', LivrosController.index);
 router.get('/buscar', LivrosController.search);
-router.get('/editar-livro/:id',  LivrosController.buscarLivro)
+router.get('/editar-livro/:id', LivrosController.buscarLivro)
 router.get('/form/:id?', LivrosController.form);
 
 

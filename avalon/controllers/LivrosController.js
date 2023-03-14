@@ -74,17 +74,16 @@ module.exports = {
     await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria })
     return res.render('adicionarLivro');
     } catch (erro){
-      console.log(erro)
-      return res.status(500).json({mensagem: ERRO_500})
+      let alert = require('alert'); 
+      alert("Erro interno do servidor!")
+      
+      
+     res.redirect('/admin');
  
     }
 
-    res.redirect('/admin')
-      },
-      
-    
-   
   
+      },
 
   async editar(req, res) {
     const { id } = req.params

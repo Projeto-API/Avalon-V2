@@ -16,10 +16,11 @@ button a {
     align-items: center;
     display: flex;
     font-weight: bold;
-    width: 100%;
+    width: 8rem;
     height: 2rem;
     background-color: #4EC16E;
     border-radius: 1rem;
+    justify-content: center;
 
 }
 

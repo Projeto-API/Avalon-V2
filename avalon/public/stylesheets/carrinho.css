@@ -1,237 +1,66 @@
-* body {
-    width: 100% auto;
-    height: auto;
+
+section#carrinhoFlutuante {
+  display: none;
 }
 
-main {
-    padding-top: 50px;
+header{
+  position: absolute !important;
+  z-index: 0 !important;
 }
-
-.navegacao {
-    display: none;
-}
-
-/* SEÇÃO REFERENTE ÀS INFORMAÇÕES DO Livro */
-.cabecalho {
-    display: none;
-}
-
-.Livro {
-    margin: .5rem;
+.cart-carrinho {
     display: flex;
-    width: auto;
-    justify-content: flex-start;
-    background-color: #F6F9FF;
-    border-radius: 1rem;
-}
-
-.imagemLivro {
-    margin: .5rem;
-    border-radius: .5rem;
-    display: flex;
-    width: 4rem;
-}
-
-#LivroTitulo {
-    padding-bottom: 1rem;
-}
-
-.informationLivro {
-    justify-content: center;
-    display: flex;
+    align-items: center;
     flex-direction: column;
-    padding: 1rem;
-    width: 100%;
-}
-
-.informationLivroValue {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    gap: 1rem;
-}
-
-.informationLivroValue a {
-    text-decoration: none;
-    color: black;
-}
-
-#quantidadeValue {
+    margin: 0px auto;
+    padding: 100px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    text-align-last: center;
+  }
+  
+  .cart-carrinho h3 {
     text-align: center;
-    width: 2rem;
-}
-
-#preco {
-    font-weight: 600;
-    color: #386C5F;
-}
-
-input[type="number"] {
-    -moz-appearance: textfield;
-}
-
-.excluir {
-    display: block;
-    color: red;
-    font-weight: bold;
-    width: 15px;
-    background-color: #F6F9FF;
-    border: none;
-}
-
-/* SEÇÃO REFERENTE À ENTREGA */
-
-.containerEntrega {
-    padding: .5rem;
-    margin: .5rem;
-    background-color: #F6F9FF;
-    border-radius: 1rem;
-}
-
-.containerEntrega div {
-    display: flex;
-}
-
-/* SEÇÃO REFERENTE À ENTREGA */
-
-.containerCheckout {
-    margin: .5rem;
-    padding: .5rem;
-    background-color: #F6F9FF;
-    border-radius: 1rem;
-}
-
-.desconto {
-    padding: 1rem 0;
-}
-
-.desconto div {
-    display: flex;
-}
-
-table {
-    line-height: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .cart-carrinho table {
     width: 100%;
     border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+  }
+  table.table {
+    max-width: 50%;
 }
-
-tbody {
-    height: 10px;
-    font-size: .8rem;
-    justify-content: right;
-    border-bottom: 1px solid;
-}
-
-
-.monetary {
-    text-align: right;
-}
-
-#desconto,
-#entrega {
-    color: #4EC16E;
-}
-
-tfoot {
-    font-weight: bold;
-}
-
-#calcular {
-    width: 35%;
-}
-
-.containerEntrega input,
-.containerCheckout input {
-    font-weight: 400;
-    padding-left: 1rem;
-    width: 65%;
-    border-radius: 5px;
-}
-
-/* BOTÕES */
-
-.aumentarQtd,
-.diminuirQtd {
+  
+  .cart-carrinho th,
+  .cart-carrinho td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .cart-carrinho th {
+    background-color: #ddd;
+  }
+  
+  .cart-carrinho .decrease,
+  .cart-carrinho .increase {
+    background-color: #386C5F;
+    color: white;
     border: none;
-    background-color: #F6F9FF;
+    border-radius: 5px;
+    padding: 5px 10px;
     cursor: pointer;
-}
+  }
+  
+  .cart-carrinho .quantity {
+    width: 40px;
+  }
 
-.next-page {
-    width: 100%;
-}
+  .imagem-carrinho img{
+    display: flex;
+    max-width: 6rem;
 
-@media (min-width: 768px) {
-    main {
-        padding-top: 60px;
-    }
-
-    .cabecalho {
-        font-size: .8rem;
-        width: 100%;
-        display: flex;
-        justify-content: flex-end;
-        list-style: none;
-    }
-
-    #header1 {
-        width: 100%;
-        padding-left: 15vw;
-    }
-
-    #header2 {
-        padding: 0 1rem;
-    }
-
-    #header3 {
-        padding-left: 3rem;
-        padding-right: 19.5vw;
-    }
-
-
-    .informationLivro {
-        align-items: center;
-        justify-content: space-around;
-        display: flex;
-        flex-direction: row;
-        gap: 5rem;
-    }
-
-    .nomeLivro {
-        width: 30vw;
-        max-width: 360px;
-    }
-
-    .informationLivroValue {
-        justify-content: right;
-        gap: 5rem;
-    }
-}
-
-@media (min-width: 1200px) {
-
-    main {
-        height: 100vh;
-        justify-content: center;
-        display: flex;
-    }
-
-    .containerLivro {
-        width: 900px;
-    }
-
-    .containerFinalizacao {
-        margin-top: 28px;
-        width: 300px;
-    }
-
-    #header1 {
-        padding-left: 7rem;
-    }
-
-    #header3 {
-        padding-left: 3.5rem;
-        padding-right: 9.5rem;
-    }
-
-}
+  }

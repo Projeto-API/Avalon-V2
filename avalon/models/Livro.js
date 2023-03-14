@@ -56,6 +56,9 @@ const criarLivroModel = (sequelize, dataTypes) => {
       type: dataTypes.INTEGER,
       allowNull: false
     },
+    imagem:{
+      type:dataTypes.STRING
+    },
   };
 
   const opcoes = {

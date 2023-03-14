@@ -55,6 +55,7 @@ CREATE TABLE livros (
     autores_id INT UNSIGNED NOT NULL,
     editoras_id INT UNSIGNED NOT NULL,
     categorias_id INT UNSIGNED NOT NULL,
+    imagem VARCHAR (45) NOT NULL,
 	FOREIGN KEY (autores_id) REFERENCES autores(id),
     FOREIGN KEY (editoras_id) REFERENCES editoras(id),
 	FOREIGN KEY (categorias_id) REFERENCES categorias(id)

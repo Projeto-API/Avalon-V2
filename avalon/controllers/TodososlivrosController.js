@@ -1,12 +1,12 @@
-const { Todososlivros } = require('../models');
+const { Livro } = require('../models');
 
 module.exports = {
   index: async (req, res) => {
-    const todososlivros = await Todososlivros.findAll({
+    const livros = await Livro.findAll({
       order: [
-        ['nome', 'desc']
+        ['id', 'desc']
       ]
     });
-    res.render('todososlivros', { todososlivros });
+    res.render('todososlivros', { livros });
   }
 }

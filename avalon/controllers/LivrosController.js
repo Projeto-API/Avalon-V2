@@ -46,6 +46,7 @@ module.exports = {
     const autores = await Autor.findAll()
     const categorias = await Categoria.findAll()
 
+
     let livro;
     let id = req.params.id;
 
@@ -55,7 +56,6 @@ module.exports = {
 
   async buscarLivro(req, res) {
     const { id } = req.params
-
     const livro = await Livro.findByPk(id)
     const editoras = await Editora.findAll()
     const categorias = await Categoria.findAll()
@@ -73,16 +73,14 @@ module.exports = {
     await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria })
     return res.render('adicionarLivro');
     } catch (erro){
+      console.log(erro)
+    
       let alert = require('alert'); 
       alert("Erro interno do servidor!")
-      
-      
      res.redirect('/admin');
- 
     }
-
-  
       },
+
 
   async editar(req, res) {
     const { id } = req.params
@@ -101,9 +99,7 @@ module.exports = {
 
   async deletar(req, res) {
     const { id } = req.params
-
     try {
-
       await Livro.destroy({
         where: {
           id

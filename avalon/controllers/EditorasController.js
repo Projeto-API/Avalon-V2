@@ -41,22 +41,28 @@ module.exports = {
   },
 
   criar: async (req, res) => {
+    try{
     const { nome, cnpj } = req.body;
     await Editora.create({ nome, cnpj });
-
+  } catch (erro){
+    let alert = require('alert'); 
+    alert("Erro interno do servidor!")
     res.redirect('/admin/editoras');
-  },
+  }
+},
 
   editar: async (req, res) => {
+    try{
     const { id } = req.params;
     const { nome, cnpj } = req.body;
 
     await Editora.update({ nome, cnpj }, {
       where: { id }
     });
-
+  } catch (erro){
     res.redirect('/admin/editoras');
-  },
+  }
+},
 
   async deletar (req, res) {
     const { id } = req.params

@@ -48,10 +48,15 @@ module.exports = {
   },
 
   criar: async (req, res) => {
+    try{
     const { nome, biografia, foto } = req.body;
     await Autor.create({ nome, biografia, foto });
-
+  } catch (erro){
+    let alert = require('alert'); 
+    alert("Erro interno do servidor!")
+ 
     res.redirect('/admin/autores');
+  }
   },
 
   editar: async (req, res) => {

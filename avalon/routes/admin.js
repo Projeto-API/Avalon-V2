@@ -67,8 +67,8 @@ router.get('/autores/form/:id?', AutoresController.form);
 router.get('/autores/editar/:id', AutoresController.buscarAutor)
 
 // POST E PUT ROUTES
-router.post('/autores', filefoto.single('foto'), AutoresController.criar);
-router.put('/autores/editar/:id', filefoto.single('foto'), AutoresController.editar);
+router.post('/autores', filefoto.fields([{name: 'foto'}]), AutoresController.criar);
+router.put('/autores/editar/:id', filefoto.fields([{name: 'foto'}]), AutoresController.editar);
 
 // DELETE ROUTES
 router.delete('/autores/deletar/:id', AutoresController.deletar);

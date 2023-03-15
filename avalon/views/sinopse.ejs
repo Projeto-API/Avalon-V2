@@ -48,11 +48,11 @@
             <ul class="columninformation">
                 <li>
                     <p>Editora</p>
-                    <p><%= livro && livro.editoras_id %></p>
+                    <p><%= livro && livro.nome %></p>
                 </li>
                 <li>
                     <p>Ano de publicação</p>
-                    <p>2019</p>
+                    <p><%= livro && livro.ano %></p>
                 </li>
                 <li>
                     <p>Idioma</p>
@@ -102,7 +102,7 @@
 
             <div class="columnauthor">
                 <h5>SOBRE O AUTOR</h5><br>
-                <h6>Emily Brontë</h6>
+                <h6><%= livro && livro.autor.nome  %></h6>
                 <p> Descubra mais Livros do autor,
                     veja autores semelhantes,
                     leia blogs de autores e muito mais.</p>

@@ -15,7 +15,8 @@
       </h2>
 
       <% if (livro) { %>
-        <form class="add-form form-crud" action="/admin/editar-livro/<%= livro.id %>?_method=PUT" method="post" enctype="multipart/form-data">
+        <form class="add-form form-crud" action="/admin/editar-livro/<%= livro.id %>?_method=PUT" method="post"
+          enctype="multipart/form-data">
           <% } else { %>
             <form class="add-form form-crud" action="/admin" method="post" enctype="multipart/form-data">
               <% } %>
@@ -60,6 +61,11 @@
                 <label class="form-crud-label" for="idioma">Idioma:</label> <br>
                 <input class="form-crud-input" type="text" name="idioma" placeholder="Digite o idioma"
                   value="<%= livro && livro.idioma %>">
+
+                <label class="form-crud-label" for="idioma">Ano de Publicação:</label> <br>
+                <input class="form-crud-input" type="text" name="ano" placeholder="Digite o ano de publicação"
+                  value="<%= livro && livro.ano %>">
+
 
                 <label class="form-crud-label" for="paginas">Páginas:</label> <br>
                 <input class="form-crud-input" type="text" name="paginas" placeholder="Digite o número de paginas"

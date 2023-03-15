@@ -29,7 +29,9 @@
                   placeholder="Escreva aqui a biografia do autor"><%= autor && autor.biografia %></textarea>
 
                 <label class="form-crud-label" for="foto">Imagem Autor:</label> <br>
-                <input type="file" class="alteraInp" name="foto" <%= autor && autor.foto %>>
+                <span class="fotoupload"><%=  autor.foto %></span>
+                
+                <input type="file" class="alteraInp" name="foto" <%= autor.foto %>>
                 
                 <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
             </form>

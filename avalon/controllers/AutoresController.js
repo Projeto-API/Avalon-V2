@@ -42,13 +42,16 @@ module.exports = {
   async buscarAutor(req, res) {
     const { id } = req.params
     const autor = await Autor.findByPk(id);
-
+    console.log(autor)
     res.render('adicionarAutor', { autor });
 
   },
 
   criar: async (req, res) => {
-    const { nome, biografia, foto } = req.body;
+    const { nome, biografia } = req.body;
+    const foto = req.files.foto[0].filename;
+
+    console.log(req.files.foto[0])
     await Autor.create({ nome, biografia, foto });
 
     res.redirect('/admin/autores');
@@ -56,22 +59,23 @@ module.exports = {
 
   editar: async (req, res) => {
     const { id } = req.params;
-    const { nome, biografia, foto } = req.body;
-
-    await Autor.update({ nome, biografia, foto }, {
+    const { nome, biografia, fotoguardada } = req.body;
+    console.log(fotoguardada)
+    const fotoupload = req.files.foto?.[0].filename;
+    await Autor.update({ nome, biografia, foto:fotoupload? fotoupload: fotoguardada}, {
       where: { id }
     });
 
     res.redirect('/admin/autores');
   },
 
-  async deletar (req, res) {
+  async deletar(req, res) {
     const { id } = req.params
 
     try {
 
       await Autor.destroy({
-        where: {id}
+        where: { id }
       })
     } catch (error) {
       console.log("erro ao deletar autor", error)

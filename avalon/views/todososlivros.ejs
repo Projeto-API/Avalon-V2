@@ -50,114 +50,21 @@
                 </select>
             </div>
             <div class="galeria">
-                <div class="catalogo_Livros">
-                    <img src="/images/1661966653.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-
-                <div class="catalogo_Livros">
-                    <img src="/images/1663870733.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-
-                <div class="catalogo_Livros">
-                    <img src="/images/1664561630.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-
-                <div class="catalogo_Livros">
-                    <img src="/images/1664561630.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-
-                <div class="catalogo_Livros">
-                    <img src="/images/1664561630.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-
-                <div class="catalogo_Livros">
-                    <img src="/images/1664561630.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-
-                <div class="catalogo_Livros">
-                    <img src="/images/capa (1).jpg">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-
-                <div class="catalogo_Livros">
-                    <img src="/images/capa (1).jpg">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-
-                <div class="catalogo_Livros">
-                    <img src="/images/capa (1).jpg">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-
-                </div>
-
-                <div class="catalogo_Livros">
-                    <img src="/images/1661966653.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-
-                </div>
-                <div class="catalogo_Livros">
-                    <img src="/images/1661966653.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-
-                </div>
-                <div class="catalogo_Livros">
-                    <img src="/images/1661966653.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-                <div class="catalogo_Livros">
-                    <img src="/images/1663870733.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-                <div class="catalogo_Livros">
-                    <img src="/images/1663870733.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-                <div class="catalogo_Livros">
-                    <img src="/images/1663870733.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-                <div class="catalogo_Livros">
-                    <img src="/images/capa (1).jpg">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
+                <% livros.forEach((servico, i) => {%>
+                    <div id="servico-<%= i %>" class="catalogo_produtos servico-<%= i %>">
+                        <img src="<%= servico.imagem %>" >
+                        <form id="formCarrinho" action="/carrinho" method="post">
+                            <div>
+                                <a ><%= servico.titulo %> </a>   
+                            </div>
+                            <div>
+                                <a> R$ <%= servico.preco %></a>
+                            </div>
+                            <input type="hidden" name="produtoId" value="<%= servico.id %>">
+                            <button type="submit" class="comprar">COMPRAR</a></button>
+                        </form>
+                    </div>
+                <% }) %>
             </div>
     </main>
     <section>

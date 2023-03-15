@@ -155,7 +155,7 @@ main {
 
 /* BOTAO COMPRAR */
 
-.grid {
+#grid {
     position: relative;
 }
 
@@ -250,7 +250,7 @@ main {
 
     /* BOTAO COMPRAR */
 
-    .grid {
+    #grid {
         position: relative;
     }
 

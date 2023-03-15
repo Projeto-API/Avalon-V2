@@ -8,6 +8,7 @@ module.exports = {
             method: 'get',
             url: `/cep/v1/${cep}`
         });
+        console.log(data)
         return data
     }
 }

@@ -4,10 +4,11 @@ const router = express.Router();
 const SinopseController = require('../controllers/SinopseController');
 const TodosLivros = require('../controllers/TodosLivrosController');
 const CarrinhoController = require('../controllers/CarrinhoController');
+const EntregaController = require('../controllers/EntregaController');
 
-const entregasRouter = require('./entrega');
 
-router.use('/entregas', entregasRouter);
+
+router.get('/enderecos/?', EntregaController.calcularfrete)
 
 router.get('/sinopse/:id', SinopseController.index);
 router.get('/todos/', TodosLivros.index);

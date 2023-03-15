@@ -11,7 +11,7 @@
               <th>Preço</th>
               <th>Quantidade</th>
               <th>Total</th>
-              <th></th>
+              <th>Deletar</th>
             </tr>
           </thead>
           <tbody>
@@ -44,7 +44,7 @@
           </tbody>
           <tfoot>
             <tr>
-              <td colspan="4"></td>
+              <td colspan="3"></td>
               <td>Total:</td>
               <td class="cart-total">R$35,00</td>
             </tr>
@@ -54,12 +54,16 @@
         <div class="carrinho-values">
           <div class="frete">
             <h5>Calcular Frete </h5>
-            <form class="formFrete" action="/admin/buscar" method="get">
-              <input type="text" name="search" placeholder="Insira o CEP">
+            <form class="formFrete" action="/produto/enderecos" method="get">
+              <input type="text" name="cep" placeholder="Insira o CEP">
               <button class="btnCrud" id="fretebtn"><a>Calcular</a></button>
             </form>
-            <h5 class="resultadoFrete">Frete: </h5>
+            <h5 class="resultadoFrete">Frete: <%= valorFrete %> </h5>
           </div>
+          
+          <br>
+
+          <h5>Resumo do Pedido</h5>
 
           <table>
             <tbody>

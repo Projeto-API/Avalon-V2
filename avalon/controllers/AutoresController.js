@@ -53,7 +53,7 @@ module.exports = {
     await Autor.create({ nome, biografia, foto });
   } catch (erro){
     let alert = require('alert'); 
-    alert("Erro interno do servidor!")
+    alert("ERRO 500 - Erro interno do servidor!")
  
     res.redirect('/admin/autores');
   }

@@ -28,6 +28,7 @@ module.exports = {
   },
 
   search: async (req, res) => {
+    try{
     const { search } = req.query;
     const livros = await Livro.findAll({
       where: search ? {
@@ -37,9 +38,14 @@ module.exports = {
         ]
       } : null
     });
-
     res.render('admin', { livros })
-  },
+  } catch (erro){
+    console.log(erro)
+    let alert = require('alert'); 
+    alert("ERRO 404 - Livro não encontrado!")
+   
+  }
+},
 
   async form(req, res) {
     const editoras = await Editora.findAll()
@@ -55,6 +61,7 @@ module.exports = {
   },
 
   async buscarLivro(req, res) {
+    try{
     const { id } = req.params
     const livro = await Livro.findByPk(id)
     const editoras = await Editora.findAll()
@@ -63,7 +70,13 @@ module.exports = {
 
     console.log(livro)
     res.render('adicionarLivro', { livro, editoras, categorias, autores });
-
+  } catch (erro){
+    console.log(erro)
+  
+    let alert = require('alert'); 
+    alert("ERRO 404 - Livro não encontrado!")
+   res.redirect('/admin');
+  }
   },
 
   async criar(req, res) {
@@ -76,7 +89,7 @@ module.exports = {
       console.log(erro)
     
       let alert = require('alert'); 
-      alert("Erro interno do servidor!")
+      alert("ERRO 500 - Erro interno do servidor!")
      res.redirect('/admin');
     }
       },

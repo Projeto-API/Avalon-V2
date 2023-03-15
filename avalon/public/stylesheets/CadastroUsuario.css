@@ -34,7 +34,7 @@ main {
 }
 
 .cadastro {
-
+    max-width: 365px;
     width: 100%;
     margin: 1rem;
     top: 50px;
@@ -137,14 +137,13 @@ div .exemplo {
 }
 
 .form-auth li {
-
     margin: .5rem;
-
+    padding: 5px 0;
     width: 100%;
     text-align: left;
 }
 
-.form-auth input {
+.input-form {
     font-size: .9rem;
     background: white;
     padding-left: 1rem;

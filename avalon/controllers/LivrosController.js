@@ -79,12 +79,11 @@ module.exports = {
     const { id } = req.params
 
     const { titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, capaguardada } = req.body
-    console.log(capaguardada)
+    
     const capaupload = req.files.capa?.[0].filename;
-
+    console.log(capaguardada)
     console.log(req.body)
-    await Livro.update({
-      titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, capa:capaupload? capaupload: capaguardada },
+    await Livro.update({ titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, capa:capaupload? capaupload: capaguardada },
       {
         where: { id }
       })

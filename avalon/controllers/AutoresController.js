@@ -59,7 +59,7 @@ module.exports = {
   editar: async (req, res) => {
     const { id } = req.params;
     const { nome, biografia, fotoguardada } = req.body;
-    console.log(fotoguardada)
+   
     const fotoupload = req.files.foto?.[0].filename;
     await Autor.update({ nome, biografia, foto:fotoupload? fotoupload: fotoguardada}, {
       where: { id }

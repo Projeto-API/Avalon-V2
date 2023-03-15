@@ -68,6 +68,10 @@ main {
 
 /* SECTION 1 - DESTAQUES  */
 
+.item {
+    cursor: pointer;
+}
+
 .destaque {
     flex-direction: column;
     width: 100%;

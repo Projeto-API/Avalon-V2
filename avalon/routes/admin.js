@@ -50,7 +50,7 @@ router.get('/form/:id?', LivrosController.form);
 
 // POST E PUT ROUTES
 router.post('/', filecapa.fields([{ name: 'capa' }]), LivrosController.criar);
-router.put('/editar-livro/:id', LivrosController.editar);
+router.put('/editar-livro/:id', filecapa.fields([{ name: 'capa' }]), LivrosController.editar);
 
 // DELETE ROUTES
 router.delete('/deletar/:id', LivrosController.deletar);

@@ -5,7 +5,7 @@
         <section class="container">
             <div class="container1">
                 <div class="capaprincipal">
-                    <img id="capa" src="/images//uivantes.png" alt="">
+                    <img id="capa" src="/images/produtos/<%= livro.capa %>" alt="">
                 </div>
                 
                 <div class="miniaturas">
@@ -102,7 +102,7 @@
 
             <div class="columnauthor">
                 <h5>SOBRE O AUTOR</h5><br>
-                <h6><%= livro && livro.autor.nome  %></h6>
+                <h6>Autor</h6>
                 <p> Descubra mais Livros do autor,
                     veja autores semelhantes,
                     leia blogs de autores e muito mais.</p>
@@ -116,79 +116,20 @@
     
                     <div class="carrousel" id="carrousel">
                         <div class="gallery" id="gallery">
-                            <li class="item current-item">
-                                <img src="/images/produtos/my broken mariko/mariko-capa.jpg" alt="mariko">
-                                <div>
-                                    <h5>MY BROKEN MARIKO</h5>
-                                    <span>R$ 39,90</span>
-                                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                                </div>
-                            </li>
-    
-                            <li class="item current-item">
-                                <img src="/images/produtos/DNA/DNA capa.jpg" alt="dna">
-                                <div>
-                                    <h5>DNA MILIONÁRIO</h5>
-                                    <span>R$ 49,90</span>
-                                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                                </div>
-                            </li>
-    
-                            <li class="item current-item">
-                                <img src="/images/produtos/Lady killers/capa.jpeg" alt="lady-killers">
-                                <div>
-                                    <h5>LADY KILLERS</h5>
-                                    <span>R$ 59,90</span>
-                                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                                </div>
-                            </li>
-    
-                            <li class="item current-item">
-                                <img src="/images/produtos/manifesto/capa.jpg" alt="hobbit">
-                                <div>
-                                    <h5>MANIFESTO DO PARTIDO COMUNISTA</h5>
-                                    <span>R$ 34,90</span>
-                                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                                </div>
-                            </li>
-    
-                            <li class="item current-item">
-                                <img src="/images/produtos/moby dick/mobydick-capa.jpg" alt="moby-dick">
-                                <div>
-                                    <h5>MOBY DICK</h5>
-                                    <span>R$ 129,90</span>
-                                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                                </div>
-                            </li>
-    
-                            <li class="item current-item">
-                                <img src="/images/produtos/calibã/caliba-capa.jpg" alt="caliba">
-                                <div>
-                                    <h5>CALIBÃ E A BRUXA</h5>
-                                    <span>R$ 59,90</span>
-                                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                                </div>
-                            </li>
-    
-                            <li class="item current-item">
-                                <img src="/images/produtos/moby dick/mobydick-capa.jpg" alt="moby-dick">
-                                <div>
-                                    <h5>MOBY DICK</h5>
-                                    <span>R$ 129,90</span>
-                                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                                </div>
-                            </li>
-    
-                            <li class="item current-item">
-                                <img src="/images/produtos/calibã/caliba-capa.jpg" alt="caliba">
-                                <div>
-                                    <h5>CALIBÃ E A BRUXA</h5>
-                                    <span>R$ 59,90</span>
-                                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                                </div>
-                            </li>
-    
-    
+                            <% carrousel.forEach(el => { %>
+                                <li class="item current-item">
+                                    <img class="produto" src="/images/produtos/<%= el.capa %>" alt="dna">
+                                    <div>
+                                        <h5>
+                                            <%= el.titulo %>
+                                        </h5>
+                                        <span>
+                                            R$ <%= el.preco %>
+                                        </span>
+                                        <button class="comprar"><a href="#">COMPRAR</a></button>
+                                    </div>
+                                </li>
+                                <% }) %>
                         </div>
                     </div>
                     <button id="prev" class="arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"

@@ -7,39 +7,35 @@
             <div class="cadastro2">
                 <h5>CADASTRO</h5>
             </div>
-            <form class="form-auth card" method="post" action="/registro">
+            <form class="form-auth card" action="/cadastro" method="post" enctype="multipart/form-data">
                 <div>
                     <li class="form-cadastro-usuario">E-mail</li>
-                    <input type="email" name="email" placeholder="Digite seu email">
+                    <input class="input-form"type="email" name="email" placeholder="Digite seu email">
                     <li class="form-cadastro-usuario">Senha</li>
-                    <input type="password" name="senha" placeholder="Digite sua senha">
+                    <input class="input-form"type="password" name="senha" placeholder="Digite sua senha">
                     <li class="form-cadastro-usuario">Confirme sua senha</li>
-                    <input type="password" name="password" placeholder="Confirme sua senha">
+                    <input class="input-form"type="password" name="senha" placeholder="Confirme sua senha">
                 </div>
-                
+
                 <div>
                     <br>
                     <li class="form-cadastro-usuario">Nome</li>
-                    <input type="text" name="nome" placeholder="Escreva seu primeiro nome">
+                    <input class="input-form"type="text" name="nome" placeholder="Escreva seu primeiro nome">
                     <li class="form-cadastro-usuario">Sobrenome</li>
-                    <input type="text" name="sobrenome" placeholder="Escreva seu sobrenome">
+                    <input class="input-form"type="text" name="sobrenome" placeholder="Escreva seu sobrenome">
                     <li class="form-cadastro-usuario">CPF</li>
-                    <input type="number" name="doc_identificacao" placeholder="Escreva seu CPF">
+                    <input class="input-form"type="number" name="doc_identificacao" placeholder="Escreva seu CPF">
                     <li class="form-cadastro-usuario">Data de Nascimento</li>
-                    <input type="date" name="nascimento" placeholder="Digite sua data de nascimento">
-                    <li class="form-cadastro-usuario">Telefone</li>
-                    <input type="tel" name="nascimento" placeholder="Digite seu número de telefone">
+                    <input class="input-form"type="date" name="data_nascimento" placeholder="Digite seu número de telefone">
                     <li class="form-cadastro-usuario">CEP</li>
-                    <input type="text" name="cep" placeholder="Digite o CEP">
+                    <input class="input-form"type="text" name="cep" placeholder="Digite o CEP">
                     <li class="form-cadastro-usuario">Endereço</li>
-                    <input type="text" name="cep" placeholder="Digite o Endereço">
+                    <input class="input-form"type="text" name="cep" placeholder="Digite o Endereço">
                     <li class="form-cadastro-usuario">Foto de Perfil</li>
-                    <input type="file" name="fotoperfil" >
+                    <input  type="file" name="foto">
                 </div>
 
-                <button class="entrar" type="submit"><a href="/views/MinhaConta.ejs">
-                        CADASTRE-SE
-                </button></a>
+                <button class="entrar" type="submit"><a href="/users/login">CADASTRE-SE</a></button>
             </form>
     </main>
     <%- include('partials/footer') %>

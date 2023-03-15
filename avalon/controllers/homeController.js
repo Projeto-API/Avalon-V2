@@ -1,9 +1,14 @@
-const homeModel = require('../models/homeModel')
+const { Livro, Editora, Autor, Categoria } = require('../models');
 
 module.exports = {
-    listahome: (req, res) => {
-        const home = homeModel.index();
-       
-        res.render('home');
-    }
+    async index(req, res) {
+        const livros = await Livro.findAll();
+        const editoras = await Editora.findAll();
+        const autores = await Autor.findAll();
+        const categorias = await Categoria.findAll();
+    
+    
+        res.render('home', { livros, editoras, categorias, autores })
+      },
+    
 }

@@ -85,7 +85,8 @@
 
                 <label class="form-crud-label" for="capaImg">Imagem Capa:</label> <br>
                 <span class="capaupload"><%= livro && livro.capa %></span>
-                <input type="file" class="alteraInp" name="capa" value="<%= livro && livro.capa %>">
+
+                <input type="file" class="alteraInp" name="capa" <%= livro && livro.capa %>>
 
               
                 <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>

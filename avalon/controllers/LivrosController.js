@@ -119,7 +119,8 @@ module.exports = {
         }
       })
     } catch (error) {
-      console.log("erro ao deletar livro", error)
+      let alert = require('alert'); 
+    alert("erro ao deletar o produto")
     }
     console.log("O produto de id " + req.body.id + " foi deletado com sucesso");
     return res.redirect('/admin');

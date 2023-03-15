@@ -109,13 +109,9 @@ img.cart-product-image {
     border-radius: 1rem;
 }
 
-div#produto2 {
-    flex-direction: row;
-    align-items: center;
-    margin: 1rem;
-}
 
-section#containerProduto {
+
+.containerProduto {
     display: inline-grid;
 }
 
@@ -131,12 +127,16 @@ button.remove-livro-button {
     height: 2rem;
     margin: 1rem;
 }
-div#produto {
-    display: flex;
-    margin: 1rem;
-}
+
 
 button.fechar {
     border-radius: 2rem;
     width: 2rem;
+}
+
+div#produto {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    
 }

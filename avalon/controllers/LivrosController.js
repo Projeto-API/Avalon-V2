@@ -68,8 +68,9 @@ module.exports = {
   },
 
   async criar(req, res) {
-    const { titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor, categoria, capa, imagens } = req.body
-    await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria, capa, imagens })
+    const { titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, categoria, imagens } = req.body
+    const capa = req.files.capa[0].filename;
+    await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria, capa, imagens })
 
     res.redirect('/admin');
   },
@@ -77,12 +78,13 @@ module.exports = {
   async editar(req, res) {
     const { id } = req.params
 
-    const { titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor } = req.body
+    const { titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, capaguardada } = req.body
+    console.log(capaguardada)
+    const capaupload = req.files.capa?.[0].filename;
 
     console.log(req.body)
     await Livro.update({
-      titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor
-    },
+      titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, capa:capaupload? capaupload: capaguardada },
       {
         where: { id }
       })

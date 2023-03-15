@@ -50,8 +50,7 @@ module.exports = {
   criar: async (req, res) => {
     const { nome, biografia } = req.body;
     const foto = req.files.foto[0].filename;
-
-    console.log(req.files.foto[0])
+    
     await Autor.create({ nome, biografia, foto });
 
     res.redirect('/admin/autores');

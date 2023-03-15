@@ -3,8 +3,19 @@ const router = express.Router();
 const path = require('path');
 const multer = require('multer');
 
-
-
+// MULTER LIVROS
+const multerDiskStorageLivro = multer.diskStorage({
+    destination: (req, file, callback) => {
+        const folder = path.join(__dirname, '../public/images/produtos');
+        callback(null, folder);
+    }
+    ,
+    filename: (req, file, callback) => {
+        const imageName = Date.now() + path.extname(file.originalname);
+        callback(null, imageName)
+    }
+})
+const filecapa = multer({ storage: multerDiskStorageLivro });
 
 // MULTER AUTORES
 const multerDiskStorageAutor = multer.diskStorage({
@@ -19,6 +30,8 @@ const multerDiskStorageAutor = multer.diskStorage({
     }
 })
 const filefoto = multer({ storage: multerDiskStorageAutor });
+
+
 
 // ------------CONTROLLERS E ROTAS PAINEL DE ADMINISTRADOR DO CRUD -------------//
 const LivrosController = require('../controllers/LivrosController');
@@ -36,7 +49,7 @@ router.get('/form/:id?', LivrosController.form);
 
 
 // POST E PUT ROUTES
-router.post('/',LivrosController.criar);
+router.post('/', filecapa.fields([{ name: 'capa' }]), LivrosController.criar);
 router.put('/editar-livro/:id', LivrosController.editar);
 
 // DELETE ROUTES
@@ -67,13 +80,14 @@ router.get('/autores/form/:id?', AutoresController.form);
 router.get('/autores/editar/:id', AutoresController.buscarAutor)
 
 // POST E PUT ROUTES
-router.post('/autores', filefoto.fields([{name: 'foto'}]), AutoresController.criar);
-router.put('/autores/editar/:id', filefoto.fields([{name: 'foto'}]), AutoresController.editar);
+router.post('/autores', filefoto.fields([{ name: 'foto' }]), AutoresController.criar);
+router.put('/autores/editar/:id', filefoto.fields([{ name: 'foto' }]), AutoresController.editar);
 
 // DELETE ROUTES
 router.delete('/autores/deletar/:id', AutoresController.deletar);
 
-// ----------------------------------------CRUD Categorias--------------------------------------------//
+
+// ----------------------------------------CRUD CATEGORIAS--------------------------------------------//
 
 // GET ROUTES
 router.get('/categorias', CategoriasController.index);

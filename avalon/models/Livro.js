@@ -69,7 +69,7 @@ const criarLivroModel = (sequelize, dataTypes) => {
 
     imagens: {
       type: dataTypes.STRING,
-      allowNull: false
+      allowNull: true
     },
   };
 

@@ -4,74 +4,110 @@ Op
 
 module.exports = {
   index: async (req, res) => {
-    const categorias = await Categoria.findAll({
-      order: [
-        ['tipo', 'asc']
-      ]
-    });
-    res.render('categorias', { categorias });
+    try {
+      const categorias = await Categoria.findAll({
+        order: [
+          ['tipo', 'asc']
+        ]
+      });
+      res.render('categorias', { categorias });
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
   },
 
   search: async (req, res) => {
-    const { search } = req.query;
-    const categorias = await Categoria.findAll({
-      where: search ? {
-        [Op.or]: [
-          { tipo: { [Op.like]: '%' + search + '%' } },
-          { id: search }
-        ]
-      } : null
-    });
+    try {
+      const { search } = req.query;
+      const categorias = await Categoria.findAll({
+        where: search ? {
+          [Op.or]: [
+            { tipo: { [Op.like]: '%' + search + '%' } },
+            { id: search }
+          ]
+        } : null
+      });
 
-    res.render('categorias', { categorias });
+      res.render('categorias', { categorias });
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
   },
 
   form: async (req, res) => {
-    let categoria;
-    const { id } = req.params;
+    try {
+      let categoria;
+      const { id } = req.params;
 
-    if (id) categoria = await Categoria.findByPk(id);
+      if (id) categoria = await Categoria.findByPk(id);
 
-    res.render('adicionarCategoria', { categoria });
+      res.render('adicionarCategoria', { categoria });
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
   },
 
   async buscarCategoria(req, res) {
-    const { id } = req.params
+    try {
+      const { id } = req.params
 
-    const categoria = await Categoria.findByPk(id)
-    res.render('adicionarCategoria', { categoria });
+      const categoria = await Categoria.findByPk(id)
+      res.render('adicionarCategoria', { categoria });
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
 
   },
 
   criar: async (req, res) => {
-    const { tipo } = req.body;
-    await Categoria.create({ tipo });
+    try {
+      const { tipo } = req.body;
+      await Categoria.create({ tipo });
 
-    res.redirect('/admin/categorias');
+      res.redirect('/admin/categorias');
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
   },
 
   editar: async (req, res) => {
-    const { id } = req.params;
-    const { tipo } = req.body;
+    try {
+      const { id } = req.params;
+      const { tipo } = req.body;
 
-    await Categoria.update({ tipo }, {
-      where: { id }
-    });
+      await Categoria.update({ tipo }, {
+        where: { id }
+      });
 
-    res.redirect('/admin/categorias');
+      res.redirect('/admin/categorias');
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
   },
 
   async deletar(req, res) {
-        try {
-          const { id } = req.params
+    try {
+      const { id } = req.params
       await Categoria.destroy({
         where: { id }
       })
       console.log("A categoria de id " + req.body.id + " foi deletada com sucesso");
       return res.redirect('/admin/categorias');
 
-    } catch (error) {
-      console.log("erro ao deletar categoria", error)
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
     }
 
   }

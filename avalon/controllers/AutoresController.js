@@ -4,82 +4,120 @@ Op
 
 module.exports = {
   index: async (req, res) => {
-    const autores = await Autor.findAll({
-      order: [
-        ['nome', 'asc']
-      ]
+    try {
+      const autores = await Autor.findAll({
+        order: [
+          ['nome', 'asc']
+        ]
 
-      // include: [
-      //   {model: Livro, as: 'livros'}
-      // ]
-    });
-    res.render('autores', { autores });
+        // include: [
+        //   {model: Livro, as: 'livros'}
+        // ]
+      });
+      res.render('autores', { autores });
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
   },
 
   search: async (req, res) => {
-    const { search } = req.query;
-    const autores = await Autor.findAll({
-      where: search ? {
-        [Op.or]: [
-          { nome: { [Op.like]: '%' + search + '%' } },
-          { id: search }
-        ]
-      } : null
-    });
+    try {
+      const { search } = req.query;
+      const autores = await Autor.findAll({
+        where: search ? {
+          [Op.or]: [
+            { nome: { [Op.like]: '%' + search + '%' } },
+            { id: search }
+          ]
+        } : null
+      });
 
-    res.render('autores', { autores });
+      res.render('autores', { autores });
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
   },
 
   form: async (req, res) => {
-    let autor;
-    const { id } = req.params;
+    try {
+      let autor;
+      const { id } = req.params;
 
-    if (id) autor = await Autor.findByPk(id);
+      if (id) autor = await Autor.findByPk(id);
 
-    res.render('adicionarAutor', { autor });
+      res.render('adicionarAutor', { autor });
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
   },
 
-  async buscarAutor(req, res) {
-    const { id } = req.params
-    const autor = await Autor.findByPk(id);
-    console.log(autor)
-    res.render('adicionarAutor', { autor });
+  buscarAutor: async (req, res) => {
+    try {
+      const { id } = req.params
+      const autor = await Autor.findByPk(id);
+      console.log(autor)
+      res.render('adicionarAutor', { autor });
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
 
   },
 
   criar: async (req, res) => {
-    const { nome, biografia } = req.body;
-    const foto = req.files.foto[0].filename;
-    
-    await Autor.create({ nome, biografia, foto });
+    try {
+      const { nome, biografia } = req.body;
+      const foto = req.files.foto[0].filename;
 
-    res.redirect('/admin/autores');
+      await Autor.create({ nome, biografia, foto });
+
+      res.redirect('/admin/autores');
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
   },
+
 
   editar: async (req, res) => {
-    const { id } = req.params;
-    const { nome, biografia, fotoguardada } = req.body;
-   
-    const fotoupload = req.files.foto?.[0].filename;
-    await Autor.update({ nome, biografia, foto:fotoupload? fotoupload: fotoguardada}, {
-      where: { id }
-    });
+    try {
+      const { id } = req.params;
+      const { nome, biografia, fotoguardada } = req.body;
 
-    res.redirect('/admin/autores');
+      const fotoupload = req.files.foto?.[0].filename;
+      await Autor.update({ nome, biografia, foto: fotoupload ? fotoupload : fotoguardada }, {
+        where: { id }
+      });
+
+      res.redirect('/admin/autores');
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
   },
 
-  async deletar(req, res) {
-    const { id } = req.params
-
+  deletar: async (req, res) => {
     try {
-
+      const { id } = req.params
       await Autor.destroy({
         where: { id }
       })
+
+      return res.redirect('/admin/autores');
+
     } catch (error) {
-      console.log("erro ao deletar autor", error)
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
     }
-    console.log("O autor de id " + req.body.id + " foi deletado com sucesso");
-    return res.redirect('/admin/autores');
+
   }
 }

@@ -1,12 +1,16 @@
 const { Livro } = require('../models');
 
 module.exports = {
-  async index(req, res) {
-    const livros = await Livro.findAll();
-   
+  index: async (req, res) => {
+    try {
+      const livros = await Livro.findAll();
 
-    res.render('todososlivros', { livros})
+      res.render('todososlivros', { livros })
 
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
 
   },
-  }
+}

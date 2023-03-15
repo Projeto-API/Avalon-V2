@@ -23,16 +23,40 @@ main {
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-   
+
 }
 
 .carrinho-itens,
 .carrinho-values {
     background-color: #f2f2f2;
- 
     border-radius: 10px;
     width: 100%;
 }
+
+.carrinho-values {
+    width: 100%;
+    padding: 1rem;
+}
+
+.formFrete {
+    gap: 10px;
+    display: flex;
+}
+
+.resultadoFrete {
+
+    padding: 1rem 0;
+    width: 100%;
+}
+
+.formFrete input {
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    width: 100%;
+    border: none;
+}
+
 
 
 /* SEÇÃO REFERENTE ÀS INFORMAÇÕES DO Livro */
@@ -135,6 +159,7 @@ input[type="number"] {
 
 table {
     line-height: 1.5rem;
+    width: 100%;
 
     border-collapse: collapse;
 }
@@ -184,6 +209,35 @@ tfoot {
 .next-page {
     width: 100%;
 }
+
+.btnCrud {
+
+    padding: 1rem;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    font-weight: bold;
+    height: 2rem;
+    background-color: #4EC16E;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: none;
+}
+
+.btnCrud a {
+    width: 100%;
+}
+
+.btnCrud :hover {
+    color: white;
+
+}
+
+#fretebtn {
+    width: 80px;
+    align-items: center;
+}
+
 
 /* @media (min-width: 768px) {
     main {

@@ -7,9 +7,7 @@
         <table class="carrinho-itens">
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Imagem</th>
-              <th>Autor</th>
+              <th>Produto</th>
               <th>Preço</th>
               <th>Quantidade</th>
               <th>Total</th>
@@ -19,9 +17,6 @@
           <tbody>
             <% livros.forEach(livro=> { %>
               <tr>
-                <td>
-                  <%= livro.id %>
-                </td>
                 <td class="imagem-carrinho"> <img src="<%= livro.imagem %>"> </td>
                 <td>
                   <%= livro.titulo %>
@@ -55,30 +50,45 @@
             </tr>
           </tfoot>
         </table>
-        
-        <table class="carrinho-values">
-          <tbody>
-            <tr class="itens">
-              <td class="info">Subtotal</td>
-              <td class="monetary">R$ 94,70</td>
-            <tr class="itens">
-            </tr>
-            <td class="info">Entrega</td>
-            <td class="monetary" id="desconto">Grátis</td>
-            <tr class="itens">
-            </tr>
-            <td class="info">Desconto</td>
-            <td class="monetary" id="desconto">- R$ 9,47</td>
-            </tr>
-          </tbody>
 
-          <tfoot>
-            <tr>
-              <td class="info">Total</td>
-              <td src="/carrinho/public/images/1661966653.webp " class="monetary">R$ 85,23</td>
-            </tr>
-          </tfoot>
-        </table>
+        <div class="carrinho-values">
+          <div class="frete">
+            <h5>Calcular Frete </h5>
+            <form class="formFrete" action="/admin/buscar" method="get">
+              <input type="text" name="search" placeholder="Insira o CEP">
+              <button class="btnCrud" id="fretebtn"><a>Calcular</a></button>
+            </form>
+            <h5 class="resultadoFrete">Frete: </h5>
+          </div>
+
+          <table>
+            <tbody>
+              <tr class="itens">
+                <td class="info">Subtotal</td>
+                <td class="monetary">R$ 94,70</td>
+              <tr class="itens">
+              </tr>
+              <td class="info">Entrega</td>
+              <td class="monetary" id="desconto">Grátis</td>
+              <tr class="itens">
+              </tr>
+              <td class="info">Desconto</td>
+              <td class="monetary" id="desconto">- R$ 9,47</td>
+              </tr>
+            </tbody>
+
+            <tfoot>
+              <tr>
+                <td class="info">Total</td>
+                <td src="/carrinho/public/images/1661966653.webp " class="monetary">R$ 85,23</td>
+                <br>
+              </tr>
+            </tfoot>
+          </table>
+          <br>
+          <button class="btnCrud"><a href="">Finalizar Compra</a></button>
+        </div>
+
       </div>
     </div>
   </main>

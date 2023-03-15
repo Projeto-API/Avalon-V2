@@ -1,11 +1,24 @@
 function abrirCarrinhoFlutuante() {
-    document.getElementById('carrinhoFlutuante').style.width = "20rem"
+    document.getElementById('carrinhoFlutuante').style.width = "25rem"
 }
 
 function fecharCarrinhoFlutuante() {
-    document.getElementById('carrinhoFlutuante').style.width = "-20rem"
+
+    document.getElementById('carrinhoFlutuante').style.width = "0rem"
 }
 
+
+const removelivro = document.getElementsByClassName("remove-livro-button")
+
+    for (var i = 0; i < removelivro.length; i++) {
+        removelivro[i].addEventListener("click", function(event){
+            const teste = event.target.parentElement.parentElement.remove(containerProduto)
+        })
+    }
+const carlivros = document.getElementsByClassName("produto")
+    for (var i = 0; i < removelivro.length; i++){
+        console.log(carlivros[i])
+    }
 
 
 

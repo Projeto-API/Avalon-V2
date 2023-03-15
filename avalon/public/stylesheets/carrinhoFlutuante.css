@@ -31,7 +31,7 @@ body {
     font-size: 19px
 }
 
-.Livro1,
+/* .Livro1,
 .Livro2,
 .Livro3 {
     margin: .5rem;
@@ -100,7 +100,43 @@ input[type=number] {
 .next-page-cart {
     padding: 1rem;
     width: 100%;
+} */
+
+
+
+img.cart-product-image {
+    max-width: 5rem;
+    border-radius: 1rem;
 }
 
+div#produto2 {
+    flex-direction: row;
+    align-items: center;
+    margin: 1rem;
+}
 
+section#containerProduto {
+    display: inline-grid;
+}
 
+input.product-qtd-input {
+    width: 2rem;
+    text-align: center;
+}
+
+button.remove-livro-button {
+    background-color: red;
+    border-radius: 1rem;
+    width: 6rem;
+    height: 2rem;
+    margin: 1rem;
+}
+div#produto {
+    display: flex;
+    margin: 1rem;
+}
+
+button.fechar {
+    border-radius: 2rem;
+    width: 2rem;
+}

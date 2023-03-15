@@ -75,4 +75,60 @@
                     </ul>
                 </nav>
                 <section>
+                    <section>
+                        <div class="carrinhoFlu">
+                            <section class="carrinhoFlutuante" id="carrinhoFlutuante" >
+                                <div class="headerFlutuante" id="primeiro" >
+                                    <div>
+                                        <h5>MEU CARRINHO</h5>
+                                    </div>
+                                    <!-- <button id="fechar" onclick="fecharCarrinhoFlutuante()">X</button> -->
+                                    <div>
+                                        <button onclick=fecharCarrinhoFlutuante() class="fechar"><i>X</i></button>
+                                    </div>
+                                </div>
+
+                                <section class="containerProduto" id="containerProduto">                                                                                                                                                                                                                                                                      
+                                    <div class="produto" id="produto">
+                                        <div class="product-identification">
+                                            <img src="../images/1661966653.webp" alt="Poster 3" class="cart-product-image">
+                                        </div>
+                                        <div>
+                                            <strong class="cart-product-title">Nome do Livro </strong>
+                                        </div>
+                                        <div>
+                                            <span class="cart-product-price">R$19,99</span>
+                                        </div>
+                                        <div>
+                                            <input type="number" value="1" min="0" class="product-qtd-input">
+                                            <button type="button" class="remove-livro-button">Remover</button>
+                                        </div>    
+                                        
+                                    </div>    
+                                    <div class="produto" id="produto">
+                                        <div class="product-identification">
+                                            <img src="../images/1661966653.webp" alt="Poster 3" class="cart-product-image">
+                                        </div>
+                                        <div>
+                                            <strong class="cart-product-title">Nome do Livro </strong>
+                                        </div>
+                                        <div>
+                                            <span class="cart-product-price">R$19,99</span>
+                                        </div>
+                                        <div>
+                                            <input type="number" value="1" min="0" class="product-qtd-input">
+                                            <button type="button" class="remove-livro-button">Remover</button>
+                                        </div>    
+                                        
+                                    </div>                     
+                                </section>
+                        
+                                <div class="continuar">
+                                    <form id="formCarrinho"    method="get" action="/carrinho">
+                                        <input type="hidden" name="produtos" id="produtosCarrinho">
+                                        <button type="submit" id="continuar">CONTINUAR</button>
+                                    </form>
+                                </div>
+
+                    </section>
         </header>

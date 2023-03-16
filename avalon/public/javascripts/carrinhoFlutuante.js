@@ -53,10 +53,11 @@ function addProductToCart(event) {
 
     }
 
-
     let newCartProduct = document.createElement("div")
     newCartProduct.classList.add("produto-carrinho")
-
+    console.log("Estou aqui!!!")
+    localStorage.setItem = ('carrinho', JSON.stringify({productImage}))
+    
     newCartProduct.innerHTML = `
     
         <div class="product-identification">
@@ -80,6 +81,7 @@ function addProductToCart(event) {
 
 
 function removeProduct(event) {
+    console.log(event)
     event.target.parentElement.parentElement.parentElement.remove()
     // updateTotal()
 }

@@ -85,15 +85,20 @@ const criarLivroModel = (sequelize, dataTypes) => {
       // editora.livros -> array de livros
       as: 'editora', // livro.editora.nome -> nome da editora de um livro
       foreignKey: 'editoras_id'
+    }),
+
+    Livro.belongsTo(models.Categoria, {
+      // editora.livros -> array de livros
+      as: 'categoria', // livro.autores.nome -> nome da editora de um livro
+      foreignKey: 'categorias_id'
+    }),
+
+    Livro.belongsTo(models.Autor, {
+      // editora.livros -> array de livros
+      as: 'autor', // livro.autores.nome -> nome da editora de um livro
+      foreignKey: 'autores_id'
     });
   }
-    Livro.associate = (models) => {
-      Livro.belongsTo(models.Categoria, {
-        // editora.livros -> array de livros
-        as: 'categoria', // livro.editora.nome -> nome da editora de um livro
-        foreignKey: 'categorias_id'
-      });
-    };
 
     return Livro;
   };

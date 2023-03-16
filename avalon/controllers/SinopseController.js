@@ -5,16 +5,18 @@ module.exports = {
     try {
       const { id } = req.params
       const carrousel = await Livro.findAll();
-      const livro = await Livro.findByPk(id);
-      const editora = await Editora.findAll();
-      const categoria = await Categoria.findAll();
-      const autor = await Autor.findAll();
+      const livro = await Livro.findByPk(id, {
+        include: [
+          { model: Editora, as: 'editora'},
+          { model: Autor, as: 'autor'}]
+      });
 
-      res.render('sinopse', { carrousel, livro, editora, categoria, autor });
+      console.log({ livro })
+      res.render('sinopse', { carrousel, livro });
+
 
     } catch (erro) {
-      let alert = require('alert');
-      alert("ERRO 500 - Erro interno do servidor!")
+      console.log(erro)
     }
 
   }

@@ -83,7 +83,7 @@ module.exports = {
     } catch (erro) {
       let alert = require('alert');
       alert("ERRO 500 - Erro interno do servidor!")
-      res.redirect('/admin');
+      
     }
   },
 

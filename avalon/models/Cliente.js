@@ -46,6 +46,11 @@ const criarClienteModel = (sequelize, dataTypes) => {
       type: dataTypes.INTEGER,
       allowNull: false,
     },
+
+    foto: {
+      type: dataTypes.INTEGER,
+      allowNull: true,
+    }
   };
 
   const opcoes = {

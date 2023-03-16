@@ -29,6 +29,7 @@
               <th>ID</th>
               <th>Título</th>
               <th>Preço</th>
+              <th>Categoria</th>
               <th class="acao">Editar</th>
               <th class="acao">Excluir</th>
             </tr>
@@ -47,7 +48,9 @@
                 <td>
                   <%= el.preco %>
                 </td>
-                
+                <td>
+                  <%= el.categoria.tipo %>
+                </td>
                 <td class="acao">
                   <button class="crudform"><a href="/admin/editar-livro/<%= el.id %>"><i
                         class='bx bx-edit'></i></a></i></button>

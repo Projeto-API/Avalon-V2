@@ -20,16 +20,16 @@ const filefoto = multer({ storage: multerDiskStorageUsuario });
 
 const MinhasComprasController = require('../controllers/MinhasComprasController');
 const LoginController = require('../controllers/LoginController');
-const CadastrousuarioController = require('../controllers/CadastrousuarioController');
+const CadastroUsuarioController = require('../controllers/CadastrousuarioController');
 
 
 router.get('/compras', MinhasComprasController.index);
 router.get('/login', LoginController.index);
-router.get('/cadastro', CadastrousuarioController.index);
-
+router.get('/cadastro', CadastroUsuarioController.index);
+router.post('/cadastro', CadastroUsuarioController.criar);
 
 // POST E PUT ROUTES
 
-router.post('/cadastro', filefoto.fields([{ name: 'foto' }]), CadastrousuarioController.criar);
+// router.post('/cadastro', filefoto.fields([{ name: 'foto' }]), CadastrousuarioController.criar);
 
 module.exports = router;

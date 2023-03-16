@@ -20,14 +20,18 @@ Op
 module.exports = {
   index: async (req, res) => {
     try {
-      const livros = await Livro.findAll();
-      const editoras = await Editora.findAll();
-      const autores = await Autor.findAll();
-      const categorias = await Categoria.findAll();
-
-      res.render('admin', { livros, editoras, categorias, autores })
+      const livros = await Livro.findAll({
+        include: [
+          { model: Editora, as: 'editora' },
+          { model: Autor, as: 'autor' },
+          { model: Categoria, as: 'categoria' }
+        ]
+      });
+      
+      res.render('admin', { livros })
 
     } catch (erro) {
+      console.log(erro)
       let alert = require('alert');
       alert("ERRO 500 - Erro interno do servidor!")
     }

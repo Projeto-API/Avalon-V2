@@ -1,24 +1,8 @@
-// const qtdLivro = document.getElementById("quantidadeValue");
-
-// function aumentarQtd(op) {
-//   if (op == 'up') {
-//     var num = parseInt(qtdLivro.value);
-//     qtdLivro.value = num + 1;
-//   }
+// function redirectFunction() {
+//   document.querySelector(".item").location.href("/sinopse/1");
 // }
 
-// function diminuirQtd(op) {
-//   if (op == 'down') {
-//     var num = parseInt(qtdLivro.value);
-//     qtdLivro.value = num - 1;
-//   }
-// }
-
-// Modal
-
-
-
-// -----ARROWS CARROSEL -------
+// ------CARROUSEL LANÇAMENTO -----
 
 const gap = .1;
 
@@ -51,10 +35,7 @@ let width = carousel.offsetWidth;
 window.addEventListener("resize", e => (width = carousel.offsetWidth));
 
 
-// function redirectFunction() {
-//   document.querySelector(".item").location.href("/sinopse/1");
-// }
-
+// ------CARROUSEL CONTINUE VENDO -----
 const carousel2 = document.getElementById("carrousel2"),
   content2 = document.getElementById("gallery2"),
   next2 = document.getElementById("next2"),

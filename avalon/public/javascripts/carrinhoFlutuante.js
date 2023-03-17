@@ -20,22 +20,21 @@ function ready() {
     const addToCarButtons = document.getElementsByClassName("comprar")
     for (var i = 0; i < addToCarButtons.length; i++) {
         addToCarButtons[i].addEventListener("click", addProductToCart)
-
     }
-
-
 }
 
 function checkIfinputInsNull(event) {
     if (event.target.value === "0") {
-        event.target.parentElement.parentElement.remove()
+        event.target.parentElement.parentElement.parentElement.remove()
     }
-
-
     updateTotal()
-
 }
 
+function removeProduct(event) {
+    console.log(event)
+    event.target.parentElement.parentElement.parentElement.remove()
+    updateTotal()
+}
 
 function addProductToCart(event) {
     const button = event.target
@@ -56,40 +55,38 @@ function addProductToCart(event) {
     let newCartProduct = document.createElement("div")
     newCartProduct.classList.add("produto-carrinho")
     console.log("Estou aqui!!!")
-    localStorage.setItem = ('carrinho', JSON.stringify({productImage}))
-    
+    localStorage.setItem = ('carrinho', JSON.stringify({ productImage }))
+
     newCartProduct.innerHTML = `
-    
         <div class="product-identification">
             <img class="cart-product-image" src="${productImage}" alt="Poster 3">
-         </div>
+        </div>
         <div class="informationLivro">
             <h5 class="cart-product-title" id="LivroTitulo">${productTitle}</h5>
             <div class="informationLivroValue">
-                <input type="number" value="1" min="0" class="product-qtd-input">
+                <input onclick=checkIfinputInsNull(event) type="number" value="1" min="0" class="product-qtd-input">
                 <span class="cart-product-price">${productPrice}	</span>
-                <button type="button" class="remove-livro-button">X</button>
-         </div>
-         </div>`
+                <button onclick=removeProduct(event) type="button" class="remove-livro-button">X</button>
+            </div>
+        </div>`
 
     const tableBody = document.querySelector(".produtos-carrinho")
     tableBody.append(newCartProduct)
     updateTotal(newCartProduct)
-    newCartProduct.getElementsByClassName("product-qtd-input")[0].addEventListener("change", checkIfinputInsNull)
-    newCartProduct.getElementsByClassName("remove-livro-button")[0].addEventListener("click", removeProduct)
 }
 
 
 function removeProduct(event) {
     console.log(event)
     event.target.parentElement.parentElement.parentElement.remove()
-    // updateTotal()
+    updateTotal()
 }
 function updateTotal() {
     let totalAmount = 0
     const carlivros = document.getElementsByClassName("produto")
     for (var i = 0; i < carlivros.length; i++) {
-        const productPrice = carlivros[i].getElementsByClassName("cart-product-price")[0].innerText.replace("R$", "").replace(",", ".")
+        const productPrice = carlivros[i].getElementsByClassName("cart-product-price")[0].innerText
+        // const productPrice = carlivros[i].getElementsByClassName("cart-product-price")[0].innerText.replace("R$", "").replace(",", ".")
         const productQuantity = carlivros[i].getElementsByClassName("product-qtd-input")[0].value
         totalAmount += productPrice * productQuantity
     }
@@ -97,11 +94,6 @@ function updateTotal() {
     totalAmount = totalAmount.replace(".", ",")
     document.querySelector(".cart-total-container span").innerText = "R$" + totalAmount
 }
-
-
-
-
-
 
 
 function abrirCarrinhoFlutuante() {

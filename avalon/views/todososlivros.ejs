@@ -51,13 +51,13 @@
             </div>
             <div class="grid-livros">
                 <% livros.forEach(el => { %>
-                    <li class="item">
-                        <img class="produto" src="/images/produtos/<%= el.capa %>" alt="dna">
+                    <li onclick=redirect() class="item">
+                        <img class="item-img" src="/images/produtos/<%= el.capa %>" alt="dna">
                         <div>
-                            <h5>
+                            <h5 class="item-name">
                                 <%= el.titulo %>
                             </h5>
-                            <span>
+                            <span class="item-price">
                                 R$ <%= el.preco %>
                             </span>
                             <button class="comprar"><a href="#">COMPRAR</a></button>
@@ -74,13 +74,13 @@
             <div class="carrousel" id="carrousel">
                 <div class="gallery" id="gallery">
                     <% livros.forEach(el => { %>
-                        <li class="item current-item">
-                            <img class="produto" src="/images/produtos/<%= el.capa %>" alt="dna">
+                        <li onclick=redirect() class="item current-item">
+                            <img class="item-img" src="/images/produtos/<%= el.capa %>" alt="dna">
                             <div>
-                                <h5>
+                                <h5 class="item-name">
                                     <%= el.titulo %>
                                 </h5>
-                                <span>
+                                <span class="item-price">
                                     R$ <%= el.preco %>
                                 </span>
                                 <button class="comprar"><a href="#">COMPRAR</a></button>

@@ -1,8 +1,9 @@
-// function redirectFunction() {
-//   document.querySelector(".item").location.href("/sinopse/1");
-// }
+function redirect(event) {
+  window.location.href = "/produto/sinopse/" + 1
 
-// ------CARROUSEL LANÇAMENTO -----
+}
+
+
 
 const gap = .1;
 
@@ -10,7 +11,7 @@ const carousel = document.getElementById("carrousel"),
   content = document.getElementById("gallery"),
   next = document.getElementById("next"),
   prev = document.getElementById("prev");
-  console.log(carousel)
+console.log(carousel)
 
 next.addEventListener("click", e => {
   carousel.scrollBy(width + gap, 0);
@@ -40,7 +41,7 @@ const carousel2 = document.getElementById("carrousel2"),
   content2 = document.getElementById("gallery2"),
   next2 = document.getElementById("next2"),
   prev2 = document.getElementById("prev2");
-  console.log(carousel2)
+console.log(carousel2)
 
 next2.addEventListener("click", e => {
   carousel2.scrollBy(width2 + gap, 0);

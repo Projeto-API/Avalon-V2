@@ -1,7 +1,13 @@
 const path = require('path');
 
+<<<<<<< HEAD
 
 module.exports ={
     config:path.resolve(__dirname, './config/config.json'),
     'models-path': path.resolve(__dirname, './models')
+=======
+module.exports = {
+  config: path.resolve(__dirname, './config/config.json'),
+  'models-path': path.resolve(__dirname, './models')
+>>>>>>> igorcr
 }

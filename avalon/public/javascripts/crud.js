@@ -40,7 +40,11 @@ function editModal(Livro = "{}") {
 
 
         const form = document.querySelector('.form-crud')
+<<<<<<< HEAD
         form.action = `/produto/editar/${produto.id}?_method=PUT`
+=======
+        form.action = `/admin/editar/${livro.id}?_method=PUT`
+>>>>>>> igorcr
 
     }
 

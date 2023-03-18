@@ -7,7 +7,12 @@ const methodOverride = require('method-override');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+<<<<<<< HEAD
 const bibliotecaRouter = require('./routes/biblioteca');
+=======
+const adminRouter = require('./routes/admin');
+
+>>>>>>> igorcr
 
 const app = express();
 
@@ -24,7 +29,12 @@ app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+<<<<<<< HEAD
 app.use('/biblioteca', bibliotecaRouter);
+=======
+app.use('/admin', adminRouter);
+
+>>>>>>> igorcr
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -42,4 +52,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+<<<<<<< HEAD
 module.exports = app;
+=======
+module.exports = app;
+>>>>>>> igorcr

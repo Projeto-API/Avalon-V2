@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const SinopseModel = require('../models/SinopseModel')
 
 module.exports = {
@@ -6,4 +7,17 @@ module.exports = {
        
         res.render('Sinopse', { title: 'Express', css: 'Sinopse', Sinopse });
     }
+=======
+const { Sinopse } = require('../models');
+
+module.exports = {
+  index: async (req, res) => {
+    const sinopse = await Sinopse.findAll({
+      order: [
+        ['nome', 'desc']
+      ]
+    });
+    res.render('sinopse', { sinopse });
+  }
+>>>>>>> igorcr
 }

@@ -1,4 +1,5 @@
 var express = require('express');
+<<<<<<< HEAD
 const CadastroUsuarioController = require('../controllers/CadastroUsuarioController');
 const LoginController = require('../controllers/LoginController');
 const MinhaContaController = require('../controllers/MinhaContaController');
@@ -25,4 +26,13 @@ router.get('/intranet', function (req, res, next) {
 });
 
 
+=======
+var router = express.Router();
+
+/* GET users listing. */
+router.get('/', function(req, res, next) {
+  res.send('respond with a resource');
+});
+
+>>>>>>> igorcr
 module.exports = router;

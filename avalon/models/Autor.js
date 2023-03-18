@@ -10,7 +10,22 @@ const criarAutorModel = (sequelize, dataTypes) => {
     nome: {
       type: dataTypes.STRING,
       allowNull: false
+<<<<<<< HEAD
     }
+=======
+    },
+
+    biografia: {
+      type: dataTypes.STRING,
+      allowNull: false
+    },
+
+    foto: {
+      type: dataTypes.STRING,
+      allowNull: false
+    }
+
+>>>>>>> igorcr
   };
 
   const opcoes = {

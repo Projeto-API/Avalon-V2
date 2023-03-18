@@ -1,0 +1,73 @@
+<%- include('partials/header') %>
+
+  <link rel="stylesheet" href="/stylesheets/admin.css">
+  <script src="/javascripts/crud.js" defer></script>
+
+  <main>
+    <div class="crud-types">
+      <button class="btnCrud"><a href="/admin/categorias">Categorias</a></button>
+      <button class="btnCrud"><a href="/admin/editoras">Editoras</a></button>
+      <button class="btnCrud"><a href="/admin">Livros</a></button>
+    </div>
+    <div class="container-crud">
+
+      <h4 class="crud-title">CADASTRO DE CATEGORIA</h4>
+
+      <div class="container-header-crud">
+        <div class="header-crud">
+          <button class="btnCrud"><a href="/admin">Todos</a></button>
+          <button onclick="openModal()" class="btnCrud"><a>Adicionar</a></button>
+          <button class="btnCrud"><a> Deletar</a></button>
+          <div class="search-crud">
+            <form action="/admin/buscar" method="get">
+              <input type="text" name="buscar" id="read" placeholder="Buscar ">
+            </form>
+          </div>
+
+        </div>
+      </div>
+      <div class="divTable">
+        <table>
+          <thead>
+            <tr>
+              <th><input type="checkbox"></th>
+              <th>ID</th>
+              <th>Categoria</th>
+              
+              <th class="acao">Editar</th>
+              <th class="acao">Excluir</th>
+            </tr>
+          </thead>
+          
+
+        </table>
+      </div>
+
+      <div class="modal-container">
+        <div class="modal">
+
+          <form class="form-crud" action="/admin" method="POST" enctype="multipart/form-data">
+            <br>
+            <label class="form-crud-label" for="categoria">Categoria:</label> <br>
+            <select name="categoria" id="categoria">
+              <option value="hw">Histórias em Quadrinhos</option>
+              <option value="livro">Livros</option>
+            </select>
+
+            <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
+            <input class="form-crud-input" id="titulo" type="text" name="nome" placeholder="Digite o nome do livro ">
+
+
+       
+            <select name="categoria" id="categoria">
+              <option value="comum">Capa Comum</option>
+              <option value="dura">Capa Dura</option>
+            </select>
+
+
+            <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
+          </form>
+        </div>
+      </div>
+      </section>
+  </main>

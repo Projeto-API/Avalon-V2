@@ -81,18 +81,21 @@
                   value="<%= livro && livro.isbn %>">
 
                 <label class="form-crud-label" for="sinopse">Sinopse:</label> <br>
-                <textarea class="form-crud-input" name="sinopse" placeholder="Escreva aqui a sinopse do livro"><%= livro && livro.sinopse %></textarea>
+                <textarea class="form-crud-input" name="sinopse"
+                  placeholder="Escreva aqui a sinopse do livro"><%= livro && livro.sinopse %></textarea>
 
                 <label class="form-crud-label" for="capaImg">Imagem Capa:</label> <br>
-                <span class="capaupload"><%= livro && livro.capa %></span>
+                <span class="capaupload">
+                  <%= livro && livro.capa %>
+                </span>
 
-                <input type="file" class="alteraInp" name="capa" <%= livro && livro.capa %>>
+                <input type="file" class="alteraInp" name="capa" <%=livro && livro.capa %>>
 
-              
+
                 <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
-      </form>
-       
-</form>
+            </form>
+
+        </form>
 
   </main>
 

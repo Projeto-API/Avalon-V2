@@ -66,9 +66,9 @@ main {
     color: #386C5F;
 }
 
-input[type="number"] {
+/* input[type="number"] {
     -moz-appearance: textfield;
-}
+} */
 
 .excluir {
     display: block;

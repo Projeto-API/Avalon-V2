@@ -52,16 +52,16 @@
             <div class="galeria">
                 <% livros.forEach((servico, i) => {%>
                     <div id="servico-<%= i %>" class="catalogo_produtos servico-<%= i %>">
-                        <img src="<%= servico.imagem %>" >
-                        <form id="formCarrinho" action="/carrinho" method="post">
+                        <img  class="product-identification" src="<%= servico.imagem %>" >
+                        <form id="formCarrinho" method="post">
                             <div>
-                                <a ><%= servico.titulo %> </a>   
+                                <strong class="cart-product-title" a ><%= servico.titulo %> </strong>   
                             </div>
                             <div>
-                                <a> R$ <%= servico.preco %></a>
+                                <span class="cart-product-price"> R$ <%= servico.preco %></span>
                             </div>
                             <input type="hidden" name="produtoId" value="<%= servico.id %>">
-                            <button type="submit" class="comprar">COMPRAR</a></button>
+                            <button type="button" class="comprar">COMPRAR</a></button>
                         </form>
                     </div>
                 <% }) %>

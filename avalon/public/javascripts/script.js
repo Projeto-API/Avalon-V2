@@ -1,7 +1,24 @@
-function redirect(event) {
-  window.location.href = "/produto/sinopse/" + 1
+var item = document.querySelectorAll(".item img"); 
 
-}
+item.forEach(function(el) {
+  el.addEventListener("click", function(event){
+    const id = event.target.id;
+  
+    window.location.href = "/produto/sinopse/" + id
+  })
+})
+
+// const item =document.getElementsByClassName('item')
+
+// item[0].addEventListener("click", e => {
+  
+//   window.location.href = "/produto/sinopse/"
+// })
+
+// function redirect(event) {
+//   item[0].window.location.href = "/produto/sinopse/" + 1
+
+// }
 
 
 

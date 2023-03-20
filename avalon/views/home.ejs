@@ -27,8 +27,8 @@
                 <div class="carrousel" id="carrousel">
                     <div class="gallery" id="gallery">
                         <% livrosLancamento.forEach(el=> { %>
-                            <li onclick=redirect() class="item current-item" onclick=redirectFunction()>
-                                <img class="item-img" src="/images/produtos/<%= el.capa %>" alt="dna">
+                            <li class="item current-item">
+                                <img class="item-img" src="/images/produtos/<%= el.capa %>" alt="dna" id="<%= el.id %>">
                                 <div>
                                     <h5 class="item-name">
                                         <%= el.titulo %>

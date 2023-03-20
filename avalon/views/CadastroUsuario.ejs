@@ -1,24 +1,39 @@
 <%- include('partials/header') %>
-<link rel="stylesheet" href="/stylesheets/CadastroUsuario.css">
-<main>
-  
-    <script  src="/javascripts/validacoescadastro.js" defer></script>
-    <section class="cadastro">
-        <div class="cadastro2">
-            <h5>CADASTRO</h5>
-        </div>
-        <form class="form-auth card" method="post" action="/registro">
-            <li class="email">E-mail</li>
-            <input type="email" name="email" placeholder="Digite seu email">
-            <li class="senha">Senha</li>
-            <input type="senha" name="senha" placeholder="Digite sua senha">
-            <li class="password">Confirme sua senha</li>
-            <input type="password" name="password" placeholder="Confirme sua senha">
-            <li class="telefone">Telefone</li>
-            <input type="telefone" name="telefone" placeholder="Digite um numero de telefone">
-            <button class="entrar" type="submit"><a href="/views/MinhaConta.ejs">
-                    CADASTRE-SE
-            </button></a>
-        </form>
-</main>
-<%- include('partials/footer') %>
+    <script src="/javascripts/validacoesCadastro.js" defer></script>
+    <link rel="stylesheet" href="/stylesheets/CadastroUsuario.css">
+    <main>
+
+        <section class="cadastro">
+            <div class="cadastro2">
+                <h5>CADASTRO</h5>
+            </div>
+            <form class="form-auth card" action="/users/cadastro" method="post">
+                <br>
+                <label for="email">E-mail</label>
+                <input class="input-form" type="email" name="email" placeholder="Digite seu email">
+                <label for="senha">Senha</label>
+                <input class="input-form" type="password" name="senha" placeholder="Digite sua senha">
+                <label for="password">Confirme sua senha</label>
+                <input class="input-form" type="password" name="password" placeholder="Confirme sua senha">
+                <br>
+                <label for="nome">Nome</label>
+                <input class="input-form" type="text" name="nome" placeholder="Digite seu nome">
+                <label for="sobrenome">Sobrenome</label>
+                <input class="input-form" type="text" name="sobrenome" placeholder="Digite seu sobrenome">
+                <label for="data_nascimento">Data de Nascimento</label>
+                <input class="input-form" type="date" name="data_nascimento"
+                    placeholder="Digite sua data de nascimento">
+                <label for="doc_identificacao">CPF</label>
+                <input class="input-form" type="text" name="doc_identificacao" placeholder="Digite seu CPF">
+                <label for="cep">CEP</label>
+                <input class="input-form" type="text" name="cep" placeholder="Digite seu CEP">
+                <label for="endereco">Endereço</label>
+                <input class="input-form" type="text" name="endereco" placeholder="Digite seu endereço">
+                <label for="foto">Foto</label>
+                <input type="file" name="foto">
+                <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
+
+            </form>
+        </section>
+    </main>
+    <%- include('partials/footer') %>

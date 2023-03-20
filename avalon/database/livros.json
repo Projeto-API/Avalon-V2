@@ -1,13 +1,5 @@
 [
     {
-<<<<<<< HEAD
-        "id": 4,
-        "titulo": "harry potter e a ordem da fenix",
-        "editora": "jk rowling"
-    },
-    {
-        "id": 5,
-=======
         "id": 3,
         "titulo": "Vingadores",
         "editora": "Marvel"
@@ -31,16 +23,10 @@
     },
     {
         "id": 10,
->>>>>>> igorcr
         "titulo": "harry potter e a ordem da fenix",
         "editora": "George Lucas"
     },
     {
-<<<<<<< HEAD
-        "id": 6,
-        "titulo": "crepusculo",
-        "editora": "editora"
-=======
         "id": 11,
         "titulo": "1234",
         "editora": "George Lucas"
@@ -79,6 +65,5 @@
             "34343"
         ],
         "categoria": "comum"
->>>>>>> igorcr
     }
 ]

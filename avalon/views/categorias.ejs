@@ -1,29 +1,24 @@
 <%- include('partials/header') %>
-
   <link rel="stylesheet" href="/stylesheets/admin.css">
-  <script src="/javascripts/crud.js" defer></script>
-
+ 
   <main>
     <div class="crud-types">
-      <button class="btnCrud"><a href="/admin/categorias">Categorias</a></button>
       <button class="btnCrud"><a href="/admin/editoras">Editoras</a></button>
       <button class="btnCrud"><a href="/admin">Livros</a></button>
+      <button class="btnCrud"><a href="/admin/autores">Autores</a></button>
     </div>
     <div class="container-crud">
-
-      <h4 class="crud-title">CADASTRO DE CATEGORIA</h4>
+      <h4 class="crud-title">CATEGORIAS</h4>
 
       <div class="container-header-crud">
         <div class="header-crud">
-          <button class="btnCrud"><a href="/admin">Todos</a></button>
-          <button onclick="openModal()" class="btnCrud"><a>Adicionar</a></button>
-          <button class="btnCrud"><a> Deletar</a></button>
+          <button class="btnCrud"><a href="/admin/categorias">Todos</a></button>
+          <button class="btnCrud"><a href="/admin/categorias/form">Adicionar</a></button>
           <div class="search-crud">
-            <form action="/admin/buscar" method="get">
-              <input type="text" name="buscar" id="read" placeholder="Buscar ">
+            <form action="/admin/categorias/buscar" method="get">
+              <input type="text" name="search" id="read" placeholder="Buscar ">
             </form>
           </div>
-
         </div>
       </div>
       <div class="divTable">
@@ -32,42 +27,34 @@
             <tr>
               <th><input type="checkbox"></th>
               <th>ID</th>
-              <th>Categoria</th>
-              
+              <th>Tipo</th>
               <th class="acao">Editar</th>
               <th class="acao">Excluir</th>
             </tr>
           </thead>
-          
+          <tbody>
 
+            <% categorias.forEach(el=> { %>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>
+                  <%= el.id %>
+                <td>
+                  <%= el.tipo %>
+                </td>
+                <td class="acao">
+                  <button class="crudform"><a href="/admin/categorias/editar/<%= el.id %>"><i
+                        class='bx bx-edit'></i></a></i></button>
+                </td>
+                <td class="acao">
+                  <form action="/admin/categorias/deletar/<%= el.id %>?_method=DELETE" method="post">
+                    <button class="crudform"><i class='bx bx-trash'></i></button>
+                  </form>
+                </td>
+              </tr>
+              <% }) %>
+          </tbody>
         </table>
       </div>
-
-      <div class="modal-container">
-        <div class="modal">
-
-          <form class="form-crud" action="/admin" method="POST" enctype="multipart/form-data">
-            <br>
-            <label class="form-crud-label" for="categoria">Categoria:</label> <br>
-            <select name="categoria" id="categoria">
-              <option value="hw">Histórias em Quadrinhos</option>
-              <option value="livro">Livros</option>
-            </select>
-
-            <label class="form-crud-label" for="nome">Titulo do Livro:</label> <br>
-            <input class="form-crud-input" id="titulo" type="text" name="nome" placeholder="Digite o nome do livro ">
-
-
-       
-            <select name="categoria" id="categoria">
-              <option value="comum">Capa Comum</option>
-              <option value="dura">Capa Dura</option>
-            </select>
-
-
-            <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
-          </form>
-        </div>
-      </div>
-      </section>
   </main>
+

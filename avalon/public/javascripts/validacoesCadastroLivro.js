@@ -47,10 +47,10 @@ window.addEventListener('load', function () {
 
   const validatepreco = function (input) {
     const { value } = input;
-    if (value.includes('$') && value.length >= max) {
+    if (value.length >= max) {
       return
     } else {
-      createError(input, 'O campo deve conter $ ', 'input');
+      createError(input, 'input');
     }
   };
 

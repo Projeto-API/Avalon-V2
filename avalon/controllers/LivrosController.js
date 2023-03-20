@@ -1,69 +1,3 @@
-const fs = require('fs');
-const path = require('path');
-<<<<<<< HEAD
-
-const livrosPath = path.resolve(__dirname, '../database/livros.json');
-
-const getLivros = () => {
-  return JSON.parse(fs.readFileSync(livrosPath));
-}
-
-function saveLivros (livros) {
-  fs.writeFileSync(livrosPath, JSON.stringify(livros, null, 4));
-}
-
-module.exports = {
-  index(req, res) {
-    res.render('biblioteca', { livros: getLivros() });
-  },
-
-  form (req, res) {
-    let livro;
-    let id = req.params.id;
-
-    if (id) {
-      livro = getLivros().find(livro => livro.id == id);
-    }
-
-    res.render('adicionar-livro', { livro });
-  },
-
-  criar (req, res) {
-    const livros = getLivros();
-
-    livros.push({
-      id: livros.at(-1).id + 1,
-      ...req.body
-    });
-
-    saveLivros(livros);
-    res.redirect('/biblioteca');
-  },
-
-  editar (req, res) {
-    const id = req.params.id;
-    const livros = getLivros()
-    const livro = livros.find(livro => livro.id == id);
-
-    livro.titulo = req.body.titulo;
-    livro.editora = req.body.editora;
-
-    saveLivros(livros);
-    res.redirect('/biblioteca');
-  },
-
-  deletar (req, res) {
-    const id = req.params.id;
-    let livros = getLivros();
-
-    livros = livros.filter(livro => livro.id != id);
-
-    saveLivros(livros);
-    res.redirect('/biblioteca');
-=======
-const { Livro, Editora, Autor, Categoria } = require('../models');
-
-const livrosPath = path.resolve(__dirname, '../database/livros.json');
 
 // const getLivros = () => {
 //   return JSON.parse(fs.readFileSync(livrosPath));
@@ -73,79 +7,144 @@ const livrosPath = path.resolve(__dirname, '../database/livros.json');
 //   fs.writeFileSync(livrosPath, JSON.stringify(livros, null, 4));
 // }
 
+
+const fs = require('fs');
+const path = require('path');
+const { Op } = require('sequelize');
+const { Livro, Editora, Autor, Categoria } = require('../models');
+
+Op
+
+
+
 module.exports = {
-  async index(req, res) {
-    const livros = await Livro.findAll();
-    const editoras = await Editora.findAll();
-    const autores = await Autor.findAll();
-    const categorias = await Categoria.findAll();
-    
-
-    res.render('admin', { livros, editoras, categorias, autores })
-  },
-
-  async form (req, res) {
-    const editoras = await Editora.findAll()
-    const autores = await Autor.findAll()
-    const categorias = await Categoria.findAll()
-
-   
-    let livro;
-    let id = req.params.id;
-
-    res.render('adicionarLivro', { livro: null, editoras, categorias, autores  });
-
-  },
-
-  async buscarLivro(req, res) {
-    const { id } = req.params
-
-    const livro = await Livro.findByPk( id )
-    console.log(livro)
-    const editora = await Editora.findByPk(livro.editoras_id )
-    res.render('adicionarLivro', { livro, editora });
-
-  },
-  
-  async criar (req, res) {
-    const {titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor, categoria} = req.body
-    await Livro.create({titulo, preco, acabamento,sinopse, isbn, idioma, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria})
-  
-    res.redirect('/admin');
-  },
-
-  async editar(req, res) {
-    const { id } = req.params
-    
-    const { titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor} = req.body
-
-    console.log(req.body)
-    await Livro.update({
-      titulo, preco, acabamento, sinopse, isbn, idioma, paginas, editora, autor
-    },
-      {
-        where: { id }
-      })
-    res.redirect('/admin');
-  },
-
-
-
-  async deletar(req, res) {
-    const { id } = req.params
-
+  index: async (req, res) => {
     try {
+      const livros = await Livro.findAll({
+        include: [
+          { model: Editora, as: 'editora' },
+          { model: Autor, as: 'autor' },
+          { model: Categoria, as: 'categoria' }
+        ]
+      });
+      
+      res.render('admin', { livros })
+
+    } catch (erro) {
+      console.log(erro)
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
+  },
+
+  search: async (req, res) => {
+    try {
+      const { search } = req.query;
+      const livros = await Livro.findAll({
+        where: search ? {
+          [Op.or]: [
+            { titulo: { [Op.like]: '%' + search + '%' } },
+            { id: search }
+          ]
+        } : null
+      });
+
+      res.render('admin', { livros })
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
+  },
+
+  form: async (req, res) => {
+    try {
+      const editoras = await Editora.findAll()
+      const autores = await Autor.findAll()
+      const categorias = await Categoria.findAll()
+
+      let livro;
+      let id = req.params.id;
+
+      res.render('adicionarLivro', { livro: null, editoras, categorias, autores });
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
+  },
+
+  buscarLivro: async (req, res) => {
+    try {
+      const { id } = req.params
+
+      const livro = await Livro.findByPk(id)
+      const editoras = await Editora.findAll()
+      const categorias = await Categoria.findAll()
+      const autores = await Autor.findAll()
+
+      console.log(livro)
+      res.render('adicionarLivro', { livro, editoras, categorias, autores });
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
+
+  },
+
+  criar: async (req, res) => {
+    try {
+      const { titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, categoria, imagens } = req.body
+      const capa = req.files.capa[0].filename;
+      await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria, capa, imagens })
+
+      res.redirect('/admin');
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
+  },
+
+  editar: async (req, res) => {
+    try {
+      const { id } = req.params
+
+      const { titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, capaguardada } = req.body
+
+      const capaupload = req.files.capa?.[0].filename;
+      console.log(capaguardada)
+      console.log(req.body)
+      await Livro.update({ titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, capa: capaupload ? capaupload : capaguardada },
+        {
+          where: { id }
+        })
+      res.redirect('/admin');
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
+  },
+
+
+
+  deletar: async (req, res) => {
+    try {
+      const { id } = req.params
 
       await Livro.destroy({
         where: {
           id
         }
       })
-    } catch (error) {
-      console.log("erro ao deletar livro", error)
+
+      return res.redirect('/admin');
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
     }
-    console.log("O produto de id " + req.body.id + " foi deletado com sucesso");
-    return res.redirect('/admin');
->>>>>>> igorcr
   }
 }

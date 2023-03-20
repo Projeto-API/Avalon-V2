@@ -1,9 +1,13 @@
-const LoginModel = require('../models/LoginModel')
 
 module.exports = {
-    listaLogin: (req, res) => {
-        const Login = LoginModel.index();
-       
-        res.render('Login', { title: 'Express', css: 'Login', Login });
+  index: async (req, res) => {
+    try {
+
+      res.render('login');
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
     }
+  }
 }

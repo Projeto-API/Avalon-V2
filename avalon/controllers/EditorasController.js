@@ -1,110 +1,113 @@
 const { Editora } = require('../models');
-<<<<<<< HEAD
-const {Op} = require('sequelize');
-
-module.exports = {
-  index: async (req, res) => {
-    const { search } = req.query;
-    const editoras = await Editora.findAll({
-      where: search ? { nome: {[Op.like]: '%' + search + '%'} } : null 
-=======
 const { Op } = require('sequelize');
 
 module.exports = {
-  async index(req, res) {
+  index: async (req, res) => {
+    try {
 
-    const editoras = await Editora.findAll();
+      const editoras = await Editora.findAll();
 
-    res.render('editoras', { editoras })
+      res.render('editoras', { editoras })
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
   },
 
   search: async (req, res) => {
-    const { search } = req.query;
-    const editoras = await Editora.findAll({
-      where: search ? { nome: { [Op.like]: '%' + search + '%' } } : null
->>>>>>> igorcr
-    });
+    try {
+      const { search } = req.query;
+      const editoras = await Editora.findAll({
+        where: search ? {
+          [Op.or]: [
+            { nome: { [Op.like]: '%' + search + '%' } },
+            { id: search }
+          ]
+        } : null
+      });
 
-    res.render('editoras', { editoras });
+      res.render('editoras', { editoras })
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
   },
 
   form: async (req, res) => {
-    let editora;
-    const { id } = req.params;
+    try {
+      let editora;
+      const { id } = req.params;
 
-    if (id) editora = await Editora.findByPk(id);
+      if (id) editora = await Editora.findByPk(id);
 
-    res.render('adicionarEditora', { editora });
+      res.render('adicionarEditora', { editora });
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
   },
 
-<<<<<<< HEAD
-  criar: async (req, res) => {
-    const { nome } = req.body;
-    await Editora.create({ nome });
+  buscarEditora: async (req, res) => {
+    try {
+      const { id } = req.params
 
-    res.redirect('/editoras');
-=======
-  async buscarEditora(req, res) {
-    const { id } = req.params
+      const editora = await Editora.findByPk(id)
+      res.render('adicionarEditora', { editora });
 
-    const editora = await Editora.findByPk(id)
-    res.render('adicionarEditora', { editora });
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
 
   },
 
   criar: async (req, res) => {
-    const { nome, cnpj } = req.body;
-    await Editora.create({ nome, cnpj });
+    try {
+      const { nome, cnpj } = req.body;
+      await Editora.create({ nome, cnpj });
 
-    res.redirect('/admin/editoras');
->>>>>>> igorcr
+      res.redirect('/admin/editoras');
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
   },
 
   editar: async (req, res) => {
-    const { id } = req.params;
-<<<<<<< HEAD
-    const { nome } = req.body;
+    try {
+      const { id } = req.params;
+      const { nome, cnpj } = req.body;
 
-    await Editora.update({ nome }, {
-      where: { id }
-    });
+      await Editora.update({ nome, cnpj }, {
+        where: { id }
+      });
 
-    res.redirect('/editoras');
+      res.redirect('/admin/editoras');
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
+    }
   },
 
-  remover: async (req, res) => {
-    const { id } = req.params;
-
-    await Editora.destroy({
-      where: { id },
-    });
-
-    res.redirect('/editoras');
-  },
-};
-=======
-    const { nome, cnpj } = req.body;
-
-    await Editora.update({ nome, cnpj }, {
-      where: { id }
-    });
-
-    res.redirect('/admin/editoras');
-  },
-
-  async deletar (req, res) {
+  deletar: async (req, res) => {
     const { id } = req.params
 
     try {
 
       await Editora.destroy({
-        where: {id}
+        where: { id }
       })
-    } catch (error) {
-      console.log("erro ao deletar editora", error)
+
+      return res.redirect('/admin/editoras');
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
     }
-    console.log("A editora de id " + req.body.id + " foi deletada com sucesso");
-    return res.redirect('/admin/editoras');
   }
 }
->>>>>>> igorcr

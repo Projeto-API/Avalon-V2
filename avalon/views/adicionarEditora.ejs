@@ -1,29 +1,6 @@
 <%- include('partials/header') %>
-<<<<<<< HEAD
-
-<main>
-  <h2>Adicionar livro</h2>
-
-  <% if (livro) { %>
-    <form class="add-form" action="/biblioteca/editar/<%= livro.id %>?_method=PUT" method="post">
-  <% } else { %>
-    <form class="add-form" action="/biblioteca" method="post">
-  <% } %>
-
-    <label for="titulo">Título</label>
-    <input type="text" name="titulo" id="titulo" value="<%= livro && livro.titulo %>">
-
-    <label for="editora">Editora</label>
-    <input type="text" name="editora" id="editora" value="<%= livro && livro.editora %>">
-
-    <button type="submit">Enviar</button>
-  </form>
-</main>
-
-<%- include('partials/footer') %>
-=======
   <link rel="stylesheet" href="/stylesheets/admin.css">
-  <script src="/javascripts/crud.js" defer></script>
+
   <main>
 
     <div class="modal">
@@ -53,11 +30,10 @@
 
 
                 <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
-
+            </form>
 
 
 
   </main>
 
   <%- include('partials/footer') %>
->>>>>>> igorcr

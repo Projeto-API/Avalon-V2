@@ -13,7 +13,8 @@ body {
 }
 
 /* HEADER TIPO 2 */
-.header2, .footer {
+.header2,
+.footer {
     display: none;
 }
 
@@ -29,13 +30,11 @@ main {
     display: flex;
     padding-top: 70px;
     justify-content: center;
-    
+
 }
 
 .cadastro {
-    
-    width: 100%;
-    max-width: 365px;
+    width: 365px;
     margin: 1rem;
     top: 50px;
     display: flex;
@@ -48,8 +47,6 @@ main {
 
 }
 
-
-
 .cadastro2 {
     display: flex;
     font-weight: bolder;
@@ -57,9 +54,16 @@ main {
 
 }
 
-.email {
+.form-cadastro-usuario {
     display: flex;
     font-weight: bold;
+}
+
+.form-login, .form-usuario {
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+
 }
 
 #span1 {
@@ -109,14 +113,6 @@ div .exemplo {
 }
 
 
-.telefone {
-    display: flex;
-    font-weight: bold;
-    font-size: 15px;
-    font-weight: bolder;
-
-}
-
 
 #span3 {
     letter-spacing: 2px;
@@ -145,14 +141,13 @@ div .exemplo {
 }
 
 .form-auth li {
-   
     margin: .5rem;
-    padding-left: 2rem;
+    padding: 5px 0;
     width: 100%;
     text-align: left;
 }
 
-.form-auth input {
+.input-form {
     font-size: .9rem;
     background: white;
     padding-left: 1rem;
@@ -189,7 +184,7 @@ h5 {
     width: 100%;
     max-width: 46rem;
     margin-bottom: 10px;
-    margin-left: 5rem;
+    margin-left: 10px;
     font-size: 12px;
     border-radius: 2rem;
     color: red;

@@ -1,38 +1,38 @@
-var express = require('express');
-<<<<<<< HEAD
-const CadastroUsuarioController = require('../controllers/CadastroUsuarioController');
+const express = require('express');
+const router = express.Router();
+const path = require('path');
+const multer = require('multer');
+
+// MULTER AUTORES
+// const multerDiskStorageUsuario = multer.diskStorage({
+//     destination: (req, file, callback) => {
+//         const folder = path.join(__dirname, '../public/images/usuarios');
+//         callback(null, folder);
+//     }
+//     ,
+//     filename: (req, file, callback) => {
+//         const imageName = Date.now() + path.extname(file.originalname);
+//         callback(null, imageName)
+//     }
+// })
+// const filefoto = multer({ storage: multerDiskStorageUsuario });
+
+
+const MinhasComprasController = require('../controllers/MinhasComprasController');
 const LoginController = require('../controllers/LoginController');
-const MinhaContaController = require('../controllers/MinhaContaController');
-
-var router = express.Router();
-
-// /* GET home page. */
-router.get('/CadastroUsuario', CadastroUsuarioController.listaCadastroUsuario);
-
-router.get('/Login', LoginController.listaLogin);
-
-router.get('/MinhaConta', MinhaContaController.listaMinhaConta);
-
-router.get('/checkout', function (req, res, next) {
-  res.render('checkout', { title: 'Express', css: 'checkout' });
-});
-
-router.get('/carrinho', function (req, res, next) {
-  res.render('carrinho', { title: 'Express', css: 'carrinho' });
-});
-
-router.get('/intranet', function (req, res, next) {
-  res.render('intranet', { title: 'Express', css: 'MinhaConta' });
-});
+const UsuarioController = require('../controllers/CadastrousuarioController');
 
 
-=======
-var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/compras', MinhasComprasController.index);
+router.get('/login', LoginController.index);
+router.get('/cadastro', UsuarioController.index);
+router.post('/cadastro', UsuarioController.criar);
 
->>>>>>> igorcr
+
+
+// POST E PUT ROUTES
+
+// router.post('/cadastro', filefoto.fields([{ name: 'foto' }]), CadastrousuarioController.criar);
+
 module.exports = router;

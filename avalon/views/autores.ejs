@@ -1,39 +1,6 @@
 <%- include('partials/header') %>
-<<<<<<< HEAD
-<link rel="stylesheet" href="stylesheets/style.css">
-<main>
-  <div class="column-header">
-    <div class="column">
-      <h4>ID</h4>
-    </div>
-    <div class="column">
-      <h4>Nome</h4>
-    </div>
-    <div class="column">
-      <h4>Ações</h4>
-    </div>
-  </div>
-
-  <div class="body">
-    <% autores.forEach(autor => { %>
-      <div class="row">
-        <span class="item"><%= autor.id %></span>
-        <span class="item"><%= autor.nome %></span>
-        <span class="item actions">
-          <a href="/biblioteca/autores/form/<%= autor.id %>">Editar</a>
-          <form action="/biblioteca/autores/deletar/<%= autor.id %>?_method=DELETE" method="post">
-            <button type="submit">Deletar</button>
-          </form>
-        </span>
-      </div>
-    <% }) %>
-  </div>
-</main>
-
-<%- include('partials/footer') %>
-=======
   <link rel="stylesheet" href="/stylesheets/admin.css">
-  <script src="/javascripts/crud.js" defer></script>
+  
   <main>
     <div class="crud-types">
       <button class="btnCrud"><a href="/admin/categorias">Categorias</a></button>
@@ -91,5 +58,3 @@
       </div>
   </main>
 
-  <%- include('partials/footer') %>
->>>>>>> igorcr

@@ -1,5 +1,5 @@
 <%- include('partials/header') %>
-<link rel="stylesheet" href="/stylesheets/Todososlivros.css">
+    <link rel="stylesheet" href="/stylesheets/Todososlivros.css">
 
     <main class="Livros">
         <aside class="menu_categoria">
@@ -49,115 +49,22 @@
                     <option value="maisVendido">mais Vendido</option>
                 </select>
             </div>
-            <div class="galeria">
-                <div class="catalogo_Livros">
-                    <img src="/images/1661966653.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-
-                <div class="catalogo_Livros">
-                    <img src="/images/1663870733.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-
-                <div class="catalogo_Livros">
-                    <img src="/images/1664561630.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-
-                <div class="catalogo_Livros">
-                    <img src="/images/1664561630.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-
-                <div class="catalogo_Livros">
-                    <img src="/images/1664561630.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-
-                <div class="catalogo_Livros">
-                    <img src="/images/1664561630.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-
-                <div class="catalogo_Livros">
-                    <img src="/images/capa (1).jpg">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-
-                <div class="catalogo_Livros">
-                    <img src="/images/capa (1).jpg">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-
-                <div class="catalogo_Livros">
-                    <img src="/images/capa (1).jpg">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-
-                </div>
-
-                <div class="catalogo_Livros">
-                    <img src="/images/1661966653.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-
-                </div>
-                <div class="catalogo_Livros">
-                    <img src="/images/1661966653.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-
-                </div>
-                <div class="catalogo_Livros">
-                    <img src="/images/1661966653.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-                <div class="catalogo_Livros">
-                    <img src="/images/1663870733.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-                <div class="catalogo_Livros">
-                    <img src="/images/1663870733.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-                <div class="catalogo_Livros">
-                    <img src="/images/1663870733.webp">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
-                <div class="catalogo_Livros">
-                    <img src="/images/capa (1).jpg">
-                    <a>Titulo do Livro </a>
-                    <a> R$29,90</a>
-                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                </div>
+            <div class="grid-livros">
+                <% livros.forEach(el => { %>
+                    <li onclick=redirect() class="item">
+                        <img class="item-img" src="/images/produtos/<%= el.capa %>" alt="dna">
+                        <div>
+                            <h5 class="item-name">
+                                <%= el.titulo %>
+                            </h5>
+                            <span class="item-price">
+                                R$ <%= el.preco %>
+                            </span>
+                            <button class="comprar"><a href="#">COMPRAR</a></button>
+                        </div>
+                    </li>
+                    <% }) %>
+                
             </div>
     </main>
     <section>
@@ -166,79 +73,20 @@
 
             <div class="carrousel" id="carrousel">
                 <div class="gallery" id="gallery">
-                    <li class="item current-item">
-                        <img src="/images/produtos/my broken mariko/mariko-capa.jpg" alt="mariko">
-                        <div>
-                            <h5>MY BROKEN MARIKO</h5>
-                            <span>R$ 39,90</span>
-                            <button class="comprar"><a href="#">COMPRAR</a></button>
-                        </div>
-                    </li>
-
-                    <li class="item current-item">
-                        <img src="/images/produtos/DNA/DNA capa.jpg" alt="dna">
-                        <div>
-                            <h5>DNA MILIONÁRIO</h5>
-                            <span>R$ 49,90</span>
-                            <button class="comprar"><a href="#">COMPRAR</a></button>
-                        </div>
-                    </li>
-
-                    <li class="item current-item">
-                        <img src="/images/produtos/Lady killers/capa.jpeg" alt="lady-killers">
-                        <div>
-                            <h5>LADY KILLERS</h5>
-                            <span>R$ 59,90</span>
-                            <button class="comprar"><a href="#">COMPRAR</a></button>
-                        </div>
-                    </li>
-
-                    <li class="item current-item">
-                        <img src="/images/produtos/manifesto/capa.jpg" alt="hobbit">
-                        <div>
-                            <h5>MANIFESTO DO PARTIDO COMUNISTA</h5>
-                            <span>R$ 34,90</span>
-                            <button class="comprar"><a href="#">COMPRAR</a></button>
-                        </div>
-                    </li>
-
-                    <li class="item current-item">
-                        <img src="/images/produtos/moby dick/mobydick-capa.jpg" alt="moby-dick">
-                        <div>
-                            <h5>MOBY DICK</h5>
-                            <span>R$ 129,90</span>
-                            <button class="comprar"><a href="#">COMPRAR</a></button>
-                        </div>
-                    </li>
-
-                    <li class="item current-item">
-                        <img src="/images/produtos/calibã/caliba-capa.jpg" alt="caliba">
-                        <div>
-                            <h5>CALIBÃ E A BRUXA</h5>
-                            <span>R$ 59,90</span>
-                            <button class="comprar"><a href="#">COMPRAR</a></button>
-                        </div>
-                    </li>
-
-                    <li class="item current-item">
-                        <img src="/images/produtos/moby dick/mobydick-capa.jpg" alt="moby-dick">
-                        <div>
-                            <h5>MOBY DICK</h5>
-                            <span>R$ 129,90</span>
-                            <button class="comprar"><a href="#">COMPRAR</a></button>
-                        </div>
-                    </li>
-
-                    <li class="item current-item">
-                        <img src="/images/produtos/calibã/caliba-capa.jpg" alt="caliba">
-                        <div>
-                            <h5>CALIBÃ E A BRUXA</h5>
-                            <span>R$ 59,90</span>
-                            <button class="comprar"><a href="#">COMPRAR</a></button>
-                        </div>
-                    </li>
-
-
+                    <% livros.forEach(el => { %>
+                        <li onclick=redirect() class="item current-item">
+                            <img class="item-img" src="/images/produtos/<%= el.capa %>" alt="dna">
+                            <div>
+                                <h5 class="item-name">
+                                    <%= el.titulo %>
+                                </h5>
+                                <span class="item-price">
+                                    R$ <%= el.preco %>
+                                </span>
+                                <button class="comprar"><a href="#">COMPRAR</a></button>
+                            </div>
+                        </li>
+                        <% }) %>
                 </div>
             </div>
             <button id="prev" class="arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -246,8 +94,8 @@
                     <path
                         d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
                 </svg></button>
-            <button id="next" class="arrow-right control"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                    height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+            <button id="next" class="arrow-right control"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
                     <path
                         d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
                 </svg></button>

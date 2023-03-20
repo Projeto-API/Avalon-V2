@@ -1,25 +1,40 @@
-// const carrinho = require('../database/carrinho.json');
-// const path = require('path');
-// const fs = require('fs');
+const criarCarrinhoModel = (sequelize, DataType) => {
+    const colunas = {
+        id: {
+            type: DataType.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
+        },
+        titulo: {
+            type: DataType.STRING,
+            allowNull: false
+        },
+        preco: {
+            type:DataType.DECIMAL,
+            allowNull: false
+        },
+        quantidade: {
+            type:DataType.INTEGER,
+            allowNull: false
+        },
+        imagem: {
+            type:DataType.STRING,
+            allowNull: false
+        },
+        
 
-// const filename = path.join(__dirname, "../database/carrinho.json");
+    };
 
-// module.exports = {
-//   save: function (data) {
-//     return fs.writeFileSync(filename, data);
-//   },
+    const opcoes = {
+        tableName: 'carrinho',
+        timetamps: false,
+        createdAt: false,
+        updatedAt: false
 
-//   add: function (LivroId) {
-//     carrinho.push(LivroId);
-//     this.save(JSON.stringify(carrinho, null, 4));
-//   },
+    };
 
-//   findAll: function () {
-//     return carrinho
-//   },
+    const Carrinho = sequelize.define('Carrinho', colunas, opcoes);
+    return Carrinho
+}
 
-//   remove: function (id) {
-//     const novoCarrinho = carrinho.filter(item => item != id);
-//     this.save(JSON.stringify(novoCarrinho, null, 4));
-//   }
-// }
+module.exports = criarCarrinhoModel;

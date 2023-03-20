@@ -21,9 +21,9 @@ const multer = require('multer');
 const MinhasComprasController = require('../controllers/MinhasComprasController');
 const LoginController = require('../controllers/LoginController');
 const UsuarioController = require('../controllers/CadastrousuarioController');
+const IntranetController = require('../controllers/IntranetController')
 
-
-
+router.get('/intranet', IntranetController.index);
 router.get('/compras', MinhasComprasController.index);
 router.get('/login', LoginController.index);
 router.get('/cadastro', UsuarioController.index);

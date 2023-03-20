@@ -1,6 +1,6 @@
 <%- include('partials/header') %>
   <link rel="stylesheet" href="/stylesheets/admin.css">
-  <script src="/javascripts/crud.js" defer></script>
+
   <main>
 
     <div class="modal">
@@ -14,9 +14,9 @@
       </h2>
 
       <% if (autor) { %>
-        <form class="add-form" action="/admin/autores/editar/<%= autor.id %>?_method=PUT" method="post">
+        <form class="add-form" action="/admin/autores/editar/<%= autor.id %>?_method=PUT" method="post" enctype="multipart/form-data">
           <% } else { %>
-            <form class="add-form" action="/admin/autores" method="post">
+            <form class="add-form" action="/admin/autores" method="post" enctype="multipart/form-data">
               <% } %>
                 <br>
 
@@ -29,8 +29,10 @@
                   placeholder="Escreva aqui a biografia do autor"><%= autor && autor.biografia %></textarea>
 
                 <label class="form-crud-label" for="foto">Imagem Autor:</label> <br>
-                <input type="file" class="alteraInp" name="foto" value="<%= autor && autor.foto %>">
-
+                <span class="fotoupload"><%= autor && autor.foto %></span>
+                
+                <input type="file" class="alteraInp" name="foto" <%= autor && autor.foto %>>
+                
                 <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
             </form>
 

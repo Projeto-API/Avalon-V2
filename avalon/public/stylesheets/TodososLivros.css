@@ -107,8 +107,48 @@ section .galeria {
 
 
 }
+.grid-livros {
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    
+}
 
-.galeria>div {
+.grid-livros li {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 10rem;
+    text-align: center;
+    list-style: none;
+}
+
+.item div {
+    width: 100%;
+}
+
+.item div button {
+    width: 80%;
+}
+
+
+.item div h5 {
+    height: 40px;
+    width: 100%;
+}
+
+.item img {
+    margin: 10px;
+    max-height: 12rem;
+    height: 100%;
+    border-radius: 5%;
+    align-items: center;
+}
+
+
+/* .galeria>div {
     display: flex;
     flex-direction: column;
     border: 1px solid #fff;
@@ -119,31 +159,21 @@ section .galeria {
     padding: 1rem;
     gap: 1rem;
     border-radius: 1rem;
-
 }
-
 .galeria>.catalogo_Livros {
     background-color: #F6F9FF;
     border-radius: 1rem;
     margin: 0.8rem;
-
 }
-
 .galeria>div>img {
     display: flex;
     width: 100%;
     border-radius: 0.5rem;
     object-fit: cover;
-    margin: 10px;
-    max-height: 20rem;
-    height: 100%;
-    border-radius: 5%;
-    align-items: center;
 }
-
 .galeria {
     gap: 1rem;
-}
+} */
 
 .button {
     background: #69E0AE;

@@ -5,9 +5,9 @@
         <section class="container">
             <div class="container1">
                 <div class="capaprincipal">
-                    <img id="capa" src="/images//uivantes.png" alt="">
+                    <img id="capa" src="/images/produtos/<%= livro.capa %>" alt="">
                 </div>
-
+                
                 <div class="miniaturas">
                     <ul class="gallery-miniaturas">
                         <img class="livrinhos" src="/images//image 4.png" alt="">
@@ -21,22 +21,14 @@
 
             <div class="container2">
                 <div class="sinopse">
-                    <h5>O MORRO DOS VENTOS UIVANTES</h5>
-                    <h6> Por Emily Bonte</h6><br>
+                    <h4 ><%= livro && livro.titulo %></h4>
+                    <h5><%= livro && livro.autor.nome %></h5><br>
 
-                    <p> Publicado pela primeira vez em 1847, O Morro dos Ventos
-                        Uivantes é um romance de igual beleza e brutalidade.
-                        Com múltiplas perspectivas narrativas, o Livro toca
-                        em temas primordiais para a sociedade, como questões
-                        de alteridade, empatia, comunicação e preconceitos.
-                        Reconhecido como uma das grandes obras da literatura
-                        mundial, o Livro já teve mais de 10 adaptações
-                        cinematográficas, influenciando também a música pop
-                        com a canção de Kate Bush no final da década de 1970.
+                    <p> <%= livro && livro.sinopse %>
                     </p>
                 </div>
                 <div class="price-qtt">
-                    <span class="precoLivro">R$59,90</span>
+                    <span class="precoLivro">R$ <%= livro && livro.preco %></span>
                     <form>
                         <label for="quantidade">
                             <input type="number" id="quantidade">
@@ -56,67 +48,41 @@
             <ul class="columninformation">
                 <li>
                     <p>Editora</p>
-                    <p>Principis</p>
+                    <p><%= livro && livro.editora.nome %></p>
                 </li>
                 <li>
                     <p>Ano de publicação</p>
-                    <p>2019</p>
+                    <p><%= livro && livro.ano %></p>
                 </li>
                 <li>
                     <p>Idioma</p>
-                    <p>Português</p>
+                    <p><%= livro && livro.idioma %></p>
                 </li>
                 <li>
                     <p>Páginas</p>
-                    <p>368</p>
+                    <p><%= livro && livro.paginas %></p>
                 </li>
-                <li>
-                    <p> Dimensões</p>
-                    <p>15.24x2.08x22.86cm</p>
-                </li>
+    
                 <li>
                     <p> Acabamento</p>
-                    <p>Capa comum</p>
+                    <p><%= livro && livro.acabamento %></p>
                 </li>
                 <li>
                     <p>ISBN-13</p>
-                    <p>978-8594318237</p>
+                    <p><%= livro && livro.isbn %></p>
                 </li>
         </section>
-        <section class="containercolumninformation">
-            <div class="abstract">
-                <p>
-                    É considerado um clássico da literatura
-                    inglesa e recebeu fortes críticas no século
-                    XIX por ser uma escrita controversa
-                    e intensa. O romance teve várias
-                    adaptações para a televisão e para
-                    o cinema ao longo dos anos.
-                </p>
-
-                <p>
-                    Esta é uma história divide opiniões
-                    entre os leitores. Os personagens em
-                    destaque são profundos, complexos,
-                    enigmáticos, assustadores e sobretudo
-                    fascinantes, venha se aventurar em meio
-                    aos sentimentos obscuros de Heathcliff
-                    e Catherine.
-                </p>
-            </div>
-        </section>
+       
 
         <section class="author">
             <div class="imageauthor">
-                <img src="/images//emilybronte.jpg">
+                <img src="/images/autores/<%= livro && livro.autor.foto %>">
             </div>
 
             <div class="columnauthor">
-                <h5>SOBRE O AUTOR</h5><br>
-                <h6>Emily Brontë</h6>
-                <p> Descubra mais Livros do autor,
-                    veja autores semelhantes,
-                    leia blogs de autores e muito mais.</p>
+                <h4><%= livro && livro.autor.nome %></h4><br>
+                <h6>Autor</h6>
+                <p> <%= livro && livro.autor.biografia %></p>
 
             </div>
         </section>
@@ -127,79 +93,20 @@
     
                     <div class="carrousel" id="carrousel">
                         <div class="gallery" id="gallery">
-                            <li class="item current-item">
-                                <img src="/images/produtos/my broken mariko/mariko-capa.jpg" alt="mariko">
-                                <div>
-                                    <h5>MY BROKEN MARIKO</h5>
-                                    <span>R$ 39,90</span>
-                                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                                </div>
-                            </li>
-    
-                            <li class="item current-item">
-                                <img src="/images/produtos/DNA/DNA capa.jpg" alt="dna">
-                                <div>
-                                    <h5>DNA MILIONÁRIO</h5>
-                                    <span>R$ 49,90</span>
-                                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                                </div>
-                            </li>
-    
-                            <li class="item current-item">
-                                <img src="/images/produtos/Lady killers/capa.jpeg" alt="lady-killers">
-                                <div>
-                                    <h5>LADY KILLERS</h5>
-                                    <span>R$ 59,90</span>
-                                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                                </div>
-                            </li>
-    
-                            <li class="item current-item">
-                                <img src="/images/produtos/manifesto/capa.jpg" alt="hobbit">
-                                <div>
-                                    <h5>MANIFESTO DO PARTIDO COMUNISTA</h5>
-                                    <span>R$ 34,90</span>
-                                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                                </div>
-                            </li>
-    
-                            <li class="item current-item">
-                                <img src="/images/produtos/moby dick/mobydick-capa.jpg" alt="moby-dick">
-                                <div>
-                                    <h5>MOBY DICK</h5>
-                                    <span>R$ 129,90</span>
-                                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                                </div>
-                            </li>
-    
-                            <li class="item current-item">
-                                <img src="/images/produtos/calibã/caliba-capa.jpg" alt="caliba">
-                                <div>
-                                    <h5>CALIBÃ E A BRUXA</h5>
-                                    <span>R$ 59,90</span>
-                                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                                </div>
-                            </li>
-    
-                            <li class="item current-item">
-                                <img src="/images/produtos/moby dick/mobydick-capa.jpg" alt="moby-dick">
-                                <div>
-                                    <h5>MOBY DICK</h5>
-                                    <span>R$ 129,90</span>
-                                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                                </div>
-                            </li>
-    
-                            <li class="item current-item">
-                                <img src="/images/produtos/calibã/caliba-capa.jpg" alt="caliba">
-                                <div>
-                                    <h5>CALIBÃ E A BRUXA</h5>
-                                    <span>R$ 59,90</span>
-                                    <button class="comprar"><a href="#">COMPRAR</a></button>
-                                </div>
-                            </li>
-    
-    
+                            <% carrousel.forEach(el => { %>
+                                <li onclick=redirect() class="item current-item">
+                                    <img class="item-img" src="/images/produtos/<%= el.capa %>" alt="dna">
+                                    <div>
+                                        <h5 class="item-name">
+                                            <%= el.titulo %>
+                                        </h5>
+                                        <span class="item-price">
+                                            R$ <%= el.preco %>
+                                        </span>
+                                        <button class="comprar"><a href="#">COMPRAR</a></button>
+                                    </div>
+                                </li>
+                                <% }) %>
                         </div>
                     </div>
                     <button id="prev" class="arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"

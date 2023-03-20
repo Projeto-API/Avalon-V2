@@ -10,11 +10,7 @@ const criarTodososlivrosModel = (sequelize, dataTypes) => {
     nome: {
       type: dataTypes.STRING,
       allowNull: false
-    },
-    imagem:{
-      type:dataTypes.STRING
     }
-      
   };
 
   const opcoes = {

@@ -1,12 +1,23 @@
-const { Sinopse } = require('../models');
+const { Livro, Editora, Categoria, Autor } = require('../models');
 
 module.exports = {
   index: async (req, res) => {
-    const sinopse = await Sinopse.findAll({
-      order: [
-        ['nome', 'desc']
-      ]
-    });
-    res.render('sinopse', { sinopse });
+    try {
+      const { id } = req.params
+      const carrousel = await Livro.findAll();
+      const livro = await Livro.findByPk(id, {
+        include: [
+          { model: Editora, as: 'editora'},
+          { model: Autor, as: 'autor'}]
+      });
+
+      console.log({ livro })
+      res.render('sinopse', { carrousel, livro });
+
+
+    } catch (erro) {
+      console.log(erro)
+    }
+
   }
 }

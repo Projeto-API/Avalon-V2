@@ -1,13 +1,3 @@
-
-// const getLivros = () => {
-//   return JSON.parse(fs.readFileSync(livrosPath));
-// }
-
-// function saveLivros(livros) {
-//   fs.writeFileSync(livrosPath, JSON.stringify(livros, null, 4));
-// }
-
-
 const fs = require('fs');
 const path = require('path');
 const { Op } = require('sequelize');

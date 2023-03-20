@@ -10,3 +10,5 @@ router.get('/checkout', checkoutController.index);
 
 
 module.exports = router;
+
+module.exports = router;

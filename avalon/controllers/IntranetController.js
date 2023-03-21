@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
-
 module.exports = {
     index: async (req, res) => {
       try {
@@ -18,5 +10,3 @@ module.exports = {
       }
     }
   }
-
-  

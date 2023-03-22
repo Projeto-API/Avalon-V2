@@ -12,6 +12,7 @@ const IntranetController = require('../controllers/IntranetController')
 router.get('/login/intranet', IntranetController.index);
 router.get('/compras', MinhasComprasController.index);
 router.get('/login', LoginController.index);
+router.post('/entrar', LoginController.login);
 router.get('/cadastro', UsuarioController.index);
 router.post('/cadastro', UsuarioController.criar);
 

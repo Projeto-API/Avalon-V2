@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require('path');
 const { Op } = require('sequelize');
 const { Usuario } = require('../models');
+const bcrypt = require('bcryptjs');
 
-Op
 
 
 
@@ -23,8 +23,9 @@ module.exports = {
   criar: async (req, res) => {
     try {
       const { email, password, nome, sobrenome, data_nascimento, doc_identificacao, cep, endereco, foto } = req.body
-
-      await Usuario.create({ email, password, nome, sobrenome, data_nascimento, doc_identificacao, cep, endereco, foto })
+      console.log('estou aparecendo', req.body)
+     const senhacripto = bcrypt.hashSync(password, 10);
+      await Usuario.create({ email, password: senhacripto, nome, sobrenome, data_nascimento, doc_identificacao, cep, endereco, foto })
 
       res.redirect('/users/login');
 

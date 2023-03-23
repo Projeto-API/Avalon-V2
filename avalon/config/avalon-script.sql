@@ -59,11 +59,12 @@ nome VARCHAR(45) NOT NULL,
 sobrenome VARCHAR(45) NOT NULL,
 doc_identificacao VARCHAR(11) NOT NULL,
 email VARCHAR(150) NOT NULL,
-password VARCHAR(45) NOT NULL,
+password VARCHAR(100) NOT NULL,
 cep VARCHAR(9) NOT NULL,
 endereco VARCHAR(45) NOT NULL,
 data_nascimento VARCHAR(11),
-foto VARCHAR(45)
+foto VARCHAR(45),
+tipo integer
 );
 
 CREATE TABLE status (

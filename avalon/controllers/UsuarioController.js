@@ -10,7 +10,7 @@ module.exports = {
   criar: function (usuario) {
     const usuarios = this.listar();
 
-    usuario.senha = bcrypt.hashSync(usuario.senha, 10);
+    usuario.senha = bcrypt.hash(usuario.senha, 10);
 
     usuarios.push(usuario);
     this.gravar(usuarios);

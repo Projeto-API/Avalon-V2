@@ -25,8 +25,9 @@ module.exports = {
       const { email, password, nome, sobrenome, data_nascimento, doc_identificacao, cep, endereco, foto } = req.body
       console.log('estou aparecendo', req.body)
      const senhacripto = bcrypt.hashSync(password, 10);
-      await Usuario.create({ email, password: senhacripto, nome, sobrenome, data_nascimento, doc_identificacao, cep, endereco, foto })
-
+     console.log('amigo estou aqui')
+      await Usuario.create({ email, password: senhacripto, nome, sobrenome, data_nascimento, doc_identificacao, cep, endereco, foto, tipo:"" })
+console.log('tambem estou ')
       res.redirect('/users/login');
 
     } catch (erro) {

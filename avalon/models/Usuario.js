@@ -50,6 +50,10 @@ const criarUsuarioModel = (sequelize, dataTypes) => {
       foto: {
         type: dataTypes.STRING,
         allowNull: true
+      },
+      tipo:{
+      type: dataTypes.INTEGER,
+        allowNull: false
       }
     };
   

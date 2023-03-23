@@ -63,16 +63,13 @@ router.get('/editoras', EditorasController.index);
 router.get('/editoras/buscar', EditorasController.search);
 router.get('/editoras/form/:id?', EditorasController.form);
 router.get('/editoras/editar/:id', EditorasController.buscarEditora)
-
 // POST E PUT ROUTES
 router.post('/editoras', EditorasController.criar);
 router.put('/editoras/editar/:id', EditorasController.editar);
-
 // DELETE ROUTES
 router.delete('/editoras/deletar/:id', EditorasController.deletar);
 
 // ----------------------------------------CRUD AUTORES--------------------------------------------//
-
 // GET ROUTES
 router.get('/autores', AutoresController.index);
 router.get('/autores/buscar', AutoresController.search);

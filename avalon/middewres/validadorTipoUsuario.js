@@ -1,13 +1,13 @@
 module.exports = [
 
 
-login = (req, res, next) => {
-    
-if (req.session.tipo ==1) {
-    next()
-}else {
-res.redirect ('/login')
-}
+    login = (req, res) => {
+
+        if (req.session.tipo == 1) {
+           res.render('/admin')
+        } else {
+            res.redirect('/login')
+        }
     }
 
 ]

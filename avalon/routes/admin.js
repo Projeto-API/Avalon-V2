@@ -42,7 +42,7 @@ const CategoriasController = require('../controllers/CategoriasController')
 // ----------------------------------------CRUD LIVROS--------------------------------------------//
 
 // GET ROUTES
-router.get('/', validaadmin,LivrosController.index);
+router.get('/', validaadmin, LivrosController.index);
 router.get('/buscar', LivrosController.search);
 router.get('/editar-livro/:id', LivrosController.buscarLivro)
 router.get('/form/:id?', LivrosController.form);

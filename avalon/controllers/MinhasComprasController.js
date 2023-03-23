@@ -2,7 +2,7 @@
 module.exports = {
   index: async (req, res) => { try {
 
-    res.render('minhaconta');
+    res.render('compras');
     
   } catch (erro) {
     let alert = require('alert');

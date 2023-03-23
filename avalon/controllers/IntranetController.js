@@ -2,7 +2,7 @@ module.exports = {
     index: async (req, res) => {
       try {
   
-        res.render('intranet');
+        res.render('login');
   
       } catch (erro) {
         let alert = require('alert');

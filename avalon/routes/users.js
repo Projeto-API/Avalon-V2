@@ -7,9 +7,9 @@ const multer = require('multer');
 const MinhasComprasController = require('../controllers/MinhasComprasController');
 const LoginController = require('../controllers/LoginController');
 const UsuarioController = require('../controllers/CadastrousuarioController');
-const IntranetController = require('../controllers/IntranetController')
 
-router.get('/login/intranet', IntranetController.index);
+
+
 router.get('/compras', MinhasComprasController.index);
 router.get('/login', LoginController.index);
 router.post('/entrar', LoginController.login);

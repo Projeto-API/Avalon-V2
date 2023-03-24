@@ -21,7 +21,7 @@ module.exports = {
         req.session.password = passwordcripto;
         req.session.tipo = user.tipo;
    
-        return res.render('admin')
+        return res.render('minhaconta')
 
         
 

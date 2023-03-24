@@ -140,3 +140,11 @@ div#produto {
     margin: 10px;
     
 }
+
+div#primeiro {
+    border-radius: 3rem;
+}
+
+section#carrinhoFlutuante {
+    border-radius: 2rem;
+}

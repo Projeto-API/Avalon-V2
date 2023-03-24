@@ -19,8 +19,7 @@ function ready(){
 
     const addToCarButtons = document.getElementsByClassName("comprar")
     for (var i = 0; i < addToCarButtons.length; i++) {
-        addToCarButtons[i].addEventListener("click", addProductToCart)
-       
+        addToCarButtons[i].addEventListener("click", addProductToCart)      
     }
    
     
@@ -48,20 +47,17 @@ function addProductToCart(event){
     for (var i = 0; i < productsCarName.length; i++) {
         if(productsCarName[i].innerText === productTitle){
             console.log(productsCarName[i].parentElement.parentElement.getElementsByClassName("product-qtd-input")[0].value++)
+            updateTotal()
           return
         }
         
     }
 
-
-
-
-
    let newCartProduct = document.createElement("section")
    newCartProduct.classList.add("containerProduto")
 
     newCartProduct.innerHTML = `
-    <div class="produto" id="produto">
+  
    <div class="product-identification">
         <img src="${productImage}" alt="Poster 3" class="cart-product-image">
     </div>
@@ -98,7 +94,8 @@ function removeProduct(event){
 }
 function updateTotal(){
     let totalAmount = 0
-    const carlivros = document.getElementsByClassName("produto")
+    const carlivros = document.getElementById("produto").children 
+   
         for (var i = 0; i < carlivros.length; i++){
             const productPrice = carlivros[i].getElementsByClassName("cart-product-price")[0].innerText.replace("R$","").replace(",", ".")
             const productQuantity = carlivros[i].getElementsByClassName("product-qtd-input")[0].value
@@ -116,12 +113,14 @@ function updateTotal(){
 
 
 function abrirCarrinhoFlutuante() {
-    document.getElementById('carrinhoFlutuante').style.width = "25rem"
     updateTotal()
+    document.getElementById('carrinhoFlutuante').style.width = "25rem"
+    ready()
 }
 
 function fecharCarrinhoFlutuante() {
-
+    updateTotal()
     document.getElementById('carrinhoFlutuante').style.width = "0rem"
+    ready()
 }
 

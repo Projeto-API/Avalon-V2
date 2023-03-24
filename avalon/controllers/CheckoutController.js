@@ -11,10 +11,8 @@ module.exports = {
   index: async (req, res) => {
     try {
 
-      const livros = await Livro.findAll();
-      const cliente = await Cliente.findAll();
 
-      res.render('checkout', { livros, cliente });
+      res.render('checkout');
     } catch (erro) {
       let alert = require('alert');
       alert("ERRO 500 - Erro interno do servidor!")

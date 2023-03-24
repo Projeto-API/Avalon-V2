@@ -1,0 +1,159 @@
+* body {
+    height: auto;
+}
+
+
+main {
+    height: 100vh;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+main div * a {
+    text-decoration: none;
+    color: black;
+}
+
+.box-MinhaConta {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+.minhaConta {
+    width: 100%;
+    background-color: #c6efe0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+.minhaConta>img {
+    padding: 15px;
+    width: 200px;
+    height: 200px;
+    border-radius: 300%;
+    display: block;
+    align-items: center;
+}
+
+.contaOpcoes {
+    width: 100%;
+    font-size: .8rem;
+    font-weight: bold;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    color: black;
+}
+
+.account {
+    width: 90%;
+    background-color: #c6efe0;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+.caixatexto {
+    padding: 1rem;
+}
+
+.account-data {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.account-data-user {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    margin: 1rem 2rem;
+    gap: 3px;
+}
+
+.account-data-nome,
+.account-data-pessoal,
+.account-data-endereco {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: center;
+    margin: 1rem 2rem;
+    color: red;
+}
+
+.account-data-nome div,
+.account-data-pessoal div {
+    width: 100%;
+}
+
+.label-account {
+    width: 100%;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.values-account {
+    width: 100%;
+    font-size: .9rem;
+    padding-bottom: 5px;
+    background: none;
+    border: none;
+}
+
+
+@media (min-width: 768px) {
+
+    main {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .contaOpcoes {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .box-MinhaConta {
+        width: 350px;
+    }
+
+    .account-data-nome {
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .account-data-pessoal2 {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+
+    }
+
+
+}
+
+@media (min-width: 1200px) {
+    main {
+        padding-top: 90px;
+    }
+
+    .informationPedido,
+    .contaOpcoes {
+        font-size: .9rem;
+    }
+}

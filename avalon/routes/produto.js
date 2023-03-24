@@ -5,7 +5,7 @@ const SinopseController = require('../controllers/SinopseController');
 const TodosLivros = require('../controllers/TodosLivrosController');
 const CarrinhoController = require('../controllers/CarrinhoController');
 const EntregaController = require('../controllers/EntregaController');
-
+const CheckoutController = require('../controllers/CheckoutController');
 
 
 router.get('/enderecos/?', EntregaController.calcularfrete)
@@ -13,6 +13,7 @@ router.get('/enderecos/?', EntregaController.calcularfrete)
 router.get('/sinopse/:id', SinopseController.index);
 router.get('/todos/', TodosLivros.index);
 router.get('/carrinho/', CarrinhoController.carrinho);
+router.get('/checkout/', CheckoutController.index);
 
 
 

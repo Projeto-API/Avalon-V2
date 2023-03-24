@@ -63,6 +63,7 @@ header {
 }
 
 .footer {
+
     display: flex;
     background-color: #9CD9C2;
     font-size: .9rem;

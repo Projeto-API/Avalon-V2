@@ -1,0 +1,88 @@
+<%- include('partials/header') %>
+    <link rel="stylesheet" href="/stylesheets/conta.css">
+
+    <main>
+        <section class="box-MinhaConta">
+            <div class="minhaConta">
+                <img src="/images/Lordvoldemort.jpg">
+
+                <input> Nome e Sobrenome"></input>
+
+                <div class="contaOpcoes">
+                    <a href="/users/conta">MEUS DADOS</a>
+                    <a href="/users/compras">MEUS PEDIDOS</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="account">
+
+            <div class="caixatexto">
+                <h3>MEUS DADOS</h3>
+            </div>
+            <form class="account-data">
+                <div class="account-data-div account-data-user">
+
+                    <label class="label-account">E-mail</label>
+                    <input class="values-account" value="igorcamposratao@gmail.com"></input>
+
+                </div>
+                <div class="account-data-div account-data-nome">
+                    <div>
+                        <label class="label-account">Nome</label>
+                        <input class="values-account" value="Igor"></input>
+                    </div>
+                    <div>
+                        <label class="label-account">Sobrenome</label>
+                        <input class="values-account" value="Campos"></input>
+                    </div>
+                </div>
+                <div class="account-data-div account-data-pessoal">
+                    <div class="account-data-pessoal2">
+                        <div>
+                            <label class="label-account">CPF</label>
+                            <input class="values-account" value="409.788.896-5"></input>
+                        </div>
+                        <div>
+                            <label class="label-account">Gênero</label><br>
+                            <input class="values-account" value="Masculino"></input>
+                        </div>
+                    </div>
+                    <div>
+                        <label class="label-account">Data de Nascimento</label>
+                        <input class="values-account" value="22/08/1991"></input>
+                    </div>
+
+
+
+                </div>
+                <div class="account-data-div account-data-endereco">
+                    <div>
+                        <label class="label-account">CEP</label>
+                        <input class="values-account" value="04310-010"></input>
+
+                        <label class="label-account">Estado</label>
+                        <input class="values-account" value="São Paulo"></input>
+
+                        <label class="label-account">Cidade</label>
+                        <input class="values-account" value="São Paulo"></input>
+                    </div>
+                    <div>
+                        <label class="label-account">Rua/Avenida</label>
+                        <input class="values-account" value="Rua das Borboletas Psicodélicas"></input>
+                    </div>
+                    <div>
+                        <label class="label-account">Número</label>
+                        <input class="values-account" value="116"></input>
+
+                        <label class="label-account">Complemento</label>
+                        <input class="values-account" value="Opcional"></input>
+                    </div>
+
+                </div>
+            </form>
+            <button class="comprar" type="submit"><a>Comprar</a></button>
+        </section>
+    </main>
+
+    <%- include('partials/footer') %>

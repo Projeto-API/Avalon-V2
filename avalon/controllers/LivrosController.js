@@ -3,10 +3,6 @@ const path = require('path');
 const { Op } = require('sequelize');
 const { Livro, Editora, Autor, Categoria } = require('../models');
 
-Op
-
-
-
 module.exports = {
   index: async (req, res) => {
     try {
@@ -17,16 +13,13 @@ module.exports = {
           { model: Categoria, as: 'categoria' }
         ]
       });
-      
       res.render('admin', { livros })
-
     } catch (erro) {
       console.log(erro)
       let alert = require('alert');
       alert("ERRO 500 - Erro interno do servidor!")
     }
   },
-
   search: async (req, res) => {
     try {
       const { search } = req.query;
@@ -38,7 +31,7 @@ module.exports = {
           ]
         } : null
       });
-
+     console.log(livros)
       res.render('admin', { livros })
 
     } catch (erro) {

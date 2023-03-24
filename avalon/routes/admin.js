@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
-const validaadmin = require('../middewres/validadorTipoUsuario')
+const validadorTipoUsuario = require('../middewres/validadorTipoUsuario')
 // MULTER LIVROS
 const multerDiskStorageLivro = multer.diskStorage({
     destination: (req, file, callback) => {
@@ -42,7 +42,7 @@ const CategoriasController = require('../controllers/CategoriasController')
 // ----------------------------------------CRUD LIVROS--------------------------------------------//
 
 // GET ROUTES
-router.get('/', validaadmin, LivrosController.index);
+router.get('/', validadorTipoUsuario, LivrosController.index);
 router.get('/buscar', LivrosController.search);
 router.get('/editar-livro/:id', LivrosController.buscarLivro)
 router.get('/form/:id?', LivrosController.form);

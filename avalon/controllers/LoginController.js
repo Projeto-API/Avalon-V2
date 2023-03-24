@@ -20,9 +20,10 @@ module.exports = {
         req.session.email = user.email;
         req.session.password = passwordcripto;
         req.session.tipo = user.tipo;
-        console.log("Vai renderizar para minhaconta")
-        return res.render('minhaconta')
+   
+        return res.render('admin')
 
+        
 
       } else {
         console.log("Vai redirecionar para login")
@@ -30,6 +31,8 @@ module.exports = {
         alert("Senha Inválida")
         res.redirect('login')
       }
+
+    
 
 
     } catch (erro) {

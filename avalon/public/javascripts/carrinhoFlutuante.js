@@ -8,35 +8,44 @@ function ready(){
     const removelivro = document.getElementsByClassName("remove-livro-button")
     for (var i = 0; i < removelivro.length; i++) {
         removelivro[i].addEventListener("click", removeProduct) 
+        updateTotal()
        
     }
 
     const quantityInputs = document.getElementsByClassName("product-qtd-input")
     for (var i = 0; i < quantityInputs.length; i++){
         quantityInputs[i].addEventListener("change",checkIfinputInsNull )
+        updateTotal()
         
     }
 
     const addToCarButtons = document.getElementsByClassName("comprar")
     for (var i = 0; i < addToCarButtons.length; i++) {
-        addToCarButtons[i].addEventListener("click", addProductToCart)      
+        addToCarButtons[i].addEventListener("click", addProductToCart) 
+        updateTotal()     
     }
+
+    updateTotal()  
+
+}
    
     
-}
+
 
 function checkIfinputInsNull(event){
     if (event.target.value ==="0"){
         event.target.parentElement.parentElement.remove()
+        
     }
 
 
-    updateTotal()
+    updateTotal(false)
 
 }
-
+updateTotal(true)
 
 function addProductToCart(event){
+    const cat = localStorage.getItem("AddCarrinho");
     const button = event.target
     const productInfos = button.parentElement.parentElement.parentElement
     const productImage = productInfos.getElementsByClassName("item-img")[0].src
@@ -77,15 +86,10 @@ function addProductToCart(event){
    `
     const tableBody = document.querySelector(".produto")
     tableBody.append(newCartProduct)
-    updateTotal()
     newCartProduct.getElementsByClassName("product-qtd-input")[0].addEventListener("change",checkIfinputInsNull)
     newCartProduct.getElementsByClassName("remove-livro-button")[0].addEventListener("click",removeProduct)
-
-    
+    updateTotal()
 }
-
-
-
 
 
 function removeProduct(event){
@@ -100,10 +104,13 @@ function updateTotal(){
             const productPrice = carlivros[i].getElementsByClassName("cart-product-price")[0].innerText.replace("R$","").replace(",", ".")
             const productQuantity = carlivros[i].getElementsByClassName("product-qtd-input")[0].value
             totalAmount +=  productPrice * productQuantity
+         
         }
         totalAmount = totalAmount.toFixed(2)
         totalAmount = totalAmount.replace(".",",")
         document.querySelector(".cart-total-container span").innerText = "R$" + totalAmount
+     
+        
 }
 
 
@@ -115,12 +122,73 @@ function updateTotal(){
 function abrirCarrinhoFlutuante() {
     updateTotal()
     document.getElementById('carrinhoFlutuante').style.width = "25rem"
-    ready()
+
 }
 
 function fecharCarrinhoFlutuante() {
     updateTotal()
     document.getElementById('carrinhoFlutuante').style.width = "0rem"
-    ready()
+
 }
+
+
+
+
+// function adicionaCarrinho(event){
+//         let carrinho = JSON.parse(sessionStorage.getItem("carrinho")) || []  
+//         const button = event.target
+//         const productInfos =button.parentElement.parentElement.parentElement
+//         const productImage = productInfos.getElementsByClassName("item-img")[0].src
+//         console.log(productImage)
+//         const productTitle = productInfos.getElementsByClassName("item-name")[0].innerText
+//         const productPrice = productInfos.getElementsByClassName("item-price")[0].innerText
+
+
+//         carrinho.push(productImage)
+//         carrinho.push(productTitle)
+//         carrinho.push(productPrice)
+
+//         sessionStorage.setItem("productImage", JSON.stringify({productImage,productTitle, productPrice}))
+
+//         sessionStorage.getItem({productImage,productTitle, productPrice})
+
+
+//         let newCartProduct = document.createElement("section")
+//         newCartProduct.classList.add("containerProduto")
+     
+//          newCartProduct.innerHTML = `
+       
+//         <div class="product-identification">
+//              <img src="${productImage}" alt="Poster 3" class="cart-product-image">
+//          </div>
+//          <div>
+//              <strong class="cart-product-title">${productTitle} </strong>
+//          </div>
+//          <div>
+//              <span class="cart-product-price">${productPrice}</span>
+//          </div>
+//          <div>
+//              <input type="number" value="1" min="0" class="product-qtd-input">
+//          </div>
+//          <div>
+//              <button type="button" class="remove-livro-button">Remover</button>
+//          </div>  
+//          </div>
+//         `
+//          const tableBody = document.querySelector(".produto")
+//          tableBody.append(newCartProduct)
+//          updateTotal()
+//          newCartProduct.getElementsByClassName("product-qtd-input")[0].addEventListener("change",checkIfinputInsNull)
+//          newCartProduct.getElementsByClassName("remove-livro-button")[0].addEventListener("click",removeProduct)
+//      }
+
+
+
+
+
+
+
+    
+   
+
 

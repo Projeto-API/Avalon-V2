@@ -64,3 +64,8 @@ header{
     max-width: 6rem;
 
   }
+
+  input.produto-quantidade {
+    width: 2rem;
+}
+

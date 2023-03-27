@@ -27,16 +27,12 @@
               <%= livro.titulo %>
             </td>
             <td class="livro-preco" >  
-              <span>
-                <%= livro.preco %>
-              </span>                                          
+                <%= livro.preco %>                        
             </td>
             <td>
-              <button class="decrease">-</button>
-              <input type="number" min="0"  value="<%= livro.quantidade %>" class="quantity">
-              <button class="increase">+</button>
+              <input type="number" min="1"  value="<%= livro.quantidade %>" class="produto-quantidade ">
             </td>
-            <td class="cart-total" > 0,00</td>
+            <td class="cart-total" >R$ 0,00</td>
             <input type="hidden" name="produtoId">
             <td>
               <form action="/carrinho/deletar" method="post">
@@ -76,7 +72,7 @@
         <tfoot>
           <tr>
             <td class="info">Total</td>
-            <td src="/carrinho/public/images/1661966653.webp " class="monetary" id="cart-total-Final">R$ </td>
+            <td class="monetary" id="cart-total-Final">R$ </td>
           </tr>
         </tfoot>
   </div>

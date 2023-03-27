@@ -1,5 +1,6 @@
 const { Op } = require('sequelize');
 const { Autor, Livro } = require('../models');
+const {validarResultado} = require('express-validator');
 Op
 
 module.exports = {
@@ -83,5 +84,18 @@ module.exports = {
     }
     console.log("O autor de id " + req.body.id + " foi deletado com sucesso");
     return res.redirect('/admin/autores');
-  }
+  },
+
+      //---------->Validações Cadastro Produtos:<------------------
+      
+      register: (req, res) => {
+        let errors = validarResultado(req);
+
+        if (errors.isEmpty()){
+
+        } else {
+            res.render('register', {errors: errors.mapped(), old: req.body});
+        }
+    }
+
 }

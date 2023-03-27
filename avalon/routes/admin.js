@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const {check} = require('express-validator');
 
 
 // ------------CONTROLLERS E ROTAS PAINEL DE ADMINISTRADOR DO CRUD -------------//
@@ -42,20 +43,30 @@ router.put('/editoras/editar/:id', EditorasController.editar);
 // DELETE ROUTES
 router.delete('/editoras/deletar/:id', EditorasController.deletar);
 
+// ------------------------------------VALIDAÇÕES AUTORES------------------------------------------//
+
+const validacoesAutores = [
+    check('nome').notEmpty().withMessage('É obrigatório preencher o nome').bail().isString(),
+    check('biografia').notEmpty().withMessage('É obrigatório preencher a biografia').bail().isString(),
+];
+
 // ----------------------------------------CRUD AUTORES--------------------------------------------//
 
 // GET ROUTES
 router.get('/autores', AutoresController.index);
 router.get('/autores/buscar', AutoresController.search);  
-router.get('/autores/form/:id?', AutoresController.form);
+router.get('/autores/form/:id?',  AutoresController.form);
 router.get('/autores/editar/:id', AutoresController.buscarAutor)
 
 // POST E PUT ROUTES
-router.post('/autores', AutoresController.criar);
+router.post('/autores',validacoesAutores, AutoresController.criar);
 router.put('/autores/editar/:id', AutoresController.editar);
 
 // DELETE ROUTES
 router.delete('/autores/deletar/:id', AutoresController.deletar);
+
+
+
 
 // ----------------------------------------CRUD Categorias--------------------------------------------//
 
@@ -71,6 +82,7 @@ router.put('/categorias/editar/:id', CategoriasController.editar);
 
 // DELETE ROUTES
 router.delete('/categorias/deletar/:id', CategoriasController.deletar);
+
 
 
 module.exports = router;

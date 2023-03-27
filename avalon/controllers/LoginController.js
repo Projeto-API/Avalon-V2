@@ -1,5 +1,5 @@
 
-const { Usuario } = require('../models');
+const { Usuario, Livro, Editora, Autor, Categoria } = require('../models');
 const bcrypt = require('bcryptjs');
 
 module.exports = {
@@ -21,7 +21,23 @@ module.exports = {
         req.session.password = passwordcripto;
         req.session.tipo = user.tipo;
    
-        return res.render('minhaconta')
+        const livros = await Livro.findAll({
+          include: [
+            { model: Editora, as: 'editora' },
+            { model: Autor, as: 'autor' },
+            { model: Categoria, as: 'categoria' }
+          ]})
+
+      const livrosLancamento = await Livro.findAll({
+        limit: 8, 
+        order: [['id','DESC']]
+      });
+      const editoras = await Editora.findAll();
+      const autores = await Autor.findAll();
+      const categorias = await Categoria.findAll();
+
+
+      res.render('admin', { livros, livrosLancamento, editoras, categorias, autores })
 
         
 

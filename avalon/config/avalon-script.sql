@@ -160,3 +160,11 @@ ALTER TABLE livros DROP INDEX `paginas`;
 ALTER TABLE livros ADD capa VARCHAR(45) NOT NULL;
 ALTER TABLE livros add imagens VARCHAR(45) NOT NULL;
 ALTER TABLE livros add ano INT NOT NULL;
+
+-- adicionado mais campos em usuarios
+
+ALTER TABLE usuarios ADD genero VARCHAR(45) NOT NULL;
+ALTER TABLE usuarios ADD estado VARCHAR(45) NOT NULL;
+ALTER TABLE usuarios ADD cidade VARCHAR(45) NOT NULL;
+ALTER TABLE usuarios ADD numero VARCHAR(45) NOT NULL;
+ALTER TABLE usuarios ADD complemento VARCHAR(45);

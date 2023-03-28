@@ -106,6 +106,10 @@ main div * a {
     font-weight: bold;
 }
 
+hr {
+    margin: 1rem;
+}
+
 .values-account {
     width: 100%;
     font-size: .9rem;
@@ -160,7 +164,8 @@ main div * a {
     border-radius: 1rem;
 }
 
-.data-nascimento, .cep {
+.data-nascimento,
+.cep {
     width: 60%;
 }
 
@@ -188,7 +193,9 @@ main div * a {
     .col-endereco {
         padding-left: 2rem;
     }
-    .data-nascimento, .cep {
+
+    .data-nascimento,
+    .cep {
         width: 49%;
     }
 

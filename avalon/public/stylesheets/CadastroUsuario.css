@@ -59,7 +59,8 @@ main {
     font-weight: bold;
 }
 
-.form-login, .form-usuario {
+.form-login,
+.form-usuario {
     margin: 1rem;
     display: flex;
     flex-wrap: wrap;
@@ -147,16 +148,28 @@ div .exemplo {
     text-align: left;
 }
 
+label {
+    width: 100%;
+    margin: .5rem;
+}
+
+.hr {
+    margin: 1rem 0;
+}
+
 .input-form {
     font-size: .9rem;
     background: white;
     padding-left: 1rem;
-    width: 90%;
+    width: 100%;
     color: gray;
     border: none;
     border-radius: 3rem;
-    height: 3rem;
+    height: 2rem;
+}
 
+.half {
+    width: 60%;
 }
 
 .form-auth button {
@@ -177,6 +190,8 @@ h5 {
     font-size: 20px;
     padding-top: .5rem;
 }
+
+
 
 /* ----------------------------Erros ------------------- */
 
@@ -201,11 +216,12 @@ h5 {
 
 
 .form-auth {
-    padding: 2rem 0;
+    padding: 2rem;
     display: flex;
     width: 100%;
     flex-direction: column;
-    align-items: center;
+
+
 }
 
 @media (min-width: 1200px) {

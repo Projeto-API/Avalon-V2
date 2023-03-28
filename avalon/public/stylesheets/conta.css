@@ -4,7 +4,7 @@
 
 
 main {
-    height: 100vh;
+    height: 100%;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
@@ -46,10 +46,23 @@ main div * a {
     width: 100%;
     font-size: .8rem;
     font-weight: bold;
-    padding: 2rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-around;
     color: black;
+}
+
+.contaOpcoes a {
+    padding: 10px;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contaOpcoes a:hover {
+    background-color: #4EC16E;
+    color: white;
 }
 
 .account {
@@ -60,6 +73,7 @@ main div * a {
     flex-direction: column;
     align-items: center;
     border-radius: 2rem;
+    z-index: 10;
 }
 
 .caixatexto {
@@ -67,37 +81,24 @@ main div * a {
 }
 
 .account-data {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    padding-right: 2rem;
 }
 
-.account-data-user {
+.col-user,
+.col-pessoal,
+.col-endereco {
     width: 100%;
+    margin: 1rem;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: center;
-    margin: 1rem 2rem;
-    gap: 3px;
 }
 
-.account-data-nome,
-.account-data-pessoal,
-.account-data-endereco {
+.col-user div,
+.col-pessoal div,
+.col-endereco div {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-content: center;
-    margin: 1rem 2rem;
-    color: red;
+    padding: .5rem;
 }
 
-.account-data-nome div,
-.account-data-pessoal div {
-    width: 100%;
-}
 
 .label-account {
     width: 100%;
@@ -111,6 +112,56 @@ main div * a {
     padding-bottom: 5px;
     background: none;
     border: none;
+}
+
+.edit-form {
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+    width: 150px;
+}
+
+/* button editar */
+.editar {
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    width: 100%;
+    height: 2rem;
+    background-color: #4EC16E;
+    border-radius: 1rem;
+}
+
+.editar a {
+    justify-content: center;
+    width: 100%;
+}
+
+.editar :hover {
+    color: white;
+
+}
+
+.values-account-editar {
+    background-color: white;
+    width: 100%;
+    outline: none;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 1rem;
+}
+
+.foto-perfil {
+    background-color: none;
+    width: 100%;
+    outline: none;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 1rem;
+}
+
+.data-nascimento, .cep {
+    width: 60%;
 }
 
 
@@ -132,20 +183,17 @@ main div * a {
         width: 350px;
     }
 
-    .account-data-nome {
-        width: 100%;
-        flex-direction: row;
+    .col-user,
+    .col-pessoal,
+    .col-endereco {
+        padding-left: 2rem;
     }
-
-    .account-data-pessoal2 {
-        display: flex;
-        width: 100%;
-        flex-direction: row;
-
+    .data-nascimento, .cep {
+        width: 49%;
     }
-
 
 }
+
 
 @media (min-width: 1200px) {
     main {
@@ -156,4 +204,5 @@ main div * a {
     .contaOpcoes {
         font-size: .9rem;
     }
+
 }

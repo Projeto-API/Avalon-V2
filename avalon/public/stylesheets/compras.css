@@ -4,7 +4,7 @@
 
 
 main {
-    height: 100vh;
+    height: 100%;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
@@ -52,6 +52,18 @@ main div * a {
     color: black;
 }
 
+.contaOpcoes a {
+    padding: 10px;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contaOpcoes a:hover {
+    background-color: #4EC16E;
+    color: white;
+}
 
 .box-pedidos {
     width: 90%;

@@ -29,8 +29,11 @@ router.get('/compras', MinhasComprasController.index);
 router.get('/conta', ContaController.index);
 router.get('/login', LoginController.index);
 router.get('/cadastro', UsuarioController.index);
+
 router.post('/cadastro', UsuarioController.criar);
 
+router.get('/editar-conta', UsuarioController.form);
+router.put('/editar-conta', UsuarioController.editar);
 
 
 // POST E PUT ROUTES

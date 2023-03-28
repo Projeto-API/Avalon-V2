@@ -7,7 +7,7 @@ module.exports = [
             next()
      
         } else {
-            res.redirect('minhaconta')
+            res.redirect('conta')
         }
     }
 

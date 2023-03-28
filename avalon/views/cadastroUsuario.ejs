@@ -15,25 +15,35 @@
                 <input class="input-form" type="password" name="senha" placeholder="Digite sua senha">
                 <label for="password">Confirme sua senha</label>
                 <input class="input-form" type="password" name="password" placeholder="Confirme sua senha">
-                <br>
+                <hr class="hr">
                 <label for="nome">Nome</label>
                 <input class="input-form" type="text" name="nome" placeholder="Digite seu nome">
                 <label for="sobrenome">Sobrenome</label>
                 <input class="input-form" type="text" name="sobrenome" placeholder="Digite seu sobrenome">
                 <label for="data_nascimento">Data de Nascimento</label>
-                <input class="input-form" type="date" name="data_nascimento"
+                <input class="input-form half" type="date" name="data_nascimento"
                     placeholder="Digite sua data de nascimento">
                 <label for="doc_identificacao">CPF</label>
                 <input class="input-form" type="text" name="doc_identificacao" placeholder="Digite seu CPF">
+                <hr class="hr">
                 <label for="cep">CEP</label>
                 <input class="input-form" type="text" name="cep" placeholder="Digite seu CEP">
+                <label for="estado">Estado</label>
+                <input class="input-form" type="text" name="estado" placeholder="Digite seu estado">
+                <label for="cidade">Cidade</label>
+                <input class="input-form" type="text" name="cidade" placeholder="Digite sua cidade">
                 <label for="endereco">Endereço</label>
                 <input class="input-form" type="text" name="endereco" placeholder="Digite seu endereço">
+                <label for="numero">Número</label><br>
+                <input class="input-form half" type="text" name="numero" placeholder="Digite o número">
+                <label for="complemento">Complemento</label><br>
+                <input class="input-form half" type="text" name="complemento" placeholder="Opcional">
                 <label for="foto">Foto</label>
                 <input type="file" name="foto">
                 <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
 
             </form>
+
         </section>
     </main>
     <%- include('partials/footer') %>

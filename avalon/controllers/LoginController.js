@@ -3,6 +3,15 @@ const { Usuario, Livro, Editora, Autor, Categoria } = require('../models');
 const bcrypt = require('bcryptjs');
 
 module.exports = {
+ 
+    index: async (req, res) => {
+      res.render('login');
+    },
+  
+    forgotPassword: async (req, res) => {
+      res.render('forgot-password');
+    },
+
   login: async (req, res) => {
 
     // ----------------------------------------LOGIN : AUTENTICAÇÃO DE USUARIO-------------------------------------------//
@@ -34,11 +43,13 @@ module.exports = {
       const editoras = await Editora.findAll();
       const autores = await Autor.findAll();
       const categorias = await Categoria.findAll();
+
+      
 // ----------------------------------------LOGIN: VERIFICAÇÃO DE TIPO DE USUARIO -------------------------------------------//
       if (user.tipo === 1) { // Se o tipo do usuário for 1 (administrador)
         res.render('admin', { livros, livrosLancamento, editoras, categorias, autores }); // Redireciona para a página de administração
       } else if (user.tipo === 0) { // Se o tipo do usuário for 0 (usuário comum)
-        res.render('minhaconta'); // Redireciona para a página minha-conta
+        res.render('conta'); // Redireciona para a página minha-conta
       }
       } else {
         console.log("Vai redirecionar para login")
@@ -46,6 +57,9 @@ module.exports = {
         alert("Senha Inválida")
         res.redirect('login')
       }
+
+     
+      
     } catch (erro) {
       console.log(erro)
     }

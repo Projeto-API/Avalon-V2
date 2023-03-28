@@ -15,6 +15,7 @@ module.exports = {
 
       res.render('home', { livros, livrosLancamento, editoras, categorias, autores })
 
+      
     } catch (erro) {
       let alert = require('alert');
       alert("ERRO 500 - Erro interno do servidor!")
@@ -22,4 +23,6 @@ module.exports = {
   },
 
 }
+
+
 

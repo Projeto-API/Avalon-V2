@@ -1,0 +1,170 @@
+* body {
+    height: auto;
+}
+
+
+main {
+    height: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 50px;
+}
+
+main div * a {
+    text-decoration: none;
+    color: black;
+}
+
+.box-MinhaConta {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+.minhaConta {
+    width: 100%;
+    background-color: #c6efe0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+.minhaConta>img {
+    padding: 15px;
+    width: 200px;
+    height: 200px;
+    border-radius: 300%;
+    display: block;
+    align-items: center;
+}
+
+.contaOpcoes {
+    width: 100%;
+    font-size: .8rem;
+    font-weight: bold;
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+    color: black;
+}
+
+.contaOpcoes a {
+    padding: 10px;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.contaOpcoes a:hover {
+    background-color: #4EC16E;
+    color: white;
+}
+
+.box-pedidos {
+    width: 90%;
+    background-color: #c6efe0;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+}
+
+.caixatexto {
+    padding: 1rem;
+}
+
+.tabelaPedidos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    padding-bottom: 1rem;
+}
+
+.statusPedido {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: .8rem;
+}
+
+.informationPedido {
+    font-size: .8rem;
+    display: flex;
+    align-items: center;
+}
+
+.pedidoLista {
+    padding: 1rem;
+    width: 95%;
+    background-color: aliceblue;
+    border-radius: 2rem;
+    justify-content: center;
+
+}
+
+.informationItem1 {
+    width: 100%;
+    padding-left: .5rem;
+}
+
+.informationItem2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: .5rem;
+    width: 30%;
+    gap: .5rem;
+}
+
+.status {
+    font-weight: bold;
+}
+
+.informationItem span {
+    justify-content: left;
+}
+
+@media (min-width: 768px) {
+
+    main {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+    }
+
+    .contaOpcoes {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .box-MinhaConta {
+        width: 350px;
+    }
+
+    .informationItem2 {
+
+        width: 100%;
+
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        padding-top: 90px;
+    }
+
+    .informationPedido, .contaOpcoes {
+        font-size: .9rem;
+    }
+}

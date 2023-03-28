@@ -29,7 +29,7 @@ CREATE TABLE autores (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nome VARCHAR(150) NOT NULL,
 biografia VARCHAR(1000) NOT NULL,
-foto VARCHAR(45) NOT NULL
+foto VARCHAR(45) NOT NULLtipo
 );
 
 CREATE TABLE carrinho (
@@ -59,12 +59,11 @@ nome VARCHAR(45) NOT NULL,
 sobrenome VARCHAR(45) NOT NULL,
 doc_identificacao VARCHAR(11) NOT NULL,
 email VARCHAR(150) NOT NULL,
-password VARCHAR(100) NOT NULL,
+password VARCHAR(45) NOT NULL,
 cep VARCHAR(9) NOT NULL,
 endereco VARCHAR(45) NOT NULL,
 data_nascimento VARCHAR(11),
-foto VARCHAR(45),
-tipo integer
+foto VARCHAR(45)
 );
 
 CREATE TABLE status (
@@ -161,3 +160,17 @@ ALTER TABLE livros DROP INDEX `paginas`;
 ALTER TABLE livros ADD capa VARCHAR(45) NOT NULL;
 ALTER TABLE livros add imagens VARCHAR(45) NOT NULL;
 ALTER TABLE livros add ano INT NOT NULL;
+
+ALTER TABLE usuarios rename column tipo TO admin;
+
+ALTER TABLE usuarios ADD genero VARCHAR(45) NOT NULL;
+ALTER TABLE usuarios ADD estado VARCHAR(45) NOT NULL;
+ALTER TABLE usuarios ADD cidade VARCHAR(45) NOT NULL;
+ALTER TABLE usuarios ADD numero VARCHAR(45) NOT NULL;
+ALTER TABLE usuarios ADD complemento VARCHAR(45);
+ALTER TABLE usuarios ADD tipo INT;
+
+CREATE TABLE lancamentos (
+id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+nome VARCHAR(45) NOT NULL
+);

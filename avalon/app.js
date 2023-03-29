@@ -4,11 +4,14 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const methodOverride = require('method-override');
-
+const session = require('express-session');
+const flash = require('connect-flash');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const adminRouter = require('./routes/admin');
+const produtoRouter = require('./routes/produto');
 const carrinhoRouter = require('./routes/carrinho');
+
 
 const app = express();
 
@@ -22,11 +25,14 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
-
+app.use(session({secret:'senhasecreta'}));
+app.use(flash());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/admin', adminRouter);
+app.use('/produto', produtoRouter);
 app.use('/carrinho', carrinhoRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -38,6 +44,11 @@ app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+
+  app.get('/users', (req, res) => {
+    res.render('forgot-password', { messages: req.flash('erro ao enviar') });
+  });
 
   // render the error page
   res.status(err.status || 500);

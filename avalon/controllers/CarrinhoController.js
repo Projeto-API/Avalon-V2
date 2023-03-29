@@ -2,8 +2,9 @@ const{ Carrinho } = require('../models')
 
 const CarrinhoController = {
     carrinho: async (req,res) => {
+        let valorFrete = null
         let livros = await Carrinho.findAll();
-        return res.render('carrinho', {livros})
+        return res.render('carrinho', {livros, valorFrete})
 
     },
     add: async (req, res) => {

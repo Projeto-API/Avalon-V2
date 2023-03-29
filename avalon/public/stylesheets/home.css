@@ -68,6 +68,10 @@ main {
 
 /* SECTION 1 - DESTAQUES  */
 
+.item {
+    cursor: pointer;
+}
+
 .destaque {
     flex-direction: column;
     width: 100%;
@@ -155,7 +159,7 @@ main {
 
 /* BOTAO COMPRAR */
 
-#grid {
+.grid {
     position: relative;
 }
 
@@ -250,7 +254,7 @@ main {
 
     /* BOTAO COMPRAR */
 
-    #grid {
+    .grid {
         position: relative;
     }
 

@@ -1,11 +1,7 @@
 <%- include('partials/header') %>
   <link rel="stylesheet" href="/stylesheets/admin.css">
-<<<<<<< HEAD
 
   <script src="/javascripts/validacoesCadastroLivro.js" defer></script>
-=======
-  <script src="/javascripts/crud.js" defer></script>
->>>>>>> igorcr
   <main>
 
     <div class="modal">
@@ -19,9 +15,10 @@
       </h2>
 
       <% if (livro) { %>
-        <form class="add-form form-crud" action="/admin/editar-livro/<%= livro.id %>?_method=PUT" method="post">
+        <form class="add-form form-crud" action="/admin/editar-livro/<%= livro.id %>?_method=PUT" method="post"
+          enctype="multipart/form-data">
           <% } else { %>
-            <form class="add-form form-crud" action="/admin" method="post">
+            <form class="add-form form-crud" action="/admin" method="post" enctype="multipart/form-data">
               <% } %>
                 <br>
 
@@ -65,6 +62,10 @@
                 <input class="form-crud-input" type="text" name="idioma" placeholder="Digite o idioma"
                   value="<%= livro && livro.idioma %>">
 
+                <label class="form-crud-label" for="idioma">Ano de Publicação:</label> <br>
+                <input class="form-crud-input" type="text" name="ano" placeholder="Digite o ano de publicação"
+                  value="<%= livro && livro.ano %>">
+
                 <label class="form-crud-label" for="paginas">Páginas:</label> <br>
                 <input class="form-crud-input" type="text" name="paginas" placeholder="Digite o número de paginas"
                   value="<%= livro && livro.paginas %>">
@@ -80,16 +81,21 @@
                   value="<%= livro && livro.isbn %>">
 
                 <label class="form-crud-label" for="sinopse">Sinopse:</label> <br>
-                <textarea class="form-crud-input" name="sinopse" placeholder="Escreva aqui a sinopse do livro"></textarea 
-                 value="<%= livro && livro.sinopse %>">
+                <textarea class="form-crud-input" name="sinopse"
+                  placeholder="Escreva aqui a sinopse do livro"><%= livro && livro.sinopse %></textarea>
 
-                 <label class="form-crud-label" for="capaImg">Imagem Capa:</label> <br>
-                 <input type="file" class="alteraInp" name="capaImg">
+                <label class="form-crud-label" for="capaImg">Imagem Capa:</label> <br>
+                <span class="capaupload">
+                  <%= livro && livro.capa %>
+                </span>
+
+                <input type="file" class="alteraInp" name="capa" <%=livro && livro.capa %>>
+
 
                 <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
-      </form>
-       
-</form>
+            </form>
+
+        </form>
 
   </main>
 

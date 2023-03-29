@@ -9,11 +9,15 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/stylesheets/button.css">
     <link rel="stylesheet" href="/stylesheets/carrinhoFlutuante.css">
-
+    <script async src="/javascripts/carrinhoscript.js"></script>
     <script src="/javascripts/menuHamburguer.js" defer></script>
     <script src="/javascripts/carrinhoFlutuante.js" defer></script>
+    
+
     <script src="/javascripts/script.js" defer></script>
+    <script src="/javascripts/validacoescadastro.js" defer></script>
     <script src="/javascripts/validacoeslogin.js" defer></script>
+    <script src="/javascripts/validacoesCadastroLivro.js" defer></script>
 <title>Home</title>
 </head>
 <body>
@@ -97,7 +101,8 @@
                             <div class="continuar">
                                 <form id="formCarrinho"    method="get" action="/carrinho">
                                     <input type="hidden" name="produtos" id="produtosCarrinho">
-                                    <button type="submit" id="continuar">Finalizar Compra</button>
+                                    <button type="submit" id="comprar">Finalizar Compra</button>
+                                   
                                 </form>
                             </div>
                         </section>

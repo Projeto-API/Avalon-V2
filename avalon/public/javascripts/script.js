@@ -1,18 +1,22 @@
-const qtdProduto = document.getElementById("quantidadeValue");
+const qtdLivro = document.getElementById("quantidadeValue");
 
 function aumentarQtd(op) {
   if (op == 'up') {
-    var num = parseInt(qtdProduto.value);
-    qtdProduto.value = num + 1;
+    var num = parseInt(qtdLivro.value);
+    qtdLivro.value = num + 1;
   }
 }
 
 function diminuirQtd(op) {
   if (op == 'down') {
-    var num = parseInt(qtdProduto.value);
-    qtdProduto.value = num - 1;
+    var num = parseInt(qtdLivro.value);
+    qtdLivro.value = num - 1;
   }
 }
+
+// Modal
+
+
 
 // -----ARROWS CARROSEL -------
 
@@ -24,14 +28,14 @@ const carousel = document.getElementById("carrousel"),
   prev = document.getElementById("prev");
 
 next.addEventListener("click", e => {
-  carousel.scrollBy(width + gap, 0);
-  if (carousel.scrollWidth !== 0) {
-    prev.style.display = "flex";
-  }
-  if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
-    next.style.display = "none";
-  }
-});
+    carousel.scrollBy(width + gap, 0);
+    if (carousel.scrollWidth !== 0) {
+      prev.style.display = "flex";
+    }
+    if (content.scrollWidth - width - gap <= carousel.scrollLeft + width) {
+      next.style.display = "none";
+    }
+  });
 prev.addEventListener("click", e => {
   carousel.scrollBy(-(width + gap), 0);
   if (carousel.scrollLeft - width - gap <= 0) {
@@ -44,3 +48,5 @@ prev.addEventListener("click", e => {
 
 let width = carousel.offsetWidth;
 window.addEventListener("resize", e => (width = carousel.offsetWidth));
+
+

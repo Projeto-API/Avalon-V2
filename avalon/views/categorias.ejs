@@ -1,0 +1,59 @@
+<%- include('partials/header') %>
+  <link rel="stylesheet" href="/stylesheets/admin.css">
+ 
+  <main>
+    <div class="crud-types">
+      <button class="btnCrud"><a href="/admin/editoras">Editoras</a></button>
+      <button class="btnCrud"><a href="/admin">Livros</a></button>
+      <button class="btnCrud"><a href="/admin/autores">Autores</a></button>
+    </div>
+    <div class="container-crud">
+      <h4 class="crud-title">CATEGORIAS</h4>
+    
+      <div class="container-header-crud">
+        <div class="header-crud">
+          <button class="btnCrud"><a href="/admin/categorias">Todos</a></button>
+          <button class="btnCrud"><a href="/admin/categorias/form">Adicionar</a></button>
+          <div class="search-crud">
+            <form action="/admin/categorias/buscar" method="get">
+              <input type="text" name="search" id="read" placeholder="Buscar ">
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="divTable">
+        <table>
+          <thead>
+            <tr>
+              <th><input type="checkbox"></th>
+              <th>ID</th>
+              <th>Tipo</th>
+              <th class="acao">Editar</th>
+              <th class="acao">Excluir</th>
+            </tr>
+          </thead>
+          <tbody>
+
+            <% categorias.forEach(el=> { %>
+              <tr>
+                <td><input type="checkbox"></td>
+                <td>
+                  <%= el.id %>
+                <td>
+                  <%= el.tipo %>
+                </td>
+                <td class="acao">
+                  <button class="crudform"><a href="/admin/categorias/editar/<%= el.id %>"><i
+                        class='bx bx-edit'></i></a></i></button>
+                </td>
+                <td class="acao">
+                  <form action="/admin/categorias/deletar/<%= el.id %>?_method=DELETE" method="post">
+                    <button class="crudform"><i class='bx bx-trash'></i></button>
+                  </form>
+                </td>
+              </tr>
+              <% }) %>
+          </tbody>
+        </table>
+      </div>
+  </main>

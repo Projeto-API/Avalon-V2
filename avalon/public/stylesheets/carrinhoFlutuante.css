@@ -31,9 +31,9 @@ body {
     font-size: 19px
 }
 
-.produto1,
-.produto2,
-.produto3 {
+/* .Livro1,
+.Livro2,
+.Livro3 {
     margin: .5rem;
     display: flex;
     width: auto;
@@ -41,8 +41,7 @@ body {
     background-color: #F6F9FF;
     border-radius: 1rem;
 }
-
-.imagemProduto {
+.imagemLivro {
     margin: .5rem;
     border-radius: .5rem;
     justify-content: center;
@@ -50,30 +49,25 @@ body {
     height: 100%;
     width: 50px;
 }
-
-#produtoTitulo {
+#LivroTitulo {
     text-align: left;
     padding-bottom: 1rem;
     font-size: .7rem;
 }
-
-.informationProdutoValue {
+.informationLivroValue {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
     gap: 1rem;
 }
-
-.informationProdutoValue a {
+.informationLivroValue a {
     text-decoration: none;
     color: black;
 }
-
 .quantidadeValue {
     text-align: center;
     width: 2rem;
 }
-
 input[type=number] { 
     -moz-appearance: textfield;
     appearance: textfield;
@@ -84,7 +78,6 @@ input[type=number] {
     font-weight: 600;
     color: #386C5F;
 }
-
 #continuar {
     align-items: center;
     display: flex;
@@ -96,11 +89,46 @@ input[type=number] {
     cursor: pointer;
     border: none;
 }
-
 .next-page-cart {
     padding: 1rem;
     width: 100%;
+} */
+
+
+
+img.cart-product-image {
+    max-width: 5rem;
+    border-radius: 1rem;
 }
 
 
 
+.containerProduto {
+    display: inline-grid;
+}
+
+input.product-qtd-input {
+    width: 2rem;
+    text-align: center;
+}
+
+button.remove-livro-button {
+    background-color: red;
+    border-radius: 1rem;
+    width: 6rem;
+    height: 2rem;
+    margin: 1rem;
+}
+
+
+button.fechar {
+    border-radius: 2rem;
+    width: 2rem;
+}
+
+div#produto {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    
+}

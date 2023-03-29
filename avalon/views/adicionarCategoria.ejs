@@ -1,0 +1,33 @@
+<%- include('partials/header') %>
+  <link rel="stylesheet" href="/stylesheets/admin.css">
+
+  <main>
+
+    <div class="modal">
+      <h2>
+        <% if (categoria) { %>
+          Editar
+          <% } else { %>
+            Adicionar
+            <% } %>
+              Categoria
+      </h2>
+
+      <% if (categoria) { %>
+        <form class="add-form" action="/admin/categorias/editar/<%= categoria.id %>?_method=PUT" method="post">
+          <% } else { %>
+            <form class="add-form" action="/admin/categorias" method="post">
+              <% } %>
+                <br>
+                <label class="form-crud-label" for="tipo">Categoria:</label> <br>
+                <input class="form-crud-input" id="crud-categoria" type="text" name="tipo"
+                  placeholder="Digite a categoria da categoria " value="<%= categoria && categoria.tipo %>">
+
+
+                <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
+            </form>
+    </div>
+
+  </main>
+
+  <%- include('partials/footer') %>

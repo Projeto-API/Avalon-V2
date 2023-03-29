@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ropa+Sans&display=swap');
+
+* {
+
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+* body {
+    height: auto;
+}
+
+main {
+    margin: auto;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+ul li {
+    width: 100%;
+    list-style: none;
+    text-align: left;
+}
+
+main.Livros {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    max-width: 100%;
+}
+
+.menu_categoria {
+    display: inline;
+    text-align: center;
+    max-width: 15rem;
+    min-width: 5rem;
+}
+
+
+aside {
+    width: 100%;
+    display: inline;
+    justify-items: center;
+    max-width: 13rem;
+    padding-left: 2rem;
+    padding-right: 6rem;
+    padding-top: 2rem;
+    background-color: #386C5F;
+    color: #fff;
+
+
+}
+
+.menu-main ul {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+
+    float: inline-end;
+
+
+}
+
+.menu-main ul .link_menu {
+    display: flex;
+    width: 100%;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+.categoria {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 100%;
+    min-width: 1rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.menu-categoria ul li a {
+    text-align: left;
+}
+
+.book_compra {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.galeria {
+    display: flex;
+    max-width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+}
+
+section .galeria {
+    display: flex;
+    max-width: 100%;
+    justify-items: center;
+    text-align: center;
+
+
+}
+.grid-livros {
+    margin: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+
+.grid-livros li {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 10rem;
+    text-align: center;
+    list-style: none;
+}
+
+.item div {
+    width: 100%;
+}
+
+.item div button {
+    width: 80%;
+}
+
+
+.item div h5 {
+    height: 40px;
+    width: 100%;
+}
+
+.item img {
+    margin: 10px;
+    max-height: 12rem;
+    height: 100%;
+    border-radius: 5%;
+    align-items: center;
+}
+
+
+/* .galeria>div {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #fff;
+    width: 12rem;
+    justify-items: center;
+    align-items: center;
+    background-size: auto;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 1rem;
+}
+.galeria>.catalogo_Livros {
+    background-color: #F6F9FF;
+    border-radius: 1rem;
+    margin: 0.8rem;
+}
+.galeria>div>img {
+    display: flex;
+    width: 100%;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+.galeria {
+    gap: 1rem;
+} */
+
+.button {
+    background: #69E0AE;
+    width: 120px;
+    border-radius: 16px;
+    border: #69E0AE;
+    padding: 8px;
+    box-shadow: 0 0 5px black
+}
+
+.filtro {
+    display: flex;
+    margin: 0;
+    justify-content: space-between;
+    padding: 2rem;
+    width: 100%;
+    background-color: #386C5F;
+    font-size: 0.7rem;
+}
+
+.filtro .resultado {
+    margin-left: 1rem;
+    color: #ffffff;
+
+}
+
+.filtro #sort-by {
+    margin-right: 1rem;
+    border-radius: 0.5rem;
+    font-size: 0.7rem;
+}
+
+ul.style_litst {
+    display: flex;
+    margin-bottom: 2rem;
+    text-decoration: none;
+
+}
+
+a:link {
+    text-decoration: none;
+    color: inherit;
+    font-size: 0.9rem;
+}
+
+/*  CARROSEIS  */
+
+.continue-vendo,
+.lancamento {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.carrousel {
+    overflow: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.gallery {
+    margin: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+}
+
+.gallery li {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 10rem;
+    text-align: center;
+    list-style: none;
+}
+
+.item div {
+    width: 100%;
+}
+
+.item div button{
+    width: 80%;
+}
+
+
+.item div h5 {
+    height: 40px;
+    width: 100%;
+}
+
+.item img {
+    margin: 10px;
+    max-height: 12rem;
+    height: 100%;
+    border-radius: 5%;
+    align-items: center;
+}
+
+
+@media (min-width: 1200px) {
+    main, .continue-vendo {
+        width: 1200px;
+    }
+}

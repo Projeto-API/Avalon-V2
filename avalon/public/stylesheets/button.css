@@ -65,8 +65,8 @@ button a {
 
 .continuar :hover {
     color: white;
-
 }
+
 
 /* BOTÃO CONTINUAR */
 .adicionar {
@@ -89,15 +89,25 @@ button a {
     cursor: pointer;
 }
 
+/* #excluir {
+    font-weight: bold;
+    width: 100%;
+    height: 2rem;
+    background-color: #4EC16E;
+    border-radius: 1rem;
+    cursor: pointer;
+} */
+
 
 .adicionar :hover {
     color: white;
 }
 
+.excluir :hover {
+    color: white;
+}
+
 /* BOTÃO FINALIZAR COMPRA */
-
-
-
 
 .finalizarCompra :hover {
     color: white;
@@ -106,8 +116,8 @@ button a {
 /* BOTOES - ARROW LEFT E RIGHT */
 
 
-#prev,
-#next {
+.arrow-left,
+.arrow-right {
     display: flex;
     justify-content: center;
     align-content: center;
@@ -115,12 +125,11 @@ button a {
     border: none;
     padding: 7px;
     border-radius: 5px;
-   
     cursor: pointer;
     position: absolute;
 }
 
-<<<<<<< HEAD
+
 #prev:hover,
 #next:hover {
     color: ;
@@ -130,17 +139,30 @@ button a {
 >>>>>>> paloma
 
 #prev {
+=======
+
+.arrow-left {
+>>>>>>> d9b46f11f8762486cc89855824e8af1249c842e7
     top: 45%;
-    left: -20px;
+    left: 0;
     transform: translate(50%, -50%);
     display: none;
 }
 
-#next {
+.arrow-right {
     top: 45%;
-    right: -20px;
+    right: 0px;
     transform: translate(-50%, -50%);
 }
+
+
+
+#prev:hover,
+#ne:hover {
+    color: white;
+}
+
+/* BOTAO EXCLUIR  */
 
 #excluir {
     display: block;

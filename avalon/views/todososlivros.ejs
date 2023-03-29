@@ -49,24 +49,21 @@
                     <option value="maisVendido">mais Vendido</option>
                 </select>
             </div>
-            <div class="galeria">
-                <% livros.forEach((servico, i) => {%>
-                    <div id="servico-<%= i %>" class="catalogo_produtos servico-<%= i %>">
-                        <img  class="product-identification" src="<%= servico.imagem %>" >
-                        <form id="formCarrinho" method="post">
-                            <div>
-                                <strong class="cart-product-title" a ><%= servico.titulo %> </strong>   
-                            </div>
-                            <div>
-                                <span class="cart-product-price"> R$ <%= servico.preco %></span>
-                            </div>
-                            <input type="hidden" name="produtoId" value="<%= servico.id %>">
-                            <button type="button" class="comprar">COMPRAR</a></button>
-                        </form>
-                    </div>
-                <% }) %>
-            </div>
-    </main>
+            <% livros.forEach((servico, i) => {%>
+            <div class="product-identification">
+              <li class="item current-item">
+                <img src="<%= servico.imagem %>" class="item-img"alt="dna">
+                <div>
+                    <h5 class="item-name"><%= servico.titulo %></h5>
+                    <span class="item-price">R$ <%= servico.preco %> </span>
+                    <button class="comprar" ><a >COMPRAR</a></button>
+                </div>
+            </li>
+              <% }) %>
+
+
+
+</main>
     <section>
         <div class="continue-vendo">
             <h5 class="title">CONTINUE VENDO</h5>

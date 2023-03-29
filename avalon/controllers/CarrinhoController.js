@@ -2,17 +2,16 @@ const{ Carrinho } = require('../models')
 
 const CarrinhoController = {
     carrinho: async (req,res) => {
-        let valorFrete = null
         let livros = await Carrinho.findAll();
-        return res.render('carrinho', {livros, valorFrete})
+        return res.render('carrinho', {livros})
 
     },
     add: async (req, res) => {
         const { produtoId } = await req.body;
-        const todososlivros =  await TodososlivrosModel.index();
+        const estiloProdutos =  await estiloProdutosModel.index();
 
 
-        Carrinho.add(todososlivros[produtoId]);
+        Carrinho.add(estiloProdutos[produtoId]);
         res.redirect('/carrinho');
     },
     remove: async (req, res) => {

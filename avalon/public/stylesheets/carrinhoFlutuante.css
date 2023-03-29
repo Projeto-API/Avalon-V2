@@ -97,10 +97,11 @@ input[type=number] {
 
 
 img.cart-product-image {
-    max-width: 5rem;
+    width: 100px;
+    max-width: 65px;
     border-radius: 1rem;
+    height: 90px;
 }
-
 
 
 .containerProduto {
@@ -132,3 +133,17 @@ div#produto {
     margin: 10px;
     
 }
+
+div#primeiro {
+    border-radius: 3rem;
+}
+
+section#carrinhoFlutuante {
+    border-radius: 2rem;
+}
+
+section.containerProduto {
+    display: flex;
+    /* margin: 0px; */
+    padding-top: 14px;
+  }

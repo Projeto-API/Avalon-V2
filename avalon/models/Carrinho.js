@@ -1,40 +1,21 @@
-const criarCarrinhoModel = (sequelize, DataType) => {
-    const colunas = {
-        id: {
-            type: DataType.INTEGER,
-            primaryKey: true,
-            autoIncrement: true
-        },
-        titulo: {
-            type: DataType.STRING,
-            allowNull: false
-        },
-        preco: {
-            type:DataType.DECIMAL,
-            allowNull: false
-        },
-        quantidade: {
+module.exports = (sequelize, DataType) =>{
+    const Carrinho = sequelize.define('Carrinho', {
+        id:{
             type:DataType.INTEGER,
-            allowNull: false
+            primaryKey:true,
+            autoIncrement:true
         },
-        imagem: {
-            type:DataType.STRING,
-            allowNull: false
-        },
-        
-
-    };
-
-    const opcoes = {
-        tableName: 'carrinho',
-        timetamps: false,
-        createdAt: false,
-        updatedAt: false
-
-    };
-
-    const Carrinho = sequelize.define('Carrinho', colunas, opcoes);
+            titulo: DataType.STRING,
+            preco: DataType.DECIMAL,
+            quantidade: DataType.INTEGER,
+            imagem: DataType.STRING
+    },{
+        tableName:'carrinho',
+        timetamps:false,
+        createdAt:false,
+        updatedAt:false
+      
+    })
     return Carrinho
-}
 
-module.exports = criarCarrinhoModel;
+}

@@ -38,10 +38,11 @@ main.Livros {
 
 
 aside {
-    width: 100%;
+border-radius: 16px;
     display: inline;
     justify-items: center;
-    max-width: 13rem;
+    max-width: 3rem;
+height: 38rem;
     padding-left: 2rem;
     padding-right: 6rem;
     padding-top: 2rem;
@@ -185,6 +186,7 @@ section .galeria {
 }
 
 .filtro {
+    border-radius: 7px;
     display: flex;
     margin: 0;
     justify-content: space-between;

@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
-
+const validatorCadastro = require('../middewres/ValidatorFormCadastroUsuario')
 
 
 const MinhasComprasController = require('../controllers/MinhasComprasController');
@@ -16,7 +16,7 @@ router.get('/conta', ContaController.index);
 router.get('/login', LoginController.index);
 router.post('/entrar', LoginController.login);
 router.get('/cadastro', UsuarioController.index);
-router.post('/cadastro', UsuarioController.criar);
+router.post('/cadastro', validatorCadastro, UsuarioController.criar);
 router.get('/editar-conta', UsuarioController.form);
 router.put('/editar-conta', UsuarioController.editar);
 

@@ -1,41 +1,40 @@
-const { body } = require("express-validator");
+const { check } = require("express-validator");
 
-const validacoesCadastro = [
-body("nome")
+module.exports = [
+check("nome")
 .notEmpty().withMessage("Este campo não pode ficar vazio").bail()
-.isString().bail()
+.isString().bail(),
 
-body("sobrenome")
+check("sobrenome")
 .notEmpty().withMessage("Este campo não pode ficar vazio").bail()
-.isString().bail()
+.isString().bail(),
 
-body("documentoCPF")
+check("documentoCPF")
   .notEmpty().bail()
   .withMessage("Este campo não pode ficar vazio").bail(),
 
-body("nomeDeUsuario")
-    .notEmpty().withMessage("Este campo não pode ficar vazio").bail()
+check("nomeDeUsuario")
+    .notEmpty().withMessage("Este campo não pode ficar vazio").bail(),
   
-body("email")
+check("email")
     .notEmpty().withMessage("Este campo não pode ficar vazio").bail()
     .isEmail().withMessage("Deve ser um e-mail valido").bail()
     .isLength({ min: 3 }).withMessage("Deve possuir pelo menos 3 caracteres").bail(),
 
-body("telefone")
+check("telefone")
   .isNumeric().withMessage("Deve conter apenas números").bail()
   .isLength({min:10}).withMessage("Deve conter pelo menos 10 caracteres").bail()
   .isLength({max:13}).withMessage("Deve conter no máximo 13 caracteres").bail()
-  .isInt().withMessage("Use somente numeros inteiros").bail()
+  .isInt().withMessage("Use somente numeros inteiros").bail(),
 
-body("endereco")
+check("endereco")
   .isString()
   .isLength({min:3}).withMessage("Endereço muito curto").bail()
-  .notEmpty().withMessage("Este campo não pode ficar vazio").bail()
+  .notEmpty().withMessage("Este campo não pode ficar vazio").bail(),
 
-  .withMessage("Este campo não pode ficar vazio").bail(),
-  body("password")
+  check("password")
       .isLength({ min: 8 })
       .withMessage("Senha inválida").bail()
       .notEmpty().bail(),
 ]
-module.exports = [validacoesLogin];
+

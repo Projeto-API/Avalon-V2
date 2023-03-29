@@ -3,6 +3,7 @@ const router = express.Router();
 const {check} = require('express-validator');
 
 
+
 // ------------CONTROLLERS E ROTAS PAINEL DE ADMINISTRADOR DO CRUD -------------//
 const LivrosController = require('../controllers/LivrosController');
 const EditorasController = require('../controllers/EditorasController');
@@ -27,6 +28,13 @@ router.put('/editar-livro/:id', LivrosController.editar);
 // DELETE ROUTES
 router.delete('/deletar/:id', LivrosController.deletar);
 
+// ------------------------------------VALIDAÇÕES EDITORAS------------------------------------------//
+
+const validacoesEditoras = [
+    check('título').notEmpty().withMessage('É obrigatório preencher o nome').bail().isString(),
+    check('cnpj').notEmpty().withMessage('É obrigatório preencher a cnpj').bail().isNumeric(),
+];
+
 
 // ----------------------------------------CRUD EDITORAS--------------------------------------------//
 
@@ -37,7 +45,7 @@ router.get('/editoras/form/:id?', EditorasController.form);
 router.get('/editoras/editar/:id', EditorasController.buscarEditora)
 
 // POST E PUT ROUTES
-router.post('/editoras', EditorasController.criar);
+router.post('/editoras',validacoesEditoras, EditorasController.criar);
 router.put('/editoras/editar/:id', EditorasController.editar);
 
 // DELETE ROUTES

@@ -1,6 +1,6 @@
 const { Op } = require('sequelize');
 const { Autor, Livro } = require('../models');
-const {validarResultado} = require('express-validator');
+const {validarAutores} = require('express-validator');
 Op
 
 module.exports = {
@@ -87,9 +87,9 @@ module.exports = {
   },
 
       //---------->Validações Cadastro Produtos:<------------------
-      
+
       register: (req, res) => {
-        let errors = validarResultado(req);
+        let errors = validarAutores(req);
 
         if (errors.isEmpty()){
 

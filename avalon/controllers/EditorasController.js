@@ -1,5 +1,6 @@
 const { Editora } = require('../models');
 const { Op } = require('sequelize');
+const { validarEditoras } = require('express-validator')
 
 module.exports = {
   async index(req, res) {
@@ -77,5 +78,17 @@ module.exports = {
     }
     console.log("A editora de id " + req.body.id + " foi deletada com sucesso");
     return res.redirect('/admin/editoras');
-  }
+  },
+
+  //---------->Validações Cadastro Produtos:<------------------
+      
+  register: (req, res) => {
+    let errors = validarEditoras(req);
+
+    if (errors.isEmpty()){
+
+    } else {
+        res.render('register', {errors: errors.mapped(), old: req.body});
+    }
+}
 }

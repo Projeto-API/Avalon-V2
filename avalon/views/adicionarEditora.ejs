@@ -22,11 +22,21 @@
 
                 <label class="form-crud-label" for="nome">Nome da Editora:</label> <br>
                 <input class="form-crud-input" id="titulo" type="text" name="nome"
-                  placeholder="Digite o nome da editora" value="<%= editora && editora.nome %>">
+                  placeholder="Digite o nome da editora" value="<%= editora && editora.nome %>"
+                  value="<%  locals.old && old.name %>">
+
+                  <% if (locals.errors && errors.name){ %>
+                    <p class="feedback"><% errors.name %></p>
+                    <% } %>
 
                 <label class="form-crud-label" for="cnpj">CNPJ:</label> <br>
                 <input class="form-crud-input" id="crud-cnpj" type="text" name="cnpj"
-                  placeholder="Digite o CNPJ da editora " value="<%= editora && editora.cnpj %>">
+                  placeholder="Digite o CNPJ da editora " value="<%= editora && editora.cnpj %>"
+                  value="<%  locals.old && old.name %>">
+
+                  <% if (locals.errors && errors.name){ %>
+                    <p class="feedback"><% errors.name %></p>
+                    <% } %>
 
 
                 <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>

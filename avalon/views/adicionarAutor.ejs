@@ -22,7 +22,8 @@
 
                 <label class="form-crud-label" for="nome">Nome do Autor:</label> <br>
                 <input class="form-crud-input" id="titulo" type="text" name="nome"
-                  placeholder="Digite o nome da editora" value="<%= autor && autor.nome %>">
+                  placeholder="Digite o nome da editora" value="<%= autor && autor.nome %>"
+                  value="<% = locals.old && old.name %>">
 
                   <% if (locals.errors && errors.name){ %>
                     <p class="feedback"><% errors.name %></p>

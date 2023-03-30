@@ -2,7 +2,10 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
-const validadorTipoUsuario = require('../middewres/validadorTipoUsuario')
+const validadorTipoUsuario = require('../middewres/validadorTipoUsuario');
+const validadorFormEditoras = require('../middewres/validadorFormEditoras');
+
+
 // MULTER LIVROS
 const multerDiskStorageLivro = multer.diskStorage({
     destination: (req, file, callback) => {
@@ -64,7 +67,7 @@ router.get('/editoras/buscar', EditorasController.search);
 router.get('/editoras/form/:id?', EditorasController.form);
 router.get('/editoras/editar/:id', EditorasController.buscarEditora)
 // POST E PUT ROUTES
-router.post('/editoras', EditorasController.criar);
+router.post('/editoras', validadorFormEditoras, EditorasController.criar);
 router.put('/editoras/editar/:id', EditorasController.editar);
 // DELETE ROUTES
 router.delete('/editoras/deletar/:id', EditorasController.deletar);

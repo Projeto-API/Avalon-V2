@@ -5,6 +5,6 @@ const CarrinhoController = require('../controllers/CarrinhoController')
 /* GET users listing. */
 router.get('/', CarrinhoController.carrinho);
 router.post('/', CarrinhoController.add);
-router.post('/deletar', CarrinhoController.remove);
+router.delete('/', CarrinhoController.remove);
 
 module.exports = router;

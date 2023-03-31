@@ -26,15 +26,16 @@
 
                 <div class="carrousel" id="carrousel">
                     <div class="gallery" id="gallery">
-                        <% livrosLancamento.forEach(el=> { %>
+                        <% livrosLancamento.forEach(livro=> { %>
                             <li class="item current-item">
-                                <img class="item-img" src="/images/produtos/<%= el.capa %>" alt="dna" id="<%= el.id %>">
+                                <img class="item-img" src="/images/produtos/<%= livro.capa %>" alt="dna" id="<%= livro.id %>">
+                                <input type="hidden" id="item-id" value="<%= livro.id%>">
                                 <div>
                                     <h5 class="item-name">
-                                        <%= el.titulo %>
+                                        <%= livro.titulo %>
                                     </h5>
                                     <span class="item-price">
-                                        R$ <%= el.preco %>
+                                        R$ <%= livro.preco %>
                                     </span>
                                     <button class="comprar"><a href="#">COMPRAR</a></button>
                                 </div>
@@ -84,15 +85,16 @@
 
                 <div class="carrousel" id="carrousel2">
                     <div class="gallery" id="gallery2">
-                        <% livros.forEach(el=> { %>
+                        <% livros.forEach(livro=> { %>
                             <li onclick=redirect() class="item current-item">
-                                <img class="item-img"class="produto" src="/images/produtos/<%= el.capa %>" alt="dna">
+                                <img class="item-img"class="produto" src="/images/produtos/<%= livro.capa %>" alt="dna">
+                                <input type="hidden" id="item-id" value="<%= livro.id%>">
                                 <div>
                                     <h5 class="item-name">
-                                        <%= el.titulo %>
+                                        <%= livro.titulo %>
                                     </h5>
                                     <span class="item-price">
-                                        R$ <%= el.preco %>
+                                        R$ <%= livro.preco %>
                                     </span>
                                     <button class="comprar"><a href="#">COMPRAR</a></button>
                                 </div>

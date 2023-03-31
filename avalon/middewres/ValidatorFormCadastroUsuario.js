@@ -51,7 +51,7 @@ module.exports = [
     .bail(),
 
   check("cep")
-    .isNumber()
+    .isNumeric()
     .isLength({ min: 5 })
     .withMessage("CEP muito curto")
     .bail()
@@ -76,7 +76,7 @@ module.exports = [
     .withMessage("Este campo não pode ficar vazio")
     .bail(),
 
-  check("password")
+  check("passwordCadastro")
     .isLength({ min: 8 })
     .withMessage("Escolha uma senha de pelo menos 8 caracteres")
     .bail()

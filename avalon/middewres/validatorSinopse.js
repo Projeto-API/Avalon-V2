@@ -1,3 +1,8 @@
-check("documentoCPF")
+const { check } = require("express-validator");
+
+
+module.exports = [
+check("quantidadeSinopse")
   .notEmpty().bail()
-  .withMessage("Este campo não pode ficar vazio").bail(),
+  .withMessage("Informe uma quantidade").bail(),
+]

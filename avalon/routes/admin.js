@@ -4,6 +4,7 @@ const path = require('path');
 const multer = require('multer');
 const validadorTipoUsuario = require('../middewres/validadorTipoUsuario');
 const validadorFormEditoras = require('../middewres/validadorFormEditoras');
+const validadorFormLivros = require('../middewres/validadorFormLivros');
 
 
 // MULTER LIVROS
@@ -52,7 +53,7 @@ router.get('/form/:id?', LivrosController.form);
 
 
 // POST E PUT ROUTES
-router.post('/', filecapa.fields([{ name: 'capa' }]), LivrosController.criar);
+router.post('/', filecapa.fields([{ name: 'capa' }]), validadorFormLivros, LivrosController.criar);
 router.put('/editar-livro/:id', filecapa.fields([{ name: 'capa' }]), LivrosController.editar);
 
 // DELETE ROUTES

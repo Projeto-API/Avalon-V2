@@ -16,7 +16,7 @@ const carousel = document.getElementById("carrousel"),
   content = document.getElementById("gallery"),
   next = document.getElementById("next"),
   prev = document.getElementById("prev");
-console.log(carousel)
+
 
 next.addEventListener("click", e => {
   carousel.scrollBy(width + gap, 0);
@@ -46,7 +46,7 @@ const carousel2 = document.getElementById("carrousel2"),
   content2 = document.getElementById("gallery2"),
   next2 = document.getElementById("next2"),
   prev2 = document.getElementById("prev2");
-console.log(carousel2)
+
 
 next2.addEventListener("click", e => {
   carousel2.scrollBy(width2 + gap, 0);
@@ -80,4 +80,12 @@ function vejaMais() {
        document.getElementById('read-btn').remove()
     // document.getElementById('read-btn').style.color = "white"
   }
+}
+
+// ----Veja mais
+
+function abrirBuscaMobile() {
+
+  document.querySelector('.busca-mobile').style.display = "flex"
+
 }

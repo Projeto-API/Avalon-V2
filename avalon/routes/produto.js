@@ -13,6 +13,7 @@ router.get('/lancamentos/', LancamentosController.index);
 router.get('/sinopse/:id', SinopseController.index);
 router.get('/todos/', TodosLivros.index);
 router.get('/carrinho/', CarrinhoController.carrinho);
+router.get('/todos/buscar', TodosLivros.search)
 
 
 

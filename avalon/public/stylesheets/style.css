@@ -25,6 +25,9 @@ header {
     width: 100%;
 }
 
+.icons-btn a {
+    color: #424141;
+}
 
 .icons-btn {
     text-decoration: none;
@@ -34,7 +37,8 @@ header {
     font-size: 25px;
 }
 
-.icons-btn:hover {
+.icons-btn:hover,
+.icons-btn a:hover {
     text-decoration: none;
     color: black;
     transform: scale(1.1);
@@ -46,6 +50,26 @@ header {
     display: block;
     height: 35px;
     padding-left: 25vw;
+}
+
+.busca-mobile {
+    margin: .5rem;
+    display: none;
+}
+
+.busca-mobile form {
+    width: 100%;
+
+}
+
+#search-mobile {
+    width: 100%;
+    font-size: .8rem;
+    font-style: italic;
+    padding-left: 1rem;
+    height: 2rem;
+    border-radius: 2rem;
+    border: none;
 }
 
 #search {
@@ -63,7 +87,6 @@ header {
 }
 
 .footer {
-
     display: flex;
     background-color: #9CD9C2;
     font-size: .9rem;
@@ -175,8 +198,6 @@ header {
         align-items: center;
     }
 
-
-
     #logo2 {
         display: block;
         align-items: center;
@@ -204,6 +225,10 @@ header {
 
     }
 
+    .busca-mobile {
+         display: none;
+    }
+
     #search {
         display: flex;
         font-size: .8rem;
@@ -215,7 +240,7 @@ header {
         border-radius: 2rem;
         border: none;
     }
-
+    
     #logo {
         display: flex;
         align-items: center;

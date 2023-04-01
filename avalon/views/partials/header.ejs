@@ -50,21 +50,23 @@
                 <a href="/" class="logo"><img id="logo" src="/images/img/logopreto.png" alt=""></a>
             </div>
             <div class="busca header2">
-                <form action="/search">
+                <form action="/produto/todos/buscar" method="get">
                     <input type="text" name="search" id="search" scr="images/lupa.png"
                         placeholder="Títulos, Autores e Gêneros ">
                 </form>
-
-
             </div>
-
             <div class="header-icons header2">
-                <button class="icons-btn" id="lupa"><i class='bx bx-search'></i></button>
+                <button onclick=abrirBuscaMobile() class="icons-btn" id="lupa"><i class='bx bx-search'></i></button>
                 <button class="icons-btn"><a href="/users/login"><i class='bx bx-user'></i></a></button>
                 <button onclick=abrirCarrinhoFlutuante() class="icons-btn"><i class='bx bx-cart'></i></button>
             </div>
         </section>
-
+        <div class="busca-mobile">
+            <form action="/produto/todos/buscar" method="get">
+                <input type="text" name="search" id="search-mobile" scr="images/lupa.png"
+                    placeholder="Títulos, Autores e Gêneros ">
+            </form>
+        </div>
         <section class="navegacao header2">
             <nav class="lista">
                 <ul type="none">

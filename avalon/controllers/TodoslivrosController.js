@@ -1,4 +1,6 @@
 const { Livro } = require('../models');
+const { Op } = require('sequelize');
+Op
 
 module.exports = {
   index: async (req, res) => {
@@ -13,4 +15,20 @@ module.exports = {
     }
 
   },
+
+  search: async (req, res) => {
+
+    const { search } = req.query;
+    const livros = await Livro.findAll({
+      where: search ? {
+        [Op.or]: [
+          { titulo: { [Op.like]: '%' + search + '%' } },
+          
+        ]
+      } : null
+    });
+
+    res.render('todososlivros', { livros });
+  }
+
 }

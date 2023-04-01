@@ -1,24 +1,12 @@
-var item = document.querySelectorAll(".item img"); 
+var item = document.querySelectorAll(".item img");
 
-item.forEach(function(el) {
-  el.addEventListener("click", function(event){
+item.forEach(function (el) {
+  el.addEventListener("click", function (event) {
     const id = event.target.id;
-  
+
     window.location.href = "/produto/sinopse/" + id
   })
 })
-
-// const item =document.getElementsByClassName('item')
-
-// item[0].addEventListener("click", e => {
-  
-//   window.location.href = "/produto/sinopse/"
-// })
-
-// function redirect(event) {
-//   item[0].window.location.href = "/produto/sinopse/" + 1
-
-// }
 
 
 
@@ -81,3 +69,15 @@ prev2.addEventListener("click", e => {
 
 let width2 = carousel2.offsetWidth;
 window.addEventListener("resize", e => (width2 = carousel2.offsetWidth));
+
+// ----Veja mais
+
+function vejaMais() {
+
+  document.querySelector('.sinopse').style.height = "auto"
+
+  if (document.querySelector('.sinopse').style.height = "auto") {
+       document.getElementById('read-btn').remove()
+    // document.getElementById('read-btn').style.color = "white"
+  }
+}

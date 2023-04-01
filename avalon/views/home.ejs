@@ -86,7 +86,7 @@
                     <div class="gallery" id="gallery2">
                         <% livros.forEach(el=> { %>
                             <li onclick=redirect() class="item current-item">
-                                <img class="item-img"class="produto" src="/images/produtos/<%= el.capa %>" alt="dna">
+                                <img class="item-img"class="produto" src="/images/produtos/<%= el.capa %>" id="<%= el.id %>" alt="dna">
                                 <div>
                                     <h5 class="item-name">
                                         <%= el.titulo %>

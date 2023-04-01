@@ -5,15 +5,14 @@ const SinopseController = require('../controllers/SinopseController');
 const TodosLivros = require('../controllers/TodosLivrosController');
 const CarrinhoController = require('../controllers/CarrinhoController');
 const EntregaController = require('../controllers/EntregaController');
-const CheckoutController = require('../controllers/CheckoutController');
+const LancamentosController = require('../controllers/LancamentosController');
 
 
 router.get('/enderecos/?', EntregaController.calcularfrete)
-
+router.get('/lancamentos/', LancamentosController.index);
 router.get('/sinopse/:id', SinopseController.index);
 router.get('/todos/', TodosLivros.index);
 router.get('/carrinho/', CarrinhoController.carrinho);
-router.get('/checkout/', CheckoutController.index);
 
 
 
@@ -23,5 +22,7 @@ router.get('/checkout/', CheckoutController.index);
 //     res.render('carrinho', { title: 'Express', css: 'carrinho' });
 //     router.delete('../remove', ServicosController.deletaServico)
 //   });
+
+module.exports = router;
 
 module.exports = router;

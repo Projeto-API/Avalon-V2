@@ -159,24 +159,18 @@ section .galeria {
     padding: 1rem;
     gap: 1rem;
     border-radius: 1rem;
-
 }
-
 .galeria>.catalogo_Livros {
     background-color: #F6F9FF;
     border-radius: 1rem;
     margin: 0.8rem;
-
 }
-
 .galeria>div>img {
     display: flex;
     width: 100%;
-
     border-radius: 0.5rem;
     object-fit: cover;
 }
-
 .galeria {
     gap: 1rem;
 } */

@@ -17,6 +17,7 @@
           <div class="search-crud">
             <form action="/admin/buscar" method="get">
               <input type="text" name="search" id="read" placeholder="Buscar ">
+              <input type="text" name="search" id="read" placeholder="Buscar ">
             </form>
           </div>
         </div>
@@ -30,18 +31,19 @@
               <th>Título</th>
               <th>Preço</th>
               <th>Categoria</th>
+              <th>Categoria</th>
               <th class="acao">Editar</th>
               <th class="acao">Excluir</th>
             </tr>
           </thead>
           <tbody>
 
-            <% livros.forEach(el=> { %>
+            <% livros.forEach(el => { %>
               <tr>
                 <td><input type="checkbox"></td>
                 <td>
                   <%= el.id %>
-                    </th>
+                    </td>
                 <td>
                   <%= el.titulo %>
                 </td>
@@ -51,6 +53,11 @@
                 <td>
                   <%= el.categoria.tipo %>
                 </td>
+                <td>
+                  <%= el.categoria.tipo %>
+                </td>
+                <td class="acao">
+                  <button class="crudform"><a href="/admin/editar-livro/<%= el.id %>"><i
                 <td class="acao">
                   <button class="crudform"><a href="/admin/editar-livro/<%= el.id %>"><i
                         class='bx bx-edit'></i></a></i></button>
@@ -66,4 +73,3 @@
         </table>
       </div>
   </main>
-

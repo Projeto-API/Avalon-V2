@@ -71,7 +71,9 @@ button.remove-livro-button {
     flex-wrap: wrap;
 }
 
-.produto-carrinho {
+/* .Livro1,
+.Livro2,
+.Livro3 {
     margin: .5rem;
     justify-content: left;
     display: flex;
@@ -80,23 +82,94 @@ button.remove-livro-button {
     background-color: #F6F9FF;
     border-radius: 1rem;
 }
-
+.imagemLivro {
+    margin: .5rem;
+    border-radius: .5rem;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50px;
+}
 #LivroTitulo {
     padding-bottom: 1rem;
     text-align: center;
     width: 100%;
 }
-
-.informationLivro {
-    justify-content: flex-start;
+.informationLivroValue {
     display: flex;
-    flex-direction: column;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 1rem;
+}
+.informationLivroValue a {
+    text-decoration: none;
+    color: black;
+}
+.quantidadeValue {
+    text-align: center;
+    width: 2rem;
+}
+input[type=number] { 
+    -moz-appearance: textfield;
+    appearance: textfield;
+ 
+ }
+#preco {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #386C5F;
+}
+#continuar {
+    align-items: center;
+    display: flex;
+    font-weight: bold;
+    width: 100%;
+    height: 2rem;
+    background-color: #4EC16E;
+    border-radius: 1rem;
+    cursor: pointer;
+    border: none;
+}
+.next-page-cart {
     padding: 1rem;
     width: 100%;
+} */
+
+
+
+img.cart-product-image {
+    max-width: 5rem;
+    border-radius: 1rem;
 }
 
-.informationLivroValue {
-    width: 100%;
+
+
+.containerProduto {
+    display: inline-grid;
+}
+
+input.product-qtd-input {
+    width: 2rem;
+    text-align: center;
+}
+
+button.remove-livro-button {
+    background-color: red;
+    border-radius: 1rem;
+    width: 6rem;
+    height: 2rem;
+    margin: 1rem;
+}
+
+
+button.fechar {
+    border-radius: 2rem;
+    width: 2rem;
+}
+
+div#produto {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    margin: 10px;
+    
 }

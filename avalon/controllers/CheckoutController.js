@@ -1,4 +1,3 @@
-
 const fs = require('fs');
 const path = require('path');
 const { Op } = require('sequelize');
@@ -11,11 +10,5 @@ module.exports = {
   index: async (req, res) => {
     try {
 
-
-      res.render('checkout');
-    } catch (erro) {
-      let alert = require('alert');
-      alert("ERRO 500 - Erro interno do servidor!")
-    }
-  }
-}
+      const livros = await Livro.findAll();
+      const cliente = await Cliente.findAll();

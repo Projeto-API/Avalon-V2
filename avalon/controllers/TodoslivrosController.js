@@ -17,14 +17,23 @@ module.exports = {
   },
 
   search: async (req, res) => {
-
     const { search } = req.query;
     const livros = await Livro.findAll({
       where: search ? {
         [Op.or]: [
           { titulo: { [Op.like]: '%' + search + '%' } },
-          
         ]
+      } : null
+    });
+
+    res.render('todososlivros', { livros });
+  },
+
+  searchCategoria: async (req, res) => {
+    const { search } = req.query;
+    const livros = await Livro.findAll({
+      where: search ? {
+        categorias_id: { [Op.like]: '%' + search }
       } : null
     });
 

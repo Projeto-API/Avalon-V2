@@ -14,6 +14,8 @@ router.get('/sinopse/:id', SinopseController.index);
 router.get('/todos/', TodosLivros.index);
 router.get('/carrinho/', CarrinhoController.carrinho);
 router.get('/todos/buscar', TodosLivros.search)
+router.get('/todos/categoria/buscar/', TodosLivros.searchCategoria)
+
 
 
 

@@ -29,31 +29,18 @@ CREATE TABLE autores (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nome VARCHAR(150) NOT NULL,
 biografia VARCHAR(1000) NOT NULL,
-foto VARCHAR(45) NOT NULL
+foto VARCHAR(45) NOT NULLtipo
 );
+
 CREATE TABLE carrinho (
-id INT PRIMARY KEY AUTO_INCREMENT,
-quantidade INT NOT NULL,
-usuarios_id INT UNSIGNED NOT NULL,
-livros_id INT UNSIGNED NOT NULL,
-FOREIGN KEY (livros_id) REFERENCES livros(id),
-FOREIGN KEY (usuarios_id) REFERENCES usuarios(id)
+id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
+titulo VARCHAR(150) NOT NULL,
+preco DECIMAL(10,2) NOT NULL,
+quantidade INT UNSIGNED NOT NULL,
+imagem VARCHAR(45) NOT NULL
 );
 
-INSERT INTO autores (nome, biografia )VALUES 
-('Waka Hirako', 'Waka Hirako é uma autora que chamou atenção logo em sua estreia como mangaka. Em 2018 começou lançando o one-shot Yiska, na plataforma digital Comic Walker, da Kadokawa. Entre seus destaques na carreira, estão o prêmio “New Face” de revelação em mangá no 24º Japan Media Arts Festival e o Shining!'), 
-('Tori Telfer', 'Tori Telfer é escritora e editora, e seu trabalho já apareceu na Salon, Vice, Jezebel, The Awl, The Hairpin, Good Magazine, entre outros. Ela trabalhou como editora de revistas infantis, revisora acadêmica, ghostwriter corporativa, professora de redação e redatora publicitária voluntária; também rodou salões de muitos eventos deslumbrantes servindo tira-gostos. Escreveu, dirigiu e produziu peças independentes em Chicago e Los Angeles. Formou-se em Redação Criativa na Northwestern University. Lady Killers: Assassinas em Série é o seu primeiro livro.'),
-('Christophe Chabouté', "Christophe Chabouté, nascido em 08 de fevereiro de 1967, é de origem alsaciana. Frequentou os cursos de Belas Artes em Angoulême e Estrasburgo. A editora Vents d'Ouest publicou suas primeiras obras em 1993 em Les Récits, um álbum coletivo sobre Arthur Rimbaud. Porém ficou mais conhecido em 1998 através da publicação de Sorcières, pela Éditions Le Téméraire (premiado no Illzach Festival) e Quelques jours d'été (Festival de Angoulême). Ele também ilustrou romances para jovens. Seu trabalho Tout seul, considerado sua obra-prima, foi traduzido para o português com o título 'Solitário' e lançado no Brasil pela editora Pipoca e Nanquim em 04 de julho de 2019."),
-('Silvia Federici', 'Silvia Federici é uma filósofa contemporânea, professora e feminista autonomista italiana radicada nos Estados Unidos. Ela foi nos anos 1970 uma das pioneiras nas campanhas que reivindicavam salário para o trabalho doméstico.'),
-('J. R. R. Tolkien', 'Tolkien nasceu em Bloemfontein, na República do Estado Livre de Orange, na atual África do Sul, e, aos três anos de idade, com a sua mãe e irmão, passou a viver na Inglaterra, terra natal de seus pais. Desde pequeno fascinado pela linguística, fez a licenciatura na faculdade de Letras em Exeter. Participou ativamente da Primeira Guerra Mundial, e logo depois começou a escrever os primeiros rascunhos do que se tornaria o seu "mundo secundário", complexo e cheio de vida, denominado Eä, palco das suas mundialmente famosas obras como O Hobbit, O Senhor dos Anéis e O Silmarillion, esta última, sua maior paixão, postumamente publicada, que é considerada a sua principal obra, embora não a mais famosa.'),
-('J.K. Rowling ', 'J. K. Rowling, é uma escritora, roteirista e produtora cinematográfica britânica, notória por escrever a série de livros Harry Potter. Os livros ganharam uma popularidade mundial, recebendo múltiplos prêmios e vendendo mais de 600 milhões de cópias, o que a tornou a série literária mais vendida da história. A Warner Bros. adaptou os livros para o cinema, fazendo com que os filmes entrassem na lista de filmes de maior bilheteria.[3] Rowling já escreveu vários livros para o público adulto, Morte Súbita (2012), e sob o pseudônimo de Robert Galbraith: O Chamado do Cuco (2013), um dentre outros na série Cormoran Strike, de ficção policial.'),
-('Inio Asano', 'Inio Asano é um mangaká japonês responsável pelos aclamados mangás Solanin e Oyasumi Punpun. Suas obras são conhecidas por serem realistas e abordarem o universo jovem, variando do slice of life para o horror psicológico. O Jornal japonês Yomiuri Shimbun o descreveu como uma das vozes de sua geração.'),
-('Kentaro Miura', 'Kentarō Miura foi um mangaká japonês. Ele era mais conhecido por sua aclamada série de fantasia sombria Berserk, que começou a ser publicado em 1989 e se estendeu até a data da morte de Miura, em 2021.'),
-('Elainne Ourives','É autora dos best-sellers DNA Milionário® (2019) e DNA da Cocriação® (2020), ambos publicados pela Editora Gente. É Treinadora Mental e especialista em Cocriadores de Sonhos. É pesquisadora no Campo da Mente Humana, Física Quântica, Inteligência Emocional, Frequência Vibracional e Neurociência. Formada em Ativismo Quântico, multiplicadora do cientista indiano Amit Goswami, treinada em Desdobramento Quântico do Tempo pelo físico francês Jean-Pierre Garnier Malet. Trainer e Mestre da Atração com Joe Vitale.'),
-('Fiódor Dostoiévski', "Fiódor Mikhailovitch Dostoiévski foi um escritor, filósofo e jornalista do Império Russo. É considerado um dos maiores romancistas e pensadores da história, bem como um dos maiores 'psicólogos' que já existiram.")
-;
-
-CREATE TABLE usuarios (
+CREATE TABLE clientes (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nome VARCHAR(45) NOT NULL,
 sobrenome VARCHAR(45) NOT NULL,
@@ -161,7 +148,7 @@ ALTER TABLE livros ADD capa VARCHAR(45) NOT NULL;
 ALTER TABLE livros add imagens VARCHAR(45) NOT NULL;
 ALTER TABLE livros add ano INT NOT NULL;
 
-
+ALTER TABLE usuarios rename column tipo TO admin;
 
 ALTER TABLE usuarios ADD genero VARCHAR(45) NOT NULL;
 ALTER TABLE usuarios ADD estado VARCHAR(45) NOT NULL;
@@ -174,13 +161,18 @@ CREATE TABLE lancamentos (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nome VARCHAR(45) NOT NULL
 );
-ALTER TABLE carrinho ADD capa VARCHAR(45) NOT NULL;
-ALTER TABLE carrinho add imagens VARCHAR(45) NOT NULL;
 
+ALTER TABLE livros DROP INDEX `paginas`;
 
+ALTER TABLE livros ADD capa VARCHAR(45) NOT NULL;
+ALTER TABLE livros add imagens VARCHAR(45) NOT NULL;
+ALTER TABLE livros add ano INT NOT NULL;
 
-CREATE TABLE generos (
-id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
-nome VARCHAR(45) NOT NULL
-);
+-- adicionado mais campos em usuarios
 
+ALTER TABLE usuarios ADD genero VARCHAR(45) NOT NULL;
+ALTER TABLE usuarios ADD estado VARCHAR(45) NOT NULL;
+ALTER TABLE usuarios ADD cidade VARCHAR(45) NOT NULL;
+ALTER TABLE usuarios ADD numero VARCHAR(45) NOT NULL;
+ALTER TABLE usuarios ADD complemento VARCHAR(45);
+ALTER TABLE usuarios ADD tipo INT;

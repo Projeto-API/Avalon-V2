@@ -28,7 +28,7 @@ const carousel = document.getElementById("carrousel"),
   content = document.getElementById("gallery"),
   next = document.getElementById("next"),
   prev = document.getElementById("prev");
-console.log(carousel)
+
 
 next.addEventListener("click", e => {
   carousel.scrollBy(width + gap, 0);

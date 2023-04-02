@@ -1,24 +1,12 @@
-var item = document.querySelectorAll(".item img"); 
+var item = document.querySelectorAll(".item img");
 
-item.forEach(function(el) {
-  el.addEventListener("click", function(event){
+item.forEach(function (el) {
+  el.addEventListener("click", function (event) {
     const id = event.target.id;
-  
+
     window.location.href = "/produto/sinopse/" + id
   })
 })
-
-// const item =document.getElementsByClassName('item')
-
-// item[0].addEventListener("click", e => {
-  
-//   window.location.href = "/produto/sinopse/"
-// })
-
-// function redirect(event) {
-//   item[0].window.location.href = "/produto/sinopse/" + 1
-
-// }
 
 
 
@@ -28,7 +16,7 @@ const carousel = document.getElementById("carrousel"),
   content = document.getElementById("gallery"),
   next = document.getElementById("next"),
   prev = document.getElementById("prev");
-console.log(carousel)
+
 
 next.addEventListener("click", e => {
   carousel.scrollBy(width + gap, 0);
@@ -58,7 +46,7 @@ const carousel2 = document.getElementById("carrousel2"),
   content2 = document.getElementById("gallery2"),
   next2 = document.getElementById("next2"),
   prev2 = document.getElementById("prev2");
-console.log(carousel2)
+
 
 next2.addEventListener("click", e => {
   carousel2.scrollBy(width2 + gap, 0);
@@ -82,4 +70,22 @@ prev2.addEventListener("click", e => {
 let width2 = carousel2.offsetWidth;
 window.addEventListener("resize", e => (width2 = carousel2.offsetWidth));
 
+// ----Veja mais
 
+function vejaMais() {
+
+  document.querySelector('.sinopse').style.height = "auto"
+
+  if (document.querySelector('.sinopse').style.height = "auto") {
+       document.getElementById('read-btn').remove()
+    // document.getElementById('read-btn').style.color = "white"
+  }
+}
+
+// ----Veja mais
+
+function abrirBuscaMobile() {
+
+  document.querySelector('.busca-mobile').style.display = "flex"
+
+}

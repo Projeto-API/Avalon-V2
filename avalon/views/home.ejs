@@ -11,11 +11,11 @@
                 <div><img src="/images/mais vendidos.png" alt=""></div>
             </div>
             <div class="big3-icons">
-                <a href="/Sinopse.ejs">LIVROS</a>
+                <a href="/produto/todos/categoria/buscar?search=2">LIVROS</a>
                 <div><img src="/images/Livros.png" alt=""></div>
             </div>
             <div class="big3-icons">
-                <a href="Sinopse.ejs">HQ</a>
+                <a href="/produto/todos/categoria/buscar?search=1">HQ</a>
                 <div><img src="/images/quadrinhos.png" alt=""></div>
             </div>
         </section>
@@ -26,16 +26,15 @@
 
                 <div class="carrousel" id="carrousel">
                     <div class="gallery" id="gallery">
-                        <% livrosLancamento.forEach(livro=> { %>
+                        <% livrosLancamento.forEach(el=> { %>
                             <li class="item current-item">
-                                <img class="item-img" src="/images/produtos/<%= livro.capa %>" alt="dna" id="<%= livro.id %>">
-                                <input type="hidden" id="item-id" value="<%= livro.id%>">
+                                <img class="item-img" src="/images/produtos/<%= el.capa %>" alt="dna" id="<%= el.id %>">
                                 <div>
                                     <h5 class="item-name">
-                                        <%= livro.titulo %>
+                                        <%= el.titulo %>
                                     </h5>
                                     <span class="item-price">
-                                        R$ <%= livro.preco %>
+                                        R$ <%= el.preco %>
                                     </span>
                                     <button class="comprar"><a href="#">COMPRAR</a></button>
                                 </div>
@@ -85,16 +84,16 @@
 
                 <div class="carrousel" id="carrousel2">
                     <div class="gallery" id="gallery2">
-                        <% livros.forEach(livro=> { %>
+                        <% livros.forEach(el=> { %>
                             <li onclick=redirect() class="item current-item">
-                                <img class="item-img"class="produto" src="/images/produtos/<%= livro.capa %>" alt="dna">
-                                <input type="hidden" id="item-id" value="<%= livro.id%>">
+                                <img class="item-img" class="produto" src="/images/produtos/<%= el.capa %>"
+                                    id="<%= el.id %>" alt="dna">
                                 <div>
                                     <h5 class="item-name">
-                                        <%= livro.titulo %>
+                                        <%= el.titulo %>
                                     </h5>
                                     <span class="item-price">
-                                        R$ <%= livro.preco %>
+                                        R$ <%= el.preco %>
                                     </span>
                                     <button class="comprar"><a href="#">COMPRAR</a></button>
                                 </div>

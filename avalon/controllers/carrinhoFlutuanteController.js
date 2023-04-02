@@ -1,7 +1,7 @@
 
 
-// module.exports = {
-//     mostraCarrinho: (req, res) => {
-//         res.render('carrinho', {js: "/js/carrinho.js"})
-//     }
-// }
+module.exports = {
+    mostraCarrinho: (req, res) => {
+        res.render('carrinho', {js: "/js/carrinho.js"})
+    }
+}

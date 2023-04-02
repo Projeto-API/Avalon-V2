@@ -1,4 +1,4 @@
-const{ Carrinho } = require('../models')
+const { Carrinho, TodososlivrosModel } = require('../models');
 
 const puppeteer = require('puppeteer');
 
@@ -49,21 +49,15 @@ const CarrinhoController = {
               preco: livro.productPrice,
               quantidade: 1 // assuming the default quantity is 1
             });
+
+            res.redirect('/carrinho');
           }
-      
-          // Retrieve the updated list of books in the shopping cart
-          const livros = await Carrinho.findAll();
-          console.log("Livros no Carrinho: ", livros[0]);
-      
-          return res.render('carrinho', { livros });
-        } catch (error) {
-          console.error(error);
-          return res.status(500).send('Internal Server Error');
         }
-    }
+      }
 
-   
-    
-}
 
-module.exports = CarrinhoController
+
+
+};
+
+module.exports = CarrinhoController;

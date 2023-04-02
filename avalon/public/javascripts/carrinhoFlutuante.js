@@ -65,6 +65,7 @@ function checkIfinputInsNull(event){
 function adicionaCarrinho(event) {
     const button = event.target;
     const productInfos = button.parentElement.parentElement.parentElement;
+    const productId = document.getElementById("item-id").value;
     const productImage = productInfos.getElementsByClassName("item-img")[0].src;
     const productTitle = productInfos.getElementsByClassName("item-name")[0].innerText;
     const productPrice = productInfos.getElementsByClassName("item-price")[0].innerText;
@@ -84,6 +85,7 @@ function adicionaCarrinho(event) {
     if (!produtoExistente) {
       carrinho.push({
         productImage,
+        productId,
         productTitle,
         productPrice,
         productQuantity: 1
@@ -182,4 +184,15 @@ function fecharCarrinhoFlutuante() {
     document.getElementById('carrinhoFlutuante').style.width = "0rem"
     updateTotal()
 
+}
+const formCarrinho = document.getElementById('formCarrinho')
+formCarrinho.addEventListener('submit', finalizarCompra)
+
+
+ function finalizarCompra (evento){
+  evento.preventDefault()
+ const listaLivros = sessionStorage.getItem('carrinho')
+ const produtosCarrinhoInput= document.getElementById('produtosCarrinho')
+ produtosCarrinhoInput.value =listaLivros
+ formCarrinho.submit()
 }

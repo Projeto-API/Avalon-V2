@@ -2,7 +2,6 @@ module.exports = [
 
 
     login = (req, res, next) => {
-
         if (req.session.tipo == 1) {
             next()
      
@@ -10,5 +9,4 @@ module.exports = [
             res.redirect('conta')
         }
     }
-
 ]

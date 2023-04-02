@@ -1,8 +1,0 @@
-const { check } = require("express-validator");
-
-module.exports = [
-  check("searchAutores")
-    .isLength({ min: 3 })
-    .withMessage("Deve possuir pelo menos 3 caracteres")
-    .bail(),
-];

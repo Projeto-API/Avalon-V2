@@ -1,0 +1,413 @@
+* body {
+    height: auto;
+}
+
+main {
+    padding-top: 50px;
+}
+
+.container {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*MAIN */
+
+
+.capaprincipal {
+    padding-top: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #386C5F;
+}
+
+#capa {
+    max-width: 18rem;
+    width: 80vw;
+    border-radius: 1rem;
+}
+
+.miniaturas {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+.gallery-miniaturas {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow-x: hidden;
+}
+
+.título {
+
+    justify-content: center;
+    font-size: 1.5rem;
+    text-align: left;
+}
+
+.sinopse h5 {
+    color: gray;
+}
+
+.sinopse {
+    height: 380px;
+    padding: 2rem;
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    flex-direction: column;
+    font-size: 1.2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.sinopse.active {
+    height: auto;
+}
+
+
+#read-btn {
+    width: 100%;
+    border: none;
+    background-color: white;
+    color: #286152;
+    font-weight: bold;
+}
+
+.sinopse p {
+    padding-top: 3rem;
+    font-size: 1rem;
+}
+
+.precoLivro {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 1.7rem;
+    color: red;
+    font-weight: bold;
+
+}
+
+.price-qtt {
+    width: 100%;
+    padding: 1rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: center;
+    display: flex;
+}
+
+.containerfilho2 {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#comprar {
+    width: 90%;
+}
+
+.containercolumninformation {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.columninformation {
+    padding: 2rem;
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+    font-size: 1rem;
+    justify-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    list-style: none;
+}
+
+.columninformation>li {
+    padding: .5rem 0;
+}
+
+.columninformation>li p:last-child {
+    font-weight: bold;
+    font-size: .8rem;
+    align-items: center;
+}
+
+.author {
+    color: white;
+    padding: 2rem;
+    background-color: #286152;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.columnauthor {
+    color: black;
+    padding-left: 2rem;
+    width: 100%;
+}
+
+.abstract {
+    display: none;
+}
+
+.imageauthor>img {
+    display: none;
+
+}
+
+.title {
+    margin: 1rem;
+}
+
+/*  CARROSEIS  */
+
+.continue-vendo,
+.lancamento {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.carrousel {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.gallery {
+    margin: 1rem;
+    display: grid;
+    gap: 1rem;
+    grid-auto-flow: column;
+}
+
+.gallery li {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    width: 10rem;
+    text-align: center;
+    list-style: none;
+}
+
+.item div {
+    width: 100%;
+}
+
+.item div button {
+    width: 80%;
+}
+
+
+.item div h5 {
+    height: 40px;
+    width: 100%;
+}
+
+.item img {
+    margin: 10px;
+    max-height: 12rem;
+    height: 100%;
+    border-radius: 5%;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    body {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .container {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
+    }
+
+
+
+    .container1 {
+        width: 30vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+    .capaprincipal {
+        padding: 2rem 0;
+        background-color: white;
+
+    }
+
+    #capa {
+        width: 13rem;
+    }
+
+    .miniaturas {
+        position: relative;
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+        flex-flow: row nowrap;
+        overflow-x: hidden;
+
+    }
+
+    .gallery-miniaturas {
+        display: flex;
+        flex-flow: row nowrap;
+        overflow-x: hidden;
+    }
+
+    .containerfilho2 {
+        padding-left: 2rem;
+        align-items: center;
+        width: 450px;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+    }
+
+
+
+
+    .price-qtt {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+        display: flex;
+    }
+
+    .columninformation {
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0;
+        flex-direction: row;
+        flex-flow: row nowrap;
+        overflow-x: hidden;
+    }
+
+    .columninformation * p {
+        flex-wrap: nowrap;
+        min-width: 10rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .abstract {
+        display: none;
+    }
+
+
+    .imageauthor>img {
+        margin-top: 50px;
+        max-width: 8rem;
+        display: flex;
+        width: 20vw;
+        border-radius: 200%;
+        flex-direction: column;
+    }
+}
+
+
+
+@media (min-width: 1200px) {
+    body * {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    main {
+        width: 1200px;
+    }
+
+    #capa {
+        padding-top: 0;
+    }
+
+    .container {
+        padding-top: 3rem;
+    }
+
+    .container1 {
+        height: 100%;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+    }
+
+    .gallery-miniaturas {
+        display: flex;
+        flex-direction: column;
+        height: 18rem;
+        width: 4rem;
+        gap: 1rem;
+        flex-flow: column nowrap;
+        overflow-y: hidden;
+    }
+
+    .miniaturas {
+        padding: 3rem 2rem;
+    }
+
+    .containerfilho2 {
+        width: 100%;
+        padding: 0 200px;
+    }
+
+    .sinopse {
+        height: 300px;
+        text-align: left;
+    }
+
+    .price-qtt {
+        width: 90%;
+        justify-content: space-around;
+
+
+    }
+
+    .containerfilho1 {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .columninformation {
+        display: flex;
+
+    }
+
+    .columninformation * p {
+        min-width: 4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .abstract {
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .author {
+        height: 280px;
+    }
+
+
+}

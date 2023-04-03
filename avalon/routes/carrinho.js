@@ -4,7 +4,7 @@ const CarrinhoController = require('../controllers/CarrinhoController')
 
 /* GET users listing. */
 router.get('/', CarrinhoController.carrinho);
-router.post('/', CarrinhoController.add);
-router.delete('/', CarrinhoController.remove);
+// router.post('/', CarrinhoController.teste);
+router.post('/deletar', CarrinhoController.remove);
 
 module.exports = router;

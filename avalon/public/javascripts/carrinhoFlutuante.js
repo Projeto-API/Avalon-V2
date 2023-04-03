@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 if (document.readyState == "loading") {
+=======
+let carrinho = JSON.parse(sessionStorage.getItem("carrinho")) || [];
+if(document.readyState == "loading"){
+>>>>>>> c7138d39b60654728bf221f2c045074bc8061310
     document.addEventListener("DOMContentLoaded", ready)
     updateTotal();
 } else {

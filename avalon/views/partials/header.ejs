@@ -78,6 +78,7 @@
                 </ul>
             </nav>
         </section>
+<<<<<<< HEAD
         <section>
             <div class="carrinhoFlu">
                 <section class="carrinhoFlutuante" id="carrinhoFlutuante">
@@ -109,6 +110,51 @@
                         </form>
                     </div>
 
+=======
+                <section>
+                    <div class="carrinhoFlu">
+                        <section class="carrinhoFlutuante" id="carrinhoFlutuante" >
+                            <div class="headerFlutuante" id="primeiro" >
+                                <div>
+                                    <h5>MEU CARRINHO</h5>
+                                </div>
+                                <!-- <button id="fechar" onclick="fecharCarrinhoFlutuante()">X</button> -->
+                                <div>
+                                    <button onclick=fecharCarrinhoFlutuante() class="fechar"><i>X</i></button>
+                                </div>
+                            </div>
+                            <tbody>
+                                                                                                                                                                                                                                                            
+                                    <div class="produto" id="produto">
+                                        
+                                        
+                                    
+                                    </div>    
+                                                         
+                                    <div colspan="3" class="cart-total-container">
+                                        <strong>Total</strong>
+                                        <span>R$0,00</span>
+                                    </div>
+                            </tbody>
+                                
+                            <div class="continuar">
+                                <form id="formCarrinho"    method="post" action="/carrinho">
+                                    <input type="hidden" name="produtosJson" id="produtosJson">
+                                    <button type="submit" id="comprar" onclick=" enviarDados()">Finalizar Compra</button>
+
+                                    <script>
+                                        function enviarDados(){
+                                            document.getElementById('produtosJson').value = JSON.stringify(sessionStorage.getItem('carrinho'));
+                                            console.log("passei aqui")
+                                        }
+
+                                        
+                                      </script>
+                                   
+                                </form>
+                            </div>
+                        </section>
+>>>>>>> c7138d39b60654728bf221f2c045074bc8061310
                 </section>
             </div>
         </section>

@@ -2,8 +2,12 @@
   <link rel="stylesheet" href="/stylesheets/carrinho.css">
   <main>
     <div class="cart-carrinho">
-      <h3>Carrinho de livros</h3>
+      <div class="finalizarpedido">
+      <h3><a><i class='bx bx-subdirectory-right' ></i></a>Finalizar Pedido</h3>
+     
+    </div>
       <div class="tables-carrinho">
+        <img src="/images/lendolivro.avif" alt="">
         <table class="carrinho-itens">
           <thead>
             <tr>
@@ -15,9 +19,7 @@
             </tr>
           </thead>
           <tbody>
-
-           
-              <% livros.forEach(livro=> { %>
+                <% livros.forEach(livro=> { %>
             <tr>
               <td class="imagem-carrinho"> <img src="<%= livro.imagem %>"> </td>
               <td>
@@ -40,19 +42,16 @@
                 </form>
               </td>
               <% })%>
-
             </tr>
-
           </tbody>
           <tfoot>
             <tr>
               <td colspan="3"></td>
               <td>Total:</td>
-              <td class="cart-total">R$35,00</td>
+              <td class="cart-total">R$ <%= total.toFixed(2) %></td>
             </tr>
           </tfoot>
         </table>
-
         <div class="carrinho-values">
           <div class="frete">
             <h5>Calcular Frete </h5>
@@ -63,11 +62,8 @@
             <h5 class="resultadoFrete">Frete: <%= valorFrete %>
             </h5>
           </div>
-
           <br>
-
           <h5>Resumo do Pedido</h5>
-
           <table>
             <tbody>
               <tr class="itens">
@@ -83,7 +79,6 @@
               <td class="monetary" id="desconto">- R$ 9,47</td>
               </tr>
             </tbody>
-
             <tfoot>
               <tr>
                 <td class="info">Total</td>
@@ -95,7 +90,6 @@
           <br>
           <button class="btnCrud"><a href="">Finalizar Compra</a></button>
         </div>
-
       </div>
     </div>
   </main>

@@ -1,12 +1,10 @@
 var express = require('express');
-const router = express.Router();
+var router = express.Router();
+const CarrinhoController = require('../controllers/CarrinhoController')
 
-const checkoutController = require('../controllers/checkoutController');
-
-
-router.get('/checkout', checkoutController.index);
-
-
-
+/* GET users listing. */
+router.get('/', CarrinhoController.carrinho);
+router.post('/', CarrinhoController.add);
+router.delete('/', CarrinhoController.remove);
 
 module.exports = router;

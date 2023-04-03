@@ -1,11 +1,12 @@
-
-
 * body {
     height: auto;
 }
 
-
 main {
+    padding-top: 50px;
+}
+
+.container {
     display: flex;
     max-width: 100%;
     align-items: center;
@@ -16,7 +17,6 @@ main {
 
 
 .capaprincipal {
-
     padding-top: 65px;
     display: flex;
     justify-content: center;
@@ -27,7 +27,6 @@ main {
 #capa {
     max-width: 18rem;
     width: 80vw;
-    padding-top: 2rem;
     border-radius: 1rem;
 }
 
@@ -50,48 +49,68 @@ main {
     text-align: left;
 }
 
-h6 {
+.sinopse h5 {
     color: gray;
-    font-size: .9rem;
-
 }
 
 .sinopse {
+    height: 380px;
     padding: 2rem;
     display: flex;
     align-items: flex-start;
     text-align: left;
     flex-direction: column;
     font-size: 1.2rem;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.sinopse.active {
+    height: auto;
+}
+
+
+#read-btn {
+    width: 100%;
+    border: none;
+    background-color: white;
+    color: #286152;
+    font-weight: bold;
 }
 
 .sinopse p {
-    padding: 3rem 0;
+    padding-top: 3rem;
     font-size: 1rem;
 }
 
 .precoLivro {
+    width: 100%;
     display: flex;
-    font-size: 1.5rem;
+    justify-content: flex-start;
+    font-size: 1.7rem;
     color: red;
     font-weight: bold;
 
 }
 
 .price-qtt {
-    padding-left: 2rem;
+    width: 100%;
+    padding: 1rem;
     justify-content: flex-start;
     align-items: flex-start;
     text-align: center;
     display: flex;
 }
 
-#quantidade {
-    display: none;
-}
-
 .containerfilho2 {
     margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+#comprar {
+    width: 90%;
 }
 
 .containercolumninformation {
@@ -145,8 +164,6 @@ h6 {
 
 }
 
-
-
 .title {
     margin: 1rem;
 }
@@ -161,7 +178,7 @@ h6 {
 }
 
 .carrousel {
-    overflow: auto;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     scrollbar-width: none;
 }
@@ -186,7 +203,7 @@ h6 {
     width: 100%;
 }
 
-.item div button{
+.item div button {
     width: 80%;
 }
 
@@ -214,14 +231,19 @@ h6 {
         width: 100%;
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: row;
     }
+
+
 
     .container1 {
         width: 30vw;
         display: flex;
         flex-direction: column;
-
     }
+
+
 
     .capaprincipal {
         padding: 2rem 0;
@@ -249,43 +271,23 @@ h6 {
         overflow-x: hidden;
     }
 
-    .container2 {
-        width: 70vw;
-        display: flex;
-        flex-direction: column;
-        font-size: 1.2rem;
-    }
-
-    .sinopse {
-        padding-top: 60px;
-    }
-
-    #quantidade {
-        display: flex;
-        justify-content: space-around;
-        font-size: 1rem;
-        max-width: 4rem;
-        text-align: center;
-        border-radius: .2rem;
+    .containerfilho2 {
+        padding-left: 2rem;
         align-items: center;
+        width: 450px;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
     }
+
+
+
 
     .price-qtt {
         width: 100%;
-        justify-content: space-around;
         align-items: center;
         text-align: center;
         display: flex;
-    }
-
-    .containerfilho2 {
-        width: auto;
-        justify-content: center;
-        display: flex;
-    }
-
-    #comprar {
-        width: 70%;
     }
 
     .columninformation {
@@ -296,7 +298,6 @@ h6 {
         flex-flow: row nowrap;
         overflow-x: hidden;
     }
-
 
     .columninformation * p {
         flex-wrap: nowrap;
@@ -312,9 +313,10 @@ h6 {
 
 
     .imageauthor>img {
+        margin-top: 50px;
         max-width: 8rem;
         display: flex;
-        width: 10vw;
+        width: 20vw;
         border-radius: 200%;
         flex-direction: column;
     }
@@ -330,8 +332,6 @@ h6 {
 
     main {
         width: 1200px;
-    
-        
     }
 
     #capa {
@@ -339,10 +339,7 @@ h6 {
     }
 
     .container {
-      
-        height: 600px;
-        padding-top: 7rem;
-
+        padding-top: 3rem;
     }
 
     .container1 {
@@ -365,11 +362,14 @@ h6 {
         padding: 3rem 2rem;
     }
 
+    .containerfilho2 {
+        width: 100%;
+        padding: 0 200px;
+    }
 
     .sinopse {
-        padding-top: 20px;
+        height: 300px;
         text-align: left;
-
     }
 
     .price-qtt {

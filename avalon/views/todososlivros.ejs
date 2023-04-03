@@ -39,7 +39,7 @@
             </div>
         </aside>
 
-        <section>
+        <section class="all-products">
             <div class="filtro">
                 <h3 class="resultado">Resultados: 360</h3>
                 <select id="sort-by" name="sort-by" class="sort-by">
@@ -52,7 +52,7 @@
             <div class="grid-livros">
                 <% livros.forEach(el => { %>
                     <li onclick=redirect() class="item">
-                        <img class="item-img" src="/images/produtos/<%= el.capa %>" alt="dna">
+                        <img class="item-img" src="/images/produtos/<%= el.capa %>" id="<%= el.id %>" alt="dna">
                         <div>
                             <h5 class="item-name">
                                 <%= el.titulo %>
@@ -75,7 +75,7 @@
                 <div class="gallery" id="gallery">
                     <% livros.forEach(el => { %>
                         <li onclick=redirect() class="item current-item">
-                            <img class="item-img" src="/images/produtos/<%= el.capa %>" alt="dna">
+                            <img class="item-img" src="/images/produtos/<%= el.capa %>" id="<%= el.id %>" alt="dna">
                             <div>
                                 <h5 class="item-name">
                                     <%= el.titulo %>

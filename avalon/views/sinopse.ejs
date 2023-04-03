@@ -1,5 +1,5 @@
 <%- include('partials/header') %>
-<link rel="stylesheet" href="/stylesheets/Sinopse.css">
+    <link rel="stylesheet" href="/stylesheets/Sinopse.css">
 
     <main>
         <section class="container">
@@ -7,35 +7,39 @@
                 <div class="capaprincipal">
                     <img id="capa" src="/images/produtos/<%= livro.capa %>" alt="">
                 </div>
-                
+
                 <div class="miniaturas">
                     <ul class="gallery-miniaturas">
-                        <img class="livrinhos" src="/images//image 4.png" alt="">
-                        <img class="livrinhos" src="/images//image2.png" alt="">
-                        <img class="livrinhos" src="/images//image3.png" alt="">
-                        <img class="livrinhos" src="/images//image2.png" alt="">
-                        <img class="livrinhos" src="/images//image 4.png" alt="">
+                        <% livros.forEach(livro => { %>
+                            <img class="livrinhos" src="/images/produto/<%= livro.imagens %>" alt="">
+                        <% }) %>
+                       
                     </ul>
                 </div>
             </div>
 
             <div class="container2">
                 <div class="sinopse">
-                    <h4 ><%= livro && livro.titulo %></h4>
-                    <h5><%= livro && livro.autor.nome %></h5><br>
+                    <h4>
+                        <%= livro && livro.titulo %>
+                    </h4>
+                    <h5>
+                        <%= livro && livro.autor.nome %>
+                    </h5><br>
 
-                    <p> <%= livro && livro.sinopse %>
+                    <p>
+                        <%= livro && livro.sinopse %>
                     </p>
+                    
                 </div>
-                <div class="price-qtt">
-                    <span class="precoLivro">R$ <%= livro && livro.preco %></span>
-                    <form>
-                        <label for="quantidade">
-                            <input type="number" id="quantidade">
-                        </label>
-                    </form>
-                </div>
+                <button onclick=vejaMais()  id="read-btn">Ver mais</button>
                 <div class="containerfilho2">
+                    <div class="price-qtt">
+                        <span class="precoLivro">R$ <%= livro && livro.preco %></span>
+
+                    </div>
+
+
                     <button class="comprar" id="comprar"><a href="">COMPRAR</a></button>
                 </div>
             </div>
@@ -48,31 +52,43 @@
             <ul class="columninformation">
                 <li>
                     <p>Editora</p>
-                    <p><%= livro && livro.editora.nome %></p>
+                    <p>
+                        <%= livro && livro.editora.nome %>
+                    </p>
                 </li>
                 <li>
                     <p>Ano de publicação</p>
-                    <p><%= livro && livro.ano %></p>
+                    <p>
+                        <%= livro && livro.ano %>
+                    </p>
                 </li>
                 <li>
                     <p>Idioma</p>
-                    <p><%= livro && livro.idioma %></p>
+                    <p>
+                        <%= livro && livro.idioma %>
+                    </p>
                 </li>
                 <li>
                     <p>Páginas</p>
-                    <p><%= livro && livro.paginas %></p>
+                    <p>
+                        <%= livro && livro.paginas %>
+                    </p>
                 </li>
-    
+
                 <li>
                     <p> Acabamento</p>
-                    <p><%= livro && livro.acabamento %></p>
+                    <p>
+                        <%= livro && livro.acabamento %>
+                    </p>
                 </li>
                 <li>
                     <p>ISBN-13</p>
-                    <p><%= livro && livro.isbn %></p>
+                    <p>
+                        <%= livro && livro.isbn %>
+                    </p>
                 </li>
         </section>
-       
+
 
         <section class="author">
             <div class="imageauthor">
@@ -80,48 +96,52 @@
             </div>
 
             <div class="columnauthor">
-                <h4><%= livro && livro.autor.nome %></h4><br>
+                <h4>
+                    <%= livro && livro.autor.nome %>
+                </h4><br>
                 <h6>Autor</h6>
-                <p> <%= livro && livro.autor.biografia %></p>
+                <p>
+                    <%= livro && livro.autor.biografia %>
+                </p>
 
             </div>
         </section>
 
-               <section>
-                <div class="continue-vendo">
-                    <h5 class="title">CONTINUE VENDO</h5>
-    
-                    <div class="carrousel" id="carrousel">
-                        <div class="gallery" id="gallery">
-                            <% carrousel.forEach(el => { %>
-                                <li onclick=redirect() class="item current-item">
-                                    <img class="item-img" src="/images/produtos/<%= el.capa %>" alt="dna">
-                                    <div>
-                                        <h5 class="item-name">
-                                            <%= el.titulo %>
-                                        </h5>
-                                        <span class="item-price">
-                                            R$ <%= el.preco %>
-                                        </span>
-                                        <button class="comprar"><a href="#">COMPRAR</a></button>
-                                    </div>
-                                </li>
-                                <% }) %>
-                        </div>
+        <section>
+            <div class="continue-vendo">
+                <h5 class="title">CONTINUE VENDO</h5>
+
+                <div class="carrousel" id="carrousel">
+                    <div class="gallery" id="gallery">
+                        <% livros.forEach(el=> { %>
+                            <li onclick=redirect() class="item current-item">
+                                <img class="item-img" src="/images/produtos/<%= el.capa %>" id="<%= el.id %>" alt="dna">
+                                <div>
+                                    <h5 class="item-name">
+                                        <%= el.titulo %>
+                                    </h5>
+                                    <span class="item-price">
+                                        R$ <%= el.preco %>
+                                    </span>
+                                    <button class="comprar"><a href="#">COMPRAR</a></button>
+                                </div>
+                            </li>
+                            <% }) %>
                     </div>
-                    <button id="prev" class="arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                            fill="currentColor" class="bi bi-caret-left-fill" viewBox="-2 -2 20 20">
-                            <path
-                                d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
-                        </svg></button>
-                    <button id="next" class="arrow-right control"><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                            height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-                            <path
-                                d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
-                        </svg></button>
                 </div>
+                <button id="prev" class="arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                        fill="currentColor" class="bi bi-caret-left-fill" viewBox="-2 -2 20 20">
+                        <path
+                            d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                    </svg></button>
+                <button id="next" class="arrow-right control"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                        height="16" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                        <path
+                            d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                    </svg></button>
+            </div>
         </section>
-        
+
     </main>
 
     <%- include('partials/footer') %>

@@ -172,7 +172,7 @@ label {
     width: 60%;
 }
 
-.form-auth button {
+.btnSalvar {
     display: flex;
     margin: 2rem;
     justify-content: center;

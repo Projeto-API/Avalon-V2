@@ -20,10 +20,4 @@ router.get('/todos/categoria/buscar/', TodosLivros.searchCategoria)
 
 
 
-
-// router.get('/carrinho', function (req, res, next) {
-//     res.render('carrinho', { title: 'Express', css: 'carrinho' });
-//     router.delete('../remove', ServicosController.deletaServico)
-//   });
-
 module.exports = router;

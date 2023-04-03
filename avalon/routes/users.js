@@ -3,6 +3,8 @@ const router = express.Router();
 const path = require('path');
 const multer = require('multer');
 
+
+
 const MinhasComprasController = require('../controllers/MinhasComprasController');
 const LoginController = require('../controllers/LoginController');
 const UsuarioController = require('../controllers/CadastrousuarioController');

@@ -1,6 +1,6 @@
 const { Carrinho, TodososlivrosModel } = require('../models');
 
-const puppeteer = require('puppeteer');
+// const puppeteer = require('puppeteer');
 
 const CarrinhoController = {
     carrinho: async (req,res) => {
@@ -34,30 +34,27 @@ const CarrinhoController = {
             }
           });
         res.redirect('/carrinho');
-    },
-    teste: async (req, res) => {
-        try {
-          const { produtosJson } = req.body;
-          const listaLivros = JSON.parse(produtosJson);
-          console.log("lista de produto",listaLivros )
+    }
+    // teste: async (req, res) => {
+    //     try {
+    //       const { produtosJson } = req.body;
+    //       const listaLivros = JSON.parse(produtosJson);
+    //       console.log("lista de produto",listaLivros )
       
-          // Add each book in listaLivros to the shopping cart
-          for (const livro of listaLivros) {
-            await Carrinho.create({
-              titulo: livro.productTitle,
-              autor: livro.productAuthor,
-              preco: livro.productPrice,
-              quantidade: 1 // assuming the default quantity is 1
-            });
+    //       // Add each book in listaLivros to the shopping cart
+    //       for (const livro of listaLivros) {
+    //         await Carrinho.create({
+    //           titulo: livro.productTitle,
+    //           autor: livro.productAuthor,
+    //           preco: livro.productPrice,
+    //           quantidade: 1 // assuming the default quantity is 1
+    //         });
 
-            res.redirect('/carrinho');
-          }
-        }
-      }
+    //         res.redirect('/carrinho');
+    //       }
+    //     }
+      };
+        
 
-
-
-
-};
 
 module.exports = CarrinhoController;

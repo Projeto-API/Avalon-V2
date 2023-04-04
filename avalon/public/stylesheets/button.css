@@ -130,19 +130,7 @@ button a {
 }
 
 
-#prev:hover,
-#next:hover {
-    color: ;
-}
-=======
-
->>>>>>> paloma
-
-#prev {
-=======
-
 .arrow-left {
->>>>>>> d9b46f11f8762486cc89855824e8af1249c842e7
     top: 45%;
     left: 0;
     transform: translate(50%, -50%);

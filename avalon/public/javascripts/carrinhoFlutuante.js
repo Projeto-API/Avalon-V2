@@ -1,4 +1,4 @@
-let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+let carrinho = JSON.parse(sessionStorage.getItem("carrinho")) || [];
 if (document.readyState == "loading") {
     document.addEventListener("DOMContentLoaded", ready)
     updateTotal();

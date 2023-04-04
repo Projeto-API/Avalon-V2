@@ -93,20 +93,27 @@
                     <tbody>
 
                         <div class="produto" id="produto">
-
+                            
                         </div>
-
+                        
                         <div colspan="3" class="cart-total-container">
                             <strong>Total</strong>
                             <span>R$0,00</span>
                         </div>
                     </tbody>
-
+                    
                     <div class="continuar">
-                        <form id="formCarrinho" method="get" action="/carrinho">
-                            <input type="hidden" name="produtos" id="produtosCarrinho">
-                            <button type="submit" id="continuar">Finalizar Compra</button>
+                        <form id="formCarrinho" method="post" action="/carrinho">
+                            <input type="hidden" name="produtosCarrinho" id="produtosCarrinho">
+                            <button onclick="enviarDados()" type="submit" id="continuar">Finalizar Compra</button>
                         </form>
+                        <script>
+                            function enviarDados(){
+                                document.getElementById('produtosCarrinho').value = sessionStorage.getItem('carrinho');
+                                console.log("passei aqui")
+                            }
+                        </script>
+
                     </div>
 
                 </section>

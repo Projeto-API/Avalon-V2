@@ -89,3 +89,57 @@ function abrirBuscaMobile() {
   document.querySelector('.busca-mobile').style.display = "flex"
 
 }
+
+// -----CARROUSEL BANNER
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+let slideInterval;
+
+function showSlide(n) {
+  if (n < 0) {
+    currentSlide = slides.length - 1;
+  } else if (n >= slides.length) {
+    currentSlide = 0;
+  } else {
+    currentSlide = n;
+  }
+
+  slides.forEach(slide => {
+    slide.style.display = 'none';
+  });
+
+  slides[currentSlide].style.display = 'block';
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}
+
+function startSlideInterval() {
+  slideInterval = setInterval(() => {
+    nextSlide();
+  }, 5000); // intervalo de 5 segundos
+}
+
+function stopSlideInterval() {
+  clearInterval(slideInterval);
+}
+
+document.querySelector('.next').addEventListener('click', () => {
+  stopSlideInterval();
+  nextSlide();
+  startSlideInterval();
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+  stopSlideInterval();
+  prevSlide();
+  startSlideInterval();
+});
+
+startSlideInterval();
+showSlide(currentSlide);

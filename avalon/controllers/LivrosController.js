@@ -31,7 +31,7 @@ module.exports = {
           ]
         } : null
       });
-     console.log(livros)
+      console.log(livros)
       res.render('admin', { livros })
 
     } catch (erro) {
@@ -78,9 +78,10 @@ module.exports = {
 
   criar: async (req, res) => {
     try {
-      const { titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, categoria, imagens } = req.body
+      const { titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, categoria } = req.body
       const capa = req.files.capa[0].filename;
-      await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria, capa, imagens })
+      
+      await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria, capa })
 
       res.redirect('/admin');
 
@@ -94,15 +95,17 @@ module.exports = {
     try {
       const { id } = req.params
 
-      const { titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, capaguardada } = req.body
+      const { titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, capaguardada, imagensguardadas } = req.body
 
       const capaupload = req.files.capa?.[0].filename;
+ 
       console.log(capaguardada)
       console.log(req.body)
       await Livro.update({ titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, capa: capaupload ? capaupload : capaguardada },
         {
           where: { id }
         })
+  
       res.redirect('/admin');
 
     } catch (erro) {

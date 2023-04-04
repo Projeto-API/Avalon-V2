@@ -2,11 +2,10 @@ var express = require('express');
 const router = express.Router();
 
 const SinopseController = require('../controllers/SinopseController');
-const TodosLivros = require('../controllers/TodosLivrosController');
+const TodosLivros = require('../controllers/TodoslivrosController');
 const CarrinhoController = require('../controllers/CarrinhoController');
 const EntregaController = require('../controllers/EntregaController');
 const LancamentosController = require('../controllers/LancamentosController');
-const validatorSinopse = require("../middewres/validatorSinopse");
 
 
 router.get('/enderecos/?', EntregaController.calcularfrete)

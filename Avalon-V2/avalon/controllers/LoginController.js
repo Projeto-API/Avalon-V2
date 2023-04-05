@@ -22,14 +22,14 @@ module.exports = {
       const passwordcripto = await bcrypt.hash(password, 10);
       console.log("passwordcripto", passwordcripto)
       const user = await Usuario.findOne({ where: { email } })
-      console.log("user.tipo", user.tipo)
+      console.log("user.tipo", user?.tipo)
       console.log("userSenha", user.password)
       const validadorsenha = await bcrypt.compare(password, user.password)
       console.log("validadorsenha", validadorsenha)
       if (validadorsenha) {
         req.session.email = user.email;
         req.session.password = passwordcripto;
-        req.session.tipo = user.tipo;
+        req.session.tipo = user?.tipo;
         const livros = await Livro.findAll({
           include: [
             { model: Editora, as: 'editora' },

@@ -1,0 +1,96 @@
+<%- include('partials/header') %>
+  <link rel="stylesheet" href="/stylesheets/carrinho.css">
+  <main>
+    <div class="cart-carrinho">
+      <div class="finalizarpedido">
+      <h3><a><i class='bx bx-subdirectory-right' ></i></a>Finalizar Pedido</h3>
+     
+    </div>
+      <div class="tables-carrinho">
+        <img src="/images/lendolivro.avif" alt="">
+        <table class="carrinho-itens">
+          <thead>
+            <tr>
+              <th>Produto</th>
+              <th>Preço</th>
+              <th>Quantidade</th>
+              <th>Total</th>
+              <th>Deletar</th>
+            </tr>
+          </thead>
+          <tbody>
+                <% livros.forEach(livro=> { %>
+            <tr>
+              <td class="imagem-carrinho"> <img src="<%= livro.imagem %>"> </td>
+              <td>
+                <%= livro.titulo %>
+              </td>
+              <td>
+                <%= livro.preco %>
+              </td>
+              <td>
+                <button class="decrease">-</button>
+                <input type="text" value="<%= livro.quantidade %>" class="quantity">
+                <button class="increase">+</button>
+              </td>
+              <td class="item-total"></td>
+              <input type="hidden" name="produtoId">
+              <td>
+                <form action="/carrinho/deletar" method="post">
+                  <input type="hidden" name="produtoId" value="<%= livro.id %>">
+                  <button type="submit" class="remove">Remover</button>
+                </form>
+              </td>
+              <% })%>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="3"></td>
+              <td>Total:</td>
+              <td class="cart-total">R$ <%= total.toFixed(2) %></td>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="carrinho-values">
+          <div class="frete">
+            <h5>Calcular Frete </h5>
+            <form class="formFrete" action="/produto/enderecos" method="get">
+              <input type="text" name="cep" placeholder="Insira o CEP">
+              <button class="btnCrud" id="fretebtn"><a>Calcular</a></button>
+            </form>
+            <h5 class="resultadoFrete">Frete: <%= valorFrete %>
+            </h5>
+          </div>
+          <br>
+          <h5>Resumo do Pedido</h5>
+          <table>
+            <tbody>
+              <tr class="itens">
+                <td class="info">Subtotal</td>
+                <td class="monetary">R$ 94,70</td>
+              <tr class="itens">
+              </tr>
+              <td class="info">Entrega</td>
+              <td class="monetary" id="desconto">Grátis</td>
+              <tr class="itens">
+              </tr>
+              <td class="info">Desconto</td>
+              <td class="monetary" id="desconto">- R$ 9,47</td>
+              </tr>
+            </tbody>
+            <tfoot>
+              <tr>
+                <td class="info">Total</td>
+                <td src="/carrinho/public/images/1661966653.webp " class="monetary">R$ 85,23</td>
+                <br>
+              </tr>
+            </tfoot>
+          </table>
+          <br>
+          <button class="btnCrud"><a href="">Finalizar Compra</a></button>
+        </div>
+      </div>
+    </div>
+  </main>
+  <%- include('partials/footer') %>

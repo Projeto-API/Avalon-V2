@@ -22,11 +22,11 @@
 
                    <% carrinho.forEach(livro=> { %>
             <tr>
-              <td class="imagem-carrinho"> <img src=""> </td>
+              <td class="imagem-carrinho"> <img src="<%livro.imagens%>"> </td>
+              
               <td>
-
-           
-
+                <%livro.livros_id%>
+                <%livro.preco%>
               </td>
               <td>
                 <%= livro.preco %>

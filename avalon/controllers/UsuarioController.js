@@ -3,8 +3,6 @@ const bcrypt = require('bcryptjs');
 
 module.exports = {
  
-
-
   criar: function (usuario) {
     const usuarios = this.listar();
 

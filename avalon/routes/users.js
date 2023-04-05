@@ -11,13 +11,13 @@ const UsuarioController = require('../controllers/CadastrousuarioController');
 const AuthController = require('../controllers/AuthController');
 const ContaController = require('../controllers/ContaController');
 
-router.get('/compras', MinhasComprasController.index);
-router.get('/conta', ContaController.index);
+router.get('/compras/:id', MinhasComprasController.index);
+router.get('/conta/:id', ContaController.index);
 router.get('/login', LoginController.index);
 router.post('/entrar', LoginController.login);
 router.get('/cadastro', UsuarioController.index);
 router.post('/cadastro', UsuarioController.criar);
-router.get('/editar-conta', UsuarioController.form);
+router.get('/conta/editar-conta/:id', ContaController.form);
 router.put('/editar-conta', UsuarioController.editar);
 
 

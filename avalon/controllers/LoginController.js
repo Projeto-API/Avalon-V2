@@ -15,6 +15,7 @@ module.exports = {
 
     // ----------------------------------------LOGIN : AUTENTICAÇÃO DE USUARIO-------------------------------------------//
     try {
+      const { id } = req.params
       const { email, password } = req.body;
       console.log({ email, password })
       console.log(req.body)
@@ -42,13 +43,16 @@ module.exports = {
       const editoras = await Editora.findAll();
       const autores = await Autor.findAll();
       const categorias = await Categoria.findAll();
+      const usuario = await Usuario.findByPk(id);
 
       
 // ----------------------------------------LOGIN: VERIFICAÇÃO DE TIPO DE USUARIO -------------------------------------------//
       if (user.tipo === 1) { // Se o tipo do usuário for 1 (administrador)
         res.render('admin', { livros, livrosLancamento, editoras, categorias, autores }); // Redireciona para a página de administração
       } else if (user.tipo === 0) { // Se o tipo do usuário for 0 (usuário comum)
-        res.render('conta'); // Redireciona para a página minha-conta
+
+        console.log(usuario)
+          res.render('conta', {usuario}); // Redireciona para a página minha-conta
       }
       } else {
         console.log("Vai redirecionar para login")

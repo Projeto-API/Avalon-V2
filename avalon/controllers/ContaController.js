@@ -1,11 +1,35 @@
+const fs = require('fs');
+const path = require('path');
+
+const { Usuario } = require('../models');
+
 module.exports = {
-    index: async (req, res) => { try {
-  
-      res.render('conta');
-      
+  index: async (req, res) => {
+    try {
+      const { id } = req.params
+     
+      const usuarios = await Usuario.findByPk(id)
+ 
+      res.render('conta', { usuarios });
+
     } catch (erro) {
       let alert = require('alert');
       alert("ERRO 500 - Erro interno do servidor!")
     }
+  },
+
+  form: async (req, res) => {
+    try {
+      const { id } = req.params
+     
+      const usuarios = await Usuario.findByPk(id)
+      console.log("ESTOU AQUI" )
+      console.log(usuarios)
+      res.render('editarConta', { usuarios });
+
+    } catch (erro) {
+      let alert = require('alert');
+      alert("ERRO 500 - Erro interno do servidor!")
     }
   }
+}

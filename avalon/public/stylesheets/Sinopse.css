@@ -34,12 +34,14 @@ main {
     display: flex;
     justify-content: center;
     width: 100vw;
+
 }
 
 .gallery-miniaturas {
     display: flex;
     flex-flow: row nowrap;
     overflow-x: hidden;
+    background-color: aqua;
 }
 
 .título {

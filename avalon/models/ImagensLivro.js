@@ -18,7 +18,7 @@ const criarImagemLivroModel = (sequelize, dataTypes) => {
     timestamps: false
   };
 
-  const ImagemLivro = sequelize.define('ImagemLivro', colunas, opcoes);
+  const ImagemLivro = sequelize.define('ImagensLivro', colunas, opcoes);
 
   ImagemLivro.associate = (models) => {
     ImagemLivro.belongsTo(models.Livro, {
@@ -33,15 +33,13 @@ const criarImagemLivroModel = (sequelize, dataTypes) => {
         // editora.livros -> array de livros
         // editora.livros -> array de livros
         as: 'editora', // livro.editora.nome -> nome da editora de um livro
-        foreignKey: 'editoras_id'
+        foreignKey: 'livros_editoras_id'
       }),
 
       ImagemLivro.belongsTo(models.Categoria, {
         // editora.livros -> array de livros
         as: 'categoria', // livro.autores.nome -> nome da editora de um livro
-        // editora.livros -> array de livros
-        as: 'categoria', // livro.autores.nome -> nome da editora de um livro
-        foreignKey: 'categorias_id'
+        foreignKey: 'livros_categorias_id'
       });
   }
 

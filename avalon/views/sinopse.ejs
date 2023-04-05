@@ -1,5 +1,5 @@
 <%- include('partials/header') %>
-    <link rel="stylesheet" href="/stylesheets/Sinopse.css">
+    <link rel="stylesheet" href="/stylesheets/sinopse.css">
 
     <main>
         <section class="container">
@@ -10,8 +10,8 @@
 
                 <div class="miniaturas">
                     <ul class="gallery-miniaturas">
-                        <% livros.forEach(livro => { %>
-                            <img class="livrinhos" src="/images/produto/<%= livro.imagens %>" alt="">
+                        <% imagens.forEach(imagem => { %>
+                            <img class="livrinhos" src="/images/produto/<%= imagem && imagem.imagens %>" alt="">
                         <% }) %>
                        
                     </ul>

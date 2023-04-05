@@ -19,25 +19,28 @@
             </tr>
           </thead>
           <tbody>
-                <% carrinho.forEach(livro=> { %>
+
+                   <% carrinho.forEach(livro=> { %>
             <tr>
-              <td class="imagem-carrinho"> <img src="<%= livro.imagem %>"> </td>
+              <td class="imagem-carrinho"> <img src=""> </td>
               <td>
-                <%= livro.titulo %>
+
+           
+
               </td>
               <td>
                 <%= livro.preco %>
               </td>
               <td>
                 <button class="decrease">-</button>
-                <input type="text" value="<%= livro.quantidade %>" class="quantity">
+                <input type="text" value="<%= livro.quantidade  %>" class="quantity">
                 <button class="increase">+</button>
               </td>
               <td class="item-total"></td>
               <input type="hidden" name="produtoId">
               <td>
                 <form action="/carrinho/deletar" method="post">
-                  <input type="hidden" name="produtoId" value="<%= livro.id %>">
+                  <input type="hidden" name="produtoId" value="<%= livro.livros_id %>">
                   <button type="submit" class="remove">Remover</button>
                 </form>
               </td>
@@ -48,7 +51,7 @@
             <tr>
               <td colspan="3"></td>
               <td>Total:</td>
-              <td class="cart-total">R$ <%= total.toFixed(2) %></td>
+              <td class="cart-total">R$ </td>
             </tr>
           </tfoot>
         </table>
@@ -59,7 +62,7 @@
               <input type="text" name="cep" placeholder="Insira o CEP">
               <button class="btnCrud" id="fretebtn"><a>Calcular</a></button>
             </form>
-            <h5 class="resultadoFrete">Frete: <%= valorFrete %>
+            <h5 class="resultadoFrete">Frete:
             </h5>
           </div>
           <br>

@@ -18,7 +18,7 @@ router.post('/entrar', LoginController.login);
 router.get('/cadastro', UsuarioController.index);
 router.post('/cadastro', UsuarioController.criar);
 router.get('/conta/editar-conta/:id', ContaController.form);
-router.put('/editar-conta', UsuarioController.editar);
+router.put('/editar-conta/:id', UsuarioController.editar);
 
 
 router.get('/forgot-password', LoginController.forgotPassword);

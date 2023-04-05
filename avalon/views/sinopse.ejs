@@ -10,8 +10,8 @@
 
                 <div class="miniaturas">
                     <ul class="gallery-miniaturas">
-                        <% imagens.forEach(imagem => { %>
-                            <img class="livrinhos" src="/images/produto/<%= imagem && imagem.imagens %>" alt="">
+                        <% livro.imagens_livro.forEach(el => { %>
+                            <img class="livrinhos" src="/images/produtos/<%= el && el.imagens %>" alt="">
                         <% }) %>
                        
                     </ul>

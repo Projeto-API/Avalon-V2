@@ -10,22 +10,12 @@ module.exports = {
       const livro = await Livro.findByPk(id, {
         include: [
           { model: Editora, as: 'editora' },
-          { model: Autor, as: 'autor' }]
-      });
-      const { search } = req.query;
-      const imagens = await ImagensLivro.findAll({
-        where: search ? {
-          [Op]: [
-            {id: search }
-          ]
-        } : null,
-        include: [
-          { model: Livro, as: 'livros' },
-          { model: Editora, as: 'editora' },]
+          { model: Autor, as: 'autor' },
+          { model: ImagensLivro, as: 'imagens_livro' }]
       });
 
-      console.log(id)
-      res.render('sinopse', { livros, carrousel, livro, imagens });
+      console.log(livro)
+      res.render('sinopse', { livros, carrousel, livro });
 
 
     } catch (erro) {

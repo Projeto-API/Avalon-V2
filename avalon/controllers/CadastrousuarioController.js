@@ -22,7 +22,7 @@ module.exports = {
       console.log("erros", errors);
       const {
         email,
-        password,
+        password, 
         nome,
         sobrenome,
         data_nascimento,

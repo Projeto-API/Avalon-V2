@@ -44,7 +44,7 @@ function checkIfinputInsNull(event) {
     if (event.target.value === "0") {
         event.target.parentElement.parentElement.remove();
         const productTitle = event.target.parentElement.parentElement.getElementsByClassName("cart-product-title")[0].innerText;
-        console.log(productTitle)
+        // console.log(productTitle)
         carrinho = carrinho.filter(item => item.productTitle !== productTitle);
         sessionStorage.setItem("carrinho", JSON.stringify(carrinho));
         updateTotal();
@@ -100,13 +100,18 @@ function adicionaCarrinho(event) {
 function criarElementosCarrinho() {
     const tableBody = document.querySelector(".produto");
     tableBody.innerHTML = "";
-
+    // count = 0
+    
     for (let i = 0; i < carrinho.length; i++) {
         const newCartProduct = document.createElement("section");
         newCartProduct.classList.add("containerProduto");
+        // count++
+        // newCartProduct.setAttribute("id", "idProduto" + count);
+
+
 
         newCartProduct.innerHTML = `
-            <div class="product-identification">
+             <div class="product-identification">
               <img src="${carrinho[i].productImage}" alt="Poster 3" class="cart-product-image">
             </div>
             <div>
@@ -121,12 +126,14 @@ function criarElementosCarrinho() {
             <div>
               <button type="button" class="remove-livro-button">Remover</button>
             </div>
+
           `;
         updateTotal()
         tableBody.appendChild(newCartProduct);
         newCartProduct.getElementsByClassName("product-qtd-input")[0].addEventListener("change", checkIfinputInsNull)
         newCartProduct.getElementsByClassName("remove-livro-button")[0].addEventListener("click", removeProduct)
         updateTotal()
+        
     }
 }
 
@@ -156,6 +163,7 @@ function updateTotal() {
     let totalAmount = 0
     const carlivros = document.getElementById("produto").children
 
+
     for (var i = 0; i < carlivros.length; i++) {
         const productPrice = carlivros[i].getElementsByClassName("cart-product-price")[0].innerText.replace("R$", "").replace(",", ".")
         const productQuantity = carlivros[i].getElementsByClassName("product-qtd-input")[0].value
@@ -165,6 +173,7 @@ function updateTotal() {
     totalAmount = totalAmount.toFixed(2)
     totalAmount = totalAmount.replace(".", ",")
     document.querySelector(".cart-total-container span").innerText = "R$" + totalAmount
+    
 
 
 }
@@ -183,3 +192,4 @@ function fecharCarrinhoFlutuante() {
     updateTotal()
 
 }
+

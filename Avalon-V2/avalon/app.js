@@ -26,14 +26,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 app.use(session({secret:'senhasecreta'}));
-<<<<<<< HEAD:Avalon-V2/avalon/app.js
 // app.use(express.cookieParser('secret'));
 // app.use(express.cookieSession());
 
 // app.use(session({resave: true,saveUninitialized: true}));
 
-=======
->>>>>>> fac21a0e7e276989155fd7c7c685c377b067f16b:avalon/app.js
 app.use(flash());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

@@ -1,99 +1,78 @@
 <%- include('partials/header') %>
-  <link rel="stylesheet" href="/stylesheets/carrinho.css">
-  <main>
-    <div class="cart-carrinho">
-      <div class="finalizarpedido">
-      <h3><a><i class='bx bx-subdirectory-right' ></i></a>Finalizar Pedido</h3>
-     
-    </div>
-      <div class="tables-carrinho">
-        <img src="/images/lendolivro.avif" alt="">
-        <table class="carrinho-itens">
-          <thead>
-            <tr>
-              <th>Produto</th>
-              <th>Preço</th>
-              <th>Quantidade</th>
-              <th>Total</th>
-              <th>Deletar</th>
-            </tr>
-          </thead>
-          <tbody>
+<link rel="stylesheet" href="/stylesheets/carrinho.css">
 
-                   <% carrinho.forEach(livro=> { %>
-            <tr>
-              <td class="imagem-carrinho"> <img src="<%livro.imagens%>"> </td>
-              
-              <td>
-                <%livro.livros_id%>
-                <%livro.preco%>
-              </td>
-              <td>
-                <%= livro.preco %>
-              </td>
-              <td>
-                <button class="decrease">-</button>
-                <input type="text" value="<%= livro.quantidade  %>" class="quantity">
-                <button class="increase">+</button>
-              </td>
-              <td class="item-total"></td>
-              <input type="hidden" name="produtoId">
-              <td>
-                <form action="/carrinho/deletar" method="post">
-                  <input type="hidden" name="produtoId" value="<%= livro.livros_id %>">
-                  <button type="submit" class="remove">Remover</button>
-                </form>
-              </td>
-              <% })%>
+<main>
+  <div class="cart-carrinho">
+    <div class="finalizarpedido">
+      <h3><a><i class='bx bx-subdirectory-right'></i></a>Finalizar Pedido</h3>
+    </div>
+
+    <div class="tables-carrinho">
+      <img src="/images/lendolivro.avif" alt="">
+      <thead>
+          <table id = "carrinho-itens" class="carrinho-itens">
+          <tr>
+            <th>Produto</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+            <th>Deletar</th>
+          </tr>
+        </thead>
+        <tbody id="carrinho-body">
+          <!-- Your products in cart go here. -->
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="3"></td>
+            <td>Total:</td>
+            <td class="cart-total">R$ <span id="total-value"></span></td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <div class="carrinho-values">
+        <div class="frete">
+          <h5>Calcular Frete </h5>
+          <form class="formFrete" action="/produto/enderecos" method="get">
+            <input type="text" name="cep" placeholder="Insira o CEP">
+            <button class="btnCrud" id="fretebtn">Calcular</button>
+          </form>
+          <h5 class="resultadoFrete">Frete:</h5>
+        </div>
+        <br>
+        <h5>Resumo do Pedido</h5>
+        <table>
+          <tbody>
+            <tr class="itens">
+              <td class="info">Subtotal</td>
+              <td class="monetary">R$ <span id="subtotal-value"></span></td>
+            </tr>
+            <tr class="itens">
+              <td class="info">Entrega</td>
+              <td class="monetary" id="frete-value">Grátis</td>
+            </tr>
+            <tr class="itens">
+              <td class="info">Desconto</td>
+              <td class="monetary" id="desconto-value">- R$ 0,00</td>
             </tr>
           </tbody>
           <tfoot>
             <tr>
-              <td colspan="3"></td>
-              <td>Total:</td>
-              <td class="cart-total">R$ </td>
+              <td class="info">Total</td>
+              <td class="monetary" id="total-carrinho-value">R$ 0,00</td>
+              <br>
             </tr>
           </tfoot>
         </table>
-        <div class="carrinho-values">
-          <div class="frete">
-            <h5>Calcular Frete </h5>
-            <form class="formFrete" action="/produto/enderecos" method="get">
-              <input type="text" name="cep" placeholder="Insira o CEP">
-              <button class="btnCrud" id="fretebtn"><a>Calcular</a></button>
-            </form>
-            <h5 class="resultadoFrete">Frete:
-            </h5>
-          </div>
-          <br>
-          <h5>Resumo do Pedido</h5>
-          <table>
-            <tbody>
-              <tr class="itens">
-                <td class="info">Subtotal</td>
-                <td class="monetary">R$ 94,70</td>
-              <tr class="itens">
-              </tr>
-              <td class="info">Entrega</td>
-              <td class="monetary" id="desconto">Grátis</td>
-              <tr class="itens">
-              </tr>
-              <td class="info">Desconto</td>
-              <td class="monetary" id="desconto">- R$ 9,47</td>
-              </tr>
-            </tbody>
-            <tfoot>
-              <tr>
-                <td class="info">Total</td>
-                <td src="/carrinho/public/images/1661966653.webp " class="monetary">R$ 85,23</td>
-                <br>
-              </tr>
-            </tfoot>
-          </table>
-          <br>
-          <button class="btnCrud"><a href="">Finalizar Compra</a></button>
-        </div>
+        <div>
+        <form action="/carrinho" method="POST">
+          <input type="hidden" name="produtosCarrinho" id="produtosCarrinho">
+        <button type="submit" onclick="enviarDados()"  class="btnCrud"><a href=""> Finalizar Compra</a></button>
+      </form>
       </div>
     </div>
-  </main>
-  <%- include('partials/footer') %>
+  </div>
+</main>
+
+<%- include('partials/footer') %>

@@ -24,7 +24,7 @@ const CarrinhoController = {
   },
   add: async (req, res) => {
     const livros = JSON.parse(req.body.produtos);
-    console.log(livros);
+    // console.log(livros);
     // Carrinho.add(livro);
     res.redirect('/carrinho');
   },
@@ -40,7 +40,7 @@ const CarrinhoController = {
   teste: async (req, res) => {
     var convert = JSON.parse(req.body.produtosCarrinho);
     try {
-      console.log('Array: ' + JSON.stringify(convert));
+      // console.log('Array: ' + JSON.stringify(convert));
       for (const element of convert) {
         const objLivroCarrinho = await Livro.findOne({ where: { titulo: element.productTitle } });
         const carrinhoSalvo = await Carrinho.create({ quantidade: element.productQuantity, livros_id: objLivroCarrinho.id, usuarios_id: 1 });

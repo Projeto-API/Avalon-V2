@@ -63,6 +63,7 @@ function checkIfInputIsNotNull(event) {
 }
 function updateCartTotal() {
   let cartTotal = 0;
+  let desconto = -9;
   const cartRows = document.getElementById("produto-carrinho").getElementsByTagName("tr");
   for (let i = 0; i < cartRows.length; i++) {
     const cartRow = cartRows[i];
@@ -76,7 +77,21 @@ function updateCartTotal() {
   }
   document.getElementById("cart-total-subtotal").textContent = "R$ " + cartTotal.toFixed(2);
   document.getElementById("cart-total-subtotal-2").textContent = "R$ " + cartTotal.toFixed(2);
+  document.getElementById("cart-total-desconto").textContent = "R$ " + cartTotal.toFixed(2);
 }
+
+
+// /   let totalFinal = somaCarrinho - desconto;
+//   let ajusteDesconto = totalFinal;
+//   somaCarrinho = somaCarrinho.toFixed(2);
+//   somaCarrinho = somaCarrinho.replace(".", ",");
+//   document.getElementById("cart-total-subtotal").innerText = cifrao + somaCarrinho;
+//   document.getElementById("cart-total-subtotal-2").innerText = cifrao + somaCarrinho;
+//   const descontoFormatted = desconto.toFixed(2).replace(".", ",");
+//   const cardTotalDesconto = document.getElementById("cart-total-desconto");
+
+
+
 
 //   function updatePedido() {
 //     let totalAmount = 0

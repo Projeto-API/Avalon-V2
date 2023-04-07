@@ -1,115 +1,120 @@
-if (document.readyState == "loading") {
-    document.addEventListener("DOMContentLoaded", ready)
-    updatePedido();
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", ready);
 } else {
-    ready()
-    updatePedido();
+  ready();
 }
 
 function ready() {
-    const removelivro = document.getElementsByClassName("remove-livro-button")
-    for (let i = 0; i < removelivro.length; i++) {
-        removelivro[i].addEventListener("click", removeProduct)
-        updatePedido();
-    }
-
-
-    const quantityInputs = document.getElementsByClassName("product-qtd-input")
-    for (let i = 0; i < quantityInputs.length; i++) {
-        quantityInputs[i].addEventListener("change", checkIfinputInsNull)
-        updatePedido();
-    }
-
-
-
-
-    if (sessionStorage.getItem("carrinho")) {
-        carrinho = JSON.parse(sessionStorage.getItem("carrinho"));
-        criarElementosCompra();
-        updatePedido();
-    }
-
-    updatePedido();
+  const removeLivro = document.getElementsByClassName("remove");
+  for (let i = 0; i < removeLivro.length; i++) {
+    removeLivro[i].addEventListener("click", removeProduct);
+  }
+  
+  const quantityInputs = document.getElementsByClassName("produto-quantidade");
+  for (let i = 0; i < quantityInputs.length; i++) {
+    quantityInputs[i].addEventListener("change", checkIfInputIsNotNull);
+  }
+  
+  if (sessionStorage.getItem("carrinho")) {
+    carrinho = JSON.parse(sessionStorage.getItem("carrinho"));
+    criarElementosCompra();
+  }
 }
-
-
 
 function criarElementosCompra() {
-  
-    const finalizaPedido = document.querySelector(".carrinho-itens");
-    const modelCartProduct = document.getElementById("carrinho-body");
-  
-    for (let i = 0; i < carrinho.length; i++) {
-      const newCartProduct = modelCartProduct.cloneNode(true);
-      newCartProduct.classList.add("tabela-produtos");
-      updatePedido()
-  
-      newCartProduct.innerHTML = `
-        <div class="product-identification">
-          <img src="${carrinho[i].productImage}" class="cart-product-image">
-        </div>
-        <div>
-          <strong class="cart-product-title">${carrinho[i].productTitle}</strong>
-        </div>
-        <div>
-          <span class="cart-product-price">${carrinho[i].productPrice}</span>
-        </div>
-        <div>
-          <input type="number" value="1" min="0" class="product-qtd-input">
-        </div>
-        <div>
-          <span class="cart-total-container"> R$ <span>
-        </div>
-        <div>
-          <button type="button" class="remove-livro-button">Remover</button>
-        </div>
-      `;
-      updatePedido() 
-      finalizaPedido.appendChild(newCartProduct);
-      newCartProduct.getElementsByClassName("product-qtd-input")[0].addEventListener("change", checkIfinputInsNull)
-      newCartProduct.getElementsByClassName("remove-livro-button")[0].addEventListener("click", removePedido)
-      updatePedido() 
-    }
+  const finalizaPedido = document.getElementById("produto-carrinho");
+  const modelCartProduct = document.getElementById("produto-");
+  finalizaPedido.innerHTML = ""; // clear the table first
+  for (let i = 0; i < carrinho.length; i++) {
+    const newCartProduct = modelCartProduct.cloneNode(true);
+    const removeButton = document.createElement("button");
+    newCartProduct.id = "produto-" + i;
+    newCartProduct.getElementsByClassName("livro-id")[0].textContent = i + 1;
+    newCartProduct.getElementsByClassName("livro-imagem")[0].getElementsByTagName("img")[0].src = carrinho[i].productImage;
+    newCartProduct.getElementsByClassName("imagem-titulo")[0].textContent = carrinho[i].productTitle;
+    newCartProduct.getElementsByClassName("livro-preco")[0].textContent = carrinho[i].productPrice;
+    newCartProduct.getElementsByClassName("produto-quantidade")[0].value = carrinho[i].productQuantity;
+    newCartProduct.getElementsByClassName("cart-total")[0].textContent = "R$ " + (carrinho[i].productPrice * carrinho[i].productQuantity).toFixed(2);
+    removeButton.classList.add("remove-livro-button");
+    removeButton.textContent = "Remover";
+    removeButton.addEventListener("click", function() {
+      const productId = newCartProduct.dataset.productId;
+      carrinho.splice(productId, 1);
+      sessionStorage.setItem("carrinho", JSON.stringify(carrinho));
+      newCartProduct.remove();
+      updateCartTotal();
+    });
+    newCartProduct.appendChild(removeButton);
+    finalizaPedido.appendChild(newCartProduct);
+    newCartProduct.getElementsByClassName("produto-quantidade")[0].addEventListener("change", checkIfInputIsNotNull);
+    newCartProduct.dataset.productId = i;
   }
-
-
-
-  function updatePedido() {
-      let totalAmount = 0
-      const pedidoLivro = document.getElementById("carrinho-body").children
-     for (var i = 0; i < pedidoLivro.length; i++) {
-        const productPrice = pedidoLivro[i].getElementsByClassName("cart-product-price")[0].innerText.replace("R$", "").replace(",", ".")
-        const productQuantity = pedidoLivro[i].getElementsByClassName("product-qtd-input")[0].value
-        totalAmount += productPrice * productQuantity
-        updatePedido()
-
-
-    }
-    totalAmount = totalAmount.toFixed(2)
-    totalAmount = totalAmount.replace(".", ",")
-    document.querySelector(".cart-total-container").innerText = "R$" + totalAmount
-
-
+  updateCartTotal(); // call the function to update the cart total
 }
 
-function removePedido(event) {
-    const item = event.target.parentElement.parentElement;
-    const tableBody = document.querySelector(".carrinho-itens").children;
 
-    tableBody.removeChild(item);
-    const productTitle = item.getElementsByClassName("cart-product-title")[0].innerText;
-    carrinho = carrinho.filter(item => item.productTitle !== productTitle);
-    updatePedido();
 
-    if (tableBody.children.length === 0) {
-        sessionStorage.clear();
+function checkIfInputIsNotNull(event) {
+  const input = event.target;
+  if (input.value <= 0) {
+    input.value = 1;
+  }
+  updateCartTotal();
+}
+function updateCartTotal() {
+  let cartTotal = 0;
+  const cartRows = document.getElementById("produto-carrinho").getElementsByTagName("tr");
+  for (let i = 0; i < cartRows.length; i++) {
+    const cartRow = cartRows[i];
+    const priceElement = cartRow.getElementsByClassName("livro-preco")[0];
+    const quantityElement = cartRow.getElementsByClassName("produto-quantidade")[0];
+    const price = parseFloat(priceElement.textContent.replace("R$ ", ""));
+    const quantity = quantityElement.value;
+    const total = price * quantity;
+    cartRow.getElementsByClassName("cart-total")[0].textContent = "R$ " + total.toFixed(2);
+    cartTotal += total;
+  }
+  document.getElementById("cart-total-subtotal").textContent = "R$ " + cartTotal.toFixed(2);
+  document.getElementById("cart-total-subtotal-2").textContent = "R$ " + cartTotal.toFixed(2);
+}
+
+//   function updatePedido() {
+//     let totalAmount = 0
+//       const pedidoLivro = document.getElementById("produto-carrinho")
+//      for (var i = 0; i < pedidoLivro.length; i++) {
+//         const productPrice = pedidoLivro[i].getElementsByClassName("cart-product-price")[0].innerText.replace("R$", "").replace(",", ".")
+//         const productQuantity = pedidoLivro[i].getElementsByClassName("product-qtd-input")[0].value
+//         totalAmount += productPrice * productQuantity
         
-    } else {
-        sessionStorage.setItem("carrinho", JSON.stringify(carrinho));
-    }
+//       }
+//       totalAmount = totalAmount.toFixed(2)
+//       totalAmount = totalAmount.replace(".", ",")
+//       document.querySelector(".cart-total-container").innerText = "R$" + totalAmount
 
-    updatePedido();
-}
+
+    
+
+
+// }
+
+// function removePedido(event) {
+//     const item = event.target.parentElement.parentElement;
+//     const tableBody = document.querySelector(".carrinho-itens").children;
+
+//     tableBody.removeChild(item);
+//     const productTitle = item.getElementsByClassName("cart-product-title")[0].innerText;
+//     carrinho = carrinho.filter(item => item.productTitle !== productTitle);
+//     updatePedido();
+
+//     if (tableBody.children.length === 0) {
+//         sessionStorage.clear();
+        
+//     } else {
+//         sessionStorage.setItem("carrinho", JSON.stringify(carrinho));
+//         updatePedido();
+//     }
+
+// }
 
 
 

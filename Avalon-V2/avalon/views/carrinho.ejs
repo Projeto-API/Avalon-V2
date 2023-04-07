@@ -49,6 +49,21 @@
       </tfoot>
       <table class="table">
         <tbody>
+          <tr class="frete">
+            <td >Insira o CEP:
+            <form class="formFrete" action="/produto/enderecos" method="get">
+                <input type="text" name="cep" placeholder="Insira o CEP">
+              </td>
+              <td>
+                <button class="btnCrud" id="fretebtn">Calcular</button>
+              </td>
+              <tr>
+
+                <td> Total Frete : </td>
+                <td class="resultadoFrete" id="resultadoFrete"> R$ 00,00 </td>
+              </form>
+            </tr>
+
           <tr class="itens">
             <td >Subtotal</td>
             <td id="cart-total-subtotal-2">R$ 94,70</td>

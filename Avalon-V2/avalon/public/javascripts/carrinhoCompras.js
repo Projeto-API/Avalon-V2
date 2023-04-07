@@ -4,6 +4,8 @@ if (document.readyState === "loading") {
   ready();
 }
 
+var cartTotal = "0,00";
+
 function ready() {
   const removeLivro = document.getElementsByClassName("remove");
   for (let i = 0; i < removeLivro.length; i++) {
@@ -19,7 +21,20 @@ function ready() {
     carrinho = JSON.parse(sessionStorage.getItem("carrinho"));
     criarElementosCompra();
   }
+
+  const purchaseButton = document.getElementsByClassName("finalizarCompra")
+  purchaseButton.addEventListener("click", makePurchase)
 }
+
+function makePurchase(){
+  if(totalAmount === "0,00"){
+    alert("Seu Carrinho esta vazio!")
+  }else {
+    criarElementosCompra()
+  }
+
+}
+
 
 function criarElementosCompra() {
   const finalizaPedido = document.getElementById("produto-carrinho");
@@ -62,8 +77,10 @@ function checkIfInputIsNotNull(event) {
   updateCartTotal();
 }
 function updateCartTotal() {
-  let cartTotal = 0;
-  let desconto = -9;
+  cartTotal = 0;
+  let desconto = 9;
+  let frete = 9;
+  let cartTotal2 = 0;
   const cartRows = document.getElementById("produto-carrinho").getElementsByTagName("tr");
   for (let i = 0; i < cartRows.length; i++) {
     const cartRow = cartRows[i];
@@ -73,11 +90,15 @@ function updateCartTotal() {
     const quantity = quantityElement.value;
     const total = price * quantity;
     cartRow.getElementsByClassName("cart-total")[0].textContent = "R$ " + total.toFixed(2);
-    cartTotal += total;
+    cartTotal += total ;
+    cartTotal2 += total +frete ;
   }
+  const cartTotalFinal = (cartTotal - desconto);
   document.getElementById("cart-total-subtotal").textContent = "R$ " + cartTotal.toFixed(2);
-  document.getElementById("cart-total-subtotal-2").textContent = "R$ " + cartTotal.toFixed(2);
-  document.getElementById("cart-total-desconto").textContent = "R$ " + cartTotal.toFixed(2);
+  document.getElementById("resultadoFrete").textContent = "R$ " + frete.toFixed(2);
+  document.getElementById("cart-total-subtotal-2").textContent = "R$ " + cartTotal2.toFixed(2);
+  document.getElementById("cart-total-desconto").textContent = "R$ -" + desconto.toFixed(2);
+  document.getElementById("cart-total-Final").textContent = "R$ " + cartTotalFinal.toFixed(2);
 }
 
 

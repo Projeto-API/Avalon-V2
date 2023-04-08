@@ -1,3 +1,4 @@
+
 const { Usuario, Livro, Editora, Autor, Categoria } = require('../models');
 const bcrypt = require('bcryptjs');
 

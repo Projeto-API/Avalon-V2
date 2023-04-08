@@ -1,11 +1,15 @@
 var express = require('express');
-const router = express.Router();
+var router = express.Router();
+const CarrinhoController = require('../controllers/CarrinhoController')
+const validaCarrinho = require('../middewres/validaCarrinho')
 
-const checkoutController = require('../controllers/checkoutController');
+/* GET users listing. */
+router.get('/', CarrinhoController.carrinho);
+// router.post('/', CarrinhoController.add);
+router.delete('/', CarrinhoController.remove);
+router.post('/', CarrinhoController.teste);
 
-
-router.get('/checkout', checkoutController.index);
-
+// router.post('/', validaCarrinho.validaCarrinho, CarrinhoController.teste);
 
 
 

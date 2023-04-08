@@ -12,6 +12,7 @@
 
     <script src="/javascripts/menuHamburguer.js" defer></script>
     <script src="/javascripts/carrinhoFlutuante.js" defer></script>
+    <script src="/javascripts/carrinhoCompras.js" defer></script>
     <script src="/javascripts/script.js" defer></script>
     <script src="/javascripts/validacoeslogin.js" defer></script>
 
@@ -103,9 +104,9 @@
                     </tbody>
 
                     <div class="continuar">
-                        <form id="formCarrinho" method="get" action="/carrinho">
+                        <form class= ".finalizar-compra-button" id="formCarrinho" method="get" action="/carrinho">
                             <input type="hidden" name="produtos" id="produtosCarrinho">
-                            <button type="submit" id="continuar">Finalizar Compra</button>
+                            <button type="submit" id="continuar" onclick= "criarElementosCompra()">Finalizar Compra</button>
                         </form>
                     </div>
 

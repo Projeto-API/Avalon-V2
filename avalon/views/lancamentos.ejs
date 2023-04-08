@@ -1,4 +1,4 @@
-<%- include('partials/header') %>
+
    
 <%- include('partials/header') %>
 <link rel="stylesheet" href="/stylesheets/lancamentos.css">
@@ -24,7 +24,7 @@
         <div class="grid-livros">
             <% livros.forEach(el => { %>
                 <li onclick=redirect() class="item">
-                    <img class="item-img" src="/images/produtos/<%= el.capa %>" id="<%= el.id %>" alt="dna">
+                    <img class="item-img" src="/images/produtos/<%= el.capa %>" alt="dna">
                     <div>
                         <h5 class="item-name">
                             <%= el.titulo %>
@@ -47,7 +47,7 @@
             <div class="gallery" id="gallery">
                 <% livros.forEach(el => { %>
                     <li onclick=redirect() class="item current-item">
-                        <img class="item-img" src="/images/produtos/<%= el.capa %>" id="<%= el.id %>" alt="dna">
+                        <img class="item-img" src="/images/produtos/<%= el.capa %>" alt="dna">
                         <div>
                             <h5 class="item-name">
                                 <%= el.titulo %>

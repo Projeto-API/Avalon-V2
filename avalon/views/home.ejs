@@ -11,11 +11,11 @@
                 <div><img src="/images/mais vendidos.png" alt=""></div>
             </div>
             <div class="big3-icons">
-                <a href="/Sinopse.ejs">LIVROS</a>
+                <a href="/produto/todos/categoria/buscar?search=2">LIVROS</a>
                 <div><img src="/images/Livros.png" alt=""></div>
             </div>
             <div class="big3-icons">
-                <a href="Sinopse.ejs">HQ</a>
+                <a href="/produto/todos/categoria/buscar?search=1">HQ</a>
                 <div><img src="/images/quadrinhos.png" alt=""></div>
             </div>
         </section>
@@ -61,18 +61,18 @@
                 <div class="grid">
                     <button class="comprar" id="destaque-comprar"><a href="#">COMPRAR</a></button>
                     <div>
-                        <a href=""><img id="grid-1" src="/images/produtos/destaque-capa.png" alt=""></a>
+                        <a href=""><img id="grid-1" src="./images/produtos/destaque-capa.png" alt=""></a>
                     </div>
                     <div>
                         <div>
-                            <a href=""><img id="grid-2" src="/images/produtos/destaque-1.png" alt=""></a>
+                            <a href=""><img id="grid-2" src="./images/produtos/destaque-1.png" alt=""></a>
                         </div>
                         <div>
-                            <a href=""><img id="grid-3" src="/images/produtos/destaque-2.png" alt=""></a>
+                            <a href=""><img id="grid-3" src="./images/produtos/destaque-2.png" alt=""></a>
                         </div>
                     </div>
                     <div>
-                        <a href=""><img id="grid-4" src="/images/produtos/destaque-3.png" alt=""></a>
+                        <a href=""><img id="grid-4" src="./images/produtos/destaque-3.png" alt=""></a>
                     </div>
                 </div>
             </nav>
@@ -86,7 +86,8 @@
                     <div class="gallery" id="gallery2">
                         <% livros.forEach(el=> { %>
                             <li onclick=redirect() class="item current-item">
-                                <img class="item-img"class="produto" src="/images/produtos/<%= el.capa %>" id="<%= el.id %>" alt="dna">
+                                <img class="item-img" class="produto" src="/images/produtos/<%= el.capa %>"
+                                    id="<%= el.id %>" alt="dna">
                                 <div>
                                     <h5 class="item-name">
                                         <%= el.titulo %>

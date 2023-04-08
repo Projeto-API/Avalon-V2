@@ -1,66 +1,91 @@
 section#carrinhoFlutuante {
-    display: none;
+  display: none;
+}
+
+header{
+  position: absolute !important;
+  z-index: 0 !important;
+}
+.cart-carrinho {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0px auto;
+    padding: 100px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    text-align-last: center;
   }
   
-  header{
-    position: absolute !important;
-    z-index: 0 !important;
+  .cart-carrinho h3 {
+    text-align: center;
+    margin-bottom: 20px;
   }
-  .cart-carrinho {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      margin: 0px auto;
-      padding: 100px;
-      background-color: #f2f2f2;
-      border-radius: 10px;
-      text-align-last: center;
-    }
-    
-    .cart-carrinho h3 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    
-    .cart-carrinho table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      margin-bottom: 20px;
   
-    }
-    table.table {
-      max-width: 50%;
+  .cart-carrinho table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
   }
-    
-    .cart-carrinho th,
-    .cart-carrinho td {
-      border: 1px solid #ddd;
-      padding: 10px;
-      text-align: left;
-    }
-    
-    .cart-carrinho th {
-      background-color: #ddd;
-    }
-    
-    .cart-carrinho .decrease,
-    .cart-carrinho .increase {
-      background-color: #386C5F;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      padding: 5px 10px;
-      cursor: pointer;
-    }
-    
-    .cart-carrinho .quantity {
-      width: 40px;
-    }
+  table.table {
+    max-width: 50%;
+}
   
-    .imagem-carrinho img{
-      display: flex;
-      max-width: 6rem;
+  .cart-carrinho th,
+  .cart-carrinho td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
   
-    }
+  .cart-carrinho th {
+    background-color: #ddd;
+  }
   
+  .cart-carrinho .decrease,
+  .cart-carrinho .increase {
+    background-color: #386C5F;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  .cart-carrinho .quantity {
+    width: 40px;
+  }
+
+  .livro-imagem img{
+    display: flex;
+    max-width: 6rem;
+
+  }
+
+  input.produto-quantidade {
+    width: 2rem;
+}
+
+
+button#fretebtn {
+  background-color: red;
+  border-radius: 1rem;
+  width: 5rem;
+  height: 2rem;
+  margin: 1rem;
+  color: white;
+}
+
+span.comprarAgora {
+  height: 3rem;
+  width: 13rem;
+  background-color: #3483fa;
+  border-radius: 7rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}

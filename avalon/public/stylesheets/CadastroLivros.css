@@ -1,3 +1,5 @@
+
+
 * body {
     height: auto;
 }
@@ -76,6 +78,7 @@ section .box-sumario {
 
 legend {
     margin-top: 2rem;
+
 }
 
 .box-menu {
@@ -137,9 +140,8 @@ legend {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
+
 }
-
-
 
 .double .alteraInp {
     color: red;
@@ -175,6 +177,8 @@ legend {
     flex-direction: column;
     gap: 0.7rem;
     align-items: center;
+
+
 }
 
 .autor {

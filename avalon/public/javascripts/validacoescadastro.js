@@ -74,7 +74,7 @@ window.addEventListener('load', function () {
           break;
 
         case 'senha':
-          validateLength(input, 6, 12);
+          validateLength(input, 3, 6);
           break;
           case 'password':
             validateLength(input, 2, 6);

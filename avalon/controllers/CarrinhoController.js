@@ -39,9 +39,8 @@ const CarrinhoController = {
   },
   teste: async (req, res) => {
     try {      
-      console.log("Parse " + JSON.stringify(req.body.produtosCarrinhoFinal))
       var convert = JSON.parse(req.body.produtosCarrinhoFinal);
-      console.log('Array: ' + JSON.stringify(convert));
+      
       for (const element of convert) {
         const objLivroCarrinho = await Livro.findOne({ where: { titulo: element.productTitle } });
         const carrinhoSalvo = await Carrinho.create({ quantidade: element.productQuantity, livros_id: objLivroCarrinho.id, usuarios_id: 1 });

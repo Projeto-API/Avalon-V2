@@ -12,11 +12,12 @@ body {
     padding: 8px;
     display: flex;
     width: 100%;
+    align-items: center;
     top: 0;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
-.carrinhoFlutuante { 
+.carrinhoFlutuante {
     background: white;
  
     width: 0;
@@ -28,7 +29,46 @@ body {
     top: 75px;
     transition: all 0.5s;
     z-index: 1000;
-    font-size: 19px
+    font-size: 16px
+}
+
+
+.cart-product-image {
+    margin: .5rem;
+    border-radius: .5rem;
+
+    width: 4rem;
+}
+
+.containerProduto {
+    width: 24rem;
+    display: inline-grid;
+}
+
+input.product-qtd-input {
+    width: 2rem;
+    text-align: center;
+}
+
+button.remove-livro-button {
+    color: red;
+    font-weight: 500;
+    background: none;
+    padding: .5rem;
+}
+
+.fechar {
+    font-size: 25px;
+    align-items: center;
+    color: red;
+    text-decoration: none;
+
+}
+
+.produtos-carrinho {
+    width: 24rem;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 

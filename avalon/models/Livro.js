@@ -37,7 +37,17 @@ const criarLivroModel = (sequelize, dataTypes) => {
       allowNull: false,
     },
 
- ano: {
+    ano: {
+      type: dataTypes.INTEGER,
+      allowNull: false,
+    },
+
+    ano: {
+      type: dataTypes.INTEGER,
+      allowNull: false,
+    },
+
+    ano: {
       type: dataTypes.INTEGER,
       allowNull: false,
     },
@@ -71,6 +81,16 @@ const criarLivroModel = (sequelize, dataTypes) => {
       type: dataTypes.STRING,
       allowNull: true
     },
+
+    capa: {
+      type: dataTypes.STRING,
+      allowNull: false
+    },
+
+    imagens: {
+      type: dataTypes.STRING,
+      allowNull: true
+    },
   };
 
   const opcoes = {
@@ -83,24 +103,27 @@ const criarLivroModel = (sequelize, dataTypes) => {
   Livro.associate = (models) => {
     Livro.belongsTo(models.Editora, {
       // editora.livros -> array de livros
+      // editora.livros -> array de livros
       as: 'editora', // livro.editora.nome -> nome da editora de um livro
       foreignKey: 'editoras_id'
     }),
 
-    Livro.belongsTo(models.Categoria, {
-      // editora.livros -> array de livros
-      as: 'categoria', // livro.autores.nome -> nome da editora de um livro
-      foreignKey: 'categorias_id'
-    }),
+      Livro.belongsTo(models.Categoria, {
+        // editora.livros -> array de livros
+        as: 'categoria', // livro.autores.nome -> nome da editora de um livro
+        // editora.livros -> array de livros
+        as: 'categoria', // livro.autores.nome -> nome da editora de um livro
+        foreignKey: 'categorias_id'
+      }),
 
-    Livro.belongsTo(models.Autor, {
-      // editora.livros -> array de livros
-      as: 'autor', // livro.autores.nome -> nome da editora de um livro
-      foreignKey: 'autores_id'
-    });
+      Livro.belongsTo(models.Autor, {
+        // editora.livros -> array de livros
+        as: 'autor', // livro.autores.nome -> nome da editora de um livro
+        foreignKey: 'autores_id'
+      });
   }
 
-    return Livro;
-  };
 
-  module.exports = criarLivroModel;
+  return Livro;
+}
+module.exports = criarLivroModel;

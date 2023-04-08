@@ -11,28 +11,28 @@ function ready() {
     const removelivro = document.getElementsByClassName("remove-livro-button")
     for (let i = 0; i < removelivro.length; i++) {
         removelivro[i].addEventListener("click", removeProduct)
-        updateTotal();
+        
     }
 
 
     const quantityInputs = document.getElementsByClassName("product-qtd-input")
     for (let i = 0; i < quantityInputs.length; i++) {
         quantityInputs[i].addEventListener("change", checkIfinputInsNull)
-        updateTotal();
+        
     }
 
 
     const addToCarButtons = document.getElementsByClassName("comprar")
     for (let i = 0; i < addToCarButtons.length; i++) {
         addToCarButtons[i].addEventListener("click", adicionaCarrinho)
-        updateTotal();
+        
     }
 
 
     if (sessionStorage.getItem("carrinho")) {
         carrinho = JSON.parse(sessionStorage.getItem("carrinho"));
         criarElementosCarrinho();
-        updateTotal();
+        
     }
 
     updateTotal();
@@ -44,10 +44,9 @@ function checkIfinputInsNull(event) {
     if (event.target.value === "0") {
         event.target.parentElement.parentElement.remove();
         const productTitle = event.target.parentElement.parentElement.getElementsByClassName("cart-product-title")[0].innerText;
-        // console.log(productTitle)
         carrinho = carrinho.filter(item => item.productTitle !== productTitle);
-        sessionStorage.setItem("carrinho", JSON.stringify(carrinho));
         updateTotal();
+        sessionStorage.setItem("carrinho", JSON.stringify(carrinho));
     } else {
         const productTitle = event.target.parentElement.parentElement.dataset.productTitle;
         const cartItem = carrinho.find(item => item.productTitle === productTitle);
@@ -60,7 +59,6 @@ function checkIfinputInsNull(event) {
     }
     updateTotal();
 }
-
 
 function adicionaCarrinho(event) {
     const button = event.target;
@@ -75,10 +73,8 @@ function adicionaCarrinho(event) {
         if (carrinho[i].productTitle === productTitle) {
             carrinho[i].productQuantity = productInfos.getElementsByClassName('product-qtd-input')[0].value;
             produtoExistente = true;
-            updateTotal()
             break;
         }
-        updateTotal()
     }
 
     if (!produtoExistente) {
@@ -88,7 +84,6 @@ function adicionaCarrinho(event) {
             productPrice,
             productQuantity: 1
         });
-        updateTotal()
     }
 
     sessionStorage.setItem("carrinho", JSON.stringify(carrinho));
@@ -98,6 +93,7 @@ function adicionaCarrinho(event) {
 
 
 function criarElementosCarrinho() {
+    updateTotal()
     const tableBody = document.querySelector(".produto");
     tableBody.innerHTML = "";
     // count = 0
@@ -134,9 +130,17 @@ function criarElementosCarrinho() {
         newCartProduct.getElementsByClassName("remove-livro-button")[0].addEventListener("click", removeProduct)
         updateTotal()
         
+        
     }
 }
-
+function loadCarrinho() {
+    const carrinhoSession = sessionStorage.getItem("carrinho");
+    if (carrinhoSession) {
+        carrinho = JSON.parse(carrinhoSession);
+        criarElementosCarrinho();
+        updateTotal();
+    }
+}
 
 
 function removeProduct(event) {
@@ -173,9 +177,6 @@ function updateTotal() {
     totalAmount = totalAmount.toFixed(2)
     totalAmount = totalAmount.replace(".", ",")
     document.querySelector(".cart-total-container span").innerText = "R$" + totalAmount
-    
-
-
 }
 
 
@@ -192,4 +193,5 @@ function fecharCarrinhoFlutuante() {
     updateTotal()
 
 }
+
 

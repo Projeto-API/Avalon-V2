@@ -4,8 +4,6 @@ if (document.readyState === "loading") {
   ready();
 }
 
-var cartTotal = "0,00";
-
 function ready() {
   const removeLivro = document.getElementsByClassName("remove");
   for (let i = 0; i < removeLivro.length; i++) {
@@ -27,11 +25,9 @@ function ready() {
 }
 
 function makePurchase(){
-  if(totalAmount === "0,00"){
-    alert("Seu Carrinho esta vazio!")
-  }else {
-    criarElementosCompra()
-  }
+  if(totalAmount === "0,00")
+
+  criarElementosCompra()
 
 }
 
@@ -74,10 +70,16 @@ function checkIfInputIsNotNull(event) {
   if (input.value <= 0) {
     input.value = 1;
   }
+  const cartRow = input.closest("tr");
+  const productId = cartRow.dataset.productId;
+  const quantity = input.value;
+  carrinho[productId].productQuantity = quantity;
+  sessionStorage.setItem("carrinho", JSON.stringify(carrinho));
   updateCartTotal();
 }
+
 function updateCartTotal() {
-  cartTotal = 0;
+  let cartTotal = 0;
   let desconto = 9;
   let frete = 9;
   let cartTotal2 = 0;
@@ -100,6 +102,70 @@ function updateCartTotal() {
   document.getElementById("cart-total-desconto").textContent = "R$ -" + desconto.toFixed(2);
   document.getElementById("cart-total-Final").textContent = "R$ " + cartTotalFinal.toFixed(2);
 }
+
+
+
+function comprarAgora(){
+  document.getElementById('produtosCarrinhoFinal').value =  sessionStorage.getItem("carrinho")
+  alert("Valor input" + document.getElementById('produtosCarrinhoFinal').value  )
+  console.log(carrinhoSession)
+  
+
+  
+}
+
+
+// function comprarAgora() {
+//   console.log("estou aqui")
+//   if (sessionStorage.getItem("carrinho")) {
+//     carrinho = JSON.parse(sessionStorage.getItem("carrinho"))
+
+//   console.log(carrinho)
+
+
+
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // /   let totalFinal = somaCarrinho - desconto;

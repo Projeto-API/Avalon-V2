@@ -54,5 +54,7 @@ module.exports = (sequelize, DataTypes) => {
         return total;
     };
 
+
+
     return Carrinho;
 };

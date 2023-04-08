@@ -84,10 +84,10 @@ buscarUsuario: async (req, res) => {
 editar: async (req, res) => {
   try {
     const { id } = req.params;
-    const { nome, sobrenome, doc_identificacao, email, password,cep, endereco, data_nascimento, foto  } = req.body;
+    const { nome, sobrenome, doc_identificacao, genero, estado, cidade, numero, email, password,cep, endereco, data_nascimento, foto } = req.body;
 
 
-    await Usuario.update({ nome, sobrenome, doc_identificacao, email, password,cep, endereco, data_nascimento, foto}, {
+    await Usuario.update({ nome, sobrenome, doc_identificacao, genero, estado, cidade, numero, email, password,cep, endereco, data_nascimento, foto}, {
       where: { id }
     });
 

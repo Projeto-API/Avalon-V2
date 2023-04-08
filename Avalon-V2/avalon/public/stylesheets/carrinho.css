@@ -78,3 +78,15 @@ button#fretebtn {
   margin: 1rem;
   color: white;
 }
+
+span.comprarAgora {
+  height: 3rem;
+  width: 13rem;
+  background-color: #3483fa;
+  border-radius: 7rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}

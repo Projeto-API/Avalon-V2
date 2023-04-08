@@ -84,6 +84,16 @@
             <td class="monetary" id="cart-total-Final">R$ </td>
           </tr>
         </tfoot>
-  </div>
+        
+      </tr>
+      
+    </div>
   </table>
+  <span class="comprarAgora">
+    <form id="carrinhoForm" method="post" action="/carrinho">
+      <input type="hidden" name="produtosCarrinhoFinal" id="produtosCarrinhoFinal">
+      <button type="submit" class=".finalizar-compra-button" onclick="comprarAgora()">Comprar agora</button>
+    </form>
+  </span>
+
   <%- include('partials/footer') %>

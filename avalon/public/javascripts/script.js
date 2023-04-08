@@ -90,7 +90,7 @@ function abrirBuscaMobile() {
 
 }
 
-// -----CARROUSEL BANNER
+// -----CARROUSEL BANNER MOBILE
 const slides = document.querySelectorAll('.slide');
 let currentSlide = 0;
 let slideInterval;
@@ -143,6 +143,8 @@ document.querySelector('.prev').addEventListener('click', () => {
 
 startSlideInterval();
 showSlide(currentSlide);
+
+//  ----- FIM CARROUSEL BANNER  
 
 // ------ MODAL IMAGENS SINOPSE 
 

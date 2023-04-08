@@ -18,8 +18,4 @@ router.get('/todos/categoria/buscar/', TodosLivros.searchCategoria)
 
 
 
-
-
-module.exports = router;
-
 module.exports = router;

@@ -4,6 +4,7 @@
 
 /* SECTION 1 - BANNER + 3 CATEGORAS  */
 
+
 main {
     padding-top: 50px;
 }
@@ -181,19 +182,19 @@ main {
 }
 
 .carrossel-container {
-    display: flex;
+
     width: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
-.slide {
+.slide, .slide_mobile {
     flex-shrink: 0;
     width: 100%;
     height: 100%;
 }
 
-.slide img {
+.slide img, .slide_mobile img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -221,7 +222,7 @@ main {
     color: #fff;
     background-color: rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    }
+}
 
 .prev {
     top: 50%;
@@ -231,7 +232,7 @@ main {
 .next {
     top: 50%;
     right: 10px;
-    
+
 }
 
 .prev:hover,
@@ -240,6 +241,25 @@ main {
 }
 
 
+#desktop {
+    display: none;
+}
+
+#mobile {
+    display: flex;
+    height: 100%;
+    
+}
+
+@media (min-width: 500px) {
+    #mobile {
+        display: none;
+    }
+
+    #desktop {
+        display: flex;
+    }
+}
 
 @media (min-width: 768px) {
     body {
@@ -283,6 +303,7 @@ main {
         right: 5rem;
         position: absolute;
     }
+
 }
 
 

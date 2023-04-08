@@ -1,40 +1,58 @@
-const criarCarrinhoModel = (sequelize, DataType) => {
-    const colunas = {
-        id: {
-            type: DataType.INTEGER,
-            primaryKey: true,
-            autoIncrement: true
-        },
-        titulo: {
-            type: DataType.STRING,
-            allowNull: false
-        },
-        preco: {
-            type:DataType.DECIMAL,
-            allowNull: false
-        },
-        quantidade: {
-            type:DataType.INTEGER,
-            allowNull: false
-        },
-        imagem: {
-            type:DataType.STRING,
-            allowNull: false
-        },
-        
+module.exports = (sequelize, DataTypes) => {
+    const Carrinho = sequelize.define(
+        "Carrinho",
+        {
+            id: {
+                type: DataTypes.INTEGER,
+                primaryKey: true,
+                autoIncrement: true
+            },
 
+            quantidade: {
+                type: DataTypes.INTEGER,
+                allowNull: false
+            },
+       
+            livros_id: {
+                type: DataTypes.INTEGER.UNSIGNED,
+                allowNull: false
+            },
+            usuarios_id: {
+                type: DataTypes.INTEGER.UNSIGNED,
+                allowNull: false
+            },
+        },
+
+        {
+            tableName: "carrinho",
+            timestamps: false,
+            createdAt: false,
+            updatedAt: false
+        }
+    );
+
+    Carrinho.associate = (models) => {
+        Carrinho.belongsTo(models.Usuario, {
+            as: 'usuario',
+            foreignKey: 'usuarios_id'
+        })
+
+        Carrinho.belongsTo(models.Livro, {
+            as: 'livros',
+            foreignKey: 'livros_id'
+        })
     };
 
-    const opcoes = {
-        tableName: 'carrinho',
-        timetamps: false,
-        createdAt: false,
-        updatedAt: false
+    Carrinho.getTotal = async () => {
+        const items = await Carrinho.findAll();
+        let total = 0;
 
+        items.forEach(item => {
+            total += item.preco * item.quantidade;
+        });
+
+        return total;
     };
 
-    const Carrinho = sequelize.define('Carrinho', colunas, opcoes);
-    return Carrinho
-}
-
-module.exports = criarCarrinhoModel;
+    return Carrinho;
+};

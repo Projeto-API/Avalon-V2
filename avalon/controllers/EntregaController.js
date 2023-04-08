@@ -38,7 +38,7 @@ module.exports = {
             res.render('carrinho', { livros, valorFrete })
 
         } catch (error) {
-            console.log('Região não encontrada')
+            console.log(error)
         }
     }
 }

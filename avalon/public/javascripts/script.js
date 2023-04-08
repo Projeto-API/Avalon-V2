@@ -77,7 +77,7 @@ function vejaMais() {
   document.querySelector('.sinopse').style.height = "auto"
 
   if (document.querySelector('.sinopse').style.height = "auto") {
-       document.getElementById('read-btn').remove()
+    document.getElementById('read-btn').remove()
     // document.getElementById('read-btn').style.color = "white"
   }
 }
@@ -143,3 +143,19 @@ document.querySelector('.prev').addEventListener('click', () => {
 
 startSlideInterval();
 showSlide(currentSlide);
+
+// ------ MODAL IMAGENS SINOPSE 
+
+function openModal(img) {
+  var modal = document.getElementById("modal");
+  var modalImg = document.getElementById("modal-image");
+  modal.style.display = "block";
+  modalImg.src = img.src;
+}
+
+function closeModal(span) {
+var span = document.getElementById("close");
+
+  var modal = document.getElementById("modal");
+  modal.style.display = "none";
+}

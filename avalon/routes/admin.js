@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
-const validadorTipoUsuario = require('../middewres/validadorTipoUsuario')
+const validadorTipoUsuario = require('../middlewares/validadorTipoUsuario')
 // MULTER LIVROS
 const multerDiskStorageLivro = multer.diskStorage({
     destination: (req, file, callback) => {

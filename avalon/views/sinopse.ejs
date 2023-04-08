@@ -10,12 +10,19 @@
 
                 <div class="miniaturas">
                     <ul class="gallery-miniaturas">
-                        <% livro.imagens_livro.forEach(el => { %>
-                            <img class="livrinhos" src="/images/produtos/<%= el && el.imagens %>" alt="">
-                        <% }) %>
-                       
+                        <% livro.imagens_livro.forEach(el=> { %>
+                            <img class="livrinhos" src="/images/produtos/<%= el && el.imagens %>" alt="I" onclick="openModal(this)">
+                            <% }) %>
+
                     </ul>
                 </div>
+                <div id="modal">
+                    <div id="modal-content">
+                        <span id="close" onclick="closeModal()">X</span>
+                        <img id="modal-image">
+                    </div>
+                </div>
+
             </div>
 
             <div class="container2">
@@ -30,9 +37,9 @@
                     <p>
                         <%= livro && livro.sinopse %>
                     </p>
-                    
+
                 </div>
-                <button onclick=vejaMais()  id="read-btn">Ver mais</button>
+                <button onclick=vejaMais() id="read-btn">Ver mais</button>
                 <div class="containerfilho2">
                     <div class="price-qtt">
                         <span class="precoLivro">R$ <%= livro && livro.preco %></span>

@@ -45,14 +45,18 @@ function criarElementosCompra() {
     newCartProduct.querySelector(".livro-imagem").setAttribute("src", carrinho[i].productImage);
     newCartProduct.querySelector(".imagem-titulo").textContent = carrinho[i].productTitle;
     newCartProduct.querySelector(".livro-preco").textContent = carrinho[i].productPrice;
+    
     newCartProduct.querySelector(".produto-quantidade").value = carrinho[i].productQuantity;
-    newCartProduct.querySelector(".cart-total").textContent = "R$ " + (carrinho[i].productPrice * carrinho[i].productQuantity).toFixed(2);
+    newCartProduct.querySelector(".livro-remove .cart-total").textContent = "R$ " + (parseFloat(carrinho[i].productPrice.substring(2)) * carrinho[i].productQuantity).toFixed(2);
+
+    console.log(carrinho[i].productPrice)
+    console.log(carrinho[i].productQuantity)
 
     removeButton.classList.add("remove-livro-button");
     removeButton.textContent = "X";
 
     newCartProduct.querySelector(".livro-remove").appendChild(removeButton);
-    
+
     removeButton.addEventListener("click", function () {
       const productId = newCartProduct.dataset.productId;
       carrinho.splice(productId, 1);
@@ -73,37 +77,41 @@ function checkIfInputIsNotNull(event) {
   if (input.value <= 0) {
     input.value = 1;
   }
-  const cartRow = input.closest("tr");
+  const cartRow = input.closest("div");
   const productId = cartRow.dataset.productId;
   const quantity = input.value;
-  carrinho[productId].productQuantity = quantity;
+  productQuantity = quantity;
   sessionStorage.setItem("carrinho", JSON.stringify(carrinho));
   updateCartTotal();
 }
 
 function updateCartTotal() {
   let cartTotal = 0;
-  let desconto = 9;
+  let desconto = 10;
   let frete = 9;
   let cartTotal2 = 0;
-  const cartRows = document.getElementById("produto-carrinho").getElementsByTagName("tr");
+  const cartRows = document.getElementById("produto-carrinho").querySelectorAll(".produto");
+  console.log(cartRows)
   for (let i = 0; i < cartRows.length; i++) {
     const cartRow = cartRows[i];
-    const priceElement = cartRow.getElementsByClassName("livro-preco")[0];
-    const quantityElement = cartRow.getElementsByClassName("produto-quantidade")[0];
-    const price = parseFloat(priceElement.textContent.replace("R$ ", ""));
+    const priceElement = cartRow.querySelector(".livro-preco");
+    console.log(priceElement)
+    const quantityElement = cartRow.querySelector(".produto-quantidade");
+    console.log(quantityElement)
+    const price = parseFloat(priceElement.textContent.substring(2));
     const quantity = quantityElement.value;
     const total = price * quantity;
-    cartRow.getElementsByClassName("cart-total")[0].textContent = "Total: R$ " + total.toFixed(2);
+    cartRow.querySelector(".cart-total").textContent = "Total: R$ " + total.toFixed(2);
     cartTotal += total;
     cartTotal2 += total + frete;
   }
-  const cartTotalFinal = (cartTotal - desconto);
+  const cartTotalFinal = (cartTotal + frete - desconto);
   document.getElementById("cart-total-subtotal").textContent = "R$ " + cartTotal.toFixed(2);
   document.getElementById("resultadoFrete").textContent = "R$ " + frete.toFixed(2);
-  document.getElementById("cart-total-subtotal-2").textContent = "R$ " + cartTotal2.toFixed(2);
-  document.getElementById("cart-total-desconto").textContent = "R$ -" + desconto.toFixed(2);
+ 
+  document.getElementById("cart-total-desconto").textContent = "R$  -" + desconto.toFixed(2);
   document.getElementById("cart-total-Final").textContent = "R$ " + cartTotalFinal.toFixed(2);
+
 }
 
 

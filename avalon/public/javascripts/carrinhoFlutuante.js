@@ -181,14 +181,14 @@ function updateTotal() {
 
 function abrirCarrinhoFlutuante() {
 
-    document.getElementById('carrinhoFlutuante').style.width = "25rem"
+    document.getElementById('carrinhoFlutuante').style.width = "365px"
     updateTotal()
 
 }
 
 function fecharCarrinhoFlutuante() {
 
-    document.getElementById('carrinhoFlutuante').style.width = "0rem"
+    document.getElementById('carrinhoFlutuante').style.width = "0"
     updateTotal()
 
 }

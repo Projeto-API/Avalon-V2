@@ -15,7 +15,7 @@ module.exports = {
      
 
      
-      res.render('home', { livros, livrosLancamento, editoras, categorias, autores, })
+      res.render('home', { livros, livrosLancamento, editoras, categorias, autores, userId: req.session.userId})
 
 
     } catch (erro) {
@@ -23,9 +23,6 @@ module.exports = {
       alert("ERRO 500 - Erro interno do servidor!")
     }
   },
-
-
-
 }
 
 

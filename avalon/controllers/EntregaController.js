@@ -16,12 +16,9 @@ module.exports = {
             const { cep } = req.query;
             const endereco = await buscarEnderecoPorCep(cep);
 
-            console.log(endereco)
             return res.status(200).json(endereco)
         } catch (erro) {
-
             console.log(erro)
-
         }
     },
 
@@ -32,8 +29,8 @@ module.exports = {
             const { state } = await buscarEnderecoPorCep(cep);
             const regiaoConhecida = state in valoresFretePorRegião;
             const valorFrete = valoresFretePorRegião[regiaoConhecida ? state : 'Outros']
-           
-            console.log(valorFrete, state )
+
+            console.log(valorFrete, state)
             res.render('carrinho', { valorFrete })
 
         } catch (error) {

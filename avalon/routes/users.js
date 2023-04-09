@@ -10,9 +10,10 @@ const LoginController = require('../controllers/LoginController');
 const UsuarioController = require('../controllers/CadastrousuarioController');
 const AuthController = require('../controllers/AuthController');
 const ContaController = require('../controllers/ContaController');
+const auth = require('../middlewares/auth')
 
-router.get('/compras/:id', MinhasComprasController.index);
-router.get('/conta/:id', ContaController.index);
+router.get('/compras/:id', auth, MinhasComprasController.index);
+router.get('/conta/:id', auth, ContaController.index);
 router.get('/login', LoginController.index);
 router.post('/entrar', LoginController.login);
 router.get('/cadastro', UsuarioController.index);

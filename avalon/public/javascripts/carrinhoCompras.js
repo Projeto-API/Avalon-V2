@@ -88,7 +88,8 @@ function checkIfInputIsNotNull(event) {
 function updateCartTotal() {
   let cartTotal = 0;
   let desconto = 10;
-  let frete = 9;
+  let freteElement = document.getElementById("resultadoFrete");
+  let frete = freteElement.textContent.trim().toLowerCase() === "grátis" ? 0 : parseFloat(freteElement.textContent.substring(2));
   let cartTotal2 = 0;
   const cartRows = document.getElementById("produto-carrinho").querySelectorAll(".produto");
   console.log(cartRows)
@@ -108,11 +109,10 @@ function updateCartTotal() {
   const cartTotalFinal = (cartTotal + frete - desconto);
   document.getElementById("cart-total-subtotal").textContent = "R$ " + cartTotal.toFixed(2);
   document.getElementById("resultadoFrete").textContent = "R$ " + frete.toFixed(2);
- 
   document.getElementById("cart-total-desconto").textContent = "R$  -" + desconto.toFixed(2);
   document.getElementById("cart-total-Final").textContent = "R$ " + cartTotalFinal.toFixed(2);
-
 }
+
 
 
 function comprarAgora() {

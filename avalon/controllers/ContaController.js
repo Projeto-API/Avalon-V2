@@ -7,11 +7,10 @@ module.exports = {
   index: async (req, res) => {
     try {
       const { id } = req.params
-     
+
       const usuarios = await Usuario.findByPk(id)
  
-      res.render('conta', { usuarios });
-
+      res.render('conta', { usuarios, userId: req.session.userId });
     } catch (erro) {
       let alert = require('alert');
       alert("ERRO 500 - Erro interno do servidor!")
@@ -21,11 +20,10 @@ module.exports = {
   form: async (req, res) => {
     try {
       const { id } = req.params
-     
+
       const usuarios = await Usuario.findByPk(id)
-      console.log("ESTOU AQUI" )
-      console.log(usuarios)
-      res.render('editarConta', { usuarios });
+     
+      res.render('editarConta', { usuarios, userId: req.session.userId  });
 
     } catch (erro) {
       let alert = require('alert');

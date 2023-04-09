@@ -63,8 +63,5 @@ module.exports = {
     } catch (erro) {
       console.log(erro)
     }
-  },
-  index: async (req, res) => {
-    res.render('login');
   }
 }

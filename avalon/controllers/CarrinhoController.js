@@ -3,9 +3,10 @@ const { Carrinho, Livro } = require('../models');
 const CarrinhoController = {
   carrinho: async (req, res) => {
     try {
-      let valorFrete = 29
+      let valorFrete = null
       const carrinhoFinal = [];
       let pegaDados = await Carrinho.findAll({ where: { usuarios_id: 1 } });
+      
       for (const carrinho of pegaDados) {
         const livro = await Livro.findOne({ where: { id: carrinho.livros_id } });
         carrinhoFinal.push({

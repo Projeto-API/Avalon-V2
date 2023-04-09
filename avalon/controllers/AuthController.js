@@ -6,24 +6,29 @@ module.exports = {
     try {
       const { email, password } = req.body;
       const user = await Usuario.findOne({ where: { email } })
-      req.session.user = user
-      console.log(user)
 
       if (user) {
         const validadorsenha = await bcrypt.compare(password, user.password)
+        
 
         if (validadorsenha) {
           req.session.email = user.email;
           req.session.tipo = user.tipo;
+          req.session.userId = user.id;
+          const userId = req.session.userId;
+          console.log(userId);
+          
+
 
           if (user.tipo === 1) {
             res.redirect('/admin');
           } else {
+
             res.redirect('/');
           }
         } else {
           req.flash('error', 'Senha Inválida');
-          res.redirect('login');
+          res.redirect('/teste');
         }
       }
     } catch (erro) {

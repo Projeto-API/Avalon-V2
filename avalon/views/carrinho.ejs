@@ -17,7 +17,7 @@
               </div>
               <div class="informationLivroValue">
                 <div>
-                  <input class="produto-quantidade" type="number"  min="1" value="">
+                  <input class="produto-quantidade" type="number" min="1" value="">
                   <span class="livro-preco"></span>
                 </div>
               </div>
@@ -33,10 +33,10 @@
       <section class="containerFinalizacao">
         <div class="containerEntrega">
           <h6>Entrega</h6>
-          <div>
-            <input id="endereco" type="text" placeholder="CEP">
-            <button id="calcular"><a href="">CALCULAR</a></button>
-          </div>
+          <form class="formFrete" action="/carrinho/enderecos" method="get">
+            <input id="endereco" type="text" name="cep" placeholder="CEP">
+            <button id="calcular" type="submit">CALCULAR</button>
+          </form>
         </div>
 
         <div class="containerCheckout">
@@ -51,7 +51,7 @@
               </tr>
               <tr class="itens">
                 <td class="info">Entrega</td>
-                <td class="monetary" id="resultadoFrete">Grátis</td>
+                <td class="monetary" id="resultadoFrete"><%= valorFrete %></td>
               </tr>
               <tr class="itens">
                 <td class="info">Desconto</td>

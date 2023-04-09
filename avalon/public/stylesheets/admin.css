@@ -247,6 +247,15 @@ tbody tr td.acao {
   text-align: center;
 }
 
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+#btVoltar {
+background-color: gray;
+}
+
 @media (min-width: 768px) {
   .crud-types {
     width: 300px;

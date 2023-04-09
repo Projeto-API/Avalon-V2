@@ -85,7 +85,7 @@ module.exports = {
        if (errorsAutor.isEmpty()) {
 
        } else {
-         res.render('register', { errorsAutor: errorsAutor.mapped(), old: req.body})
+         res.render('register', { errorsAutor: errorsAutor.mapped(), old: req.body});
        }
      }
      //aqui

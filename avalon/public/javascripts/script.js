@@ -146,6 +146,26 @@ showSlide(currentSlide);
 
 //  ----- FIM CARROUSEL BANNER  
 
+function adaptImages() {
+  const images = document.querySelectorAll('.carrossel img');
+  images.forEach((image) => {
+    const src = image.getAttribute('src');
+    if (window.innerWidth < 500 && !src.includes('-MOBILE.png')) {
+      const newSrc = src.replace('.png', '-MOBILE.png');
+      image.setAttribute('src', newSrc);
+    } else if (window.innerWidth >= 500 && src.includes('-MOBILE.png')) {
+      const newSrc = src.replace('-MOBILE.png', '.png');
+      image.setAttribute('src', newSrc);
+    }
+  });
+}
+
+window.addEventListener('resize', adaptImages);
+adaptImages();
+
+
+window.addEventListener('resize', adaptImages);
+adaptImages();
 // ------ MODAL IMAGENS SINOPSE 
 
 function openModal(img) {

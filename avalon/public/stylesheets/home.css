@@ -182,7 +182,6 @@ main {
 }
 
 .carrossel-container {
-
     width: 100%;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -241,7 +240,7 @@ main {
 }
 
 
-#desktop {
+/* #desktop {
     display: none;
 }
 
@@ -249,16 +248,16 @@ main {
     display: flex;
     height: 100%;
     
-}
+} */
 
 @media (min-width: 500px) {
-    #mobile {
+    /* #mobile {
         display: none;
     }
 
     #desktop {
         display: flex;
-    }
+    } */
 }
 
 @media (min-width: 768px) {

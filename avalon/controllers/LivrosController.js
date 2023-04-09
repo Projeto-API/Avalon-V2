@@ -23,13 +23,19 @@ module.exports = {
   search: async (req, res) => {
     try {
       const { search } = req.query;
+      const categorias = await Categoria.findAll()
       const livros = await Livro.findAll({
         where: search ? {
           [Op.or]: [
             { titulo: { [Op.like]: '%' + search + '%' } },
             { id: search }
           ]
-        } : null
+        } : null,
+        include: [
+          { model: Editora, as: 'editora' },
+          { model: Autor, as: 'autor' },
+          { model: Categoria, as: 'categoria' }
+        ]
       });
       console.log(livros)
       res.render('admin', { livros })
@@ -80,7 +86,7 @@ module.exports = {
     try {
       const { titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, categoria } = req.body
       const capa = req.files.capa[0].filename;
-      
+
       await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria, capa })
 
       res.redirect('/admin');
@@ -98,14 +104,14 @@ module.exports = {
       const { titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, capaguardada, imagensguardadas } = req.body
 
       const capaupload = req.files.capa?.[0].filename;
- 
+
       console.log(capaguardada)
       console.log(req.body)
       await Livro.update({ titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, capa: capaupload ? capaupload : capaguardada },
         {
           where: { id }
         })
-  
+
       res.redirect('/admin');
 
     } catch (erro) {

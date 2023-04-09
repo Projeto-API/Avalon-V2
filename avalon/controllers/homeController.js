@@ -15,7 +15,7 @@ module.exports = {
      
 
      
-      res.render('home', { livros, livrosLancamento, editoras, categorias, autores})
+      res.render('home', { livros, livrosLancamento, editoras, categorias, autores, })
 
 
     } catch (erro) {

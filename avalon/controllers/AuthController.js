@@ -17,7 +17,7 @@ module.exports = {
           if (user.tipo === 1) {
             res.redirect('admin');
           } else {
-            res.redirect('conta');
+            res.redirect('/');
           }
         } else {
           req.flash('error', 'Senha Inválida');

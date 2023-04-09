@@ -52,7 +52,7 @@ module.exports = {
       } else if (user.tipo === 0) { // Se o tipo do usuário for 0 (usuário comum)
 
         console.log(usuario)
-          res.render('conta', {usuario}); // Redireciona para a página minha-conta
+          res.redirect('/'); // Redireciona para a página minha-conta
       }
       } else {
         console.log("Vai redirecionar para login")
@@ -60,8 +60,7 @@ module.exports = {
         alert("Senha Inválida")
         res.redirect('login')
       }
-
-     
+   
       
     } catch (erro) {
       console.log(erro)

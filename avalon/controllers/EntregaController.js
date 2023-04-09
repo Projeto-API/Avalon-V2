@@ -1,5 +1,5 @@
 const { buscarEnderecoPorCep } = require("../services/request/endereco");
-const { Carrinho } = require('../models');
+
 
 const valoresFretePorRegião = {
     'SP': 'Grátis',
@@ -28,14 +28,13 @@ module.exports = {
     calcularfrete: async (req, res) => {
         try {
 
-            let livros = await Carrinho.findAll();
             const { cep } = req.query;
             const { state } = await buscarEnderecoPorCep(cep);
             const regiaoConhecida = state in valoresFretePorRegião;
             const valorFrete = valoresFretePorRegião[regiaoConhecida ? state : 'Outros']
            
             console.log(valorFrete, state )
-            res.render('carrinho', { livros, valorFrete })
+            res.render('carrinho', { valorFrete })
 
         } catch (error) {
             console.log(error)

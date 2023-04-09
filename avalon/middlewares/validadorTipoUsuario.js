@@ -3,9 +3,9 @@ module.exports = [
 
         if (req.session.tipo == 1) {
             next()
-     
+
         } else {
-            res.redirect('conta')
+            res.redirect('/login')
         }
     }
 

@@ -13,12 +13,7 @@
 
                 <div class="contaOpcoes">
                     <a href="/users/conta/<%= usuarios.id %>">MEUS DADOS</a>
-                    <% if (usuarios) { %>
-                        <span>teste</span>
-                        <% } %>
-
-
-                            <a href="/users/compras/<%= usuarios.id %>">MEUS PEDIDOS</a>
+                    <a href="/users/compras/<%= usuarios.id %>">MEUS PEDIDOS</a>
                 </div>
             </div>
         </section>
@@ -31,15 +26,13 @@
                 <div class="col-user">
                     <div>
                         <label for="" class="label-account">E-mail</label><br>
-                        <input type="text" name="email" class="values-account"
-                            value="<%= usuarios.email %>"></input>
+                        <input type="text" name="email" class="values-account" value="<%= usuarios.email %>"></input>
                     </div>
                 </div>
                 <div class="col-user">
                     <div>
                         <label for="nome" class="label-account">Nome</label><br>
-                        <input type="text" name="nome" class="values-account"
-                            value="<%= usuarios.nome %>"></input>
+                        <input type="text" name="nome" class="values-account" value="<%= usuarios.nome %>"></input>
                     </div>
                     <div>
                         <label for="sobrenome" class="label-account">Sobrenome</label><br>
@@ -100,11 +93,13 @@
                     <div class="col-endereco">
                         <div>
                             <label for="number" class="label-account">Número</label><br>
-                            <input type="text" name="numero" class="values-account" value="<%= usuarios.numero %>"></input>
+                            <input type="text" name="numero" class="values-account"
+                                value="<%= usuarios.numero %>"></input>
                         </div>
                         <div>
                             <label for="complemento" class="label-account">Complemento</label><br>
-                            <input type="text" name="complemento" class="values-account" value="<%= usuarios.complemento %>"></input>
+                            <input type="text" name="complemento" class="values-account"
+                                value="<%= usuarios.complemento %>"></input>
                         </div>
                     </div>
                 </div>

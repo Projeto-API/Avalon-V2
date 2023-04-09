@@ -18,8 +18,23 @@ module.exports = {
 
   criar: async (req, res) => {
     try {
+
+      //aqui
       let errors = validationResult(req);
       console.log("erros", errors);
+
+      
+      register: (req, res) => {
+        let = errors = validationResult(req);
+
+        if (errors.isEmpty()) {
+
+        } else {
+          res.render('register', { errors: errors.mapped(), old: req.body});
+        }
+      }
+      //aqui
+      
       const {
         email,
         password,

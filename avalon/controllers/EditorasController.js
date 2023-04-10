@@ -1,6 +1,6 @@
 const { Editora } = require('../models');
 const { Op } = require('sequelize');
-const { validationResultEditora } = require("express-validator");
+const { validationResultEditora } = require('express-validator');
 
 module.exports = {
   index: async (req, res) => {
@@ -80,7 +80,7 @@ module.exports = {
         } else {
           res.render('register', { errorsEditora: errorsEditora.mapped(), old: req.body})
         }
-      }
+      };
       //aqui
 
       const { nome, cnpj } = req.body;

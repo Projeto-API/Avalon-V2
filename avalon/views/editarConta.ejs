@@ -22,7 +22,7 @@
             <div class="caixatexto">
                 <h3>EDITAR DADOS</h3>
             </div>
-            <form class="account-data">
+            <form class="account-data"  action="/users/conta/editar-conta/<%= usuarios.id %>?_method=PUT" method="post">
                 <div class="col-user">
                     <div>
                         <label for="" class="label-account">E-mail</label><br>
@@ -45,7 +45,10 @@
                 <div class="col-user">
                     <div>
                         <label for="foto" class="label-account">Foto de perfil</label><br>
-                        <input type="file" name="foto" class="foto-perfil"></input>
+                        <span class="fotoupload">
+                            <%= usuarios.foto %>
+                          </span>
+                        <input type="file" name="foto" class="foto-perfil" <%= usuarios.foto %>>
                     </div>
                 </div>
                 <div class="account-data-pessoal">

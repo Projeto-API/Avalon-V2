@@ -1,21 +1,21 @@
 const { check, validationResult } = require("express-validator");
 
 module.exports = [
-  check("nome")
+  check("Nome")
     .notEmpty()
     .withMessage("Este campo não pode ficar vazio")
     .bail()
     .isString()
     .bail(),
 
-  check("sobrenome")
+  check("Sobrenome")
     .notEmpty()
     .withMessage("Este campo não pode ficar vazio")
     .bail()
     .isString()
     .bail(),
 
-  check("doc_identificacao")
+  check("CPF")
     .notEmpty()
     .bail()
     .withMessage("Este campo não pode ficar vazio")
@@ -24,7 +24,7 @@ module.exports = [
   //check("nomeDeUsuario")
   //    .notEmpty().withMessage("Este campo não pode ficar vazio").bail(),
 
-  check("email")
+  check("e-mail")
     .notEmpty()
     .withMessage("Este campo não pode ficar vazio")
     .bail()
@@ -41,7 +41,7 @@ module.exports = [
   //  .isLength({max:13}).withMessage("Deve conter no máximo 13 caracteres").bail()
   //  .isInt().withMessage("Use somente numeros inteiros").bail(),
 
-  check("endereco")
+  check("Endereço")
     .isString()
     .isLength({ min: 3 })
     .withMessage("Endereço muito curto")
@@ -50,7 +50,7 @@ module.exports = [
     .withMessage("Este campo não pode ficar vazio")
     .bail(),
 
-  check("cep")
+  check("CEP")
     .isNumeric()
     .isLength({ min: 5 })
     .withMessage("CEP muito curto")
@@ -59,31 +59,31 @@ module.exports = [
     .withMessage("Este campo não pode ficar vazio")
     .bail(),
 
-  check("estado")
+  check("Estado")
     .isString()
     .notEmpty()
     .withMessage("Este campo não pode ficar vazio")
     .bail(),
 
-  check("cidade")
+  check("Cidade")
     .isString()
     .notEmpty()
     .withMessage("Este campo não pode ficar vazio")
     .bail(),
 
-  check("complemento")
+  check("Complemento")
     .notEmpty()
     .withMessage("Este campo não pode ficar vazio")
     .bail(),
 
-  check("passwordCadastro")
+  check("Senha")
     .isLength({ min: 8 })
-    .withMessage("Escolha uma senha de pelo menos 8 caracteres")
+    .withMessage("Utilize pelo menos 8 caracteres")
     .bail()
     .notEmpty()
     .bail(),
 
-  check("data_nascimento")
+  check("Data de nascimento")
     .isString()
     .isLength({ min: 3 })
     .withMessage("Data muito curta")

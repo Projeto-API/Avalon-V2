@@ -83,11 +83,13 @@
                 <section class="carrinhoFlutuante" id="carrinhoFlutuante">
                     <div class="headerFlutuante" id="primeiro">
                         <div>
-                            <h5>MEU CARRINHO</h5>
+                            <h5 class="cart-title">MEU CARRINHO</h5>
                         </div>
                         <!-- <button id="fechar" onclick="fecharCarrinhoFlutuante()">X</button> -->
                         <div>
-                            <button onclick=fecharCarrinhoFlutuante() class="fechar"><i>X</i></button>
+                            <button onclick=fecharCarrinhoFlutuante() class="icons-btn fechar"><i
+                                    class='bx bx-x'></i></button>
+
                         </div>
                     </div>
                     <tbody>
@@ -105,7 +107,8 @@
                     <div class="continuar">
                         <form class=".finalizar-compra-button" id="formCarrinho" method="get" action="/carrinho">
                             <input type="hidden" name="produtos" id="produtosCarrinho">
-                            <button type="submit" id="continuar" onclick="criarElementosCompra()"><a href="/carrinho">
+                            <button type="submit" id="continuar" class="continuar" onclick="criarElementosCompra()"><a
+                                    href="/carrinho">
                                     Finalizar
                                     Compra</a></button>
                         </form>

@@ -32,21 +32,20 @@ td {
   width: 100%;
 }
 
-.produto {
+.produto-cart {
   margin: .5rem;
   display: flex;
-  width: auto;
+  width: 100%;
   justify-content: flex-start;
   background-color: #F6F9FF;
   border-radius: 1rem;
 }
 
-.livro-imagem {
+.livro-imagem-cart {
   height: 100%;
   margin: .5rem;
   border-radius: .5rem;
   display: flex;
-
   width: 4rem;
   margin-bottom: 1rem;
 }
@@ -85,9 +84,7 @@ td {
 
 .cart-total,
 .remove-livro-button {
-  display: flex;
-  height: 100%;
-  align-items: center;
+  width: 100%;
 }
 
 .remove-livro-button {
@@ -98,11 +95,11 @@ td {
 }
 
 .livro-remove {
-  padding-right: 1rem;
-  width: 100%;
-
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding-right: 1rem;
+  width: 100%;
 }
 
 .containerFinalizacao {
@@ -112,11 +109,19 @@ td {
 /* SEÇÃO REFERENTE À ENTREGA */
 
 .containerEntrega {
+  width: 100%;
   padding: .5rem;
   margin: .5rem;
   background-color: #F6F9FF;
   border-radius: 1rem;
+  }
 
+.formFrete {
+  display: flex;
+}
+
+.containerEntrega input {
+  width: 70%;
 }
 
 
@@ -165,6 +170,19 @@ td {
     columns: 1;
     width: 100%;
     padding: 0 5px;
+  }
+
+  .livro-remove {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1rem;
+    width: 100%;
+  }
+
+  .cart-total {
+    white-space: nowrap;
   }
 }
 

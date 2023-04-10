@@ -42,7 +42,7 @@ function criarElementosCompra() {
     const removeButton = document.createElement("span");
     newCartProduct.id = "produto-" + i;
 
-    newCartProduct.querySelector(".livro-imagem").setAttribute("src", carrinho[i].productImage);
+    newCartProduct.querySelector(".livro-imagem-cart").setAttribute("src", carrinho[i].productImage);
     newCartProduct.querySelector(".imagem-titulo").textContent = carrinho[i].productTitle;
     newCartProduct.querySelector(".livro-preco").textContent = carrinho[i].productPrice;
     
@@ -88,10 +88,9 @@ function checkIfInputIsNotNull(event) {
 function updateCartTotal() {
   let cartTotal = 0;
   let desconto = 10;
-  let freteElement = document.getElementById("resultadoFrete");
-  let frete = freteElement.textContent.trim().toLowerCase() === "grátis" ? 0 : parseFloat(freteElement.textContent.substring(2));
+  let frete = parseFloat(document.getElementById("resultadoFrete").textContent.substring(2));
   let cartTotal2 = 0;
-  const cartRows = document.getElementById("produto-carrinho").querySelectorAll(".produto");
+  const cartRows = document.getElementById("produto-carrinho").querySelectorAll(".produto-cart");
   console.log(cartRows)
   for (let i = 0; i < cartRows.length; i++) {
     const cartRow = cartRows[i];
@@ -112,7 +111,6 @@ function updateCartTotal() {
   document.getElementById("cart-total-desconto").textContent = "R$  -" + desconto.toFixed(2);
   document.getElementById("cart-total-Final").textContent = "R$ " + cartTotalFinal.toFixed(2);
 }
-
 
 
 function comprarAgora() {

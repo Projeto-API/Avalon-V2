@@ -10,7 +10,7 @@ module.exports = {
           ['tipo', 'asc']
         ]
       });
-      res.render('categorias', { categorias });
+      res.render('categorias', { categorias, userId: req.session.userId, userName: req.session.userName  });
 
     } catch (erro) {
       let alert = require('alert');
@@ -30,7 +30,7 @@ module.exports = {
         } : null
       });
 
-      res.render('categorias', { categorias });
+      res.render('categorias', { categorias, userId: req.session.userId, userName: req.session.userName  });
     } catch (erro) {
       let alert = require('alert');
       alert("ERRO 500 - Erro interno do servidor!")
@@ -44,7 +44,7 @@ module.exports = {
 
       if (id) categoria = await Categoria.findByPk(id);
 
-      res.render('adicionarCategoria', { categoria });
+      res.render('adicionarCategoria', { categoria, userId: req.session.userId, userName: req.session.userName  });
 
     } catch (erro) {
       let alert = require('alert');
@@ -57,7 +57,7 @@ module.exports = {
       const { id } = req.params
 
       const categoria = await Categoria.findByPk(id)
-      res.render('adicionarCategoria', { categoria });
+      res.render('adicionarCategoria', { categoria, userId: req.session.userId, userName: req.session.userName  });
 
     } catch (erro) {
       let alert = require('alert');

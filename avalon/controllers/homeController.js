@@ -15,7 +15,8 @@ module.exports = {
      
 
      
-      res.render('home', { livros, livrosLancamento, editoras, categorias, autores, userId: req.session.userId})
+      res.render('home', { livros, livrosLancamento, editoras, categorias, autores, 
+        userId: req.session.userId, userName: req.session.userName })
 
 
     } catch (erro) {

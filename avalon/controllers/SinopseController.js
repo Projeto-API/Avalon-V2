@@ -15,7 +15,7 @@ module.exports = {
       });
 
       console.log(livro)
-      res.render('sinopse', { livros, carrousel, livro });
+      res.render('sinopse', { livros, carrousel, livro, userId: req.session.userId, userName: req.session.userName  });
 
 
     } catch (erro) {

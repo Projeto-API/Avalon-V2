@@ -10,7 +10,7 @@ module.exports = {
 
       const usuarios = await Usuario.findByPk(id)
 
-      res.render('conta', { usuarios, userId: req.session.userId });
+      res.render('conta', { usuarios, userId: req.session.userId, userName: req.session.userName  });
     } catch (erro) {
       let alert = require('alert');
       alert("ERRO 500 - Erro interno do servidor!")
@@ -23,7 +23,7 @@ module.exports = {
 
       const usuarios = await Usuario.findByPk(id)
 
-      res.render('editarConta', { usuarios, userId: req.session.userId });
+      res.render('editarConta', { userId: req.session.userId, userName: req.session.userName });
 
     } catch (erro) {
       let alert = require('alert');
@@ -37,19 +37,30 @@ module.exports = {
 
       const { email, nome, sobrenome, doc_identificacao, genero, data_nascimento, cep, estado, cidade, endereco, numero, complemento, foto } = req.body
 
-      
 
-      await Usuario.update({ email, nome, sobrenome, doc_identificacao, genero, data_nascimento, cep, estado, cidade, endereco, numero, complemento, foto  },
+
+      await Usuario.update({ email, nome, sobrenome, doc_identificacao, genero, data_nascimento, cep, estado, cidade, endereco, numero, complemento, foto },
         {
           where: { id }
         })
 
-      res.redirect('/users/conta/' + id);
+      res.redirect('/users/conta/' + userId);
 
     } catch (erro) {
       console.log(erro)
       let alert = require('alert');
       alert("ERRO 500 - Erro interno do servidor!")
+    }
+  },
+
+  deslogar: async (req, res) => {
+    try {
+      await req.session.destroy(function () {
+        res.redirect('/');
+      });
+
+    } catch (erro) {
+      console.log(erro)
     }
   }
 }

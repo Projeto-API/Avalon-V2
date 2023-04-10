@@ -28,6 +28,7 @@ const auth = require('../middlewares/auth')
 
 router.get('/compras/:id', auth, MinhasComprasController.index);
 router.get('/conta/:id', auth, ContaController.index);
+router.get('/logout', ContaController.deslogar);
 router.get('/login', LoginController.index);
 router.post('/entrar', LoginController.login);
 router.get('/cadastro', UsuarioController.index);

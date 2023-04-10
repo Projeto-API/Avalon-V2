@@ -8,7 +8,7 @@ module.exports = {
       const { id } = req.params
 
       const usuarios = await Usuario.findByPk(id)
-      res.render('compras', {usuarios});
+      res.render('compras', {usuarios, userId: req.session.userId, userName: req.session.userName });
       
     } catch (erro) {
       let alert = require('alert');

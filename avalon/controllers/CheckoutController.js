@@ -13,7 +13,7 @@ module.exports = {
       const livros = await Livro.findAll();
       const cliente = await Usuario.findAll();
 
-      res.render('checkout', { livros, cliente });
+      res.render('checkout', { livros, cliente, userId: req.session.userId, userName: req.session.userName  });
     } catch (erro) {
       let alert = require('alert');
       alert("ERRO 500 - Erro interno do servidor!")

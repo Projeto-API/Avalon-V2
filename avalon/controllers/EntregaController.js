@@ -31,7 +31,7 @@ module.exports = {
             const valorFrete = valoresFretePorRegião[regiaoConhecida ? state : 'Outros']
 
             console.log(valorFrete, state)
-            res.render('carrinho', { valorFrete })
+            res.render('carrinho', { valorFrete, userId: req.session.userId, userName: req.session.userName  })
 
         } catch (error) {
             console.log(error)

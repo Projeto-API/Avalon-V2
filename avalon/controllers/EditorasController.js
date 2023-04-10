@@ -7,7 +7,7 @@ module.exports = {
 
       const editoras = await Editora.findAll();
 
-      res.render('editoras', { editoras })
+      res.render('editoras', { editoras, userId: req.session.userId, userName: req.session.userName  })
 
     } catch (erro) {
       let alert = require('alert');
@@ -27,7 +27,7 @@ module.exports = {
         } : null
       });
 
-      res.render('editoras', { editoras })
+      res.render('editoras', { editoras, userId: req.session.userId, userName: req.session.userName  })
 
     } catch (erro) {
       let alert = require('alert');
@@ -55,7 +55,7 @@ module.exports = {
       const { id } = req.params
 
       const editora = await Editora.findByPk(id)
-      res.render('adicionarEditora', { editora });
+      res.render('adicionarEditora', { editora, userId: req.session.userId, userName: req.session.userName  });
 
     } catch (erro) {
       let alert = require('alert');

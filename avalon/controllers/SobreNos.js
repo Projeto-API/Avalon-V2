@@ -3,7 +3,7 @@ module.exports = {
     index: async (req, res) => {
       try {
   
-        res.render('sobreNos')
+        res.render('sobreNos', {userId: req.session.userId, userName: req.session.userName })
   
         
       } catch (erro) {

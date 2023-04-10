@@ -13,7 +13,7 @@ module.exports = {
           { model: Categoria, as: 'categoria' }
         ]
       });
-      res.render('admin', { livros })
+      res.render('admin', { livros, userId: req.session.userId, userName: req.session.userName  })
     } catch (erro) {
       console.log(erro)
       let alert = require('alert');
@@ -38,7 +38,7 @@ module.exports = {
         ]
       });
       console.log(livros)
-      res.render('admin', { livros })
+      res.render('admin', { livros, userId: req.session.userId, userName: req.session.userName  })
 
     } catch (erro) {
       let alert = require('alert');
@@ -55,7 +55,7 @@ module.exports = {
       let livro;
       let id = req.params.id;
 
-      res.render('adicionarLivro', { livro: null, editoras, categorias, autores });
+      res.render('adicionarLivro', { livro: null, editoras, categorias, autores, userId: req.session.userId, userName: req.session.userName  });
 
     } catch (erro) {
       let alert = require('alert');
@@ -73,7 +73,7 @@ module.exports = {
       const autores = await Autor.findAll()
 
       console.log(livro)
-      res.render('adicionarLivro', { livro, editoras, categorias, autores });
+      res.render('adicionarLivro', { livro, editoras, categorias, autores, userId: req.session.userId, userName: req.session.userName  });
 
     } catch (erro) {
       let alert = require('alert');

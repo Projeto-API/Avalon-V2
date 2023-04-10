@@ -16,6 +16,8 @@ module.exports = {
           req.session.tipo = user.tipo;
           req.session.userId = user.id;
           const userId = req.session.userId;
+          req.session.userName = user.nome;
+          const userName = req.session.userName;
           console.log(userId);
           
 

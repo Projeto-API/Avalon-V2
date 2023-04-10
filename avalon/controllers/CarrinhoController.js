@@ -16,7 +16,7 @@ const CarrinhoController = {
           preco: livro.preco,
         });
       }
-      res.render('carrinho', { carrinho: carrinhoFinal, valorFrete });
+      res.render('carrinho', { carrinho: carrinhoFinal, valorFrete, userId: req.session.userId, userName: req.session.userName  });
     } catch (erro) {
       let alert = require('alert');
       console.log('Oops!');

@@ -1,7 +1,7 @@
 module.exports = {
     index: async (req, res) => { try {
   
-      res.render('compras');
+      res.render('compras', {userId: req.session.userId, userName: req.session.userName} );
       
     } catch (erro) {
       let alert = require('alert');

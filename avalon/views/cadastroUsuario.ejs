@@ -6,6 +6,16 @@
     <div class="cadastro2">
       <h5>CADASTRO</h5>
     </div>
+    <% if(typeof errors !== 'undefined'){  %>
+      <ul>
+        <% for(let error in errors){ %>
+          <li>
+            <b><%= error%>: </b>
+            <%= errors[error].msg%></li>
+          <% } %>
+      </ul>
+         <% } %>
+
     <form class="form-auth card" action="/users/cadastro" method="post">
       <br />
       <label for="email">E-mail</label>
@@ -21,14 +31,17 @@
         type="password"
         name="passwordCadastro"
         placeholder="Digite sua senha"
-      />
+        value="<%= locals.old && old.passwordCadastro%>"
+        />
       <label for="password">Confirme sua senha</label>
-      <input
-        class="input-form"
-        type="password"
-        name="passwordCadastro"
-        placeholder="Confirme sua senha"
-      />
+        <input
+          class="input-form"
+          type="password"
+          name="passwordCadastro"
+          placeholder="Confirme sua senha"
+        />
+      </p>
+
       <hr class="hr" />
       <label for="nome">Nome</label>
       <input
@@ -48,7 +61,7 @@
       <input
         class="input-form half"
         type="date"
-        name="data_nascimento"
+        name="Data de nascimento"
         placeholder="Digite sua data de nascimento"
       />
       <label for="doc_identificacao">CPF</label>

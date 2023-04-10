@@ -83,7 +83,7 @@ module.exports = [
     .notEmpty()
     .bail(),
 
-  check("data_nascimento")
+  check("Data de nascimento")
     .isString()
     .isLength({ min: 3 })
     .withMessage("Data muito curta")

@@ -19,10 +19,17 @@ module.exports = {
   criar: async (req, res) => {
     try {
       let errors = validationResult(req);
-      console.log("erros", errors);
+
+      if (errors.isEmpty()) {
+        //return res.render("cadastroUsuario", { errors });
+      } else {
+        return res.render("cadastroUsuario", { errors: errors.mapped() });
+        //        res.render("cadastroUsuario", { errors: errors.mapped(), old: req.body });
+      }
+
       const {
         email,
-        password, 
+        password,
         nome,
         sobrenome,
         data_nascimento,

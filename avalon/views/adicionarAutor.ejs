@@ -24,10 +24,6 @@
                 <input class="form-crud-input" id="titulo" type="text" name="nome"
                   placeholder="Digite o nome da editora" value="<%= autor && autor.nome %>">
 
-                  <% if (locals.errorsAutor && errorsAutor.name) { %>
-                    <p class="feedback"><%= errorsAutor.name %></p>
-                    <% } %>
-
                 <label class="form-crud-label" for="biografia">Biografia:</label> <br>
                 <textarea class="form-crud-input" name="biografia"
                   placeholder="Escreva aqui a biografia do autor"><%= autor && autor.biografia %></textarea>

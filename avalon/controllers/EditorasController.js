@@ -1,6 +1,5 @@
 const { Editora } = require('../models');
 const { Op } = require('sequelize');
-const { validationResultEditora } = require("express-validator");
 
 module.exports = {
   index: async (req, res) => {
@@ -67,22 +66,6 @@ module.exports = {
 
   criar: async (req, res) => {
     try {
-      
-      //aqui
-      let errorsEditora = validationResultEditora(req);
-      console.log("errors", errorsEditora);
-
-      register: (req, res) => {
-        let = errorsEditora = validationResultEditora(req);
-
-        if (errorsEditora.isEmpty()) {
-
-        } else {
-          res.render('register', { errorsEditora: errorsEditora.mapped(), old: req.body})
-        }
-      }
-      //aqui
-
       const { nome, cnpj } = req.body;
       await Editora.create({ nome, cnpj });
 

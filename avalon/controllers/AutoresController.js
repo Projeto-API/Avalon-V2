@@ -1,6 +1,5 @@
 const { Op } = require('sequelize');
 const { Autor, Livro } = require('../models');
-const { validationResultAutor } = require("express-validator");
 Op
 
 module.exports = {
@@ -74,22 +73,6 @@ module.exports = {
 
   criar: async (req, res) => {
     try {
-
-     //aqui
-     let errorsAutor = validationResultAutor(req);
-     console.log("errors", errorsAutor);
-
-     register: (req, res) => {
-       let = errorsAutor = validationResultAutor(req);
-
-       if (errorsAutor.isEmpty()) {
-
-       } else {
-         res.render('register', { errorsAutor: errorsAutor.mapped(), old: req.body})
-       }
-     }
-     //aqui
-
       const { nome, biografia } = req.body;
       const foto = req.files.foto[0].filename;
 

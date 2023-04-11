@@ -5,7 +5,7 @@ module.exports = [
             next()
 
         } else {
-            res.redirect('/login')
+            res.redirect('/users/login')
         }
     }
 

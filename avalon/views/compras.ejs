@@ -4,9 +4,12 @@
     <main>
         <section class="box-MinhaConta">
             <div class="minhaConta">
-                <img src="/images/Lordvoldemort.jpg">
+                <img src="/images/<%= usuarios.foto %>">
 
-                <h3> Nome e Sobrenome</g3>
+                <h3>
+                    <%= usuarios.nome %>
+                        <%= usuarios.sobrenome %>
+                </h3>
 
                 <div class="contaOpcoes">
                     <a href="/users/conta/<%= usuarios.id %>">MEUS DADOS</a>

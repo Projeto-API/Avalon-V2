@@ -23,7 +23,7 @@ module.exports = {
 
       const usuarios = await Usuario.findByPk(id)
 
-      res.render('editarConta', { userId: req.session.userId, userName: req.session.userName });
+      res.render('editarConta', { usuarios, userId: req.session.userId, userName: req.session.userName });
 
     } catch (erro) {
       let alert = require('alert');
@@ -37,14 +37,12 @@ module.exports = {
 
       const { email, nome, sobrenome, doc_identificacao, genero, data_nascimento, cep, estado, cidade, endereco, numero, complemento, foto } = req.body
 
-
-
       await Usuario.update({ email, nome, sobrenome, doc_identificacao, genero, data_nascimento, cep, estado, cidade, endereco, numero, complemento, foto },
         {
           where: { id }
         })
 
-      res.redirect('/users/conta/' + userId);
+      res.redirect('/users/conta/' + id);
 
     } catch (erro) {
       console.log(erro)

@@ -2,7 +2,7 @@ const { buscarEnderecoPorCep } = require("../services/request/endereco");
 
 
 const valoresFretePorRegião = {
-    'SP': 'Grátis',
+    'SP': 'R$ 0,00',
     'RJ': 'R$ 9,90',
     'MG': 'R$ 14,90',
     'RS': 'R$ 14,90',

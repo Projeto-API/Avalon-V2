@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { Op } = require('sequelize');
-const { Livro, Editora, Autor, Categoria } = require('../models');
+const { Livro, Editora, Autor, Categoria, ImagensLivro } = require('../models');
 
 module.exports = {
   index: async (req, res) => {
@@ -13,7 +13,7 @@ module.exports = {
           { model: Categoria, as: 'categoria' }
         ]
       });
-      res.render('admin', { livros, userId: req.session.userId, userName: req.session.userName  })
+      res.render('admin', { livros, userId: req.session.userId, userName: req.session.userName })
     } catch (erro) {
       console.log(erro)
       let alert = require('alert');
@@ -38,7 +38,7 @@ module.exports = {
         ]
       });
       console.log(livros)
-      res.render('admin', { livros, userId: req.session.userId, userName: req.session.userName  })
+      res.render('admin', { livros, userId: req.session.userId, userName: req.session.userName })
 
     } catch (erro) {
       let alert = require('alert');
@@ -55,7 +55,7 @@ module.exports = {
       let livro;
       let id = req.params.id;
 
-      res.render('adicionarLivro', { livro: null, editoras, categorias, autores, userId: req.session.userId, userName: req.session.userName  });
+      res.render('adicionarLivro', { livro: null, editoras, categorias, autores, userId: req.session.userId, userName: req.session.userName });
 
     } catch (erro) {
       let alert = require('alert');
@@ -73,7 +73,7 @@ module.exports = {
       const autores = await Autor.findAll()
 
       console.log(livro)
-      res.render('adicionarLivro', { livro, editoras, categorias, autores, userId: req.session.userId, userName: req.session.userName  });
+      res.render('adicionarLivro', { livro, editoras, categorias, autores, userId: req.session.userId, userName: req.session.userName });
 
     } catch (erro) {
       let alert = require('alert');
@@ -87,8 +87,13 @@ module.exports = {
       const { titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, categoria } = req.body
       const capa = req.files.capa[0].filename;
 
+      const imagens = [];
+      for (let i = 0; i < req.files.imagens.length; i++) {
+        imagens.push(req.files.imagens[i].filename);
+      }
       await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria, capa })
-
+      await ImagensLivro.create({imagens})
+      
       res.redirect('/admin');
 
     } catch (erro) {

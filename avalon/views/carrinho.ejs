@@ -1,99 +1,85 @@
 <%- include('partials/header') %>
-<link rel="stylesheet" href="/stylesheets/carrinho.css">
-  <div class="cart-carrinho">
-    <h3>Carrinho de livros</h3>
-    <table>
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Imagem</th>
-          <th>Autor</th>
-          <th>Preço</th>
-          <th>Quantidade</th>
-          <th>Total</th>
-          <th></th>
-        </tr>
-      </thead>
-      <tbody class="produto-carrinho" id="produto-carrinho" >
-        
-        
-        <tr class="produto" id="produto-">
+  <link rel="stylesheet" href="/stylesheets/carrinho.css">
+  <main>
 
-            <td class="livro-id"></td>
-            <td class="livro-imagem"> <img src="" > </td>
-            <td class="imagem-titulo"></td>
-            <td class="livro-preco" ></td>
-            <td>
-              <input type="number" min="1"  value="" class="produto-quantidade ">
-            </td>
-            <td class="cart-total" >R$ 0,00</td>
-            <input type="hidden" name="produtoId">
-            <!-- <td>
-              <form action="/carrinho/deletar" method="post">
-                <input type="hidden" name="produtoId"  value="">
-                <button type="submit" class="remove">Remover</button>
-              </form>
-            </td> -->
-            
-          </tr>
-          
-            
+    <section class="carrinho-container">
+      <section class="containerLivro">
+        <div class="carrinho-header">
+          <h3> Carrinho</h3>
+        </div>
 
-      </tbody>
-      <tfoot>
-        <tr>
-          <td colspan="4"></td>
-          <td>Total : </td>
-          <td id="cart-total-subtotal">0,00</td>
-        </tr>
-      </tfoot>
-      <table class="table">
-        <tbody>
-          <tr class="frete">
-            <td >Insira o CEP:
-            <form class="formFrete" action="/produto/enderecos" method="get">
-                <input type="text" name="cep" placeholder="Insira o CEP">
-              </td>
-              <td>
-                <button class="btnCrud" id="fretebtn">Calcular</button>
-              </td>
+        <div id="produto-carrinho">
+          <div class="produto-cart" id="produto-">
+            <img class="livro-imagem-cart" src="" alt="">
+            <div class="informationLivro">
+              <div class="nomeLivro">
+                <h5 class="imagem-titulo"></h5>
+              </div>
+              <div class="informationLivroValue">
+                <div>
+                  <input class="produto-quantidade" type="number" min="1" value="">
+                  <span class="livro-preco"></span>
+                </div>
+              </div>
+            </div>
+            <div class="livro-remove">
+              <span class="cart-total"></span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="containerFinalizacao">
+        <div class="containerEntrega">
+          <h6>Entrega</h6>
+          <form class="formFrete" action="/carrinho/enderecos" method="get">
+            <input id="endereco" type="text" name="cep" placeholder="CEP">
+            <button id="calcular" type="submit">CALCULAR</button>
+          </form>
+        </div>
+
+        <div class="containerCheckout">
+          <h5>RESUMO DO PEDIDO</h5>
+          <br>
+          <table class="table">
+            <tbody>
+
+              <tr class="itens">
+                <td>Subtotal</td>
+                <td id="cart-total-subtotal"></td>
+              </tr>
+              <tr class="itens">
+                <td class="info">Entrega</td>
+                <td class="monetary" id="resultadoFrete"><%= valorFrete %></td>
+              </tr>
+              <tr class="itens">
+                <td class="info">Desconto</td>
+                <td id="cart-total-desconto">0,00</td>
+              </tr>
+            </tbody>
+
+            <tfoot>
               <tr>
+                <td class="info">Total</td>
+                <td class="monetary" id="cart-total-Final">R$ </td>
+              </tr>
+              <tr>
+                <td colspan="2">
+                  <button  class="continuar" id="finalizarCompra"><a
+                      href="/carrinho/checkout/<%= userId %>"> Comprar
+                      agora</a></button>
+                      <!-- <button type="submit" class="continuar" id="finalizarCompra" onclick="comprarAgora()"><a
+                        href="/carrinho/checkout"> Comprar
+                        agora</a></button> -->
+                </td>
+              </tr>
+            </tfoot>
+          </table>
 
-                <td> Total Frete : </td>
-                <td class="resultadoFrete" id="resultadoFrete"> R$ 00,00 </td>
-              </form>
-            </tr>
 
-          <tr class="itens">
-            <td >Subtotal</td>
-            <td id="cart-total-subtotal-2">R$ 94,70</td>
-          <tr class="itens">
-          </tr>
-          <td class="info">Entrega</td>
-          <td class="monetary" id="desconto">Grátis</td>
-          <tr class="itens">
-          </tr>
-          <td class="info">Desconto</td>
-          <td id="cart-total-desconto">0,00</td>
-          </tr>
-        </tbody>
-
-        <tfoot>
-          <tr>
-            <td class="info">Total</td>
-            <td class="monetary" id="cart-total-Final">R$ </td>
-          </tr>
-        </tfoot>
-        
-      </tr>
-      
-    </div>
-  </table>
-  <span class="comprarAgora">
-    <form id="carrinhoForm" method="post" action="/carrinho">
-      <input type="hidden" name="produtosCarrinhoFinal" id="produtosCarrinhoFinal">
-      <button type="submit" class=".finalizar-compra-button" onclick="comprarAgora()">Comprar agora</button>
-    </form>
-  </span>
-
+        </div>
+      </section>
+    </section>
+  </main>
   <%- include('partials/footer') %>

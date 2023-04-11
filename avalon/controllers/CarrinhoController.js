@@ -1,11 +1,12 @@
-const { where } = require('sequelize');
-const { Carrinho, Livro, TodososlivrosModel } = require('../models');
+const { Carrinho, Livro } = require('../models');
 
 const CarrinhoController = {
   carrinho: async (req, res) => {
     try {
+      let valorFrete = null
       const carrinhoFinal = [];
       let pegaDados = await Carrinho.findAll({ where: { usuarios_id: 1 } });
+      
       for (const carrinho of pegaDados) {
         const livro = await Livro.findOne({ where: { id: carrinho.livros_id } });
         carrinhoFinal.push({
@@ -15,7 +16,7 @@ const CarrinhoController = {
           preco: livro.preco,
         });
       }
-      res.render('carrinho', { carrinho: carrinhoFinal });
+      res.render('carrinho', { carrinho: carrinhoFinal, valorFrete, userId: req.session.userId, userName: req.session.userName  });
     } catch (erro) {
       let alert = require('alert');
       console.log('Oops!');

@@ -4,13 +4,17 @@
     <main>
         <section class="box-MinhaConta">
             <div class="minhaConta">
-                <img src="/images/Lordvoldemort.jpg">
+                <img src="/images/<%= usuarios.foto %>">
 
-                <span> Nome e Sobrenome</span>
+                <h3>
+                    <%= usuarios.nome %>
+                        <%= usuarios.sobrenome %>
+                </h3>
 
                 <div class="contaOpcoes">
-                    <a href="/users/conta">MEUS DADOS</a>
-                    <a href="/users/compras">MEUS PEDIDOS</a>
+                    <a href="/users/conta/<%= usuarios.id %>">MEUS DADOS</a>
+                    <a href="/users/compras/<%= usuarios.id %>">MEUS PEDIDOS</a>
+                    <a href="/users/logout">SAIR</a>
                 </div>
             </div>
         </section>
@@ -115,7 +119,5 @@
             </div>
         </section>
     </main>
-
-    <%- include('partials/footer') %>
 
     <%- include('partials/footer') %>

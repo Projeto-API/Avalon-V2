@@ -34,12 +34,19 @@ main {
     display: flex;
     justify-content: center;
     width: 100vw;
+
 }
 
 .gallery-miniaturas {
+    width: 100%;
+    height: 4rem;
     display: flex;
     flex-flow: row nowrap;
     overflow-x: hidden;
+}
+
+.livrinho {
+    width: 20px;
 }
 
 .título {
@@ -54,7 +61,7 @@ main {
 }
 
 .sinopse {
-    height: 380px;
+    height: 250px;
     padding: 2rem;
     display: flex;
     align-items: flex-start;
@@ -150,7 +157,6 @@ main {
 }
 
 .columnauthor {
-    color: black;
     padding-left: 2rem;
     width: 100%;
 }
@@ -221,6 +227,42 @@ main {
     align-items: center;
 }
 
+/* ----MODAL MINIATURAS --- */
+#modal {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 50px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    display: none;
+    padding-top: 100px
+}
+
+#modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 800px;
+}
+
+#modal img {
+    width: 100%;
+}
+
+#close {
+    position: absolute;
+    top: 50px;
+    right: 2rem;
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+}
+
+
 @media (min-width: 768px) {
     body {
         max-width: 100%;
@@ -234,7 +276,6 @@ main {
         align-items: flex-start;
         flex-direction: row;
     }
-
 
 
     .container1 {
@@ -257,18 +298,16 @@ main {
 
     .miniaturas {
         position: relative;
-        display: flex;
-        justify-content: flex-start;
         width: 100%;
-        flex-flow: row nowrap;
-        overflow-x: hidden;
+
 
     }
 
     .gallery-miniaturas {
+        width: 100%;
         display: flex;
         flex-flow: row nowrap;
-        overflow-x: hidden;
+
     }
 
     .containerfilho2 {
@@ -279,8 +318,6 @@ main {
         display: flex;
         flex-direction: row;
     }
-
-
 
 
     .price-qtt {
@@ -316,7 +353,7 @@ main {
         margin-top: 50px;
         max-width: 8rem;
         display: flex;
-        width: 20vw;
+        width: 100%;
         border-radius: 200%;
         flex-direction: column;
     }
@@ -368,15 +405,13 @@ main {
     }
 
     .sinopse {
-        height: 300px;
+
         text-align: left;
     }
 
     .price-qtt {
         width: 90%;
         justify-content: space-around;
-
-
     }
 
     .containerfilho1 {
@@ -406,7 +441,15 @@ main {
     }
 
     .author {
-        height: 280px;
+        height: 100%;
+    }
+
+    #modal {
+        top: 70px;
+    }
+
+    #close {
+        right: 10%;
     }
 
 

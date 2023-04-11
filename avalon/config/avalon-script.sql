@@ -176,3 +176,60 @@ ALTER TABLE usuarios ADD cidade VARCHAR(45) NOT NULL;
 ALTER TABLE usuarios ADD numero VARCHAR(45) NOT NULL;
 ALTER TABLE usuarios ADD complemento VARCHAR(45);
 ALTER TABLE usuarios ADD tipo INT;
+
+INSERT INTO autores (nome, biografia, foto) VALUES
+('Emily Bronte', 'Emily Jane Brontë nasceu em Thornton, no dia 30 de julho de 1818 e faleceu em Haworth, vítima de tuberculose, em 19 de dezembro de 1848 com apenas 30 anos. Deixou um único romance, O Morro dos Ventos Uivantes, considerado um dos grandes clássicos da literatura mundial. Era a irmã mais velha das irmãs Carlotte, Emily e Anne Brontë que, ao lado do irmão Branwell, cresceram no remoto vilarejo rural de Haworth, em Yorkshire. O ambiente, segundo Charlote escreveu mais tarde ao recordar a infância, tinha poucos atrativos para as crianças: Dependíamos totalmente de nós mesmos e uns dos outros, dos livros e do estudo para encontrar diversões e ocupações na vida. O estímulo mais elevado, bem como o prazer mais vivo, que conhecemos da infância em diante residia em nossos primeiros esforços na composição literária', 'emily-bronte.jpg'),
+('Victor Hugo', 'Victor-Marie Hugo foi um romancista, poeta, dramaturgo, ensaísta, artista, estadista e ativista pelos direitos humanos francês de grande atuação política em seu país. É autor de Les Misérables e de Notre-Dame de Paris, entre diversas outras obras clássicas de fama e renome mundial.', 'victor-hugo.jpg');
+
+INSERT INTO editoras (nome, cnpj) VALUES
+('Editora Antofágica', '32.193.802/0001-51'),
+('Martin Claret', '32.193.802/0001-51');
+
+INSERT INTO livros (titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, autores_id, editoras_id, categorias_id, capa) VALUES
+('O Morro dos Ventos Uivantes', '89,90', 'Capa Dura', 'Ainda que contada por diversos narradores e muitos pontos de vista, nenhum ângulo é capaz de deixar a história do Morro dos Ventos Uivantes menos sórdida. Lá, não há santos ou demônios: todos são repletos de virtudes e pecados. E não podemos garantir que não haverá um ou outro fantasma vagando pela charneca…Ao voltar de uma viagem, o pai da família Earnshaw não traz consigo os presentes que os filhos lhe pediram ― em vez disso, traz um garotinho perdido de pele escura, que encontrou vagando no porto. O menino ganha um nome ― Heathcliff ―, mas jamais um sobrenome, o primeiro dos atributos da família a que ele não terá acesso. Catherine é a única a acolhê-lo, e essa relação, repleta de amor, obsessão e vingança, atravessa gerações e não é detida nem mesmo pela morte.Nossa edição conta com ilustrações de Janaina Tokitaka e nova tradução de Stephanie Fernandes, que também assina um ensaio sobre sua experiência com a obra.',
+' 9786586490299', 'Português', 2022, 484, 30, 18, 2, 'capa-morro.jpg'),
+('Os Miseráveis', '159,90', 'Capa Dura', 'Um clássico da literatura mundial, esta obra é uma poderosa denúncia a todos os tipos de injustiça humana. Narra a emocionante história de Jean Valjean ― o homem que, por ter roubado um pão, é condenado a dezenove anos de prisão. Os miseráveis é um livro inquietantemente religioso e político, com uma das narrativas mais envolventes já criadas.',
+'9788544000007', 'Português', 2014, 1511, 31, 19, 2, 'capa-miseraveis.jpg'),
+('O Hobbit', '69,90', 'Capa Dura', 'Bilbo Bolseiro era um dos mais respeitáveis hobbits de todo o Condado até que, um dia, o mago Gandalf bate à sua porta. A partir de então, toda sua vida pacata e campestre soprando anéis de fumaça com seu belo cachimbo começa a mudar. Ele é convocado a participar de uma aventura por ninguém menos do que Thorin Escudo-de-Carvalho, um príncipe do poderoso povo dos Anãos.
+Esta jornada fará Bilbo, Gandalf e 13 anãos atravessarem a Terra-média, passando por inúmeros perigos, como os imensos trols, as Montanhas Nevoentas infestadas de gobelins ou a muito antiga e misteriosa Trevamata, até chegarem (se conseguirem) na Montanha Solitária. Lá está um incalculável tesouro, mas há um porém. Deitado em cima dele está Smaug, o Dourado, um dragão malicioso que... bem, você terá que ler para descobrir.',
+'9788595084742', 'Português', 2019,336, 5, 5, 2, 'hobbit-capa.jpg'),
+('Solitário', '79,90', 'Capa Dura', 'Mais uma graphic novel do mestre ilustrador e contador de histórias Christophe Chabouté (Moby Dick, Um Pedaço de Madeira e Aço) chega ao Brasil pela editora Pipoca & Nanquim, em um volume único de 380 páginas. Best-seller mundial e uma das obras selecionadas pelo prestigiado Festival Internacional de Quadrinhos de Angoulême, sediado na França, Solitário nos apresenta uma história surpreendente e emocionante, em que sonho e vida cotidiana se mesclam com sensibilidade sutil, ternura e humor. Em um pequeno farol numa ilhota afastada do resto do mundo, um eremita experimenta uma vida rodeada de solidão. Morador do lugar desde que nasceu, há 50 anos, a rocha é seu navio de granito; uma embarcação imóvel e segura que não o leva a lugar algum e que jamais chegará a nenhum porto... Afinal, por que sair dali, se o mundo além desse horizonte é tão assustador? Para onde fugir quando não há lugar para ir? Como combater o isolamento e evitar que o silêncio perpétuo se torne ensurdecedor? Anos passados em sua rocha, recebendo comida do mar e tendo a imaginação como única companheira... Até agora. Quando um marinheiro novato começa a trabalhar no barco que toda semana leva provisões para o Solitário, ele passa a fazer perguntas que toda a população dos arredores evitou ao longo de uma vida: quem é esse homem? Por que ele se esconde? Por que nunca saiu do farol? Como é viver com tanta... solidão? Uma simples e pequena atitude será o bastante para dar início a uma sucessão de eventos que golpearão irrevogavelmente a existência serena do ermitão. Repleto de belíssimas ilustrações em preto e branco de tirar o fôlego, Solitário é uma obra-prima de Chabouté — uma história inesquecível que retrata de forma impecável como alguém pode ter sua vida tolhida a ponto de se tornar uma sombra e como uma sombra pode reclamar sua identidade e se tornar alguém.',
+'9788593695285', 'Português', 2019, 308, 3,3,1, 'solitario-capa.jpg'),
+('Nijigahara Holograph', '39,90', 'Capa Comum', 'Com palco no terreno chamado Nijigahara, o passado e o presente dos alunos de uma escola se entrelaçam intensamente. O boato sobre o monstro que vive no túnel, o segredo que cada família carrega, um “surto” de borboletas que infestam a cidade… Através dos infindáveis eventos e “linhas do destino”, o mestre Inio Asano convida o leitor para adentrar um mundo nunca antes visto.',
+'9788545701903', 'Português', 2016, 200, 7, 1, 1, 'nijigahara-capa.jpg'),
+('Boa Noite Punpun - Vol. 2', '49,90', 'Capa Comum', 'Depois que seu pai foi embora, Punpun começou a morar com a mãe e o tio Yuuichi. O garoto, agora no ginasial, está na mesma classe que seus amigos. Porém, ele não está mais falando com Aiko, a garota por quem era apaixonado desde pequeno. Ela começou a sair com um veterano do clube de badminton e, agora, a vida de Punpun virou um verdadeiro inferno!!',
+'9788545709602', 'Português', 2023, 432, 7, 1, 1, 'punpun2-capa.jpg'),
+('Boa Noite Punpun - Vol. 3', '49,90', 'Capa Comum', 'Depois de um ginásio sem muitas emoções, Punpun agora é um estudante colegial. Porém, o tio Yuuichi continua desaparecido!! O que o garoto, sua mãe e Midori farão?! Enquanto planejavam sua mudança e procuravam pelo tio, um incidente faz a vida de Punpun se transformar aos poucos…',
+'9788545710608', 'Português', 2023, 448,7,1, 1, 'punpun3-capa.jpg'),
+('Berserk - Vol. 3', '34,90', 'Capa Comum', 'A batalha contra o Conde continua e se encaminha para um final inesperado. O despertar do Behelit acarreta a aparição dos God Hand, e entre eles está Griffith, que invoca a ira de Guts por lembranças de seu passado! Qual será a relação entre eles?',
+'978-8542601794', 'Português', 2022, 240, 8, 7, 1, 'berserk3-capa');
+
+
+
+INSERT INTO imagem_produto ( imagens, livros_id) VALUES 
+('hobbit1.jpeg', 57),
+('hobbit2.jpeg', 57),
+('hobbit3.jpeg', 57),
+('MORRO1.jpg', 55),
+('MORRO2.jpg', 55),
+('MORRO3.jpg', 55),
+('MORRO4jpg', 55),
+('mariko-1.jpg',1),
+('mariko-2.jpg',1),
+('mariko-3.jpg',1),
+('solitario1.jpg', 58),
+('solitario2.jpg', 58),
+('solitario3.jpg', 58),
+('miseraveis1.jpeg', 56),
+('miseraveis2.jpeg', 56),
+('miseraveis3.jpeg', 56),
+('moby1.jpg', 3),
+('moby2.jpg', 3),
+('moby3.jpg', 3),
+('moby4.jpg', 3);
+
+
+
+
+
+

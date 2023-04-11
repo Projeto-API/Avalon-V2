@@ -38,7 +38,7 @@ module.exports = {
 
   form: async (req, res) => {
     try {
-      res.render('editarConta');
+      res.render('editarConta', {userId: req.session.userId, userName: req.session.userName });
 
     } catch (erro) {
       let alert = require('alert');

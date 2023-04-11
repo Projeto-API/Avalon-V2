@@ -2,7 +2,8 @@ const express = require('express');
 const router = express.Router();
 const path = require('path');
 const multer = require('multer');
-const validadorTipoUsuario = require('../middewres/validadorTipoUsuario')
+
+
 // MULTER LIVROS
 const multerDiskStorageLivro = multer.diskStorage({
     destination: (req, file, callback) => {
@@ -16,6 +17,7 @@ const multerDiskStorageLivro = multer.diskStorage({
     }
 })
 const filecapa = multer({ storage: multerDiskStorageLivro });
+const fileimagens = multer({ storage: multerDiskStorageLivro });
 
 // MULTER AUTORES
 const multerDiskStorageAutor = multer.diskStorage({
@@ -38,7 +40,7 @@ const LivrosController = require('../controllers/LivrosController');
 const EditorasController = require('../controllers/EditorasController');
 const AutoresController = require('../controllers/AutoresController');
 const CategoriasController = require('../controllers/CategoriasController')
-
+const validadorTipoUsuario = require('../middlewares/validadorTipoUsuario')
 // ----------------------------------------CRUD LIVROS--------------------------------------------//
 
 // GET ROUTES
@@ -50,7 +52,7 @@ router.get('/form/:id?', LivrosController.form);
 
 // POST E PUT ROUTES
 router.post('/', filecapa.fields([{ name: 'capa' }]), LivrosController.criar);
-router.put('/editar-livro/:id', filecapa.fields([{ name: 'capa' }]), LivrosController.editar);
+router.put('/editar-livro/:id', filecapa.fields([{ name: 'capa' }]), fileimagens.array('imagens', 10 ),LivrosController.editar);
 
 // DELETE ROUTES
 router.delete('/deletar/:id', LivrosController.deletar);

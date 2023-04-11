@@ -14,7 +14,7 @@ module.exports = {
         //   {model: Livro, as: 'livros'}
         // ]
       });
-      res.render('autores', { autores });
+      res.render('autores', { autores, userId: req.session.userId, userName: req.session.userName  });
 
     } catch (erro) {
       let alert = require('alert');
@@ -34,7 +34,7 @@ module.exports = {
         } : null
       });
 
-      res.render('autores', { autores });
+      res.render('autores', { autores, userId: req.session.userId, userName: req.session.userName  });
 
     } catch (erro) {
       let alert = require('alert');
@@ -49,7 +49,7 @@ module.exports = {
 
       if (id) autor = await Autor.findByPk(id);
 
-      res.render('adicionarAutor', { autor });
+      res.render('adicionarAutor', { autor, userId: req.session.userId, userName: req.session.userName  });
 
     } catch (erro) {
       let alert = require('alert');
@@ -62,7 +62,7 @@ module.exports = {
       const { id } = req.params
       const autor = await Autor.findByPk(id);
       console.log(autor)
-      res.render('adicionarAutor', { autor });
+      res.render('adicionarAutor', { autor, userId: req.session.userId, userName: req.session.userName  });
 
     } catch (erro) {
       let alert = require('alert');

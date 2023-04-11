@@ -1,5 +1,3 @@
-
-   
 <%- include('partials/header') %>
 <link rel="stylesheet" href="/stylesheets/lancamentos.css">
 
@@ -18,9 +16,7 @@
             </select>
             
         </div>
-        <div>
-            <img src="/images/banner3.png">
-        </div>
+     
         <div class="grid-livros">
             <% livros.forEach(el => { %>
                 <li onclick=redirect() class="item">
@@ -32,7 +28,7 @@
                         <span class="item-price">
                             R$ <%= el.preco %>
                         </span>
-                        <button class="comprar"><a href="#">COMPRAR</a></button>
+                        <button class="comprar"><a >COMPRAR</a></button>
                     </div>
                 </li>
                 <% }) %>
@@ -55,7 +51,7 @@
                             <span class="item-price">
                                 R$ <%= el.preco %>
                             </span>
-                            <button class="comprar"><a href="#">COMPRAR</a></button>
+                            <button class="comprar"><a >COMPRAR</a></button>
                         </div>
                     </li>
                     <% }) %>

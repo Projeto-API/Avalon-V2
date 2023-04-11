@@ -1,26 +1,33 @@
 <%- include('partials/header') %>
-    <link rel="stylesheet" href="/stylesheets/Sinopse.css">
+    <link rel="stylesheet" href="/stylesheets/sinopse.css">
 
     <main>
         <section class="container">
             <div class="container1">
                 <div class="capaprincipal">
-                    <img id="capa" src="/images/produtos/<%= livro.capa %>" alt="">
+                    <img class="item-img" id="capa" src="/images/produtos/<%= livro.capa %>" alt="">
                 </div>
 
                 <div class="miniaturas">
                     <ul class="gallery-miniaturas">
-                        <% livros.forEach(livro => { %>
-                            <img class="livrinhos" src="/images/produto/<%= livro.imagens %>" alt="">
-                        <% }) %>
-                       
+                        <% livro.imagens_livro.forEach(el=> { %>
+                            <img class="livrinhos" src="/images/produtos/<%= el && el.imagens %>" alt="I" onclick="openModal(this)">
+                            <% }) %>
+
                     </ul>
                 </div>
+                <div id="modal">
+                    <div id="modal-content">
+                        <span id="close" onclick="closeModal()">X</span>
+                        <img id="modal-image">
+                    </div>
+                </div>
+
             </div>
 
             <div class="container2">
                 <div class="sinopse">
-                    <h4>
+                    <h4 class="item-name">
                         <%= livro && livro.titulo %>
                     </h4>
                     <h5>
@@ -30,17 +37,14 @@
                     <p>
                         <%= livro && livro.sinopse %>
                     </p>
-                    
+
                 </div>
-                <button onclick=vejaMais()  id="read-btn">Ver mais</button>
+                <button onclick=vejaMais() id="read-btn">Ver mais</button>
                 <div class="containerfilho2">
                     <div class="price-qtt">
-                        <span class="precoLivro">R$ <%= livro && livro.preco %></span>
-
+                        <span class="precoLivro item-price">R$ <%= livro && livro.preco %></span>
                     </div>
-
-
-                    <button class="comprar" id="comprar"><a href="">COMPRAR</a></button>
+                   <button class="comprar" id="comprar"><a href="">COMPRAR</a></button>
                 </div>
             </div>
             </div>
@@ -99,7 +103,8 @@
                 <h4>
                     <%= livro && livro.autor.nome %>
                 </h4><br>
-                <h6>Autor</h6>
+                <h5>Sobre o Autor</h5>
+                <br>
                 <p>
                     <%= livro && livro.autor.biografia %>
                 </p>
@@ -123,7 +128,7 @@
                                     <span class="item-price">
                                         R$ <%= el.preco %>
                                     </span>
-                                    <button class="comprar"><a href="#">COMPRAR</a></button>
+                                    <button class="comprar"><a >COMPRAR</a></button>
                                 </div>
                             </li>
                             <% }) %>

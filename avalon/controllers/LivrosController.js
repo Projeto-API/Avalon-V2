@@ -87,12 +87,8 @@ module.exports = {
       const { titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, categoria } = req.body
       const capa = req.files.capa[0].filename;
 
-      const imagens = [];
-      for (let i = 0; i < req.files.imagens.length; i++) {
-        imagens.push(req.files.imagens[i].filename);
-      }
-      await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria, capa })
-      await ImagensLivro.create({imagens})
+           await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria, capa })
+      
       
       res.redirect('/admin');
 

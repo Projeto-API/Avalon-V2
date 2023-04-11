@@ -35,7 +35,7 @@ window.addEventListener('load', function () {
     removeErrors('form');
 
     inputList.forEach(input => {
-      if (!input.value) {
+      if (input.name !== 'imagens' && !input.value) {
         createError(input, 'Campo Obrigatório', 'form');
       }
     });

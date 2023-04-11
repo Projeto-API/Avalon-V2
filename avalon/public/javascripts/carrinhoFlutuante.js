@@ -88,6 +88,7 @@ function adicionaCarrinho(event) {
     sessionStorage.setItem("carrinho", JSON.stringify(carrinho));
     criarElementosCarrinho();
     updateTotal();
+    abrirCarrinhoFlutuante()
 }
 
 

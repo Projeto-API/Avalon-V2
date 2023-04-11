@@ -1,6 +1,18 @@
 <%- include('partials/header') %>
 <link rel="stylesheet" href="/stylesheets/Login.css">
 <main>
+
+    <% if(typeof errors !== 'undefined'){  %> 
+        <font size ="-1">     
+           <ul style="list-style-type: none;">     
+               <% for(let error in errors){ %>         
+                 <li><center>           
+                   <b style='color:darkred'><%= error%>: </b>         
+                      <%= errors[error].msg%></center></li>        
+                        <% } %>   
+                         </ul>      
+                            <% } %>
+                            
     <script src="/javascripts/validacoeslogin.js" defer></script>
     <section class="pageLogin">
         <h5 class="login2">LOGIN</h5>

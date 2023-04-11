@@ -1,6 +1,8 @@
 const { Editora } = require('../models');
 const { Op } = require('sequelize');
-const { validationResultEditora } = require('express-validator');
+const { validationResultEditora } = require("express-validator");
+
+
 
 module.exports = {
   index: async (req, res) => {
@@ -68,26 +70,28 @@ module.exports = {
   criar: async (req, res) => {
     try {
       
+
       
       let errors = validationResultEditora(req);
 
       if (errors.isEmpty()) {
         //return res.render("adicionarEditora", { errors });
       } else {
-        return res.render("adicionarEditora", { errors: errors.mapped() });
-        //        res.render("adicionarEditora", { errors: errors.mapped(), old: req.body });
+        return res.render("editoras", { errors: errors.mapped() });
+        //        res.render("editoras", { errors: errors.mapped(), old: req.body });
       }
       
       
-
       const { nome, cnpj } = req.body;
       await Editora.create({ nome, cnpj });
 
       res.redirect('/admin/editoras');
 
     } catch (erro) {
+      console.log(errei320)
       let alert = require('alert');
-      alert("ERRO 500 - Erro interno do servidor!")
+      alert("ERRO 500 - Erro interno do servidore!")
+      
     }
   },
 

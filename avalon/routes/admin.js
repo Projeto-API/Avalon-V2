@@ -71,7 +71,7 @@ router.get("/editoras/buscar", EditorasController.search);
 router.get("/editoras/form/:id?", EditorasController.form);
 router.get("/editoras/editar/:id", EditorasController.buscarEditora);
 // POST E PUT ROUTES
-router.post("/editoras", validadorFormEditoras, EditorasController.criar);
+router.post("/editoras",validadorFormEditoras,  EditorasController.criar);
 router.put("/editoras/editar/:id", EditorasController.editar);
 // DELETE ROUTES
 router.delete("/editoras/deletar/:id", EditorasController.deletar);
@@ -85,13 +85,11 @@ router.get("/autores/editar/:id", AutoresController.buscarAutor);
 
 // POST E PUT ROUTES
 router.post(
-  "/autores",
-  validadorFormAutor,
-  filefoto.fields([{ name: "foto" }]),
+  "/autores", validadorFormAutor, filefoto.fields([{ name: "foto" }]),
   AutoresController.criar
 );
 router.put(
-  "/autores/editar/:id",
+  "/autores/editar/:id", validadorFormAutor,
   filefoto.fields([{ name: "foto" }]),
   AutoresController.editar
 );

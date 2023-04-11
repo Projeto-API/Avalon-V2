@@ -1,6 +1,8 @@
 
 const { Usuario, Livro, Editora, Autor, Categoria } = require('../models');
 const bcrypt = require('bcryptjs');
+const { validationResultLogin } = require("express-validator");
+
 
 module.exports = {
  
@@ -16,6 +18,16 @@ module.exports = {
 
     // ----------------------------------------LOGIN : AUTENTICAÇÃO DE USUARIO-------------------------------------------//
     try {
+
+      let errors = validationResultLogin(req);
+
+      if (errors.isEmpty()) {
+        //return res.render("login", { errors });
+      } else {
+        return res.render("login", { errors: errors.mapped() });
+        //        res.render("login", { errors: errors.mapped(), old: req.body });
+      }
+
       const { email, password } = req.body;
       console.log({ email, password })
       console.log(req.body)

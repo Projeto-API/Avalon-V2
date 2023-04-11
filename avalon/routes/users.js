@@ -4,6 +4,7 @@ const path = require("path");
 const multer = require("multer");
 
 const validatorCadastro = require("../middewres/ValidatorFormCadastroUsuario");
+const validatorLogin = require("../middewres/ValidatorFormLogin")
 
 const MinhasComprasController = require("../controllers/MinhasComprasController");
 const LoginController = require("../controllers/LoginController");
@@ -13,8 +14,8 @@ const ContaController = require("../controllers/ContaController");
 
 router.get("/compras", MinhasComprasController.index);
 router.get("/conta", ContaController.index);
-router.get("/login", LoginController.index);
-router.post("/entrar", LoginController.login);
+router.get("/login",  LoginController.index);
+router.post("/entrar", validatorLogin, LoginController.login);
 router.get("/cadastro", UsuarioController.index);
 router.post("/cadastro", validatorCadastro, UsuarioController.criar);
 router.get("/editar-conta", UsuarioController.form);

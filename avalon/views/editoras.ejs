@@ -2,6 +2,18 @@
   <link rel="stylesheet" href="/stylesheets/admin.css">
 
   <main>
+
+    <% if(typeof errors !== 'undefined'){  %> 
+      <font size ="-1">     
+         <ul style="list-style-type: none;">     
+             <% for(let error in errors){ %>         
+               <li><center>           
+                 <b style='color:darkred'><%= error%>: </b>         
+                    <%= errors[error].msg%></center></li>        
+                      <% } %>   
+                       </ul>      
+                          <% } %>
+
     <div class="crud-types">
       <button class="btnCrud"><a href="/admin/categorias">Categorias</a></button>
       <button class="btnCrud"><a href="/admin">Livros</a></button>

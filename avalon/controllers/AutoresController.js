@@ -1,5 +1,6 @@
 const { Op } = require('sequelize');
 const { Autor, Livro } = require('../models');
+const { validationResultAutor } = require('express-validator');
 Op
 
 module.exports = {
@@ -75,18 +76,16 @@ module.exports = {
     try {
 
      //aqui
-     let errorsAutor = validationResultAutor(req);
-     console.log("errors", errorsAutor);
+     let errors = validationResultAutor(req);
 
-     register: (req, res) => {
-       let = errorsAutor = validationResultAutor(req);
-
-       if (errorsAutor.isEmpty()) {
-
-       } else {
-         res.render('register', { errorsAutor: errorsAutor.mapped(), old: req.body});
-       }
-     }
+      if (errors.isEmpty()) {
+        //return res.render("adicionarEditora", { errors });
+      } else {
+        return res.render("autores", { errors: errors.mapped() });
+        //        res.render("autores", { errors: errors.mapped(), old: req.body });
+      }
+      
+     
      //aqui
 
       const { nome, biografia } = req.body;

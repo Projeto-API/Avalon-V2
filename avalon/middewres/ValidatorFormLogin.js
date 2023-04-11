@@ -1,4 +1,5 @@
-const { check } = require("express-validator");
+const { check, validationResultLogin } = require('express-validator');
+console.log('login entrou')
 
 module.exports = [
   check("email")

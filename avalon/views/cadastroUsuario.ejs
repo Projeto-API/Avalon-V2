@@ -17,6 +17,7 @@
       </ul>
          <% } %>
       </font>
+      
     <form class="form-auth card" action="/users/cadastro" method="post">
       <br />
       <label for="email">E-mail</label>
@@ -32,7 +33,7 @@
         type="password"
         name="Senha"
         placeholder="Digite sua senha"
-        value="<%= locals.old && old.passwordCadastro%>"
+        
         />
       <label for="password">Confirme sua senha</label>
         <input

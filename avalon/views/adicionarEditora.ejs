@@ -13,6 +13,19 @@
               Editoras
       </h2>
 
+      <% if(typeof errors !== 'undefined'){  %>
+        <font size ="-1">
+        <ul style="list-style-type: none;">
+          <% for(let error in errors){ %>
+            <li><center>
+              <b style='color:darkred'><%= error%>: </b>
+              <%= errors[error].msg%></center></li>
+            <% } %>
+        </ul>
+           <% } %>
+        </font>
+
+
       <% if (editora) { %>
         <form class="add-form" action="/admin/editoras/editar/<%= editora.id %>?_method=PUT" method="post">
           <% } else { %>
@@ -22,14 +35,9 @@
 
                 <label class="form-crud-label" for="nome">Nome da Editora:</label> <br>
                 <input class="form-crud-input" id="titulo" type="text" name="nome"
-                  placeholder="Digite o nome da editora" value="<%= editora && editora.nome %>"
-                  value="<%  locals.old && old.titulo %>">
+                  placeholder="Digite o nome da editora" value="<%= editora && editora.nome %>">
 
-                 
-
-                 <% if (locals.errorsEditora && locals.errorsEditora.nome) { %>
-                  <p class="feedback"><%= locals.errorsEditora.nome %></p>
-                  <% } %>
+                
 
 
                 <label class="form-crud-label" for="cnpj">CNPJ:</label> <br>

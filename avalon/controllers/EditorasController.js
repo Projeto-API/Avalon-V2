@@ -68,20 +68,17 @@ module.exports = {
   criar: async (req, res) => {
     try {
       
-      //aqui
-      let errorsEditora = validationResultEditora(req);
-      console.log("errors", errorsEditora);
+      
+      let errors = validationResultEditora(req);
 
-      register: (req, res) => {
-        let = errorsEditora = validationResultEditora(req);
-
-        if (errorsEditora.isEmpty()) {
-
-        } else {
-          res.render('register', { errorsEditora: errorsEditora.mapped(), old: req.body})
-        }
-      };
-      //aqui
+      if (errors.isEmpty()) {
+        //return res.render("adicionarEditora", { errors });
+      } else {
+        return res.render("adicionarEditora", { errors: errors.mapped() });
+        //        res.render("adicionarEditora", { errors: errors.mapped(), old: req.body });
+      }
+      
+      
 
       const { nome, cnpj } = req.body;
       await Editora.create({ nome, cnpj });

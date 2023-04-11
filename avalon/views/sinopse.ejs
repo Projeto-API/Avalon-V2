@@ -5,7 +5,7 @@
         <section class="container">
             <div class="container1">
                 <div class="capaprincipal">
-                    <img id="capa" src="/images/produtos/<%= livro.capa %>" alt="">
+                    <img class="item-img" id="capa" src="/images/produtos/<%= livro.capa %>" alt="">
                 </div>
 
                 <div class="miniaturas">
@@ -27,7 +27,7 @@
 
             <div class="container2">
                 <div class="sinopse">
-                    <h4>
+                    <h4 class="item-name">
                         <%= livro && livro.titulo %>
                     </h4>
                     <h5>
@@ -42,7 +42,7 @@
                 <button onclick=vejaMais() id="read-btn">Ver mais</button>
                 <div class="containerfilho2">
                     <div class="price-qtt">
-                        <span class="precoLivro">R$ <%= livro && livro.preco %></span>
+                        <span class="precoLivro item-price">R$ <%= livro && livro.preco %></span>
                     </div>
                    <button class="comprar" id="comprar"><a href="">COMPRAR</a></button>
                 </div>
@@ -128,7 +128,7 @@
                                     <span class="item-price">
                                         R$ <%= el.preco %>
                                     </span>
-                                    <button class="comprar"><a href="#">COMPRAR</a></button>
+                                    <button class="comprar"><a >COMPRAR</a></button>
                                 </div>
                             </li>
                             <% }) %>

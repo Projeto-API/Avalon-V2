@@ -29,9 +29,10 @@ module.exports = {
             const { state } = await buscarEnderecoPorCep(cep);
             const regiaoConhecida = state in valoresFretePorRegião;
             const valorFrete = valoresFretePorRegião[regiaoConhecida ? state : 'Outros']
+            req.session.frete = valorFrete
 
             console.log(valorFrete, state)
-            res.render('carrinho', { valorFrete, userId: req.session.userId, userName: req.session.userName  })
+            res.render('carrinho', { valorFrete, userId: req.session.userId, userName: req.session.userName, frete: req.session.frete  })
 
         } catch (error) {
             console.log(error)

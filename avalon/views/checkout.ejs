@@ -2,7 +2,9 @@
     <link rel="stylesheet" href="/stylesheets/checkout.css">
 
     <main>
-
+        <section >
+            
+        </section>
         <section class="entrega">
             <h5 class="itemName">Endereço de Entrega</h5>
             <div class="enderecoSalvo">
@@ -13,11 +15,18 @@
                     <path d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6Z" />
                 </svg>
                 <div class="enderecoInformation">
-                    <span class="nome">Mateus</span><br>
-                    <span class="endereco">Rua das Borboletas Psicodélicas, 50</span><br>
-                    <span class="bairro">Vila Guarani</span><br>
-                    <span class="cidade">São Paulo - SP</span><br>
-                    <span class="cep">04313-110</span><br>
+                    <span class="nome">
+                        <%= usuarios.nome %>
+                    </span><br>
+                    <span class="endereco">
+                        <%= usuarios.endereco %>, <%= usuarios.numero %>
+                    </span><br>
+                    <span class="cidade">
+                        <%= usuarios.cidade %> - <%= usuarios.estado %>
+                    </span><br>
+                    <span class="cep">
+                        <%= usuarios.cep %>
+                    </span><br>
                 </div>
             </div>
             <a class="addAdress" href="">Alterar endereço de entrega</a>
@@ -76,24 +85,10 @@
                             <span class="transportadora">Sedex</span><br>
                             <span class="tempoEntrega">Até 10 dias úteis</span>
                         </div>
-                        <span class="opcaoPrice">R$ 10,90</span>
+                        <span class="opcaoPrice"><%= frete %></span>
                     </a>
 
-                    <a href="" class="opcao">
-                        <svg class="checkbox" height="16" viewBox="0 0 16 16" width="16"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M8 0C3.584 0 0 3.584 0 8s3.584 8 8 8 8-3.584 8-8-3.584-8-8-8zm0 14.4A6.398 6.398 0 0 1 1.6 8c0-3.536 2.864-6.4 6.4-6.4 3.536 0 6.4 2.864 6.4 6.4 0 3.536-2.864 6.4-6.4 6.4z"
-                                fill="#666">
-                            </path>
-                        </svg>
-
-                        <div class="opcaoInformation">
-                            <span class="transportadora">Transportadora</span><br>
-                            <span class="tempoEntrega">Até 10 dias úteis</span>
-                        </div>
-                        <span class="opcaoPrice">R$ 14,90</span>
-                    </a>
+                    
                 </div>
             </div>
         </section>
@@ -124,21 +119,21 @@
             <div class="pagamentoEscolhido">
                 <p>
                     <label for="numberCard">Número do Cartão</label> <br>
-                    <input type="text" name="numberCard" id="numberCard">
+                    <input type="text" name="numberCard" id="numberCard" value="5256 XXXX XXXX XXXX">
                 </p>
 
                 <p>
                     <label for="nameCard">Nome impresso no cartão</label> <br>
-                    <input type="text" name="nameCard" id="nameCard">
+                    <input type="text" name="nameCard" id="nameCard" value="<%= usuarios.nome %> <%= usuarios.sobrenome %>">
                 </p>
                 <div>
                     <p>
                         <label for="validityDate">Validade</label> <br>
-                        <input type="text" name="validityDate" id="validityDate">
+                        <input type="text" name="validityDate" id="validityDate" value="12/2024">
                     </p>
                     <p>
                         <label for="securityNumber">Código de segurança</label> <br>
-                        <input type="text" name="securityNumber" id="securityNumber">
+                        <input type="text" name="securityNumber" id="securityNumber" value="XXX">
                     </p>
                 </div>
             </div>
@@ -207,6 +202,7 @@
             </table>
 
             <div class="next-page">
+                <button class="continuar"><a href="/carrinho">VOLTAR</a></button>
                 <button class="continuar" id="finalizarCompra"><a href="../views/home.html">FINALIZAR
                         COMPRA</a></button>
             </div>

@@ -111,8 +111,6 @@ const criarLivroModel = (sequelize, dataTypes) => {
       Livro.belongsTo(models.Categoria, {
         // editora.livros -> array de livros
         as: 'categoria', // livro.autores.nome -> nome da editora de um livro
-        // editora.livros -> array de livros
-        as: 'categoria', // livro.autores.nome -> nome da editora de um livro
         foreignKey: 'categorias_id'
       }),
 
@@ -120,6 +118,12 @@ const criarLivroModel = (sequelize, dataTypes) => {
         // editora.livros -> array de livros
         as: 'autor', // livro.autores.nome -> nome da editora de um livro
         foreignKey: 'autores_id'
+      }),
+      
+      Livro.hasMany(models.ImagensLivro, {
+        // editora.livros -> array de livros
+        as: 'imagens_livro', // livro.autores.nome -> nome da editora de um livro
+        foreignKey: 'livros_id'
       });
   }
 

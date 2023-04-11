@@ -111,6 +111,7 @@ hr {
 }
 
 .values-account {
+    background-color: red;
     width: 100%;
     font-size: .9rem;
     padding-bottom: 5px;

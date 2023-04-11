@@ -2,90 +2,210 @@ section#carrinhoFlutuante {
   display: none;
 }
 
-header{
-  position: absolute !important;
-  z-index: 0 !important;
-}
-.cart-carrinho {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin: 0px auto;
-    padding: 100px;
-    background-color: #f2f2f2;
-    border-radius: 10px;
-    text-align-last: center;
-  }
-  
-  .cart-carrinho h3 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .cart-carrinho table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-  }
-  table.table {
-    max-width: 50%;
-}
-  
-  .cart-carrinho th,
-  .cart-carrinho td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: left;
-  }
-  
-  .cart-carrinho th {
-    background-color: #ddd;
-  }
-  
-  .cart-carrinho .decrease,
-  .cart-carrinho .increase {
-    background-color: #386C5F;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-  }
-  
-  .cart-carrinho .quantity {
-    width: 40px;
-  }
-
-  .livro-imagem img{
-    display: flex;
-    max-width: 6rem;
-
-  }
-
-  input.produto-quantidade {
-    width: 2rem;
+* body {
+  height: auto;
 }
 
-
-button#fretebtn {
-  background-color: red;
-  border-radius: 1rem;
-  width: 5rem;
-  height: 2rem;
-  margin: 1rem;
-  color: white;
+main {
+  padding-top: 50px;
+  margin: 0 auto;
+  height: 100%;
 }
 
-span.comprarAgora {
-  height: 3rem;
-  width: 13rem;
-  background-color: #3483fa;
-  border-radius: 7rem;
+td {
+  justify-content: safe;
+}
+
+.containerLivro {
+  width: 100%;
+}
+
+.cabecalho {
+  font-size: .8rem;
+  width: 100%;
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: flex-end;
+  list-style: none;
+}
+
+.produto-carrinhho {
+  width: 100%;
+}
+
+.produto-cart {
+  margin: .5rem;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  background-color: #F6F9FF;
+  border-radius: 1rem;
+}
+
+.livro-imagem-cart {
+  height: 100%;
+  margin: .5rem;
+  border-radius: .5rem;
+  display: flex;
+  width: 4rem;
   margin-bottom: 1rem;
-  margin-top: 1rem;
+}
+
+.nomeLivro {
+  width: 100%;
+}
+
+.imagem-titulo {
+  min-width: 150px;
+}
+
+
+.informationLivro {
+  justify-content: flex-start;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding: 1rem;
+  width: 100%;
+  gap: 1rem;
+  height: 100%;
+}
+
+.informationLivroValue {
+  columns: 2;
+  width: 100%;
+  padding: 0 5px;
+
+}
+
+.produto-quantidade {
+  text-align: center;
+  width: 2rem;
+}
+
+.cart-total,
+.remove-livro-button {
+  width: 100%;
+}
+
+.remove-livro-button {
+  color: red;
+  font-weight: 500;
+  background: none;
+  cursor: pointer;
+}
+
+.livro-remove {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 1rem;
+  width: 100%;
+}
+
+.containerFinalizacao {
+  width: 100%;
+}
+
+/* SEÇÃO REFERENTE À ENTREGA */
+
+.containerEntrega {
+  width: 100%;
+  padding: .5rem;
+  margin: .5rem;
+  background-color: #F6F9FF;
+  border-radius: 1rem;
+  }
+
+.formFrete {
+  display: flex;
+}
+
+.containerEntrega input {
+  width: 70%;
+}
+
+
+
+/* SEÇÃO REFERENTE À ENTREGA */
+
+.containerCheckout {
+  margin: .5rem;
+  padding: .5rem;
+  background-color: #F6F9FF;
+  border-radius: 1rem;
+
+}
+
+.table {
+  width: 100%;
+  font-size: .9rem;
+}
+
+.carrinho-header {
+  padding-left: 1rem;
+}
+
+@media (min-width: 768px) {
+
+  .carrinho-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .containerFinalizacao {
+    margin-top: 28px;
+    width: 35vw;
+  }
+
+  .containerEntrega div {
+    display: flex;
+  }
+
+  .containerEntrega input {
+    width: 100%;
+  }
+
+  .informationLivroValue {
+    columns: 1;
+    width: 100%;
+    padding: 0 5px;
+  }
+
+  .livro-remove {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-right: 1rem;
+    width: 100%;
+  }
+
+  .cart-total {
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  main {
+    height: 100%;
+    max-width: 1200px;
+  }
+
+  .containerLivro {
+    width: 900px;
+  }
+
+
+
+  #header1 {
+    padding-left: 7rem;
+  }
+
+  #header3 {
+    padding-left: 3.5rem;
+    padding-right: 9.5rem;
+  }
+
 }

@@ -25,6 +25,11 @@ header {
     width: 100%;
 }
 
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
 .icons-btn a {
     color: #424141;
 }
@@ -35,6 +40,12 @@ header {
     color: #424141;
     background: none;
     font-size: 25px;
+}
+
+.facalogin {
+    
+    font-size: .8rem;
+    padding-bottom: 5px;
 }
 
 .icons-btn:hover,
@@ -226,7 +237,7 @@ header {
     }
 
     .busca-mobile {
-         display: none;
+        display: none;
     }
 
     #search {
@@ -240,7 +251,7 @@ header {
         border-radius: 2rem;
         border: none;
     }
-    
+
     #logo {
         display: flex;
         align-items: center;

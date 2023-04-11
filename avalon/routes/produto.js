@@ -2,7 +2,7 @@ var express = require('express');
 const router = express.Router();
 
 const SinopseController = require('../controllers/SinopseController');
-const TodosLivros = require('../controllers/TodoslivrosController');
+const TodosLivros = require('../controllers/TodosLivrosController');
 const CarrinhoController = require('../controllers/CarrinhoController');
 
 const LancamentosController = require('../controllers/LancamentosController');

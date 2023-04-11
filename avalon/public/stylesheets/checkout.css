@@ -5,7 +5,7 @@
 main {
     max-width: 25rem;
     padding-top: 50px;
-    height: 100vh;
+    height: 100%;
 }
 
 
@@ -192,6 +192,7 @@ main {
 
 .pagamentoEscolhido input {
     width: 100%;
+    padding-left: .5rem;
     background-color: white;
     border: .75px solid rgb(102, 102, 102);
     border-radius: 5px;
@@ -305,13 +306,23 @@ tbody {
     color: #4EC16E;
 }
 
+#frete {
+    color: red;
+}
+
 tfoot {
     font-weight: bold;
     font-size: 1rem;
 }
 
 .next-page {
+    display: flex;
+    gap: 1rem;
     margin: 1rem;
+}
+
+#voltar {
+    background-color: gray;
 }
 
 @media (min-width: 1200px) {
@@ -324,9 +335,10 @@ tfoot {
 
     }
 
-      #search {
+    #search {
         display: none;
     }
+
     .entrega,
     .pagamento {
         max-width: 365px;

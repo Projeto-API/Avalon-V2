@@ -78,7 +78,8 @@ module.exports = {
      let errorsAutor = validationResultAutor(req);
      console.log("errors", errorsAutor);
 
-     
+     register: (req, res) => {
+       let = errorsAutor = validationResultAutor(req);
 
        if (errorsAutor.isEmpty()) {
 

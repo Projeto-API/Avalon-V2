@@ -1,5 +1,5 @@
 function auth(req, res, next) {
-    if (req.session.userId !== "undefined") {
+    if (typeof req.session.userId !== "undefined") {
         next()
     } else {
 

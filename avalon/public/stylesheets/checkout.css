@@ -306,6 +306,10 @@ tbody {
     color: #4EC16E;
 }
 
+#frete {
+    color: red;
+}
+
 tfoot {
     font-weight: bold;
     font-size: 1rem;

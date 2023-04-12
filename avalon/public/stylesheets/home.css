@@ -244,6 +244,7 @@ main {
 /* #desktop {
     display: none;
 }
+
 #mobile {
     display: flex;
     height: 100%;
@@ -254,6 +255,7 @@ main {
     /* #mobile {
         display: none;
     }
+
     #desktop {
         display: flex;
     } */

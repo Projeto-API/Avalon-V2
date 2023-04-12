@@ -1,10 +1,10 @@
 <%- include('partials/header') %>
 <link rel="stylesheet" href="/stylesheets/Login.css">
 <main>
-    <script src="/javascripts/validacoeslogin.js" defer></script>
+   
     <section class="pageLogin">
         <h5 class="login2">LOGIN</h5>
-        <form class="form-auth card"action="/users/entrar"method="post">
+        <form class="form-auth card" action="/users/login "method="post">
             <li class="email">E-mail</li>
             <input type="email" name="email" placeholder="Digite seu email">
             <li class="password">Senha</li>
@@ -12,15 +12,13 @@
             <button class="entrar" type="submit">ENTRAR</button>
             <a href="/users/forgot-password" class="esqueci">Esqueci minha senha</a>
           
-            <a href="/users/cadastro" class="cadastro">Não tenho cadastro</a>
-            <a href="/users/login" class="cadastro">Intranet</a>
+            <a href="/users/cadastro/" class="cadastro">Não tenho cadastro</a>
+           
         </form>
         <div class="redes">
             <h5 class="login3">Login com redes sociais</h5>
             <a href=""><img id="google" src="/images/google.png" alt="">continue com google</a>
             <a href=""><img id="facebook" src="/images/facebook.png" alt="">continue com facebook</a>
-            </div>
     </section>
 </main>
-
 <%- include('partials/footer') %>

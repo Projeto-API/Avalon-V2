@@ -1,5 +1,3 @@
-
-
 const { Usuario } = require('../models');
 const bcrypt = require('bcryptjs');
 

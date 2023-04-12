@@ -4,7 +4,7 @@ const router = express.Router();
 
 
 
-router.get('/endereco', EntregaController.obterEnderecoPorCep)
+router.get('/enderecos', EntregaController.obterEnderecoPorCep)
 
 
 module.exports = router; 

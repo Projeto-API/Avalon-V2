@@ -191,6 +191,14 @@ h5 {
     padding-top: .5rem;
 }
 
+.voltar {
+    display: flex;
+    text-decoration: underline;
+    margin-bottom: .5rem;
+    font-size: 14px;
+    color: rgb(98, 96, 96);
+    justify-content: flex-start;
+}
 
 
 /* ----------------------------Erros ------------------- */

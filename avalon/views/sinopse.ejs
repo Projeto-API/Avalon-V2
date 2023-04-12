@@ -1,31 +1,59 @@
 <%- include('partials/header') %>
+<<<<<<< HEAD
 <link rel="stylesheet" href="/stylesheets/Sinopse.css">
+=======
+    <link rel="stylesheet" href="/stylesheets/sinopse.css">
+>>>>>>> palomacode
 
     <main>
         <section class="container">
             <div class="container1">
                 <div class="capaprincipal">
-                    <img id="capa" src="/images/produtos/<%= livro.capa %>" alt="">
+                    <img class="item-img" id="capa" src="/images/produtos/<%= livro.capa %>" alt="">
                 </div>
                 
                 <div class="miniaturas">
                     <ul class="gallery-miniaturas">
+<<<<<<< HEAD
                         <img class="livrinhos" src="/images//image 4.png" alt="">
                         <img class="livrinhos" src="/images//image2.png" alt="">
                         <img class="livrinhos" src="/images//image3.png" alt="">
                         <img class="livrinhos" src="/images//image2.png" alt="">
                         <img class="livrinhos" src="/images//image 4.png" alt="">
+=======
+                        <% livro.imagens_livro.forEach(el=> { %>
+                            <img class="livrinhos" src="/images/produtos/<%= el && el.imagens %>" alt="I" onclick="openModal(this)">
+                            <% }) %>
+
+>>>>>>> palomacode
                     </ul>
                 </div>
+                <div id="modal">
+                    <div id="modal-content">
+                        <span id="close" onclick="closeModal()">X</span>
+                        <img id="modal-image">
+                    </div>
+                </div>
+
             </div>
 
             <div class="container2">
                 <div class="sinopse">
+<<<<<<< HEAD
                     <h4 ><%= livro && livro.titulo %></h4>
                     <h5><%= livro && livro.autor.nome %></h5><br>
+=======
+                    <h4 class="item-name">
+                        <%= livro && livro.titulo %>
+                    </h4>
+                    <h5>
+                        <%= livro && livro.autor.nome %>
+                    </h5><br>
+>>>>>>> palomacode
 
                     <p> <%= livro && livro.sinopse %>
                     </p>
+<<<<<<< HEAD
                 </div>
                 <div class="price-qtt">
                     <span class="precoLivro">R$ <%= livro && livro.preco %></span>
@@ -37,6 +65,16 @@
                 </div>
                 <div class="containerfilho2">
                     <button class="comprar" id="comprar"><a href="">COMPRAR</a></button>
+=======
+
+                </div>
+                <button onclick=vejaMais() id="read-btn">Ver mais</button>
+                <div class="containerfilho2">
+                    <div class="price-qtt">
+                        <span class="precoLivro item-price">R$ <%= livro && livro.preco %></span>
+                    </div>
+                   <button class="comprar" id="comprar"><a href="">COMPRAR</a></button>
+>>>>>>> palomacode
                 </div>
             </div>
             </div>
@@ -80,13 +118,25 @@
             </div>
 
             <div class="columnauthor">
+<<<<<<< HEAD
                 <h4><%= livro && livro.autor.nome %></h4><br>
                 <h6>Autor</h6>
                 <p> <%= livro && livro.autor.biografia %></p>
+=======
+                <h4>
+                    <%= livro && livro.autor.nome %>
+                </h4><br>
+                <h5>Sobre o Autor</h5>
+                <br>
+                <p>
+                    <%= livro && livro.autor.biografia %>
+                </p>
+>>>>>>> palomacode
 
             </div>
         </section>
 
+<<<<<<< HEAD
                <section>
                 <div class="continue-vendo">
                     <h5 class="title">CONTINUE VENDO</h5>
@@ -108,6 +158,28 @@
                                 </li>
                                 <% }) %>
                         </div>
+=======
+        <section>
+            <div class="continue-vendo">
+                <h5 class="title">CONTINUE VENDO</h5>
+
+                <div class="carrousel" id="carrousel">
+                    <div class="gallery" id="gallery">
+                        <% livros.forEach(el=> { %>
+                            <li onclick=redirect() class="item current-item">
+                                <img class="item-img" src="/images/produtos/<%= el.capa %>" id="<%= el.id %>" alt="dna">
+                                <div>
+                                    <h5 class="item-name">
+                                        <%= el.titulo %>
+                                    </h5>
+                                    <span class="item-price">
+                                        R$ <%= el.preco %>
+                                    </span>
+                                    <button class="comprar"><a >COMPRAR</a></button>
+                                </div>
+                            </li>
+                            <% }) %>
+>>>>>>> palomacode
                     </div>
                     <button id="prev" class="arrow-left"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                             fill="currentColor" class="bi bi-caret-left-fill" viewBox="-2 -2 20 20">

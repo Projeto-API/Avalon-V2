@@ -77,7 +77,7 @@ function vejaMais() {
   document.querySelector('.sinopse').style.height = "auto"
 
   if (document.querySelector('.sinopse').style.height = "auto") {
-       document.getElementById('read-btn').remove()
+    document.getElementById('read-btn').remove()
     // document.getElementById('read-btn').style.color = "white"
   }
 }
@@ -88,4 +88,99 @@ function abrirBuscaMobile() {
 
   document.querySelector('.busca-mobile').style.display = "flex"
 
+<<<<<<< HEAD
+=======
+}
+
+// -----CARROUSEL BANNER MOBILE
+const slides = document.querySelectorAll('.slide');
+let currentSlide = 0;
+let slideInterval;
+
+function showSlide(n) {
+  if (n < 0) {
+    currentSlide = slides.length - 1;
+  } else if (n >= slides.length) {
+    currentSlide = 0;
+  } else {
+    currentSlide = n;
+  }
+
+  slides.forEach(slide => {
+    slide.style.display = 'none';
+  });
+
+  slides[currentSlide].style.display = 'block';
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}
+
+function startSlideInterval() {
+  slideInterval = setInterval(() => {
+    nextSlide();
+  }, 5000); // intervalo de 5 segundos
+}
+
+function stopSlideInterval() {
+  clearInterval(slideInterval);
+}
+
+document.querySelector('.next').addEventListener('click', () => {
+  stopSlideInterval();
+  nextSlide();
+  startSlideInterval();
+});
+
+document.querySelector('.prev').addEventListener('click', () => {
+  stopSlideInterval();
+  prevSlide();
+  startSlideInterval();
+});
+
+startSlideInterval();
+showSlide(currentSlide);
+
+//  ----- FIM CARROUSEL BANNER  
+
+function adaptImages() {
+  const images = document.querySelectorAll('.carrossel img');
+  images.forEach((image) => {
+    const src = image.getAttribute('src');
+    if (window.innerWidth < 500 && !src.includes('-MOBILE.png')) {
+      const newSrc = src.replace('.png', '-MOBILE.png');
+      image.setAttribute('src', newSrc);
+    } else if (window.innerWidth >= 500 && src.includes('-MOBILE.png')) {
+      const newSrc = src.replace('-MOBILE.png', '.png');
+      image.setAttribute('src', newSrc);
+    }
+  });
+}
+
+window.addEventListener('resize', adaptImages);
+adaptImages();
+
+
+window.addEventListener('resize', adaptImages);
+adaptImages();
+// ------ MODAL IMAGENS SINOPSE 
+
+function openModal(img) {
+  var modal = document.getElementById("modal");
+  var modalImg = document.getElementById("modal-image");
+  modal.style.display = "block";
+  modalImg.src = img.src;
+}
+
+function closeModal(span) {
+var span = document.getElementById("close");
+
+  var modal = document.getElementById("modal");
+  modal.style.display = "none";
+>>>>>>> palomacode
 }

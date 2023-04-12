@@ -14,7 +14,8 @@
       </h2>
 
       <% if (autor) { %>
-        <form class="add-form" action="/admin/autores/editar/<%= autor.id %>?_method=PUT" method="post" enctype="multipart/form-data">
+        <form class="add-form" action="/admin/autores/editar/<%= autor.id %>?_method=PUT" method="post"
+          enctype="multipart/form-data">
           <% } else { %>
             <form class="add-form" action="/admin/autores" method="post" enctype="multipart/form-data">
               <% } %>
@@ -29,11 +30,16 @@
                   placeholder="Escreva aqui a biografia do autor"><%= autor && autor.biografia %></textarea>
 
                 <label class="form-crud-label" for="foto">Imagem Autor:</label> <br>
-                <span class="fotoupload"><%= autor && autor.foto %></span>
-                
-                <input type="file" class="alteraInp" name="foto" <%= autor && autor.foto %>>
-                
-                <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
+                <span class="fotoupload">
+                  <%= autor && autor.foto %>
+                </span>
+
+                <input type="file" class="alteraInp" name="foto" <%=autor && autor.foto %>>
+
+                <div class="buttons">
+                  <button class="btnCrud" id="btVoltar"><a href="/admin/autores">Voltar</a></button>
+                  <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
+                </div>
             </form>
 
 

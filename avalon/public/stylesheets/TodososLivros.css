@@ -279,4 +279,9 @@ a:link {
     main, .continue-vendo {
         width: 1200px;
     }
+
+    main {
+      
+        padding-top: 70px;
+    }
 }

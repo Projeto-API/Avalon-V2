@@ -1,6 +1,7 @@
 <%- include('partials/header') %>
   <link rel="stylesheet" href="/stylesheets/admin.css">
-  
+
+
   <main>
     <div class="crud-types">
       <button class="btnCrud"><a href="/admin/categorias">Categorias</a></button>
@@ -25,7 +26,6 @@
         <table>
           <thead>
             <tr>
-              <th><input type="checkbox"></th>
               <th>ID</th>
               <th>Nome</th>
               <th class="acao">Editar</th>
@@ -36,7 +36,6 @@
 
             <% autores.forEach(el=> { %>
               <tr>
-                <td><input type="checkbox"></td>
                 <td>
                   <%= el.id %>
                 <td>

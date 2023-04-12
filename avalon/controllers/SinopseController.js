@@ -1,4 +1,5 @@
-const { Livro, Editora, Categoria, Autor } = require('../models');
+const { Livro, Editora, Autor, ImagensLivro } = require('../models');
+const { Op } = require('sequelize');
 
 module.exports = {
   index: async (req, res) => {
@@ -7,8 +8,9 @@ module.exports = {
       const carrousel = await Livro.findAll();
       const livro = await Livro.findByPk(id, {
         include: [
-          { model: Editora, as: 'editora'},
-          { model: Autor, as: 'autor'}]
+          { model: Editora, as: 'editora' },
+          { model: Autor, as: 'autor' },
+          { model: ImagensLivro, as: 'imagens_livro' }]
       });
 
       console.log({ livro })

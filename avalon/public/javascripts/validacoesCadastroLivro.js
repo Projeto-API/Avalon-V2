@@ -1,4 +1,3 @@
-
 window.addEventListener('load', function () {
   const form = document.querySelector('form.form-crud');
   const inputList = document.querySelectorAll('form.form-crud input');
@@ -35,7 +34,7 @@ window.addEventListener('load', function () {
     removeErrors('form');
 
     inputList.forEach(input => {
-      if (!input.value) {
+      if (input.name !== 'imagens' && !input.value) {
         createError(input, 'Campo Obrigatório', 'form');
       }
     });
@@ -47,10 +46,10 @@ window.addEventListener('load', function () {
 
   const validatepreco = function (input) {
     const { value } = input;
-    if (value.includes('$') && value.length >= max) {
+    if (value.length >= max) {
       return
     } else {
-      createError(input, 'O campo deve conter $ ', 'input');
+      createError(input, 'input');
     }
   };
 

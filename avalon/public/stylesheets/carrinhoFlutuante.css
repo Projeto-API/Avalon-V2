@@ -12,36 +12,67 @@ body {
     padding: 8px;
     display: flex;
     width: 100%;
-    top: 0;
-    justify-content: space-between;
+    align-items: center;
 }
 
-.carrinhoFlutuante { 
+.carrinhoFlutuante {
     background: white;
- 
+    height: 100%;
     width: 0;
     margin: 0;
     list-style: none;
     text-align: center;
     position: fixed;
     right: 0%;
-    top: 75px;
+    top: 50px;
     transition: all 0.5s;
-    z-index: 1000;
-    font-size: 19px
+    opacity: 90%;
+    z-index: 9;
+    font-size: 16px
 }
 
 
-img.cart-product-image {
-    width: 100px;
-    max-width: 65px;
-    border-radius: 1rem;
-    height: 90px;
+.cart-product-image {
+    margin: .5rem;
+    border-radius: .5rem;
+    width: 4rem;
 }
 
+.produto {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
+    overflow-y: auto;
+}
 
 .containerProduto {
-    display: inline-grid;
+    padding: .5rem;
+    width: 100%;
+    display: flex;
+    background-color: rgb(230, 230, 230);
+    border-radius: 1rem;
+}
+
+.cart-product-title {
+    width: 100%;
+}
+
+.product-name {
+    width: 100%;
+}
+
+.product-identification {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 5rem;
+}
+
+.product-information {
+    display: flex;
+    align-items: center;
 }
 
 input.product-qtd-input {
@@ -49,13 +80,37 @@ input.product-qtd-input {
     text-align: center;
 }
 
-button.remove-livro-button {
-    background-color: red;
+.fechar {
+    font-size: 30px;
+    align-items: center;
+    color: red;
+    text-decoration: none;
+}
+
+.produtos-carrinho {
+    width: 24rem;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+img.cart-product-image {
+    max-width: 5rem;
     border-radius: 1rem;
-    width: 6rem;
+}
+
+input.product-qtd-input {
+    width: 2rem;
+    text-align: center;
+}
+
+.remove-livro-button {
+    color: red;
+    border-radius: 1rem;
+    width: 100%;
     height: 2rem;
     margin: 1rem;
-    color: white;
+
 }
 
 
@@ -64,23 +119,9 @@ button.fechar {
     width: 2rem;
 }
 
-div#produto {
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    
-}
 
-div#primeiro {
-    border-radius: 3rem;
+@media (min-width: 1200px) {
+    .carrinhoFlutuante {
+        top: 75px;
+    }
 }
-
-section#carrinhoFlutuante {
-    border-radius: 2rem;
-}
-
-section.containerProduto {
-    display: flex;
-    /* margin: 0px; */
-    padding-top: 14px;
-  }

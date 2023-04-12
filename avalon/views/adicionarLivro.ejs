@@ -91,8 +91,17 @@
 
                 <input type="file" class="alteraInp" name="capa" <%=livro && livro.capa %>>
 
+                <label class="form-crud-label" for="imagens">Imagens:</label> <br>
+                <span class="capaupload">
 
-                <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
+                </span>
+
+                <input type="file" class="alteraInp" name="imagens" multiple>
+
+                <div class="buttons">
+                  <button class="btnCrud" id="btVoltar"><a href="/admin">Voltar</a></button>
+                  <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
+                </div>
             </form>
 
         </form>

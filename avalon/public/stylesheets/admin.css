@@ -216,6 +216,7 @@ table {
 
 thead {
   background-color: whitesmoke;
+  white-space: nowrap;
 }
 
 tr {
@@ -245,6 +246,15 @@ thead tr th.acao {
 
 tbody tr td.acao {
   text-align: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+#btVoltar {
+background-color: gray;
 }
 
 @media (min-width: 768px) {

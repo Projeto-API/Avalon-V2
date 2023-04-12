@@ -5,7 +5,7 @@ module.exports = {
     try {
       const livros = await Livro.findAll();
 
-      res.render('todososlivros', { livros })
+      res.render('todososlivros', { livros, userId: req.session.userId, userName: req.session.userName  })
 
     } catch (erro) {
       let alert = require('alert');

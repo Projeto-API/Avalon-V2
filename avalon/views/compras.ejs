@@ -4,13 +4,17 @@
     <main>
         <section class="box-MinhaConta">
             <div class="minhaConta">
-                <img src="/images/Lordvoldemort.jpg">
+                <img src="/images/usuarios/<%= usuarios.foto %>">
 
-                <span> Nome e Sobrenome</span>
+                <h3>
+                    <%= usuarios.nome %>
+                        <%= usuarios.sobrenome %>
+                </h3>
 
                 <div class="contaOpcoes">
-                    <a href="/users/conta">MEUS DADOS</a>
-                    <a href="/users/compras">MEUS PEDIDOS</a>
+                    <a href="/users/conta/<%= usuarios.id %>">MEUS DADOS</a>
+                    <a href="/users/compras/<%= usuarios.id %>">MEUS PEDIDOS</a>
+                    <a href="/users/logout">SAIR</a>
                 </div>
             </div>
         </section>
@@ -28,7 +32,7 @@
                     <hr>
                     <div class="informationPedido">
                         <div class="product-identification">
-                            <img class="cart-product-image" src="../images/1661966653.webp" alt="Poster 3">
+                            <img class="cart-product-image" src="/images/1661966653.webp" alt="Poster 3">
                         </div>
                         <div class="informationItem1">
                             <h4 class="title-produto">Nome do Livro</h4>
@@ -51,7 +55,7 @@
                     <hr>
                     <div class="informationPedido">
                         <div class="product-identification">
-                            <img class="cart-product-image" src="../images/1661966653.webp" alt="Poster 3">
+                            <img class="cart-product-image" src="/images/1664561630.webp" alt="Poster 3">
                         </div>
                         <div class="informationItem1">
                             <h4 class="title-produto">Nome do Livro</h4>
@@ -74,7 +78,7 @@
                     <hr>
                     <div class="informationPedido">
                         <div class="product-identification">
-                            <img class="cart-product-image" src="../images/1661966653.webp" alt="Poster 3">
+                            <img class="cart-product-image" src="/images/1661966653.webp" alt="Poster 3">
                         </div>
                         <div class="informationItem1">
                             <h4 class="title-produto">Nome do Livro</h4>
@@ -97,7 +101,7 @@
                     <hr>
                     <div class="informationPedido">
                         <div class="product-identification">
-                            <img class="cart-product-image" src="../images/1661966653.webp" alt="Poster 3">
+                            <img class="cart-product-image" src="/images/1663870733.webp" alt="Poster 3">
                         </div>
                         <div class="informationItem1">
                             <h4 class="title-produto">Nome do Livro</h4>

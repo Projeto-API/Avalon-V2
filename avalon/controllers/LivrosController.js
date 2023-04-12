@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { Op } = require('sequelize');
-const { Livro, Editora, Autor, Categoria } = require('../models');
+const { Livro, Editora, Autor, Categoria, ImagensLivro } = require('../models');
 
 module.exports = {
   index: async (req, res) => {
@@ -13,7 +13,7 @@ module.exports = {
           { model: Categoria, as: 'categoria' }
         ]
       });
-      res.render('admin', { livros })
+      res.render('admin', { livros, userId: req.session.userId, userName: req.session.userName })
     } catch (erro) {
       console.log(erro)
       let alert = require('alert');
@@ -23,16 +23,22 @@ module.exports = {
   search: async (req, res) => {
     try {
       const { search } = req.query;
+      const categorias = await Categoria.findAll()
       const livros = await Livro.findAll({
         where: search ? {
           [Op.or]: [
             { titulo: { [Op.like]: '%' + search + '%' } },
             { id: search }
           ]
-        } : null
+        } : null,
+        include: [
+          { model: Editora, as: 'editora' },
+          { model: Autor, as: 'autor' },
+          { model: Categoria, as: 'categoria' }
+        ]
       });
-     console.log(livros)
-      res.render('admin', { livros })
+      console.log(livros)
+      res.render('admin', { livros, userId: req.session.userId, userName: req.session.userName })
 
     } catch (erro) {
       let alert = require('alert');
@@ -49,7 +55,7 @@ module.exports = {
       let livro;
       let id = req.params.id;
 
-      res.render('adicionarLivro', { livro: null, editoras, categorias, autores });
+      res.render('adicionarLivro', { livro: null, editoras, categorias, autores, userId: req.session.userId, userName: req.session.userName });
 
     } catch (erro) {
       let alert = require('alert');
@@ -67,7 +73,7 @@ module.exports = {
       const autores = await Autor.findAll()
 
       console.log(livro)
-      res.render('adicionarLivro', { livro, editoras, categorias, autores });
+      res.render('adicionarLivro', { livro, editoras, categorias, autores, userId: req.session.userId, userName: req.session.userName });
 
     } catch (erro) {
       let alert = require('alert');
@@ -78,10 +84,12 @@ module.exports = {
 
   criar: async (req, res) => {
     try {
-      const { titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, categoria, imagens } = req.body
+      const { titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, categoria } = req.body
       const capa = req.files.capa[0].filename;
-      await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria, capa, imagens })
 
+           await Livro.create({ titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editoras_id: editora, autores_id: autor, categorias_id: categoria, capa })
+      
+      
       res.redirect('/admin');
 
     } catch (erro) {
@@ -94,15 +102,17 @@ module.exports = {
     try {
       const { id } = req.params
 
-      const { titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, capaguardada } = req.body
+      const { titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, capaguardada, imagensguardadas } = req.body
 
       const capaupload = req.files.capa?.[0].filename;
+
       console.log(capaguardada)
       console.log(req.body)
       await Livro.update({ titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, capa: capaupload ? capaupload : capaguardada },
         {
           where: { id }
         })
+
       res.redirect('/admin');
 
     } catch (erro) {

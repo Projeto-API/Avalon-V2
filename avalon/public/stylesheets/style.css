@@ -25,6 +25,17 @@ header {
     width: 100%;
 }
 
+<<<<<<< HEAD
+=======
+.header-icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons-btn a {
+    color: #424141;
+}
+>>>>>>> palomacode
 
 .icons-btn {
     text-decoration: none;
@@ -34,7 +45,18 @@ header {
     font-size: 25px;
 }
 
+<<<<<<< HEAD
 .icons-btn:hover {
+=======
+.facalogin {
+    
+    font-size: .8rem;
+    padding-bottom: 5px;
+}
+
+.icons-btn:hover,
+.icons-btn a:hover {
+>>>>>>> palomacode
     text-decoration: none;
     color: black;
     transform: scale(1.1);
@@ -203,6 +225,13 @@ header {
 
     }
 
+<<<<<<< HEAD
+=======
+    .busca-mobile {
+        display: none;
+    }
+
+>>>>>>> palomacode
     #search {
         display: flex;
         font-size: .8rem;

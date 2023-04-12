@@ -5,11 +5,11 @@ module.exports = [
 
   check("Sobrenome").bail().isString().bail(),
 
-  check("CPF").withMessage("Este campo não pode ficar vazio").bail(),
+  // check("CPF").withMessage("Este campo não pode ficar vazio").bail(),
 
-  check("Genero").withMessage("Este campo não pode ficar vazio").bail(),
+  // check("Genero").withMessage("Este campo não pode ficar vazio").bail(),
 
-  check("e-mail")
+  check("E-mail")
     .isEmail()
     .withMessage("Deve ser um e-mail valido")
     .bail()
@@ -40,4 +40,10 @@ module.exports = [
   check("Cidade").isString().bail(),
 
   check("Complemento").isString().bail(),
+
+  check("Data de nascimento")
+    .isString()
+    .isLength({ min: 3 })
+    .withMessage("Data muito curta")
+    .bail(),
 ];

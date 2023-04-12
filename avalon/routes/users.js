@@ -4,7 +4,7 @@ const path = require("path");
 const multer = require("multer");
 
 const validatorCadastro = require("../middewres/ValidatorFormCadastroUsuario");
-const validatorEditarConta = require("../middewres/ValidatorFormCadastroUsuario");
+const validatorEditarConta = require("../middewres/validatorEditarConta");
 
 const MinhasComprasController = require("../controllers/MinhasComprasController");
 const LoginController = require("../controllers/LoginController");

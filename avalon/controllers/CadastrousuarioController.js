@@ -75,10 +75,8 @@ module.exports = {
       let errors = validationResult(req);
 
       if (errors.isEmpty()) {
-        //return res.render("cadastroUsuario", { errors });
       } else {
         return res.render("editarConta", { errors: errors.mapped() });
-        //        res.render("cadastroUsuario", { errors: errors.mapped(), old: req.body });
       }
 
       // await Livro.update({ titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, capa: capaupload ? capaupload : capaguardada })

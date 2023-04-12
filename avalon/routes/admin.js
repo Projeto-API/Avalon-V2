@@ -2,6 +2,8 @@ const express = require("express");
 const router = express.Router();
 const path = require("path");
 const multer = require("multer");
+const { check } = require("express-validator");
+
 const validadorTipoUsuario = require("../middewres/validadorTipoUsuario");
 const validadorFormEditoras = require("../middewres/validadorFormEditoras");
 const validadorFormLivros = require("../middewres/validadorFormLivros");

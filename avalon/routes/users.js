@@ -18,7 +18,6 @@ const multerDiskStorageUsuario = multer.diskStorage({
 const filefoto = multer({ storage: multerDiskStorageUsuario });
 
 
-
 const MinhasComprasController = require('../controllers/MinhasComprasController');
 const LoginController = require('../controllers/LoginController');
 const UsuarioController = require('../controllers/CadastrousuarioController');
@@ -50,3 +49,4 @@ router.get('/forgot-password', (req, res) => {
 
 
 module.exports = router;
+

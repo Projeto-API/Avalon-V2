@@ -3,6 +3,8 @@ const bcrypt = require('bcryptjs');
 
 module.exports = {
  
+
+
   criar: function (usuario) {
     const usuarios = this.listar();
 
@@ -20,7 +22,7 @@ index: async (req, res) => {
       ]
 
     });
-    res.render('usuarios', { usuarios, userId: req.session.userId, userName: req.session.userName  });
+    res.render('usuarios', { usuarios });
 
   } catch (erro) {
     let alert = require('alert');
@@ -40,7 +42,7 @@ search: async (req, res) => {
       } : null
     });
 
-    res.render('usuarios', { usuarios, userId: req.session.userId, userName: req.session.userName  });
+    res.render('usuarios', { usuarios });
 
   } catch (erro) {
     let alert = require('alert');
@@ -55,7 +57,7 @@ form: async (req, res) => {
 
     if (id) usuario = await Usuario.findByPk(id);
 
-    res.render('cadastroUsuario', { usuario, userId: req.session.userId, userName: req.session.userName  });
+    res.render('cadastroUsuario', { usuario });
 
   } catch (erro) {
     let alert = require('alert');
@@ -68,7 +70,7 @@ buscarUsuario: async (req, res) => {
     const { id } = req.params
     const usuario = await Usuario.findByPk(id);
     console.log(autor)
-    res.render('minhaconta', { usuario, userId: req.session.userId, userName: req.session.userName  });
+    res.render('minhaconta', { usuario });
 
   } catch (erro) {
     let alert = require('alert');

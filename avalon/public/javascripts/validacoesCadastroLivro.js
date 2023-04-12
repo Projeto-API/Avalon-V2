@@ -1,4 +1,3 @@
-
 window.addEventListener('load', function () {
   const form = document.querySelector('form.form-crud');
   const inputList = document.querySelectorAll('form.form-crud input');

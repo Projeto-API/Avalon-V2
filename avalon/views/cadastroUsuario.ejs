@@ -20,14 +20,6 @@
                 <input class="input-form" type="text" name="nome" placeholder="Digite seu nome">
                 <label for="sobrenome">Sobrenome</label>
                 <input class="input-form" type="text" name="sobrenome" placeholder="Digite seu sobrenome">
-
-                <label for="genero">Gênero:</label> <br>
-                <select class="input-form" name="genero" id="genero">
-                    <option value="masculino">Masculino</option>
-                    <option value="feminino">Feminino</option>
-                    <option value="outro">Outro</option>
-                </select>
-
                 <label for="data_nascimento">Data de Nascimento</label>
                 <input class="input-form half" type="date" name="data_nascimento"
                     placeholder="Digite sua data de nascimento">
@@ -48,10 +40,10 @@
                 <input class="input-form half" type="text" name="complemento" placeholder="Opcional">
                 <label for="foto">Foto</label>
                 <input type="file" name="foto">
-                
+                <button class="btnCrud" id="btnSalvar" type="submit"><a>Salvar</a></button>
+
             </form>
-            <button class="btnSalvar" id="btnSalvar" type="submit"><a>Salvar</a></button>
-            <a href="/users/login" class="voltar">Voltar para o login</a>
+
         </section>
     </main>
     <%- include('partials/footer') %>

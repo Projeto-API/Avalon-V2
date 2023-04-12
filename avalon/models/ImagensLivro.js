@@ -11,6 +11,10 @@ const criarImagemLivroModel = (sequelize, dataTypes) => {
       type: dataTypes.STRING,
       allowNull: true
     },
+    livros_id: {
+      type: dataTypes.INTEGER,
+      allowNull: false
+    },
   };
 
   const opcoes = {
@@ -19,6 +23,7 @@ const criarImagemLivroModel = (sequelize, dataTypes) => {
   };
 
   const ImagemLivro = sequelize.define('ImagensLivro', colunas, opcoes);
+  
 
   return ImagemLivro;
 }

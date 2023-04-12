@@ -181,4 +181,3 @@ var span = document.getElementById("close");
   var modal = document.getElementById("modal");
   modal.style.display = "none";
 }
-

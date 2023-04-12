@@ -6,20 +6,16 @@ module.exports = {
     try {
       const { email, password } = req.body;
       const user = await Usuario.findOne({ where: { email } })
-      console.log(user)
+
       if (user) {
-        console.log('cheguei')
-        console.log(password)
-        console.log(user.password)
-        const validadorsenha = await bcrypt.compareSync(password, user.password)
-        console.log(validadorsenha)
+        const validadorsenha = await bcrypt.compare(password, user.password)
+        
 
         if (validadorsenha) {
           req.session.email = user.email;
           req.session.tipo = user.tipo;
           req.session.userId = user.id;
           const userId = req.session.userId;
-          console.log(userId)
           req.session.userName = user.nome;
           const userName = req.session.userName;
           console.log(userId);

@@ -30,27 +30,23 @@
               <th>Título</th>
               <th>Preço</th>
               <th>Categoria</th>
-              <th>Categoria</th>
               <th class="acao">Editar</th>
               <th class="acao">Excluir</th>
             </tr>
           </thead>
           <tbody>
 
-            <% livros.forEach(el=> { %>
+            <% livros.forEach(el => { %>
               <tr>
                 <td><input type="checkbox"></td>
                 <td>
                   <%= el.id %>
-                </td>
+                    </td>
                 <td>
                   <%= el.titulo %>
                 </td>
                 <td>
                   <%= el.preco %>
-                </td>
-                <td>
-                  <%= el.categoria.tipo %>
                 </td>
                 <td>
                   <%= el.categoria.tipo %>

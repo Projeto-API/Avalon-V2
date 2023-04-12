@@ -6,42 +6,28 @@
             <div class="menu-main">
                 <h2 class="categoria"> GÊNEROS </h2>
                 <ul>
-                    <li> <a class="link_menu" href="#"> Não Ficção</a></li>
-                    <li> <a class="link_menu" href="#">Ficção</a></li>
-                    <li> <a class="link_menu" href="#">Biografia</a></li>
-                    <li> <a class="link_menu" href="#">Ciencias</a></li>
-                    <li> <a class="link_menu" href="#">Classicos</a></li>
+                   
+
+                    <li> <a class="link_menu" href="#">Biografia</a> <a href="/produtos/genero"></a>
                     <li> <a class="link_menu" href="#">Crimes e Intestigação</a></li>
-                    <li> <a class="link_menu" href="#">Fantasia</a></li>
+                    <a class="link_menu" href="/produtos?genero=fantasia">Fantasia</a></li>
                     <li> <a class="link_menu" href="#">Ficção Científica</a></li>
                     <li> <a class="link_menu" href="#">Filmes, séries e Games</a></li>
-                    <li> <a class="link_menu" href="#">Hqs e Mangás</a></li>
+                    <li> <a class="link_menu" href="#">Mangás</a></li>
                     <li> <a class="link_menu" href="#">Infantil</a></li>
                     <li> <a class="link_menu" href="#">Romance</a></li>
-                    <li> <a class="link_menu" href="#">Stephen King</a></li>
-                    <li> <a class="link_menu" href="#">Terro e Supense</a></li>
-                    <li> <a class="link_menu" href="#">Young Adult</a></li>
-                    <li> <a class="link_menu" href="#"> Não Ficção</a></li>
+                    <li> <a class="link_menu" href="#">Terror e Supense</a></li>
                     <li> <a class="link_menu" href="#">Ficção</a></li>
-                    <li> <a class="link_menu" href="#">Biografia</a></li>
-                    <li> <a class="link_menu" href="#">Ciencias</a></li>
-                    <li> <a class="link_menu" href="#">Classicos</a></li>
-                    <li> <a class="link_menu" href="#">Crimes e Intestigação</a></li>
-                    <li> <a class="link_menu" href="#">Fantasia</a></li>
-                    <li> <a class="link_menu" href="#">Ficção Científica</a></li>
-                    <li> <a class="link_menu" href="#">Filmes, séries e Games</a></li>
-                    <li> <a class="link_menu" href="#">Hqs e Mangás</a></li>
-                    <li> <a class="link_menu" href="#">Infantil</a></li>
-                    <li> <a class="link_menu" href="#">Romance</a></li>
-                    <li> <a class="link_menu" href="#">Stephen King</a></li>
-                    <li> <a class="link_menu" href="#">Terro e Supense</a></li>
+                    
+                   
+                    
                 </ul>
             </div>
         </aside>
 
-        <section class="all-products">
+        <section>
             <div class="filtro">
-                <h3 class="resultado">Resultados: 360</h3>
+                <h3 class="resultado">Resultados: 15</h3>
                 <select id="sort-by" name="sort-by" class="sort-by">
                     <option value="menorPreco">menores preços</option>
                     <option value="maiorPreco">maiores preços</option>
@@ -52,7 +38,7 @@
             <div class="grid-livros">
                 <% livros.forEach(el => { %>
                     <li onclick=redirect() class="item">
-                        <img class="item-img" src="/images/produtos/<%= el.capa %>" id="<%= el.id %>" alt="dna">
+                        <img class="item-img" src="/images/produtos/<%= el.capa %>" alt="dna">
                         <div>
                             <h5 class="item-name">
                                 <%= el.titulo %>
@@ -75,7 +61,7 @@
                 <div class="gallery" id="gallery">
                     <% livros.forEach(el => { %>
                         <li onclick=redirect() class="item current-item">
-                            <img class="item-img" src="/images/produtos/<%= el.capa %>" id="<%= el.id %>" alt="dna">
+                            <img class="item-img" src="/images/produtos/<%= el.capa %>" alt="dna">
                             <div>
                                 <h5 class="item-name">
                                     <%= el.titulo %>

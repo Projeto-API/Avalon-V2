@@ -5,6 +5,7 @@ const multer = require("multer");
 
 const validatorCadastro = require("../middewres/ValidatorFormCadastroUsuario");
 const validatorEditarConta = require("../middewres/validatorEditarConta");
+const validatorForgotPassword = require("../middewres/validatorForgotPassword");
 
 const MinhasComprasController = require("../controllers/MinhasComprasController");
 const LoginController = require("../controllers/LoginController");
@@ -23,7 +24,11 @@ router.post("/editar-conta", validatorEditarConta, UsuarioController.editar);
 
 router.get("/forgot-password", LoginController.forgotPassword);
 router.post("/login", AuthController.login);
-router.post("/forgot-password", AuthController.forgotPassword);
+router.post(
+  "/forgot-password",
+  validatorForgotPassword,
+  AuthController.forgotPassword
+);
 
 router.get("/forgot-password", (req, res) => {
   console.log(req.flash("error")); // Verificar se a variável messages está sendo definida corretamente

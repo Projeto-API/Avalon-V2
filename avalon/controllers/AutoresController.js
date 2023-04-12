@@ -79,10 +79,10 @@ module.exports = {
      let errors = validationResultAutor(req);
 
       if (errors.isEmpty()) {
-        return res.render("adicionarEditora", { errors });
+        //return res.render("adicionarEditora", { errors });
       } else {
         return res.render("autores", { errors: errors.mapped() });
-                res.render("autores", { errors: errors.mapped(), old: req.body });
+                //res.render("autores", { errors: errors.mapped(), old: req.body });
       }
       
      //aqui

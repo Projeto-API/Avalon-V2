@@ -4,6 +4,17 @@
     <script src="/javascripts/validacoeslogin.js" defer></script>
     <section class="pageLogin">
         <h5 class="login2">LOGIN</h5>
+        <% if(typeof errors !== 'undefined'){  %>
+            <font size ="-1">
+            <ul style="list-style-type: none;">
+              <% for(let error in errors){ %>
+                <li><center>
+                  <b style='color:darkred'><%= error%>: </b>
+                  <%= errors[error].msg%></center></li>
+                <% } %>
+            </ul>
+               <% } %>
+            </font>
         <form class="form-auth card"action="/users/entrar"method="post">
             <li class="email">E-mail</li>
             <input type="email" name="email" placeholder="Digite seu email">

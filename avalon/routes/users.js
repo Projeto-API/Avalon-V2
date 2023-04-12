@@ -6,6 +6,7 @@ const multer = require("multer");
 const validatorCadastro = require("../middewres/ValidatorFormCadastroUsuario");
 const validatorEditarConta = require("../middewres/validatorEditarConta");
 const validatorForgotPassword = require("../middewres/validatorForgotPassword");
+const validatorLogin = require("../middewres/ValidatorFormLogin");
 
 const MinhasComprasController = require("../controllers/MinhasComprasController");
 const LoginController = require("../controllers/LoginController");
@@ -23,7 +24,7 @@ router.get("/editar-conta", UsuarioController.form);
 router.post("/editar-conta", validatorEditarConta, UsuarioController.editar);
 
 router.get("/forgot-password", LoginController.forgotPassword);
-router.post("/login", AuthController.login);
+router.post("/login", validatorLogin, AuthController.login);
 router.post(
   "/forgot-password",
   validatorForgotPassword,

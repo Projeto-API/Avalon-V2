@@ -1,4 +1,4 @@
-const { check } = require("express-validator");
+const { check, validationResult } = require("express-validator");
 
 module.exports = [
   check("email")
@@ -6,7 +6,7 @@ module.exports = [
     .withMessage("Este campo não pode ficar estar vazio")
     .isEmail()
     .withMessage("Deve ser um e-mail valido")
-    .isLength({ min: 3 })
+    .isLength({ min: 4 })
     .withMessage("Deve possuir pelo menos 3 caracteres"),
 
   check("passwordLogin")

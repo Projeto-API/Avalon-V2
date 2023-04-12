@@ -29,7 +29,7 @@ CREATE TABLE autores (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
 nome VARCHAR(150) NOT NULL,
 biografia VARCHAR(1000) NOT NULL,
-foto VARCHAR(45) NOT NULLtipo
+foto VARCHAR(45) 
 );
 
 CREATE TABLE carrinho (
@@ -66,7 +66,7 @@ data_nascimento VARCHAR(11),
 foto VARCHAR(45)
 );
 
-CREATE TABLE status (
+CREATE TABLE statuspedido (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
 descricao VARCHAR(45) NOT NULL
 );
@@ -118,7 +118,6 @@ CREATE TABLE itens_pedidos (
 id INT UNSIGNED PRIMARY KEY NOT NULL AUTO_INCREMENT,
 quantidade VARCHAR(150) NOT NULL,
 livros_id INT UNSIGNED NOT NULL,
-livros_editoras_id INT UNSIGNED NOT NULL,
 FOREIGN KEY (livros_id) REFERENCES livros (id),
 FOREIGN KEY (livros_editoras_id) REFERENCES editoras (id)
 );

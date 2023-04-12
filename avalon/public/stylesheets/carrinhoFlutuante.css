@@ -17,7 +17,7 @@ body {
 
 .carrinhoFlutuante {
     background: white;
- 
+    height: 100%;
     width: 0;
     margin: 0;
     list-style: none;
@@ -110,6 +110,7 @@ input.product-qtd-input {
     width: 100%;
     height: 2rem;
     margin: 1rem;
+
 }
 
 

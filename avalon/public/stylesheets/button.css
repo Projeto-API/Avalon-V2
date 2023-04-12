@@ -8,30 +8,27 @@ button {
 
 button a {
     text-decoration: none;
-    color:white;
-    text-align: center;
+    color: black;
 }
 
-#comprar {
-    text-decoration: none;
+.comprar {
     z-index: 3;
     align-items: center;
-color: white;
+    display: flex;
     font-weight: bold;
-    width: 90%;
+    width: 100%;
     height: 2rem;
     background-color: #4EC16E;
     border-radius: 1rem;
 
 }
 
-#comprar a {
+.comprar a {
     justify-content: center;
     width: 100%;
-    text-align: center;
 }
 
-#comprar :hover {
+.comprar :hover {
     color: white;
 
 }
@@ -49,28 +46,24 @@ color: white;
     color: white;
 }
 
-.comprar {
-    text-decoration: none;
-    z-index: 3;
+.continuar {
+    padding: 1rem;
     align-items: center;
     display: flex;
     font-weight: bold;
-    width: 90%;
+    width: 100%;
     height: 2rem;
     background-color: #4EC16E;
     border-radius: 1rem;
-    color: white;
+    cursor: pointer;
+    border: none;
 }
-    
 
-
-.comprar {
+.continuar a {
     width: 100%;
-    background-color: #4EC16E;
-    
 }
 
-.comprar :hover {
+.continuar :hover {
     color: white;
 }
 
@@ -118,7 +111,6 @@ color: white;
 
 .finalizarCompra :hover {
     color: white;
-    
 }
 
 /* BOTOES - ARROW LEFT E RIGHT */

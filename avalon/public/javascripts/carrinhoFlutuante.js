@@ -11,12 +11,14 @@ function ready() {
     const removelivro = document.getElementsByClassName("remove-livro-button")
     for (let i = 0; i < removelivro.length; i++) {
         removelivro[i].addEventListener("click", removeProduct)
+
     }
 
 
     const quantityInputs = document.getElementsByClassName("product-qtd-input")
     for (let i = 0; i < quantityInputs.length; i++) {
         quantityInputs[i].addEventListener("change", checkIfinputInsNull)
+
     }
 
 

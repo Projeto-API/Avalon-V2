@@ -2,48 +2,27 @@
     <link rel="stylesheet" href="/stylesheets/home.css">
 
     <main>
-
-
-        <section class="carrossel">
-            <div class="carrossel-container">
-                <div class="slide">
-                    <img src="/images/banners/LEVE3PAGUE2.png" alt="Banner 1">
-                </div>
-                <div class="slide">
-                    <img src="/images/banners/RESSACA.png" alt="Banner 2">
-                </div>
-                <div class="slide">
-                    <img src="/images/banners/QUADRINHOS.png" alt="Banner 3">
-                </div>
-            </div>
-
-            <div class="controls">
-                <span class="prev">&#10094;</span>
-                <span class="next">&#10095;</span>
-            </div>
+        <section class="banner">
+            <img id="banner" src="/images/banner.jpg" alt="">
         </section>
-
-
         <section class="big3">
             <div class="big3-icons">
                 <a href="Sinopse.ejs">MAIS VENDIDOS</a>
                 <div><img src="/images/mais vendidos.png" alt=""></div>
             </div>
             <div class="big3-icons">
-                <a href="/produto/todos/categoria/buscar?search=2">LIVROS</a>
+                <a href="/Sinopse.ejs">LIVROS</a>
                 <div><img src="/images/Livros.png" alt=""></div>
             </div>
             <div class="big3-icons">
-                <a href="/produto/todos/categoria/buscar?search=1">HQ</a>
+                <a href="Sinopse.ejs">HQ</a>
                 <div><img src="/images/quadrinhos.png" alt=""></div>
             </div>
         </section>
 
         <section>
             <div class="lancamento">
-                <h5 class="title">LANÇAMENTOS
-                
-                </h5>
+                <h5 class="title">LANÇAMENTOS</h5>
 
                 <div class="carrousel" id="carrousel">
                     <div class="gallery" id="gallery">
@@ -57,7 +36,7 @@
                                     <span class="item-price">
                                         R$ <%= el.preco %>
                                     </span>
-                                    <button class="comprar"><a >COMPRAR</a></button>
+                                    <button class="comprar"><a href="#">COMPRAR</a></button>
                                 </div>
                             </li>
                             <% }) %>
@@ -80,7 +59,7 @@
             <h4>DESTAQUES</h4><br>
             <nav>
                 <div class="grid">
-                    <button class="comprar" id="destaque-comprar"><a >COMPRAR</a></button>
+                    <button class="comprar" id="destaque-comprar"><a href="#">COMPRAR</a></button>
                     <div>
                         <a href=""><img id="grid-1" src="/images/produtos/destaque-capa.png" alt=""></a>
                     </div>
@@ -107,8 +86,7 @@
                     <div class="gallery" id="gallery2">
                         <% livros.forEach(el=> { %>
                             <li onclick=redirect() class="item current-item">
-                                <img class="item-img" class="produto" src="/images/produtos/<%= el.capa %>"
-                                    id="<%= el.id %>" alt="dna">
+                                <img class="item-img"class="produto" src="/images/produtos/<%= el.capa %>" alt="dna">
                                 <div>
                                     <h5 class="item-name">
                                         <%= el.titulo %>
@@ -116,7 +94,7 @@
                                     <span class="item-price">
                                         R$ <%= el.preco %>
                                     </span>
-                                    <button class="comprar"><a >COMPRAR</a></button>
+                                    <button class="comprar"><a href="#">COMPRAR</a></button>
                                 </div>
                             </li>
                             <% }) %>

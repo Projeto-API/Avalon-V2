@@ -1,19 +1,15 @@
 var express = require('express');
-<<<<<<< HEAD
-=======
 var router = express.Router();
 
 
->>>>>>> palomacode
 const homeController = require('../controllers/homeController');
-var router = express.Router();
+const SobreNos = require('../controllers/SobreNos');
+
 
 /* GET home page. */
 router.get('/', homeController.index);
-
-<<<<<<< HEAD
-=======
+router.get('/sobre-nos', SobreNos.index);
 
 
->>>>>>> palomacode
+
 module.exports = router;

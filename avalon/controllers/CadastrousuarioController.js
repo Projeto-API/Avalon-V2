@@ -72,8 +72,16 @@ module.exports = {
 
   editar: async (req, res) => {
     try {
+      let errors = validationResult(req);
+
+      if (errors.isEmpty()) {
+      } else {
+        return res.render("editarConta", { errors: errors.mapped() });
+      }
+
+    
       // await Livro.update({ titulo, preco, acabamento, sinopse, isbn, idioma, ano, paginas, editora, autor, capa: capaupload ? capaupload : capaguardada })
-      res.redirect("/editar-conta");
+      // res.redirect("/editar-conta");
     } catch (erro) {
       let alert = require("alert");
       alert("ERRO 500 - Erro interno do servidor!");

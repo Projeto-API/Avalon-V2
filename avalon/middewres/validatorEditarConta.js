@@ -1,17 +1,17 @@
-const { check } = require("express-validator");
+const { check, validationResult } = require("express-validator");
 
 module.exports = [
-  check("nomeEditarConta").isString().bail(),
+  check("Nome").isString().bail(),
 
-  check("sobrenomeEditarConta").bail().isString().bail(),
+  check("Sobrenome").bail().isString().bail(),
 
-  check("doc_identificacaoEditarConta")
+  // check("CPF").withMessage("Este campo não pode ficar vazio").bail(),
+
+  // check("Genero").withMessage("Este campo não pode ficar vazio").bail(),
+
+  check("E-mail")
+    .notEmpty()
     .withMessage("Este campo não pode ficar vazio")
-    .bail(),
-
-  check("genero").withMessage("Este campo não pode ficar vazio").bail(),
-
-  check("emailEditarConta")
     .isEmail()
     .withMessage("Deve ser um e-mail valido")
     .bail()
@@ -19,36 +19,51 @@ module.exports = [
     .withMessage("Deve possuir pelo menos 3 caracteres")
     .bail(),
 
-  check("enderecoEditarConta")
+  check("Endereço")
+    .notEmpty()
+    .withMessage("Este campo não pode ficar vazio")
     .isString()
     .isLength({ min: 3 })
     .withMessage("Endereço muito curto")
     .bail(),
 
-  check("numeroEditarConta")
+  check("Número")
+    .notEmpty()
+    .withMessage("Este campo não pode ficar vazio")
     .isString()
     .isLength({ min: 3 })
     .withMessage("Endereço muito curto")
     .bail(),
 
-  check("cepEditarConta")
+  check("CEP")
+    .notEmpty()
+    .withMessage("Este campo não pode ficar vazio")
     .isNumeric()
     .isLength({ min: 5 })
     .withMessage("CEP muito curto")
     .bail(),
 
-  check("estadoEditarConta").isString().bail(),
-
-  check("cidadeEditarConta").isString().bail(),
-
-  check("complementoEditarConta").isString().bail(),
-
-  check("passwordCadastro")
-    .isLength({ min: 8 })
-    .withMessage("Escolha uma senha de pelo menos 8 caracteres")
+  check("Estado")
+    .notEmpty()
+    .withMessage("Este campo não pode ficar vazio")
+    .isString()
     .bail(),
 
-  check("data_nascimentoEditarConta")
+  check("Cidade")
+    .notEmpty()
+    .withMessage("Este campo não pode ficar vazio")
+    .isString()
+    .bail(),
+
+  check("Complemento")
+    .notEmpty()
+    .withMessage("Este campo não pode ficar vazio")
+    .isString()
+    .bail(),
+
+  check("Data de nascimento")
+    .notEmpty()
+    .withMessage("Este campo não pode ficar vazio")
     .isString()
     .isLength({ min: 3 })
     .withMessage("Data muito curta")

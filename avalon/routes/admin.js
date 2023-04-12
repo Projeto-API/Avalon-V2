@@ -2,8 +2,11 @@ const express = require("express");
 const router = express.Router();
 const path = require("path");
 const multer = require("multer");
+<<<<<<< HEAD
 const { check } = require("express-validator");
 
+=======
+>>>>>>> 1f6e5bccf26f508ebc032ea58584f74d79019d11
 const validadorTipoUsuario = require("../middewres/validadorTipoUsuario");
 const validadorFormEditoras = require("../middewres/validadorFormEditoras");
 const validadorFormLivros = require("../middewres/validadorFormLivros");
@@ -73,7 +76,11 @@ router.get("/editoras/buscar", EditorasController.search);
 router.get("/editoras/form/:id?", EditorasController.form);
 router.get("/editoras/editar/:id", EditorasController.buscarEditora);
 // POST E PUT ROUTES
+<<<<<<< HEAD
 router.post("/editoras",validadorFormEditoras,  EditorasController.criar);
+=======
+router.post("/editoras", validadorFormEditoras, EditorasController.criar);
+>>>>>>> 1f6e5bccf26f508ebc032ea58584f74d79019d11
 router.put("/editoras/editar/:id", EditorasController.editar);
 // DELETE ROUTES
 router.delete("/editoras/deletar/:id", EditorasController.deletar);
@@ -87,11 +94,21 @@ router.get("/autores/editar/:id", AutoresController.buscarAutor);
 
 // POST E PUT ROUTES
 router.post(
+<<<<<<< HEAD
   "/autores", validadorFormAutor, filefoto.fields([{ name: "foto" }]),
   AutoresController.criar
 );
 router.put(
   "/autores/editar/:id", validadorFormAutor,
+=======
+  "/autores",
+  validadorFormAutor,
+  filefoto.fields([{ name: "foto" }]),
+  AutoresController.criar
+);
+router.put(
+  "/autores/editar/:id",
+>>>>>>> 1f6e5bccf26f508ebc032ea58584f74d79019d11
   filefoto.fields([{ name: "foto" }]),
   AutoresController.editar
 );

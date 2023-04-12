@@ -17,7 +17,7 @@ const ContaController = require("../controllers/ContaController");
 router.get("/compras", MinhasComprasController.index);
 router.get("/conta", ContaController.index);
 router.get("/login", LoginController.index);
-router.post("/entrar", LoginController.login);
+router.post("/entrar", validatorLogin, LoginController.login);
 router.get("/cadastro", UsuarioController.index);
 router.post("/cadastro", validatorCadastro, UsuarioController.criar);
 router.get("/editar-conta", UsuarioController.form);

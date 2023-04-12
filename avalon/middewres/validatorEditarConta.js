@@ -1,17 +1,15 @@
-const { check } = require("express-validator");
+const { check, validationResult } = require("express-validator");
 
 module.exports = [
-  check("nomeEditarConta").isString().bail(),
+  check("Nome").isString().bail(),
 
-  check("sobrenomeEditarConta").bail().isString().bail(),
+  check("Sobrenome").bail().isString().bail(),
 
-  check("doc_identificacaoEditarConta")
-    .withMessage("Este campo não pode ficar vazio")
-    .bail(),
+  check("CPF").withMessage("Este campo não pode ficar vazio").bail(),
 
-  check("genero").withMessage("Este campo não pode ficar vazio").bail(),
+  check("Genero").withMessage("Este campo não pode ficar vazio").bail(),
 
-  check("emailEditarConta")
+  check("e-mail")
     .isEmail()
     .withMessage("Deve ser um e-mail valido")
     .bail()
@@ -19,38 +17,27 @@ module.exports = [
     .withMessage("Deve possuir pelo menos 3 caracteres")
     .bail(),
 
-  check("enderecoEditarConta")
+  check("Endereço")
     .isString()
     .isLength({ min: 3 })
     .withMessage("Endereço muito curto")
     .bail(),
 
-  check("numeroEditarConta")
+  check("Número")
     .isString()
     .isLength({ min: 3 })
     .withMessage("Endereço muito curto")
     .bail(),
 
-  check("cepEditarConta")
+  check("CEP")
     .isNumeric()
     .isLength({ min: 5 })
     .withMessage("CEP muito curto")
     .bail(),
 
-  check("estadoEditarConta").isString().bail(),
+  check("Estado").isString().bail(),
 
-  check("cidadeEditarConta").isString().bail(),
+  check("Cidade").isString().bail(),
 
-  check("complementoEditarConta").isString().bail(),
-
-  check("passwordCadastro")
-    .isLength({ min: 8 })
-    .withMessage("Escolha uma senha de pelo menos 8 caracteres")
-    .bail(),
-
-  check("data_nascimentoEditarConta")
-    .isString()
-    .isLength({ min: 3 })
-    .withMessage("Data muito curta")
-    .bail(),
+  check("Complemento").isString().bail(),
 ];

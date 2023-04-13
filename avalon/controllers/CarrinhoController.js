@@ -1,15 +1,27 @@
-const { Carrinho, TodososlivrosModel } = require('../models');
+const { Carrinho, Livro } = require('../models');
 
 const CarrinhoController = {
   carrinho: async (req, res) => {
-    let valorFrete = null;
-    let livros = await Carrinho.findAll();
-    let total = 0;
-    livros.forEach(livro => {
-      let itemTotal = livro.quantidade * livro.preco;
-      total += itemTotal;
-    });
-    return res.render('carrinho', { livros, valorFrete, total });
+    try {
+      let valorFrete = null
+      const carrinhoFinal = [];
+      let pegaDados = await Carrinho.findAll({ where: { usuarios_id: 1 } });
+      
+      for (const carrinho of pegaDados) {
+        const livro = await Livro.findOne({ where: { id: carrinho.livros_id } });
+        carrinhoFinal.push({
+          carrinho: carrinho,
+          imagem: livro.imagens,
+          titulo: livro.titulo,
+          preco: livro.preco,
+        });
+      }
+      res.render('carrinho', { carrinho: carrinhoFinal, valorFrete, userId: req.session.userId, userName: req.session.userName  });
+    } catch (erro) {
+      let alert = require('alert');
+      console.log('Oops!');
+      alert('Something went wrong');
+    }
   },
   add: async (req, res) => {
     // const livros = JSON.parse(req.body.produtos);

@@ -88,8 +88,6 @@ function abrirBuscaMobile() {
 
   document.querySelector('.busca-mobile').style.display = "flex"
 
-<<<<<<< HEAD
-=======
 }
 
 // -----CARROUSEL BANNER MOBILE
@@ -182,5 +180,4 @@ var span = document.getElementById("close");
 
   var modal = document.getElementById("modal");
   modal.style.display = "none";
->>>>>>> palomacode
 }

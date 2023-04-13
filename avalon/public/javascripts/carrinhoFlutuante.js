@@ -11,44 +11,28 @@ function ready() {
     const removelivro = document.getElementsByClassName("remove-livro-button")
     for (let i = 0; i < removelivro.length; i++) {
         removelivro[i].addEventListener("click", removeProduct)
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> palomacode
     }
 
 
     const quantityInputs = document.getElementsByClassName("product-qtd-input")
     for (let i = 0; i < quantityInputs.length; i++) {
         quantityInputs[i].addEventListener("change", checkIfinputInsNull)
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> palomacode
     }
 
 
     const addToCarButtons = document.getElementsByClassName("comprar")
     for (let i = 0; i < addToCarButtons.length; i++) {
         addToCarButtons[i].addEventListener("click", adicionaCarrinho)
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> palomacode
     }
 
 
     if (sessionStorage.getItem("carrinho")) {
         carrinho = JSON.parse(sessionStorage.getItem("carrinho"));
         criarElementosCarrinho();
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> palomacode
     }
 
     updateTotal();
@@ -62,17 +46,9 @@ function checkIfinputInsNull(event) {
     const cartItem = carrinho.find(item => item.productTitle === productTitle);
   
     if (event.target.value === "0") {
-<<<<<<< HEAD
-        event.target.parentElement.parentElement.remove();
-        const productTitle = event.target.parentElement.parentElement.getElementsByClassName("cart-product-title")[0].innerText;
-        carrinho = carrinho.filter(item => item.productTitle !== productTitle);
-        updateTotal();
-        sessionStorage.setItem("carrinho", JSON.stringify(carrinho));
-=======
       item.remove();
       carrinho = carrinho.filter(item => item.productTitle !== productTitle);
       sessionStorage.setItem("carrinho", JSON.stringify(carrinho));
->>>>>>> palomacode
     } else {
       if (cartItem) {
         cartItem.quantity = event.target.value;
@@ -80,12 +56,8 @@ function checkIfinputInsNull(event) {
       }
     }
     updateTotal();
-<<<<<<< HEAD
-}
-=======
   }
   
->>>>>>> palomacode
 
 function adicionaCarrinho(event) {
     const button = event.target;
@@ -125,11 +97,7 @@ function criarElementosCarrinho() {
     const tableBody = document.querySelector(".produto");
     tableBody.innerHTML = "";
     // count = 0
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> palomacode
     for (let i = 0; i < carrinho.length; i++) {
         const newCartProduct = document.createElement("section");
         newCartProduct.classList.add("containerProduto");
@@ -164,13 +132,8 @@ function criarElementosCarrinho() {
         newCartProduct.getElementsByClassName("product-qtd-input")[0].addEventListener("change", checkIfinputInsNull)
         newCartProduct.getElementsByClassName("remove-livro-button")[0].addEventListener("click", removeProduct)
         updateTotal()
-<<<<<<< HEAD
-        
-        
-=======
 
 
->>>>>>> palomacode
     }
 }
 function loadCarrinho() {
@@ -207,16 +170,9 @@ function removeProduct(event) {
     let totalAmount = 0
     const produtos = document.getElementById("produto").children
 
-<<<<<<< HEAD
-
-    for (var i = 0; i < carlivros.length; i++) {
-        const productPrice = carlivros[i].getElementsByClassName("cart-product-price")[0].innerText.replace("R$", "").replace(",", ".")
-        const productQuantity = carlivros[i].getElementsByClassName("product-qtd-input")[0].value
-=======
     for (var i = 0; i < produtos.length; i++) {
         const productPrice = produtos[i].getElementsByClassName("cart-product-price")[0].innerText.replace("R$", "").replace(",", ".")
         const productQuantity = produtos[i].getElementsByClassName("product-qtd-input")[0].value
->>>>>>> palomacode
         totalAmount += productPrice * productQuantity
     }
     

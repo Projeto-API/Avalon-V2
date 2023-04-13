@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const { Op } = require('sequelize');
-const { Livro, Cliente } = require('../models');
+const { Livro, Usuario } = require('../models');
 
 Op
 
@@ -12,7 +12,7 @@ module.exports = {
       const { id } = req.params
 
       const livros = await Livro.findAll();
-      const cliente = await Cliente.findAll();
+      
 
       const usuarios = await Usuario.findByPk(id)
 

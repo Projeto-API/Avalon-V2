@@ -5,24 +5,27 @@ module.exports = {
     try {
       const livros = await Livro.findAll();
       const livrosLancamento = await Livro.findAll({
-        limit: 8, 
-        order: [['id','DESC']]
+        limit: 8,
+        order: [['id', 'DESC']]
       });
       const editoras = await Editora.findAll();
       const autores = await Autor.findAll();
       const categorias = await Categoria.findAll();
 
+     
 
-      res.render('home', { livros, livrosLancamento, editoras, categorias, autores })
+     
+      res.render('home', { livros, livrosLancamento, editoras, categorias, autores, 
+        userId: req.session.userId, userName: req.session.userName })
 
-      
+
     } catch (erro) {
       let alert = require('alert');
       alert("ERRO 500 - Erro interno do servidor!")
     }
   },
-
 }
+
 
 
 

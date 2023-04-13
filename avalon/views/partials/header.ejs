@@ -9,103 +9,134 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/stylesheets/button.css">
     <link rel="stylesheet" href="/stylesheets/carrinhoFlutuante.css">
-    <script async src="/javascripts/carrinhoscript.js"></script>
+
     <script src="/javascripts/menuHamburguer.js" defer></script>
     <script src="/javascripts/carrinhoFlutuante.js" defer></script>
-    
-
+    <script src="/javascripts/carrinhoCompras.js" defer></script>
     <script src="/javascripts/script.js" defer></script>
-    <script src="/javascripts/validacoescadastro.js" defer></script>
     <script src="/javascripts/validacoeslogin.js" defer></script>
-    <script src="/javascripts/validacoesCadastroLivro.js" defer></script>
-<title>Home</title>
+
+
+    <title>Home</title>
 </head>
+
+
 <body>
-<header>
-<section class="container-header ">
-<div class="container-hamburguer header2">
-<div class="hamburger">
-<button onclick=abrirHamburguer() class="icons-btn"><i class='bx bx-book'></i></button>
-</div>
-<div class="sidebar">
-<div class="close-menu">
-<button onclick=fecharMenu() class="icons-btn"><i class='bx bx-x'></i></button>
-</div>
-<nav>
-<ul class="menu">
-<li class="menu-links"> <a href="/"> PÁGINA INICIAL</a> </li>
-<li class="menu-links"> <a href="/produto/todos"> TODOS OS LIVROS</a> </li>
+    <header>
+        <section class="container-header ">
+            <div class="container-hamburguer header2">
+                <div class="hamburger">
+                    <button onclick=abrirHamburguer() class="icons-btn"><i class='bx bx-book'></i></button>
+                </div>
+
+                <div class="sidebar">
+                    <div class="close-menu">
+                        <button onclick=fecharMenu() class="icons-btn"><i class='bx bx-x'></i></button>
+                    </div>
+                    <nav>
+
+                        <ul class="menu">
+                            <li class="menu-links"> <a href="/"> PÁGINA INICIAL</a> </li>
+                            <li class="menu-links"> <a href="/produto/todos"> TODOS OS LIVROS</a> </li>
                             <li class="menu-links"> <a href="/produto/lancamentos"> LANÇAMENTOS</a> </li>
-                            <li class="menu-links"> <a href="#"> SOBRE NÓS</a> </li>
-                            
+                            <li class="menu-links"> <a href="/sobre-nos"> SOBRE NÓS</a> </li>
+                            <% if (typeof userId !=='undefined' ) { %>
+                                <li class="menu-links"> <a href="/users/conta/<%= userId %>"> MINHA CONTA</a> </li>
+                                <% } %>
+                                
                         </ul>
                     </nav>
                 </div>
             </div>
+
+
             <div class="header-icons">
                 <a href="/" class="logo"><img id="logo" src="/images/img/logopreto.png" alt=""></a>
             </div>
             <div class="busca header2">
-                <form action="/search">
+                <form action="/produto/todos/buscar" method="get">
                     <input type="text" name="search" id="search" scr="images/lupa.png"
                         placeholder="Títulos, Autores e Gêneros ">
                 </form>
-
-                
             </div>
-
             <div class="header-icons header2">
-                <button class="icons-btn" id="lupa"><i class='bx bx-search'></i></button>
-                <button class="icons-btn"><a href="/users/login"><i class='bx bx-user'></i></a></button>
-                <button onclick=abrirCarrinhoFlutuante() class="icons-btn"><i class='bx bx-cart'></i></button>
+                <button onclick=abrirBuscaMobile() class="icons-btn" id="lupa"><i class='bx bx-search'></i></button>
+                <% if (typeof userId !=='undefined' ) { %>
+                    <button id="user-btn" class="icons-btn"><a href="/users/conta/<%= userId %>"><i
+                        class=' bx bx-user'></i></a></button>
+                        <% } else { %>
+                            
+                            <button id="user-btn" class="icons-btn"><a href="/users/login"><i
+                                class=' bx bx-user'></i></a></button>
+                                <% } %>
+                                <% if (typeof userId !=='undefined' ) { %>
+                                    <span class="facalogin">Olá, <%= userName %></span>
+                                   
+                                        <% } else { %>
+                                            <span class="facalogin">Faça seu login</span>
+                                                <% } %>
+                                
+                <button onclick=abrirCarrinhoFlutuante() class="icons-btn"><i
+                                    class='bx bx-cart'></i></button>
             </div>
-          
         </section>
+        <div class="busca-mobile">
+            <form action="/produto/todos/buscar" method="get">
+                <input type="text" name="search" id="search-mobile" scr="images/lupa.png"
+                    placeholder="Títulos, Autores e Gêneros ">
+            </form>
+        </div>
         <section class="navegacao header2">
             <nav class="lista">
                 <ul type="none">
                     <li> <a href="/"> PÁGINA INICIAL</a> </li>
                     <li> <a href="/produto/todos"> TODOS OS LIVROS</a></li>
                     <li> <a href="/produto/lancamentos">LANÇAMENTOS</a> </li>
-                    <li> <a href="#"> SOBRE NÓS</a></li>
-                   
+                    <li> <a href="/sobre-nos"> SOBRE NÓS</a></li>
+                    <% if (typeof userId !=='undefined' ) { %>
+                        <li> <a href="/users/conta/<%= userId %>"> MINHA CONTA</a> </li>
+                        <% } %>
                 </ul>
 
             </nav>
         </section>
-                <section>
-                    <div class="carrinhoFlu">
-                        <section class="carrinhoFlutuante" id="carrinhoFlutuante" >
-                            <div class="headerFlutuante" id="primeiro" >
-                                <div>
-                                    <h5>MEU CARRINHO</h5>
-                                </div>
-                                <!-- <button id="fechar" onclick="fecharCarrinhoFlutuante()">X</button> -->
-                                <div>
-                                    <button onclick=fecharCarrinhoFlutuante() class="fechar"><i>X</i></button>
-                                </div>
-                            </div>
-                            <tbody>
-                                                                                                                                                                                                                                                            
-                                    <div class="produto" id="produto">
-                                        
-                                        
-                                    
-                                    </div>    
-                                                         
-                                    <div colspan="3" class="cart-total-container">
-                                        <strong>Total</strong>
-                                        <span>R$0,00</span>
-                                    </div>
-                            </tbody>
-                                
-                            <div class="continuar">
-                                <form id="formCarrinho"    method="post" action="/carrinho">
-                                    <input type="hidden" name="produtos" id="produtosCarrinho">
-                                    <button type="submit" id="comprar">Finalizar Compra</button>
-                                   
-                                </form>
-                            </div>
-                        </section>
+        <section>
+            <div class="carrinhoFlu">
+                <section class="carrinhoFlutuante" id="carrinhoFlutuante">
+                    <div class="headerFlutuante" id="primeiro">
+                        <div>
+                            <h5 class="cart-title">MEU CARRINHO</h5>
+                        </div>
+                        <!-- <button id="fechar" onclick="fecharCarrinhoFlutuante()">X</button> -->
+                        <div>
+                            <button onclick=fecharCarrinhoFlutuante() class="icons-btn fechar"><i
+                                    class='bx bx-x'></i></button>
+
+                        </div>
+                    </div>
+                    <tbody>
+
+                        <div class="produto" id="produto">
+
+                        </div>
+
+                        <div colspan="3" class="cart-total-container">
+                            <strong>Total</strong>
+                            <span>R$0,00</span>
+                        </div>
+                    </tbody>
+
+                    <div class="continuar">
+                        <form class=".finalizar-compra-button" id="formCarrinho" method="get" action="/carrinho">
+                            <input type="hidden" name="produtos" id="produtosCarrinho">
+                            <button type="submit" id="continuar" class="continuar" onclick="criarElementosCompra()"><a
+                                    href="/carrinho">
+                                    Finalizar
+                                    Compra</a></button>
+                        </form>
+                    </div>
+
                 </section>
+            </div>
+        </section>
     </header>

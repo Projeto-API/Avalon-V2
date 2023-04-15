@@ -1,19 +1,9 @@
-const bcrypt = require("bcryptjs");
-const { Usuario } = require("../models");
-const { validationResult } = require("express-validator");
+const bcrypt = require('bcryptjs');
+const { Usuario } = require('../models');
 
 module.exports = {
   login: async (req, res) => {
     try {
-      let errors = validationResult(req);
-
-      if (errors.isEmpty()) {
-        //return res.render("cadastroUsuario", { errors });
-      } else {
-        return res.render("login", { errors: errors.mapped() });
-        //        res.render("cadastroUsuario", { errors: errors.mapped(), old: req.body });
-      }
-
       const { email, password } = req.body;
       const user = await Usuario.findOne({ where: { email } })
 

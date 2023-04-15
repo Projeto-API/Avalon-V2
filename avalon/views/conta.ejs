@@ -27,18 +27,18 @@
                 <div class="col-user">
                     <div>
                         <label for="" class="label-account">E-mail</label><br>
-                        <input type="text" name="email" class="values-account" value="<%= usuarios.email %>"></input>
+                        <input type="text" name="email" class="values-account-editar"
+                            value=""></input>
                     </div>
                 </div>
                 <div class="col-user">
                     <div>
                         <label for="nome" class="label-account">Nome</label><br>
-                        <input type="text" name="nome" class="values-account" value="<%= usuarios.nome %>"></input>
+                        <input type="text" name="nome" class="values-account-editar" value=""></input>
                     </div>
                     <div>
                         <label for="sobrenome" class="label-account">Sobrenome</label><br>
-                        <input type="text" name="sobrenome" class="values-account"
-                            value="<%= usuarios.sobrenome %>"></input>
+                        <input type="text" name="sobrenome" class="values-account-editar" value=""></input>
                     </div>
                 </div>
 
@@ -46,20 +46,19 @@
                     <div class="col-pessoal">
                         <div>
                             <label for="doc_identificacao" class="label-account">CPF</label><br>
-                            <input type="text" name="doc_identificacao" class="values-account"
-                                value="<%= usuarios.doc_identificacao %>"></input>
+                            <input type="text" name="doc_identificacao" class="values-account-editar"
+                                value=""></input>
                         </div>
                         <div>
                             <label for="genero" class="label-account">Gênero</label><br>
-                            <input type="text" name="genero" class="values-account"
-                                value="<%= usuarios.genero %>"></input>
+                            <input type="text" name="genero" class="values-account-editar" value=""></input>
                         </div>
                     </div>
                     <div class="col-pessoal">
                         <div>
                             <label for="data_nascimento" class="label-account">Data de Nascimento</label><br>
-                            <input type="date" name="data_nascimento" class="values-account data-nascimento"
-                                value="<%= usuarios.data_nascimento %>"></input>
+                            <input type="date" name="data_nascimento" class="values-account-editar data-nascimento"
+                                value=""></input>
                         </div>
                     </div>
                 </div>
@@ -68,34 +67,30 @@
                     <div class="col-endereco">
                         <div>
                             <label for="cep" class="label-account">CEP</label><br>
-                            <input type="text" name="cep" class="values-account cep"
-                                value="<%= usuarios.cep %>"></input>
+                            <input type="text" name="cep" class="values-account-editar cep" value=""></input>
                         </div>
                     </div>
                     <div class="col-endereco">
                         <div>
                             <label for="estado" class="label-account">Estado</label><br>
-                            <input type="text" name="estado" class="values-account"
-                                value="<%= usuarios.estado %>"></input>
+                            <input type="text" name="estado" class="values-account-editar" value=""></input>
                         </div>
                         <div>
                             <label for="cidade" class="label-account">Cidade</label>
-                            <input type="text" name="cidade" class="values-account"
-                                value="<%= usuarios.cidade %>"></input>
+                            <input type="text" name="cidade" class="values-account-editar" value=""></input>
                         </div>
                     </div>
                     <div class="col-endereco">
                         <div>
                             <label for="endereco" class="label-account">Rua/Avenida</label><br>
-                            <input type="text" name="endereco" class="values-account"
-                                value="<%= usuarios.endereco %>"></input>
+                            <input type="text" name="endereco" class="values-account-editar"
+                                value=""></input>
                         </div>
                     </div>
                     <div class="col-endereco">
                         <div>
                             <label for="number" class="label-account">Número</label><br>
-                            <input type="text" name="numero" class="values-account"
-                                value="<%= usuarios.numero %>"></input>
+                            <input type="text" name="numero" class="values-account-editar" value=""></input>
                         </div>
                         <div>
                             <label for="complemento" class="label-account">Complemento</label><br>
@@ -105,9 +100,10 @@
                     </div>
                 </div>
                 <div class="edit-form">
-                    <button class="editar" type="submit"><a href="editar-conta/6">Editar</a></button>
+                    <button class="editar"><a href="../users/editar-conta">Editar</a></button>
                 </div>
             </form>
+            
         </section>
     </main>
 

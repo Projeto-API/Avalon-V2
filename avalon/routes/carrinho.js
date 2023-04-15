@@ -19,4 +19,4 @@ router.get('/checkout/:id',  CheckoutController.index);
 router.get('/compra-finalizada/', auth, CompraEfetuadaController.index);
 
 
-module.exports = router;
+module.exports = router; 

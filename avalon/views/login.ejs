@@ -4,11 +4,22 @@
    
     <section class="pageLogin">
         <h5 class="login2">LOGIN</h5>
-        <form class="form-auth card" action="/users/login "method="post">
+        <% if(typeof errors !== 'undefined'){  %>
+            <font size ="-1">
+            <ul style="list-style-type: none;">
+              <% for(let error in errors){ %>
+                <li><center>
+                  <b style='color:darkred'><%= error%>: </b>
+                  <%= errors[error].msg%></center></li>
+                <% } %>
+            </ul>
+               <% } %>
+            </font>
+        <form class="form-auth card"action="/users/entrar"method="post">
             <li class="email">E-mail</li>
-            <input type="email" name="email" placeholder="Digite seu email">
+            <input type="email" name="E-mail" placeholder="Digite seu email">
             <li class="password">Senha</li>
-            <input id="password" type="password" name="password" placeholder="Digite sua senha">
+            <input id="password" type="password" name="Senha" placeholder="Digite sua senha">
             <button class="entrar" type="submit">ENTRAR</button>
             <a href="/users/forgot-password" class="esqueci">Esqueci minha senha</a>
           

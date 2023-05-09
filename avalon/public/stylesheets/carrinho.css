@@ -70,6 +70,7 @@ td {
   height: 100%;
 }
 
+
 .informationLivroValue {
   columns: 2;
   width: 100%;
@@ -82,16 +83,14 @@ td {
   width: 2rem;
 }
 
-.cart-total,
-.remove-livro-button {
-  width: 100%;
-}
+
 
 .remove-livro-button {
   color: red;
   font-weight: 500;
   background: none;
   cursor: pointer;
+  width: 10px;
 }
 
 .livro-remove {
@@ -114,7 +113,7 @@ td {
   margin: .5rem;
   background-color: #F6F9FF;
   border-radius: 1rem;
-  }
+}
 
 .formFrete {
   display: flex;
@@ -167,7 +166,7 @@ td {
   }
 
   .informationLivroValue {
-    columns: 1;
+    display: flex;
     width: 100%;
     padding: 0 5px;
   }

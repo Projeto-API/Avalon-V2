@@ -45,7 +45,7 @@ function criarElementosCompra() {
     newCartProduct.querySelector(".livro-imagem-cart").setAttribute("src", carrinho[i].productImage);
     newCartProduct.querySelector(".imagem-titulo").textContent = carrinho[i].productTitle;
     newCartProduct.querySelector(".livro-preco").textContent = carrinho[i].productPrice;
-    
+
     newCartProduct.querySelector(".produto-quantidade").value = carrinho[i].productQuantity;
     newCartProduct.querySelector(".livro-remove .cart-total").textContent = "R$ " + (parseFloat(carrinho[i].productPrice.substring(2)) * carrinho[i].productQuantity).toFixed(2);
 
@@ -103,13 +103,13 @@ function updateCartTotal() {
     const total = price * quantity;
     cartRow.querySelector(".cart-total").textContent = "Total: R$ " + total.toFixed(2);
     cartTotal += total;
-    cartTotal2 += total + frete;
+
   }
-  const cartTotalFinal = (cartTotal + frete - desconto);
+  const cartTotalFinal = cartTotal - desconto ;
+  document.getElementById("cart-total-final").textContent = "R$ " + cartTotalFinal.toFixed(2);
   document.getElementById("cart-total-subtotal").textContent = "R$ " + cartTotal.toFixed(2);
-  document.getElementById("resultadoFrete").textContent = "R$ " + frete.toFixed(2);
+  document.getElementById("resultadoFrete").textContent = "R$ " + valorFrete.toFixed(2);
   document.getElementById("cart-total-desconto").textContent = "R$  -" + desconto.toFixed(2);
-  document.getElementById("cart-total-Final").textContent = "R$ " + cartTotalFinal.toFixed(2);
 }
 
 

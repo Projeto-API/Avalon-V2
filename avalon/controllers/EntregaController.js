@@ -31,7 +31,7 @@ module.exports = {
             const valorFrete = valoresFretePorRegião[regiaoConhecida ? state : 'Outros']
             req.session.frete = valorFrete
 
-            console.log(valorFrete, state)
+            console.log(valorFrete)
             res.render('carrinho', { valorFrete, userId: req.session.userId, userName: req.session.userName, frete: req.session.frete  })
 
         } catch (error) {
